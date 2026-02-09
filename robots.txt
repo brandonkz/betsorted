@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brandonkz.github.io/betsorted/sitemap.xml
+Sitemap: https://betsorted.co.za/sitemap.xml

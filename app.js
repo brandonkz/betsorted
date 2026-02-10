@@ -110,7 +110,10 @@ function renderComparisonTable() {
           </div>
         </td>
         <td>
-          <span class="bonus-text">${escapeHtml(site.welcome_bonus)}</span>
+          <div class="bonus-text">
+            <strong>${escapeHtml(site.welcome_bonus)}</strong>
+            <small class="bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
+          </div>
         </td>
         <td>
           <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
@@ -127,7 +130,7 @@ function renderComparisonTable() {
         </td>
         <td>
           <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-            Visit Site →
+            Claim ${getSimplifiedBonus(site.welcome_bonus)} →
           </a>
         </td>
       </tr>
@@ -176,7 +179,10 @@ function renderReviews() {
           <div class="review-highlights">
             <div class="highlight-item">
               <span class="highlight-label">Welcome Bonus</span>
-              <span class="highlight-value">${escapeHtml(site.welcome_bonus)}</span>
+              <div class="highlight-value-wrapper">
+                <span class="highlight-value">${escapeHtml(site.welcome_bonus)}</span>
+                <small class="highlight-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
+              </div>
             </div>
             <div class="highlight-item">
               <span class="highlight-label">Min Deposit</span>
@@ -242,10 +248,13 @@ function renderReviews() {
         <div class="review-footer">
           <div class="footer-bonus">
             <span class="footer-bonus-label">Welcome Offer:</span>
-            <span class="footer-bonus-value">${escapeHtml(site.welcome_bonus)}</span>
+            <div>
+              <span class="footer-bonus-value">${escapeHtml(site.welcome_bonus)}</span>
+              <small class="footer-bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
+            </div>
           </div>
           <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary">
-            Claim Bonus & Sign Up →
+            Claim ${getSimplifiedBonus(site.welcome_bonus)} →
           </a>
         </div>
       </article>
@@ -276,4 +285,32 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+function getBonusExplanation(bonus) {
+  // Add helpful explanations for different bonus types
+  if (bonus.includes('%')) {
+    // Match bonus (e.g., "200% up to R5,000")
+    return 'Deposit match - they add this % to your deposit';
+  } else if (bonus.toLowerCase().includes('sign-up') || bonus.toLowerCase().includes('free')) {
+    // Free bonus (e.g., "R25 Sign-Up Bonus")
+    return 'Free money on sign-up, no deposit needed';
+  } else if (bonus.toLowerCase().includes('up to')) {
+    // Generic up to bonus
+    return 'Bonus on first deposit';
+  }
+  return 'Welcome offer for new users';
+}
+
+function getSimplifiedBonus(bonus) {
+  // Extract the key value for button text
+  // "200% up to R5,000" → "R5,000 Bonus"
+  // "R25 Sign-Up Bonus" → "R25 Bonus"
+  // "Up to R1,000 Welcome Bonus" → "R1,000 Bonus"
+  
+  const match = bonus.match(/R[\d,]+/);
+  if (match) {
+    return `${match[0]} Bonus`;
+  }
+  return 'Bonus';
 }

@@ -47,7 +47,7 @@ a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 /* Header */
@@ -63,7 +63,7 @@ a:hover {
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,7 +107,7 @@ a:hover {
 .hero {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
-  padding: 4rem 1.5rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -663,6 +663,18 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .header-inner {
+    padding: 1rem 1.25rem;
+  }
+
+  .hero {
+    padding: 3rem 1.25rem;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }

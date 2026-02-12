@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free accumulator calculator for South African bettors. Calculate multi-leg bet returns, combined odds, and potential winnings. Perfect for soccer, rugby, cricket accumulators.">
+  <meta name="keywords" content="accumulator calculator, acca calculator, parlay calculator south africa, multi bet calculator, soccer accumulator">
+  <meta name="theme-color" content="#2563eb">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1VHD0P7M44');
+  </script>
+  
+  <title>Accumulator Calculator - Free Acca Calculator South Africa | BetSorted</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .calculator-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .calculator-card {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+    
+    .selection-row {
+      display: grid;
+      grid-template-columns: 1fr 150px 40px;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    
+    @media (max-width: 640px) {
+      .selection-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+    
+    .btn-remove {
+      background: #ef4444;
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .btn-add {
+      background: #10b981;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    
+    .btn-calculate {
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    
+    .result-card {
+      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 24px;
+      display: none;
+    }
+    
+    .result-amount {
+      font-size: 48px;
+      font-weight: 900;
+      margin: 16px 0;
+    }
+    
+    .breakdown {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .breakdown-row:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 18px;
+      margin-top: 8px;
+    }
+    
+    .info-section {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    
+    .info-section h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    
+    .info-section p {
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand">
+        <span class="brand-icon">🎯</span>
+        <span class="brand-name">BetSorted</span>
+      </a>
+      <nav class="header-nav">
+        <a href="/#comparison" class="nav-link">Compare</a>
+        <a href="/accumulator-calculator.html" class="nav-link">Calculators</a>
+        <a href="/#guide" class="nav-link">Guide</a>
+        <a href="https://cryptocasinosorted.com" class="nav-link" target="_blank">Crypto Casinos 🎰</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Calculator -->
+  <section class="calculator-container">
+    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 16px; text-align: center;">Accumulator Calculator</h1>
+    <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 18px;">Calculate your multi-leg bet returns. Add up to 15 selections for your acca.</p>
+    
+    <div class="calculator-card">
+      <div style="margin-bottom: 24px;">
+        <label style="display: block; font-weight: 600; margin-bottom: 8px;">Your Stake (R)</label>
+        <input type="number" id="stake" class="form-input" placeholder="100" value="100" min="0" step="0.01">
+      </div>
+      
+      <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Selections</h3>
+      <div id="selections">
+        <div class="selection-row">
+          <input type="text" class="form-input selection-name" placeholder="e.g., Chiefs to win" value="Chiefs to win">
+          <input type="number" class="form-input selection-odds" placeholder="Odds" value="2.00" min="1.01" step="0.01">
+          <button class="btn-remove" onclick="removeSelection(this)" style="display: none;">×</button>
+        </div>
+        <div class="selection-row">
+          <input type="text" class="form-input selection-name" placeholder="e.g., Pirates over 2.5 goals" value="Pirates over 2.5">
+          <input type="number" class="form-input selection-odds" placeholder="Odds" value="1.80" min="1.01" step="0.01">
+          <button class="btn-remove" onclick="removeSelection(this)">×</button>
+        </div>
+        <div class="selection-row">
+          <input type="text" class="form-input selection-name" placeholder="e.g., Sundowns to win" value="Sundowns to win">
+          <input type="number" class="form-input selection-odds" placeholder="Odds" value="1.50" min="1.01" step="0.01">
+          <button class="btn-remove" onclick="removeSelection(this)">×</button>
+        </div>
+      </div>
+      
+      <button class="btn-add" onclick="addSelection()">+ Add Selection</button>
+      
+      <button class="btn-calculate" onclick="calculate()">Calculate Accumulator</button>
+    </div>
+    
+    <div id="result" class="result-card">
+      <div style="font-size: 18px; font-weight: 600; opacity: 0.9;">If All Selections Win:</div>
+      <div class="result-amount" id="total-return">R0.00</div>
+      
+      <div class="breakdown">
+        <div class="breakdown-row">
+          <span>Your Stake:</span>
+          <span id="display-stake">R0.00</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Number of Selections:</span>
+          <span id="display-count">0</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Combined Odds:</span>
+          <span id="display-odds">0.00</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Potential Profit:</span>
+          <span id="display-profit">R0.00</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Total Return:</span>
+          <span id="display-total">R0.00</span>
+        </div>
+      </div>
+      
+      <div style="margin-top: 20px; padding: 16px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+        <p style="margin: 0; font-size: 14px; opacity: 0.9;">⚠️ All selections must win for the accumulator to pay out. If any selection loses, the entire bet loses.</p>
+      </div>
+    </div>
+    
+    <!-- Info Section -->
+    <div class="info-section">
+      <h3>How Accumulator Bets Work</h3>
+      <p>An accumulator (acca) combines multiple selections into one bet. All selections must win for the bet to pay out. The odds multiply together, creating potentially huge returns from small stakes.</p>
+      
+      <h3 style="margin-top: 24px;">Example</h3>
+      <p><strong>Stake:</strong> R100</p>
+      <p><strong>Selections:</strong></p>
+      <p>• Chiefs to win @ 2.00</p>
+      <p>• Pirates over 2.5 goals @ 1.80</p>
+      <p>• Sundowns to win @ 1.50</p>
+      <p><strong>Combined Odds:</strong> 2.00 × 1.80 × 1.50 = 5.40</p>
+      <p><strong>Return if all win:</strong> R100 × 5.40 = R540</p>
+      <p><strong>Profit:</strong> R540 - R100 = R440</p>
+      
+      <h3 style="margin-top: 24px;">Popular SA Accumulator Sports</h3>
+      <p><strong>Soccer:</strong> PSL, Premier League, Champions League</p>
+      <p><strong>Rugby:</strong> URC, Currie Cup, Super Rugby</p>
+      <p><strong>Cricket:</strong> T20, ODI, Test matches</p>
+      <p><strong>Horse Racing:</strong> Multiple race cards</p>
+      
+      <h3 style="margin-top: 24px;">Accumulator Tips</h3>
+      <p>• Start with 3-5 selections (better balance of risk vs reward)</p>
+      <p>• Don't add heavy favorites under 1.30 odds (barely increase returns)</p>
+      <p>• Research each selection - one loss = entire bet loses</p>
+      <p>• Consider acca insurance offers from bookmakers</p>
+      <p>• Betway, Hollywoodbets, Supabets all offer acca boosts</p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/" style="display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Back to BetSorted</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p style="margin-bottom: 8px;"><strong>Disclaimer:</strong> Gambling can be addictive. Gamble responsibly. 18+ only. BeGambleAware.org.za</p>
+      <p>© 2026 BetSorted. All bookmakers licensed and regulated in South Africa.</p>
+    </div>
+  </footer>
+
+  <script>
+    let selectionCount = 3;
+    
+    function addSelection() {
+      if (selectionCount >= 15) {
+        alert('Maximum 15 selections allowed');
+        return;
+      }
+      
+      const container = document.getElementById('selections');
+      const row = document.createElement('div');
+      row.className = 'selection-row';
+      row.innerHTML = `
+        <input type="text" class="form-input selection-name" placeholder="Selection ${selectionCount + 1}">
+        <input type="number" class="form-input selection-odds" placeholder="Odds" value="2.00" min="1.01" step="0.01">
+        <button class="btn-remove" onclick="removeSelection(this)">×</button>
+      `;
+      container.appendChild(row);
+      selectionCount++;
+      updateRemoveButtons();
+    }
+    
+    function removeSelection(button) {
+      button.parentElement.remove();
+      selectionCount--;
+      updateRemoveButtons();
+    }
+    
+    function updateRemoveButtons() {
+      const rows = document.querySelectorAll('.selection-row');
+      rows.forEach((row, index) => {
+        const btn = row.querySelector('.btn-remove');
+        if (rows.length <= 1) {
+          btn.style.display = 'none';
+        } else {
+          btn.style.display = 'block';
+        }
+      });
+    }
+    
+    function calculate() {
+      const stake = parseFloat(document.getElementById('stake').value) || 0;
+      const selections = document.querySelectorAll('.selection-row');
+      
+      let combinedOdds = 1;
+      let validCount = 0;
+      
+      selections.forEach(row => {
+        const odds = parseFloat(row.querySelector('.selection-odds').value) || 0;
+        if (odds >= 1.01) {
+          combinedOdds *= odds;
+          validCount++;
+        }
+      });
+      
+      if (validCount === 0) {
+        alert('Please enter at least one selection with valid odds');
+        return;
+      }
+      
+      const totalReturn = stake * combinedOdds;
+      const profit = totalReturn - stake;
+      
+      // Update display
+      document.getElementById('total-return').textContent = 'R' + totalReturn.toFixed(2);
+      document.getElementById('display-stake').textContent = 'R' + stake.toFixed(2);
+      document.getElementById('display-count').textContent = validCount;
+      document.getElementById('display-odds').textContent = combinedOdds.toFixed(2);
+      document.getElementById('display-profit').textContent = 'R' + profit.toFixed(2);
+      document.getElementById('display-total').textContent = 'R' + totalReturn.toFixed(2);
+      
+      // Show result
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    
+    // Initialize
+    updateRemoveButtons();
+  </script>
+</body>
+</html>

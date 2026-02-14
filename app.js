@@ -92,7 +92,7 @@ function renderComparisonTable() {
   
   comparisonTbody.innerHTML = filteredSites.map(site => {
     const stars = renderStars(site.rating);
-    const communitySummary = getCommunitySummary(site);
+    const communityQuotes = getCommunityQuotes(site);
     
     return `
       <tr>
@@ -120,19 +120,9 @@ function renderComparisonTable() {
           <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
         </td>
         <td>
-          <div style="font-size: 0.9rem; font-style: italic; color: #666; line-height: 1.5;">
-            ${communitySummary}
+          <div style="font-size: 0.85rem; line-height: 1.5; color: #555;">
+            ${communityQuotes}
           </div>
-        </td>
-        <td>
-          ${site.data_free_app 
-            ? '<span class="badge-yes">✓ Yes</span>' 
-            : '<span class="badge-no">✗ No</span>'}
-        </td>
-        <td>
-          ${site.live_streaming 
-            ? '<span class="badge-yes">✓ Yes</span>' 
-            : '<span class="badge-no">✗ No</span>'}
         </td>
         <td>
           <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
@@ -304,23 +294,24 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-function getCommunitySummary(site) {
+function getCommunityQuotes(site) {
   if (!site.reddit_quotes || site.reddit_quotes.length === 0) {
-    return 'Trusted by SA punters';
+    return '<em style="color: #999;">Trusted by SA punters</em>';
   }
   
-  // Take first quote and clean it up for table display
-  const firstQuote = site.reddit_quotes[0]
-    .replace(/^[""]/, '')
-    .replace(/[""]$/, '')
-    .replace(/[""].*$/, ''); // Remove everything after closing quote
-  
-  // Truncate if too long
-  if (firstQuote.length > 80) {
-    return firstQuote.substring(0, 77) + '...';
-  }
-  
-  return `"${firstQuote}"`;
+  // Show 2-3 quotes in compact format
+  return site.reddit_quotes.slice(0, 2).map(quote => {
+    // Clean up quotes
+    const cleaned = quote
+      .replace(/^[""]/, '')
+      .replace(/[""]$/, '')
+      .replace(/[""] — .*$/, ''); // Remove source attribution for table
+    
+    // Truncate if needed
+    const truncated = cleaned.length > 70 ? cleaned.substring(0, 67) + '...' : cleaned;
+    
+    return `<div style="font-style: italic; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid #e67e22;">${truncated}</div>`;
+  }).join('');
 }
 
 function getBonusExplanation(bonus) {

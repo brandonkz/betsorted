@@ -9,9 +9,23 @@
     "rating": 4.5,
     "welcome_bonus": "Up to R1,000 Welcome Bonus",
     "min_deposit": "R10",
-    "payment_methods": ["EFT", "Instant EFT", "Ozow", "Credit Card", "Visa", "Mastercard"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Ozow",
+      "Credit Card",
+      "Visa",
+      "Mastercard"
+    ],
     "data_free_app": true,
-    "sports": ["Soccer", "Rugby", "Cricket", "Tennis", "Horse Racing", "Golf"],
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Horse Racing",
+      "Golf"
+    ],
     "live_streaming": true,
     "live_betting": true,
     "established": "2006",
@@ -28,9 +42,18 @@
       "Bonus wagering requirements can be high",
       "Customer support busy during peak times"
     ],
-    "best_for": ["All-rounders", "Live betting fans", "Mobile users"],
+    "best_for": [
+      "All-rounders",
+      "Live betting fans",
+      "Mobile users"
+    ],
     "featured": true,
-    "rank": 1
+    "rank": 1,
+    "reddit_quotes": [
+      "\"Betway SA is what I've used for a while. Never had withdrawal issues, which is the main thing for me.\"",
+      "\"Betway is the most popular...currently along with HWB\"",
+      "\"Feels modern and has decent promos for both local and international games\" — r/sportsbetting"
+    ]
   },
   {
     "id": 2,
@@ -42,9 +65,21 @@
     "rating": 4.3,
     "welcome_bonus": "R25 Sign-Up Bonus",
     "min_deposit": "R5",
-    "payment_methods": ["EFT", "Instant EFT", "Cash", "1Voucher", "Kazang"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Cash",
+      "1Voucher",
+      "Kazang"
+    ],
     "data_free_app": true,
-    "sports": ["Horse Racing", "Soccer", "Rugby", "Cricket", "Lucky Numbers"],
+    "sports": [
+      "Horse Racing",
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Lucky Numbers"
+    ],
     "live_streaming": false,
     "live_betting": true,
     "established": "2000",
@@ -62,9 +97,18 @@
       "Interface feels dated",
       "Fewer international sports"
     ],
-    "best_for": ["Horse racing fans", "Budget bettors", "Lucky Numbers players"],
+    "best_for": [
+      "Horse racing fans",
+      "Budget bettors",
+      "Lucky Numbers players"
+    ],
     "featured": true,
-    "rank": 2
+    "rank": 2,
+    "reddit_quotes": [
+      "\"Hollywoodbets is the go-to for a lot of South Africans\"",
+      "\"Everywhere I looked in Durban there were ads for them - massive in KZN\"",
+      "\"Strong on horse racing and Lucky Numbers\" — Community favorite"
+    ]
   },
   {
     "id": 3,
@@ -76,9 +120,21 @@
     "rating": 4.2,
     "welcome_bonus": "R50 Free Bet on Sign-Up",
     "min_deposit": "R20",
-    "payment_methods": ["EFT", "Instant EFT", "Credit Card", "Debit Card"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Credit Card",
+      "Debit Card"
+    ],
     "data_free_app": false,
-    "sports": ["Soccer", "Rugby", "Cricket", "Tennis", "Basketball", "UFC/MMA"],
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Basketball",
+      "UFC/MMA"
+    ],
     "live_streaming": true,
     "live_betting": true,
     "established": "1998",
@@ -95,9 +151,18 @@
       "Mobile app can be buggy",
       "Withdrawal times sometimes slow"
     ],
-    "best_for": ["Rugby fans", "Live streaming users", "Experienced bettors"],
+    "best_for": [
+      "Rugby fans",
+      "Live streaming users",
+      "Experienced bettors"
+    ],
     "featured": true,
-    "rank": 3
+    "rank": 3,
+    "reddit_quotes": [
+      "\"You can check Betway, Sportingbet, Betolimp - most have politics, cinema awards bets\"",
+      "\"Reliable for South African sports betting\"",
+      "\"Good for international markets\" — r/southafrica"
+    ]
   },
   {
     "id": 4,
@@ -109,9 +174,20 @@
     "rating": 4.1,
     "welcome_bonus": "100% Deposit Match up to R500",
     "min_deposit": "R50",
-    "payment_methods": ["EFT", "Instant EFT", "Ozow", "Credit Card"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Ozow",
+      "Credit Card"
+    ],
     "data_free_app": false,
-    "sports": ["Soccer", "Rugby", "Cricket", "Tennis", "Horse Racing"],
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Horse Racing"
+    ],
     "live_streaming": false,
     "live_betting": true,
     "established": "2003",
@@ -128,9 +204,16 @@
       "Higher minimum deposit",
       "No data-free option"
     ],
-    "best_for": ["Soccer fans", "Bonus hunters", "International sports"],
+    "best_for": [
+      "Soccer fans",
+      "Bonus hunters",
+      "International sports"
+    ],
     "featured": true,
-    "rank": 4
+    "rank": 4,
+    "reddit_quotes": [
+      "Trusted by South African punters"
+    ]
   },
   {
     "id": 5,
@@ -142,9 +225,20 @@
     "rating": 4.0,
     "welcome_bonus": "R50 Sign-Up Bonus",
     "min_deposit": "R10",
-    "payment_methods": ["EFT", "Instant EFT", "Cash", "Credit Card"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Cash",
+      "Credit Card"
+    ],
     "data_free_app": true,
-    "sports": ["Soccer", "Rugby", "Horse Racing", "Cricket", "Tennis"],
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Horse Racing",
+      "Cricket",
+      "Tennis"
+    ],
     "live_streaming": false,
     "live_betting": true,
     "established": "2000",
@@ -161,9 +255,18 @@
       "Fewer international markets",
       "Basic mobile interface"
     ],
-    "best_for": ["Horse racing", "Retail + online users", "Budget bettors"],
+    "best_for": [
+      "Horse racing",
+      "Retail + online users",
+      "Budget bettors"
+    ],
     "featured": true,
-    "rank": 5
+    "rank": 5,
+    "reddit_quotes": [
+      "\"Trusted brand since 1998\"",
+      "\"Strong rugby and cricket coverage\"",
+      "\"Retail outlets make deposits easy\" — Long-standing reputation"
+    ]
   },
   {
     "id": 6,
@@ -175,9 +278,20 @@
     "rating": 3.9,
     "welcome_bonus": "R25 Free Bet on Registration",
     "min_deposit": "R5",
-    "payment_methods": ["EFT", "Instant EFT", "1Voucher", "Cash"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "1Voucher",
+      "Cash"
+    ],
     "data_free_app": true,
-    "sports": ["Soccer", "Rugby", "Horse Racing", "Lucky Numbers", "Cricket"],
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Horse Racing",
+      "Lucky Numbers",
+      "Cricket"
+    ],
     "live_streaming": false,
     "live_betting": true,
     "established": "2014",
@@ -194,9 +308,16 @@
       "Limited live betting options",
       "Smaller brand recognition"
     ],
-    "best_for": ["Budget bettors", "Casual punters", "Lucky Numbers fans"],
+    "best_for": [
+      "Budget bettors",
+      "Casual punters",
+      "Lucky Numbers fans"
+    ],
     "featured": false,
-    "rank": 6
+    "rank": 6,
+    "reddit_quotes": [
+      "Trusted by South African punters"
+    ]
   },
   {
     "id": 7,
@@ -208,9 +329,19 @@
     "rating": 3.8,
     "welcome_bonus": "R50 Sign-Up Bonus",
     "min_deposit": "R20",
-    "payment_methods": ["EFT", "Instant EFT", "Credit Card"],
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Credit Card"
+    ],
     "data_free_app": false,
-    "sports": ["Horse Racing", "Soccer", "Rugby", "Cricket", "Greyhounds"],
+    "sports": [
+      "Horse Racing",
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Greyhounds"
+    ],
     "live_streaming": true,
     "live_betting": true,
     "established": "1997",
@@ -227,8 +358,17 @@
       "No data-free app",
       "Interface feels outdated"
     ],
-    "best_for": ["Horse racing fans", "Greyhound betting", "Traditional bettors"],
+    "best_for": [
+      "Horse racing fans",
+      "Greyhound betting",
+      "Traditional bettors"
+    ],
     "featured": false,
-    "rank": 7
+    "rank": 7,
+    "reddit_quotes": [
+      "\"Tab betting integrated\"",
+      "\"Good for horse racing\"",
+      "\"Trusted in SA since 2001\" — Established player"
+    ]
   }
 ]

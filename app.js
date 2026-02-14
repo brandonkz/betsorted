@@ -198,6 +198,17 @@ function renderReviews() {
             </div>
           </div>
           
+          ${site.reddit_quotes && site.reddit_quotes.length > 0 ? `
+          <div class="community-quote" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 3px solid #e67e22; padding: 14px 18px; margin: 20px 0; border-radius: 8px; font-size: 0.9rem;">
+            <div style="font-weight: 600; color: #e67e22; margin-bottom: 10px;">💬 What South Africans Are Saying:</div>
+            ${site.reddit_quotes.map(quote => 
+              `<div style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 8px; padding-left: 10px; border-left: 2px solid #d8d8d8;">
+                ${quote}
+              </div>`
+            ).join('')}
+          </div>
+          ` : ''}
+          
           <div class="pros-cons-grid">
             <div class="pros-cons-section">
               <h4 style="color: var(--color-success);">✓ Pros</h4>

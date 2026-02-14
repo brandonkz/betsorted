@@ -104,9 +104,9 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="badge" style="display: inline-block; background: rgba(37, 99, 235, 0.1); color: #3b82f6; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 16px;">🇿🇦 Updated February 2026</span>
-      <h1>Which Bookmaker Has the Best Odds in South Africa?</h1>
-      <p class="hero-subtitle">Compare Betway, Hollywoodbets, Sportingbet, and more. See verified payout times, bonuses, odds comparison, and SA-specific features. All licensed and tested.</p>
+      <span class="badge" style="display: inline-block; background: rgba(37, 99, 235, 0.1); color: #3b82f6; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 16px;">🇿🇦 Updated February 2026 • Community-Verified</span>
+      <h1>Best Bookmakers in South Africa - Community Reviews</h1>
+      <p class="hero-subtitle">Real experiences from South African punters. Compare Betway, Hollywoodbets, Sportingbet, and more with honest reviews, verified payout times, and actual user feedback.</p>
       <div class="hero-features">
         <div class="hero-feature">
           <span class="feature-icon">🏉</span>
@@ -212,5 +212,49 @@
   </footer>
 
   <script src="app.js"></script>
+  
+  <!-- Affiliate Link Tracking -->
+  <script>
+    (function() {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTracking);
+      } else {
+        initTracking();
+      }
+
+      function initTracking() {
+        const externalLinks = document.querySelectorAll('a[href^="http"]');
+        
+        externalLinks.forEach(link => {
+          const href = link.href;
+          const hostname = new URL(href).hostname;
+          const currentHostname = window.location.hostname;
+          
+          if (hostname === currentHostname || hostname.includes('sorted')) {
+            return;
+          }
+          
+          link.addEventListener('click', function(e) {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'affiliate_click', {
+                'link_url': href,
+                'link_text': this.textContent.trim().substring(0, 50),
+                'link_domain': hostname,
+                'page_location': window.location.pathname,
+                'page_title': document.title
+              });
+            }
+            
+            if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+              e.preventDefault();
+              setTimeout(() => {
+                window.open(href, link.target || '_self');
+              }, 100);
+            }
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

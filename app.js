@@ -92,6 +92,7 @@ function renderComparisonTable() {
   
   comparisonTbody.innerHTML = filteredSites.map(site => {
     const stars = renderStars(site.rating);
+    const communitySummary = getCommunitySummary(site);
     
     return `
       <tr>
@@ -117,6 +118,11 @@ function renderComparisonTable() {
         </td>
         <td>
           <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
+        </td>
+        <td>
+          <div style="font-size: 0.9rem; font-style: italic; color: #666; line-height: 1.5;">
+            ${communitySummary}
+          </div>
         </td>
         <td>
           ${site.data_free_app 
@@ -296,6 +302,25 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+function getCommunitySummary(site) {
+  if (!site.reddit_quotes || site.reddit_quotes.length === 0) {
+    return 'Trusted by SA punters';
+  }
+  
+  // Take first quote and clean it up for table display
+  const firstQuote = site.reddit_quotes[0]
+    .replace(/^[""]/, '')
+    .replace(/[""]$/, '')
+    .replace(/[""].*$/, ''); // Remove everything after closing quote
+  
+  // Truncate if too long
+  if (firstQuote.length > 80) {
+    return firstQuote.substring(0, 77) + '...';
+  }
+  
+  return `"${firstQuote}"`;
 }
 
 function getBonusExplanation(bonus) {

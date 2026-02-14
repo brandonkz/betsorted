@@ -96,7 +96,7 @@ function renderComparisonTable() {
     
     return `
       <tr>
-        <td>
+        <td data-label="Bookmaker">
           <div class="bookmaker-cell">
             <div class="bookmaker-logo" style="background: ${site.logo_bg};">
               ${site.name.charAt(0)}
@@ -104,28 +104,28 @@ function renderComparisonTable() {
             <span class="bookmaker-name">${escapeHtml(site.name)}</span>
           </div>
         </td>
-        <td>
+        <td data-label="Rating">
           <div class="rating-stars">
             ${stars}
             <span class="rating-number">${site.rating}</span>
           </div>
         </td>
-        <td>
+        <td data-label="Welcome Bonus">
           <div class="bonus-text">
             <strong>${escapeHtml(site.welcome_bonus)}</strong>
             <small class="bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
           </div>
         </td>
-        <td>
+        <td data-label="Min Deposit">
           <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
         </td>
-        <td>
+        <td data-label="What South Africans Say">
           <div style="font-size: 0.85rem; line-height: 1.5; color: #555;">
             ${communityQuotes}
           </div>
         </td>
         <td>
-          <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width: 100%;">
             Claim ${getSimplifiedBonus(site.welcome_bonus)} →
           </a>
         </td>

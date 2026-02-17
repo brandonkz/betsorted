@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free betting calculator for South Africa. Calculate returns from decimal, fractional, and American odds. Convert odds formats instantly.">
+  <meta name="description" content="Betting calculator South Africa: calculate returns, convert decimal, fractional and American odds, and compare payouts in seconds. Free and mobile friendly.">
   <link rel="canonical" href="https://betsorted.co.za/betting-calculator.html">
-  <meta name="keywords" content="betting calculator, odds calculator, decimal odds calculator, fractional odds, american odds, south africa betting">
+  <meta name="keywords" content="betting calculator south africa, odds calculator, decimal odds calculator, fractional odds, american odds, betting calculator">
   <meta name="theme-color" content="#2563eb">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
@@ -17,161 +23,107 @@
     gtag('config', 'G-1VHD0P7M44');
   </script>
   
-  <title>Betting Calculator - Free Odds Calculator South Africa | BetSorted</title>
+  <title>Betting Calculator South Africa | Free Odds Converter | BetSorted</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://betsorted.co.za/betting-calculator.html">
+  <meta property="og:title" content="Betting Calculator South Africa | BetSorted">
+  <meta property="og:description" content="Betting calculator South Africa: calculate returns, convert odds formats, and compare payouts in seconds.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://betsorted.co.za/betting-calculator.html">
+  <meta name="twitter:title" content="Betting Calculator South Africa | BetSorted">
+  <meta name="twitter:description" content="Calculate returns and convert decimal, fractional and American odds instantly.">
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .calculator-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    
-    .calculator-card {
-      background: white;
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
-    }
-    
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-    
-    @media (max-width: 640px) {
-      .form-grid {
-        grid-template-columns: 1fr;
+
+  <!-- Organization + LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "logo": "https://betsorted.co.za/logo.png",
+        "areaServed": "ZA"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "image": "https://betsorted.co.za/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA"
+        },
+        "areaServed": "South Africa"
       }
+    ]
+  }
+  </script>
+
+  <!-- Calculator Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Betting Calculator South Africa",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://betsorted.co.za/betting-calculator.html",
+    "description": "Calculate betting returns and convert decimal, fractional, and American odds for South African bookmakers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ZAR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za"
     }
-    
-    .form-group {
-      margin-bottom: 24px;
-    }
-    
-    .form-label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    
-    .form-input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #e5e7eb;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: #2563eb;
-    }
-    
-    .btn-calculate {
-      width: 100%;
-      background: #2563eb;
-      color: white;
-      padding: 16px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    
-    .result-card {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      border-radius: 12px;
-      padding: 32px;
-      margin-bottom: 24px;
-      display: none;
-    }
-    
-    .result-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      opacity: 0.9;
-    }
-    
-    .result-amount {
-      font-size: 48px;
-      font-weight: 900;
-      margin-bottom: 24px;
-    }
-    
-    .conversion-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 16px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    
-    .conversion-item {
-      text-align: center;
-    }
-    
-    .conversion-label {
-      font-size: 12px;
-      opacity: 0.8;
-      margin-bottom: 4px;
-    }
-    
-    .conversion-value {
-      font-size: 20px;
-      font-weight: 700;
-    }
-    
-    .breakdown {
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    
-    .breakdown-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .breakdown-row:last-child {
-      border-bottom: none;
-      font-weight: 700;
-      font-size: 18px;
-      margin-top: 8px;
-    }
-    
-    .info-section {
-      background: #f9fafb;
-      border-radius: 12px;
-      padding: 24px;
-      margin-top: 24px;
-    }
-    
-    .info-section h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    
-    .info-section p {
-      color: #6b7280;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-  </style>
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I use the betting calculator South Africa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your stake, select your odds format, and the calculator shows total return, profit, and converted odds instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which odds format is most common in South Africa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most South African bookmakers use decimal odds by default, but you can convert to fractional or American odds using the calculator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the BetSorted betting calculator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The betting calculator is 100% free and works on mobile and desktop."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -192,8 +144,21 @@
 
   <!-- Calculator -->
   <section class="calculator-container">
-    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 16px; text-align: center;">Betting Calculator</h1>
-    <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 18px;">Calculate your returns and convert between decimal, fractional, and American odds</p>
+    <h1 class="page-title">Betting Calculator South Africa</h1>
+    <p class="page-subtitle">Calculate your returns and convert between decimal, fractional, and American odds in seconds.</p>
+    <p class="page-intro">
+      Looking for the most accurate <strong>betting calculator South Africa</strong> punters can use on any device?
+      This free tool helps you work out returns for single bets, convert odds formats, and compare payouts before you
+      place a wager. Whether you are betting on PSL, rugby, cricket, or horse racing, enter your stake and odds to see
+      total return and profit immediately. South African bookmakers mainly use decimal odds, but we also support
+      fractional and American formats for international markets. Use the calculator to check value before placing a bet,
+      and to understand how small odds differences change profit. Pair it with our
+      <a href="/odds-comparison.html">sports betting odds comparison SA</a> tool to see which bookmaker pays more for the
+      same market, and visit the <a href="/">best bookmakers South Africa</a> page to compare bonuses and payout speed.
+      If you are building a multi-leg ticket, the <a href="/accumulator-calculator.html">accumulator calculator</a>
+      combines odds for you, while the <a href="/each-way-calculator.html">each-way calculator</a> helps racing bettors
+      split win and place returns. This is the fastest way to calculate winnings with confidence in SA.
+    </p>
     
     <div class="calculator-card">
       <form id="betting-form">
@@ -262,57 +227,67 @@
     
     <!-- Info Section -->
     <div class="info-section">
-      <h3>Understanding Betting Odds Formats</h3>
-      
-      <h4 style="font-weight: 700; margin-top: 20px; margin-bottom: 8px;">Decimal Odds (Most Common in SA)</h4>
+      <h2>Betting Odds Explained</h2>
+
+      <h3>Decimal Odds (Most Common in SA)</h3>
       <p><strong>2.00</strong> means you get R2 back for every R1 staked (including your stake)</p>
       <p><strong>3.50</strong> means you get R3.50 back for every R1 staked</p>
       <p><strong>1.50</strong> means you get R1.50 back for every R1 staked</p>
       <p>Example: R100 bet at 2.50 odds = R250 return (R150 profit + R100 stake back)</p>
       
-      <h4 style="font-weight: 700; margin-top: 20px; margin-bottom: 8px;">Fractional Odds (UK Format)</h4>
+      <h3>Fractional Odds (UK Format)</h3>
       <p><strong>1/1 (evens)</strong> means you win R1 for every R1 staked</p>
       <p><strong>5/2</strong> means you win R5 for every R2 staked</p>
       <p><strong>1/4</strong> means you win R1 for every R4 staked</p>
       <p>Example: R100 bet at 5/2 = R250 profit + R100 stake = R350 total</p>
       
-      <h4 style="font-weight: 700; margin-top: 20px; margin-bottom: 8px;">American Odds (US Format)</h4>
+      <h3>American Odds (US Format)</h3>
       <p><strong>+150</strong> means you win R150 profit on a R100 bet</p>
       <p><strong>-200</strong> means you must bet R200 to win R100 profit</p>
       <p>Positive (+) = underdog, Negative (-) = favorite</p>
       
-      <h3 style="margin-top: 24px;">Quick Reference</h3>
+      <h2>Quick Reference</h2>
       <p><strong>Decimal 2.00</strong> = Fractional 1/1 = American +100 (even money)</p>
       <p><strong>Decimal 3.00</strong> = Fractional 2/1 = American +200</p>
       <p><strong>Decimal 1.50</strong> = Fractional 1/2 = American -200</p>
       
-      <h3 style="margin-top: 24px;">Which Bookmakers Use Which Format?</h3>
+      <h2>Which Bookmakers Use Which Format?</h2>
       <p><strong>Decimal:</strong> Betway, Hollywoodbets, Sportingbet, Supabets (default in SA)</p>
       <p><strong>Fractional:</strong> Some UK bookmakers available in SA</p>
       <p><strong>American:</strong> Rare in SA, mostly US bookmakers</p>
     </div>
+
+    <div class="info-section">
+      <h2>Betting Calculator FAQ</h2>
+      <h3>What is the best betting calculator South Africa can use?</h3>
+      <p>The best calculator is the one that shows total return, profit, and odds conversions together, so you can compare value quickly.</p>
+      <h3>Can I use this for Betway, Hollywoodbets, and Sportingbet?</h3>
+      <p>Yes. The calculator works with any bookmaker that offers decimal odds, which is the default in South Africa.</p>
+      <h3>Does the calculator support accumulator odds?</h3>
+      <p>For multi-leg bets, use the <a href="/accumulator-calculator.html">accumulator calculator</a> to combine selections and see total odds.</p>
+    </div>
     
     <!-- Next Steps -->
-    <div class="info-section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #2563eb;">
-      <h3 style="color: #1e40af; margin-bottom: 16px;">📊 Next Steps</h3>
-      <div style="display: grid; gap: 12px;">
-        <a href="/accumulator-calculator.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🎲 Build an Accumulator</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Combine multiple selections for bigger returns</span>
+    <div class="info-section next-steps">
+      <h3 class="next-steps-title">📊 Next Steps</h3>
+      <div class="next-steps-grid">
+        <a href="/accumulator-calculator.html" class="next-step-card">
+          <strong class="next-step-title">🎲 Build an Accumulator</strong>
+          <span class="next-step-desc">Combine multiple selections for bigger returns</span>
         </a>
-        <a href="/each-way-calculator.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🏇 Calculate Each-Way Bets</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Perfect for horse racing (Durban July, Summer Cup)</span>
+        <a href="/each-way-calculator.html" class="next-step-card">
+          <strong class="next-step-title">🏇 Calculate Each-Way Bets</strong>
+          <span class="next-step-desc">Perfect for horse racing (Durban July, Summer Cup)</span>
         </a>
-        <a href="/" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🏆 Compare SA Bookmakers</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Find the best odds and bonuses for your bet</span>
+        <a href="/" class="next-step-card">
+          <strong class="next-step-title">🏆 Compare SA Bookmakers</strong>
+          <span class="next-step-desc">Find the best odds and bonuses for your bet</span>
         </a>
       </div>
     </div>
     
     <div style="text-align: center; margin-top: 40px;">
-      <a href="/" style="display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Back to BetSorted</a>
+      <a href="/" class="back-link">Back to BetSorted</a>
     </div>
   </section>
 

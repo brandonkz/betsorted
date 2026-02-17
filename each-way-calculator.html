@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free each-way betting calculator for South Africa. Calculate win and place returns for horse racing bets. Perfect for Durban July, Gold Cup, and SA racing.">
+  <meta name="description" content="Each way betting explained with a free calculator for South Africa. Work out win and place returns, stake split, profits, place terms, and examples fast.">
   <link rel="canonical" href="https://betsorted.co.za/each-way-calculator.html">
-  <meta name="keywords" content="each way calculator, each way betting, horse racing calculator, durban july betting, place betting calculator">
+  <meta name="keywords" content="each way betting explained, each way calculator, horse racing calculator, place betting calculator, south africa racing">
   <meta name="theme-color" content="#2563eb">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
@@ -17,140 +23,107 @@
     gtag('config', 'G-1VHD0P7M44');
   </script>
   
-  <title>Each Way Calculator - Horse Racing Betting Calculator SA | BetSorted</title>
+  <title>Each Way Calculator South Africa | Each Way Betting Explained | BetSorted</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://betsorted.co.za/each-way-calculator.html">
+  <meta property="og:title" content="Each Way Calculator South Africa | BetSorted">
+  <meta property="og:description" content="Each way betting explained with a free calculator for win and place returns.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://betsorted.co.za/each-way-calculator.html">
+  <meta name="twitter:title" content="Each Way Calculator South Africa | BetSorted">
+  <meta name="twitter:description" content="Calculate win and place returns for each-way bets in seconds.">
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .calculator-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    
-    .calculator-card {
-      background: white;
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
-    }
-    
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-    
-    @media (max-width: 640px) {
-      .form-grid {
-        grid-template-columns: 1fr;
+
+  <!-- Organization + LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "logo": "https://betsorted.co.za/logo.png",
+        "areaServed": "ZA"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "image": "https://betsorted.co.za/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA"
+        },
+        "areaServed": "South Africa"
       }
+    ]
+  }
+  </script>
+
+  <!-- Calculator Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Each Way Calculator South Africa",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://betsorted.co.za/each-way-calculator.html",
+    "description": "Calculate win and place returns for each-way bets and learn each-way betting explained for South African racing.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ZAR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za"
     }
-    
-    .form-group {
-      margin-bottom: 24px;
-    }
-    
-    .form-label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    
-    .form-input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #e5e7eb;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: #2563eb;
-    }
-    
-    .btn-calculate {
-      width: 100%;
-      background: #2563eb;
-      color: white;
-      padding: 16px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    
-    .result-card {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      border-radius: 12px;
-      padding: 32px;
-      margin-bottom: 24px;
-      display: none;
-    }
-    
-    .result-section {
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    
-    .result-section:last-child {
-      margin-bottom: 0;
-    }
-    
-    .result-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      opacity: 0.9;
-    }
-    
-    .result-amount {
-      font-size: 36px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-    
-    .breakdown-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .breakdown-row:last-child {
-      border-bottom: none;
-      font-weight: 700;
-      font-size: 18px;
-      margin-top: 8px;
-    }
-    
-    .info-section {
-      background: #f9fafb;
-      border-radius: 12px;
-      padding: 24px;
-      margin-top: 24px;
-    }
-    
-    .info-section h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    
-    .info-section p {
-      color: #6b7280;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-  </style>
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does each-way betting mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each-way betting is two bets in one: a win bet and a place bet. You win if the selection wins, or you still get a return if it places."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are each-way place terms calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Place terms are usually 1/4 or 1/5 of the win odds, depending on the race and number of runners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this calculator for Durban July betting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. It works for Durban July and other South African racing events by calculating both win and place returns."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -171,8 +144,20 @@
 
   <!-- Calculator -->
   <section class="calculator-container">
-    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 16px; text-align: center;">Each Way Calculator</h1>
-    <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 18px;">Calculate your each-way returns for horse racing and other sports</p>
+    <h1 class="page-title">Each Way Calculator South Africa</h1>
+    <p class="page-subtitle">Each way betting explained with instant win and place returns.</p>
+    <p class="page-intro">
+      If you have been searching for <strong>each way betting explained</strong> in South Africa, this calculator breaks
+      it down clearly. An each-way bet is two bets in one: a win bet and a place bet. Enter your stake, odds, and place
+      terms to see total returns if your horse wins or places. This is ideal for Durban July, Sun Met, and other SA racing
+      events where place terms can swing your payout. The calculator also shows how the place fraction changes your
+      profit, so you can decide whether each-way or win-only gives the best value. Use it to compare bookmakers, understand
+      the place fraction, and budget your bankroll before a busy race card. For other bet types, try the
+      <a href="/betting-calculator.html">betting calculator South Africa</a> or build multi-leg racing tickets with the
+      <a href="/accumulator-calculator.html">accumulator calculator</a>. You can also use our
+      <a href="/odds-comparison.html">sports betting odds comparison SA</a> tool to find better prices and boost your
+      expected returns over time.
+    </p>
     
     <div class="calculator-card">
       <form id="each-way-form">
@@ -261,12 +246,12 @@
     
     <!-- Info Section -->
     <div class="info-section">
-      <h3>How Each-Way Betting Works</h3>
+      <h2>How Each-Way Betting Works</h2>
       <p>An each-way bet is actually TWO bets:</p>
       <p>1. <strong>Win bet:</strong> Your horse must win the race</p>
       <p>2. <strong>Place bet:</strong> Your horse must finish in the places (usually top 2, 3, or 4)</p>
       
-      <h3 style="margin-top: 24px;">Example</h3>
+      <h2>Example</h2>
       <p><strong>Bet:</strong> R50 each-way on a horse at 8.00 odds</p>
       <p><strong>Total stake:</strong> R100 (R50 win + R50 place)</p>
       <p><strong>Place terms:</strong> 1/4 odds, 3 places</p>
@@ -283,53 +268,63 @@
       <p>• Total return: R137.50</p>
       <p>• Profit: R37.50 (R137.50 - R100 stake)</p>
       
-      <h3 style="margin-top: 24px;">Place Terms Guide</h3>
+      <h2>Place Terms Guide</h2>
       <p><strong>1/4 odds (most common):</strong> Divide win odds by 4</p>
       <p>Example: 8.00 odds → (8.00 - 1) ÷ 4 + 1 = 2.75 place odds</p>
       
       <p><strong>1/5 odds:</strong> Divide win odds by 5 (better for bookmaker)</p>
       <p><strong>1/6 odds:</strong> Divide win odds by 6 (rare, major races)</p>
       
-      <h3 style="margin-top: 24px;">Number of Places</h3>
+      <h2>Number of Places</h2>
       <p><strong>2 places:</strong> Races with 5-7 runners</p>
       <p><strong>3 places:</strong> Races with 8-15 runners (most common)</p>
       <p><strong>4 places:</strong> Races with 16+ runners (big handicaps)</p>
       
-      <h3 style="margin-top: 24px;">Famous SA Horse Racing Events</h3>
+      <h2>Famous SA Horse Racing Events</h2>
       <p><strong>Durban July:</strong> South Africa's premier horse race (July)</p>
       <p><strong>Sun Met:</strong> Cape Town's biggest race (January)</p>
       <p><strong>Gold Cup:</strong> Greyville feature race</p>
       <p><strong>Summer Cup:</strong> Gauteng's major race</p>
       
-      <h3 style="margin-top: 24px;">When to Use Each-Way Betting</h3>
+      <h2>When to Use Each-Way Betting</h2>
       <p>✓ Big fields (10+ runners) - better place chance</p>
       <p>✓ Long-shot outsiders (8.00+ odds) - insurance if horse places</p>
       <p>✓ Uncertain about winner but confident in top 3</p>
       <p>✗ Heavy favorites (under 3.00) - place returns too small</p>
       <p>✗ Small fields (under 8 runners) - better to bet win only</p>
     </div>
+
+    <div class="info-section">
+      <h2>Each Way Calculator FAQ</h2>
+      <h3>What is the best each-way calculator in South Africa?</h3>
+      <p>The best calculator shows win and place returns together so you can see total return if the horse wins or places.</p>
+      <h3>Which place terms are most common?</h3>
+      <p>Most South African bookmakers use 1/4 odds for place terms, especially in races with 8 or more runners.</p>
+      <h3>Can I use this for horse racing accumulators?</h3>
+      <p>Yes, but for multiple races use the <a href="/accumulator-calculator.html">accumulator calculator</a> to combine odds.</p>
+    </div>
     
     <!-- Next Steps -->
-    <div class="info-section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #2563eb;">
-      <h3 style="color: #1e40af; margin-bottom: 16px;">📊 Next Steps</h3>
-      <div style="display: grid; gap: 12px;">
-        <a href="/odds-comparison.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🎯 Compare Racing Odds</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Find the best each-way odds for Durban July & major races</span>
+    <div class="info-section next-steps">
+      <h3 class="next-steps-title">📊 Next Steps</h3>
+      <div class="next-steps-grid">
+        <a href="/odds-comparison.html" class="next-step-card">
+          <strong class="next-step-title">🎯 Compare Racing Odds</strong>
+          <span class="next-step-desc">Find the best each-way odds for Durban July and major races</span>
         </a>
-        <a href="/accumulator-calculator.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🎲 Build a Racing Accumulator</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Combine multiple race selections for bigger returns</span>
+        <a href="/accumulator-calculator.html" class="next-step-card">
+          <strong class="next-step-title">🎲 Build a Racing Accumulator</strong>
+          <span class="next-step-desc">Combine multiple race selections for bigger returns</span>
         </a>
-        <a href="/" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🏇 Best Bookmakers for Racing</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Hollywoodbets, Betway, and Sportingbet compared</span>
+        <a href="/" class="next-step-card">
+          <strong class="next-step-title">🏇 Best Bookmakers for Racing</strong>
+          <span class="next-step-desc">Hollywoodbets, Betway, and Sportingbet compared</span>
         </a>
       </div>
     </div>
     
     <div style="text-align: center; margin-top: 40px;">
-      <a href="/" style="display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Back to BetSorted</a>
+      <a href="/" class="back-link">Back to BetSorted</a>
     </div>
   </section>
 

@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free accumulator calculator for South African bettors. Calculate multi-leg bet returns, combined odds, and potential winnings. Perfect for soccer, rugby, cricket accumulators.">
+  <meta name="description" content="Accumulator calculator South Africa: combine odds, calculate multi-leg returns, and see profit instantly. Free acca tool for soccer, rugby, and cricket.">
   <link rel="canonical" href="https://betsorted.co.za/accumulator-calculator.html">
-  <meta name="keywords" content="accumulator calculator, acca calculator, parlay calculator south africa, multi bet calculator, soccer accumulator">
+  <meta name="keywords" content="accumulator calculator, acca calculator, accumulator calculator south africa, parlay calculator south africa, multi bet calculator">
   <meta name="theme-color" content="#2563eb">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
@@ -17,142 +23,107 @@
     gtag('config', 'G-1VHD0P7M44');
   </script>
   
-  <title>Accumulator Calculator - Free Acca Calculator South Africa | BetSorted</title>
+  <title>Accumulator Calculator South Africa | Free Acca Tool | BetSorted</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://betsorted.co.za/accumulator-calculator.html">
+  <meta property="og:title" content="Accumulator Calculator South Africa | BetSorted">
+  <meta property="og:description" content="Free accumulator calculator for South Africa. Combine odds, calculate returns, and see profit instantly.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://betsorted.co.za/accumulator-calculator.html">
+  <meta name="twitter:title" content="Accumulator Calculator South Africa | BetSorted">
+  <meta name="twitter:description" content="Combine odds and calculate multi-leg returns in seconds.">
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .calculator-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    
-    .calculator-card {
-      background: white;
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
-    }
-    
-    .selection-row {
-      display: grid;
-      grid-template-columns: 1fr 150px 40px;
-      gap: 12px;
-      margin-bottom: 12px;
-      align-items: center;
-    }
-    
-    @media (max-width: 640px) {
-      .selection-row {
-        grid-template-columns: 1fr;
+
+  <!-- Organization + LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "logo": "https://betsorted.co.za/logo.png",
+        "areaServed": "ZA"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "image": "https://betsorted.co.za/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA"
+        },
+        "areaServed": "South Africa"
       }
+    ]
+  }
+  </script>
+
+  <!-- Calculator Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Accumulator Calculator South Africa",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://betsorted.co.za/accumulator-calculator.html",
+    "description": "Calculate multi-leg accumulator returns and combined odds for South African betting markets.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ZAR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za"
     }
-    
-    .form-input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #e5e7eb;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: #2563eb;
-    }
-    
-    .btn-remove {
-      background: #ef4444;
-      color: white;
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    
-    .btn-add {
-      background: #10b981;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
-    
-    .btn-calculate {
-      width: 100%;
-      background: #2563eb;
-      color: white;
-      padding: 16px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    
-    .result-card {
-      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-      color: white;
-      border-radius: 12px;
-      padding: 32px;
-      margin-bottom: 24px;
-      display: none;
-    }
-    
-    .result-amount {
-      font-size: 48px;
-      font-weight: 900;
-      margin: 16px 0;
-    }
-    
-    .breakdown {
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    
-    .breakdown-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .breakdown-row:last-child {
-      border-bottom: none;
-      font-weight: 700;
-      font-size: 18px;
-      margin-top: 8px;
-    }
-    
-    .info-section {
-      background: #f9fafb;
-      border-radius: 12px;
-      padding: 24px;
-      margin-top: 24px;
-    }
-    
-    .info-section h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    
-    .info-section p {
-      color: #6b7280;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-  </style>
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an accumulator calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An accumulator calculator combines multiple selections to show total odds, return, and profit for a multi-leg bet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many selections can I add?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can add up to 15 selections and see how each leg affects combined odds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this accumulator calculator free in South Africa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The acca calculator is free and works on mobile and desktop."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -173,8 +144,21 @@
 
   <!-- Calculator -->
   <section class="calculator-container">
-    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 16px; text-align: center;">Accumulator Calculator</h1>
-    <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 18px;">Calculate your multi-leg bet returns. Add up to 15 selections for your acca.</p>
+    <h1 class="page-title">Accumulator Calculator South Africa</h1>
+    <p class="page-subtitle">Build an acca, combine odds, and see total return and profit instantly.</p>
+    <p class="page-intro">
+      This <strong>accumulator calculator South Africa</strong> bettors use most often helps you combine multiple
+      selections into one powerful bet. Add each leg, enter your stake, and the calculator multiplies the odds to show
+      your combined price, total return, and profit. Accumulators are popular for PSL, Premier League, rugby, and cricket
+      because small stakes can lead to large payouts. They are also high risk because every leg must win, so it helps to
+      check the numbers before you place a bet. Use this tool alongside the
+      <a href="/odds-comparison.html">sports betting odds comparison SA</a> page to choose the best prices before you
+      lock in a multi-leg bet. Prefer a single bet? Try the
+      <a href="/betting-calculator.html">betting calculator South Africa</a> to calculate one market at a time. You can
+      also compare bookmakers on the <a href="/">best bookmakers South Africa</a> page to find the best acca boosts,
+      insurance offers, and payout speeds. If you bet on racing, pair this with the
+      <a href="/each-way-calculator.html">each-way calculator</a> for place returns.
+    </p>
     
     <div class="calculator-card">
       <div style="margin-bottom: 24px;">
@@ -240,10 +224,10 @@
     
     <!-- Info Section -->
     <div class="info-section">
-      <h3>How Accumulator Bets Work</h3>
+      <h2>How Accumulator Bets Work</h2>
       <p>An accumulator (acca) combines multiple selections into one bet. All selections must win for the bet to pay out. The odds multiply together, creating potentially huge returns from small stakes.</p>
       
-      <h3 style="margin-top: 24px;">Example</h3>
+      <h2>Example</h2>
       <p><strong>Stake:</strong> R100</p>
       <p><strong>Selections:</strong></p>
       <p>• Chiefs to win @ 2.00</p>
@@ -253,41 +237,51 @@
       <p><strong>Return if all win:</strong> R100 × 5.40 = R540</p>
       <p><strong>Profit:</strong> R540 - R100 = R440</p>
       
-      <h3 style="margin-top: 24px;">Popular SA Accumulator Sports</h3>
+      <h2>Popular SA Accumulator Sports</h2>
       <p><strong>Soccer:</strong> PSL, Premier League, Champions League</p>
       <p><strong>Rugby:</strong> URC, Currie Cup, Super Rugby</p>
       <p><strong>Cricket:</strong> T20, ODI, Test matches</p>
       <p><strong>Horse Racing:</strong> Multiple race cards</p>
       
-      <h3 style="margin-top: 24px;">Accumulator Tips</h3>
+      <h2>Accumulator Tips</h2>
       <p>• Start with 3-5 selections (better balance of risk vs reward)</p>
       <p>• Don't add heavy favorites under 1.30 odds (barely increase returns)</p>
       <p>• Research each selection - one loss = entire bet loses</p>
       <p>• Consider acca insurance offers from bookmakers</p>
       <p>• Betway, Hollywoodbets, Supabets all offer acca boosts</p>
     </div>
+
+    <div class="info-section">
+      <h2>Accumulator Calculator FAQ</h2>
+      <h3>What is the best accumulator calculator in South Africa?</h3>
+      <p>The best acca calculator shows combined odds, return, and profit in one view so you can compare risk and reward.</p>
+      <h3>Should I add more selections to increase winnings?</h3>
+      <p>More legs increase the potential return but also reduce the chance of winning. Most bettors start with 3 to 5 legs.</p>
+      <h3>Can I use this for any bookmaker?</h3>
+      <p>Yes. It works with all South African bookmakers that use decimal odds.</p>
+    </div>
     
     <!-- Next Steps -->
-    <div class="info-section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #2563eb;">
-      <h3 style="color: #1e40af; margin-bottom: 16px;">📊 Next Steps</h3>
-      <div style="display: grid; gap: 12px;">
-        <a href="/odds-comparison.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🎯 Compare Odds Across Bookmakers</strong>
-          <span style="font-size: 14px; opacity: 0.8;">See which bookmaker offers the best odds for your accumulator</span>
+    <div class="info-section next-steps">
+      <h3 class="next-steps-title">📊 Next Steps</h3>
+      <div class="next-steps-grid">
+        <a href="/odds-comparison.html" class="next-step-card">
+          <strong class="next-step-title">🎯 Compare Odds Across Bookmakers</strong>
+          <span class="next-step-desc">See which bookmaker offers the best odds for your accumulator</span>
         </a>
-        <a href="/betting-calculator.html" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">💰 Try Our Betting Calculator</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Convert odds formats and calculate single bet returns</span>
+        <a href="/betting-calculator.html" class="next-step-card">
+          <strong class="next-step-title">💰 Try Our Betting Calculator</strong>
+          <span class="next-step-desc">Convert odds formats and calculate single bet returns</span>
         </a>
-        <a href="/" style="display: block; padding: 16px; background: white; border-radius: 8px; text-decoration: none; color: #1e3a8a; border-left: 4px solid #2563eb; transition: transform 0.2s;">
-          <strong style="display: block; margin-bottom: 4px; font-size: 16px;">🏆 Compare SA Bookmakers</strong>
-          <span style="font-size: 14px; opacity: 0.8;">Find the best betting site for your accumulator</span>
+        <a href="/" class="next-step-card">
+          <strong class="next-step-title">🏆 Compare SA Bookmakers</strong>
+          <span class="next-step-desc">Find the best betting site for your accumulator</span>
         </a>
       </div>
     </div>
     
     <div style="text-align: center; margin-top: 40px;">
-      <a href="/" style="display: inline-block; padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Back to BetSorted</a>
+      <a href="/" class="back-link">Back to BetSorted</a>
     </div>
   </section>
 

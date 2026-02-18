@@ -1,0 +1,23 @@
+{
+  "name": "betsorted",
+  "version": "1.0.0",
+  "description": "**Find the best sports betting site for South Africans**",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonkz/betsorted.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonkz/betsorted/issues"
+  },
+  "homepage": "https://github.com/brandonkz/betsorted#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}

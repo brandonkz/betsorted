@@ -15,15 +15,15 @@ const API_KEY = process.env.ODDS_API_KEY || 'bb71cc0232a79874fc3014da54a71104';
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
 
-// SA-relevant sports
+// SA-relevant sports (prioritized order)
 const SPORTS = [
-  'soccer_epl', // Premier League (popular in SA)
-  'soccer_uefa_champs_league', // Champions League
-  'rugbyunion_six_nations', // Rugby
+  'soccer_epl', // Premier League (most popular in SA)
+  'soccer_uefa_champs_league', // Champions League (popular in SA)
+  'cricket_t20_world_cup', // T20 World Cup (when Proteas play)
 ];
 
-// SA bookmakers we track
-const SA_BOOKMAKERS = ['betway', 'hollywoodbets', 'sportingbet', 'supabets', 'sunbet'];
+// Betway is the only SA bookmaker available in the API
+const PRIORITY_BOOKMAKERS = ['betway']; // Show Betway first when available
 
 async function fetchOdds(sport) {
   const url = `${BASE_URL}/${sport}/odds/?apiKey=${API_KEY}&regions=uk,eu,us&markets=h2h&oddsFormat=decimal`;
@@ -51,60 +51,50 @@ async function fetchOdds(sport) {
   }
 }
 
-function findSABookmakerOdds(bookmakers, team) {
-  // Look for SA bookmakers first, fallback to any bookmaker
-  for (const bookmaker of bookmakers) {
-    const key = bookmaker.key.toLowerCase();
-    if (SA_BOOKMAKERS.some(sa => key.includes(sa))) {
-      const market = bookmaker.markets.find(m => m.key === 'h2h');
-      if (market) {
-        const outcome = market.outcomes.find(o => o.name === team);
-        if (outcome) {
-          return {
-            bookmaker: bookmaker.title,
-            odds: outcome.price
-          };
-        }
-      }
-    }
-  }
-  
-  // Fallback: any bookmaker
-  if (bookmakers.length > 0) {
-    const market = bookmakers[0].markets.find(m => m.key === 'h2h');
-    if (market) {
-      const outcome = market.outcomes.find(o => o.name === team);
-      if (outcome) {
-        return {
-          bookmaker: bookmakers[0].title,
-          odds: outcome.price
-        };
-      }
-    }
-  }
-  
-  return null;
+function sortBookmakersByPriority(bookmakers) {
+  // Sort to prioritize Betway
+  return [...bookmakers].sort((a, b) => {
+    const aKey = a.key.toLowerCase();
+    const bKey = b.key.toLowerCase();
+    
+    // Betway first
+    if (PRIORITY_BOOKMAKERS.some(p => aKey.includes(p))) return -1;
+    if (PRIORITY_BOOKMAKERS.some(p => bKey.includes(p))) return 1;
+    
+    return 0; // Keep original order for others
+  });
 }
 
 function formatEvent(game) {
+  // Sort bookmakers to prioritize Betway
+  const sortedBookmakers = sortBookmakersByPriority(game.bookmakers);
+  
   // Get odds from multiple bookmakers
   const homeOdds = [];
   
-  for (const bookmaker of game.bookmakers) {
+  for (const bookmaker of sortedBookmakers) {
     const market = bookmaker.markets.find(m => m.key === 'h2h');
     if (market) {
       const homeOutcome = market.outcomes.find(o => o.name === game.home_team);
       if (homeOutcome) {
         homeOdds.push({
           bookmaker: bookmaker.title,
-          odds: homeOutcome.price
+          key: bookmaker.key,
+          odds: homeOutcome.price,
+          isBetway: bookmaker.key.toLowerCase().includes('betway')
         });
       }
     }
   }
   
-  // Sort by best odds
-  homeOdds.sort((a, b) => b.odds - a.odds);
+  // Prioritize Betway, then sort by best odds
+  homeOdds.sort((a, b) => {
+    // Betway always first if available
+    if (a.isBetway && !b.isBetway) return -1;
+    if (!a.isBetway && b.isBetway) return 1;
+    // Otherwise sort by odds
+    return b.odds - a.odds;
+  });
   
   if (homeOdds.length < 2) return null;
   
@@ -142,7 +132,11 @@ function formatEvent(game) {
 }
 
 function generateEventHTML(events) {
-  return events.map(event => `
+  return events.map(event => {
+    const firstLabel = event.bestOdds.isBetway ? `${event.bestOdds.bookmaker} 🇿🇦` : event.bestOdds.bookmaker;
+    const secondLabel = event.secondOdds.isBetway ? `${event.secondOdds.bookmaker} 🇿🇦` : event.secondOdds.bookmaker;
+    
+    return `
         <!-- Event -->
         <div style="background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1);">
           <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
@@ -153,21 +147,22 @@ function generateEventHTML(events) {
             ${event.awayTeam} vs ${event.homeTeam}
           </h3>
           <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.875rem; margin-bottom: 1rem;">
-            ${event.day} ${event.month} ${event.dayNum}, ${event.time} • ${event.venue}
+            ${event.day} ${event.month} ${event.dayNum}, ${event.time}
           </p>
           <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; margin-bottom: 1rem;">
-            <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">${event.bestOdds.bookmaker}</span>
-            <span style="color: #10b981; font-weight: 700;">${event.bestOdds.odds.toFixed(2)} ✓ Best</span>
+            <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">${firstLabel}</span>
+            <span style="color: #10b981; font-weight: 700;">${event.bestOdds.odds.toFixed(2)}</span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; margin-bottom: 1rem;">
-            <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">${event.secondOdds.bookmaker}</span>
+            <span style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">${secondLabel}</span>
             <span style="color: white; font-weight: 700;">${event.secondOdds.odds.toFixed(2)}</span>
           </div>
           <a href="/odds-comparison.html" style="display: block; width: 100%; background: #2563eb; color: white; text-align: center; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
             Compare All Odds →
           </a>
         </div>
-  `).join('\n');
+  `;
+  }).join('\n');
 }
 
 async function main() {
@@ -224,10 +219,16 @@ async function main() {
   
   const newHTML = before + '\n' + eventsHTML + '\n      ' + after;
   
-  // Update timestamp
-  const updatedHTML = newHTML.replace(
+  // Update timestamp and note
+  let updatedHTML = newHTML.replace(
     /Updated .*? \•/,
     `Updated ${timestamp} (live) •`
+  );
+  
+  // Update note about bookmakers
+  updatedHTML = updatedHTML.replace(
+    /Odds indicative only/,
+    'Live odds prioritize Betway 🇿🇦 + international bookmakers'
   );
   
   // Write back

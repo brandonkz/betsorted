@@ -1,0 +1,66 @@
+{
+  "teams": [
+    {
+      "team": "Arsenal",
+      "probability": 19.5,
+      "volume": 1744778.342899,
+      "lastPrice": 0.19
+    },
+    {
+      "team": "Bayern Munich",
+      "probability": 16.5,
+      "volume": 1794593.236228,
+      "lastPrice": 0.17
+    },
+    {
+      "team": "PSG",
+      "probability": 10.5,
+      "volume": 2447827.317236,
+      "lastPrice": 0.11
+    },
+    {
+      "team": "Barcelona",
+      "probability": 10.5,
+      "volume": 1521578.836907,
+      "lastPrice": 0.11
+    },
+    {
+      "team": "Real Madrid",
+      "probability": 9.5,
+      "volume": 1586910.279154,
+      "lastPrice": 0.09
+    },
+    {
+      "team": "Man City",
+      "probability": 9.5,
+      "volume": 1203426.133561,
+      "lastPrice": 0.09
+    },
+    {
+      "team": "Liverpool",
+      "probability": 8.5,
+      "volume": 1750199.893279,
+      "lastPrice": 0.08
+    },
+    {
+      "team": "Chelsea",
+      "probability": 4.3,
+      "volume": 2652596.936191,
+      "lastPrice": 0.043
+    },
+    {
+      "team": "Inter",
+      "probability": 3.05,
+      "volume": 4490607.794619,
+      "lastPrice": 0.03
+    },
+    {
+      "team": "Tottenham",
+      "probability": 2.65,
+      "volume": 3874023.156624,
+      "lastPrice": 0.027
+    }
+  ],
+  "totalVolume": 23066541.926698,
+  "updatedAt": "2026-02-18T09:32:52.098Z"
+}

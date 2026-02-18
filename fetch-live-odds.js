@@ -212,7 +212,7 @@ function formatMatchForFinder(game) {
     homeTeam: game.home_team,
     awayTeam: game.away_team,
     datetime: game.commence_time,
-    bookmakers: bookmakers.sort((a, b) => b.odds - a.odds) // Best odds first
+    bookmakers: bookmakers.sort((a, b) => b.odds - a.odds).slice(0, 5) // Top 5 bookmakers only
   };
 }
 

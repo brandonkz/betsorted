@@ -165,6 +165,57 @@ function generateEventHTML(events) {
   }).join('\n');
 }
 
+function formatMatchForFinder(game) {
+  // Get all bookmaker odds for this match
+  const bookmakers = [];
+  
+  for (const bookmaker of game.bookmakers) {
+    const market = bookmaker.markets.find(m => m.key === 'h2h');
+    if (market) {
+      const homeOutcome = market.outcomes.find(o => o.name === game.home_team);
+      if (homeOutcome) {
+        bookmakers.push({
+          name: bookmaker.key.toLowerCase().includes('betway') ? `${bookmaker.title} 🇿🇦` : bookmaker.title,
+          key: bookmaker.key,
+          odds: homeOutcome.price,
+          url: bookmaker.key.toLowerCase().includes('betway') ? 'https://betway.co.za' : '#'
+        });
+      }
+    }
+  }
+  
+  if (bookmakers.length < 2) return null;
+  
+  // Get sport emoji and type
+  let emoji = '⚽';
+  let sportKey = 'soccer';
+  let league = 'Soccer';
+  
+  if (game.sport_key.includes('soccer_epl')) {
+    league = 'Premier League';
+  } else if (game.sport_key.includes('champs_league')) {
+    league = 'Champions League';
+  } else if (game.sport_key.includes('rugby')) {
+    emoji = '🏉';
+    sportKey = 'rugby';
+    league = 'Rugby';
+  } else if (game.sport_key.includes('cricket')) {
+    emoji = '🏏';
+    sportKey = 'cricket';
+    league = 'Cricket';
+  }
+  
+  return {
+    sport: sportKey,
+    emoji,
+    league,
+    homeTeam: game.home_team,
+    awayTeam: game.away_team,
+    datetime: game.commence_time,
+    bookmakers: bookmakers.sort((a, b) => b.odds - a.odds) // Best odds first
+  };
+}
+
 async function main() {
   console.log('🎰 Fetching live odds from The Odds API...\n');
   
@@ -178,18 +229,24 @@ async function main() {
   
   console.log(`\n✓ Found ${allGames.length} total games\n`);
   
-  // Format and filter games
+  // Format and filter games for homepage (top 3)
   const events = allGames
     .map(formatEvent)
     .filter(e => e !== null)
-    .slice(0, 3); // Top 3 games
+    .slice(0, 3);
+  
+  // Format ALL games for best-odds-finder
+  const finderMatches = allGames
+    .map(formatMatchForFinder)
+    .filter(m => m !== null);
   
   if (events.length === 0) {
     console.log('⚠️  No games with odds found. Keeping existing events.');
     return;
   }
   
-  console.log(`📊 Selected ${events.length} events for homepage\n`);
+  console.log(`📊 Selected ${events.length} events for homepage`);
+  console.log(`📊 Prepared ${finderMatches.length} matches for Best Odds Finder\n`);
   
   // Generate HTML
   const eventsHTML = generateEventHTML(events);
@@ -234,8 +291,26 @@ async function main() {
   // Write back
   fs.writeFileSync(indexPath, updatedHTML);
   
+  // Save odds data for best-odds-finder
+  const dataDir = path.join(__dirname, 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
+  }
+  
+  const oddsData = {
+    updated: new Date().toISOString(),
+    updatedDisplay: timestamp,
+    matches: finderMatches
+  };
+  
+  fs.writeFileSync(
+    path.join(dataDir, 'live-odds.json'),
+    JSON.stringify(oddsData, null, 2)
+  );
+  
   console.log('✅ Homepage updated with live odds!');
-  console.log(`\nEvents:`);
+  console.log('✅ Best Odds Finder data saved to data/live-odds.json');
+  console.log(`\nHomepage Events:`);
   events.forEach(e => {
     console.log(`  • ${e.awayTeam} vs ${e.homeTeam} - Best: ${e.bestOdds.bookmaker} ${e.bestOdds.odds.toFixed(2)}`);
   });

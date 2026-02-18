@@ -1,66 +1,160 @@
 {
-  "teams": [
+  "markets": [
     {
-      "team": "Arsenal",
-      "probability": 19.5,
-      "volume": 1744778.342899,
-      "lastPrice": 0.19
+      "name": "Champions League Winner",
+      "slug": "uefa-champions-league-winner",
+      "teams": [
+        {
+          "team": "Arsenal",
+          "probability": 19.5,
+          "volume": 1744783.342899,
+          "lastPrice": 0.2,
+          "odds": "5.13"
+        },
+        {
+          "team": "Bayern Munich",
+          "probability": 16.5,
+          "volume": 1794593.236228,
+          "lastPrice": 0.17,
+          "odds": "6.06"
+        },
+        {
+          "team": "PSG",
+          "probability": 10.5,
+          "volume": 2447827.317236,
+          "lastPrice": 0.11,
+          "odds": "9.52"
+        },
+        {
+          "team": "Barcelona",
+          "probability": 10.5,
+          "volume": 1521578.836907,
+          "lastPrice": 0.11,
+          "odds": "9.52"
+        },
+        {
+          "team": "Real Madrid",
+          "probability": 9.5,
+          "volume": 1586910.279154,
+          "lastPrice": 0.09,
+          "odds": "10.53"
+        },
+        {
+          "team": "Man City",
+          "probability": 9.5,
+          "volume": 1203426.133561,
+          "lastPrice": 0.09,
+          "odds": "10.53"
+        },
+        {
+          "team": "Liverpool",
+          "probability": 8.5,
+          "volume": 1750199.893279,
+          "lastPrice": 0.08,
+          "odds": "11.76"
+        },
+        {
+          "team": "Chelsea",
+          "probability": 4.3,
+          "volume": 2652933.256191,
+          "lastPrice": 0.043,
+          "odds": "23.26"
+        },
+        {
+          "team": "Inter",
+          "probability": 3.05,
+          "volume": 4504366.281451,
+          "lastPrice": 0.031,
+          "odds": "32.79"
+        },
+        {
+          "team": "Tottenham",
+          "probability": 2.6,
+          "volume": 3890166.701682,
+          "lastPrice": 0.026,
+          "odds": "38.46"
+        }
+      ],
+      "totalVolume": 23096785.278588,
+      "updatedAt": "2026-02-18T10:13:14.029Z"
     },
     {
-      "team": "Bayern Munich",
-      "probability": 16.5,
-      "volume": 1794593.236228,
-      "lastPrice": 0.17
-    },
-    {
-      "team": "PSG",
-      "probability": 10.5,
-      "volume": 2447827.317236,
-      "lastPrice": 0.11
-    },
-    {
-      "team": "Barcelona",
-      "probability": 10.5,
-      "volume": 1521578.836907,
-      "lastPrice": 0.11
-    },
-    {
-      "team": "Real Madrid",
-      "probability": 9.5,
-      "volume": 1586910.279154,
-      "lastPrice": 0.09
-    },
-    {
-      "team": "Man City",
-      "probability": 9.5,
-      "volume": 1203426.133561,
-      "lastPrice": 0.09
-    },
-    {
-      "team": "Liverpool",
-      "probability": 8.5,
-      "volume": 1750199.893279,
-      "lastPrice": 0.08
-    },
-    {
-      "team": "Chelsea",
-      "probability": 4.3,
-      "volume": 2652596.936191,
-      "lastPrice": 0.043
-    },
-    {
-      "team": "Inter",
-      "probability": 3.05,
-      "volume": 4490607.794619,
-      "lastPrice": 0.03
-    },
-    {
-      "team": "Tottenham",
-      "probability": 2.65,
-      "volume": 3874023.156624,
-      "lastPrice": 0.027
+      "name": "Premier League Winner",
+      "slug": "english-premier-league-winner",
+      "teams": [
+        {
+          "team": "Arsenal",
+          "probability": 68.5,
+          "volume": 5085087.106448,
+          "lastPrice": 0.69,
+          "odds": "1.46"
+        },
+        {
+          "team": "Man City",
+          "probability": 28.499999999999996,
+          "volume": 4477849.910339,
+          "lastPrice": 0.28,
+          "odds": "3.51"
+        },
+        {
+          "team": "Aston Villa",
+          "probability": 0.95,
+          "volume": 14619242.951717,
+          "lastPrice": 0.008,
+          "odds": "105.26"
+        },
+        {
+          "team": "Man United",
+          "probability": 0.75,
+          "volume": 10234530.160532,
+          "lastPrice": 0.007,
+          "odds": "133.33"
+        },
+        {
+          "team": "Liverpool",
+          "probability": 0.3,
+          "volume": 6050053.312077,
+          "lastPrice": 0.002,
+          "odds": "333.33"
+        },
+        {
+          "team": "Brentford",
+          "probability": 0.15,
+          "volume": 12863840.000255,
+          "lastPrice": 0.001,
+          "odds": "666.67"
+        },
+        {
+          "team": "Newcastle",
+          "probability": 0.15,
+          "volume": 8143746.574427,
+          "lastPrice": 0.001,
+          "odds": "666.67"
+        },
+        {
+          "team": "Crystal Palace",
+          "probability": 0.15,
+          "volume": 10514131.794936,
+          "lastPrice": 0.001,
+          "odds": "666.67"
+        },
+        {
+          "team": "Nottm Forest",
+          "probability": 0.15,
+          "volume": 12497278.534474,
+          "lastPrice": 0.001,
+          "odds": "666.67"
+        },
+        {
+          "team": "Brighton",
+          "probability": 0.15,
+          "volume": 14947752.480997,
+          "lastPrice": 0.001,
+          "odds": "666.67"
+        }
+      ],
+      "totalVolume": 99433512.82620199,
+      "updatedAt": "2026-02-18T10:13:14.021Z"
     }
-  ],
-  "totalVolume": 23066541.926698,
-  "updatedAt": "2026-02-18T09:32:52.098Z"
+  ]
 }

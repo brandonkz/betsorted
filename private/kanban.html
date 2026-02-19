@@ -63,10 +63,13 @@
 
       function renderTweets(container, items){
         if(!items || !items.length){
-          container.innerHTML = `<div class="empty">No tweets yet</div>`;
+          container.innerHTML = `<div class=\"empty\">No tweets yet</div>`;
           return;
         }
-        container.innerHTML = items.map(t => `<pre>${t}</pre>`).join('');
+        container.innerHTML = items.map(t => {
+          if (typeof t === 'string') return `<pre>${t}</pre>`;
+          return `<pre><strong>${t.time}</strong> — ${t.text}</pre>`;
+        }).join('');
       }
 
       renderTweets(document.getElementById('tweets-betsorted'), data.tweets.betsorted);

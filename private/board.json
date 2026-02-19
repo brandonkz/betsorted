@@ -113,15 +113,15 @@
   ],
   "tweets": {
     "betsorted": [
-      "PSL fans: Pirates vs Sundowns always lives in the margins. Before you bet, run the numbers on betsorted.co.za and see what your payout actually looks like. @Betway_za",
-      "If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za — it’s worth 60 seconds.",
-      "Acca builders: use the accumulator calculator before you get excited. It shows your real return (and how much of it is actually bookie profit). betsorted.co.za"
+      {"time":"08:00", "text":"PSL fans: Pirates vs Sundowns always lives in the margins. Before you bet, run the numbers on betsorted.co.za and see what your payout actually looks like. @Betway_za"},
+      {"time":"12:00", "text":"If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za — it’s worth 60 seconds."},
+      {"time":"18:00", "text":"Acca builders: use the accumulator calculator before you get excited. It shows your real return (and how much of it is actually bookie profit). betsorted.co.za"}
     ],
     "cryptocasinosorted": [
-      "6,000+ deposits tracked. The biggest edge in crypto casinos is knowing where withdrawals are actually fast. cryptocasinosorted.com",
-      "No‑KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com",
-      "If a casino hides its provably‑fair process, that’s a red flag. Compare transparent casinos here: cryptocasinosorted.com",
-      "Reply idea: Big wins are nice, but withdrawal speed is the real flex. We track it at cryptocasinosorted.com"
+      {"time":"10:00", "text":"6,000+ deposits tracked. The biggest edge in crypto casinos is knowing where withdrawals are actually fast. cryptocasinosorted.com"},
+      {"time":"14:00", "text":"No‑KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com"},
+      {"time":"20:00", "text":"If a casino hides its provably‑fair process, that’s a red flag. Compare transparent casinos here: cryptocasinosorted.com"},
+      {"time":"Reply", "text":"Big wins are nice, but withdrawal speed is the real flex. We track it at cryptocasinosorted.com"}
     ]
   }
 }

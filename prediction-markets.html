@@ -107,9 +107,13 @@
     .spinner { width: 32px; height: 32px; border: 3px solid #e5e7eb; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 12px; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
+    .bk-btn-mob { display: none; }
+
     @media (max-width: 640px) {
       .market-table th.hide-mob, .market-table td.hide-mob { display: none; }
+      .market-table th.hide-mob-col, .market-table td.hide-mob-col { display: none; }
       .market-table td { padding: 10px 12px; }
+      .bk-btn-mob { display: inline-block; margin-top: 8px; background: #2563eb; color: white; padding: 6px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; text-decoration: none; }
     }
   </style>
 </head>
@@ -195,13 +199,14 @@
             <div class="prob-pct">${pct}%</div>
             <div class="prob-bar-wrap"><div class="prob-bar" style="width:${barWidth}%"></div></div>
             <div class="prob-sub">Polymarket consensus</div>
+            <a class="bk-btn-mob" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
           </td>
           <td class="odds-cell hide-mob">
             <div class="fair-dec">${fairDec || '—'}</div>
             <div class="odds-sub">fair decimal</div>
           </td>
           <td class="value-cell hide-mob">${valueBadge(o.prob)}</td>
-          <td class="bk-cell">
+          <td class="bk-cell hide-mob-col">
             <a class="bk-btn" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Betway →</a>
           </td>
         </tr>`;

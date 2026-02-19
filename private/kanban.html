@@ -44,7 +44,7 @@
 
   <script>
     async function load() {
-      const res = await fetch('/private/board.json');
+      const res = await fetch('/private/board.json?v=' + Date.now());
       const data = await res.json();
       document.getElementById('updated').textContent = data.updated || '—';
       const kb = document.getElementById('kanban');

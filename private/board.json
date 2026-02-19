@@ -18,6 +18,14 @@
         "title": "To Do",
         "items": [
           {
+            "title": "Today’s task list (docx)",
+            "body": "All your tasks in one document",
+            "meta": "Open in Word",
+            "links": [
+              {"label": "Tasks docx", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/brandon-tasks.docx"}
+            ]
+          },
+          {
             "title": "Review Play.co.za page live",
             "body": "Quick sanity check on layout + links",
             "meta": "5 mins",

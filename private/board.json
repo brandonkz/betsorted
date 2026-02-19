@@ -2,14 +2,14 @@
   "updated": "2026-02-19",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
-    "documents": "file:///Users/brandonkatz/Documents/BetSorted/",
+    "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
     "data": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/",
     "bookmakers": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/bookmakers/",
     "blog": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/blog/",
     "tweets": "file:///Users/brandonkatz/Documents/BetSorted/tweets/",
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
-    "affiliate_tracker": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/affiliate-tracker.html"
+    "affiliate_tracker": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
   },
   "personal": {
     "title": "Brandon — Personal Board",
@@ -31,7 +31,7 @@
             "body": "Signed‑up affiliates + links",
             "meta": "Private page",
             "links": [
-              {"label": "Open tracker", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/affiliate-tracker.html"}
+              {"label": "Open tracker", "url": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html"}
             ]
           },
 

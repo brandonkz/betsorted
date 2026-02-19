@@ -9,7 +9,7 @@
     "tweets": "file:///Users/brandonkatz/Documents/BetSorted/tweets/",
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
-    "affiliate_tracker": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
+    "affiliate_tracker": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
   },
   "personal": {
     "title": "Brandon — Personal Board",

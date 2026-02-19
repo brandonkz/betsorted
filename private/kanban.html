@@ -67,11 +67,14 @@
         ql.innerHTML = '<h3 style="margin:0 0 8px;font-size:14px;color:#93c5fd;">📁 Quick Access (click to copy path)</h3>' +
           '<div style="display:flex;flex-wrap:wrap;gap:8px;">' +
           Object.entries(data.quickLinks).map(([key, url]) => {
+            if (url.startsWith('http')) {
+              return `<a href="${url}" target="_blank" class="path-copy" style="text-decoration:none;">${key}</a>`;
+            }
             const path = url.replace('file://', '');
             return `<div class="path-copy" onclick="openPath('${path}', this)" title="Click to open in Finder">${key}</div>`;
           }).join('') +
           '</div>' +
-          '<div style="margin-top:8px;font-size:11px;color:#9ca3af;">💡 Click to open in Finder. If blocked, it will fall back to copy.</div>';
+          '<div style="margin-top:8px;font-size:11px;color:#9ca3af;">💡 Folders open in Finder. Web links open in browser.</div>';
       }
       
       const kb = document.getElementById('kanban');

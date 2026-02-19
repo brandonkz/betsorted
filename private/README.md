@@ -9,17 +9,19 @@ cd ~/.openclaw/workspace/betsorted
 
 This will:
 1. Start a local web server (if not already running)
-2. Open your kanban board in the browser
-3. Copy buttons will work properly!
+2. Start a local helper to open folders in Finder
+3. Open your kanban board in the browser
+4. One-click folder buttons will open Finder directly
 
 ---
 
 ## Manual Access
 
 ### Option 1: Localhost (Recommended)
-1. Start server: `cd ~/.openclaw/workspace/betsorted && python3 -m http.server 8765`
-2. Open: http://localhost:8765/private/kanban.html
-3. ✅ Copy buttons work!
+1. Start UI server: `cd ~/.openclaw/workspace/betsorted && python3 -m http.server 8765`
+2. Start open-path helper: `cd ~/.openclaw/workspace/betsorted && ./open-path-server.py`
+3. Open: http://localhost:8765/private/kanban.html
+4. ✅ One-click buttons open Finder!
 
 ### Option 2: Direct File (Fallback)
 1. Open: `open ~/.openclaw/workspace/betsorted/private/kanban.html`

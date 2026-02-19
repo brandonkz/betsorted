@@ -29,7 +29,7 @@
   <h1>BetSorted Ops Board (Private)</h1>
   <div class="muted">Private link • last updated: <span id="updated">—</span></div>
   <div style="margin:12px 0;padding:10px 12px;background:#1e293b;border:1px solid #334155;border-radius:8px;font-size:12px;color:#cbd5e1;">
-    💡 <strong>For best results:</strong> Access via <a href="http://localhost:8765/private/kanban.html" style="color:#93c5fd;">http://localhost:8765/private/kanban.html</a> (copy button works better)
+    💡 <strong>For best results:</strong> Access via <a href="http://localhost:8765/private/kanban.html" style="color:#93c5fd;">http://localhost:8765/private/kanban.html</a> (one-click opens Finder)
   </div>
 
   <div id="quickLinks" style="margin:16px 0;padding:12px;background:#111827;border:1px solid #1f2937;border-radius:12px;"></div>
@@ -63,10 +63,10 @@
           '<div style="display:flex;flex-wrap:wrap;gap:8px;">' +
           Object.entries(data.quickLinks).map(([key, url]) => {
             const path = url.replace('file://', '');
-            return `<div class="path-copy" onclick="copyPath('${path}', this)" title="Click to copy">${key}</div>`;
+            return `<div class="path-copy" onclick="openPath('${path}', this)" title="Click to open in Finder">${key}</div>`;
           }).join('') +
           '</div>' +
-          '<div style="margin-top:8px;font-size:11px;color:#9ca3af;">💡 After copying, press Cmd+Shift+G in Finder and paste</div>';
+          '<div style="margin-top:8px;font-size:11px;color:#9ca3af;">💡 Click to open in Finder. If blocked, it will fall back to copy.</div>';
       }
       
       const kb = document.getElementById('kanban');
@@ -81,7 +81,7 @@
               i.links.map(link => {
                 if (link.url.startsWith('file://')) {
                   const path = link.url.replace('file://', '');
-                  return `<div class="path-copy" onclick="copyPath('${path}', this)" title="Click to copy path">📁 ${link.label}</div>`;
+                  return `<div class="path-copy" onclick="openPath('${path}', this)" title="Click to open in Finder">📁 ${link.label}</div>`;
                 } else {
                   return `<a href="${link.url}" target="_blank" style="margin-right:8px;font-size:11px;color:#93c5fd;">🔗 ${link.label}</a>`;
                 }
@@ -114,26 +114,29 @@
       renderTweets(document.getElementById('tweets-ccs'), data.tweets.cryptocasinosorted);
     }
 
-    function copyPath(path, element) {
-      // Try clipboard API first
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(path).then(() => {
-          const original = element.innerHTML;
-          element.innerHTML = '✓ Copied!';
-          element.style.background = '#065f46';
-          element.style.borderColor = '#059669';
-          setTimeout(() => {
-            element.innerHTML = original;
-            element.style.background = '#0f172a';
-            element.style.borderColor = '#374151';
-          }, 1500);
-        }).catch(err => {
+    function openPath(path, element) {
+      // Try to open via local helper server
+      fetch(`http://localhost:8766/open?path=${encodeURIComponent(path)}`)
+        .then(res => {
+          if (res.ok) {
+            const original = element.innerHTML;
+            element.innerHTML = '✓ Opened!';
+            element.style.background = '#065f46';
+            element.style.borderColor = '#059669';
+            setTimeout(() => {
+              element.innerHTML = original;
+              element.style.background = '#0f172a';
+              element.style.borderColor = '#374151';
+            }, 1500);
+          } else {
+            // Fallback to copy
+            showPathModal(path);
+          }
+        })
+        .catch(() => {
+          // Fallback to copy
           showPathModal(path);
         });
-      } else {
-        // Fallback: show modal
-        showPathModal(path);
-      }
     }
 
     function showPathModal(path) {

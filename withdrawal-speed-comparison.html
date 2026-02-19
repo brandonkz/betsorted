@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare withdrawal speeds at South African bookmakers. Filter by payment method: EFT, Instant EFT, Ozow, Capitec Pay. Find the fastest paying SA betting site.">
+  <link rel="canonical" href="https://betsorted.co.za/withdrawal-speed-comparison.html">
+  <title>SA Bookmaker Withdrawal Speed Comparison | Fastest Paying Sites | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 860px; margin: 0 auto; padding: 48px 24px 64px; }
+    h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 32px; font-size: 1rem; line-height: 1.6; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .filter-btn { padding: 8px 16px; border-radius: 100px; border: 2px solid #e5e7eb; background: white; font-weight: 600; cursor: pointer; color: #6b7280; font-size: 0.875rem; transition: all 0.2s; }
+    .filter-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+    .speed-grid { display: grid; gap: 12px; }
+    .bk-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.05); transition: box-shadow 0.2s; }
+    .bk-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .bk-card.fastest { border-color: #059669; border-width: 2px; background: #f0fdf4; }
+    .bk-name { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; margin-bottom: 4px; }
+    .bk-licence { font-size: 0.75rem; color: #9ca3af; }
+    .methods { display: flex; flex-wrap: wrap; gap: 8px; }
+    .method-badge { padding: 5px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; }
+    .method-badge.instant { background: #dcfce7; color: #166534; }
+      .method-badge.fast { background: #dbeafe; color: #1d4ed8; }
+    .method-badge.standard { background: #f3f4f6; color: #6b7280; }
+    .method-badge.slow { background: #fef2f2; color: #991b1b; }
+    .fastest-badge { display: inline-block; background: #059669; color: white; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; margin-left: 8px; }
+    .no-results { text-align: center; padding: 48px; color: #9ca3af; }
+    .speed-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: #6b7280; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin: 40px 0 16px; }
+    p { color: #374151; line-height: 1.7; margin-bottom: 14px; font-size: 0.95rem; }
+    .updated-note { font-size: 0.8rem; color: #9ca3af; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>⚡ SA Bookmaker Withdrawal Speeds</h1>
+    <p class="subtitle">Filter by payment method to find which SA bookmaker pays out fastest. All times based on verified accounts with FICA completed.</p>
+    <p class="updated-note">📅 Last verified: February 2026 · Times are estimates — actual speeds vary by bank and time of day.</p>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filter('all', this)">All Methods</button>
+      <button class="filter-btn" onclick="filter('instant-eft', this)">Instant EFT / Ozow</button>
+      <button class="filter-btn" onclick="filter('eft', this)">Standard EFT</button>
+      <button class="filter-btn" onclick="filter('capitec', this)">Capitec Pay</button>
+      <button class="filter-btn" onclick="filter('fnb', this)">FNB</button>
+      <button class="filter-btn" onclick="filter('absa', this)">Absa</button>
+      <button class="filter-btn" onclick="filter('retail', this)">Retail / Cash</button>
+    </div>
+
+    <div class="speed-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>Instant (under 1 hour)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Fast (1–24 hours)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9ca3af"></div>Standard (1–3 days)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>Slow (3–7 days)</div>
+    </div>
+
+    <div class="speed-grid" id="speedGrid"></div>
+
+    <h2>Tips for Faster Withdrawals</h2>
+    <p><strong>Complete FICA first.</strong> Unverified accounts can't withdraw. Submit your ID and proof of address before you need to withdraw — don't wait until you've won.</p>
+    <p><strong>Instant EFT vs Standard EFT.</strong> Standard EFT (manual bank transfer) takes 1–3 business days. Instant EFT (via Ozow, Peach Payments) processes in minutes. Where available, always choose Instant EFT for withdrawals.</p>
+    <p><strong>Withdraw during business hours.</strong> Manual review queues at bookmakers operate during business hours. Requests submitted after 5 PM Friday may only be processed on Monday.</p>
+    <p><strong>Capitec users:</strong> Capitec's real-time clearing means funds arrive faster even for standard EFT transfers compared to other SA banks.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const BOOKMAKERS = [
+      {
+        name: 'Betway', licence: 'Western Cape Gambling Board',
+        methods: [
+          { name: 'Instant EFT (Ozow)', speed: 'instant', time: '< 1 hour', tags: ['instant-eft'] },
+          { name: 'Standard EFT', speed: 'fast', time: '12–24 hours', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Visa/Mastercard', speed: 'fast', time: '1–2 days', tags: [] },
+        ],
+        fastest: true
+      },
+      {
+        name: 'Hollywoodbets', licence: 'KZN Gambling Board',
+        methods: [
+          { name: 'eWallet (Hollywoodbets)', speed: 'instant', time: '< 30 mins', tags: ['retail'] },
+          { name: 'Bank Transfer', speed: 'standard', time: '1–3 days', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Retail Outlet', speed: 'instant', time: 'Immediate', tags: ['retail'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'Sportingbet', licence: 'Mpumalanga Economic Regulator',
+        methods: [
+          { name: 'Instant EFT', speed: 'fast', time: '2–6 hours', tags: ['instant-eft'] },
+          { name: 'EFT / Bank Transfer', speed: 'standard', time: '24–48 hours', tags: ['eft','fnb','absa','capitec'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'SupaBets', licence: 'Mpumalanga Economic Regulator',
+        methods: [
+          { name: 'Instant EFT (Ozow)', speed: 'fast', time: '1–4 hours', tags: ['instant-eft'] },
+          { name: 'EFT', speed: 'standard', time: '24–72 hours', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Capitec Pay', speed: 'fast', time: '< 2 hours', tags: ['capitec','instant-eft'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'World Sports Betting (WSB)', licence: 'Western Cape Gambling Board',
+        methods: [
+          { name: 'EFT', speed: 'standard', time: '24–48 hours', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Instant EFT', speed: 'fast', time: '2–8 hours', tags: ['instant-eft'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'Easybet', licence: 'Limpopo Gambling Board',
+        methods: [
+          { name: 'EFT', speed: 'standard', time: '24–48 hours', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Capitec Pay', speed: 'fast', time: '1–4 hours', tags: ['capitec','instant-eft'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'Sunbet', licence: 'North West Gambling Board',
+        methods: [
+          { name: 'EFT', speed: 'standard', time: '1–3 days', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Ozow', speed: 'fast', time: '2–6 hours', tags: ['instant-eft'] },
+        ],
+        fastest: false
+      },
+      {
+        name: 'Playabets', licence: 'Eastern Cape Gambling Board',
+        methods: [
+          { name: 'EFT', speed: 'standard', time: '24–72 hours', tags: ['eft','fnb','absa','capitec'] },
+          { name: 'Ozow', speed: 'fast', time: '2–8 hours', tags: ['instant-eft'] },
+        ],
+        fastest: false
+      },
+    ];
+
+    const speedClass = { instant: 'instant', fast: 'fast', standard: 'standard', slow: 'slow' };
+    const speedLabels = { instant: '⚡ Instant', fast: '🚀 Fast', standard: '🕐 Standard', slow: '🐢 Slow' };
+
+    function filter(tag, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const grid = document.getElementById('speedGrid');
+      grid.innerHTML = '';
+      let found = 0;
+      BOOKMAKERS.forEach(bk => {
+        const methods = tag === 'all' ? bk.methods : bk.methods.filter(m => m.tags.includes(tag));
+        if (!methods.length) return;
+        found++;
+        const fastest = bk.methods.reduce((f, m) => {
+          const order = ['instant','fast','standard','slow'];
+          return order.indexOf(m.speed) < order.indexOf(f.speed) ? m : f;
+        }, bk.methods[0]);
+        const card = document.createElement('div');
+        card.className = 'bk-card' + (bk.fastest ? ' fastest' : '');
+        card.innerHTML = `
+          <div>
+            <div class="bk-name">${bk.name}${bk.fastest ? '<span class="fastest-badge">⚡ Fastest</span>' : ''}</div>
+            <div class="bk-licence">${bk.licence}</div>
+            <div style="margin-top:8px;font-size:0.8rem;color:#6b7280;">Fastest: <strong>${speedLabels[fastest.speed]}</strong> · ${fastest.time}</div>
+          </div>
+          <div class="methods">${methods.map(m => `<span class="method-badge ${speedClass[m.speed]}">${speedLabels[m.speed]} · ${m.name} · ${m.time}</span>`).join('')}</div>
+        `;
+        grid.appendChild(card);
+      });
+      if (!found) grid.innerHTML = '<div class="no-results">No bookmakers found for this payment method. Try another filter.</div>';
+    }
+
+    filter('all', document.querySelector('.filter-btn'));
+  </script>
+</body>
+</html>

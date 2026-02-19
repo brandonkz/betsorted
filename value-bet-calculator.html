@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Value bet calculator for South Africa. Find out if the bookmaker odds offer positive expected value. Enter your estimated probability and the SA bookmaker odds.">
+  <link rel="canonical" href="https://betsorted.co.za/value-bet-calculator.html">
+  <title>Value Bet Calculator South Africa | Expected Value Finder | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 680px; margin: 0 auto; padding: 48px 24px 64px; }
+    h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 36px; font-size: 1rem; line-height: 1.6; }
+    .tool-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .input-group { margin-bottom: 0; }
+    .input-group label { display: block; font-weight: 600; color: #1e3a8a; margin-bottom: 6px; font-size: 0.95rem; }
+    .input-group .hint { font-size: 0.8rem; color: #9ca3af; margin-bottom: 8px; }
+    input[type=number], input[type=range] { width: 100%; padding: 12px 14px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0f172a; box-sizing: border-box; transition: border-color 0.2s; }
+    input[type=number]:focus { outline: none; border-color: #2563eb; }
+    input[type=range] { padding: 6px 0; border: none; accent-color: #2563eb; cursor: pointer; }
+    .prefix-wrap { position: relative; }
+    .prefix-wrap span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #6b7280; font-weight: 600; }
+    .prefix-wrap input { padding-left: 32px; }
+    .slider-wrap { margin-bottom: 20px; }
+    .slider-wrap label { display: flex; justify-content: space-between; font-weight: 600; color: #1e3a8a; margin-bottom: 8px; font-size: 0.95rem; }
+    .slider-wrap label span { color: #2563eb; font-size: 1.1rem; }
+    .ev-display { text-align: center; padding: 28px; border-radius: 14px; margin: 24px 0; }
+    .ev-display.positive { background: linear-gradient(135deg, #059669, #047857); color: white; }
+    .ev-display.negative { background: linear-gradient(135deg, #ef4444, #dc2626); color: white; }
+    .ev-display.neutral { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+    .ev-display .ev-label { font-size: 0.9rem; opacity: 0.85; margin-bottom: 8px; }
+    .ev-display .ev-big { font-size: 3rem; font-weight: 900; }
+    .ev-display .ev-sub { font-size: 0.9rem; opacity: 0.85; margin-top: 8px; }
+    .metrics-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .metric-box { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; text-align: center; }
+    .metric-box .m-label { font-size: 0.75rem; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .metric-box .m-value { font-size: 1.25rem; font-weight: 800; color: #1e3a8a; }
+    .verdict { padding: 16px 20px; border-radius: 10px; margin-top: 16px; font-size: 0.9rem; line-height: 1.6; }
+    .verdict.pos { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .verdict.neg { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .verdict.neu { background: #fffbeb; color: #78350f; border: 1px solid #fde68a; }
+    #results { display: none; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin: 40px 0 16px; }
+    p { color: #374151; line-height: 1.7; margin-bottom: 14px; font-size: 0.95rem; }
+    .formula-box { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 20px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #1e3a8a; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>💡 Value Bet Calculator</h1>
+    <p class="subtitle">Betting with an edge means finding odds where the bookmaker's implied probability is <em>lower</em> than the true probability. Enter your estimated win chance and the bookmaker's odds to see if there's value.</p>
+
+    <div class="tool-card">
+      <div class="slider-wrap">
+        <label>Your Estimated Win Probability <span id="probDisplay">50%</span></label>
+        <input type="range" id="probSlider" min="1" max="99" value="50" oninput="syncProb(this.value); calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>True Probability (%)</label>
+          <div class="hint">Your own estimate</div>
+          <input type="number" id="trueProbInput" value="50" min="0.1" max="99.9" step="0.1" oninput="syncProbInput(this.value); calculate()">
+        </div>
+        <div class="input-group">
+          <label>Bookmaker Decimal Odds</label>
+          <div class="hint">From Betway, Hollywoodbets etc.</div>
+          <input type="number" id="bmOdds" placeholder="2.10" min="1.01" step="0.01" oninput="calculate()">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Stake (R)</label>
+          <div class="prefix-wrap"><span>R</span><input type="number" id="stake" value="100" min="1" oninput="calculate()"></div>
+        </div>
+        <div class="input-group">
+          <label>Number of Similar Bets</label>
+          <div class="hint">For long-run projection</div>
+          <input type="number" id="numBets" value="100" min="1" max="10000" oninput="calculate()">
+        </div>
+      </div>
+
+      <div id="results">
+        <div class="ev-display" id="evDisplay">
+          <div class="ev-label">Expected Value per R100</div>
+          <div class="ev-big" id="evBig">+R0.00</div>
+          <div class="ev-sub" id="evSub"></div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="m-label">Your Probability</div><div class="m-value" id="m-yours">—</div></div>
+          <div class="metric-box"><div class="m-label">Implied Probability</div><div class="m-value" id="m-implied">—</div></div>
+          <div class="metric-box"><div class="m-label">Edge</div><div class="m-value" id="m-edge">—</div></div>
+          <div class="metric-box"><div class="m-label">Break-even Odds</div><div class="m-value" id="m-be">—</div></div>
+          <div class="metric-box"><div class="m-label">Expected Profit</div><div class="m-value" id="m-profit">—</div></div>
+          <div class="metric-box"><div class="m-label">Long-run (n bets)</div><div class="m-value" id="m-longrun">—</div></div>
+        </div>
+        <div class="verdict" id="verdict"></div>
+      </div>
+    </div>
+
+    <h2>What is a Value Bet?</h2>
+    <p>A value bet occurs when you believe the probability of an outcome is <strong>higher</strong> than what the bookmaker's odds imply. If you think Mamelodi Sundowns has a 60% chance of winning, but the odds imply only 50%, that's a value bet.</p>
+
+    <div class="formula-box">
+      EV = (True Probability × Profit) – (Lose Probability × Stake)<br>
+      Positive EV = value bet ✅ | Negative EV = no value ❌
+    </div>
+
+    <p>No single bet is guaranteed to win — but consistently finding positive EV bets means you'll profit over hundreds of bets. Professional bettors focus on EV, not individual results.</p>
+
+    <h2>How to Estimate True Probability</h2>
+    <p>This is the hard part. Useful starting points: team form over last 5 games, head-to-head record, home vs away stats, injury news, Polymarket prediction markets (our <a href="/" style="color:#2563eb;">homepage</a> shows these), and comparing odds across multiple bookmakers (sharp bookmakers like Betfair often have the most accurate lines).</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function syncProb(v) { document.getElementById('probDisplay').textContent = v + '%'; document.getElementById('trueProbInput').value = v; }
+    function syncProbInput(v) { document.getElementById('probDisplay').textContent = parseFloat(v).toFixed(1) + '%'; document.getElementById('probSlider').value = Math.round(parseFloat(v)); }
+
+    function calculate() {
+      const trueProb = parseFloat(document.getElementById('trueProbInput').value) / 100;
+      const odds = parseFloat(document.getElementById('bmOdds').value);
+      const stake = parseFloat(document.getElementById('stake').value) || 100;
+      const n = parseInt(document.getElementById('numBets').value) || 100;
+      if (!odds || odds <= 1 || !trueProb) { document.getElementById('results').style.display = 'none'; return; }
+
+      const impliedProb = 1 / odds;
+      const profit = (odds - 1) * stake;
+      const ev = (trueProb * profit) - ((1 - trueProb) * stake);
+      const evPer100 = ev * (100 / stake);
+      const edge = (trueProb - impliedProb) * 100;
+      const beOdds = 1 / trueProb;
+      const longRunEV = ev * n;
+
+      const display = document.getElementById('evDisplay');
+      const sign = ev > 0 ? '+' : '';
+      document.getElementById('evBig').textContent = sign + 'R' + Math.abs(evPer100).toFixed(2);
+      if (ev > 0) { display.className = 'ev-display positive'; document.getElementById('evSub').textContent = 'Positive EV — value bet found'; }
+      else if (ev === 0) { display.className = 'ev-display neutral'; document.getElementById('evSub').textContent = 'Break-even — no edge either way'; }
+      else { display.className = 'ev-display negative'; document.getElementById('evSub').textContent = 'Negative EV — bookmaker has the edge'; }
+
+      document.getElementById('m-yours').textContent = (trueProb * 100).toFixed(1) + '%';
+      document.getElementById('m-implied').textContent = (impliedProb * 100).toFixed(1) + '%';
+      document.getElementById('m-edge').textContent = (edge >= 0 ? '+' : '') + edge.toFixed(1) + '%';
+      document.getElementById('m-be').textContent = beOdds.toFixed(2);
+      document.getElementById('m-profit').textContent = (ev >= 0 ? '+' : '') + 'R' + ev.toFixed(2);
+      document.getElementById('m-longrun').textContent = (longRunEV >= 0 ? '+' : '') + 'R' + Math.round(longRunEV).toLocaleString();
+
+      const v = document.getElementById('verdict');
+      if (ev > 0) {
+        v.className = 'verdict pos';
+        v.innerHTML = `✅ <strong>Value bet.</strong> You estimate a ${(trueProb*100).toFixed(1)}% chance; the bookmaker implies ${(impliedProb*100).toFixed(1)}%. Your edge is <strong>${edge.toFixed(1)}%</strong>. At R${stake} per bet, expected value is <strong>+R${ev.toFixed(2)}</strong> per bet — or <strong>+R${Math.round(longRunEV).toLocaleString()}</strong> over ${n} similar bets.`;
+      } else if (ev > -stake * 0.05) {
+        v.className = 'verdict neu';
+        v.innerHTML = `⚠️ <strong>Marginal.</strong> The bookmaker's implied probability (${(impliedProb*100).toFixed(1)}%) is close to your estimate (${(trueProb*100).toFixed(1)}%). At this edge, long-run expected loss is R${Math.abs(Math.round(longRunEV)).toLocaleString()} over ${n} bets. Only bet if you're very confident in your probability estimate.`;
+      } else {
+        v.className = 'verdict neg';
+        v.innerHTML = `❌ <strong>No value.</strong> The bookmaker implies ${(impliedProb*100).toFixed(1)}% — higher than your ${(trueProb*100).toFixed(1)}% estimate. Expected loss is R${ev.toFixed(2)} per bet. Either the bookmaker is right, or you need to find better odds on this outcome.`;
+      }
+      document.getElementById('results').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

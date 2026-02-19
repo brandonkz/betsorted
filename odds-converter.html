@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free odds format converter for South African bettors. Convert decimal, fractional, American and implied probability instantly. Works with ZAR betting sites.">
+  <link rel="canonical" href="https://betsorted.co.za/odds-converter.html">
+  <title>Odds Format Converter | Decimal, Fractional, American & Probability | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Odds Format Converter","description":"Convert betting odds between decimal, fractional, American formats and implied probability.","url":"https://betsorted.co.za/odds-converter.html","publisher":{"@type":"Organization","name":"BetSorted","url":"https://betsorted.co.za"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px; }
+    .tool-page h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .tool-page .subtitle { color: #6b7280; margin-bottom: 36px; font-size: 1rem; line-height: 1.6; }
+    .tool-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .input-group { margin-bottom: 20px; }
+    .input-group label { display: block; font-weight: 600; color: #1e3a8a; margin-bottom: 8px; font-size: 0.95rem; }
+    .input-group input, .input-group select { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0f172a; box-sizing: border-box; transition: border-color 0.2s; }
+    .input-group input:focus, .input-group select:focus { outline: none; border-color: #2563eb; }
+    .convert-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 14px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .convert-btn:hover { background: #1d4ed8; }
+    .results { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+    .result-box { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px; text-align: center; }
+    .result-box .label { font-size: 0.8rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .result-box .value { font-size: 1.75rem; font-weight: 800; color: #1e3a8a; }
+    .result-box.highlight { background: #1e3a8a; border-color: #1e3a8a; }
+    .result-box.highlight .label { color: #93c5fd; }
+    .result-box.highlight .value { color: white; }
+    .prob-bar-wrap { margin-top: 20px; }
+    .prob-bar-wrap .bar-label { display: flex; justify-content: space-between; font-size: 0.875rem; color: #6b7280; margin-bottom: 6px; }
+    .prob-bar { height: 10px; background: #e5e7eb; border-radius: 100px; overflow: hidden; }
+    .prob-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #1d4ed8); border-radius: 100px; transition: width 0.4s ease; }
+    .info-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin-top: 24px; font-size: 0.9rem; color: #78350f; line-height: 1.6; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin: 40px 0 16px; }
+    p { color: #374151; line-height: 1.7; margin-bottom: 14px; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>🔄 Odds Format Converter</h1>
+    <p class="subtitle">Convert between decimal, fractional, American odds and implied probability instantly. SA bookmakers use decimal — this tool shows you what those odds mean in every format.</p>
+
+    <div class="tool-card">
+      <div class="input-group">
+        <label for="oddsFormat">Input Format</label>
+        <select id="oddsFormat" onchange="clearResults()">
+          <option value="decimal">Decimal (e.g. 2.50) — used by SA bookmakers</option>
+          <option value="fractional">Fractional (e.g. 3/2) — UK format</option>
+          <option value="american">American / Moneyline (e.g. +150 or -200)</option>
+          <option value="probability">Implied Probability (e.g. 40%)</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="oddsInput" id="inputLabel">Enter Decimal Odds</label>
+        <input type="text" id="oddsInput" placeholder="e.g. 2.50" oninput="convertOdds()">
+      </div>
+
+      <div id="results" style="display:none;">
+        <div class="results">
+          <div class="result-box" id="res-decimal"><div class="label">Decimal</div><div class="value" id="val-decimal">—</div></div>
+          <div class="result-box" id="res-fractional"><div class="label">Fractional</div><div class="value" id="val-fractional">—</div></div>
+          <div class="result-box" id="res-american"><div class="label">American</div><div class="value" id="val-american">—</div></div>
+          <div class="result-box highlight"><div class="label">Implied Probability</div><div class="value" id="val-probability">—</div></div>
+        </div>
+        <div class="prob-bar-wrap">
+          <div class="bar-label"><span>Bookmaker's implied win chance</span><span id="bar-pct">0%</span></div>
+          <div class="prob-bar"><div class="prob-fill" id="prob-fill" style="width:0%"></div></div>
+        </div>
+        <div class="info-box" id="info-box"></div>
+      </div>
+    </div>
+
+    <h2>How to Read SA Bookmaker Odds</h2>
+    <p>South African bookmakers (Betway, Hollywoodbets, Sportingbet) all display <strong>decimal odds</strong>. A decimal odd of 2.50 means for every R1 you bet, you get back R2.50 (R1.50 profit + your R1 stake).</p>
+    <p>The implied probability tells you what win chance the bookmaker is pricing in. Odds of 2.00 = 50% implied probability. Odds of 3.00 = 33.3%. If you think the real probability is higher than what the bookmaker implies, you have a value bet.</p>
+    <p>American odds are used mainly by US-facing sportsbooks. Positive (+150) means profit on R100 stake. Negative (-200) means stake needed to profit R100.</p>
+
+    <h2>Quick Reference</h2>
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+      <tr style="background:#1e3a8a;color:white;"><th style="padding:10px;text-align:left;">Decimal</th><th style="padding:10px;">Fractional</th><th style="padding:10px;">American</th><th style="padding:10px;">Probability</th></tr>
+      <tr style="background:#f8fafc;"><td style="padding:10px;font-weight:600;">1.50</td><td style="padding:10px;text-align:center;">1/2</td><td style="padding:10px;text-align:center;">-200</td><td style="padding:10px;text-align:center;">66.7%</td></tr>
+      <tr><td style="padding:10px;font-weight:600;">2.00</td><td style="padding:10px;text-align:center;">1/1 (Evens)</td><td style="padding:10px;text-align:center;">+100</td><td style="padding:10px;text-align:center;">50.0%</td></tr>
+      <tr style="background:#f8fafc;"><td style="padding:10px;font-weight:600;">2.50</td><td style="padding:10px;text-align:center;">3/2</td><td style="padding:10px;text-align:center;">+150</td><td style="padding:10px;text-align:center;">40.0%</td></tr>
+      <tr><td style="padding:10px;font-weight:600;">3.00</td><td style="padding:10px;text-align:center;">2/1</td><td style="padding:10px;text-align:center;">+200</td><td style="padding:10px;text-align:center;">33.3%</td></tr>
+      <tr style="background:#f8fafc;"><td style="padding:10px;font-weight:600;">5.00</td><td style="padding:10px;text-align:center;">4/1</td><td style="padding:10px;text-align:center;">+400</td><td style="padding:10px;text-align:center;">20.0%</td></tr>
+      <tr><td style="padding:10px;font-weight:600;">10.00</td><td style="padding:10px;text-align:center;">9/1</td><td style="padding:10px;text-align:center;">+900</td><td style="padding:10px;text-align:center;">10.0%</td></tr>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+      <p class="footer-small">We may earn commissions when you sign up through our links.</p>
+    </div>
+  </footer>
+
+  <script>
+    const labels = { decimal:'Enter Decimal Odds (e.g. 2.50)', fractional:'Enter Fractional Odds (e.g. 3/2)', american:'Enter American Odds (e.g. +150 or -200)', probability:'Enter Probability % (e.g. 40)' };
+    const placeholders = { decimal:'e.g. 2.50', fractional:'e.g. 3/2', american:'e.g. +150 or -200', probability:'e.g. 40' };
+
+    document.getElementById('oddsFormat').addEventListener('change', function() {
+      const f = this.value;
+      document.getElementById('inputLabel').textContent = labels[f];
+      document.getElementById('oddsInput').placeholder = placeholders[f];
+      document.getElementById('oddsInput').value = '';
+      document.getElementById('results').style.display = 'none';
+    });
+
+    function clearResults() { document.getElementById('results').style.display = 'none'; }
+
+    function toDecimal(val, format) {
+      if (format === 'decimal') return parseFloat(val);
+      if (format === 'fractional') {
+        const parts = val.split('/');
+        if (parts.length !== 2) return null;
+        const n = parseFloat(parts[0]), d = parseFloat(parts[1]);
+        if (isNaN(n) || isNaN(d) || d === 0) return null;
+        return (n / d) + 1;
+      }
+      if (format === 'american') {
+        const v = parseFloat(val);
+        if (isNaN(v)) return null;
+        return v > 0 ? (v / 100) + 1 : (100 / Math.abs(v)) + 1;
+      }
+      if (format === 'probability') {
+        const p = parseFloat(val);
+        if (isNaN(p) || p <= 0 || p >= 100) return null;
+        return 100 / p;
+      }
+      return null;
+    }
+
+    function gcd(a, b) { return b ? gcd(b, a % b) : a; }
+
+    function toFractional(dec) {
+      const profit = dec - 1;
+      const denom = 100;
+      const num = Math.round(profit * denom);
+      const g = gcd(num, denom);
+      return (num/g) + '/' + (denom/g);
+    }
+
+    function toAmerican(dec) {
+      if (dec >= 2) return '+' + Math.round((dec - 1) * 100);
+      return Math.round(-100 / (dec - 1)).toString();
+    }
+
+    function convertOdds() {
+      const format = document.getElementById('oddsFormat').value;
+      const input = document.getElementById('oddsInput').value.trim();
+      if (!input) { document.getElementById('results').style.display = 'none'; return; }
+      const dec = toDecimal(input, format);
+      if (!dec || dec <= 1) { document.getElementById('results').style.display = 'none'; return; }
+      const prob = (1 / dec) * 100;
+      document.getElementById('val-decimal').textContent = dec.toFixed(2);
+      document.getElementById('val-fractional').textContent = toFractional(dec);
+      document.getElementById('val-american').textContent = toAmerican(dec);
+      document.getElementById('val-probability').textContent = prob.toFixed(1) + '%';
+      document.getElementById('bar-pct').textContent = prob.toFixed(1) + '%';
+      document.getElementById('prob-fill').style.width = Math.min(prob, 100) + '%';
+      const margin = ((1 / dec) * 100 - (1 / dec) * 100).toFixed(1);
+      document.getElementById('info-box').innerHTML = `<strong>What this means:</strong> The bookmaker prices a <strong>${prob.toFixed(1)}%</strong> chance of winning. A R100 bet returns <strong>R${(dec * 100).toFixed(0)}</strong> (R${((dec-1)*100).toFixed(0)} profit + R100 stake). If you believe the real probability is above ${prob.toFixed(1)}%, this is a value bet.`;
+      document.getElementById('results').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free arbitrage calculator for South Africa. Find guaranteed profits by backing all outcomes across SA bookmakers. Calculate exact stakes for any arb opportunity.">
+  <link rel="canonical" href="https://betsorted.co.za/arbitrage-calculator.html">
+  <title>Arbitrage Calculator South Africa | Guaranteed Profit Betting | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+    .tool-page h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 36px; font-size: 1rem; line-height: 1.6; }
+    .tool-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .input-group { margin-bottom: 20px; }
+    .input-group label { display: block; font-weight: 600; color: #1e3a8a; margin-bottom: 6px; font-size: 0.95rem; }
+    .input-group .sub { font-size: 0.8rem; color: #9ca3af; margin-bottom: 6px; }
+    .outcome-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; align-items: end; }
+    .outcome-row .outcome-label { font-weight: 600; font-size: 0.85rem; color: #6b7280; margin-bottom: 4px; }
+    input[type=number], input[type=text], select { width: 100%; padding: 12px 14px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0f172a; box-sizing: border-box; transition: border-color 0.2s; }
+    input:focus, select:focus { outline: none; border-color: #2563eb; }
+    .prefix-wrap { position: relative; }
+    .prefix-wrap span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #6b7280; font-weight: 600; pointer-events: none; }
+    .prefix-wrap input { padding-left: 32px; }
+    .type-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+    .type-tab { flex: 1; padding: 10px; border-radius: 8px; border: 2px solid #e5e7eb; background: white; font-weight: 600; cursor: pointer; color: #6b7280; text-align: center; font-size: 0.875rem; transition: all 0.2s; }
+    .type-tab.active { background: #2563eb; color: white; border-color: #2563eb; }
+    #outcomes { margin-bottom: 20px; }
+    .calc-btn { width: 100%; background: #059669; color: white; border: none; padding: 14px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .calc-btn:hover { background: #047857; }
+    #results { display: none; margin-top: 24px; }
+    .arb-pct { text-align: center; padding: 24px; background: linear-gradient(135deg, #059669, #047857); border-radius: 12px; color: white; margin-bottom: 16px; }
+    .arb-pct .big { font-size: 3rem; font-weight: 900; }
+    .arb-pct .label { font-size: 0.9rem; opacity: 0.85; margin-top: 4px; }
+    .arb-pct.no-arb { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .stakes-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .stakes-table th { background: #1e3a8a; color: white; padding: 10px 14px; text-align: left; }
+    .stakes-table td { padding: 12px 14px; border-bottom: 1px solid #e5e7eb; }
+    .stakes-table tr:last-child td { border-bottom: none; }
+    .stakes-table .profit-row td { background: #f0fdf4; font-weight: 700; color: #166534; }
+    .warning-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px; margin-top: 16px; font-size: 0.875rem; color: #78350f; line-height: 1.6; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin: 40px 0 16px; }
+    p { color: #374151; line-height: 1.7; margin-bottom: 14px; font-size: 0.95rem; }
+    .remove-btn { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 1.2rem; padding: 8px; }
+    .add-btn { background: none; border: 2px dashed #2563eb; color: #2563eb; padding: 10px; border-radius: 8px; width: 100%; cursor: pointer; font-weight: 600; margin-top: 4px; transition: all 0.2s; }
+    .add-btn:hover { background: #eff6ff; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>📊 Arbitrage Calculator</h1>
+    <p class="subtitle">Find guaranteed profit by backing all outcomes across different bookmakers. Enter the best odds available for each outcome — the calculator shows your exact stakes and locked-in profit.</p>
+
+    <div class="tool-card">
+      <div class="type-tabs">
+        <div class="type-tab active" onclick="setMarket(2,this)">2-Way (Home/Away)</div>
+        <div class="type-tab" onclick="setMarket(3,this)">3-Way (1X2)</div>
+        <div class="type-tab" onclick="setMarket('custom',this)">Custom</div>
+      </div>
+
+      <div class="input-group">
+        <label>Total Stake (R)</label>
+        <div class="prefix-wrap"><span>R</span><input type="number" id="totalStake" value="1000" min="1" oninput="calculate()"></div>
+      </div>
+
+      <div id="outcomes"></div>
+      <button class="add-btn" id="addBtn" style="display:none;" onclick="addOutcome()">+ Add Outcome</button>
+
+      <button class="calc-btn" onclick="calculate()">Calculate Arbitrage</button>
+
+      <div id="results">
+        <div class="arb-pct" id="arbDisplay">
+          <div class="big" id="arbPct">0%</div>
+          <div class="label" id="arbLabel">Arb percentage</div>
+        </div>
+        <table class="stakes-table">
+          <thead><tr><th>Outcome</th><th>Odds</th><th>Stake (R)</th><th>Return if Win (R)</th></tr></thead>
+          <tbody id="stakesBody"></tbody>
+        </table>
+        <div class="warning-box">
+          ⚠️ <strong>Important:</strong> Bookmakers may limit or ban accounts that consistently arb. Use multiple accounts, vary stake sizes, and avoid placing all legs simultaneously at the same IP. Arbitrage opportunities in SA are rare — usually under 30 seconds on major markets.
+        </div>
+      </div>
+    </div>
+
+    <h2>What is Sports Arbitrage?</h2>
+    <p>Arbitrage (or "arbing") is placing bets on all possible outcomes of an event across different bookmakers, where the combined odds guarantee a profit regardless of result. This happens when bookmakers disagree on the probability of each outcome.</p>
+    <p>Example: Betway offers 2.10 on Team A to win. Hollywoodbets offers 2.10 on Team B to win. The arb percentage is (1/2.10 + 1/2.10) = 95.2% — meaning you lock in a 4.8% profit on any stake.</p>
+    <h2>How to Find Arbs in SA</h2>
+    <p>Use the <a href="/best-odds-finder.html" style="color:#2563eb;">Best Odds Finder</a> to spot discrepancies between SA bookmakers. The best opportunities appear around match day, just after team news, or on less liquid markets (lower league rugby, domestic cricket).</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+      <p class="footer-small">We may earn commissions when you sign up through our links.</p>
+    </div>
+  </footer>
+
+  <script>
+    let outcomeCount = 2;
+    const defaultOutcomes = { 2: ['Home Win','Away Win'], 3: ['Home Win','Draw','Away Win'] };
+
+    function buildOutcomes(n, labels) {
+      const cont = document.getElementById('outcomes');
+      cont.innerHTML = '';
+      for (let i = 0; i < n; i++) {
+        const lbl = labels ? labels[i] : ('Outcome ' + (i+1));
+        cont.innerHTML += `<div class="outcome-row" id="row${i}">
+          <div><div class="outcome-label">${lbl}</div><input type="text" placeholder="Bookmaker name" id="bk${i}" oninput="calculate()"></div>
+          <div><div class="outcome-label">Best Odds</div><input type="number" placeholder="2.10" min="1.01" step="0.01" id="odds${i}" oninput="calculate()"></div>
+          ${n > 2 && i >= 2 ? `<div style="display:flex;align-items:flex-end;"><button class="remove-btn" onclick="removeOutcome(${i})" title="Remove">✕</button></div>` : '<div></div>'}
+        </div>`;
+      }
+    }
+
+    function setMarket(n, btn) {
+      document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      if (n === 'custom') {
+        outcomeCount = 2;
+        buildOutcomes(2, ['Outcome 1','Outcome 2']);
+        document.getElementById('addBtn').style.display = 'block';
+      } else {
+        outcomeCount = n;
+        buildOutcomes(n, defaultOutcomes[n]);
+        document.getElementById('addBtn').style.display = 'none';
+      }
+      document.getElementById('results').style.display = 'none';
+    }
+
+    function addOutcome() {
+      outcomeCount++;
+      const cont = document.getElementById('outcomes');
+      const div = document.createElement('div');
+      div.className = 'outcome-row';
+      div.id = 'row' + (outcomeCount-1);
+      div.innerHTML = `<div><div class="outcome-label">Outcome ${outcomeCount}</div><input type="text" placeholder="Bookmaker name" id="bk${outcomeCount-1}" oninput="calculate()"></div>
+        <div><div class="outcome-label">Best Odds</div><input type="number" placeholder="2.10" min="1.01" step="0.01" id="odds${outcomeCount-1}" oninput="calculate()"></div>
+        <div style="display:flex;align-items:flex-end;"><button class="remove-btn" onclick="removeOutcome(${outcomeCount-1})" title="Remove">✕</button></div>`;
+      cont.appendChild(div);
+    }
+
+    function removeOutcome(i) {
+      const row = document.getElementById('row'+i);
+      if (row) row.remove();
+      calculate();
+    }
+
+    function calculate() {
+      const totalStake = parseFloat(document.getElementById('totalStake').value) || 1000;
+      const rows = document.querySelectorAll('#outcomes .outcome-row');
+      const outcomes = [];
+      rows.forEach((row, i) => {
+        const idx = row.id.replace('row','');
+        const odds = parseFloat(document.getElementById('odds'+idx)?.value);
+        const bk = document.getElementById('bk'+idx)?.value || ('Bookmaker ' + (i+1));
+        if (odds && odds > 1) outcomes.push({ odds, bk, label: row.querySelector('.outcome-label')?.textContent || ('Outcome '+(i+1)) });
+      });
+
+      if (outcomes.length < 2) { document.getElementById('results').style.display = 'none'; return; }
+
+      const arbSum = outcomes.reduce((s, o) => s + (1/o.odds), 0);
+      const arbPct = (arbSum * 100).toFixed(2);
+      const isArb = arbSum < 1;
+      const profit = isArb ? (totalStake * (1/arbSum) - totalStake) : 0;
+
+      const display = document.getElementById('arbDisplay');
+      display.className = 'arb-pct' + (isArb ? '' : ' no-arb');
+      document.getElementById('arbPct').textContent = arbPct + '%';
+      document.getElementById('arbLabel').textContent = isArb
+        ? `✅ ARB FOUND — Guaranteed profit: R${profit.toFixed(2)} on R${totalStake.toLocaleString()} stake`
+        : `❌ No arb (need < 100% — you're at ${arbPct}%). Try finding better odds.`;
+
+      const tbody = document.getElementById('stakesBody');
+      tbody.innerHTML = '';
+      outcomes.forEach(o => {
+        const stake = totalStake * (1/o.odds) / arbSum;
+        const ret = stake * o.odds;
+        tbody.innerHTML += `<tr><td>${o.label}<br><small style="color:#9ca3af">${o.bk}</small></td><td><strong>${o.odds.toFixed(2)}</strong></td><td>R${stake.toFixed(2)}</td><td>R${ret.toFixed(2)}</td></tr>`;
+      });
+
+      if (isArb) {
+        tbody.innerHTML += `<tr class="profit-row"><td colspan="2">✅ Guaranteed Profit</td><td></td><td>+R${profit.toFixed(2)} (${((profit/totalStake)*100).toFixed(2)}%)</td></tr>`;
+      }
+
+      document.getElementById('results').style.display = 'block';
+    }
+
+    // Init
+    buildOutcomes(2, defaultOutcomes[2]);
+  </script>
+</body>
+</html>

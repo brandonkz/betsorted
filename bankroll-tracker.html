@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free betting bankroll tracker for South Africa. Log your bets, track profit and loss, calculate ROI. All data saved locally — no account needed.">
+  <link rel="canonical" href="https://betsorted.co.za/bankroll-tracker.html">
+  <title>Betting Bankroll Tracker South Africa | Track Your Bets & ROI | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 900px; margin: 0 auto; padding: 48px 24px 64px; }
+    h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 32px; font-size: 1rem; line-height: 1.6; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 28px; }
+    .stat-box { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; text-align: center; }
+    .stat-box .s-label { font-size: 0.75rem; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .stat-box .s-value { font-size: 1.5rem; font-weight: 800; color: #1e3a8a; }
+    .stat-box.profit .s-value { color: #059669; }
+    .stat-box.loss .s-value { color: #ef4444; }
+    .add-bet-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 28px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .add-bet-card h3 { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; margin: 0 0 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .input-group label { display: block; font-size: 0.825rem; font-weight: 600; color: #6b7280; margin-bottom: 5px; }
+    input[type=text], input[type=number], input[type=date], select { width: 100%; padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 0.9rem; font-family: inherit; color: #0f172a; box-sizing: border-box; transition: border-color 0.2s; }
+    input:focus, select:focus { outline: none; border-color: #2563eb; }
+    .prefix-wrap { position: relative; }
+    .prefix-wrap span { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #6b7280; font-size: 0.85rem; font-weight: 600; }
+    .prefix-wrap input { padding-left: 28px; }
+    .btn-add { background: #2563eb; color: white; border: none; padding: 12px 28px; border-radius: 8px; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; margin-top: 8px; }
+    .btn-add:hover { background: #1d4ed8; }
+    .bets-table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; }
+    th { background: #1e3a8a; color: white; padding: 10px 12px; text-align: left; font-size: 0.8rem; }
+    td { padding: 10px 12px; border-bottom: 1px solid #f3f4f6; }
+    tr:last-child td { border-bottom: none; }
+    tr.win td { background: #f0fdf4; }
+    tr.loss td { background: #fef2f2; }
+    tr.void td { background: #f8fafc; color: #9ca3af; }
+    .outcome-badge { padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; }
+    .outcome-badge.win { background: #dcfce7; color: #166534; }
+    .outcome-badge.loss { background: #fee2e2; color: #991b1b; }
+    .outcome-badge.pending { background: #dbeafe; color: #1d4ed8; }
+    .outcome-badge.void { background: #f3f4f6; color: #6b7280; }
+    .delete-btn { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 1rem; padding: 4px 8px; border-radius: 4px; }
+    .empty-state { text-align: center; padding: 48px; color: #9ca3af; }
+    .storage-note { font-size: 0.8rem; color: #9ca3af; margin-top: 8px; }
+    .clear-btn { background: none; border: 1px solid #ef4444; color: #ef4444; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+    .export-btn { background: none; border: 1px solid #2563eb; color: #2563eb; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+    .table-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .table-actions h3 { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; margin: 0; }
+    .btn-group { display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>📒 Betting Bankroll Tracker</h1>
+    <p class="subtitle">Log your bets and track your real performance over time. All data stays on your device — no account, no sign-up, 100% private. <span class="storage-note">💾 Saved automatically to your browser.</span></p>
+
+    <div class="stats-grid">
+      <div class="stat-box"><div class="s-label">Starting Bankroll</div><div class="s-value" id="s-bankroll">R0</div></div>
+      <div class="stat-box" id="sb-pl"><div class="s-label">Total P&L</div><div class="s-value" id="s-pl">R0</div></div>
+      <div class="stat-box"><div class="s-label">ROI</div><div class="s-value" id="s-roi">0%</div></div>
+      <div class="stat-box"><div class="s-label">Win Rate</div><div class="s-value" id="s-winrate">0%</div></div>
+      <div class="stat-box"><div class="s-label">Bets Placed</div><div class="s-value" id="s-total">0</div></div>
+      <div class="stat-box"><div class="s-label">Avg Odds</div><div class="s-value" id="s-avgodds">—</div></div>
+    </div>
+
+    <div class="add-bet-card">
+      <h3>➕ Add Bet</h3>
+      <div class="form-row">
+        <div class="input-group"><label>Date</label><input type="date" id="f-date"></div>
+        <div class="input-group"><label>Event / Match</label><input type="text" id="f-event" placeholder="Arsenal vs Man City"></div>
+        <div class="input-group"><label>Bookmaker</label>
+          <select id="f-bk">
+            <option>Betway</option><option>Hollywoodbets</option><option>Sportingbet</option>
+            <option>SupaBets</option><option>WSB</option><option>Easybet</option><option>Sunbet</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-group"><label>Selection</label><input type="text" id="f-selection" placeholder="Arsenal to win"></div>
+        <div class="input-group"><label>Stake (R)</label><div class="prefix-wrap"><span>R</span><input type="number" id="f-stake" placeholder="100" min="0"></div></div>
+        <div class="input-group"><label>Decimal Odds</label><input type="number" id="f-odds" placeholder="2.10" step="0.01" min="1.01"></div>
+      </div>
+      <div class="form-row-2">
+        <div class="input-group"><label>Outcome</label>
+          <select id="f-outcome">
+            <option value="pending">Pending</option>
+            <option value="win">Win ✅</option>
+            <option value="loss">Loss ❌</option>
+            <option value="void">Void / Refund</option>
+          </select>
+        </div>
+        <div class="input-group"><label>Sport</label>
+          <select id="f-sport">
+            <option>Soccer / PSL</option><option>Rugby</option><option>Cricket</option>
+            <option>Horse Racing</option><option>Tennis</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn-add" onclick="addBet()">Add Bet</button>
+    </div>
+
+    <div class="table-actions">
+      <h3>📋 Bet History</h3>
+      <div class="btn-group">
+        <button class="export-btn" onclick="exportCSV()">Export CSV</button>
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+      </div>
+    </div>
+
+    <div class="bets-table-wrap">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Event</th><th>Selection</th><th>Bookie</th><th>Sport</th><th>Stake</th><th>Odds</th><th>Return</th><th>P&L</th><th>Result</th><th></th></tr>
+        </thead>
+        <tbody id="betsBody">
+          <tr><td colspan="11"><div class="empty-state">No bets yet. Add your first bet above ☝️</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'betsorted_bets_v1';
+    let bets = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+    // Set today's date as default
+    document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+
+    function addBet() {
+      const date = document.getElementById('f-date').value;
+      const event = document.getElementById('f-event').value.trim();
+      const bk = document.getElementById('f-bk').value;
+      const selection = document.getElementById('f-selection').value.trim();
+      const stake = parseFloat(document.getElementById('f-stake').value);
+      const odds = parseFloat(document.getElementById('f-odds').value);
+      const outcome = document.getElementById('f-outcome').value;
+      const sport = document.getElementById('f-sport').value;
+
+      if (!event || !stake || !odds) { alert('Please fill in Event, Stake, and Odds at minimum.'); return; }
+
+      const ret = outcome === 'win' ? stake * odds : outcome === 'void' ? stake : 0;
+      const pl = outcome === 'win' ? stake * (odds - 1) : outcome === 'void' ? 0 : -stake;
+
+      bets.unshift({ id: Date.now(), date, event, bk, selection, stake, odds, outcome, sport, ret, pl });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(bets));
+      document.getElementById('f-event').value = '';
+      document.getElementById('f-selection').value = '';
+      document.getElementById('f-stake').value = '';
+      document.getElementById('f-odds').value = '';
+      document.getElementById('f-outcome').value = 'pending';
+      render();
+    }
+
+    function deleteBet(id) {
+      if (!confirm('Remove this bet?')) return;
+      bets = bets.filter(b => b.id !== id);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(bets));
+      render();
+    }
+
+    function render() {
+      const body = document.getElementById('betsBody');
+      if (!bets.length) { body.innerHTML = '<tr><td colspan="11"><div class="empty-state">No bets yet. Add your first bet above ☝️</div></td></tr>'; updateStats(); return; }
+      body.innerHTML = bets.map(b => {
+        const plStr = b.outcome === 'pending' ? '—' : (b.pl >= 0 ? '+' : '') + 'R' + b.pl.toFixed(2);
+        const plColor = b.pl > 0 ? '#059669' : b.pl < 0 ? '#ef4444' : '#6b7280';
+        return `<tr class="${b.outcome}">
+          <td>${b.date}</td>
+          <td>${b.event}</td>
+          <td>${b.selection||'—'}</td>
+          <td>${b.bk}</td>
+          <td>${b.sport}</td>
+          <td>R${b.stake.toFixed(2)}</td>
+          <td>${b.odds.toFixed(2)}</td>
+          <td>${b.outcome==='pending'?'<span style="color:#2563eb">Pending</span>':'R'+b.ret.toFixed(2)}</td>
+          <td style="font-weight:700;color:${plColor}">${plStr}</td>
+          <td><span class="outcome-badge ${b.outcome}">${b.outcome.charAt(0).toUpperCase()+b.outcome.slice(1)}</span></td>
+          <td><button class="delete-btn" onclick="deleteBet(${b.id})" title="Delete">✕</button></td>
+        </tr>`;
+      }).join('');
+      updateStats();
+    }
+
+    function updateStats() {
+      const settled = bets.filter(b => b.outcome !== 'pending' && b.outcome !== 'void');
+      const totalStaked = settled.reduce((s,b) => s+b.stake, 0);
+      const totalPL = settled.reduce((s,b) => s+b.pl, 0);
+      const wins = settled.filter(b => b.outcome === 'win').length;
+      const roi = totalStaked > 0 ? (totalPL / totalStaked * 100) : 0;
+      const winRate = settled.length > 0 ? (wins / settled.length * 100) : 0;
+      const avgOdds = settled.length > 0 ? (settled.reduce((s,b) => s+b.odds,0) / settled.length) : 0;
+
+      document.getElementById('s-bankroll').textContent = 'R' + totalStaked.toFixed(0);
+      document.getElementById('s-pl').textContent = (totalPL>=0?'+':'') + 'R' + totalPL.toFixed(2);
+      document.getElementById('sb-pl').className = 'stat-box ' + (totalPL>0?'profit':totalPL<0?'loss':'');
+      document.getElementById('s-roi').textContent = (roi>=0?'+':'') + roi.toFixed(1) + '%';
+      document.getElementById('s-winrate').textContent = winRate.toFixed(0) + '%';
+      document.getElementById('s-total').textContent = bets.length;
+      document.getElementById('s-avgodds').textContent = avgOdds > 0 ? avgOdds.toFixed(2) : '—';
+    }
+
+    function clearAll() {
+      if (!confirm('Clear all bet history? This cannot be undone.')) return;
+      bets = [];
+      localStorage.removeItem(STORAGE_KEY);
+      render();
+    }
+
+    function exportCSV() {
+      if (!bets.length) { alert('No bets to export.'); return; }
+      const headers = ['Date','Event','Selection','Bookmaker','Sport','Stake','Odds','Return','P&L','Outcome'];
+      const rows = bets.map(b => [b.date,b.event,b.selection||'',b.bk,b.sport,b.stake,b.odds,b.ret.toFixed(2),b.pl.toFixed(2),b.outcome]);
+      const csv = [headers, ...rows].map(r => r.map(v => '"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');
+      const a = document.createElement('a');
+      a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+      a.download = 'betsorted-bets-' + new Date().toISOString().split('T')[0] + '.csv';
+      a.click();
+    }
+
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kelly Criterion calculator for South African bettors. Find your optimal stake size based on bankroll, odds, and estimated win probability. Avoid over-betting.">
+  <link rel="canonical" href="https://betsorted.co.za/kelly-criterion-calculator.html">
+  <title>Kelly Criterion Calculator South Africa | Optimal Stake Sizing | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .tool-page { max-width: 680px; margin: 0 auto; padding: 48px 24px 64px; }
+    h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 8px; }
+    .subtitle { color: #6b7280; margin-bottom: 36px; font-size: 1rem; line-height: 1.6; }
+    .tool-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .input-group { margin-bottom: 0; }
+    .input-group label { display: block; font-weight: 600; color: #1e3a8a; margin-bottom: 6px; font-size: 0.95rem; }
+    .input-group .hint { font-size: 0.8rem; color: #9ca3af; margin-bottom: 8px; }
+    input[type=number], input[type=range], select { width: 100%; padding: 12px 14px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0f172a; box-sizing: border-box; transition: border-color 0.2s; }
+    input[type=number]:focus, select:focus { outline: none; border-color: #2563eb; }
+    input[type=range] { padding: 6px 0; border: none; accent-color: #2563eb; cursor: pointer; }
+    .prefix-wrap { position: relative; }
+    .prefix-wrap span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #6b7280; font-weight: 600; }
+    .prefix-wrap input { padding-left: 32px; }
+    .slider-row { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; }
+    .slider-row label { white-space: nowrap; font-weight: 600; color: #1e3a8a; font-size: 0.95rem; min-width: 170px; }
+    .kelly-result { text-align: center; padding: 28px; border-radius: 14px; margin: 24px 0; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; }
+    .kelly-result .k-label { font-size: 0.9rem; opacity: 0.85; margin-bottom: 6px; }
+    .kelly-result .k-big { font-size: 3rem; font-weight: 900; }
+    .kelly-result .k-sub { font-size: 1rem; opacity: 0.85; margin-top: 4px; }
+    .metrics-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .metric-box { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; text-align: center; }
+    .metric-box .m-label { font-size: 0.75rem; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .metric-box .m-value { font-size: 1.2rem; font-weight: 800; color: #1e3a8a; }
+    .warning-box { margin-top: 20px; padding: 16px 20px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; font-size: 0.875rem; color: #78350f; line-height: 1.6; }
+    .fraction-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+    .fraction-tab { flex: 1; padding: 10px; border-radius: 8px; border: 2px solid #e5e7eb; background: white; font-weight: 600; cursor: pointer; color: #6b7280; text-align: center; font-size: 0.85rem; transition: all 0.2s; }
+    .fraction-tab.active { background: #2563eb; color: white; border-color: #2563eb; }
+    #results { display: none; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin: 40px 0 16px; }
+    p { color: #374151; line-height: 1.7; margin-bottom: 14px; font-size: 0.95rem; }
+    .formula-box { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 20px; font-family: monospace; font-size: 0.9rem; color: #1e3a8a; margin: 16px 0; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <h1>📐 Kelly Criterion Calculator</h1>
+    <p class="subtitle">The Kelly Criterion calculates the mathematically optimal percentage of your bankroll to bet. Too small and you under-grow; too large and you risk ruin. Enter your edge and let the formula do the work.</p>
+
+    <div class="tool-card">
+      <div class="input-row">
+        <div class="input-group">
+          <label>Your Bankroll (R)</label>
+          <div class="hint">Total betting funds available</div>
+          <div class="prefix-wrap"><span>R</span><input type="number" id="bankroll" value="5000" min="1" oninput="calculate()"></div>
+        </div>
+        <div class="input-group">
+          <label>Bookmaker Decimal Odds</label>
+          <div class="hint">Odds offered by SA bookmaker</div>
+          <input type="number" id="odds" placeholder="2.10" min="1.01" step="0.01" oninput="calculate()">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Your Win Probability (%)</label>
+          <div class="hint">Your honest estimate</div>
+          <input type="number" id="winProb" placeholder="55" min="0.1" max="99.9" step="0.1" oninput="calculate()">
+        </div>
+        <div class="input-group">
+          <label>Kelly Fraction</label>
+          <div class="hint">Full Kelly = aggressive</div>
+          <select id="kellyFraction" onchange="calculate()">
+            <option value="1">Full Kelly (aggressive)</option>
+            <option value="0.5" selected>Half Kelly (recommended)</option>
+            <option value="0.25">Quarter Kelly (conservative)</option>
+            <option value="0.1">10% Kelly (ultra-safe)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="results">
+        <div class="kelly-result">
+          <div class="k-label">Recommended Stake</div>
+          <div class="k-big" id="k-stake">R0</div>
+          <div class="k-sub" id="k-pct">0% of bankroll</div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="m-label">Full Kelly %</div><div class="m-value" id="m-fullkelly">—</div></div>
+          <div class="metric-box"><div class="m-label">Your Edge</div><div class="m-value" id="m-edge">—</div></div>
+          <div class="metric-box"><div class="m-label">Break-even Prob</div><div class="m-value" id="m-be">—</div></div>
+          <div class="metric-box"><div class="m-label">Expected Return</div><div class="m-value" id="m-ev">—</div></div>
+          <div class="metric-box"><div class="m-label">Potential Win</div><div class="m-value" id="m-win">—</div></div>
+          <div class="metric-box"><div class="m-label">Max Drawdown Risk</div><div class="m-value" id="m-dd">—</div></div>
+        </div>
+        <div class="warning-box" id="kelly-warning"></div>
+      </div>
+    </div>
+
+    <h2>What is the Kelly Criterion?</h2>
+    <p>The Kelly Criterion is a formula developed by mathematician John L. Kelly Jr. in 1956. It calculates the optimal fraction of your bankroll to bet in order to maximise long-term growth while minimising the risk of ruin.</p>
+    <div class="formula-box">
+      f* = (bp – q) / b<br><br>
+      Where:<br>
+      b = decimal odds – 1 (profit per R1 staked)<br>
+      p = your estimated win probability<br>
+      q = 1 – p (lose probability)
+    </div>
+    <p>A positive Kelly fraction means there's value. A negative fraction means the bookmaker has the edge — don't bet.</p>
+
+    <h2>Full Kelly vs Half Kelly</h2>
+    <p><strong>Full Kelly</strong> maximises long-run growth but leads to extreme bankroll swings — drawdowns of 50%+ are common. Most professional bettors use <strong>Half Kelly</strong> (bet half the calculated amount) which captures ~75% of the growth with much lower volatility.</p>
+    <p>For recreational SA bettors, <strong>Quarter Kelly</strong> is a sensible starting point. Never bet more than the Full Kelly amount — it's mathematically proven to reduce long-term returns.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function calculate() {
+      const bankroll = parseFloat(document.getElementById('bankroll').value) || 0;
+      const odds = parseFloat(document.getElementById('odds').value);
+      const p = parseFloat(document.getElementById('winProb').value) / 100;
+      const fraction = parseFloat(document.getElementById('kellyFraction').value);
+      if (!odds || odds <= 1 || !p || p <= 0 || p >= 1 || !bankroll) { document.getElementById('results').style.display = 'none'; return; }
+
+      const b = odds - 1;
+      const q = 1 - p;
+      const fullKelly = (b * p - q) / b;
+      const adjustedKelly = fullKelly * fraction;
+      const stake = Math.max(0, adjustedKelly * bankroll);
+      const be = 1 / odds;
+      const edge = (p - be) * 100;
+      const ev = (p * b * stake) - (q * stake);
+      const potWin = stake * b;
+      const ddRisk = fullKelly > 0 ? Math.min(99, fullKelly * 100 * 2) : 0;
+
+      document.getElementById('k-stake').textContent = 'R' + stake.toFixed(2);
+      document.getElementById('k-pct').textContent = (adjustedKelly * 100).toFixed(2) + '% of bankroll';
+      document.getElementById('m-fullkelly').textContent = (fullKelly * 100).toFixed(2) + '%';
+      document.getElementById('m-edge').textContent = (edge >= 0 ? '+' : '') + edge.toFixed(1) + '%';
+      document.getElementById('m-be').textContent = (be * 100).toFixed(1) + '%';
+      document.getElementById('m-ev').textContent = (ev >= 0 ? '+' : '') + 'R' + ev.toFixed(2);
+      document.getElementById('m-win').textContent = 'R' + potWin.toFixed(2);
+      document.getElementById('m-dd').textContent = ddRisk.toFixed(0) + '%';
+
+      const w = document.getElementById('kelly-warning');
+      if (fullKelly <= 0) {
+        w.innerHTML = '❌ <strong>No edge.</strong> Kelly says bet R0. The bookmaker implies a higher win probability than your estimate — there\'s no positive expected value here.';
+        w.style.background = '#fef2f2'; w.style.borderColor = '#fecaca'; w.style.color = '#991b1b';
+      } else if (fullKelly > 0.25) {
+        w.innerHTML = `⚠️ <strong>High Kelly fraction (${(fullKelly*100).toFixed(1)}%).</strong> Full Kelly here is aggressive — a losing run could significantly damage your bankroll. ${fraction === 1 ? 'Consider switching to Half Kelly above.' : 'Good choice using a fractional Kelly.'}`;
+        w.style.background = '#fffbeb'; w.style.borderColor = '#fde68a'; w.style.color = '#78350f';
+      } else {
+        w.innerHTML = `✅ <strong>Reasonable stake.</strong> Full Kelly of ${(fullKelly*100).toFixed(1)}% suggests a manageable position size. Your edge is ${edge.toFixed(1)}% — bet consistently at this size across similar opportunities.`;
+        w.style.background = '#f0fdf4'; w.style.borderColor = '#bbf7d0'; w.style.color = '#166534';
+      }
+      document.getElementById('results').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

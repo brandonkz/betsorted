@@ -36,6 +36,11 @@
 
   <div class="grid" id="kanban"></div>
 
+  <div class="section" id="personal-section" style="display:none;">
+    <h2 id="personal-title" style="color:#93c5fd;margin:0 0 8px;">Personal Board</h2>
+    <div class="grid" id="personal-kanban"></div>
+  </div>
+
   <div class="section">
     <h2>Tweets Library</h2>
     <div class="tweets">
@@ -98,6 +103,43 @@
         }).join('') : `<div class="empty">No items yet</div>`);
         kb.appendChild(el);
       });
+
+      // Render personal board
+      if (data.personal && data.personal.columns) {
+        const section = document.getElementById('personal-section');
+        const pk = document.getElementById('personal-kanban');
+        const pt = document.getElementById('personal-title');
+        if (data.personal.title) pt.textContent = data.personal.title;
+        section.style.display = 'block';
+        pk.innerHTML = '';
+        data.personal.columns.forEach(col => {
+          const el = document.createElement('div');
+          el.className = 'col';
+          el.innerHTML = `<h2>${col.title}</h2>` + (col.items.length ? col.items.map(i => {
+            let linksHtml = '';
+            if (i.links && i.links.length) {
+              linksHtml = '<div style="margin-top:8px;">' + 
+                i.links.map(link => {
+                  if (link.url.startsWith('file://')) {
+                    const path = link.url.replace('file://', '');
+                    return `<div class="path-copy" onclick="openPath('${path}', this)" title="Click to open in Finder">📁 ${link.label}</div>`;
+                  } else {
+                    return `<a href="${link.url}" target="_blank" style="margin-right:8px;font-size:11px;color:#93c5fd;">🔗 ${link.label}</a>`;
+                  }
+                }).join('') + 
+                '</div>';
+            }
+            return `
+            <div class="card">
+              <div class="title">${i.title}</div>
+              ${i.body ? `<div class="meta">${i.body}</div>` : ''}
+              ${i.meta ? `<div class="meta">${i.meta}</div>` : ''}
+              ${linksHtml}
+            </div>`;
+          }).join('') : `<div class="empty">No items yet</div>`);
+          pk.appendChild(el);
+        });
+      }
 
       function renderTweets(container, items){
         if(!items || !items.length){

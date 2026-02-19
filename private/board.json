@@ -10,6 +10,84 @@
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/"
   },
+  "personal": {
+    "title": "Brandon — Personal Board",
+    "columns": [
+      {
+        "id": "todo",
+        "title": "To Do",
+        "items": [
+          {
+            "title": "Review Play.co.za page live",
+            "body": "Quick sanity check on layout + links",
+            "meta": "5 mins",
+            "links": [
+              {"label": "Live Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"}
+            ]
+          },
+          {
+            "title": "Apply to next affiliate batch",
+            "body": "7bit, Wild.io, CoinDepo, Jackbit",
+            "meta": "Target 12/15 approvals",
+            "links": [
+              {"label": "Affiliate Notes", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"},
+              {"label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"}
+            ]
+          },
+          {
+            "title": "Pick PSL fixtures to highlight",
+            "body": "Needed for Fixtures page build",
+            "meta": "Confirm list",
+            "links": [
+              {"label": "Fixtures draft", "url": "file:///Users/brandonkatz/Documents/BetSorted/content/"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "doing",
+        "title": "Doing",
+        "items": [
+          {
+            "title": "Affiliate outreach follow‑ups",
+            "body": "Confirm pending approvals",
+            "meta": "In progress",
+            "links": [
+              {"label": "Strategy Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "waiting",
+        "title": "Waiting",
+        "items": [
+          {
+            "title": "Affiliate responses",
+            "body": "Waiting on approvals",
+            "meta": "Pending",
+            "links": [
+              {"label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "done",
+        "title": "Done",
+        "items": [
+          {
+            "title": "Play.co.za affiliate integrated",
+            "body": "Live page + tracking link",
+            "meta": "Complete",
+            "links": [
+              {"label": "Live Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "columns": [
     {
       "id": "drafting",

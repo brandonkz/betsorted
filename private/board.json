@@ -1,0 +1,29 @@
+{
+  "updated": "2026-02-19",
+  "columns": [
+    {
+      "id": "drafting",
+      "title": "Drafting",
+      "items": []
+    },
+    {
+      "id": "scheduled",
+      "title": "Scheduled",
+      "items": []
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "items": []
+    },
+    {
+      "id": "ideas",
+      "title": "Ideas",
+      "items": []
+    }
+  ],
+  "tweets": {
+    "betsorted": [],
+    "cryptocasinosorted": []
+  }
+}

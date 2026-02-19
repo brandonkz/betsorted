@@ -19,11 +19,11 @@
         "title": "To Do",
         "items": [
           {
-            "title": "Today’s task list (docx)",
+            "title": "Today’s task list (Google Doc)",
             "body": "All your tasks in one document",
-            "meta": "Open in Word",
+            "meta": "Private Google Doc",
             "links": [
-              {"label": "Tasks docx", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/brandon-tasks.docx"}
+              {"label": "Open Google Doc", "url": "https://docs.google.com/document/d/1aSAS5NSvQtVm4uTcGlsWwlKz2ZKVH3rPhvxbqDSvE4E/edit"}
             ]
           },
           {

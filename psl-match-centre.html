@@ -367,9 +367,10 @@
         // If a match is selected, refresh its detail too
         if (selectedId) loadMatchDetail(selectedId, true);
 
-        // Auto-refresh every 30s if there are live matches
+        // Auto-refresh: always poll (faster when live)
         clearTimeout(refreshTimer);
-        if (liveCount > 0) refreshTimer = setTimeout(loadMatches, 30000);
+        const interval = liveCount > 0 ? 30000 : 120000; // 30s live, 2m otherwise
+        refreshTimer = setTimeout(loadMatches, interval);
       } catch(e) {
         document.getElementById('matchList').innerHTML = `<div style="text-align:center;padding:32px;color:#9ca3af;">Could not load matches. <button onclick="loadMatches()" style="color:#2563eb;background:none;border:none;cursor:pointer;font-weight:600;">Try again</button></div>`;
       }

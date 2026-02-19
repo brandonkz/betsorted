@@ -27,6 +27,14 @@
             ]
           },
           {
+            "title": "Content calendar (Tweets + Reddit)",
+            "body": "Paste‑ready content + weekly cadence",
+            "meta": "Private Google Doc",
+            "links": [
+              {"label": "Open Google Doc", "url": "https://docs.google.com/document/d/1UBh_QXiItRrnmjorz8CjjqZs5NjDp8g4IaPgT9ziIFg/edit"}
+            ]
+          },
+          {
             "title": "Affiliate tracker",
             "body": "Signed‑up affiliates + links",
             "meta": "Private page",

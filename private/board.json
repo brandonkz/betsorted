@@ -78,6 +78,11 @@
       "title": "Done",
       "items": [
         {
+          "title": "Play.co.za affiliate integration",
+          "body": "Added affiliate link (btag=2673740), full review page, updated sites.json + bookmakers.csv + index",
+          "meta": "Live 2026-02-19"
+        },
+        {
           "title": "Phase 1 BetSorted blog batch committed",
           "body": "10 bookmaker reviews, 6 payment method guides, 6 PSL cornerstone pages, glossary",
           "meta": "Complete"

@@ -180,7 +180,27 @@
       <div class="loading-card"><div class="spinner"></div><p>Loading Polymarket data...</p></div>
     </div>
 
-    <p style="font-size:0.78rem;color:#9ca3af;margin-top:8px;">Data sourced from <a href="https://polymarket.com" target="_blank" rel="nofollow noopener" style="color:#6b7280;">Polymarket.com</a>. SA bookmaker odds shown are indicative — check live prices before betting. 18+ only. Gamble responsibly. <a href="/responsible-gambling.html" style="color:#9ca3af;">Need help?</a></p>
+    <!-- Kalshi Section -->
+    <div style="margin-top: 48px; margin-bottom: 24px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:6px;">
+        <div style="flex:1; height:2px; background: linear-gradient(90deg, #7c3aed, transparent);"></div>
+        <h2 style="font-size:1.5rem; font-weight:900; color:#7c3aed; white-space:nowrap; margin:0;">⚖️ Kalshi Markets</h2>
+        <div style="flex:1; height:2px; background: linear-gradient(90deg, transparent, #7c3aed);"></div>
+      </div>
+      <p style="color:#6b7280; font-size:0.9rem; margin-bottom:4px;">Kalshi is a CFTC-regulated US prediction market covering sports <strong>not on Polymarket</strong> — F1, T20 Cricket, Six Nations Rugby, and more. Prices represent real-money market consensus.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px;">
+        <span style="background:#f3e8ff; color:#7c3aed; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:20px;">🏏 T20 Cricket</span>
+        <span style="background:#f3e8ff; color:#7c3aed; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:20px;">🏉 Six Nations Rugby</span>
+        <span style="background:#f3e8ff; color:#7c3aed; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:20px;">🏎️ F1</span>
+        <span style="background:#f3e8ff; color:#7c3aed; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:20px;">⭐ UCL</span>
+      </div>
+    </div>
+
+    <div id="kalshi-container">
+      <div class="loading-card"><div class="spinner"></div><p>Loading Kalshi data...</p></div>
+    </div>
+
+    <p style="font-size:0.78rem;color:#9ca3af;margin-top:8px;">Data sourced from <a href="https://polymarket.com" target="_blank" rel="nofollow noopener" style="color:#6b7280;">Polymarket.com</a> and <a href="https://kalshi.com" target="_blank" rel="nofollow noopener" style="color:#6b7280;">Kalshi.com</a>. Kalshi requires US residency to trade — prices shown as reference only. SA bookmaker odds are indicative. 18+ only. Gamble responsibly. <a href="/responsible-gambling.html" style="color:#9ca3af;">Need help?</a></p>
   </main>
 
   <footer class="site-footer">
@@ -298,7 +318,84 @@
       }
     }
 
+    function renderKalshiMarket(s) {
+      const rows = s.outcomes.map((o, i) => {
+        const pct = o.pct;
+        const fairDec = o.fairDec;
+        const barWidth = Math.max(2, Math.min(100, pct));
+        const bwEst = fairDec ? (parseFloat(fairDec) * 0.88).toFixed(2) : null;
+        return `<tr>
+          <td><div class="team-cell"><span class="rank-num">${i+1}</span><span class="team-flag">${o.flag||'🏟️'}</span><span class="team-name">${o.name}</span></div></td>
+          <td class="prob-cell">
+            <div class="prob-pct">${pct}%</div>
+            <div class="prob-bar-wrap"><div class="prob-bar" style="background:linear-gradient(90deg,#7c3aed,#a78bfa);width:${barWidth}%"></div></div>
+            <div class="prob-sub">Kalshi consensus</div>
+            <div class="bw-inline">
+              <span class="bwi-odds">${bwEst||'—'}</span>
+              <span class="bwi-label">est. Betway</span>
+              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="font-size:0.72rem;color:#7c3aed;font-weight:700;text-decoration:none;">Bet →</a>
+            </div>
+          </td>
+          <td class="odds-cell hide-mob">
+            <div class="fair-dec">${fairDec||'—'}</div>
+            <div class="odds-sub">fair decimal</div>
+          </td>
+          <td class="bw-cell bw-col">
+            <div class="bw-odds">${bwEst||'—'}</div>
+            <div class="bw-sub">est. Betway</div>
+            <a class="bw-link" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="color:#7c3aed;">Verify live →</a>
+          </td>
+          <td class="value-cell hide-mob">${valueBadge(o.prob)}</td>
+        </tr>`;
+      }).join('');
+
+      return `<div class="market-card" style="border-color:#e9d5ff;">
+        <div class="market-header" style="background:linear-gradient(135deg,#6d28d9,#7c3aed);">
+          <h2>${s.icon} ${s.title}</h2>
+          <div class="mh-meta">
+            <span class="mh-vol">${s.volumeNote}</span>
+            <span>Resolves ${s.ends}</span>
+          </div>
+        </div>
+        <table class="market-table">
+          <thead>
+            <tr>
+              <th>Team / Player</th>
+              <th>Kalshi Probability</th>
+              <th class="right hide-mob">Fair Odds</th>
+              <th class="center bw-col">Betway Odds</th>
+              <th class="center hide-mob">Signal</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <div style="padding:12px 16px;background:#faf5ff;border-top:1px solid #f3e8ff;font-size:0.75rem;color:#9ca3af;">
+          ℹ️ <em>${s.desc}</em> · Betway odds estimated. <a href="/value-bet-calculator.html" style="color:#7c3aed;margin-left:6px;">Calculate EV →</a>
+        </div>
+      </div>`;
+    }
+
+    async function loadKalshi() {
+      try {
+        const res = await fetch('/data/kalshi.json');
+        if (!res.ok) throw new Error('Not found');
+        const data = await res.json();
+        let html = '';
+        for (const s of data.series) {
+          if (s.outcomes && s.outcomes.length) html += renderKalshiMarket(s);
+        }
+        html += `<div class="cta-banner" style="background:linear-gradient(135deg,#6d28d9,#7c3aed);">
+          <p>⚖️ Want to size your bet correctly? Use our <strong>Kelly Criterion calculator</strong>.</p>
+          <a href="/kelly-criterion-calculator.html">Calculate Stake →</a>
+        </div>`;
+        document.getElementById('kalshi-container').innerHTML = html;
+      } catch(e) {
+        document.getElementById('kalshi-container').innerHTML = `<div class="loading-card"><p style="color:#374151;font-weight:600;">Could not load Kalshi data.</p></div>`;
+      }
+    }
+
     loadMarkets();
+    loadKalshi();
   </script>
 </body>
 </html>

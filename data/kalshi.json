@@ -1,0 +1,261 @@
+{
+  "updatedAt": "2026-02-19T16:49:05.214Z",
+  "series": [
+    {
+      "ticker": "KXT20WORLDCUP",
+      "title": "ICC T20 World Cup 2026",
+      "icon": "🏏",
+      "volumeNote": "~2M contracts",
+      "ends": "Jun 2026",
+      "desc": "Who wins the 2026 T20 Cricket World Cup? South Africa, India and West Indies are the big names.",
+      "outcomes": [
+        {
+          "name": "India",
+          "flag": "🇮🇳",
+          "prob": 0.45,
+          "pct": 45,
+          "fairDec": 2.22,
+          "vol": 468372
+        },
+        {
+          "name": "South Africa",
+          "flag": "🇿🇦",
+          "prob": 0.17,
+          "pct": 17,
+          "fairDec": 5.88,
+          "vol": 288742
+        },
+        {
+          "name": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.1,
+          "pct": 10,
+          "fairDec": 10,
+          "vol": 77188
+        },
+        {
+          "name": "New Zealand",
+          "flag": "🇳🇿",
+          "prob": 0.09,
+          "pct": 9,
+          "fairDec": 11.11,
+          "vol": 201256
+        },
+        {
+          "name": "Pakistan",
+          "flag": "🇵🇰",
+          "prob": 0.07,
+          "pct": 7,
+          "fairDec": 14.29,
+          "vol": 153976
+        },
+        {
+          "name": "West Indies",
+          "flag": "🏝️",
+          "prob": 0.05,
+          "pct": 5,
+          "fairDec": 20,
+          "vol": 250617
+        },
+        {
+          "name": "Sri Lanka",
+          "flag": "🇱🇰",
+          "prob": 0.05,
+          "pct": 5,
+          "fairDec": 20,
+          "vol": 211857
+        }
+      ]
+    },
+    {
+      "ticker": "KXF1",
+      "title": "F1 Drivers Championship 2025",
+      "icon": "🏎️",
+      "volumeNote": "~500k contracts",
+      "ends": "Dec 2025",
+      "desc": "Verstappen vs Russell vs Norris — who takes the 2025 Formula 1 title?",
+      "outcomes": [
+        {
+          "name": "Max Verstappen",
+          "flag": "🇳🇱",
+          "prob": 0.25,
+          "pct": 25,
+          "fairDec": 4,
+          "vol": 105701
+        },
+        {
+          "name": "George Russell",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.24,
+          "pct": 24,
+          "fairDec": 4.17,
+          "vol": 60472
+        },
+        {
+          "name": "Lando Norris",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.11,
+          "pct": 11,
+          "fairDec": 9.09,
+          "vol": 45723
+        },
+        {
+          "name": "Oscar Piastri",
+          "flag": "🇦🇺",
+          "prob": 0.08,
+          "pct": 8,
+          "fairDec": 12.5,
+          "vol": 64040
+        },
+        {
+          "name": "Charles Leclerc",
+          "flag": "🇲🇨",
+          "prob": 0.08,
+          "pct": 8,
+          "fairDec": 12.5,
+          "vol": 97926
+        },
+        {
+          "name": "Lewis Hamilton",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.07,
+          "pct": 7,
+          "fairDec": 14.29,
+          "vol": 110260
+        },
+        {
+          "name": "Andrea Kimi Antonelli",
+          "flag": "",
+          "prob": 0.06,
+          "pct": 6,
+          "fairDec": 16.67,
+          "vol": 43782
+        },
+        {
+          "name": "Fernando Alonso",
+          "flag": "🇪🇸",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 111003
+        }
+      ]
+    },
+    {
+      "ticker": "KXSIXNATIONS",
+      "title": "Six Nations Rugby 2026",
+      "icon": "🏉",
+      "volumeNote": "~2k contracts",
+      "ends": "Mar 2026",
+      "desc": "France dominating Six Nations. Can England or Ireland catch them?",
+      "outcomes": [
+        {
+          "name": "France",
+          "flag": "🇫🇷",
+          "prob": 0.85,
+          "pct": 85,
+          "fairDec": 1.18,
+          "vol": 118
+        },
+        {
+          "name": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.06,
+          "pct": 6,
+          "fairDec": 16.67,
+          "vol": 446
+        }
+      ]
+    },
+    {
+      "ticker": "KXUCL",
+      "title": "Champions League Winner",
+      "icon": "⭐",
+      "volumeNote": "~4M contracts",
+      "ends": "May 2026",
+      "desc": "UCL title race — Arsenal lead the Kalshi market ahead of Bayern and Barcelona.",
+      "outcomes": [
+        {
+          "name": "Arsenal",
+          "flag": "⚪🔴",
+          "prob": 0.2,
+          "pct": 20,
+          "fairDec": 5,
+          "vol": 679330
+        },
+        {
+          "name": "Bayern Munich",
+          "flag": "🔴⚪",
+          "prob": 0.15,
+          "pct": 15,
+          "fairDec": 6.67,
+          "vol": 685476
+        },
+        {
+          "name": "Manchester City",
+          "flag": "🔵",
+          "prob": 0.11,
+          "pct": 11,
+          "fairDec": 9.09,
+          "vol": 250484
+        },
+        {
+          "name": "Barcelona",
+          "flag": "🔵🔴",
+          "prob": 0.11,
+          "pct": 11,
+          "fairDec": 9.09,
+          "vol": 693941
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "⚪",
+          "prob": 0.09,
+          "pct": 9,
+          "fairDec": 11.11,
+          "vol": 698335
+        },
+        {
+          "name": "PSG",
+          "flag": "🔵🔴⚪",
+          "prob": 0.09,
+          "pct": 9,
+          "fairDec": 11.11,
+          "vol": 402162
+        },
+        {
+          "name": "Liverpool",
+          "flag": "🔴",
+          "prob": 0.07,
+          "pct": 7,
+          "fairDec": 14.29,
+          "vol": 337619
+        },
+        {
+          "name": "Chelsea",
+          "flag": "🔵",
+          "prob": 0.04,
+          "pct": 4,
+          "fairDec": 25,
+          "vol": 366046
+        },
+        {
+          "name": "Newcastle",
+          "flag": "",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 64994
+        },
+        {
+          "name": "Dortmund",
+          "flag": "",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 47593
+        }
+      ]
+    }
+  ]
+}

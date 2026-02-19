@@ -26,6 +26,8 @@
   <h1>BetSorted Ops Board (Private)</h1>
   <div class="muted">Private link • last updated: <span id="updated">—</span></div>
 
+  <div id="quickLinks" style="margin:16px 0;padding:12px;background:#111827;border:1px solid #1f2937;border-radius:12px;"></div>
+
   <div class="grid" id="kanban"></div>
 
   <div class="section">
@@ -47,6 +49,18 @@
       const res = await fetch('/private/board.json?v=' + Date.now());
       const data = await res.json();
       document.getElementById('updated').textContent = data.updated || '—';
+      
+      // Render quick links
+      if (data.quickLinks) {
+        const ql = document.getElementById('quickLinks');
+        ql.innerHTML = '<h3 style="margin:0 0 8px;font-size:14px;color:#93c5fd;">📁 Quick Access</h3>' +
+          '<div style="display:flex;flex-wrap:wrap;gap:8px;">' +
+          Object.entries(data.quickLinks).map(([key, url]) => 
+            `<a href="${url}" target="_blank" style="padding:4px 10px;background:#0f172a;border:1px solid #1f2937;border-radius:6px;font-size:12px;text-decoration:none;color:#93c5fd;">${key}</a>`
+          ).join('') +
+          '</div>';
+      }
+      
       const kb = document.getElementById('kanban');
       kb.innerHTML = '';
       data.columns.forEach(col => {

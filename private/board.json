@@ -1,5 +1,15 @@
 {
   "updated": "2026-02-19",
+  "quickLinks": {
+    "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
+    "documents": "file:///Users/brandonkatz/Documents/BetSorted/",
+    "data": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/",
+    "bookmakers": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/bookmakers/",
+    "blog": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/blog/",
+    "tweets": "file:///Users/brandonkatz/Documents/BetSorted/tweets/",
+    "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
+    "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/"
+  },
   "columns": [
     {
       "id": "drafting",
@@ -27,7 +37,10 @@
         {
           "title": "Daily Tweet Generator",
           "body": "Every day 06:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Tweets Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/tweets/"}
+          ]
         },
         {
           "title": "BetSorted live odds update (morning)",
@@ -35,18 +48,26 @@
           "meta": "Cron",
           "links": [
             {"label": "Live Odds Page", "url": "https://betsorted.co.za/odds-comparison.html"},
-            {"label": "Script", "url": "file://~/.openclaw/workspace/betsorted/fetch-live-odds.js"}
+            {"label": "Script", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/fetch-live-odds.js"},
+            {"label": "Data Folder", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/"}
           ]
         },
         {
           "title": "Daily tool ideas report",
           "body": "Every day 07:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Analytics Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/analytics/"}
+          ]
         },
         {
           "title": "Daily affiliate signup reminder",
           "body": "Every day 09:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Strategy Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"},
+            {"label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"}
+          ]
         },
         {
           "title": "BetSorted live odds update (evening)",
@@ -107,8 +128,9 @@
           "links": [
             {"label": "Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"},
             {"label": "Affiliate Link", "url": "https://affiliates.play.co.za/links/?btag=2673740"},
-            {"label": "sites.json", "url": "file://~/.openclaw/workspace/betsorted/data/sites.json"},
-            {"label": "bookmakers.csv", "url": "file://~/.openclaw/workspace/betsorted/data/bookmakers.csv"}
+            {"label": "sites.json", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/sites.json"},
+            {"label": "bookmakers.csv", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/bookmakers.csv"},
+            {"label": "Review HTML", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/bookmakers/play-co-za-review.html"}
           ]
         },
         {

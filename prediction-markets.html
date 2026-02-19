@@ -76,6 +76,13 @@
     .fair-dec { font-size: 1.15rem; font-weight: 900; color: #374151; }
     .odds-sub { font-size: 0.7rem; color: #9ca3af; }
 
+    /* Betway odds column */
+    .bw-cell { text-align: center; }
+    .bw-odds { font-size: 1.15rem; font-weight: 900; color: #059669; }
+    .bw-sub { font-size: 0.68rem; color: #9ca3af; margin-top: 1px; }
+    .bw-link { display: inline-block; margin-top: 5px; font-size: 0.72rem; font-weight: 700; color: #2563eb; text-decoration: none; border-bottom: 1px dashed #bfdbfe; }
+    .bw-link:hover { color: #1d4ed8; }
+
     /* Bookmaker CTA */
     .bk-cell { text-align: right; }
     .bk-btn { display: inline-block; background: #2563eb; color: white; padding: 6px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
@@ -112,8 +119,10 @@
     @media (max-width: 640px) {
       .market-table th.hide-mob, .market-table td.hide-mob { display: none; }
       .market-table th.hide-mob-col, .market-table td.hide-mob-col { display: none; }
-      .market-table td { padding: 10px 12px; }
-      .bk-btn-mob { display: inline-block; margin-top: 8px; background: #2563eb; color: white; padding: 6px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+      .market-table td { padding: 10px 10px; }
+      .bk-btn-mob { display: inline-block; margin-top: 6px; background: #2563eb; color: white; padding: 5px 10px; border-radius: 7px; font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+      .bw-cell { min-width: 80px; }
+      .bw-odds { font-size: 1rem; }
     }
   </style>
 </head>
@@ -193,22 +202,28 @@
         const pct = o.pct;
         const fairDec = o.fairDec;
         const barWidth = Math.max(2, Math.min(100, pct));
+        // Betway estimated = fair odds × 0.88 (accounts for ~12% outright market margin)
+        const bwEst = fairDec ? (parseFloat(fairDec) * 0.88).toFixed(2) : null;
+        // Value flag: if fair odds > 1.10, Betway est might still offer value vs other bookies
+        const isValue = fairDec && parseFloat(fairDec) > 2 && o.prob > 0.05;
         return `<tr>
           <td><div class="team-cell"><span class="rank-num">${i+1}</span><span class="team-flag">${o.flag||'🏟️'}</span><span class="team-name">${o.name}</span></div></td>
           <td class="prob-cell">
             <div class="prob-pct">${pct}%</div>
             <div class="prob-bar-wrap"><div class="prob-bar" style="width:${barWidth}%"></div></div>
             <div class="prob-sub">Polymarket consensus</div>
-            <a class="bk-btn-mob" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+            <a class="bk-btn-mob" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Betway est. ${bwEst||'—'} →</a>
           </td>
           <td class="odds-cell hide-mob">
             <div class="fair-dec">${fairDec || '—'}</div>
             <div class="odds-sub">fair decimal</div>
           </td>
-          <td class="value-cell hide-mob">${valueBadge(o.prob)}</td>
-          <td class="bk-cell hide-mob-col">
-            <a class="bk-btn" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Betway →</a>
+          <td class="bw-cell">
+            <div class="bw-odds">${bwEst || '—'}</div>
+            <div class="bw-sub">est. Betway</div>
+            <a class="bw-link" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Verify live →</a>
           </td>
+          <td class="value-cell hide-mob">${valueBadge(o.prob)}</td>
         </tr>`;
       }).join('');
 
@@ -226,14 +241,14 @@
               <th>Team / Country</th>
               <th>Polymarket Probability</th>
               <th class="right hide-mob">Fair Odds</th>
+              <th class="center">Betway Odds</th>
               <th class="center hide-mob">Signal</th>
-              <th class="right">Bet</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
         </table>
         <div style="padding:12px 16px;background:#f8fafc;border-top:1px solid #f3f4f6;font-size:0.75rem;color:#9ca3af;">
-          ℹ️ <em>${ev.desc}</em> · If a bookmaker offers odds <strong>above</strong> the fair decimal, that outcome has positive expected value.
+          ℹ️ <em>${ev.desc}</em> · Betway odds are estimated (Polymarket fair price × 0.88 margin). Always verify the live price before betting.
           <a href="/value-bet-calculator.html" style="color:#2563eb;margin-left:6px;">Calculate EV →</a>
         </div>
       </div>`;

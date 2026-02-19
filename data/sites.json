@@ -370,5 +370,59 @@
       "\"Good for horse racing\"",
       "\"Trusted in SA since 2001\" — Established player"
     ]
+  },
+  {
+    "id": 8,
+    "name": "Play.co.za",
+    "slug": "play-co-za",
+    "logo_bg": "#6B46C1",
+    "url": "https://play.co.za",
+    "ref_url": "https://affiliates.play.co.za/links/?btag=2673740",
+    "rating": 4.2,
+    "welcome_bonus": "100% Match up to R3,000 (300% up to R9,000 across 3 deposits)",
+    "min_deposit": "R5",
+    "payment_methods": [
+      "EFT",
+      "1Voucher",
+      "OTT Voucher",
+      "Bank Transfer"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Basketball"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "2020",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "Modern betting platform with a sleek design and generous welcome bonuses. Play.co.za combines sports betting with live casino games, offering massive payout limits and fast withdrawals.",
+    "pros": [
+      "Generous multi-deposit welcome bonus",
+      "R5 minimum deposit",
+      "Fast withdrawals (12-24 hours)",
+      "Modern, user-friendly interface",
+      "Massive payout limits"
+    ],
+    "cons": [
+      "No live streaming",
+      "No cashout feature",
+      "Customer support response times vary"
+    ],
+    "best_for": [
+      "Bonus hunters",
+      "Casino + sports combo players",
+      "Budget bettors"
+    ],
+    "featured": true,
+    "rank": 4,
+    "reddit_quotes": [
+      "\"Modern design and huge payout limits\"",
+      "\"Play.co.za stands out with its generous bonuses\"",
+      "\"Fast loading and smooth experience\" — Rising star"
+    ]
   }
 ]

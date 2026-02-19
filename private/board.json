@@ -19,7 +19,10 @@
         {
           "title": "Daily Google Analytics report",
           "body": "Every day 06:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "GA Dashboard", "url": "https://analytics.google.com/"}
+          ]
         },
         {
           "title": "Daily Tweet Generator",
@@ -29,7 +32,11 @@
         {
           "title": "BetSorted live odds update (morning)",
           "body": "Every day 06:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Live Odds Page", "url": "https://betsorted.co.za/odds-comparison.html"},
+            {"label": "Script", "url": "file://~/.openclaw/workspace/betsorted/fetch-live-odds.js"}
+          ]
         },
         {
           "title": "Daily tool ideas report",
@@ -44,27 +51,43 @@
         {
           "title": "BetSorted live odds update (evening)",
           "body": "Every day 18:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Live Odds Page", "url": "https://betsorted.co.za/odds-comparison.html"}
+          ]
         },
         {
           "title": "Nightly SEO build (BetSorted priority)",
           "body": "Every day 00:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Blog Index", "url": "https://betsorted.co.za/blog/"},
+            {"label": "Site Root", "url": "https://betsorted.co.za/"}
+          ]
         },
         {
           "title": "BetSorted blog posts (Monday)",
           "body": "Mondays 02:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Blog", "url": "https://betsorted.co.za/blog/"}
+          ]
         },
         {
           "title": "BetSorted blog posts (Wednesday)",
           "body": "Wednesdays 03:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Blog", "url": "https://betsorted.co.za/blog/"}
+          ]
         },
         {
           "title": "BetSorted blog posts (Friday)",
           "body": "Fridays 02:00",
-          "meta": "Cron"
+          "meta": "Cron",
+          "links": [
+            {"label": "Blog", "url": "https://betsorted.co.za/blog/"}
+          ]
         },
         {
           "title": "IndexNow ping (Bing)",
@@ -80,22 +103,39 @@
         {
           "title": "Play.co.za affiliate integration",
           "body": "Added affiliate link (btag=2673740), full review page, updated sites.json + bookmakers.csv + index",
-          "meta": "Live 2026-02-19"
+          "meta": "Live 2026-02-19",
+          "links": [
+            {"label": "Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"},
+            {"label": "Affiliate Link", "url": "https://affiliates.play.co.za/links/?btag=2673740"},
+            {"label": "sites.json", "url": "file://~/.openclaw/workspace/betsorted/data/sites.json"},
+            {"label": "bookmakers.csv", "url": "file://~/.openclaw/workspace/betsorted/data/bookmakers.csv"}
+          ]
         },
         {
           "title": "Phase 1 BetSorted blog batch committed",
           "body": "10 bookmaker reviews, 6 payment method guides, 6 PSL cornerstone pages, glossary",
-          "meta": "Complete"
+          "meta": "Complete",
+          "links": [
+            {"label": "Blog Index", "url": "https://betsorted.co.za/blog/"},
+            {"label": "Bookmakers Index", "url": "https://betsorted.co.za/bookmakers/"}
+          ]
         },
         {
           "title": "Provably Fair Verifier (CCS)",
           "body": "New verifier page + nav link",
-          "meta": "Live"
+          "meta": "Live",
+          "links": [
+            {"label": "Verifier Page", "url": "https://cryptocasinosorted.com/provably-fair-verifier.html"}
+          ]
         },
         {
           "title": "Bing IndexNow setup",
           "body": "Keys deployed + sitemaps pinged",
-          "meta": "Live"
+          "meta": "Live",
+          "links": [
+            {"label": "BetSorted Sitemap", "url": "https://betsorted.co.za/sitemap.xml"},
+            {"label": "CCS Sitemap", "url": "https://cryptocasinosorted.com/sitemap.xml"}
+          ]
         }
       ]
     },

@@ -52,12 +52,21 @@
       data.columns.forEach(col => {
         const el = document.createElement('div');
         el.className = 'col';
-        el.innerHTML = `<h2>${col.title}</h2>` + (col.items.length ? col.items.map(i => `
+        el.innerHTML = `<h2>${col.title}</h2>` + (col.items.length ? col.items.map(i => {
+          let linksHtml = '';
+          if (i.links && i.links.length) {
+            linksHtml = '<div class="meta" style="margin-top:8px;">' + 
+              i.links.map(link => `<a href="${link.url}" target="_blank" style="margin-right:8px;font-size:11px;">📎 ${link.label}</a>`).join(' ') + 
+              '</div>';
+          }
+          return `
           <div class="card">
             <div class="title">${i.title}</div>
             ${i.body ? `<div class="meta">${i.body}</div>` : ''}
             ${i.meta ? `<div class="meta">${i.meta}</div>` : ''}
-          </div>`).join('') : `<div class="empty">No items yet</div>`);
+            ${linksHtml}
+          </div>`;
+        }).join('') : `<div class="empty">No items yet</div>`);
         kb.appendChild(el);
       });
 

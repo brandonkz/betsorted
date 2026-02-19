@@ -2,3 +2,11 @@
 node_modules/
 .env.local
 Documents
+.DS_Store
+scripts/
+templates/
+data/sports.csv
+tweets/
+AFFILIATE-APPLICATIONS.md
+WEEKLY-TWEETS.md
+private/

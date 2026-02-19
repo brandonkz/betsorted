@@ -15,6 +15,9 @@
     .card{background:#0f172a;border:1px solid #1f2937;border-radius:10px;padding:10px;margin:8px 0}
     .card .title{font-weight:600}
     .card .meta{font-size:12px;color:#9ca3af;margin-top:6px}
+    .path-copy{background:#0f172a;border:1px solid #374151;border-radius:6px;padding:6px 10px;font-size:11px;font-family:Monaco,monospace;color:#93c5fd;cursor:pointer;display:inline-block;margin-right:8px;margin-top:4px}
+    .path-copy:hover{background:#1e293b;border-color:#4b5563}
+    .path-copy:active{background:#0f172a}
     .section{margin-top:24px}
     .tweets{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1f2937;border-radius:10px;padding:10px;color:#e5e7eb}
@@ -53,12 +56,14 @@
       // Render quick links
       if (data.quickLinks) {
         const ql = document.getElementById('quickLinks');
-        ql.innerHTML = '<h3 style="margin:0 0 8px;font-size:14px;color:#93c5fd;">📁 Quick Access</h3>' +
+        ql.innerHTML = '<h3 style="margin:0 0 8px;font-size:14px;color:#93c5fd;">📁 Quick Access (click to copy path)</h3>' +
           '<div style="display:flex;flex-wrap:wrap;gap:8px;">' +
-          Object.entries(data.quickLinks).map(([key, url]) => 
-            `<a href="${url}" target="_blank" style="padding:4px 10px;background:#0f172a;border:1px solid #1f2937;border-radius:6px;font-size:12px;text-decoration:none;color:#93c5fd;">${key}</a>`
-          ).join('') +
-          '</div>';
+          Object.entries(data.quickLinks).map(([key, url]) => {
+            const path = url.replace('file://', '');
+            return `<div class="path-copy" onclick="copyPath('${path}', this)" title="Click to copy">${key}</div>`;
+          }).join('') +
+          '</div>' +
+          '<div style="margin-top:8px;font-size:11px;color:#9ca3af;">💡 After copying, press Cmd+Shift+G in Finder and paste</div>';
       }
       
       const kb = document.getElementById('kanban');
@@ -69,8 +74,15 @@
         el.innerHTML = `<h2>${col.title}</h2>` + (col.items.length ? col.items.map(i => {
           let linksHtml = '';
           if (i.links && i.links.length) {
-            linksHtml = '<div class="meta" style="margin-top:8px;">' + 
-              i.links.map(link => `<a href="${link.url}" target="_blank" style="margin-right:8px;font-size:11px;">📎 ${link.label}</a>`).join(' ') + 
+            linksHtml = '<div style="margin-top:8px;">' + 
+              i.links.map(link => {
+                if (link.url.startsWith('file://')) {
+                  const path = link.url.replace('file://', '');
+                  return `<div class="path-copy" onclick="copyPath('${path}', this)" title="Click to copy path">📁 ${link.label}</div>`;
+                } else {
+                  return `<a href="${link.url}" target="_blank" style="margin-right:8px;font-size:11px;color:#93c5fd;">🔗 ${link.label}</a>`;
+                }
+              }).join('') + 
               '</div>';
           }
           return `
@@ -98,6 +110,23 @@
       renderTweets(document.getElementById('tweets-betsorted'), data.tweets.betsorted);
       renderTweets(document.getElementById('tweets-ccs'), data.tweets.cryptocasinosorted);
     }
+
+    function copyPath(path, element) {
+      navigator.clipboard.writeText(path).then(() => {
+        const original = element.innerHTML;
+        element.innerHTML = '✓ Copied!';
+        element.style.background = '#065f46';
+        element.style.borderColor = '#059669';
+        setTimeout(() => {
+          element.innerHTML = original;
+          element.style.background = '#0f172a';
+          element.style.borderColor = '#374151';
+        }, 1500);
+      }).catch(err => {
+        alert('Copy failed. Path: ' + path);
+      });
+    }
+
     load();
   </script>
 </body>

@@ -8,7 +8,8 @@
     "blog": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/blog/",
     "tweets": "file:///Users/brandonkatz/Documents/BetSorted/tweets/",
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
-    "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/"
+    "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
+    "affiliate_tracker": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/affiliate-tracker.html"
   },
   "personal": {
     "title": "Brandon — Personal Board",
@@ -25,6 +26,15 @@
               {"label": "Tasks docx", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/brandon-tasks.docx"}
             ]
           },
+          {
+            "title": "Affiliate tracker",
+            "body": "Signed‑up affiliates + links",
+            "meta": "Private page",
+            "links": [
+              {"label": "Open tracker", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/private/affiliate-tracker.html"}
+            ]
+          },
+
           {
             "title": "Review Play.co.za page live",
             "body": "Quick sanity check on layout + links",

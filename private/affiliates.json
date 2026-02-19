@@ -1,0 +1,61 @@
+{
+  "updated": "2026-02-19",
+  "affiliates": [
+    {
+      "name": "Play.co.za",
+      "status": "Signed up",
+      "program_url": "https://affiliates.play.co.za/",
+      "affiliate_link": "https://affiliates.play.co.za/links/?btag=2673740",
+      "notes": "Live on site"
+    },
+    {
+      "name": "Betway",
+      "status": "Planned",
+      "program_url": "https://www.betwaypartners.com/",
+      "affiliate_link": "",
+      "notes": "Apply ASAP"
+    },
+    {
+      "name": "Hollywoodbets",
+      "status": "Planned",
+      "program_url": "https://partners.hollywoodbets.net/",
+      "affiliate_link": "",
+      "notes": "High priority"
+    },
+    {
+      "name": "Sportingbet",
+      "status": "Planned",
+      "program_url": "https://www.sportingbet.co.za/en/za/contact-us",
+      "affiliate_link": "",
+      "notes": "Contact B2B team"
+    },
+    {
+      "name": "Supabets",
+      "status": "Planned",
+      "program_url": "https://www.supabets.co.za/",
+      "affiliate_link": "",
+      "notes": "Direct contact"
+    },
+    {
+      "name": "World Sports Betting",
+      "status": "Planned",
+      "program_url": "https://www.worldsportsbetting.co.za/",
+      "affiliate_link": "",
+      "notes": "Later stage"
+    },
+    {
+      "name": "Playabets",
+      "status": "Planned",
+      "program_url": "https://www.playabets.co.za/",
+      "affiliate_link": "",
+      "notes": "Low priority"
+    },
+    {
+      "name": "Sunbet",
+      "status": "Planned",
+      "program_url": "https://sunbet.co.za/",
+      "affiliate_link": "",
+      "notes": "Corporate approach"
+    }
+  ]
+}

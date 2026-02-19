@@ -39,11 +39,31 @@ This is where **content planning and strategy** files are saved:
 ## 🔗 Kanban Board Quick Access
 
 The updated kanban board now includes:
-- **Quick Access bar** at the top with one-click folder access
+- **Quick Access bar** at the top - click any button to copy the folder path
 - **File links** on every card showing where content is saved
-- **Both web links** (live pages) and **local file links** (your computer)
+- **Copy-to-clipboard** for all local paths (📁 icon)
+- **Clickable links** for web pages (🔗 icon)
 
-**Open Kanban:** `/Users/brandonkatz/.openclaw/workspace/betsorted/private/kanban.html`
+**How to use:**
+1. Open kanban: `/Users/brandonkatz/.openclaw/workspace/betsorted/private/kanban.html`
+2. Click any 📁 folder button to copy its path
+3. Open Finder and press `Cmd+Shift+G`
+4. Paste the path and press Enter
+5. The folder opens instantly!
+
+**Why not direct links?** Browsers block `file://` links for security. Copy-paste is the workaround.
+
+### Quick Visual Guide:
+```
+Kanban Board           Your Action              Result
+───────────────────────────────────────────────────────
+[📁 workspace] click  →  Path copied!         →  ✓ Copied!
+                         (green feedback)
+                              ↓
+Open Finder              Press Cmd+Shift+G     →  "Go to Folder" dialog
+                              ↓
+Paste (Cmd+V)            Press Enter           →  Folder opens!
+```
 
 ---
 

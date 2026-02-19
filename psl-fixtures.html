@@ -163,13 +163,25 @@
           thumb: e.strThumb || ''
         }));
 
-        // Find current/next round
+        // Sort all fixtures chronologically first
+        allFixtures.sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time));
+
+        // Find current/next round — use the earliest round that has fixtures in the next 60 days
         const today = new Date();
-        const upcoming = allFixtures.filter(f => new Date(f.date + 'T' + f.time) >= today);
+        const in60 = new Date(today.getTime() + 60 * 24 * 60 * 60 * 1000);
+        const upcoming = allFixtures.filter(f => {
+          const d = new Date(f.date + 'T' + f.time);
+          return d >= today && d <= in60;
+        });
         if (upcoming.length > 0) {
-          currentRound = upcoming[0].round;
+          // Find the most common round among upcoming fixtures (handles postponed outliers)
+          const roundCounts = {};
+          upcoming.forEach(f => { roundCounts[f.round] = (roundCounts[f.round] || 0) + 1; });
+          currentRound = parseInt(Object.entries(roundCounts).sort((a,b) => b[1]-a[1] || a[0]-b[0])[0][0]);
         } else {
-          currentRound = Math.max(...allFixtures.map(f => f.round));
+          // No upcoming — show the most recently completed round
+          const past = allFixtures.filter(f => new Date(f.date + 'T' + f.time) < today);
+          currentRound = past.length > 0 ? past[past.length - 1].round : 1;
         }
         maxRound = Math.max(...allFixtures.map(f => f.round));
 

@@ -182,6 +182,7 @@
 
     <div class="refresh-bar">
       <span class="updated" id="updatedAt">Loading...</span>
+      <span class="updated" id="refreshInterval" style="margin-left:10px;">Auto-refresh: —</span>
       <button class="refresh-btn" onclick="loadMatches()">↻ Refresh</button>
     </div>
 
@@ -370,6 +371,7 @@
         // Auto-refresh: always poll (faster when live)
         clearTimeout(refreshTimer);
         const interval = liveCount > 0 ? 30000 : 120000; // 30s live, 2m otherwise
+        document.getElementById('refreshInterval').textContent = `Auto-refresh: ${interval === 30000 ? '30s' : '2m'}`;
         refreshTimer = setTimeout(loadMatches, interval);
       } catch(e) {
         document.getElementById('matchList').innerHTML = `<div style="text-align:center;padding:32px;color:#9ca3af;">Could not load matches. <button onclick="loadMatches()" style="color:#2563eb;background:none;border:none;cursor:pointer;font-weight:600;">Try again</button></div>`;

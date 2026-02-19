@@ -4,41 +4,108 @@
     {
       "id": "drafting",
       "title": "Drafting",
-      "items": []
+      "items": [
+        {
+          "title": "Fixtures page (manual weekly)",
+          "body": "PSL + Rugby + SA20 + EPL + UFC/boxing — build when you confirm",
+          "meta": "Pending"
+        }
+      ]
     },
     {
       "id": "scheduled",
       "title": "Scheduled",
       "items": [
         {
-          "title": "BetSorted: Post 3 tweets today",
-          "body": "Morning, midday, evening. Focus on PSL + calculators.",
-          "meta": "Today"
+          "title": "Daily Google Analytics report",
+          "body": "Every day 06:00",
+          "meta": "Cron"
         },
         {
-          "title": "CryptoCasinoSorted: 3 tweets + 1 reply",
-          "body": "Deposit tracker + no-KYC + withdrawals angle.",
-          "meta": "Today"
+          "title": "Daily Tweet Generator",
+          "body": "Every day 06:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "BetSorted live odds update (morning)",
+          "body": "Every day 06:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "Daily tool ideas report",
+          "body": "Every day 07:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "Daily affiliate signup reminder",
+          "body": "Every day 09:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "BetSorted live odds update (evening)",
+          "body": "Every day 18:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "Nightly SEO build (BetSorted priority)",
+          "body": "Every day 00:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "BetSorted blog posts (Monday)",
+          "body": "Mondays 02:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "BetSorted blog posts (Wednesday)",
+          "body": "Wednesdays 03:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "BetSorted blog posts (Friday)",
+          "body": "Fridays 02:00",
+          "meta": "Cron"
+        },
+        {
+          "title": "IndexNow ping (Bing)",
+          "body": "Every 6 hours",
+          "meta": "Cron"
         }
       ]
     },
     {
       "id": "done",
       "title": "Done",
-      "items": []
+      "items": [
+        {
+          "title": "Phase 1 BetSorted blog batch committed",
+          "body": "10 bookmaker reviews, 6 payment method guides, 6 PSL cornerstone pages, glossary",
+          "meta": "Complete"
+        },
+        {
+          "title": "Provably Fair Verifier (CCS)",
+          "body": "New verifier page + nav link",
+          "meta": "Live"
+        },
+        {
+          "title": "Bing IndexNow setup",
+          "body": "Keys deployed + sitemaps pinged",
+          "meta": "Live"
+        }
+      ]
     },
     {
       "id": "ideas",
       "title": "Ideas",
       "items": [
         {
-          "title": "BetSorted: PSL weekend roundup",
-          "body": "PSL fixtures, odds swings, top 3 value picks",
+          "title": "VIP Progress & Rakeback Calculator",
+          "body": "Top tool idea for CryptoCasinoSorted",
           "meta": "Idea"
         },
         {
-          "title": "CryptoCasinoSorted: Withdrawal speed mini-thread",
-          "body": "Fastest cashouts last 24h + why it matters",
+          "title": "Withdrawal speed tracker",
+          "body": "Community-reported withdrawal times",
           "meta": "Idea"
         }
       ]
@@ -54,7 +121,7 @@
       "6,000+ deposits tracked. The biggest edge in crypto casinos is knowing where withdrawals are actually fast. cryptocasinosorted.com",
       "No‑KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com",
       "If a casino hides its provably‑fair process, that’s a red flag. Compare transparent casinos here: cryptocasinosorted.com",
-      "Reply idea: Big wins are nice, but withdrawal speed is the real flex. We track it at cryptocasinosorted.com" 
+      "Reply idea: Big wins are nice, but withdrawal speed is the real flex. We track it at cryptocasinosorted.com"
     ]
   }
 }

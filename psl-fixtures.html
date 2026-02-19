@@ -128,222 +128,166 @@
   </footer>
 
   <script>
-    const LEAGUE_ID = 4802;
-    const SEASON = '2025-2026';
-    const API_BASE = 'https://www.thesportsdb.com/api/v1/json/3';
+    const ESPN_BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
+    const BK_URL = 'https://sports.betway.co.za/';
 
-    // SA bookmaker links for PSL betting
-    const BK_LINKS = {
-      betway: { name: 'Betway 🇿🇦', url: 'https://sports.betway.co.za/', color: '#1d4ed8' },
-      hollywoodbets: { name: 'Hollywood', url: 'https://www.hollywoodbets.net/', color: '#e11d48' },
-      sportingbet: { name: 'Sportingbet', url: 'https://www.sportingbet.co.za/', color: '#059669' }
-    };
-
-    let allFixtures = [];
-    let currentRound = 1;
-    let maxRound = 30;
-    let activeTeam = 'all';
+    let allFixtures = [], allDates = [], currentDateIdx = 0, activeTeam = 'all';
 
     async function loadFixtures() {
       try {
-        const res = await fetch(`${API_BASE}/eventsseason.php?id=${LEAGUE_ID}&s=${SEASON}`);
-        const data = await res.json();
-        if (!data.events) throw new Error('No fixtures found');
-
-        allFixtures = data.events.map(e => ({
-          id: e.idEvent,
-          home: e.strHomeTeam,
-          away: e.strAwayTeam,
-          date: e.dateEvent,
-          time: e.strTime || '15:00:00',
-          round: parseInt(e.intRound) || 1,
-          homeScore: e.intHomeScore,
-          awayScore: e.intAwayScore,
-          status: e.strStatus || '',
-          thumb: e.strThumb || ''
-        }));
-
-        // Sort all fixtures chronologically first
-        allFixtures.sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time));
-
-        // Find current/next round — use the earliest round that has fixtures in the next 60 days
         const today = new Date();
-        const in60 = new Date(today.getTime() + 60 * 24 * 60 * 60 * 1000);
-        const upcoming = allFixtures.filter(f => {
-          const d = new Date(f.date + 'T' + f.time);
-          return d >= today && d <= in60;
+        const from = new Date(today.getTime() - 14*24*60*60*1000);
+        const to   = new Date(today.getTime() + 60*24*60*60*1000);
+        const fmt  = d => d.toISOString().slice(0,10).replace(/-/g,'');
+        const res  = await fetch(`${ESPN_BASE}/scoreboard?dates=${fmt(from)}-${fmt(to)}&limit=100`);
+        const data = await res.json();
+        if (!data.events?.length) throw new Error('No fixtures');
+
+        allFixtures = data.events.map(e => {
+          const comp = e.competitions[0];
+          const home = comp.competitors.find(t => t.homeAway === 'home') || {};
+          const away = comp.competitors.find(t => t.homeAway === 'away') || {};
+          const st   = comp.status?.type || {};
+          const dt   = new Date(comp.date);
+          return {
+            id: e.id, datetime: dt, date: dt.toISOString().slice(0,10),
+            home: home.team?.displayName || '?', away: away.team?.displayName || '?',
+            homeLogo: home.team?.logo || '', awayLogo: away.team?.logo || '',
+            homeScore: home.score, awayScore: away.score,
+            homeForm: home.form || '', awayForm: away.form || '',
+            homeRecord: home.records?.[0]?.summary || '', awayRecord: away.records?.[0]?.summary || '',
+            venue: comp.venue?.fullName || '',
+            isLive: st.state === 'in', isFinished: st.completed === true,
+            statusText: st.shortDetail || '', round: comp.notes?.[0]?.headline || '',
+          };
         });
-        if (upcoming.length > 0) {
-          // Find the most common round among upcoming fixtures (handles postponed outliers)
-          const roundCounts = {};
-          upcoming.forEach(f => { roundCounts[f.round] = (roundCounts[f.round] || 0) + 1; });
-          currentRound = parseInt(Object.entries(roundCounts).sort((a,b) => b[1]-a[1] || a[0]-b[0])[0][0]);
-        } else {
-          // No upcoming — show the most recently completed round
-          const past = allFixtures.filter(f => new Date(f.date + 'T' + f.time) < today);
-          currentRound = past.length > 0 ? past[past.length - 1].round : 1;
-        }
-        maxRound = Math.max(...allFixtures.map(f => f.round));
 
-        // Stats
+        allFixtures.sort((a,b) => a.datetime - b.datetime);
+        allDates = [...new Set(allFixtures.map(f => f.date))].sort();
+        const todayStr = today.toISOString().slice(0,10);
+        currentDateIdx = allDates.findIndex(d => d >= todayStr);
+        if (currentDateIdx < 0) currentDateIdx = allDates.length - 1;
+
+        const upcoming = allFixtures.filter(f => !f.isFinished && f.datetime >= today);
         document.getElementById('stat-fixtures').textContent = upcoming.length;
-        document.getElementById('stat-round').textContent = 'Wk ' + currentRound;
+        document.getElementById('stat-round').textContent = allDates.length + ' days';
         if (upcoming.length) {
-          const next = upcoming[0];
-          const d = new Date(next.date);
-          document.getElementById('stat-next').textContent = d.toLocaleDateString('en-ZA', { weekday:'short', day:'numeric', month:'short' });
+          const d = upcoming[0].datetime;
+          document.getElementById('stat-next').textContent = d.toLocaleDateString('en-ZA', {weekday:'short',day:'numeric',month:'short'});
         }
-
-        // Updated pill
         const pill = document.getElementById('updated-pill');
-        pill.textContent = '✅ Live PSL data · ' + new Date().toLocaleDateString('en-ZA', { day:'numeric', month:'short', year:'numeric' });
+        pill.textContent = '✅ Live data · ESPN · ' + today.toLocaleDateString('en-ZA', {day:'numeric',month:'short',year:'numeric'});
         pill.style.display = 'inline-block';
 
-        // Build team filter
         buildTeamFilter();
-        renderRound();
-      } catch (err) {
-        document.getElementById('fixturesList').innerHTML = `<div class="error-box">
-          <strong>Could not load live fixtures.</strong><br>
-          Check back soon or <a href="/blog/best-psl-betting-site-2026.html" style="color:#2563eb;">view our PSL betting guide</a> for upcoming fixtures.
-        </div>`;
+        renderDate();
+      } catch(err) {
+        document.getElementById('fixturesList').innerHTML = `<div class="error-box"><strong>Could not load live fixtures.</strong><br><a href="/blog/best-psl-betting-site-2026.html" style="color:#2563eb;">View our PSL betting guide →</a></div>`;
       }
     }
 
     function buildTeamFilter() {
       const teams = [...new Set(allFixtures.flatMap(f => [f.home, f.away]))].sort();
-      const filterDiv = document.getElementById('teamFilter');
-      filterDiv.style.display = 'flex';
-      filterDiv.innerHTML = `<button class="team-chip active" onclick="filterTeam('all', this)">All Teams</button>` +
-        teams.map(t => `<button class="team-chip" onclick="filterTeam('${t}', this)">${t}</button>`).join('');
+      const div = document.getElementById('teamFilter');
+      div.style.display = 'flex';
+      div.innerHTML = `<button class="team-chip active" onclick="filterTeam('all',this)">All Teams</button>` +
+        teams.map(t => `<button class="team-chip" onclick="filterTeam(${JSON.stringify(t)},this)">${t}</button>`).join('');
     }
 
     function filterTeam(team, btn) {
       activeTeam = team;
       document.querySelectorAll('.team-chip').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderRound();
+      renderDate();
     }
 
     function changeRound(dir) {
-      currentRound = Math.max(1, Math.min(maxRound, currentRound + dir));
-      renderRound();
+      currentDateIdx = Math.max(0, Math.min(allDates.length - 1, currentDateIdx + dir));
+      renderDate();
     }
 
-    function renderRound() {
-      document.getElementById('roundLabel').textContent = 'Round ' + currentRound;
-      document.getElementById('prevRound').disabled = currentRound <= 1;
-      document.getElementById('nextRound').disabled = currentRound >= maxRound;
-      document.getElementById('stat-round').textContent = 'Wk ' + currentRound;
+    function formDots(form) {
+      return form.split('').slice(-5).map(r =>
+        `<span style="display:inline-block;width:16px;height:16px;border-radius:50%;font-size:9px;line-height:16px;text-align:center;font-weight:700;background:${r==='W'?'#059669':r==='L'?'#ef4444':'#f59e0b'};color:white;">${r}</span>`
+      ).join('');
+    }
 
-      let fixtures = allFixtures.filter(f => f.round === currentRound);
+    function shortTeam(name) {
+      const m = {'Mamelodi Sundowns':'Sundowns','Orlando Pirates':'Pirates','Kaizer Chiefs':'Chiefs','Stellenbosch':'Stellenbosch','Cape Town City':'CT City','SuperSport United':'SuperSport','AmaZulu':'AmaZulu','TS Galaxy':'Galaxy','Sekhukhune United':'Sekhukhune','Polokwane City':'Polokwane','Chippa United':'Chippa','Golden Arrows':'Arrows','Richards Bay':'Richards Bay','Marumo Gallants':'Gallants','Siwelele':'Siwelele','Magesi FC':'Magesi','Durban City':'Durban','Orbit College':'Orbit'};
+      return m[name] || name.split(' ')[0];
+    }
+
+    function generateOdds(home, away) {
+      const s = {'Mamelodi Sundowns':90,'Orlando Pirates':78,'Kaizer Chiefs':75,'Stellenbosch':70,'Cape Town City':68,'SuperSport United':65,'AmaZulu':62,'TS Galaxy':58,'Sekhukhune United':55,'Polokwane City':52,'Chippa United':48,'Golden Arrows':48,'Richards Bay':45,'Marumo Gallants':45,'Siwelele':42,'Magesi FC':44,'Durban City':44,'Orbit College':40};
+      const hs = (s[home]||55)+5, as = s[away]||55, total = hs+as+30, m = 1.10;
+      return { home:(1/(hs/total*m)).toFixed(2), draw:(1/(30/total*m)).toFixed(2), away:(1/(as/total*m)).toFixed(2) };
+    }
+
+    function renderDate() {
+      if (!allDates.length) return;
+      const dateStr = allDates[currentDateIdx];
+      const d = new Date(dateStr + 'T12:00:00');
+      document.getElementById('roundLabel').textContent = d.toLocaleDateString('en-ZA', {weekday:'short',day:'numeric',month:'long'});
+      document.getElementById('prevRound').disabled = currentDateIdx <= 0;
+      document.getElementById('nextRound').disabled = currentDateIdx >= allDates.length - 1;
+
+      let fixtures = allFixtures.filter(f => f.date === dateStr);
       if (activeTeam !== 'all') fixtures = fixtures.filter(f => f.home === activeTeam || f.away === activeTeam);
 
-      if (!fixtures.length) {
-        document.getElementById('fixturesList').innerHTML = '<div class="loading"><p style="color:#9ca3af;">No fixtures for this round.</p></div>';
-        return;
-      }
+      if (!fixtures.length) { document.getElementById('fixturesList').innerHTML = '<div class="loading"><p style="color:#9ca3af;">No fixtures on this date.</p></div>'; return; }
 
-      fixtures.sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time));
-
-      const now = new Date();
-      let lastDate = '';
-      const html = fixtures.map(f => {
-        const kickoff = new Date(f.date + 'T' + f.time);
-        const isLive = f.status === 'In Progress';
-        const isCompleted = f.homeScore !== null && f.homeScore !== '' && !isLive;
-        const isFuture = kickoff > now && !isCompleted;
-
-        const dateStr = kickoff.toLocaleDateString('en-ZA', { weekday:'long', day:'numeric', month:'long' });
-        const timeStr = kickoff.toLocaleTimeString('en-ZA', { hour:'2-digit', minute:'2-digit' });
-        let dateHeader = '';
-        if (dateStr !== lastDate) { dateHeader = `<div style="font-size:0.8rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.06em;padding:12px 0 4px;">${dateStr}</div>`; lastDate = dateStr; }
-
-        // Generate indicative odds based on team strength
+      document.getElementById('fixturesList').innerHTML = fixtures.map(f => {
         const odds = generateOdds(f.home, f.away);
+        const timeStr = f.datetime.toLocaleTimeString('en-ZA', {hour:'2-digit',minute:'2-digit'});
+        const scoreOrTime = f.isFinished
+          ? `<div class="score">${f.homeScore} - ${f.awayScore}</div><div class="kickoff-date">FT</div>`
+          : f.isLive
+          ? `<div class="score" style="color:#ef4444">${f.homeScore||0} - ${f.awayScore||0}</div><div class="kickoff-date" style="color:#ef4444">${f.statusText}</div>`
+          : `<div class="kickoff">${timeStr}</div><div class="kickoff-date">SA Time</div>`;
 
-        const scoreOrTime = isCompleted
-          ? `<div class="score">${f.homeScore} - ${f.awayScore}</div>`
-          : isLive
-          ? `<div class="score" style="color:#ef4444">${f.homeScore||0} - ${f.awayScore||0}</div><div class="kickoff-date" style="color:#ef4444">LIVE</div>`
-          : `<div class="kickoff">${timeStr}</div>`;
-
-        const oddsSection = isFuture ? `
+        const oddsSection = (!f.isFinished && !f.isLive) ? `
           <div class="odds-row">
-            <a href="${BK_LINKS.betway.url}" target="_blank" rel="nofollow noopener" class="odds-btn home-btn">
-              <div class="o-label">${shortTeam(f.home)}</div>
-              <div class="o-value">${odds.home}</div>
-              <div class="o-bk">Betway 🇿🇦</div>
+            <a href="${BK_URL}" target="_blank" rel="nofollow noopener" class="odds-btn home-btn">
+              <div class="o-label">${shortTeam(f.home)}</div><div class="o-value">${odds.home}</div><div class="o-bk">Betway 🇿🇦</div>
             </a>
-            <a href="${BK_LINKS.betway.url}" target="_blank" rel="nofollow noopener" class="odds-btn draw-btn">
-              <div class="o-label">Draw</div>
-              <div class="o-value">${odds.draw}</div>
-              <div class="o-bk">Betway 🇿🇦</div>
+            <a href="${BK_URL}" target="_blank" rel="nofollow noopener" class="odds-btn draw-btn">
+              <div class="o-label">Draw</div><div class="o-value">${odds.draw}</div><div class="o-bk">Betway 🇿🇦</div>
             </a>
-            <a href="${BK_LINKS.betway.url}" target="_blank" rel="nofollow noopener" class="odds-btn away-btn">
-              <div class="o-label">${shortTeam(f.away)}</div>
-              <div class="o-value">${odds.away}</div>
-              <div class="o-bk">Betway 🇿🇦</div>
+            <a href="${BK_URL}" target="_blank" rel="nofollow noopener" class="odds-btn away-btn">
+              <div class="o-label">${shortTeam(f.away)}</div><div class="o-value">${odds.away}</div><div class="o-bk">Betway 🇿🇦</div>
             </a>
           </div>
-          <div style="text-align:center;margin-top:8px;font-size:0.75rem;color:#9ca3af;">Indicative odds · <a href="/best-odds-finder.html" style="color:#2563eb;">Compare all bookmakers →</a></div>
-        ` : isCompleted ? `<div class="no-odds">Final result · <a href="/blog/best-psl-betting-site-2026.html" style="color:#2563eb;">PSL Betting Guide →</a></div>` : '';
+          <div style="text-align:center;margin-top:8px;font-size:0.75rem;color:#9ca3af;">Indicative odds · <a href="/best-odds-finder.html" style="color:#2563eb;">Compare all bookmakers →</a></div>`
+        : `<div class="no-odds">Final result · <a href="/blog/best-psl-betting-site-2026.html" style="color:#2563eb;">PSL Betting Guide →</a></div>`;
 
-        return `${dateHeader}<div class="fixture-card ${isLive?'live':''} ${isCompleted?'completed':''}">
+        const formSection = (f.homeForm || f.awayForm) ? `
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid #f3f4f6;">
+            <div style="text-align:right;font-size:0.75rem;color:#6b7280;">Form <span style="display:inline-flex;gap:2px;vertical-align:middle;">${formDots(f.homeForm)}</span></div>
+            <div style="text-align:left;font-size:0.75rem;color:#6b7280;"><span style="display:inline-flex;gap:2px;vertical-align:middle;">${formDots(f.awayForm)}</span> Form</div>
+          </div>` : '';
+
+        return `<div class="fixture-card ${f.isLive?'live':''} ${f.isFinished?'completed':''}">
           <div class="fixture-top">
             <div class="fixture-meta">
-              <span class="round-badge">Round ${f.round}</span>
-              ${isLive ? '<span class="live-badge">● LIVE</span>' : ''}
+              ${f.round ? `<span class="round-badge">${f.round}</span>` : ''}
+              ${f.isLive ? '<span class="live-badge">● LIVE</span>' : ''}
+              ${f.venue ? `<span>${f.venue}</span>` : ''}
             </div>
             <div style="font-size:0.75rem;color:#9ca3af;">PSL 2025/26</div>
           </div>
           <div class="fixture-teams">
-            <div class="team home">${f.home}</div>
-            <div class="score-or-time">${scoreOrTime}<div class="kickoff-date">${isCompleted||isLive?'':f.date}</div></div>
-            <div class="team away">${f.away}</div>
+            <div class="team home">${f.homeLogo ? `<img src="${f.homeLogo}" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">` : ''}${f.home}</div>
+            <div class="score-or-time">${scoreOrTime}</div>
+            <div class="team away">${f.away}${f.awayLogo ? `<img src="${f.awayLogo}" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-left:6px;" alt="">` : ''}</div>
           </div>
+          ${formSection}
           ${oddsSection}
         </div>`;
       }).join('');
-
-      document.getElementById('fixturesList').innerHTML = html;
-    }
-
-    function shortTeam(name) {
-      const shorts = {
-        'Mamelodi Sundowns': 'Sundowns', 'Orlando Pirates': 'Pirates',
-        'Kaizer Chiefs': 'Chiefs', 'Stellenbosch FC': 'Stellenbosch',
-        'Cape Town City': 'CT City', 'SuperSport United': 'SuperSport',
-        'AmaZulu': 'AmaZulu', 'TS Galaxy': 'Galaxy',
-        'Sekhukhune United': 'Sekhukhune', 'Polokwane City': 'Polokwane',
-        'Chippa United': 'Chippa', 'Golden Arrows': 'Arrows',
-        'Richards Bay': 'Richards Bay', 'Marumo Gallants': 'Gallants',
-      };
-      return shorts[name] || name.split(' ')[0];
-    }
-
-    // Generate indicative odds based on rough team strengths
-    function generateOdds(home, away) {
-      const strength = {
-        'Mamelodi Sundowns': 90, 'Orlando Pirates': 78, 'Kaizer Chiefs': 75,
-        'Stellenbosch FC': 70, 'Cape Town City': 68, 'SuperSport United': 65,
-        'AmaZulu': 62, 'TS Galaxy': 58, 'Sekhukhune United': 55,
-        'Polokwane City': 52, 'Chippa United': 48, 'Golden Arrows': 48,
-        'Richards Bay': 45, 'Marumo Gallants': 45, 'Siwelele': 42,
-        'Magesi': 42, 'Durban City': 44, 'Orbit College': 40,
-      };
-      const hs = (strength[home] || 55) + 5; // home advantage
-      const as = strength[away] || 55;
-      const total = hs + as + 30;
-      const ph = hs / total;
-      const pa = as / total;
-      const pd = 30 / total;
-      const margin = 1.10;
-      const toOdds = p => Math.round((1 / (p * margin)) * 100) / 100;
-      return { home: toOdds(ph).toFixed(2), draw: toOdds(pd).toFixed(2), away: toOdds(pa).toFixed(2) };
     }
 
     loadFixtures();
+  </script>
   </script>
 </body>
 </html>

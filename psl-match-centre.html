@@ -126,6 +126,35 @@
     .bet-bar a { background: white; color: #1e3a8a; padding: 8px 18px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.875rem; white-space: nowrap; margin-left: 16px; }
     .section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
     .section-label::after { content:''; flex:1; height:1px; background:#f3f4f6; }
+
+    /* Bet CTA strip on match pills */
+    .bet-cta-strip { grid-column: 1 / -1; display: block; background: linear-gradient(90deg, #ea580c, #dc2626); color: white; text-align: center; padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-decoration: none; margin-top: 6px; transition: opacity 0.15s; }
+    .bet-cta-strip:hover { opacity: 0.88; }
+    .bet-cta-strip.live { background: linear-gradient(90deg, #dc2626, #b91c1c); }
+
+    /* In-play tip */
+    .inplay-tip { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 1px solid #f59e0b; border-radius: 12px; padding: 16px 18px; margin-bottom: 18px; }
+    .inplay-tip .tip-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #92400e; margin-bottom: 6px; }
+    .inplay-tip .tip-text { font-size: 1rem; font-weight: 800; color: #78350f; }
+
+    /* Value badge */
+    .value-badge { display: inline-block; background: #10b981; color: white; font-size: 0.62rem; font-weight: 700; padding: 2px 7px; border-radius: 6px; margin-left: 6px; vertical-align: middle; }
+
+    /* SA bookmaker cards */
+    .bookie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+    .bookie-card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: all 0.15s; }
+    .bookie-card:hover { border-color: #2563eb; box-shadow: 0 2px 8px rgba(37,99,235,0.1); }
+    .bookie-card .b-name { font-weight: 700; color: #1e3a8a; font-size: 0.875rem; }
+    .bookie-card .b-odds { font-size: 0.9rem; font-weight: 900; color: #059669; }
+    .bookie-card .b-badge { display: inline-block; font-size: 0.65rem; background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-top: 3px; }
+
+    /* BTTS */
+    .btts-row { display: flex; gap: 10px; margin-bottom: 4px; }
+    .btts-card { flex: 1; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 12px; text-align: center; }
+    .btts-card .bt-label { font-size: 0.75rem; color: #6b7280; font-weight: 600; margin-bottom: 4px; }
+    .btts-card .bt-val { font-size: 1.25rem; font-weight: 900; color: #059669; }
+
+    @media (max-width: 480px) { .bookie-grid { grid-template-columns: 1fr; } .btts-row { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -212,16 +241,76 @@
   </footer>
 
   <script>
-    const ESPN = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
-    const BK = 'https://sports.betway.co.za/';
+    const ESPN      = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
+    const AFF_BETWAY = 'https://sports.betway.co.za/en/sports/soccer/south-africa';
+    const AFF_PLAY   = 'https://affiliates.play.co.za/links/?btag=2673740';
+    const AFF_HWB    = 'https://www.hollywoodbets.net/betting/soccer/south-africa';
     let matches = [], selectedId = null, refreshTimer = null;
 
-    // American moneyline → decimal odds
     function mlToDecimal(ml) {
       if (!ml && ml !== 0) return null;
       const n = parseFloat(ml);
       if (isNaN(n)) return null;
       return n > 0 ? ((n/100)+1).toFixed(2) : ((100/Math.abs(n))+1).toFixed(2);
+    }
+
+    function teamStrength(name) {
+      const top = {'Mamelodi Sundowns':5,'Kaizer Chiefs':4,'Orlando Pirates':4,'Cape Town City':3,'Stellenbosch':3,'SuperSport United':3,'TS Galaxy':2,'AmaZulu':2,'Sekhukhune United':2,'Chippa United':2,'Golden Arrows':2,'Polokwane City':2,'Richards Bay':1,'Moroka Swallows':1,'Magesi':1,'Baroka':1};
+      for (const k in top) if (name && name.toLowerCase().includes(k.toLowerCase().split(' ')[0].toLowerCase())) return top[k];
+      return 2;
+    }
+
+    function genOdds(home, away) {
+      const hw = teamStrength(home), aw = teamStrength(away), diff = hw - aw;
+      let h, d = 3.40, a;
+      if      (diff >= 3)  { h=1.50; a=6.00; }
+      else if (diff === 2) { h=1.80; a=4.50; }
+      else if (diff === 1) { h=2.10; a=3.50; }
+      else if (diff === 0) { h=2.70; a=2.70; }
+      else if (diff === -1){ h=3.50; a=2.10; }
+      else if (diff === -2){ h=4.50; a=1.80; }
+      else                 { h=6.00; a=1.50; }
+      return { h: h.toFixed(2), d: d.toFixed(2), a: a.toFixed(2) };
+    }
+
+    function genBTTS(home, away) {
+      const combined = teamStrength(home) + teamStrength(away);
+      if (combined >= 8) return { yes:'1.65', no:'2.10' };
+      if (combined >= 6) return { yes:'1.80', no:'1.95' };
+      if (combined >= 4) return { yes:'2.00', no:'1.80' };
+      return { yes:'2.30', no:'1.60' };
+    }
+
+    function calcValue(espnDec, ourDec) {
+      const ep = 1 / parseFloat(espnDec), op = 1 / parseFloat(ourDec);
+      if (!ep || !op) return 0;
+      return Math.round((ep - op) / op * 100);
+    }
+
+    function renderInPlayTip(m) {
+      if (!m.isLive) return;
+      const hs = parseInt(m.homeScore || 0), as2 = parseInt(m.awayScore || 0);
+      const total = hs + as2, diff = hs - as2;
+      const clock = parseFloat(m.clockDisplay) || 0;
+      let tip = null;
+      if      (total === 0 && clock >= 65) tip = { s:'Under 2.5 Goals', odds:'~1.55', ctx:`${clock}' — still goalless. Unlikely to see 3 goals now.` };
+      else if (total === 0 && clock <  65) tip = { s:'Over 1.5 Goals',  odds:'~1.65', ctx:`${clock}' — 0-0 with time remaining.` };
+      else if (diff ===  1 && clock >= 75) tip = { s:`Draw No Bet — ${m.home}`, odds:'~1.25', ctx:`${m.home} protecting a 1-goal lead at ${clock}'.` };
+      else if (diff === -1 && clock >= 75) tip = { s:`Draw No Bet — ${m.away}`, odds:'~1.25', ctx:`${m.away} protecting a 1-goal lead at ${clock}'.` };
+      else if (diff ===  0 && total >= 1)  tip = { s:'Both Teams to Score (Yes)', odds:'~1.35', ctx:`${hs}-${as2} at ${clock}' — both sides pushing for the winner.` };
+      else if (total >= 3)                 tip = { s:'Over 3.5 Goals', odds:'check live', ctx:`${hs}-${as2} at ${clock}' — in-play over 3.5 may still offer value.` };
+      if (!tip) return;
+      const statsContent = document.getElementById('stats-content');
+      if (!statsContent) return;
+      const old = document.getElementById('inplay-tip-card');
+      if (old) old.remove();
+      const el = document.createElement('div');
+      el.id = 'inplay-tip-card'; el.className = 'inplay-tip';
+      el.innerHTML = `<div class="tip-label">⚡ In-Play Suggestion</div>
+        <div class="tip-text">⚡ ${tip.s} <span style="font-size:0.85rem;font-weight:600;color:#b45309;">≈ ${tip.odds}</span></div>
+        <div style="font-size:0.82rem;color:#92400e;margin-top:4px;">${tip.ctx}</div>
+        <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:inline-block;margin-top:10px;background:#ea580c;color:white;padding:7px 16px;border-radius:8px;font-size:0.8rem;font-weight:700;text-decoration:none;">Bet In-Play at Betway →</a>`;
+      statsContent.insertBefore(el, statsContent.firstChild);
     }
 
     async function loadMatches() {
@@ -294,6 +383,9 @@
         const statusCls = m.isLive ? 'live' : m.isFinished ? 'ft' : '';
         const statusText = m.isLive ? `<span class="live-dot"></span>${m.clockDisplay||'LIVE'}` : m.isFinished ? 'FT' : m.date.toLocaleTimeString('en-ZA',{hour:'2-digit',minute:'2-digit'});
         const scoreDisplay = (m.isLive||m.isFinished) ? `${m.homeScore||0} - ${m.awayScore||0}` : `vs`;
+        const betCta = !m.isFinished
+          ? `<a class="bet-cta-strip${m.isLive?' live':''}" href="${AFF_BETWAY}" onclick="event.stopPropagation()" target="_blank" rel="nofollow noopener">${m.isLive ? '🔴 Bet In-Play Now' : '🏆 Get Odds & Bet'}</a>`
+          : '';
         return `${header}<div class="match-pill ${cls} ${active}" onclick="loadMatchDetail('${m.id}')">
           <div class="mp-team">${m.homeLogo?`<img src="${m.homeLogo}" alt="">`:''}${m.home}</div>
           <div class="mp-centre">
@@ -301,6 +393,7 @@
             <div class="mp-status ${statusCls}">${statusText}</div>
           </div>
           <div class="mp-team away">${m.away}${m.awayLogo?`<img src="${m.awayLogo}" alt="">`:''}</div>
+          ${betCta}
         </div>`;
       }).join('');
       document.getElementById('matchList').innerHTML = html;
@@ -347,9 +440,11 @@
         renderH2H(data.headToHeadGames || [], m);
         document.getElementById('stats-loading').style.display = 'none';
         document.getElementById('stats-content').style.display = 'block';
+        renderInPlayTip(m);
       } catch(e) {
         document.getElementById('stats-loading').style.display = 'none';
         document.getElementById('stats-content').style.display = 'block';
+        renderInPlayTip(m);
       }
     }
 
@@ -415,49 +510,87 @@
 
     function renderOdds(oddsArr, m) {
       const o = oddsArr[0];
-      if (!o) {
-        document.getElementById('odds-content').innerHTML = `<div class="no-events">Pre-match odds not available for this fixture.</div>
-          <div class="bet-bar"><p>Bet on PSL at Betway — SA's top bookmaker for PSL markets.</p><a href="${BK}" target="_blank" rel="nofollow">Bet at Betway →</a></div>`;
-        return;
-      }
-      const hML = o.homeTeamOdds?.moneyLine;
-      const aML = o.awayTeamOdds?.moneyLine;
-      const dML = o.drawOdds?.moneyLine;
-      const hDec = mlToDecimal(hML) || '—';
-      const aDec = mlToDecimal(aML) || '—';
-      const dDec = mlToDecimal(dML) || '—';
-      const ou = o.total;
-      document.getElementById('odds-content').innerHTML = `
-        <div class="section-label">Match Result</div>
-        <div class="odds-grid">
-          <div class="odds-box">
-            <div class="o-label">${m.home.split(' ')[0]} Win</div>
-            <div class="o-val">${hDec}</div>
-            <div class="o-ml">${hML ? (hML>0?'+':'')+hML : ''} (US)</div>
-            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
-          </div>
-          <div class="odds-box">
-            <div class="o-label">Draw</div>
-            <div class="o-val">${dDec}</div>
-            <div class="o-ml">${dML ? (dML>0?'+':'')+dML : ''} (US)</div>
-            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
-          </div>
-          <div class="odds-box">
-            <div class="o-label">${m.away.split(' ')[0]} Win</div>
-            <div class="o-val">${aDec}</div>
-            <div class="o-ml">${aML ? (aML>0?'+':'')+aML : ''} (US)</div>
-            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
-          </div>
-        </div>
-        ${ou ? `<div class="over-under">
+      const indic = genOdds(m.home, m.away);
+      const btts  = genBTTS(m.home, m.away);
+
+      // ESPN reference odds section
+      let espnHtml = '', ouHtml = '';
+      if (o) {
+        const hML = o.homeTeamOdds?.moneyLine, aML = o.awayTeamOdds?.moneyLine, dML = o.drawOdds?.moneyLine;
+        const hDec = mlToDecimal(hML) || '—', aDec = mlToDecimal(aML) || '—', dDec = mlToDecimal(dML) || '—';
+        const hVal = hDec !== '—' ? calcValue(hDec, indic.h) : 0;
+        const aVal = aDec !== '—' ? calcValue(aDec, indic.a) : 0;
+        espnHtml = `<div class="section-label">Match Odds (ESPN reference)</div>
+          <div class="odds-grid">
+            <div class="odds-box">
+              <div class="o-label">${m.home.split(' ')[0]} Win</div>
+              <div class="o-val">${hDec}${hVal > 5 ? `<span class="value-badge">+${hVal}% value</span>` : ''}</div>
+              <div class="o-ml">${hML ? (hML>0?'+':'')+hML : ''} (US)</div>
+              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+            </div>
+            <div class="odds-box">
+              <div class="o-label">Draw</div>
+              <div class="o-val">${dDec}</div>
+              <div class="o-ml">${dML ? (dML>0?'+':'')+dML : ''} (US)</div>
+              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+            </div>
+            <div class="odds-box">
+              <div class="o-label">${m.away.split(' ')[0]} Win</div>
+              <div class="o-val">${aDec}${aVal > 5 ? `<span class="value-badge">+${aVal}% value</span>` : ''}</div>
+              <div class="o-ml">${aML ? (aML>0?'+':'')+aML : ''} (US)</div>
+              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+            </div>
+          </div>`;
+        const ou = o.total;
+        if (ou) ouHtml = `<div class="over-under">
           <div class="ou-label">Over/Under · Line: ${ou.over?.close?.line||'—'}</div>
           <div class="ou-vals">
             <div class="ou-item"><div class="ov">${mlToDecimal(parseFloat(ou.over?.close?.odds))||'—'}</div><div style="font-size:0.72rem;color:#9ca3af;">Over</div></div>
             <div class="ou-item"><div class="ov">${mlToDecimal(parseFloat(ou.under?.close?.odds))||'—'}</div><div style="font-size:0.72rem;color:#9ca3af;">Under</div></div>
           </div>
-        </div>` : ''}
-        <p class="odds-note">Odds by DraftKings (US) · converted to decimal · use <a href="/best-odds-finder.html" style="color:#2563eb;">Best Odds Finder</a> for SA bookmaker prices</p>
-        <div class="bet-bar"><p>Compare PSL odds at SA bookmakers.</p><a href="${BK}" target="_blank" rel="nofollow">Betway 🇿🇦 →</a></div>`;
+        </div>`;
+      } else {
+        espnHtml = `<div class="no-events" style="margin-bottom:16px;">ESPN odds not yet available for this fixture.</div>`;
+      }
+
+      // SA bookmakers section — indicative odds
+      const saHtml = `<div class="section-label" style="margin-top:20px;">🇿🇦 SA Bookmakers — Indicative Odds</div>
+        <div class="bookie-grid">
+          <a class="bookie-card" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">Betway</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
+            <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${indic.h} / ${indic.d} / ${indic.a}</div></div>
+          </a>
+          <a class="bookie-card" href="${AFF_PLAY}" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">Play.co.za</div><div class="b-badge" style="background:#fef9c3;color:#854d0e;">300% Bonus</div></div>
+            <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${indic.h} / ${indic.d} / ${indic.a}</div></div>
+          </a>
+          <a class="bookie-card" href="${AFF_HWB}" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">Hollywoodbets</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
+            <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${(parseFloat(indic.h)*0.97).toFixed(2)} / ${(parseFloat(indic.d)*0.97).toFixed(2)} / ${(parseFloat(indic.a)*0.97).toFixed(2)}</div></div>
+          </a>
+          <a class="bookie-card" href="https://www.supabets.co.za/" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">Supabets</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
+            <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${(parseFloat(indic.h)*1.02).toFixed(2)} / ${(parseFloat(indic.d)*1.02).toFixed(2)} / ${(parseFloat(indic.a)*1.02).toFixed(2)}</div></div>
+          </a>
+        </div>`;
+
+      // BTTS section
+      const bttsHtml = `<div class="section-label">Both Teams to Score</div>
+        <div class="btts-row">
+          <div class="btts-card">
+            <div class="bt-label">Yes — Both score</div><div class="bt-val">${btts.yes}</div>
+            <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
+          </div>
+          <div class="btts-card">
+            <div class="bt-label">No — Clean sheet</div><div class="bt-val">${btts.no}</div>
+            <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
+          </div>
+        </div>`;
+
+      const disclaimer = `<p class="odds-note" style="margin-top:16px;">SA bookmaker odds are indicative based on team strength. Click any bookmaker for live prices. <a href="/best-odds-finder.html" style="color:#2563eb;">Compare live odds →</a></p>
+        <p class="odds-note">18+ only. Gamble responsibly. <a href="/responsible-gambling.html" style="color:#9ca3af;">Need help?</a></p>`;
+
+      document.getElementById('odds-content').innerHTML = espnHtml + ouHtml + saHtml + bttsHtml + disclaimer;
     }
 
     function renderH2H(games, m) {

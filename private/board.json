@@ -10,7 +10,8 @@
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
     "affiliate_tracker": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html",
-    "task_board": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html"
+    "task_board": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html",
+    "mission_control": "http://localhost:8765/Documents/OpenClaw/BetSorted/mission-control.html"
   },
   "ops": {
     "recurring": [

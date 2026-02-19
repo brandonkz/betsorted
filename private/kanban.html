@@ -39,6 +39,14 @@
     <div class="grid" id="personal-kanban"></div>
   </div>
 
+  <div class="section" id="ops-section" style="display:none;">
+    <h2 style="color:#93c5fd;margin:0 0 8px;">Ops — Recurring + Last Night</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="col" id="recurring-list"></div>
+      <div class="col" id="lastnight-list"></div>
+    </div>
+  </div>
+
   <div class="grid" id="kanban"></div>
 
   <div class="section">
@@ -142,6 +150,28 @@
           }).join('') : `<div class="empty">No items yet</div>`);
           pk.appendChild(el);
         });
+      }
+
+      // Render ops section
+      if (data.ops) {
+        const opsSection = document.getElementById('ops-section');
+        const recurring = document.getElementById('recurring-list');
+        const lastnight = document.getElementById('lastnight-list');
+        opsSection.style.display = 'block';
+
+        recurring.innerHTML = `<h2>Recurring</h2>` + (data.ops.recurring?.length ? data.ops.recurring.map(r => `
+          <div class="card">
+            <div class="title">${r.name}</div>
+            <div class="meta">${r.schedule}</div>
+            <div class="meta">${r.source}</div>
+          </div>`).join('') : `<div class="empty">No items yet</div>`);
+
+        lastnight.innerHTML = `<h2>Last Night</h2>` + (data.ops.lastNight?.length ? data.ops.lastNight.map(r => `
+          <div class="card">
+            <div class="title">${r.name}</div>
+            <div class="meta">${r.time}</div>
+            <div class="meta">Status: ${r.status}</div>
+          </div>`).join('') : `<div class="empty">No items yet</div>`);
       }
 
       function renderTweets(container, items){

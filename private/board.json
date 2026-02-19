@@ -11,6 +11,27 @@
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
     "affiliate_tracker": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
   },
+  "ops": {
+    "recurring": [
+      {"name": "Live odds update (morning)", "schedule": "Daily 06:00", "source": "Odds API → fetch-live-odds.js"},
+      {"name": "Live odds update (evening)", "schedule": "Daily 18:00", "source": "Odds API → fetch-live-odds.js"},
+      {"name": "Daily GA report", "schedule": "Daily 06:00", "source": "Google Analytics"},
+      {"name": "Daily tweet generator", "schedule": "Daily 06:00", "source": "Content automation"},
+      {"name": "Daily Reddit scan", "schedule": "Daily 02:00", "source": "Reddit scan"},
+      {"name": "Daily tool ideas", "schedule": "Daily 07:00", "source": "Crypto tool ideas"},
+      {"name": "Daily affiliate reminder", "schedule": "Daily 09:00", "source": "Affiliate programs"},
+      {"name": "Nightly SEO build", "schedule": "Daily 00:00", "source": "BetSorted + CryptoCasinoSorted"}
+    ],
+    "lastNight": [
+      {"name": "Nightly SEO build", "time": "00:00", "status": "error (delivery)"},
+      {"name": "Reddit scan", "time": "02:00", "status": "ok"},
+      {"name": "GA report", "time": "06:00", "status": "ok"},
+      {"name": "Tweet generator", "time": "06:00", "status": "ok"},
+      {"name": "Live odds update (morning)", "time": "06:00", "status": "ok"},
+      {"name": "Tool ideas", "time": "07:00", "status": "error (delivery)"},
+      {"name": "Affiliate reminder", "time": "09:00", "status": "ok"}
+    ]
+  },
   "personal": {
     "title": "Brandon — Personal Board",
     "columns": [

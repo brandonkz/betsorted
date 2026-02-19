@@ -1,0 +1,297 @@
+{
+  "updatedAt": "2026-02-19T16:08:08.211Z",
+  "events": [
+    {
+      "id": 33507,
+      "slug": "epl",
+      "title": "EPL Title Race 2025/26",
+      "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "volumeM": 241,
+      "ends": "May 2026",
+      "desc": "Which club wins the Premier League?",
+      "outcomes": [
+        {
+          "name": "Arsenal",
+          "flag": "",
+          "prob": 0.585,
+          "pct": 58.5,
+          "fairDec": 1.71,
+          "vol": 5496426.003562
+        },
+        {
+          "name": "Manchester City",
+          "flag": "",
+          "prob": 0.395,
+          "pct": 39.5,
+          "fairDec": 2.53,
+          "vol": 4905779.909583
+        },
+        {
+          "name": "Aston Villa",
+          "flag": "",
+          "prob": 0.011,
+          "pct": 1.1,
+          "fairDec": 90.91,
+          "vol": 14795729.822541
+        },
+        {
+          "name": "Manchester United",
+          "flag": "",
+          "prob": 0.0075,
+          "pct": 0.8,
+          "fairDec": 133.33,
+          "vol": 10441749.671269
+        }
+      ]
+    },
+    {
+      "id": 33506,
+      "slug": "ucl",
+      "title": "Champions League Winner",
+      "icon": "⭐",
+      "volumeM": 231,
+      "ends": "May 2026",
+      "desc": "Who lifts the UCL trophy in Munich?",
+      "outcomes": [
+        {
+          "name": "Arsenal",
+          "flag": "",
+          "prob": 0.185,
+          "pct": 18.5,
+          "fairDec": 5.41,
+          "vol": 1762220.804379
+        },
+        {
+          "name": "Bayern Munich",
+          "flag": "",
+          "prob": 0.165,
+          "pct": 16.5,
+          "fairDec": 6.06,
+          "vol": 1807985.956811
+        },
+        {
+          "name": "PSG",
+          "flag": "",
+          "prob": 0.105,
+          "pct": 10.5,
+          "fairDec": 9.52,
+          "vol": 2460341.334245
+        },
+        {
+          "name": "Barcelona",
+          "flag": "",
+          "prob": 0.105,
+          "pct": 10.5,
+          "fairDec": 9.52,
+          "vol": 1536896.487551
+        },
+        {
+          "name": "Man City",
+          "flag": "",
+          "prob": 0.095,
+          "pct": 9.5,
+          "fairDec": 10.53,
+          "vol": 1257754.230573
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 1602898.243625
+        },
+        {
+          "name": "Liverpool",
+          "flag": "",
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 1759256.417082
+        },
+        {
+          "name": "Chelsea",
+          "flag": "",
+          "prob": 0.0415,
+          "pct": 4.2,
+          "fairDec": 24.1,
+          "vol": 2697479.875933
+        },
+        {
+          "name": "Tottenham",
+          "flag": "",
+          "prob": 0.024,
+          "pct": 2.4,
+          "fairDec": 41.67,
+          "vol": 4797776.091178
+        },
+        {
+          "name": "Atletico Madrid",
+          "flag": "",
+          "prob": 0.023,
+          "pct": 2.3,
+          "fairDec": 43.48,
+          "vol": 3770598.535726
+        },
+        {
+          "name": "Newcastle",
+          "flag": "",
+          "prob": 0.0225,
+          "pct": 2.3,
+          "fairDec": 44.44,
+          "vol": 2463063.249312
+        },
+        {
+          "name": "Dortmund",
+          "flag": "",
+          "prob": 0.0175,
+          "pct": 1.8,
+          "fairDec": 57.14,
+          "vol": 3589181.759076
+        }
+      ]
+    },
+    {
+      "id": 30615,
+      "slug": "worldcup",
+      "title": "2026 FIFA World Cup Winner",
+      "icon": "🌍",
+      "volumeM": 164,
+      "ends": "Jul 2026",
+      "desc": "Who wins the World Cup?",
+      "outcomes": [
+        {
+          "name": "Spain",
+          "flag": "🇪🇸",
+          "prob": 0.1665,
+          "pct": 16.7,
+          "fairDec": 6.01,
+          "vol": 2113670.048619
+        },
+        {
+          "name": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.1365,
+          "pct": 13.7,
+          "fairDec": 7.33,
+          "vol": 1569260.005146
+        },
+        {
+          "name": "France",
+          "flag": "🇫🇷",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 1912936.729257
+        },
+        {
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "prob": 0.0945,
+          "pct": 9.4,
+          "fairDec": 10.58,
+          "vol": 1654552.894631
+        },
+        {
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "prob": 0.0835,
+          "pct": 8.3,
+          "fairDec": 11.98,
+          "vol": 1342471.516287
+        },
+        {
+          "name": "Portugal",
+          "flag": "🇵🇹",
+          "prob": 0.0695,
+          "pct": 7,
+          "fairDec": 14.39,
+          "vol": 5404643.138385
+        },
+        {
+          "name": "Germany",
+          "flag": "🇩🇪",
+          "prob": 0.0575,
+          "pct": 5.8,
+          "fairDec": 17.39,
+          "vol": 3213355.239195
+        },
+        {
+          "name": "Netherlands",
+          "flag": "🇳🇱",
+          "prob": 0.033,
+          "pct": 3.3,
+          "fairDec": 30.3,
+          "vol": 3461123.662697
+        },
+        {
+          "name": "Norway",
+          "flag": "🇳🇴",
+          "prob": 0.0275,
+          "pct": 2.8,
+          "fairDec": 36.36,
+          "vol": 3401631.742275
+        },
+        {
+          "name": "Italy",
+          "flag": "🇮🇹",
+          "prob": 0.0195,
+          "pct": 1.9,
+          "fairDec": 51.28,
+          "vol": 3633970.246904
+        },
+        {
+          "name": "Colombia",
+          "flag": "🇨🇴",
+          "prob": 0.0185,
+          "pct": 1.8,
+          "fairDec": 54.05,
+          "vol": 2699892.581386
+        },
+        {
+          "name": "Morocco",
+          "flag": "🇲🇦",
+          "prob": 0.0175,
+          "pct": 1.8,
+          "fairDec": 57.14,
+          "vol": 4078905.613963
+        }
+      ]
+    },
+    {
+      "id": 33509,
+      "slug": "laliga",
+      "title": "La Liga Winner 2025/26",
+      "icon": "🇪🇸",
+      "volumeM": 91,
+      "ends": "May 2026",
+      "desc": "Real Madrid vs Barcelona — who wins La Liga?",
+      "outcomes": [
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.515,
+          "pct": 51.5,
+          "fairDec": 1.94,
+          "vol": 1306713.582421
+        },
+        {
+          "name": "Barcelona",
+          "flag": "",
+          "prob": 0.465,
+          "pct": 46.5,
+          "fairDec": 2.15,
+          "vol": 1293643.11724
+        },
+        {
+          "name": "Villarreal",
+          "flag": "",
+          "prob": 0.0065,
+          "pct": 0.7,
+          "fairDec": 153.85,
+          "vol": 4611009.957058
+        }
+      ]
+    }
+  ]
+}

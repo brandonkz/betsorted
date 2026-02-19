@@ -31,7 +31,7 @@
             "body": "Signed‑up affiliates + links",
             "meta": "Private page",
             "links": [
-              {"label": "Open tracker", "url": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html"}
+              {"label": "Open tracker", "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html"}
             ]
           },
 

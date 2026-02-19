@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PSL live match stats, scores and key events. Live possession, shots, corners and goals for every Premier Soccer League match. Free, updated in real time.">
+  <link rel="canonical" href="https://betsorted.co.za/psl-match-centre.html">
+  <title>PSL Live Match Centre | Stats, Scores & Goals | BetSorted</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .mc-page { max-width: 960px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1 { font-size: 2rem; font-weight: 900; color: #1e3a8a; margin-bottom: 6px; }
+    .subtitle { color: #6b7280; margin-bottom: 28px; font-size: 0.95rem; line-height: 1.6; }
+
+    /* Match list */
+    .matches-grid { display: grid; gap: 10px; margin-bottom: 32px; }
+    .match-pill { background: white; border: 2px solid #e5e7eb; border-radius: 14px; padding: 16px 20px; cursor: pointer; transition: all 0.2s; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; }
+    .match-pill:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37,99,235,0.15); }
+    .match-pill.active { border-color: #2563eb; background: #eff6ff; }
+    .match-pill.live { border-color: #ef4444; background: #fff5f5; }
+    .mp-team { font-weight: 700; font-size: 0.9rem; color: #1e3a8a; display: flex; align-items: center; gap: 6px; }
+    .mp-team.away { justify-content: flex-end; flex-direction: row-reverse; }
+    .mp-team img { width: 22px; height: 22px; object-fit: contain; }
+    .mp-centre { text-align: center; }
+    .mp-score { font-size: 1.4rem; font-weight: 900; color: #1e3a8a; line-height: 1; }
+    .mp-status { font-size: 0.72rem; font-weight: 700; color: #9ca3af; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .mp-status.live { color: #ef4444; }
+    .mp-status.ft { color: #059669; }
+    .live-dot { display: inline-block; width: 7px; height: 7px; background: #ef4444; border-radius: 50%; margin-right: 3px; animation: pulse 1.2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+    /* Match detail panel */
+    #matchDetail { display: none; }
+    .detail-card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    /* Detail header */
+    .detail-header { background: linear-gradient(135deg, #1e3a8a, #1d4ed8); color: white; padding: 28px 24px; }
+    .detail-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .dt-team { text-align: center; }
+    .dt-team img { width: 52px; height: 52px; object-fit: contain; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto; }
+    .dt-team .name { font-size: 0.95rem; font-weight: 700; opacity: 0.95; }
+    .dt-team .record { font-size: 0.75rem; opacity: 0.65; margin-top: 2px; }
+    .dt-score { text-align: center; }
+    .dt-score .score { font-size: 3rem; font-weight: 900; line-height: 1; }
+    .dt-score .status { font-size: 0.8rem; opacity: 0.8; margin-top: 4px; }
+    .dt-score .live-badge { background: #ef4444; padding: 3px 12px; border-radius: 100px; font-size: 0.72rem; font-weight: 700; display: inline-block; margin-top: 6px; }
+    .detail-meta { display: flex; justify-content: center; gap: 20px; font-size: 0.78rem; opacity: 0.7; flex-wrap: wrap; }
+
+    /* Tabs */
+    .detail-tabs { display: flex; border-bottom: 1px solid #e5e7eb; background: #f8fafc; }
+    .d-tab { flex: 1; padding: 14px; text-align: center; font-weight: 600; font-size: 0.875rem; cursor: pointer; color: #6b7280; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .d-tab.active { color: #2563eb; border-bottom-color: #2563eb; background: white; }
+    .tab-content { display: none; padding: 24px; }
+    .tab-content.active { display: block; }
+
+    /* Stats bars */
+    .stat-row { margin-bottom: 18px; }
+    .stat-row .stat-label { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; color: #6b7280; margin-bottom: 6px; }
+    .stat-row .stat-label .stat-name { color: #374151; font-weight: 700; text-align: center; flex: 1; }
+    .stat-row .stat-label .home-val { color: #1e3a8a; }
+    .stat-row .stat-label .away-val { color: #2563eb; }
+    .bar-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; height: 8px; border-radius: 100px; overflow: hidden; background: #f3f4f6; }
+    .bar-home { background: #1e3a8a; border-radius: 100px 0 0 100px; transition: width 0.5s ease; }
+    .bar-away { background: #3b82f6; border-radius: 0 100px 100px 0; transition: width 0.5s ease; }
+    .stats-header { display: grid; grid-template-columns: 1fr auto 1fr; text-align: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #f3f4f6; }
+    .stats-header .team-name { font-weight: 700; color: #1e3a8a; font-size: 0.875rem; }
+    .stats-header .vs { color: #9ca3af; font-size: 0.75rem; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 48px; }
+    .tl-item { position: relative; margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px; }
+    .tl-item::before { content: ''; position: absolute; left: -28px; top: 8px; bottom: -16px; width: 2px; background: #e5e7eb; }
+    .tl-item:last-child::before { display: none; }
+    .tl-icon { position: absolute; left: -38px; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; flex-shrink: 0; }
+    .tl-icon.goal { background: #059669; color: white; }
+    .tl-icon.yellowcard { background: #f59e0b; color: white; }
+    .tl-icon.redcard { background: #ef4444; color: white; }
+    .tl-icon.sub { background: #8b5cf6; color: white; }
+    .tl-icon.other { background: #9ca3af; color: white; }
+    .tl-time { font-size: 0.75rem; font-weight: 700; color: #9ca3af; min-width: 28px; }
+    .tl-text { font-size: 0.875rem; color: #374151; line-height: 1.4; }
+    .tl-text strong { color: #1e3a8a; }
+    .no-events { text-align: center; padding: 32px; color: #9ca3af; font-size: 0.875rem; }
+
+    /* H2H */
+    .h2h-match { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid #f3f4f6; font-size: 0.875rem; }
+    .h2h-match:last-child { border-bottom: none; }
+    .h2h-team { font-weight: 600; color: #374151; }
+    .h2h-team.home { text-align: right; }
+    .h2h-score { text-align: center; font-weight: 800; color: #1e3a8a; font-size: 1rem; }
+    .h2h-date { text-align: center; font-size: 0.72rem; color: #9ca3af; margin-top: 2px; }
+
+    /* Odds panel */
+    .odds-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .odds-box { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; text-align: center; }
+    .odds-box .o-label { font-size: 0.72rem; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .odds-box .o-val { font-size: 1.5rem; font-weight: 900; color: #1e3a8a; }
+    .odds-box .o-ml { font-size: 0.75rem; color: #6b7280; margin-top: 2px; }
+    .odds-box a { display: block; margin-top: 10px; background: #2563eb; color: white; padding: 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-decoration: none; }
+    .odds-note { font-size: 0.75rem; color: #9ca3af; text-align: center; margin-top: 8px; }
+    .over-under { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px; margin-top: 16px; text-align: center; }
+    .over-under .ou-label { font-size: 0.8rem; font-weight: 600; color: #6b7280; margin-bottom: 8px; }
+    .over-under .ou-vals { display: flex; justify-content: center; gap: 24px; }
+    .over-under .ou-item { font-size: 0.875rem; }
+    .over-under .ou-item .ov { font-weight: 800; color: #1e3a8a; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 48px; }
+    .spinner { width: 36px; height: 36px; border: 3px solid #e5e7eb; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Refresh badge */
+    .refresh-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .refresh-bar .updated { font-size: 0.78rem; color: #9ca3af; }
+    .refresh-btn { background: none; border: 1px solid #e5e7eb; padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; color: #6b7280; transition: all 0.2s; }
+    .refresh-btn:hover { border-color: #2563eb; color: #2563eb; }
+    .live-count { display: inline-block; background: #ef4444; color: white; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; margin-left: 8px; }
+
+    .bet-bar { background: linear-gradient(135deg, #1e3a8a, #1d4ed8); border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+    .bet-bar p { color: rgba(255,255,255,0.85); font-size: 0.875rem; margin: 0; }
+    .bet-bar a { background: white; color: #1e3a8a; padding: 8px 18px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.875rem; white-space: nowrap; margin-left: 16px; }
+    .section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+    .section-label::after { content:''; flex:1; height:1px; background:#f3f4f6; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;"/><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+        <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/psl-fixtures.html" class="nav-link">PSL Fixtures</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="mc-page">
+    <h1>⚽ PSL Match Centre <span id="liveCount" style="display:none;" class="live-count">0 LIVE</span></h1>
+    <p class="subtitle">Live scores, stats, goals, cards and betting odds for every PSL match. Auto-refreshes every 30 seconds during live games.</p>
+
+    <div class="refresh-bar">
+      <span class="updated" id="updatedAt">Loading...</span>
+      <button class="refresh-btn" onclick="loadMatches()">↻ Refresh</button>
+    </div>
+
+    <div id="matchList">
+      <div class="loading"><div class="spinner"></div><p>Loading matches...</p></div>
+    </div>
+
+    <div id="matchDetail">
+      <div class="detail-card">
+        <div class="detail-header">
+          <div class="detail-teams">
+            <div class="dt-team" id="dt-home">
+              <img id="dt-home-logo" src="" alt="">
+              <div class="name" id="dt-home-name">—</div>
+              <div class="record" id="dt-home-record"></div>
+            </div>
+            <div class="dt-score">
+              <div class="score" id="dt-score">— : —</div>
+              <div class="status" id="dt-status"></div>
+              <div id="dt-live-badge" style="display:none;" class="live-badge">● LIVE</div>
+            </div>
+            <div class="dt-team" id="dt-away">
+              <img id="dt-away-logo" src="" alt="">
+              <div class="name" id="dt-away-name">—</div>
+              <div class="record" id="dt-away-record"></div>
+            </div>
+          </div>
+          <div class="detail-meta" id="dt-meta"></div>
+        </div>
+
+        <div class="detail-tabs">
+          <div class="d-tab active" onclick="switchTab('stats',this)">📊 Stats</div>
+          <div class="d-tab" onclick="switchTab('timeline',this)">⚡ Events</div>
+          <div class="d-tab" onclick="switchTab('odds',this)">💰 Odds</div>
+          <div class="d-tab" onclick="switchTab('h2h',this)">🔄 H2H</div>
+        </div>
+
+        <div id="tab-stats" class="tab-content active">
+          <div class="loading" id="stats-loading"><div class="spinner"></div></div>
+          <div id="stats-content" style="display:none;"></div>
+        </div>
+        <div id="tab-timeline" class="tab-content">
+          <div id="timeline-content"></div>
+        </div>
+        <div id="tab-odds" class="tab-content">
+          <div id="odds-content"></div>
+        </div>
+        <div id="tab-h2h" class="tab-content">
+          <div id="h2h-content"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>BetSorted</strong> - Compare sports betting sites for South Africans</p>
+      <p style="margin:8px 0;font-size:0.875rem;"><a href="/about.html" style="color:#93c5fd;margin-right:16px;">About</a><a href="/editorial-policy.html" style="color:#93c5fd;margin-right:16px;">Editorial Policy</a><a href="/responsible-gambling.html" style="color:#93c5fd;margin-right:16px;">Responsible Gambling</a><a href="/blog/index.html" style="color:#93c5fd;">Blog</a></p>
+      <p class="disclaimer">18+ Only. Gamble responsibly. National Responsible Gambling Programme: <a href="https://responsiblegambling.co.za" target="_blank">0800 006 008</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const ESPN = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
+    const BK = 'https://sports.betway.co.za/';
+    let matches = [], selectedId = null, refreshTimer = null;
+
+    // American moneyline → decimal odds
+    function mlToDecimal(ml) {
+      if (!ml && ml !== 0) return null;
+      const n = parseFloat(ml);
+      if (isNaN(n)) return null;
+      return n > 0 ? ((n/100)+1).toFixed(2) : ((100/Math.abs(n))+1).toFixed(2);
+    }
+
+    async function loadMatches() {
+      const today = new Date();
+      const from = new Date(today.getTime() - 3*24*60*60*1000);
+      const to   = new Date(today.getTime() + 4*24*60*60*1000);
+      const fmt  = d => d.toISOString().slice(0,10).replace(/-/g,'');
+      try {
+        const res  = await fetch(`${ESPN}/scoreboard?dates=${fmt(from)}-${fmt(to)}&limit=50`);
+        const data = await res.json();
+        matches = (data.events || []).map(e => {
+          const comp = e.competitions[0];
+          const home = comp.competitors.find(t => t.homeAway==='home') || {};
+          const away = comp.competitors.find(t => t.homeAway==='away') || {};
+          const st   = comp.status?.type || {};
+          return {
+            id: e.id, name: e.name,
+            date: new Date(comp.date),
+            home: home.team?.displayName||'?', away: away.team?.displayName||'?',
+            homeLogo: home.team?.logo||'', awayLogo: away.team?.logo||'',
+            homeScore: home.score, awayScore: away.score,
+            homeForm: home.form||'', awayForm: away.form||'',
+            homeRecord: home.records?.[0]?.summary||'', awayRecord: away.records?.[0]?.summary||'',
+            homeStats: Object.fromEntries((home.statistics||[]).map(s=>[s.name,s.displayValue])),
+            awayStats: Object.fromEntries((away.statistics||[]).map(s=>[s.name,s.displayValue])),
+            venue: comp.venue?.fullName||'', round: comp.notes?.[0]?.headline||'',
+            isLive: st.state==='in', isFinished: st.completed===true,
+            statusText: st.shortDetail||st.description||'Scheduled',
+            clockDisplay: comp.status?.displayClock||'',
+          };
+        });
+
+        matches.sort((a,b) => {
+          if (a.isLive && !b.isLive) return -1;
+          if (!a.isLive && b.isLive) return 1;
+          if (!a.isFinished && b.isFinished) return -1;
+          if (a.isFinished && !b.isFinished) return 1;
+          return a.date - b.date;
+        });
+
+        const liveCount = matches.filter(m => m.isLive).length;
+        const lc = document.getElementById('liveCount');
+        if (liveCount > 0) { lc.textContent = liveCount + ' LIVE'; lc.style.display = 'inline-block'; }
+        else { lc.style.display = 'none'; }
+
+        document.getElementById('updatedAt').textContent = '↻ Updated ' + new Date().toLocaleTimeString('en-ZA', {hour:'2-digit',minute:'2-digit'});
+
+        renderMatchList();
+
+        // If a match is selected, refresh its detail too
+        if (selectedId) loadMatchDetail(selectedId, true);
+
+        // Auto-refresh every 30s if there are live matches
+        clearTimeout(refreshTimer);
+        if (liveCount > 0) refreshTimer = setTimeout(loadMatches, 30000);
+      } catch(e) {
+        document.getElementById('matchList').innerHTML = `<div style="text-align:center;padding:32px;color:#9ca3af;">Could not load matches. <button onclick="loadMatches()" style="color:#2563eb;background:none;border:none;cursor:pointer;font-weight:600;">Try again</button></div>`;
+      }
+    }
+
+    function renderMatchList() {
+      if (!matches.length) { document.getElementById('matchList').innerHTML = '<div style="text-align:center;padding:32px;color:#9ca3af;">No PSL matches in the next 4 days.</div>'; return; }
+      let lastDate = '';
+      const html = matches.map(m => {
+        const ds = m.date.toLocaleDateString('en-ZA', {weekday:'long',day:'numeric',month:'long'});
+        let header = '';
+        if (ds !== lastDate) { header = `<div class="section-label">${ds}</div>`; lastDate = ds; }
+        const cls = m.isLive ? 'live' : '';
+        const active = m.id === selectedId ? 'active' : '';
+        const statusCls = m.isLive ? 'live' : m.isFinished ? 'ft' : '';
+        const statusText = m.isLive ? `<span class="live-dot"></span>${m.clockDisplay||'LIVE'}` : m.isFinished ? 'FT' : m.date.toLocaleTimeString('en-ZA',{hour:'2-digit',minute:'2-digit'});
+        const scoreDisplay = (m.isLive||m.isFinished) ? `${m.homeScore||0} - ${m.awayScore||0}` : `vs`;
+        return `${header}<div class="match-pill ${cls} ${active}" onclick="loadMatchDetail('${m.id}')">
+          <div class="mp-team">${m.homeLogo?`<img src="${m.homeLogo}" alt="">`:''}${m.home}</div>
+          <div class="mp-centre">
+            <div class="mp-score">${scoreDisplay}</div>
+            <div class="mp-status ${statusCls}">${statusText}</div>
+          </div>
+          <div class="mp-team away">${m.away}${m.awayLogo?`<img src="${m.awayLogo}" alt="">`:''}</div>
+        </div>`;
+      }).join('');
+      document.getElementById('matchList').innerHTML = html;
+    }
+
+    async function loadMatchDetail(id, silent=false) {
+      selectedId = id;
+      const m = matches.find(x => x.id === id);
+      if (!m) return;
+
+      // Update match list highlighting
+      document.querySelectorAll('.match-pill').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.match-pill[onclick="loadMatchDetail('${id}')"]`)?.classList.add('active');
+
+      // Populate header
+      document.getElementById('dt-home-name').textContent = m.home;
+      document.getElementById('dt-away-name').textContent = m.away;
+      document.getElementById('dt-home-logo').src = m.homeLogo;
+      document.getElementById('dt-away-logo').src = m.awayLogo;
+      document.getElementById('dt-home-record').textContent = m.homeRecord;
+      document.getElementById('dt-away-record').textContent = m.awayRecord;
+      document.getElementById('dt-score').textContent = (m.isLive||m.isFinished) ? `${m.homeScore||0} - ${m.awayScore||0}` : '-  -';
+      document.getElementById('dt-status').textContent = m.isLive ? m.clockDisplay : m.isFinished ? 'Full Time' : m.date.toLocaleString('en-ZA',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+      const liveBadge = document.getElementById('dt-live-badge');
+      liveBadge.style.display = m.isLive ? 'inline-block' : 'none';
+      document.getElementById('dt-meta').innerHTML = [m.round, m.venue, 'PSL 2025/26'].filter(Boolean).map(t=>`<span>${t}</span>`).join('');
+
+      document.getElementById('matchDetail').style.display = 'block';
+      document.getElementById('matchDetail').scrollIntoView({behavior:'smooth', block:'start'});
+
+      // Render stats from scoreboard data
+      renderStats(m);
+
+      // Fetch deep summary (events, odds, h2h)
+      if (!silent) {
+        document.getElementById('stats-loading').style.display = 'block';
+        document.getElementById('stats-content').style.display = 'none';
+      }
+      try {
+        const res = await fetch(`${ESPN}/summary?event=${id}`);
+        const data = await res.json();
+        renderTimeline(data.keyEvents || []);
+        renderOdds(data.odds || [], m);
+        renderH2H(data.headToHeadGames || [], m);
+        document.getElementById('stats-loading').style.display = 'none';
+        document.getElementById('stats-content').style.display = 'block';
+      } catch(e) {
+        document.getElementById('stats-loading').style.display = 'none';
+        document.getElementById('stats-content').style.display = 'block';
+      }
+    }
+
+    function renderStats(m) {
+      const hs = m.homeStats, as = m.awayStats;
+      const statsToShow = [
+        { key:'possessionPct', label:'Possession', pct:true, unit:'%' },
+        { key:'totalShots', label:'Total Shots', pct:false },
+        { key:'shotsOnTarget', label:'Shots on Target', pct:false },
+        { key:'wonCorners', label:'Corners', pct:false },
+        { key:'foulsCommitted', label:'Fouls', pct:false, inverse:true },
+        { key:'goalAssists', label:'Assists', pct:false },
+      ];
+      const hasStats = Object.keys(hs).length > 0;
+      const html = `
+        <div class="stats-header">
+          <div class="team-name">${m.home}</div>
+          <div class="vs">STATS</div>
+          <div class="team-name">${m.away}</div>
+        </div>
+        ${!hasStats ? '<div class="no-events">Match stats available during and after the match.</div>' :
+          statsToShow.map(s => {
+            const hv = parseFloat(hs[s.key]) || 0;
+            const av = parseFloat(as[s.key]) || 0;
+            const total = hv + av || 1;
+            const hPct = s.pct ? hv : (hv/total*100);
+            const aPct = s.pct ? av : (av/total*100);
+            const hBar = s.inverse ? 100-hPct : hPct;
+            const aBar = s.inverse ? 100-aPct : aPct;
+            return `<div class="stat-row">
+              <div class="stat-label">
+                <span class="home-val">${hv}${s.unit||''}</span>
+                <span class="stat-name">${s.label}</span>
+                <span class="away-val">${av}${s.unit||''}</span>
+              </div>
+              <div class="bar-wrap">
+                <div style="background:#1e3a8a;height:8px;width:${hBar}%;border-radius:4px 0 0 4px;transition:width 0.5s;"></div>
+                <div style="background:#3b82f6;height:8px;width:${aBar}%;border-radius:0 4px 4px 0;transition:width 0.5s;margin-left:auto;"></div>
+              </div>
+            </div>`;
+          }).join('')
+        }`;
+      document.getElementById('stats-content').innerHTML = html;
+      document.getElementById('stats-loading').style.display = 'none';
+      document.getElementById('stats-content').style.display = 'block';
+    }
+
+    function renderTimeline(events) {
+      if (!events.length) { document.getElementById('timeline-content').innerHTML = '<div class="no-events">No events recorded yet.</div>'; return; }
+      const typeMap = { 70:'goal', 72:'goal', 94:'yellowcard', 93:'redcard', 76:'sub' };
+      const iconMap = { goal:'⚽', yellowcard:'🟨', redcard:'🟥', sub:'🔄', other:'•' };
+      const html = `<div class="timeline">${events.map(ev => {
+        const type = typeMap[ev.type?.id] || 'other';
+        const min = ev.clock?.displayValue || '';
+        return `<div class="tl-item">
+          <div class="tl-icon ${type}">${iconMap[type]}</div>
+          <div class="tl-time">${min}</div>
+          <div class="tl-text">${ev.text || ''}</div>
+        </div>`;
+      }).join('')}</div>`;
+      document.getElementById('timeline-content').innerHTML = html;
+    }
+
+    function renderOdds(oddsArr, m) {
+      const o = oddsArr[0];
+      if (!o) {
+        document.getElementById('odds-content').innerHTML = `<div class="no-events">Pre-match odds not available for this fixture.</div>
+          <div class="bet-bar"><p>Bet on PSL at Betway — SA's top bookmaker for PSL markets.</p><a href="${BK}" target="_blank" rel="nofollow">Bet at Betway →</a></div>`;
+        return;
+      }
+      const hML = o.homeTeamOdds?.moneyLine;
+      const aML = o.awayTeamOdds?.moneyLine;
+      const dML = o.drawOdds?.moneyLine;
+      const hDec = mlToDecimal(hML) || '—';
+      const aDec = mlToDecimal(aML) || '—';
+      const dDec = mlToDecimal(dML) || '—';
+      const ou = o.total;
+      document.getElementById('odds-content').innerHTML = `
+        <div class="section-label">Match Result</div>
+        <div class="odds-grid">
+          <div class="odds-box">
+            <div class="o-label">${m.home.split(' ')[0]} Win</div>
+            <div class="o-val">${hDec}</div>
+            <div class="o-ml">${hML ? (hML>0?'+':'')+hML : ''} (US)</div>
+            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
+          </div>
+          <div class="odds-box">
+            <div class="o-label">Draw</div>
+            <div class="o-val">${dDec}</div>
+            <div class="o-ml">${dML ? (dML>0?'+':'')+dML : ''} (US)</div>
+            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
+          </div>
+          <div class="odds-box">
+            <div class="o-label">${m.away.split(' ')[0]} Win</div>
+            <div class="o-val">${aDec}</div>
+            <div class="o-ml">${aML ? (aML>0?'+':'')+aML : ''} (US)</div>
+            <a href="${BK}" target="_blank" rel="nofollow noopener">Bet →</a>
+          </div>
+        </div>
+        ${ou ? `<div class="over-under">
+          <div class="ou-label">Over/Under · Line: ${ou.over?.close?.line||'—'}</div>
+          <div class="ou-vals">
+            <div class="ou-item"><div class="ov">${mlToDecimal(parseFloat(ou.over?.close?.odds))||'—'}</div><div style="font-size:0.72rem;color:#9ca3af;">Over</div></div>
+            <div class="ou-item"><div class="ov">${mlToDecimal(parseFloat(ou.under?.close?.odds))||'—'}</div><div style="font-size:0.72rem;color:#9ca3af;">Under</div></div>
+          </div>
+        </div>` : ''}
+        <p class="odds-note">Odds by DraftKings (US) · converted to decimal · use <a href="/best-odds-finder.html" style="color:#2563eb;">Best Odds Finder</a> for SA bookmaker prices</p>
+        <div class="bet-bar"><p>Compare PSL odds at SA bookmakers.</p><a href="${BK}" target="_blank" rel="nofollow">Betway 🇿🇦 →</a></div>`;
+    }
+
+    function renderH2H(games, m) {
+      if (!games.length) { document.getElementById('h2h-content').innerHTML = '<div class="no-events">No previous meetings on record.</div>'; return; }
+      const html = `<div class="section-label">${m.home} vs ${m.away} — Recent Meetings</div>` +
+        games.slice(0,10).map(g => {
+          const comp = g.competitions?.[0];
+          if (!comp) return '';
+          const home = comp.competitors?.find(t => t.homeAway==='home') || {};
+          const away = comp.competitors?.find(t => t.homeAway==='away') || {};
+          const dt = comp.date ? new Date(comp.date).toLocaleDateString('en-ZA',{day:'numeric',month:'short',year:'numeric'}) : '';
+          return `<div class="h2h-match">
+            <div class="h2h-team home">${home.team?.displayName||'?'}</div>
+            <div><div class="h2h-score">${home.score||0} - ${away.score||0}</div><div class="h2h-date">${dt}</div></div>
+            <div class="h2h-team">${away.team?.displayName||'?'}</div>
+          </div>`;
+        }).join('');
+      document.getElementById('h2h-content').innerHTML = html;
+    }
+
+    function switchTab(name, btn) {
+      document.querySelectorAll('.d-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+name).classList.add('active');
+    }
+
+    loadMatches();
+  </script>
+</body>
+</html>

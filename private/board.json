@@ -9,7 +9,8 @@
     "tweets": "file:///Users/brandonkatz/Documents/BetSorted/tweets/",
     "strategy": "file:///Users/brandonkatz/Documents/BetSorted/strategy/",
     "analytics": "file:///Users/brandonkatz/Documents/BetSorted/analytics/",
-    "affiliate_tracker": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
+    "affiliate_tracker": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html",
+    "task_board": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html"
   },
   "ops": {
     "recurring": [
@@ -123,6 +124,17 @@
               {
                 "label": "Open Google Doc",
                 "url": "https://docs.google.com/document/d/1UBh_QXiItRrnmjorz8CjjqZs5NjDp8g4IaPgT9ziIFg/edit"
+              }
+            ]
+          },
+          {
+            "title": "Task Board (Live)",
+            "body": "Real-time task tracking with assignee + status",
+            "meta": "Auto-updates every 30s",
+            "links": [
+              {
+                "label": "Open Task Board",
+                "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html"
               }
             ]
           },

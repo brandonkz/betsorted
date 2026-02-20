@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to use betting calculators in South Africa. Practical guide to stake sizing, accumulator profits, arbitrage, and each-way bets with real ZAR examples.">
+  <link rel="canonical" href="https://betsorted.co.za/blog/how-to-use-betting-calculators-south-africa.html">
+  <title>How to Use Betting Calculators — A South African Punter's Guide | BetSorted</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="/assets/favicon.png">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1VHD0P7M44');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use Betting Calculators — A South African Punter's Guide",
+    "description": "How to use betting calculators in South Africa. Practical guide to stake sizing, accumulator profits, arbitrage, and each-way bets with real ZAR examples.",
+    "datePublished": "2026-02-21",
+    "dateModified": "2026-02-21",
+    "author": {
+      "@type": "Organization",
+      "name": "BetSorted"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BetSorted",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://betsorted.co.za/icon.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are betting calculators free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All BetSorted calculators are completely free, work on mobile and desktop, and require no sign-up. Just enter your odds and stake amount in ZAR."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What odds format do South African bookmakers use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most SA bookmakers display decimal odds (e.g., 2.10, 3.50). Our calculators use decimal odds by default, which makes it easy to calculate returns by multiplying your stake by the odds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my accumulator payout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply all the individual odds together, then multiply by your stake. For example, three legs at 1.80 × 2.10 × 1.50 = 5.67 combined odds. A R100 stake returns R567. Use our accumulator calculator for instant results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is arbitrage betting and is it legal in South Africa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Arbitrage betting is placing bets on all outcomes of an event across different bookmakers to guarantee a profit regardless of the result. It is legal in South Africa, but bookmakers may limit your account if they detect consistent arbitrage activity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I bet per game?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A common bankroll management rule is to never risk more than 1-3% of your total bankroll on a single bet. If your bankroll is R5,000, that means R50-R150 per bet. Use a betting calculator to size stakes based on the odds and your confidence level."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #1e3a8a;
+    }
+
+    .blog-post h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: #1e3a8a;
+    }
+
+    .blog-meta {
+      color: #6b7280;
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+    }
+
+    .blog-post h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: #1e40af;
+    }
+
+    .blog-post h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: #2563eb;
+    }
+
+    .blog-post p {
+      margin-bottom: 16px;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .blog-post a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    .blog-post ul, .blog-post ol {
+      margin: 16px 0 16px 24px;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .example-box {
+      background: #f0f7ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .example-box strong {
+      color: #1e40af;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .comparison-table th {
+      background: #2563eb;
+      color: white;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #e0ecff;
+      color: #1e3a8a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 24px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .back-link:hover {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+
+    .faq-section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 2px solid #e5e7eb;
+    }
+
+    .faq-item {
+      margin-bottom: 24px;
+    }
+
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1e40af;
+    }
+
+    .faq-answer {
+      color: #374151;
+      line-height: 1.7;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/index.html" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px; width:auto;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+      <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/index.html" class="nav-link">Bookmakers</a>
+          <a href="/glossary.html" class="nav-link">Glossary</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+          <a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a>
+          <a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a>
+          <a href="https://cryptocasinosorted.com" class="nav-link" target="_blank">Crypto Casinos 🎰</a>
+        </nav>
+    </div>
+  </header>
+
+
+  <article class="blog-post">
+    <a href="/blog/index.html" class="back-link">
+      <span>←</span>
+      <span>Back to Blog</span>
+    </a>
+
+    <h1>How to Use Betting Calculators — A South African Punter's Guide</h1>
+
+    <div class="blog-meta">
+      Published February 21, 2026 • 8 min read • <a href="https://twitter.com/brandonkz" target="_blank" rel="noopener">Brandon Katz</a>
+    </div>
+
+    <p>Most South African punters place bets without knowing exactly what they stand to win, how much they should stake, or whether the odds they are getting actually represent value. That is where betting calculators come in — free tools that do the maths so you can focus on picking winners.</p>
+
+    <p>BetSorted has four calculators built specifically for SA bettors. This guide walks you through each one with real examples using ZAR, local bookmaker odds, and the sports you actually bet on: PSL, rugby, cricket, and horse racing.</p>
+
+    <h2>The Betting Calculator — Your Starting Point</h2>
+
+    <p>The <a href="/betting-calculator.html">betting calculator</a> is the most fundamental tool. You enter your stake in Rands, the decimal odds from your bookmaker, and it tells you your potential return and profit. Simple, but powerful when you use it properly.</p>
+
+    <div class="example-box">
+      <strong>Example: Kaizer Chiefs to beat Sundowns</strong><br><br>
+      You fancy Chiefs at home and <a href="/blog/betway-review-south-africa-2026.html">Betway</a> is offering 2.40 on the match result. You want to stake R300.<br><br>
+      <strong>Calculation:</strong> R300 × 2.40 = R720 total return<br>
+      <strong>Profit:</strong> R720 − R300 = R420<br><br>
+      Now compare: <a href="/blog/hollywoodbets-review-south-africa-2026.html">Hollywoodbets</a> offers 2.50 on the same match. That is R750 return and R450 profit — R30 more for the same bet. Over a full PSL season, those margins compound.
+    </div>
+
+    <p>The calculator also helps with stake sizing. If you set a rule that you never risk more than 2% of your bankroll on a single bet, and your bankroll is R10,000, your max stake is R200. Plug that into the calculator to see what each bet could return before you commit.</p>
+
+    <h2>The Accumulator Calculator — Multi-Leg Bets Made Clear</h2>
+
+    <p>Accumulators are the most popular bet type in South Africa. Pick three, four, or five results, combine them, and the odds multiply into something that looks incredible. The problem is that most punters do not understand how quickly the true probability drops as you add legs.</p>
+
+    <p>The <a href="/accumulator-calculator.html">accumulator calculator</a> shows you the combined odds and total return instantly. More importantly, it forces you to see the real numbers before you place the bet.</p>
+
+    <div class="example-box">
+      <strong>Example: Weekend PSL Treble</strong><br><br>
+      Leg 1: Pirates to beat Stellenbosch — 1.75<br>
+      Leg 2: Sundowns to beat AmaZulu — 1.40<br>
+      Leg 3: Chiefs to beat Sekhukhune — 2.10<br><br>
+      <strong>Combined odds:</strong> 1.75 × 1.40 × 2.10 = 5.145<br>
+      <strong>R100 stake returns:</strong> R514.50<br>
+      <strong>Profit:</strong> R414.50<br><br>
+      Looks good. But the implied probability of all three winning is only about 19.4%. That means roughly 4 out of 5 times, you lose your R100. Are you comfortable with that frequency?
+    </div>
+
+    <p>The calculator does not tell you whether the bet is good or bad — that is your job. What it does is remove the guesswork so you can make an informed decision. If you are using <a href="/blog/supabets-review-south-africa-2026.html">Supabets</a> for their acca promotions, check whether the bonus actually improves the expected value enough to justify the bet.</p>
+
+    <h3>How Many Legs Is Too Many?</h3>
+
+    <p>There is no magic number, but the maths is clear: every leg you add dramatically reduces your chance of winning. A five-leg acca with average odds of 1.80 per leg has combined odds of about 18.90 — which sounds amazing until you realise the probability is around 5.3%. That is roughly one win in every 19 attempts.</p>
+
+    <p>If you enjoy accas, keep them short (two or three legs) and use the calculator to check whether the combined return justifies the risk. For longer shots, stake less.</p>
+
+    <h2>The Arbitrage Calculator — Guaranteed Profit Between Bookmakers</h2>
+
+    <p>Arbitrage betting is the closest thing to a guaranteed profit in sports betting. The idea is simple: when two bookmakers disagree on the odds for an event, you can bet on all outcomes and lock in a profit regardless of the result.</p>
+
+    <p>The <a href="/arbitrage-calculator.html">arbitrage calculator</a> tells you exactly how much to stake on each outcome and what your guaranteed profit will be.</p>
+
+    <div class="example-box">
+      <strong>Example: Pirates vs Chiefs — Arbitrage Opportunity</strong><br><br>
+      <a href="/blog/betway-review-south-africa-2026.html">Betway</a> offers Pirates at 2.60<br>
+      <a href="/blog/sportingbet-review-south-africa-2026.html">Sportingbet</a> offers the Draw at 3.80<br>
+      <a href="/blog/hollywoodbets-review-south-africa-2026.html">Hollywoodbets</a> offers Chiefs at 3.20<br><br>
+      <strong>Arb check:</strong> (1/2.60) + (1/3.80) + (1/3.20) = 0.385 + 0.263 + 0.313 = 0.961<br><br>
+      If the sum is below 1.00, there is an arbitrage opportunity. In this case, 0.961 means a guaranteed return of about 4.1% on your total stake. The calculator tells you exactly how to split your money across the three bookmakers.
+    </div>
+
+    <p>In practice, arbitrage opportunities in SA betting are rare and close quickly. But they do appear, especially around PSL match day when bookmakers are pricing independently. You need accounts with multiple bookmakers — see our <a href="/blog/best-betting-apps-south-africa-2026.html">best betting apps guide</a> — and the discipline to act fast.</p>
+
+    <p>Fair warning: bookmakers do not love arbitrage bettors. If they notice consistent arbing, they may limit your account. Use it occasionally rather than as a full-time strategy.</p>
+
+    <h2>The Each-Way Calculator — Essential for Horse Racing</h2>
+
+    <p>Each-way betting is huge in South African horse racing, especially around the Durban July, Met, and Champions Cup. An each-way bet is actually two bets: one for the horse to win, and one for it to place (usually top 2, 3, or 4 depending on the field size).</p>
+
+    <p>The <a href="/each-way-calculator.html">each-way calculator</a> breaks down both parts of the bet so you know exactly what you stand to win in each scenario.</p>
+
+    <div class="example-box">
+      <strong>Example: Durban July — Each-Way Bet</strong><br><br>
+      You back a horse at 12.00 each-way with R50 (total stake R100, because each-way is two bets).<br>
+      Place terms: 1/4 odds, top 3 places.<br><br>
+      <strong>If the horse wins:</strong><br>
+      Win part: R50 × 12.00 = R600<br>
+      Place part: R50 × 3.50 (12.00 × 1/4 + 1) = R175<br>
+      <strong>Total return: R775 (R675 profit)</strong><br><br>
+      <strong>If the horse places but does not win:</strong><br>
+      Win part: Lost (−R50)<br>
+      Place part: R50 × 3.50 = R175<br>
+      <strong>Total return: R175 (R75 profit)</strong>
+    </div>
+
+    <p>Each-way betting gives you a safety net when you back outsiders. Without the calculator, many punters underestimate the place return or forget that they are staking double their intended amount (because it is two bets). The calculator prevents those mistakes.</p>
+
+    <h2>Bankroll Management: The Calculator Nobody Uses</h2>
+
+    <p>There is no dedicated bankroll calculator on BetSorted — yet. But you can use the betting calculator as one by following a simple framework:</p>
+
+    <p><strong>Step 1:</strong> Decide your total bankroll. This is money you can afford to lose completely. Not rent money. Not savings. Betting money only.</p>
+
+    <p><strong>Step 2:</strong> Set your unit size. Most disciplined bettors use 1-3% per bet. On a R5,000 bankroll, that is R50-R150 per bet.</p>
+
+    <p><strong>Step 3:</strong> Use the betting calculator before every bet. Enter your unit size as the stake, check the potential return, and ask yourself: "Is this return worth the risk at this probability?"</p>
+
+    <p>If the answer is yes, bet. If no, skip it. Over a PSL season of 30+ match weekends, this discipline is the difference between growing your bankroll and blowing through it by April.</p>
+
+    <h2>Which Calculator Should You Use First?</h2>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>If You…</th>
+          <th>Use This Calculator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Place single bets on PSL matches</td>
+          <td><a href="/betting-calculator.html">Betting Calculator</a></td>
+        </tr>
+        <tr>
+          <td>Build weekend accumulators</td>
+          <td><a href="/accumulator-calculator.html">Accumulator Calculator</a></td>
+        </tr>
+        <tr>
+          <td>Have accounts with multiple bookmakers</td>
+          <td><a href="/arbitrage-calculator.html">Arbitrage Calculator</a></td>
+        </tr>
+        <tr>
+          <td>Bet on horse racing (Durban July, Met)</td>
+          <td><a href="/each-way-calculator.html">Each-Way Calculator</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Start with the betting calculator for every bet, then add the others as your strategy develops. The goal is not to become a maths genius — it is to make fewer mistakes with your money.</p>
+
+    <h2>Related Reading</h2>
+
+    <p>For bookmaker comparisons, check the <a href="/blog/best-psl-betting-site-2026.html">best PSL betting sites</a> guide. If withdrawals matter to you (they should), read <a href="/blog/fastest-paying-bookmakers-south-africa-2026.html">fastest paying bookmakers in South Africa</a>. And for a complete glossary of betting terms used throughout this guide, see the <a href="/blog/south-africa-betting-glossary.html">SA betting glossary</a>.</p>
+
+    <div class="faq-section">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3 class="faq-question">Are betting calculators free to use?</h3>
+        <div class="faq-answer">
+          <p>Yes. All BetSorted calculators are completely free, work on mobile and desktop, and require no sign-up. Just enter your odds and stake amount in ZAR.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What odds format do South African bookmakers use?</h3>
+        <div class="faq-answer">
+          <p>Most SA bookmakers display decimal odds (e.g., 2.10, 3.50). Our calculators use decimal odds by default, which makes it easy to calculate returns by multiplying your stake by the odds.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do I calculate my accumulator payout?</h3>
+        <div class="faq-answer">
+          <p>Multiply all the individual odds together, then multiply by your stake. For example, three legs at 1.80 × 2.10 × 1.50 = 5.67 combined odds. A R100 stake returns R567. Use our accumulator calculator for instant results.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is arbitrage betting and is it legal in South Africa?</h3>
+        <div class="faq-answer">
+          <p>Arbitrage betting is placing bets on all outcomes of an event across different bookmakers to guarantee a profit regardless of the result. It is legal in South Africa, but bookmakers may limit your account if they detect consistent arbitrage activity.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much should I bet per game?</h3>
+        <div class="faq-answer">
+          <p>A common bankroll management rule is to never risk more than 1-3% of your total bankroll on a single bet. If your bankroll is R5,000, that means R50-R150 per bet. Use a betting calculator to size stakes based on the odds and your confidence level.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; text-align: center;">
+      <a href="/blog/index.html" class="back-link">
+        <span>←</span>
+        <span>Back to Blog</span>
+      </a>
+    </div>
+  </article>
+
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p style="margin-bottom: 8px;"><strong>Disclaimer:</strong> Gambling can be addictive. Gamble responsibly. 18+ only. BeGambleAware.org.za</p>
+      <p>© 2026 BetSorted. All bookmakers licensed and regulated in South Africa.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

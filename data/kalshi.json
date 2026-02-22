@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-22T10:03:09.146Z",
+  "updatedAt": "2026-02-22T16:03:08.713Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -12,42 +12,34 @@
         {
           "name": "India",
           "flag": "🇮🇳",
-          "prob": 0.45,
-          "pct": 45,
-          "fairDec": 2.22,
-          "vol": 539536
+          "prob": 0.41,
+          "pct": 41,
+          "fairDec": 2.44,
+          "vol": 552720
         },
         {
           "name": "South Africa",
           "flag": "🇿🇦",
-          "prob": 0.17,
-          "pct": 17,
-          "fairDec": 5.88,
-          "vol": 322657
-        },
-        {
-          "name": "New Zealand",
-          "flag": "🇳🇿",
-          "prob": 0.09,
-          "pct": 9,
-          "fairDec": 11.11,
-          "vol": 227907
+          "prob": 0.24,
+          "pct": 24,
+          "fairDec": 4.17,
+          "vol": 328357
         },
         {
           "name": "England",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.09,
-          "pct": 9,
-          "fairDec": 11.11,
-          "vol": 88975
+          "prob": 0.12,
+          "pct": 12,
+          "fairDec": 8.33,
+          "vol": 104264
         },
         {
-          "name": "Sri Lanka",
-          "flag": "🇱🇰",
-          "prob": 0.06,
-          "pct": 6,
-          "fairDec": 16.67,
-          "vol": 247504
+          "name": "New Zealand",
+          "flag": "🇳🇿",
+          "prob": 0.08,
+          "pct": 8,
+          "fairDec": 12.5,
+          "vol": 237646
         },
         {
           "name": "West Indies",
@@ -55,7 +47,7 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 292080
+          "vol": 292342
         },
         {
           "name": "Pakistan",
@@ -63,7 +55,15 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 180657
+          "vol": 187289
+        },
+        {
+          "name": "Sri Lanka",
+          "flag": "🇱🇰",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 255299
         }
       ]
     },
@@ -81,7 +81,7 @@
           "prob": 0.23,
           "pct": 23,
           "fairDec": 4.35,
-          "vol": 67243
+          "vol": 67985
         },
         {
           "name": "Max Verstappen",
@@ -89,7 +89,7 @@
           "prob": 0.21,
           "pct": 21,
           "fairDec": 4.76,
-          "vol": 115934
+          "vol": 116216
         },
         {
           "name": "Charles Leclerc",
@@ -97,7 +97,7 @@
           "prob": 0.14,
           "pct": 14,
           "fairDec": 7.14,
-          "vol": 140249
+          "vol": 140479
         },
         {
           "name": "Lewis Hamilton",
@@ -105,7 +105,7 @@
           "prob": 0.11,
           "pct": 11,
           "fairDec": 9.09,
-          "vol": 166236
+          "vol": 166272
         },
         {
           "name": "Lando Norris",
@@ -113,7 +113,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 51277
+          "vol": 51293
         },
         {
           "name": "Oscar Piastri",
@@ -121,7 +121,7 @@
           "prob": 0.07,
           "pct": 7,
           "fairDec": 14.29,
-          "vol": 69235
+          "vol": 69298
         },
         {
           "name": "Andrea Kimi Antonelli",
@@ -144,18 +144,34 @@
         {
           "name": "France",
           "flag": "🇫🇷",
-          "prob": 0.87,
-          "pct": 87,
-          "fairDec": 1.15,
-          "vol": 793
+          "prob": 0.67,
+          "pct": 67,
+          "fairDec": 1.49,
+          "vol": 1401
         },
         {
           "name": "Scotland",
           "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "prob": 0.04,
-          "pct": 4,
-          "fairDec": 25,
-          "vol": 771
+          "prob": 0.03,
+          "pct": 3,
+          "fairDec": 33.33,
+          "vol": 888
+        },
+        {
+          "name": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.03,
+          "pct": 3,
+          "fairDec": 33.33,
+          "vol": 2344
+        },
+        {
+          "name": "Italy",
+          "flag": "🇮🇹",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 467
         },
         {
           "name": "Ireland",
@@ -164,14 +180,6 @@
           "pct": 2,
           "fairDec": 50,
           "vol": 2387
-        },
-        {
-          "name": "England",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.02,
-          "pct": 2,
-          "fairDec": 50,
-          "vol": 641
         }
       ]
     },
@@ -186,10 +194,10 @@
         {
           "name": "Arsenal",
           "flag": "⚪🔴",
-          "prob": 0.19,
-          "pct": 19,
-          "fairDec": 5.26,
-          "vol": 695466
+          "prob": 0.2,
+          "pct": 20,
+          "fairDec": 5,
+          "vol": 697417
         },
         {
           "name": "Bayern Munich",
@@ -197,7 +205,7 @@
           "prob": 0.15,
           "pct": 15,
           "fairDec": 6.67,
-          "vol": 694692
+          "vol": 694824
         },
         {
           "name": "Manchester City",
@@ -213,7 +221,7 @@
           "prob": 0.1,
           "pct": 10,
           "fairDec": 10,
-          "vol": 707778
+          "vol": 708938
         },
         {
           "name": "PSG",
@@ -229,7 +237,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 717109
+          "vol": 717118
         },
         {
           "name": "Liverpool",
@@ -237,7 +245,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 344945
+          "vol": 345174
         },
         {
           "name": "Chelsea",

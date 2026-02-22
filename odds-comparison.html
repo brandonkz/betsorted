@@ -457,5 +457,39 @@
     // Initialize
     updateRemoveButtons();
   </script>
+  <script>
+    (function() {
+      const fixtures = Array.isArray(window.betsortedFixtures) ? window.betsortedFixtures : [];
+      if (!fixtures.length) return;
+
+      const events = fixtures.slice(0, 25).map(f => ({
+        '@type': 'SportsEvent',
+        name: `${f.home} vs ${f.away}`,
+        startDate: new Date(f.startDate).toISOString(),
+        eventStatus: f.isLive ? 'https://schema.org/EventInProgress' : (f.isFinished ? 'https://schema.org/EventCompleted' : 'https://schema.org/EventScheduled'),
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        sport: f.sport || 'Soccer',
+        homeTeam: { '@type': 'SportsTeam', name: f.home },
+        awayTeam: { '@type': 'SportsTeam', name: f.away },
+        competitor: [
+          { '@type': 'SportsTeam', name: f.home },
+          { '@type': 'SportsTeam', name: f.away }
+        ],
+        location: f.venue ? { '@type': 'Place', name: f.venue } : undefined,
+        url: 'https://betsorted.co.za/odds-comparison.html'
+      }));
+
+      const schema = {
+        '@context': 'https://schema.org',
+        '@graph': events
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    })();
+  </script>
+  <script src="/assets/sticky-cta.js" defer></script>
 </body>
 </html>

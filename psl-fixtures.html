@@ -185,6 +185,7 @@
 
         buildTeamFilter();
         renderDate();
+        updateSportsEventSchema(allFixtures);
       } catch(err) {
         document.getElementById('fixturesList').innerHTML = `<div class="error-box"><strong>Could not load live fixtures.</strong><br><a href="/blog/best-psl-betting-site-2026.html" style="color:#2563eb;">View our PSL betting guide →</a></div>`;
       }
@@ -290,8 +291,49 @@
       }).join('');
     }
 
+    function updateSportsEventSchema(fixtures) {
+      const scriptId = 'sports-event-schema';
+      const existing = document.getElementById(scriptId);
+      if (!fixtures.length) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      const events = fixtures.slice(0, 25).map(f => ({
+        '@type': 'SportsEvent',
+        name: `${f.home} vs ${f.away}`,
+        startDate: f.datetime.toISOString(),
+        eventStatus: f.isLive ? 'https://schema.org/EventInProgress' : (f.isFinished ? 'https://schema.org/EventCompleted' : 'https://schema.org/EventScheduled'),
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        sport: 'Soccer',
+        homeTeam: { '@type': 'SportsTeam', name: f.home },
+        awayTeam: { '@type': 'SportsTeam', name: f.away },
+        competitor: [
+          { '@type': 'SportsTeam', name: f.home },
+          { '@type': 'SportsTeam', name: f.away }
+        ],
+        location: f.venue ? { '@type': 'Place', name: f.venue } : undefined,
+        url: 'https://betsorted.co.za/psl-fixtures.html'
+      }));
+
+      const schema = {
+        '@context': 'https://schema.org',
+        '@graph': events
+      };
+
+      let script = existing;
+      if (!script) {
+        script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = scriptId;
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(schema);
+    }
+
     loadFixtures();
   </script>
   </script>
+  <script src="/assets/sticky-cta.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-22",
+  "updated": "2026-02-23",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
     "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
@@ -18,84 +18,92 @@
       {
         "name": "Live odds update (morning)",
         "schedule": "Daily 06:00",
-        "source": "Odds API → fetch-live-odds.js"
+        "source": "Odds API → fetch-live-odds.js",
+        "cronId": "a33620e9-0922-41fd-adfa-6d2e8b03aff7"
       },
       {
         "name": "Live odds update (evening)",
         "schedule": "Daily 18:00",
-        "source": "Odds API → fetch-live-odds.js"
+        "source": "Odds API → fetch-live-odds.js",
+        "cronId": "4cd89068-d1aa-4de1-bfc8-a5e67bfe14e3"
       },
       {
         "name": "Daily GA report",
         "schedule": "Daily 06:00",
-        "source": "Google Analytics"
+        "source": "Google Analytics",
+        "cronId": "dbeb67fd-4847-4a5e-a6b4-dfd34b244a31"
       },
       {
         "name": "Daily tweet generator",
         "schedule": "Daily 06:15",
-        "source": "Content automation"
+        "source": "Content automation",
+        "cronId": "2c7426cc-2b19-4bbc-96e0-224e22a32920"
       },
       {
         "name": "Daily Reddit scan",
         "schedule": "Daily 02:00",
-        "source": "Reddit scan"
+        "source": "Reddit scan",
+        "cronId": "94d510ce-724f-43cc-8aa7-b6065d56485d"
       },
       {
         "name": "Daily tool ideas",
         "schedule": "Daily 07:20",
-        "source": "Crypto tool ideas"
+        "source": "Crypto tool ideas",
+        "cronId": "3f1b34a7-d15f-4954-94b6-bccd3cfab188"
       },
       {
         "name": "Daily affiliate reminder",
         "schedule": "Daily 09:00",
-        "source": "Affiliate programs"
+        "source": "Affiliate programs",
+        "cronId": "d3f7bfd2-0f62-486b-80d8-3691f7b40d60"
       },
       {
         "name": "Nightly SEO build",
         "schedule": "Daily 00:00",
-        "source": "BetSorted + CryptoCasinoSorted"
+        "source": "BetSorted + CryptoCasinoSorted",
+        "cronId": "c3fcbb16-47ed-4da3-9142-1e5a24bbe951"
       }
     ],
     "lastNight": [
       {
         "name": "Live odds update (morning)",
-        "time": "22 Feb 06:00",
+        "time": "23 Feb 06:00",
         "status": "ok"
       },
       {
         "name": "Live odds update (evening)",
-        "time": "21 Feb 18:00",
+        "time": "22 Feb 18:00",
         "status": "ok"
       },
       {
         "name": "Daily GA report",
-        "time": "22 Feb 06:00",
+        "time": "23 Feb 06:00",
         "status": "error",
-        "error": "cron announce delivery failed (3 consecutive)"
+        "error": "cron reports error status"
       },
       {
         "name": "Daily tweet generator",
-        "time": "22 Feb 07:40",
+        "time": "23 Feb 06:15",
         "status": "ok"
       },
       {
         "name": "Daily Reddit scan",
-        "time": "22 Feb 02:00",
+        "time": "23 Feb 02:00",
         "status": "ok"
       },
       {
         "name": "Daily tool ideas",
-        "time": "22 Feb 07:20",
+        "time": "23 Feb 07:20",
         "status": "ok"
       },
       {
         "name": "Daily affiliate reminder",
-        "time": "22 Feb 09:00",
+        "time": "23 Feb 09:00",
         "status": "ok"
       },
       {
         "name": "Nightly SEO build",
-        "time": "22 Feb 00:00",
+        "time": "23 Feb 00:00",
         "status": "ok"
       }
     ]
@@ -108,7 +116,7 @@
         "title": "To Do",
         "items": [
           {
-            "title": "Today’s task list (Google Doc)",
+            "title": "Today's task list (Google Doc)",
             "body": "All your tasks in one document",
             "meta": "Private Google Doc",
             "links": [
@@ -495,7 +503,7 @@
       },
       {
         "time": "12:00",
-        "text": "If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za — it’s worth 60 seconds."
+        "text": "If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za — it's worth 60 seconds."
       },
       {
         "time": "18:00",
@@ -513,7 +521,7 @@
       },
       {
         "time": "20:00",
-        "text": "If a casino hides its provably‑fair process, that’s a red flag. Compare transparent casinos here: cryptocasinosorted.com"
+        "text": "If a casino hides its provably‑fair process, that's a red flag. Compare transparent casinos here: cryptocasinosorted.com"
       },
       {
         "time": "Reply",

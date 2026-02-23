@@ -216,6 +216,55 @@ function formatMatchForFinder(game) {
   };
 }
 
+function getSASTTimestamp(date = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Africa/Johannesburg',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  }).formatToParts(date).reduce((acc, part) => {
+    if (part.type !== 'literal') acc[part.type] = part.value;
+    return acc;
+  }, {});
+
+  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}+02:00`;
+}
+
+function updateOddsHistory(matches) {
+  const dataDir = path.join(__dirname, 'data');
+  const historyPath = path.join(dataDir, 'odds-history.json');
+  let history = [];
+
+  if (fs.existsSync(historyPath)) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+      if (Array.isArray(parsed)) history = parsed;
+    } catch (error) {
+      history = [];
+    }
+  }
+
+  const entry = {
+    timestamp: getSASTTimestamp(new Date()),
+    matches
+  };
+
+  history.push(entry);
+
+  const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  history = history.filter(item => {
+    const ts = Date.parse(item.timestamp);
+    return !Number.isNaN(ts) && ts >= cutoff;
+  });
+
+  fs.writeFileSync(historyPath, JSON.stringify(history, null, 2));
+  return entry;
+}
+
 async function main() {
   console.log('🎰 Fetching live odds from The Odds API...\n');
   
@@ -307,6 +356,8 @@ async function main() {
     path.join(dataDir, 'live-odds.json'),
     JSON.stringify(oddsData, null, 2)
   );
+
+  updateOddsHistory(oddsData.matches);
   
   console.log('✅ Homepage updated with live odds!');
   console.log('✅ Best Odds Finder data saved to data/live-odds.json');

@@ -1,0 +1,60 @@
+{
+  "name": "BetSorted",
+  "url": "https://betsorted.co.za",
+  "category": "Sports Betting Comparison",
+  "type": "Affiliate / Comparison Site",
+  "description": "Independent South African betting comparison site using daily automated odds data to help bettors find the best prices across licensed bookmakers.",
+  "areaServed": "South Africa",
+  "founded": "2026",
+  "parentCompany": "AlphaX Asset Capital (Pty) Ltd",
+  "isBookmaker": false,
+  "acceptsBets": false,
+  "dataSource": "The Odds API",
+  "oddsUpdateFrequency": "Twice daily (06:00 and 18:00 SAST)",
+  "bookmakersCompared": [
+    "Betway",
+    "Hollywoodbets",
+    "Sportingbet",
+    "10bet",
+    "SupaBets",
+    "World Sports Betting",
+    "Gbets"
+  ],
+  "sportsCovered": [
+    "English Premier League",
+    "UEFA Champions League",
+    "PSL (Premier Soccer League)",
+    "URC Rugby",
+    "Cricket (T20 World Cup, SA20)",
+    "Tennis"
+  ],
+  "freeTools": [
+    {"name": "Odds Comparison", "url": "/odds-comparison.html"},
+    {"name": "Betting Calculator", "url": "/betting-calculator.html"},
+    {"name": "Accumulator Calculator", "url": "/accumulator-calculator.html"},
+    {"name": "Best Odds Finder", "url": "/best-odds-finder.html"}
+  ],
+  "keyPages": {
+    "guide": "/guides/best-betting-apps-south-africa-2026.html",
+    "oddsComparison": "/odds-comparison.html",
+    "calculator": "/betting-calculator.html",
+    "blog": "/blog/",
+    "brandFacts": "/brand-facts.html"
+  },
+  "keyStats": {
+    "avgOddsGapPercent": 8.5,
+    "matchesComparedDaily": 37,
+    "blogPosts": 48,
+    "topBookmakerByOdds": "Betway (football), Sportingbet (rugby)"
+  },
+  "social": {
+    "x": "https://x.com/alphaxasset"
+  },
+  "responsibleGambling": {
+    "message": "Gambling can be addictive. Please gamble responsibly.",
+    "helpline": "0800 006 008",
+    "organization": "National Responsible Gambling Programme",
+    "url": "https://responsiblegambling.org.za/"
+  },
+  "lastUpdated": "2026-02-25"
+}

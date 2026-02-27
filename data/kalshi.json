@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-26T22:03:09.698Z",
+  "updatedAt": "2026-02-27T04:03:08.805Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -15,15 +15,15 @@
           "prob": 0.38,
           "pct": 38,
           "fairDec": 2.63,
-          "vol": 1068503
+          "vol": 1084539
         },
         {
           "name": "South Africa",
           "flag": "🇿🇦",
-          "prob": 0.3,
-          "pct": 30,
-          "fairDec": 3.33,
-          "vol": 583504
+          "prob": 0.31,
+          "pct": 31,
+          "fairDec": 3.23,
+          "vol": 600267
         },
         {
           "name": "England",
@@ -31,7 +31,7 @@
           "prob": 0.17,
           "pct": 17,
           "fairDec": 5.88,
-          "vol": 231678
+          "vol": 240064
         },
         {
           "name": "New Zealand",
@@ -39,7 +39,7 @@
           "prob": 0.13,
           "pct": 13,
           "fairDec": 7.69,
-          "vol": 322485
+          "vol": 325214
         },
         {
           "name": "West Indies",
@@ -47,7 +47,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 704355
+          "vol": 729071
         }
       ]
     },
@@ -65,7 +65,7 @@
           "prob": 0.24,
           "pct": 24,
           "fairDec": 4.17,
-          "vol": 74934
+          "vol": 75172
         },
         {
           "name": "Max Verstappen",
@@ -73,7 +73,7 @@
           "prob": 0.2,
           "pct": 20,
           "fairDec": 5,
-          "vol": 128534
+          "vol": 128788
         },
         {
           "name": "Charles Leclerc",
@@ -81,15 +81,15 @@
           "prob": 0.15,
           "pct": 15,
           "fairDec": 6.67,
-          "vol": 151705
+          "vol": 151972
         },
         {
           "name": "Lewis Hamilton",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.11,
-          "pct": 11,
-          "fairDec": 9.09,
-          "vol": 171489
+          "prob": 0.12,
+          "pct": 12,
+          "fairDec": 8.33,
+          "vol": 172818
         },
         {
           "name": "Lando Norris",
@@ -97,7 +97,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 54290
+          "vol": 54498
         },
         {
           "name": "Oscar Piastri",
@@ -105,7 +105,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 71264
+          "vol": 71331
         },
         {
           "name": "Andrea Kimi Antonelli",
@@ -113,7 +113,7 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 56425
+          "vol": 56503
         }
       ]
     },
@@ -128,9 +128,9 @@
         {
           "name": "France",
           "flag": "🇫🇷",
-          "prob": 0.82,
-          "pct": 82,
-          "fairDec": 1.22,
+          "prob": 0.81,
+          "pct": 81,
+          "fairDec": 1.23,
           "vol": 1970
         },
         {
@@ -155,7 +155,7 @@
           "prob": 0.02,
           "pct": 2,
           "fairDec": 50,
-          "vol": 3985
+          "vol": 8240
         }
       ]
     },
@@ -173,7 +173,7 @@
           "prob": 0.2,
           "pct": 20,
           "fairDec": 5,
-          "vol": 727831
+          "vol": 729679
         },
         {
           "name": "Bayern Munich",
@@ -181,7 +181,7 @@
           "prob": 0.16,
           "pct": 16,
           "fairDec": 6.25,
-          "vol": 723984
+          "vol": 728468
         },
         {
           "name": "Manchester City",
@@ -189,7 +189,7 @@
           "prob": 0.11,
           "pct": 11,
           "fairDec": 9.09,
-          "vol": 315190
+          "vol": 317072
         },
         {
           "name": "Barcelona",
@@ -197,7 +197,7 @@
           "prob": 0.1,
           "pct": 10,
           "fairDec": 10,
-          "vol": 722159
+          "vol": 724943
         },
         {
           "name": "Real Madrid",
@@ -205,7 +205,7 @@
           "prob": 0.09,
           "pct": 9,
           "fairDec": 11.11,
-          "vol": 744525
+          "vol": 745628
         },
         {
           "name": "PSG",
@@ -213,7 +213,7 @@
           "prob": 0.09,
           "pct": 9,
           "fairDec": 11.11,
-          "vol": 428990
+          "vol": 429084
         },
         {
           "name": "Liverpool",
@@ -221,7 +221,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 353113
+          "vol": 353233
         },
         {
           "name": "Chelsea",
@@ -229,7 +229,7 @@
           "prob": 0.04,
           "pct": 4,
           "fairDec": 25,
-          "vol": 377442
+          "vol": 377653
         },
         {
           "name": "Tottenham",
@@ -237,7 +237,7 @@
           "prob": 0.02,
           "pct": 2,
           "fairDec": 50,
-          "vol": 135645
+          "vol": 135801
         },
         {
           "name": "Atletico",

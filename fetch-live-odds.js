@@ -278,14 +278,17 @@ async function main() {
   
   console.log(`\n✓ Found ${allGames.length} total games\n`);
   
+  // Filter out matches that have already started
+  const upcomingGames = allGames.filter(g => new Date(g.commence_time) > new Date());
+
   // Format and filter games for homepage (top 3)
-  const events = allGames
+  const events = upcomingGames
     .map(formatEvent)
     .filter(e => e !== null)
     .slice(0, 3);
   
-  // Format ALL games for best-odds-finder
-  const finderMatches = allGames
+  // Format ALL upcoming games for best-odds-finder
+  const finderMatches = upcomingGames
     .map(formatMatchForFinder)
     .filter(m => m !== null);
   

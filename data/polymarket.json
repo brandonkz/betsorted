@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-01T04:03:07.988Z",
+  "updatedAt": "2026-03-01T10:03:08.106Z",
   "events": [
     {
       "id": 33507,
@@ -13,10 +13,10 @@
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 0.605,
-          "pct": 60.5,
-          "fairDec": 1.65,
-          "vol": 6220691.672452
+          "prob": 0.615,
+          "pct": 61.5,
+          "fairDec": 1.63,
+          "vol": 6228356.08123
         },
         {
           "name": "Manchester City",
@@ -24,15 +24,15 @@
           "prob": 0.385,
           "pct": 38.5,
           "fairDec": 2.6,
-          "vol": 5893121.590463
+          "vol": 5897618.812047
         },
         {
           "name": "Manchester United",
           "flag": "",
-          "prob": 0.0065,
-          "pct": 0.7,
-          "fairDec": 153.85,
-          "vol": 11772461.987548
+          "prob": 0.006,
+          "pct": 0.6,
+          "fairDec": 166.67,
+          "vol": 11776361.479876
         }
       ]
     },
@@ -48,10 +48,10 @@
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 0.265,
-          "pct": 26.5,
-          "fairDec": 3.77,
-          "vol": 2178310.333877
+          "prob": 0.275,
+          "pct": 27.5,
+          "fairDec": 3.64,
+          "vol": 2220732.81335
         },
         {
           "name": "Bayern Munich",
@@ -59,31 +59,31 @@
           "prob": 0.145,
           "pct": 14.5,
           "fairDec": 6.9,
-          "vol": 1993340.356287
+          "vol": 2050415.58004
         },
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 0.125,
-          "pct": 12.5,
-          "fairDec": 8,
-          "vol": 1806782.063767
+          "prob": 0.145,
+          "pct": 14.5,
+          "fairDec": 6.9,
+          "vol": 1887860.103041
         },
         {
           "name": "Man City",
           "flag": "",
-          "prob": 0.095,
-          "pct": 9.5,
-          "fairDec": 10.53,
-          "vol": 1508427.982902
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 1525657.269727
         },
         {
           "name": "PSG",
           "flag": "",
-          "prob": 0.095,
-          "pct": 9.5,
-          "fairDec": 10.53,
-          "vol": 2765082.314205
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 2804714.21046
         },
         {
           "name": "Liverpool",
@@ -91,7 +91,7 @@
           "prob": 0.085,
           "pct": 8.5,
           "fairDec": 11.76,
-          "vol": 2069311.711606
+          "vol": 2084218.387812
         },
         {
           "name": "Real Madrid",
@@ -99,47 +99,47 @@
           "prob": 0.065,
           "pct": 6.5,
           "fairDec": 15.38,
-          "vol": 1785180.195744
+          "vol": 1805022.288274
         },
         {
           "name": "Atletico Madrid",
           "flag": "",
-          "prob": 0.0325,
-          "pct": 3.3,
-          "fairDec": 30.77,
-          "vol": 4159908.413333
+          "prob": 0.028,
+          "pct": 2.8,
+          "fairDec": 35.71,
+          "vol": 4198294.848367
         },
         {
           "name": "Chelsea",
           "flag": "",
-          "prob": 0.0285,
-          "pct": 2.9,
-          "fairDec": 35.09,
-          "vol": 3091191.249018
+          "prob": 0.028,
+          "pct": 2.8,
+          "fairDec": 35.71,
+          "vol": 3121553.270314
         },
         {
           "name": "Bodo Glimt",
           "flag": "",
-          "prob": 0.0275,
-          "pct": 2.8,
-          "fairDec": 36.36,
-          "vol": 11260304.588
+          "prob": 0.022,
+          "pct": 2.2,
+          "fairDec": 45.45,
+          "vol": 11289721.459155
         },
         {
           "name": "Newcastle",
           "flag": "",
-          "prob": 0.021,
-          "pct": 2.1,
-          "fairDec": 47.62,
-          "vol": 2799918.889866
+          "prob": 0.0195,
+          "pct": 1.9,
+          "fairDec": 51.28,
+          "vol": 2822608.065299
         },
         {
           "name": "Tottenham",
           "flag": "",
-          "prob": 0.0165,
-          "pct": 1.7,
-          "fairDec": 60.61,
-          "vol": 7306400.072526
+          "prob": 0.016,
+          "pct": 1.6,
+          "fairDec": 62.5,
+          "vol": 7363434.624951
         }
       ]
     },
@@ -158,23 +158,23 @@
           "prob": 0.1505,
           "pct": 15,
           "fairDec": 6.64,
-          "vol": 2773133.254745
+          "vol": 2796761.730066
         },
         {
           "name": "England",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.1315,
-          "pct": 13.2,
-          "fairDec": 7.6,
-          "vol": 2500263.604446
+          "prob": 0.1325,
+          "pct": 13.3,
+          "fairDec": 7.55,
+          "vol": 2506059.69037
         },
         {
           "name": "Argentina",
           "flag": "🇦🇷",
-          "prob": 0.1145,
-          "pct": 11.5,
-          "fairDec": 8.73,
-          "vol": 3333864.661781
+          "prob": 0.1165,
+          "pct": 11.7,
+          "fairDec": 8.58,
+          "vol": 3340662.449051
         },
         {
           "name": "France",
@@ -182,47 +182,47 @@
           "prob": 0.1095,
           "pct": 10.9,
           "fairDec": 9.13,
-          "vol": 2613018.75862
+          "vol": 2630662.9386
         },
         {
           "name": "Brazil",
           "flag": "🇧🇷",
-          "prob": 0.0855,
+          "prob": 0.086,
           "pct": 8.6,
-          "fairDec": 11.7,
-          "vol": 2366329.408384
+          "fairDec": 11.63,
+          "vol": 2408281.456093
         },
         {
           "name": "Portugal",
           "flag": "🇵🇹",
-          "prob": 0.07,
-          "pct": 7,
-          "fairDec": 14.29,
-          "vol": 6179897.198914
+          "prob": 0.071,
+          "pct": 7.1,
+          "fairDec": 14.08,
+          "vol": 6188905.421133
         },
         {
           "name": "Germany",
           "flag": "🇩🇪",
-          "prob": 0.0545,
+          "prob": 0.0555,
           "pct": 5.5,
-          "fairDec": 18.35,
-          "vol": 4459869.674709
+          "fairDec": 18.02,
+          "vol": 4473201.170867
         },
         {
           "name": "Netherlands",
           "flag": "🇳🇱",
-          "prob": 0.03,
+          "prob": 0.0305,
           "pct": 3,
-          "fairDec": 33.33,
-          "vol": 4731399.241629
+          "fairDec": 32.79,
+          "vol": 4746493.197312
         },
         {
           "name": "Norway",
           "flag": "🇳🇴",
-          "prob": 0.0265,
-          "pct": 2.6,
-          "fairDec": 37.74,
-          "vol": 5042036.108938
+          "prob": 0.0275,
+          "pct": 2.8,
+          "fairDec": 36.36,
+          "vol": 5074675.557195
         },
         {
           "name": "Italy",
@@ -230,7 +230,7 @@
           "prob": 0.0185,
           "pct": 1.8,
           "fairDec": 54.05,
-          "vol": 4267185.098735
+          "vol": 4271865.928098
         },
         {
           "name": "Colombia",
@@ -238,7 +238,7 @@
           "prob": 0.0175,
           "pct": 1.8,
           "fairDec": 57.14,
-          "vol": 3508356.521964
+          "vol": 3516607.319434
         },
         {
           "name": "Belgium",
@@ -246,7 +246,7 @@
           "prob": 0.0175,
           "pct": 1.8,
           "fairDec": 57.14,
-          "vol": 3531284.241583
+          "vol": 3534303.592691
         }
       ]
     },
@@ -262,10 +262,10 @@
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 0.61,
-          "pct": 61,
-          "fairDec": 1.64,
-          "vol": 1625832.912959
+          "prob": 0.615,
+          "pct": 61.5,
+          "fairDec": 1.63,
+          "vol": 1626560.078889
         },
         {
           "name": "Real Madrid",
@@ -273,7 +273,7 @@
           "prob": 0.375,
           "pct": 37.5,
           "fairDec": 2.67,
-          "vol": 1472500.509849
+          "vol": 1473509.386642
         }
       ]
     }

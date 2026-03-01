@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-01T16:03:09.633Z",
+  "updatedAt": "2026-03-01T22:10:53.230Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -10,44 +10,36 @@
       "desc": "Who wins the 2026 T20 Cricket World Cup? South Africa, India and West Indies are the big names.",
       "outcomes": [
         {
-          "name": "South Africa",
-          "flag": "🇿🇦",
-          "prob": 0.3,
-          "pct": 30,
-          "fairDec": 3.33,
-          "vol": 738578
-        },
-        {
           "name": "India",
           "flag": "🇮🇳",
-          "prob": 0.3,
-          "pct": 30,
-          "fairDec": 3.33,
-          "vol": 1295897
+          "prob": 0.46,
+          "pct": 46,
+          "fairDec": 2.17,
+          "vol": 1368458
+        },
+        {
+          "name": "South Africa",
+          "flag": "🇿🇦",
+          "prob": 0.27,
+          "pct": 27,
+          "fairDec": 3.7,
+          "vol": 778171
         },
         {
           "name": "England",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.17,
-          "pct": 17,
-          "fairDec": 5.88,
-          "vol": 341838
+          "prob": 0.14,
+          "pct": 14,
+          "fairDec": 7.14,
+          "vol": 378067
         },
         {
           "name": "New Zealand",
           "flag": "🇳🇿",
-          "prob": 0.13,
-          "pct": 13,
-          "fairDec": 7.69,
-          "vol": 424035
-        },
-        {
-          "name": "West Indies",
-          "flag": "🏝️",
-          "prob": 0.09,
-          "pct": 9,
-          "fairDec": 11.11,
-          "vol": 922808
+          "prob": 0.12,
+          "pct": 12,
+          "fairDec": 8.33,
+          "vol": 440185
         }
       ]
     },
@@ -65,15 +57,15 @@
           "prob": 0.24,
           "pct": 24,
           "fairDec": 4.17,
-          "vol": 78584
+          "vol": 79847
         },
         {
           "name": "Max Verstappen",
           "flag": "🇳🇱",
-          "prob": 0.22,
-          "pct": 22,
-          "fairDec": 4.55,
-          "vol": 136469
+          "prob": 0.21,
+          "pct": 21,
+          "fairDec": 4.76,
+          "vol": 140049
         },
         {
           "name": "Charles Leclerc",
@@ -81,7 +73,7 @@
           "prob": 0.16,
           "pct": 16,
           "fairDec": 6.25,
-          "vol": 155687
+          "vol": 155863
         },
         {
           "name": "Lewis Hamilton",
@@ -89,7 +81,7 @@
           "prob": 0.12,
           "pct": 12,
           "fairDec": 8.33,
-          "vol": 179061
+          "vol": 179419
         },
         {
           "name": "Lando Norris",
@@ -97,7 +89,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 62925
+          "vol": 62956
         },
         {
           "name": "Oscar Piastri",
@@ -105,7 +97,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 82213
+          "vol": 86815
         },
         {
           "name": "Andrea Kimi Antonelli",
@@ -113,7 +105,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 63727
+          "vol": 64390
         },
         {
           "name": "Isack Hadjar",
@@ -136,9 +128,9 @@
         {
           "name": "France",
           "flag": "🇫🇷",
-          "prob": 0.91,
-          "pct": 91,
-          "fairDec": 1.1,
+          "prob": 0.9,
+          "pct": 90,
+          "fairDec": 1.11,
           "vol": 2504
         },
         {
@@ -181,7 +173,7 @@
           "prob": 0.26,
           "pct": 26,
           "fairDec": 3.85,
-          "vol": 859759
+          "vol": 863248
         },
         {
           "name": "Bayern Munich",
@@ -189,7 +181,7 @@
           "prob": 0.13,
           "pct": 13,
           "fairDec": 7.69,
-          "vol": 752577
+          "vol": 757048
         },
         {
           "name": "Barcelona",
@@ -197,7 +189,7 @@
           "prob": 0.12,
           "pct": 12,
           "fairDec": 8.33,
-          "vol": 834157
+          "vol": 835126
         },
         {
           "name": "Manchester City",
@@ -205,7 +197,7 @@
           "prob": 0.09,
           "pct": 9,
           "fairDec": 11.11,
-          "vol": 330132
+          "vol": 331529
         },
         {
           "name": "PSG",
@@ -213,7 +205,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 479848
+          "vol": 480072
         },
         {
           "name": "Liverpool",
@@ -221,7 +213,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 361818
+          "vol": 362638
         },
         {
           "name": "Real Madrid",
@@ -229,7 +221,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 866035
+          "vol": 880049
         },
         {
           "name": "Chelsea",
@@ -237,7 +229,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 419957
+          "vol": 420112
         },
         {
           "name": "Atletico",
@@ -245,7 +237,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 360681
+          "vol": 361170
         },
         {
           "name": "Newcastle",
@@ -253,7 +245,7 @@
           "prob": 0.02,
           "pct": 2,
           "fairDec": 50,
-          "vol": 75782
+          "vol": 75844
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T16:03:10.356Z",
+  "updatedAt": "2026-03-05T22:09:01.968Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -15,7 +15,7 @@
           "prob": 0.69,
           "pct": 69,
           "fairDec": 1.45,
-          "vol": 1867397
+          "vol": 2089247
         },
         {
           "name": "New Zealand",
@@ -23,7 +23,7 @@
           "prob": 0.3,
           "pct": 30,
           "fairDec": 3.33,
-          "vol": 832267
+          "vol": 996062
         }
       ]
     },
@@ -41,7 +41,7 @@
           "prob": 0.24,
           "pct": 24,
           "fairDec": 4.17,
-          "vol": 92992
+          "vol": 95486
         },
         {
           "name": "Max Verstappen",
@@ -49,23 +49,23 @@
           "prob": 0.22,
           "pct": 22,
           "fairDec": 4.55,
-          "vol": 158442
+          "vol": 162761
         },
         {
           "name": "Charles Leclerc",
           "flag": "🇲🇨",
-          "prob": 0.14,
-          "pct": 14,
-          "fairDec": 7.14,
-          "vol": 165802
+          "prob": 0.15,
+          "pct": 15,
+          "fairDec": 6.67,
+          "vol": 167289
         },
         {
           "name": "Lewis Hamilton",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.1,
-          "pct": 10,
-          "fairDec": 10,
-          "vol": 185459
+          "prob": 0.12,
+          "pct": 12,
+          "fairDec": 8.33,
+          "vol": 186387
         },
         {
           "name": "Lando Norris",
@@ -73,7 +73,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 72295
+          "vol": 72879
         },
         {
           "name": "Oscar Piastri",
@@ -81,7 +81,7 @@
           "prob": 0.07,
           "pct": 7,
           "fairDec": 14.29,
-          "vol": 113312
+          "vol": 114209
         },
         {
           "name": "Andrea Kimi Antonelli",
@@ -89,7 +89,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 72893
+          "vol": 73658
         }
       ]
     },
@@ -115,7 +115,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 3444
+          "vol": 3511
         },
         {
           "name": "Italy",
@@ -131,7 +131,7 @@
           "prob": 0.02,
           "pct": 2,
           "fairDec": 50,
-          "vol": 9111
+          "vol": 9220
         }
       ]
     },
@@ -149,15 +149,15 @@
           "prob": 0.28,
           "pct": 28,
           "fairDec": 3.57,
-          "vol": 895266
+          "vol": 895876
         },
         {
           "name": "Bayern Munich",
           "flag": "🔴⚪",
-          "prob": 0.14,
-          "pct": 14,
-          "fairDec": 7.14,
-          "vol": 794796
+          "prob": 0.13,
+          "pct": 13,
+          "fairDec": 7.69,
+          "vol": 795736
         },
         {
           "name": "Barcelona",
@@ -165,7 +165,7 @@
           "prob": 0.13,
           "pct": 13,
           "fairDec": 7.69,
-          "vol": 882802
+          "vol": 884892
         },
         {
           "name": "Manchester City",
@@ -173,7 +173,7 @@
           "prob": 0.09,
           "pct": 9,
           "fairDec": 11.11,
-          "vol": 341974
+          "vol": 343219
         },
         {
           "name": "PSG",
@@ -181,7 +181,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 482356
+          "vol": 482737
         },
         {
           "name": "Liverpool",
@@ -189,7 +189,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 377596
+          "vol": 378054
         },
         {
           "name": "Real Madrid",
@@ -197,7 +197,7 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 999821
+          "vol": 1002152
         },
         {
           "name": "Chelsea",
@@ -205,7 +205,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 427481
+          "vol": 427715
         },
         {
           "name": "Atletico",

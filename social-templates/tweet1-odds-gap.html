@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 675px; font-family: 'Arial Black', Arial, sans-serif; background: linear-gradient(160deg, #0a0a1a, #0d1117); overflow: hidden; display: flex; flex-direction: column; align-items: center; position: relative; }
+.header { margin-top: 30px; text-align: center; }
+.match { font-size: 38px; color: #fff; font-weight: 900; }
+.league { font-size: 18px; color: #ffd700; margin-top: 5px; letter-spacing: 3px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 30px 50px; width: 100%; }
+.card { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; text-align: center; }
+.card.best { background: rgba(0, 255, 136, 0.1); border-color: #00ff88; box-shadow: 0 0 30px rgba(0, 255, 136, 0.2); }
+.card-name { color: #aaa; font-size: 18px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px; }
+.card-odds { font-size: 52px; font-weight: 900; color: #fff; }
+.card.best .card-odds { color: #00ff88; }
+.card-payout { color: #888; font-size: 16px; margin-top: 5px; }
+.card.best .card-payout { color: #00ff88; }
+.best-tag { background: #00ff88; color: #000; font-size: 13px; font-weight: 900; padding: 4px 14px; border-radius: 20px; margin-top: 8px; }
+.big-text { position: absolute; bottom: 30px; font-size: 28px; color: #ff4444; font-weight: 900; }
+.big-text span { color: #ffd700; }
+.branding { position: absolute; bottom: 15px; right: 25px; color: #444; font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="match">⚽ Wolves vs Aston Villa</div>
+    <div class="league">PREMIER LEAGUE · FRI 27 FEB · WOLVES WIN</div>
+  </div>
+  <div class="grid">
+    <div class="card best">
+      <div class="card-name">Smarkets</div>
+      <div class="card-odds">4.30</div>
+      <div class="card-payout">R430 payout</div>
+      <div class="best-tag">🏆 BEST VALUE</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Betfair</div>
+      <div class="card-odds">4.30</div>
+      <div class="card-payout">R430 payout</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Matchbook</div>
+      <div class="card-odds">4.30</div>
+      <div class="card-payout">R430 payout</div>
+    </div>
+    <div class="card">
+      <div class="card-name">1xBet</div>
+      <div class="card-odds">4.12</div>
+      <div class="card-payout">R412 payout</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Pinnacle</div>
+      <div class="card-odds">4.25</div>
+      <div class="card-payout">R425 payout</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Ladbrokes</div>
+      <div class="card-odds">4.20</div>
+      <div class="card-payout">R420 payout</div>
+    </div>
+  </div>
+  <div class="big-text">R18 DIFFERENCE on a R100 bet. <span>That adds up fast.</span></div>
+  <div class="branding">betsorted.co.za</div>
+</body>
+</html>

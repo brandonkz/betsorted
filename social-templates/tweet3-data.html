@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 675px; font-family: 'Arial Black', Arial, sans-serif; background: #0a0a0a; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.bg-number { position: absolute; font-size: 350px; font-weight: 900; color: rgba(255, 68, 68, 0.08); z-index: 1; }
+.stat { font-size: 160px; font-weight: 900; color: #ff4444; z-index: 2; text-shadow: 0 0 60px rgba(255, 68, 68, 0.4); line-height: 1; }
+.word { font-size: 50px; font-weight: 900; color: #fff; z-index: 2; margin-top: -10px; text-transform: uppercase; letter-spacing: 8px; }
+.subtext { font-size: 26px; color: #aaa; z-index: 2; margin-top: 20px; max-width: 800px; text-align: center; line-height: 1.4; }
+.subtext span { color: #ffd700; font-weight: 900; }
+.matches { display: flex; gap: 30px; margin-top: 25px; z-index: 2; }
+.match-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 10px 24px; border-radius: 30px; color: #ccc; font-size: 16px; }
+.branding { position: absolute; bottom: 15px; right: 25px; color: #444; font-size: 14px; z-index: 2; }
+.corner-accent { position: absolute; width: 80px; height: 80px; border: 4px solid #ff4444; z-index: 2; }
+.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+</style>
+</head>
+<body>
+  <div class="corner-accent tl"></div>
+  <div class="corner-accent br"></div>
+  <div class="bg-number">8</div>
+  <div class="stat">8</div>
+  <div class="word">PL matches this week</div>
+  <div class="subtext">Every single one has a <span>different best-odds bookmaker</span>. No one site wins them all.</div>
+  <div class="matches">
+    <div class="match-pill">⚽ Wolves vs Villa</div>
+    <div class="match-pill">⚽ Liverpool vs West Ham</div>
+    <div class="match-pill">⚽ Man Utd vs Palace</div>
+  </div>
+  <div class="branding">betsorted.co.za</div>
+</body>
+</html>

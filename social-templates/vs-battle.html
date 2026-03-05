@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 675px; display: flex; font-family: 'Arial Black', Arial, sans-serif; background: #0a0a0a; overflow: hidden; }
+.left { width: 50%; height: 100%; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.right { width: 50%; height: 100%; background: linear-gradient(135deg, #1a0a0a, #2d1010); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; background: #ffd700; color: #000; font-size: 48px; font-weight: 900; width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+.brand-name { font-size: 42px; color: #fff; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
+.odds-value { font-size: 96px; font-weight: 900; margin: 10px 0; }
+.left .odds-value { color: #4a9eff; }
+.right .odds-value { color: #ff4a4a; }
+.winner .odds-value { color: #00ff88; text-shadow: 0 0 30px rgba(0, 255, 136, 0.5); }
+.match-info { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.1); padding: 10px 30px; border-radius: 30px; color: #aaa; font-size: 18px; z-index: 10; white-space: nowrap; }
+.label { color: #888; font-size: 22px; text-transform: uppercase; letter-spacing: 3px; }
+.winner-badge { background: #00ff88; color: #000; font-size: 18px; font-weight: 900; padding: 8px 24px; border-radius: 30px; position: absolute; bottom: 30px; }
+.branding { position: absolute; bottom: 15px; right: 20px; color: #555; font-size: 14px; z-index: 10; }
+.glow-line { position: absolute; left: 50%; top: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, transparent, #ffd700, transparent); z-index: 5; }
+</style>
+</head>
+<body>
+  <div class="match-info">⚽ Arsenal vs Chelsea · Premier League · Sat 8PM</div>
+  <div class="left winner">
+    <div class="label">Betway</div>
+    <div class="brand-name">Betway</div>
+    <div class="odds-value">2.45</div>
+    <div class="label">Arsenal Win</div>
+    <div class="winner-badge">🏆 BEST ODDS</div>
+  </div>
+  <div class="glow-line"></div>
+  <div class="vs">VS</div>
+  <div class="right">
+    <div class="label">Hollywoodbets</div>
+    <div class="brand-name">Holly</div>
+    <div class="odds-value">2.10</div>
+    <div class="label">Arsenal Win</div>
+  </div>
+  <div class="branding">betsorted.co.za</div>
+</body>
+</html>

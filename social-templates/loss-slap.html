@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 675px; font-family: 'Arial Black', Arial, sans-serif; background: #0a0a0a; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.bg-red { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: #ff0000; filter: blur(200px); opacity: 0.15; top: -100px; }
+.stamp { 
+  position: absolute; 
+  transform: rotate(-12deg); 
+  border: 8px solid #ff0000; 
+  border-radius: 20px; 
+  padding: 20px 50px; 
+  z-index: 5;
+  top: 40px;
+  right: 60px;
+}
+.stamp-text { font-size: 52px; color: #ff0000; font-weight: 900; letter-spacing: 5px; }
+.main-loss { font-size: 200px; font-weight: 900; color: #ff0000; z-index: 2; text-shadow: 0 0 80px rgba(255, 0, 0, 0.5); line-height: 1; }
+.minus { font-size: 120px; color: #ff4444; position: absolute; left: 80px; top: 50%; transform: translateY(-50%); z-index: 2; font-weight: 900; }
+.context { font-size: 30px; color: #fff; z-index: 2; margin-top: 10px; font-weight: 900; }
+.detail { font-size: 24px; color: #888; z-index: 2; margin-top: 15px; max-width: 700px; text-align: center; }
+.detail span { color: #00ff88; font-weight: 900; }
+.match-bar { 
+  position: absolute; 
+  bottom: 30px; 
+  background: rgba(255,255,255,0.06); 
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 30px; 
+  border-radius: 50px; 
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.match-bar .vs { color: #ffd700; font-size: 18px; font-weight: 900; }
+.match-bar .team { color: #ccc; font-size: 18px; }
+.match-bar .league { color: #666; font-size: 14px; }
+.branding { position: absolute; bottom: 15px; right: 25px; color: #333; font-size: 12px; z-index: 2; }
+.warning-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #ff0000 0px, #ff0000 20px, #0a0a0a 20px, #0a0a0a 40px);
+  z-index: 10;
+}
+.warning-stripes-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #ff0000 0px, #ff0000 20px, #0a0a0a 20px, #0a0a0a 40px);
+  z-index: 10;
+}
+</style>
+</head>
+<body>
+  <div class="warning-stripes"></div>
+  <div class="warning-stripes-bottom"></div>
+  <div class="bg-red"></div>
+  <div class="stamp">
+    <div class="stamp-text">YOU LOSE</div>
+  </div>
+  <div class="main-loss">-R18</div>
+  <div class="context">EVERY TIME YOU DON'T COMPARE</div>
+  <div class="detail">Worst odds: <span>R412</span> payout · Best odds: <span>R430</span> payout · Same bet, same match</div>
+  <div class="match-bar">
+    <span class="team">⚽ Wolves</span>
+    <span class="vs">VS</span>
+    <span class="team">Aston Villa</span>
+    <span class="league">· Premier League · Fri 27 Feb</span>
+  </div>
+</body>
+</html>

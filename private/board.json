@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-24",
+  "updated": "2026-03-05",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
     "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
@@ -19,91 +19,183 @@
         "name": "Live odds update (morning)",
         "schedule": "Daily 06:00",
         "source": "Odds API → fetch-live-odds.js",
-        "cronId": "a33620e9-0922-41fd-adfa-6d2e8b03aff7"
+        "cronId": "a33620e9-0922-41fd-adfa-6d2e8b03aff7",
+        "lastStatus": "ok"
       },
       {
         "name": "Live odds update (evening)",
         "schedule": "Daily 18:00",
         "source": "Odds API → fetch-live-odds.js",
-        "cronId": "4cd89068-d1aa-4de1-bfc8-a5e67bfe14e3"
+        "cronId": "4cd89068-d1aa-4de1-bfc8-a5e67bfe14e3",
+        "lastStatus": "ok"
       },
       {
         "name": "Daily GA report",
         "schedule": "Daily 06:00",
         "source": "Google Analytics",
-        "cronId": "dbeb67fd-4847-4a5e-a6b4-dfd34b244a31"
+        "cronId": "dbeb67fd-4847-4a5e-a6b4-dfd34b244a31",
+        "lastStatus": "ok"
       },
       {
-        "name": "Daily tweet generator",
-        "schedule": "Daily 06:15",
-        "source": "Content automation",
-        "cronId": "2c7426cc-2b19-4bbc-96e0-224e22a32920"
+        "name": "DeFi Yield tweet ideas",
+        "schedule": "Daily 06:30",
+        "source": "Funding rates → Telegram",
+        "cronId": "0e2d0779-aef4-45b9-a943-2cc3d221909c",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "SA Trend Monitor",
+        "schedule": "Daily 07:00, 12:00, 17:00",
+        "source": "BetSorted trend scan",
+        "cronId": "58f59b0a-7c41-4d43-b0a0-240d953e1b4c",
+        "lastStatus": "ok"
       },
       {
         "name": "Daily Reddit scan",
         "schedule": "Daily 02:00",
         "source": "Reddit scan",
-        "cronId": "94d510ce-724f-43cc-8aa7-b6065d56485d"
+        "cronId": "94d510ce-724f-43cc-8aa7-b6065d56485d",
+        "lastStatus": "ok"
       },
       {
         "name": "Daily tool ideas",
         "schedule": "Daily 07:20",
         "source": "Crypto tool ideas",
-        "cronId": "3f1b34a7-d15f-4954-94b6-bccd3cfab188"
+        "cronId": "3f1b34a7-d15f-4954-94b6-bccd3cfab188",
+        "lastStatus": "ok"
       },
       {
         "name": "Daily affiliate reminder",
         "schedule": "Daily 09:00",
         "source": "Affiliate programs",
-        "cronId": "d3f7bfd2-0f62-486b-80d8-3691f7b40d60"
+        "cronId": "d3f7bfd2-0f62-486b-80d8-3691f7b40d60",
+        "lastStatus": "ok"
       },
       {
         "name": "Nightly SEO build",
         "schedule": "Daily 00:00",
         "source": "BetSorted + CryptoCasinoSorted",
-        "cronId": "c3fcbb16-47ed-4da3-9142-1e5a24bbe951"
+        "cronId": "c3fcbb16-47ed-4da3-9142-1e5a24bbe951",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Polymarket + Kalshi refresh",
+        "schedule": "Every 6h",
+        "source": "Prediction market data",
+        "cronId": "9423432d-af78-422d-a953-ba8cbb21059d",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "IndexNow ping",
+        "schedule": "Every 6h",
+        "source": "Bing IndexNow",
+        "cronId": "5473e772-adb7-4022-9542-4e5f7599dd87",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Daily Morning Report",
+        "schedule": "Daily 07:10",
+        "source": "All 5 sites summary",
+        "cronId": "f743eccb-6f24-4881-9f25-e75a096ef48b",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Supabase keep-alive ping",
+        "schedule": "Daily 05:00",
+        "source": "ChurchesNearMe Supabase",
+        "cronId": "79d4bc6a-005d-4926-bb81-d5ead58e821e",
+        "lastStatus": "pending",
+        "note": "New job, first run not yet fired"
+      },
+      {
+        "name": "SOL Delta-Neutral Monitor",
+        "schedule": "Every 4h",
+        "source": "Orderly + Hyperliquid",
+        "cronId": "2d1cca75-c45e-4c06-9bea-3115926d1530",
+        "lastStatus": "missing",
+        "note": "Cron job no longer in active list"
       }
     ],
     "lastNight": [
       {
-        "name": "Live odds update (morning)",
-        "time": "24 Feb 06:00",
-        "status": "ok"
-      },
-      {
         "name": "Live odds update (evening)",
-        "time": "23 Feb 18:00",
-        "status": "ok"
-      },
-      {
-        "name": "Daily GA report",
-        "time": "24 Feb 06:00",
-        "status": "ok"
-      },
-      {
-        "name": "Daily tweet generator",
-        "time": "24 Feb 06:15",
-        "status": "ok"
-      },
-      {
-        "name": "Daily Reddit scan",
-        "time": "24 Feb 02:00",
-        "status": "ok"
-      },
-      {
-        "name": "Daily tool ideas",
-        "time": "24 Feb 07:20",
-        "status": "ok"
-      },
-      {
-        "name": "Daily affiliate reminder",
-        "time": "24 Feb 09:00",
+        "time": "4 Mar 18:00",
         "status": "ok"
       },
       {
         "name": "Nightly SEO build",
-        "time": "24 Feb 00:00",
+        "time": "5 Mar 00:00",
+        "status": "ok",
+        "durationMin": 15
+      },
+      {
+        "name": "RetirementSorted Weekly Blog",
+        "time": "5 Mar 01:00",
         "status": "ok"
+      },
+      {
+        "name": "Daily Reddit scan",
+        "time": "5 Mar 02:00",
+        "status": "ok",
+        "durationMin": 3
+      },
+      {
+        "name": "Supabase keep-alive ping",
+        "time": "—",
+        "status": "pending",
+        "note": "First run scheduled for tomorrow 05:00"
+      },
+      {
+        "name": "Live odds update (morning)",
+        "time": "5 Mar 06:00",
+        "status": "ok"
+      },
+      {
+        "name": "Daily GA report",
+        "time": "5 Mar 06:00",
+        "status": "ok"
+      },
+      {
+        "name": "Polymarket + Kalshi refresh",
+        "time": "5 Mar 06:03",
+        "status": "ok"
+      },
+      {
+        "name": "DeFi Yield tweet ideas",
+        "time": "5 Mar 06:30",
+        "status": "ok"
+      },
+      {
+        "name": "IndexNow ping",
+        "time": "5 Mar 06:50",
+        "status": "ok"
+      },
+      {
+        "name": "SA Trend Monitor",
+        "time": "5 Mar 07:00",
+        "status": "ok"
+      },
+      {
+        "name": "Daily Morning Report",
+        "time": "5 Mar 07:10",
+        "status": "ok",
+        "durationMin": 3
+      },
+      {
+        "name": "Daily tool ideas",
+        "time": "5 Mar 07:20",
+        "status": "ok",
+        "durationMin": 3
+      },
+      {
+        "name": "Daily affiliate reminder",
+        "time": "5 Mar 09:00",
+        "status": "ok"
+      },
+      {
+        "name": "Ops board refresh",
+        "time": "5 Mar 09:05",
+        "status": "running"
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-06T10:03:10.377Z",
+  "updatedAt": "2026-03-06T16:03:09.762Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -12,10 +12,10 @@
         {
           "name": "India",
           "flag": "🇮🇳",
-          "prob": 0.68,
-          "pct": 68,
-          "fairDec": 1.47,
-          "vol": 2184437
+          "prob": 0.69,
+          "pct": 69,
+          "fairDec": 1.45,
+          "vol": 2227198
         },
         {
           "name": "New Zealand",
@@ -23,7 +23,7 @@
           "prob": 0.31,
           "pct": 31,
           "fairDec": 3.23,
-          "vol": 1086634
+          "vol": 1133049
         }
       ]
     },
@@ -38,26 +38,26 @@
         {
           "name": "George Russell",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.25,
-          "pct": 25,
-          "fairDec": 4,
-          "vol": 110825
+          "prob": 0.26,
+          "pct": 26,
+          "fairDec": 3.85,
+          "vol": 112031
         },
         {
           "name": "Max Verstappen",
           "flag": "🇳🇱",
-          "prob": 0.23,
-          "pct": 23,
-          "fairDec": 4.35,
-          "vol": 175205
+          "prob": 0.22,
+          "pct": 22,
+          "fairDec": 4.55,
+          "vol": 176353
         },
         {
           "name": "Charles Leclerc",
           "flag": "🇲🇨",
-          "prob": 0.17,
-          "pct": 17,
-          "fairDec": 5.88,
-          "vol": 180243
+          "prob": 0.14,
+          "pct": 14,
+          "fairDec": 7.14,
+          "vol": 182178
         },
         {
           "name": "Lewis Hamilton",
@@ -65,39 +65,31 @@
           "prob": 0.11,
           "pct": 11,
           "fairDec": 9.09,
-          "vol": 191928
+          "vol": 193867
         },
         {
           "name": "Oscar Piastri",
           "flag": "🇦🇺",
-          "prob": 0.09,
-          "pct": 9,
-          "fairDec": 11.11,
-          "vol": 118628
+          "prob": 0.07,
+          "pct": 7,
+          "fairDec": 14.29,
+          "vol": 121592
         },
         {
           "name": "Andrea Kimi Antonelli",
           "flag": "",
-          "prob": 0.08,
-          "pct": 8,
-          "fairDec": 12.5,
-          "vol": 92042
+          "prob": 0.07,
+          "pct": 7,
+          "fairDec": 14.29,
+          "vol": 97420
         },
         {
           "name": "Lando Norris",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.07,
-          "pct": 7,
-          "fairDec": 14.29,
-          "vol": 76236
-        },
-        {
-          "name": "Isack Hadjar",
-          "flag": "",
-          "prob": 0.02,
-          "pct": 2,
-          "fairDec": 50,
-          "vol": 85984
+          "prob": 0.06,
+          "pct": 6,
+          "fairDec": 16.67,
+          "vol": 78786
         }
       ]
     },
@@ -154,10 +146,10 @@
         {
           "name": "Arsenal",
           "flag": "⚪🔴",
-          "prob": 0.28,
-          "pct": 28,
-          "fairDec": 3.57,
-          "vol": 897218
+          "prob": 0.27,
+          "pct": 27,
+          "fairDec": 3.7,
+          "vol": 897839
         },
         {
           "name": "Bayern Munich",
@@ -165,7 +157,7 @@
           "prob": 0.14,
           "pct": 14,
           "fairDec": 7.14,
-          "vol": 797636
+          "vol": 798512
         },
         {
           "name": "Barcelona",
@@ -173,7 +165,7 @@
           "prob": 0.13,
           "pct": 13,
           "fairDec": 7.69,
-          "vol": 891880
+          "vol": 892996
         },
         {
           "name": "Manchester City",
@@ -181,7 +173,7 @@
           "prob": 0.09,
           "pct": 9,
           "fairDec": 11.11,
-          "vol": 343886
+          "vol": 344136
         },
         {
           "name": "PSG",
@@ -205,7 +197,7 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 1007065
+          "vol": 1007165
         },
         {
           "name": "Chelsea",
@@ -222,6 +214,14 @@
           "pct": 3,
           "fairDec": 33.33,
           "vol": 369300
+        },
+        {
+          "name": "Newcastle",
+          "flag": "",
+          "prob": 0.02,
+          "pct": 2,
+          "fairDec": 50,
+          "vol": 93875
         }
       ]
     }

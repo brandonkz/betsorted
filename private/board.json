@@ -14,19 +14,19 @@
     "mission_control": "http://localhost:8765/Documents/OpenClaw/BetSorted/mission-control.html"
   },
   "ops": {
-    "refreshed": "2026-03-07T09:05+02:00",
+    "refreshed": "2026-03-08T09:05+02:00",
     "recurring": [
       {
         "name": "Live odds update (morning)",
         "schedule": "Daily 06:00",
-        "source": "Odds API \u2192 fetch-live-odds.js",
+        "source": "Odds API → fetch-live-odds.js",
         "cronId": "a33620e9-0922-41fd-adfa-6d2e8b03aff7",
         "lastStatus": "ok"
       },
       {
         "name": "Live odds update (evening)",
         "schedule": "Daily 18:00",
-        "source": "Odds API \u2192 fetch-live-odds.js",
+        "source": "Odds API → fetch-live-odds.js",
         "cronId": "4cd89068-d1aa-4de1-bfc8-a5e67bfe14e3",
         "lastStatus": "ok"
       },
@@ -108,9 +108,17 @@
         "lastStatus": "ok"
       },
       {
+        "name": "Daily Tweet Generator",
+        "schedule": "Daily 06:00",
+        "source": "BetSorted tweets",
+        "cronId": null,
+        "lastStatus": "missing",
+        "note": "No dedicated cron job found — tweets may be part of morning report or manual"
+      },
+      {
         "name": "DeFi Yield tweet ideas",
         "schedule": "Daily 06:30",
-        "source": "Funding rates \u2192 Telegram",
+        "source": "Funding rates → Telegram",
         "cronId": "0e2d0779-aef4-45b9-a943-2cc3d221909c",
         "lastStatus": "missing",
         "note": "Cron job no longer in active list"
@@ -127,90 +135,85 @@
     "lastNight": [
       {
         "name": "Live odds update (evening)",
-        "time": "6 Mar 18:00",
+        "time": "7 Mar 18:00",
         "status": "ok",
-        "durationMin": 2
+        "durationMin": 0
       },
       {
         "name": "Nightly SEO build",
-        "time": "7 Mar 00:00",
+        "time": "8 Mar 00:00",
         "status": "ok",
-        "durationMin": 13
+        "durationMin": 12
       },
       {
         "name": "Daily Reddit scan",
-        "time": "7 Mar 02:00",
+        "time": "8 Mar 02:00",
         "status": "ok",
         "durationMin": 3
       },
       {
-        "name": "Weekly Blog - PowerSorted",
-        "time": "7 Mar 03:00",
-        "status": "ok",
-        "durationMin": 1
-      },
-      {
         "name": "Supabase keep-alive ping",
-        "time": "7 Mar 05:00",
+        "time": "8 Mar 05:00",
         "status": "ok"
       },
       {
         "name": "Live odds update (morning)",
-        "time": "7 Mar 06:00",
+        "time": "8 Mar 06:00",
         "status": "ok"
       },
       {
         "name": "Daily GA report",
-        "time": "7 Mar 06:00",
+        "time": "8 Mar 06:00",
         "status": "ok",
         "durationMin": 1
       },
       {
         "name": "Daily Portfolio Tracker",
-        "time": "7 Mar 06:00",
+        "time": "8 Mar 06:00",
         "status": "ok"
       },
       {
         "name": "Polymarket + Kalshi refresh",
-        "time": "7 Mar 06:03",
+        "time": "8 Mar 06:03",
         "status": "ok"
       },
       {
         "name": "IndexNow ping",
-        "time": "7 Mar 06:50",
+        "time": "8 Mar 06:50",
         "status": "ok"
       },
       {
         "name": "SA Trend Monitor",
-        "time": "7 Mar 07:00",
+        "time": "8 Mar 07:00",
         "status": "ok"
       },
       {
         "name": "Daily Morning Report",
-        "time": "7 Mar 07:10",
+        "time": "8 Mar 07:10",
         "status": "ok",
-        "durationMin": 4
+        "durationMin": 3
       },
       {
         "name": "Daily tool ideas",
-        "time": "7 Mar 07:20",
+        "time": "8 Mar 07:20",
         "status": "ok",
         "durationMin": 2
       },
       {
         "name": "Daily affiliate reminder",
-        "time": "7 Mar 09:00",
-        "status": "ok"
+        "time": "8 Mar 09:00",
+        "status": "ok",
+        "durationMin": 1
       },
       {
         "name": "Ops board refresh",
-        "time": "7 Mar 09:05",
+        "time": "8 Mar 09:05",
         "status": "running"
       }
     ]
   },
   "personal": {
-    "title": "Brandon \u2014 Personal Board",
+    "title": "Brandon — Personal Board",
     "columns": [
       {
         "id": "todo",
@@ -229,7 +232,7 @@
           },
           {
             "title": "Content calendar (Tweets + Reddit)",
-            "body": "Paste\u2011ready content + weekly cadence",
+            "body": "Paste‑ready content + weekly cadence",
             "meta": "Private Google Doc",
             "links": [
               {
@@ -251,7 +254,7 @@
           },
           {
             "title": "Affiliate tracker",
-            "body": "Signed\u2011up affiliates + links",
+            "body": "Signed‑up affiliates + links",
             "meta": "Private page",
             "links": [
               {
@@ -308,7 +311,7 @@
         "title": "Doing",
         "items": [
           {
-            "title": "Affiliate outreach follow\u2011ups",
+            "title": "Affiliate outreach follow‑ups",
             "body": "Confirm pending approvals",
             "meta": "In progress",
             "links": [
@@ -363,7 +366,7 @@
       "items": [
         {
           "title": "Fixtures page (manual weekly)",
-          "body": "PSL + Rugby + SA20 + EPL + UFC/boxing \u2014 build when you confirm",
+          "body": "PSL + Rugby + SA20 + EPL + UFC/boxing — build when you confirm",
           "meta": "Pending"
         }
       ]
@@ -604,7 +607,7 @@
       },
       {
         "time": "12:00",
-        "text": "If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za \u2014 it's worth 60 seconds."
+        "text": "If two bookies have the same odds, the difference is payout speed. We track the fastest paying bookmakers in SA on betsorted.co.za — it's worth 60 seconds."
       },
       {
         "time": "18:00",
@@ -618,11 +621,11 @@
       },
       {
         "time": "14:00",
-        "text": "No\u2011KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com"
+        "text": "No‑KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com"
       },
       {
         "time": "20:00",
-        "text": "If a casino hides its provably\u2011fair process, that's a red flag. Compare transparent casinos here: cryptocasinosorted.com"
+        "text": "If a casino hides its provably‑fair process, that's a red flag. Compare transparent casinos here: cryptocasinosorted.com"
       },
       {
         "time": "Reply",

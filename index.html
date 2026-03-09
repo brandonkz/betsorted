@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Force non-www redirect
+    if (window.location.hostname.startsWith('www.')) {
+      window.location.replace(window.location.href.replace('www.', ''));
+    }
+  </script>
   <meta name="description" content="Free betting calculators for South Africa. Compare Betway vs Hollywoodbets, EFT payouts, Ozow speeds, bonuses, and odds. Data-free mobile tools.">
   <link rel="canonical" href="https://betsorted.co.za/">
   <meta name="keywords" content="best bookmakers south africa, hollywoodbets vs betway, sports betting odds comparison sa, south africa betting sites, betway, hollywoodbets">

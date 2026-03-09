@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-07",
+  "updated": "2026-03-09",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
     "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
@@ -14,7 +14,7 @@
     "mission_control": "http://localhost:8765/Documents/OpenClaw/BetSorted/mission-control.html"
   },
   "ops": {
-    "refreshed": "2026-03-08T09:05+02:00",
+    "refreshed": "2026-03-09T09:05+02:00",
     "recurring": [
       {
         "name": "Live odds update (morning)",
@@ -108,106 +108,155 @@
         "lastStatus": "ok"
       },
       {
+        "name": "Weekly SEO blog content (Mon 03:00)",
+        "schedule": "Mondays 03:00",
+        "source": "All sites blog generation",
+        "cronId": "bef41fa7-d7fd-40c8-bdde-bb15c337e18e",
+        "lastStatus": "error",
+        "consecutiveErrors": 3,
+        "note": "⚠️ 3 consecutive errors — last error: Message failed"
+      },
+      {
+        "name": "BetSorted blog (Wednesday)",
+        "schedule": "Wednesdays 03:00",
+        "source": "BetSorted SEO blog",
+        "cronId": "268cf8da-1c28-4ded-bc60-0259622477fa",
+        "lastStatus": "error",
+        "consecutiveErrors": 1,
+        "note": "Last run error: Message failed"
+      },
+      {
+        "name": "BetSorted blog (Monday)",
+        "schedule": "Mondays 02:00",
+        "source": "BetSorted SEO blog",
+        "cronId": "f74fa8de-bb35-4044-a20c-40395b2765d4",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "BetSorted blog (Friday)",
+        "schedule": "Fridays 02:20",
+        "source": "BetSorted weekend SEO blog",
+        "cronId": "256cc0bc-4c47-4634-8918-04c8aa7e9715",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "CryptoCasinoSorted weekly blog",
+        "schedule": "Mondays 01:00",
+        "source": "CCS SEO blog",
+        "cronId": "2f339975-1297-4b0a-9fda-41801f3c34e9",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Twitter Report Reminder",
+        "schedule": "Mondays 09:00",
+        "source": "Analytics CSV prompt",
+        "cronId": "63b86f4a-f7dc-48bc-b130-e376d3c7ee62",
+        "lastStatus": "ok"
+      },
+      {
         "name": "Daily Tweet Generator",
         "schedule": "Daily 06:00",
         "source": "BetSorted tweets",
         "cronId": null,
         "lastStatus": "missing",
-        "note": "No dedicated cron job found — tweets may be part of morning report or manual"
-      },
-      {
-        "name": "DeFi Yield tweet ideas",
-        "schedule": "Daily 06:30",
-        "source": "Funding rates → Telegram",
-        "cronId": "0e2d0779-aef4-45b9-a943-2cc3d221909c",
-        "lastStatus": "missing",
-        "note": "Cron job no longer in active list"
-      },
-      {
-        "name": "SOL Delta-Neutral Monitor",
-        "schedule": "Every 4h",
-        "source": "Orderly + Hyperliquid",
-        "cronId": "2d1cca75-c45e-4c06-9bea-3115926d1530",
-        "lastStatus": "missing",
-        "note": "Cron job no longer in active list"
+        "note": "No dedicated cron job — tweets may be part of morning report or manual"
       }
     ],
     "lastNight": [
       {
         "name": "Live odds update (evening)",
-        "time": "7 Mar 18:00",
+        "time": "8 Mar 18:00",
         "status": "ok",
         "durationMin": 0
       },
       {
         "name": "Nightly SEO build",
-        "time": "8 Mar 00:00",
+        "time": "9 Mar 00:00",
         "status": "ok",
         "durationMin": 12
       },
       {
-        "name": "Daily Reddit scan",
-        "time": "8 Mar 02:00",
+        "name": "CryptoCasinoSorted weekly blog",
+        "time": "9 Mar 01:00",
         "status": "ok",
-        "durationMin": 3
+        "durationMin": 5
+      },
+      {
+        "name": "BetSorted blog (Monday)",
+        "time": "9 Mar 02:00",
+        "status": "ok",
+        "durationMin": 6
+      },
+      {
+        "name": "Daily Reddit scan",
+        "time": "9 Mar 02:00",
+        "status": "ok",
+        "durationMin": 2
+      },
+      {
+        "name": "Weekly SEO blog content",
+        "time": "9 Mar 03:00",
+        "status": "error",
+        "note": "3 consecutive errors — Message failed"
       },
       {
         "name": "Supabase keep-alive ping",
-        "time": "8 Mar 05:00",
+        "time": "9 Mar 05:00",
         "status": "ok"
       },
       {
         "name": "Live odds update (morning)",
-        "time": "8 Mar 06:00",
+        "time": "9 Mar 06:00",
         "status": "ok"
       },
       {
         "name": "Daily GA report",
-        "time": "8 Mar 06:00",
+        "time": "9 Mar 06:00",
         "status": "ok",
         "durationMin": 1
       },
       {
         "name": "Daily Portfolio Tracker",
-        "time": "8 Mar 06:00",
-        "status": "ok"
+        "time": "9 Mar 06:00",
+        "status": "ok",
+        "durationMin": 1
       },
       {
         "name": "Polymarket + Kalshi refresh",
-        "time": "8 Mar 06:03",
-        "status": "ok"
-      },
-      {
-        "name": "IndexNow ping",
-        "time": "8 Mar 06:50",
+        "time": "9 Mar 06:03",
         "status": "ok"
       },
       {
         "name": "SA Trend Monitor",
-        "time": "8 Mar 07:00",
+        "time": "9 Mar 07:00",
         "status": "ok"
       },
       {
         "name": "Daily Morning Report",
-        "time": "8 Mar 07:10",
+        "time": "9 Mar 07:10",
         "status": "ok",
-        "durationMin": 3
+        "durationMin": 4
       },
       {
         "name": "Daily tool ideas",
-        "time": "8 Mar 07:20",
+        "time": "9 Mar 07:20",
         "status": "ok",
         "durationMin": 2
       },
       {
         "name": "Daily affiliate reminder",
-        "time": "8 Mar 09:00",
+        "time": "9 Mar 09:00",
         "status": "ok",
-        "durationMin": 1
+        "durationMin": 3
+      },
+      {
+        "name": "Twitter Report Reminder",
+        "time": "9 Mar 09:00",
+        "status": "ok"
       },
       {
         "name": "Ops board refresh",
-        "time": "8 Mar 09:05",
+        "time": "9 Mar 09:05",
         "status": "running"
       }
     ]

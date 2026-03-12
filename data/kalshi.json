@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-11T22:13:23.025Z",
+  "updatedAt": "2026-03-12T04:03:09.826Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -21,10 +21,10 @@
         {
           "name": "George Russell",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.46,
-          "pct": 46,
-          "fairDec": 2.17,
-          "vol": 230597
+          "prob": 0.45,
+          "pct": 45,
+          "fairDec": 2.22,
+          "vol": 231264
         },
         {
           "name": "Max Verstappen",
@@ -32,7 +32,7 @@
           "prob": 0.18,
           "pct": 18,
           "fairDec": 5.56,
-          "vol": 321199
+          "vol": 325846
         },
         {
           "name": "Charles Leclerc",
@@ -40,7 +40,7 @@
           "prob": 0.1,
           "pct": 10,
           "fairDec": 10,
-          "vol": 265270
+          "vol": 265440
         },
         {
           "name": "Andrea Kimi Antonelli",
@@ -48,7 +48,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 167311
+          "vol": 167560
         },
         {
           "name": "Lewis Hamilton",
@@ -56,7 +56,7 @@
           "prob": 0.06,
           "pct": 6,
           "fairDec": 16.67,
-          "vol": 243835
+          "vol": 244996
         },
         {
           "name": "Oscar Piastri",
@@ -72,7 +72,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 166876
+          "vol": 167080
         }
       ]
     },
@@ -106,7 +106,7 @@
           "prob": 0.08,
           "pct": 8,
           "fairDec": 12.5,
-          "vol": 5790
+          "vol": 5868
         },
         {
           "name": "Italy",
@@ -132,15 +132,15 @@
           "prob": 0.25,
           "pct": 25,
           "fairDec": 4,
-          "vol": 978202
+          "vol": 983192
         },
         {
           "name": "Bayern Munich",
           "flag": "🔴⚪",
-          "prob": 0.21,
-          "pct": 21,
-          "fairDec": 4.76,
-          "vol": 931462
+          "prob": 0.22,
+          "pct": 22,
+          "fairDec": 4.55,
+          "vol": 935096
         },
         {
           "name": "Barcelona",
@@ -148,15 +148,7 @@
           "prob": 0.12,
           "pct": 12,
           "fairDec": 8.33,
-          "vol": 951013
-        },
-        {
-          "name": "Real Madrid",
-          "flag": "⚪",
-          "prob": 0.1,
-          "pct": 10,
-          "fairDec": 10,
-          "vol": 1141728
+          "vol": 955255
         },
         {
           "name": "PSG",
@@ -164,7 +156,15 @@
           "prob": 0.1,
           "pct": 10,
           "fairDec": 10,
-          "vol": 549344
+          "vol": 564024
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "⚪",
+          "prob": 0.09,
+          "pct": 9,
+          "fairDec": 11.11,
+          "vol": 1149651
         },
         {
           "name": "Liverpool",
@@ -172,7 +172,7 @@
           "prob": 0.05,
           "pct": 5,
           "fairDec": 20,
-          "vol": 403110
+          "vol": 405714
         },
         {
           "name": "Atletico",
@@ -180,7 +180,7 @@
           "prob": 0.04,
           "pct": 4,
           "fairDec": 25,
-          "vol": 415468
+          "vol": 419444
         },
         {
           "name": "Bodoe/Glimt",
@@ -188,7 +188,7 @@
           "prob": 0.03,
           "pct": 3,
           "fairDec": 33.33,
-          "vol": 521513
+          "vol": 530557
         },
         {
           "name": "Manchester City",
@@ -196,15 +196,7 @@
           "prob": 0.02,
           "pct": 2,
           "fairDec": 50,
-          "vol": 379796
-        },
-        {
-          "name": "Galatasaray",
-          "flag": "",
-          "prob": 0.02,
-          "pct": 2,
-          "fairDec": 50,
-          "vol": 236427
+          "vol": 385135
         }
       ]
     }

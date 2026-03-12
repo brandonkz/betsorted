@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T04:03:09.826Z",
+  "updatedAt": "2026-03-12T10:03:10.616Z",
   "series": [
     {
       "ticker": "KXT20WORLDCUP",
@@ -17,64 +17,7 @@
       "volumeNote": "~500k contracts",
       "ends": "Dec 2025",
       "desc": "Verstappen vs Russell vs Norris — who takes the 2025 Formula 1 title?",
-      "outcomes": [
-        {
-          "name": "George Russell",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.45,
-          "pct": 45,
-          "fairDec": 2.22,
-          "vol": 231264
-        },
-        {
-          "name": "Max Verstappen",
-          "flag": "🇳🇱",
-          "prob": 0.18,
-          "pct": 18,
-          "fairDec": 5.56,
-          "vol": 325846
-        },
-        {
-          "name": "Charles Leclerc",
-          "flag": "🇲🇨",
-          "prob": 0.1,
-          "pct": 10,
-          "fairDec": 10,
-          "vol": 265440
-        },
-        {
-          "name": "Andrea Kimi Antonelli",
-          "flag": "",
-          "prob": 0.08,
-          "pct": 8,
-          "fairDec": 12.5,
-          "vol": 167560
-        },
-        {
-          "name": "Lewis Hamilton",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.06,
-          "pct": 6,
-          "fairDec": 16.67,
-          "vol": 244996
-        },
-        {
-          "name": "Oscar Piastri",
-          "flag": "🇦🇺",
-          "prob": 0.03,
-          "pct": 3,
-          "fairDec": 33.33,
-          "vol": 185973
-        },
-        {
-          "name": "Lando Norris",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.03,
-          "pct": 3,
-          "fairDec": 33.33,
-          "vol": 167080
-        }
-      ]
+      "outcomes": []
     },
     {
       "ticker": "KXSIXNATIONS",
@@ -83,40 +26,7 @@
       "volumeNote": "~2k contracts",
       "ends": "Mar 2026",
       "desc": "France dominating Six Nations. Can England or Ireland catch them?",
-      "outcomes": [
-        {
-          "name": "France",
-          "flag": "🇫🇷",
-          "prob": 0.81,
-          "pct": 81,
-          "fairDec": 1.23,
-          "vol": 3552
-        },
-        {
-          "name": "Ireland",
-          "flag": "🇮🇪",
-          "prob": 0.11,
-          "pct": 11,
-          "fairDec": 9.09,
-          "vol": 14675
-        },
-        {
-          "name": "Scotland",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "prob": 0.08,
-          "pct": 8,
-          "fairDec": 12.5,
-          "vol": 5868
-        },
-        {
-          "name": "Italy",
-          "flag": "🇮🇹",
-          "prob": 0.02,
-          "pct": 2,
-          "fairDec": 50,
-          "vol": 467
-        }
-      ]
+      "outcomes": []
     },
     {
       "ticker": "KXUCL",
@@ -125,80 +35,7 @@
       "volumeNote": "~4M contracts",
       "ends": "May 2026",
       "desc": "UCL title race — Arsenal lead the Kalshi market ahead of Bayern and Barcelona.",
-      "outcomes": [
-        {
-          "name": "Arsenal",
-          "flag": "⚪🔴",
-          "prob": 0.25,
-          "pct": 25,
-          "fairDec": 4,
-          "vol": 983192
-        },
-        {
-          "name": "Bayern Munich",
-          "flag": "🔴⚪",
-          "prob": 0.22,
-          "pct": 22,
-          "fairDec": 4.55,
-          "vol": 935096
-        },
-        {
-          "name": "Barcelona",
-          "flag": "🔵🔴",
-          "prob": 0.12,
-          "pct": 12,
-          "fairDec": 8.33,
-          "vol": 955255
-        },
-        {
-          "name": "PSG",
-          "flag": "🔵🔴⚪",
-          "prob": 0.1,
-          "pct": 10,
-          "fairDec": 10,
-          "vol": 564024
-        },
-        {
-          "name": "Real Madrid",
-          "flag": "⚪",
-          "prob": 0.09,
-          "pct": 9,
-          "fairDec": 11.11,
-          "vol": 1149651
-        },
-        {
-          "name": "Liverpool",
-          "flag": "🔴",
-          "prob": 0.05,
-          "pct": 5,
-          "fairDec": 20,
-          "vol": 405714
-        },
-        {
-          "name": "Atletico",
-          "flag": "",
-          "prob": 0.04,
-          "pct": 4,
-          "fairDec": 25,
-          "vol": 419444
-        },
-        {
-          "name": "Bodoe/Glimt",
-          "flag": "",
-          "prob": 0.03,
-          "pct": 3,
-          "fairDec": 33.33,
-          "vol": 530557
-        },
-        {
-          "name": "Manchester City",
-          "flag": "🔵",
-          "prob": 0.02,
-          "pct": 2,
-          "fairDec": 50,
-          "vol": 385135
-        }
-      ]
+      "outcomes": []
     }
   ]
 }

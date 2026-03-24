@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-09",
+  "updated": "2026-03-24",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
     "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
@@ -14,251 +14,235 @@
     "mission_control": "http://localhost:8765/Documents/OpenClaw/BetSorted/mission-control.html"
   },
   "ops": {
-    "refreshed": "2026-03-09T09:05+02:00",
+    "refreshed": "2026-03-24T09:05+02:00",
     "recurring": [
       {
         "name": "Live odds update (morning)",
         "schedule": "Daily 06:00",
-        "source": "Odds API → fetch-live-odds.js",
-        "cronId": "a33620e9-0922-41fd-adfa-6d2e8b03aff7",
+        "source": "Odds API",
+        "cronId": "a33620e9",
+        "lastRun": "24 Mar 06:00",
         "lastStatus": "ok"
       },
       {
         "name": "Live odds update (evening)",
         "schedule": "Daily 18:00",
-        "source": "Odds API → fetch-live-odds.js",
-        "cronId": "4cd89068-d1aa-4de1-bfc8-a5e67bfe14e3",
+        "source": "Odds API",
+        "cronId": "4cd89068",
+        "lastRun": "23 Mar 18:00",
         "lastStatus": "ok"
       },
       {
         "name": "Daily GA report",
         "schedule": "Daily 06:00",
         "source": "Google Analytics",
-        "cronId": "dbeb67fd-4847-4a5e-a6b4-dfd34b244a31",
+        "cronId": "dbeb67fd",
+        "lastRun": "24 Mar 06:00",
         "lastStatus": "ok"
       },
       {
-        "name": "Daily Portfolio Tracker",
-        "schedule": "Daily 06:00",
-        "source": "portfolio/tracker.js",
-        "cronId": "a4dd5835-8363-41aa-80af-5a0e06a8fa88",
+        "name": "BetSorted Daily Tweet Drafts",
+        "schedule": "Daily 08:00",
+        "source": "Grok API + Postiz scheduler",
+        "cronId": "ec3a981e",
+        "lastRun": "24 Mar 08:01",
         "lastStatus": "ok"
       },
       {
-        "name": "SA Trend Monitor",
-        "schedule": "Daily 07:00, 12:00, 17:00",
-        "source": "tweet-cards/trend-monitor.js",
-        "cronId": "58f59b0a-7c41-4d43-b0a0-240d953e1b4c",
-        "lastStatus": "ok"
-      },
-      {
-        "name": "Daily Morning Report",
-        "schedule": "Daily 07:10",
-        "source": "All 5 sites summary",
-        "cronId": "f743eccb-6f24-4881-9f25-e75a096ef48b",
+        "name": "Daily Crypto Casino Tweet Drafts",
+        "schedule": "Daily 08:30",
+        "source": "Gemini image gen + deposit data",
+        "cronId": "3e4a78dd",
+        "lastRun": "24 Mar 08:30",
         "lastStatus": "ok"
       },
       {
         "name": "Daily Reddit scan",
         "schedule": "Daily 02:00",
         "source": "Reddit opportunities",
-        "cronId": "94d510ce-724f-43cc-8aa7-b6065d56485d",
+        "cronId": "94d510ce",
+        "lastRun": "24 Mar 02:00",
         "lastStatus": "ok"
       },
       {
-        "name": "Daily tool ideas",
+        "name": "Daily XTP Terminal Research",
         "schedule": "Daily 07:20",
-        "source": "Crypto tool ideas",
-        "cronId": "3f1b34a7-d15f-4954-94b6-bccd3cfab188",
+        "source": "Crypto industry intel",
+        "cronId": "3f1b34a7",
+        "lastRun": "24 Mar 07:20",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Daily Morning Report",
+        "schedule": "Daily 07:10",
+        "source": "All 5 sites summary",
+        "cronId": "f743eccb",
+        "lastRun": "24 Mar 07:10",
         "lastStatus": "ok"
       },
       {
         "name": "Daily affiliate reminder",
         "schedule": "Daily 09:00",
         "source": "Affiliate programs",
-        "cronId": "d3f7bfd2-0f62-486b-80d8-3691f7b40d60",
+        "cronId": "d3f7bfd2",
+        "lastRun": "24 Mar 09:00",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Arkham deposit address reminder",
+        "schedule": "Daily 09:00",
+        "source": "System event reminder",
+        "cronId": "35c4fdc4",
+        "lastRun": "24 Mar 09:00",
         "lastStatus": "ok"
       },
       {
         "name": "Nightly SEO build",
         "schedule": "Daily 00:00",
         "source": "BetSorted + CryptoCasinoSorted",
-        "cronId": "c3fcbb16-47ed-4da3-9142-1e5a24bbe951",
+        "cronId": "c3fcbb16",
+        "lastRun": "24 Mar 00:00",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Daily Portfolio Tracker",
+        "schedule": "Daily 06:00",
+        "source": "portfolio/tracker.js",
+        "cronId": "a4dd5835",
+        "lastRun": "24 Mar 06:00",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Daily Crypto Casino P&L Tweets",
+        "schedule": "Daily 05:30",
+        "source": "scan-gambler-pnl.js + whale-watch.js",
+        "cronId": "da16f4e8",
+        "lastRun": "24 Mar 05:30",
+        "lastStatus": "error",
+        "consecutiveErrors": 1,
+        "note": "Message failed"
+      },
+      {
+        "name": "OpenClaw Nightly Backup",
+        "schedule": "Daily 23:00",
+        "source": "backup.sh",
+        "cronId": "d1a43a59",
+        "lastRun": "23 Mar 23:00",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "Daily OpenClaw Backup",
+        "schedule": "Daily 03:00",
+        "source": "GitHub private repo sync",
+        "cronId": "10919a62",
+        "lastRun": "24 Mar 03:00",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "CryptoCasinoSorted News Update",
+        "schedule": "4x daily (02,08,14,20)",
+        "source": "update-news-promos.py",
+        "cronId": "71ad9d39",
+        "lastRun": "24 Mar 08:00",
         "lastStatus": "ok"
       },
       {
         "name": "Polymarket + Kalshi refresh",
         "schedule": "Every 6h",
         "source": "Prediction market data",
-        "cronId": "9423432d-af78-422d-a953-ba8cbb21059d",
+        "cronId": "9423432d",
+        "lastRun": "24 Mar 06:03",
         "lastStatus": "ok"
       },
       {
         "name": "IndexNow ping",
         "schedule": "Every 6h",
         "source": "Bing IndexNow (all sites)",
-        "cronId": "5473e772-adb7-4022-9542-4e5f7599dd87",
+        "cronId": "5473e772",
+        "lastRun": "24 Mar 06:50",
         "lastStatus": "ok"
-      },
-      {
-        "name": "Supabase keep-alive ping",
-        "schedule": "Daily 05:00",
-        "source": "ChurchesNearMe Supabase",
-        "cronId": "79d4bc6a-005d-4926-bb81-d5ead58e821e",
-        "lastStatus": "ok"
-      },
-      {
-        "name": "Weekly SEO blog content (Mon 03:00)",
-        "schedule": "Mondays 03:00",
-        "source": "All sites blog generation",
-        "cronId": "bef41fa7-d7fd-40c8-bdde-bb15c337e18e",
-        "lastStatus": "error",
-        "consecutiveErrors": 3,
-        "note": "⚠️ 3 consecutive errors — last error: Message failed"
-      },
-      {
-        "name": "BetSorted blog (Wednesday)",
-        "schedule": "Wednesdays 03:00",
-        "source": "BetSorted SEO blog",
-        "cronId": "268cf8da-1c28-4ded-bc60-0259622477fa",
-        "lastStatus": "error",
-        "consecutiveErrors": 1,
-        "note": "Last run error: Message failed"
       },
       {
         "name": "BetSorted blog (Monday)",
         "schedule": "Mondays 02:00",
         "source": "BetSorted SEO blog",
-        "cronId": "f74fa8de-bb35-4044-a20c-40395b2765d4",
+        "cronId": "f74fa8de",
+        "lastRun": "23 Mar 02:02",
+        "lastStatus": "ok"
+      },
+      {
+        "name": "BetSorted blog (Wednesday)",
+        "schedule": "Wednesdays 03:00",
+        "source": "BetSorted SEO blog",
+        "cronId": "268cf8da",
+        "lastRun": "18 Mar 03:00",
         "lastStatus": "ok"
       },
       {
         "name": "BetSorted blog (Friday)",
         "schedule": "Fridays 02:20",
         "source": "BetSorted weekend SEO blog",
-        "cronId": "256cc0bc-4c47-4634-8918-04c8aa7e9715",
+        "cronId": "256cc0bc",
+        "lastRun": "20 Mar 02:20",
+        "lastStatus": "error",
+        "consecutiveErrors": 2,
+        "note": "rate_limit — 2 consecutive errors"
+      },
+      {
+        "name": "Weekly SEO blog content (Mon 03:00)",
+        "schedule": "Mondays 03:00",
+        "source": "All sites blog generation",
+        "cronId": "bef41fa7",
+        "lastRun": "24 Mar 03:00",
         "lastStatus": "ok"
       },
       {
-        "name": "CryptoCasinoSorted weekly blog",
-        "schedule": "Mondays 01:00",
-        "source": "CCS SEO blog",
-        "cronId": "2f339975-1297-4b0a-9fda-41801f3c34e9",
+        "name": "FitSorted Edge Case Testing",
+        "schedule": "Daily 01:00",
+        "source": "FitSorted calorie accuracy",
+        "cronId": "60d2ab56",
+        "lastRun": "24 Mar 01:01",
         "lastStatus": "ok"
-      },
-      {
-        "name": "Twitter Report Reminder",
-        "schedule": "Mondays 09:00",
-        "source": "Analytics CSV prompt",
-        "cronId": "63b86f4a-f7dc-48bc-b130-e376d3c7ee62",
-        "lastStatus": "ok"
-      },
-      {
-        "name": "Daily Tweet Generator",
-        "schedule": "Daily 06:00",
-        "source": "BetSorted tweets",
-        "cronId": null,
-        "lastStatus": "missing",
-        "note": "No dedicated cron job — tweets may be part of morning report or manual"
-      }
-    ],
-    "lastNight": [
-      {
-        "name": "Live odds update (evening)",
-        "time": "8 Mar 18:00",
-        "status": "ok",
-        "durationMin": 0
-      },
-      {
-        "name": "Nightly SEO build",
-        "time": "9 Mar 00:00",
-        "status": "ok",
-        "durationMin": 12
-      },
-      {
-        "name": "CryptoCasinoSorted weekly blog",
-        "time": "9 Mar 01:00",
-        "status": "ok",
-        "durationMin": 5
-      },
-      {
-        "name": "BetSorted blog (Monday)",
-        "time": "9 Mar 02:00",
-        "status": "ok",
-        "durationMin": 6
-      },
-      {
-        "name": "Daily Reddit scan",
-        "time": "9 Mar 02:00",
-        "status": "ok",
-        "durationMin": 2
-      },
-      {
-        "name": "Weekly SEO blog content",
-        "time": "9 Mar 03:00",
-        "status": "error",
-        "note": "3 consecutive errors — Message failed"
-      },
-      {
-        "name": "Supabase keep-alive ping",
-        "time": "9 Mar 05:00",
-        "status": "ok"
-      },
-      {
-        "name": "Live odds update (morning)",
-        "time": "9 Mar 06:00",
-        "status": "ok"
-      },
-      {
-        "name": "Daily GA report",
-        "time": "9 Mar 06:00",
-        "status": "ok",
-        "durationMin": 1
-      },
-      {
-        "name": "Daily Portfolio Tracker",
-        "time": "9 Mar 06:00",
-        "status": "ok",
-        "durationMin": 1
-      },
-      {
-        "name": "Polymarket + Kalshi refresh",
-        "time": "9 Mar 06:03",
-        "status": "ok"
-      },
-      {
-        "name": "SA Trend Monitor",
-        "time": "9 Mar 07:00",
-        "status": "ok"
-      },
-      {
-        "name": "Daily Morning Report",
-        "time": "9 Mar 07:10",
-        "status": "ok",
-        "durationMin": 4
-      },
-      {
-        "name": "Daily tool ideas",
-        "time": "9 Mar 07:20",
-        "status": "ok",
-        "durationMin": 2
-      },
-      {
-        "name": "Daily affiliate reminder",
-        "time": "9 Mar 09:00",
-        "status": "ok",
-        "durationMin": 3
-      },
-      {
-        "name": "Twitter Report Reminder",
-        "time": "9 Mar 09:00",
-        "status": "ok"
       },
       {
         "name": "Ops board refresh",
-        "time": "9 Mar 09:05",
-        "status": "running"
+        "schedule": "Daily 09:05",
+        "source": "This job",
+        "cronId": "a5486b5d",
+        "lastRun": "24 Mar 09:05",
+        "lastStatus": "running"
       }
+    ],
+    "lastNight": [
+      { "name": "Live odds update (evening)", "time": "23 Mar 18:00", "status": "ok", "durationMin": 1 },
+      { "name": "FitSorted PWA data refresh (evening)", "time": "23 Mar 21:05", "status": "ok", "durationMin": 0 },
+      { "name": "FitSorted Dashboard Update", "time": "23 Mar 21:30", "status": "ok", "durationMin": 0 },
+      { "name": "OpenClaw Nightly Backup", "time": "23 Mar 23:00", "status": "ok", "durationMin": 0 },
+      { "name": "Nightly SEO build", "time": "24 Mar 00:00", "status": "ok", "durationMin": 13 },
+      { "name": "FitSorted Food DB expansion", "time": "24 Mar 01:00", "status": "ok", "durationMin": 1 },
+      { "name": "FitSorted Edge Case Testing", "time": "24 Mar 01:01", "status": "ok", "durationMin": 3 },
+      { "name": "Daily Reddit scan", "time": "24 Mar 02:00", "status": "ok", "durationMin": 4 },
+      { "name": "Daily OpenClaw Backup", "time": "24 Mar 03:00", "status": "ok", "durationMin": 1 },
+      { "name": "Weekly SEO blog content", "time": "24 Mar 03:00", "status": "ok", "durationMin": 6 },
+      { "name": "ChurchesNearMe Daily Blog Post", "time": "24 Mar 04:00", "status": "ok", "durationMin": 4 },
+      { "name": "Supabase keep-alive ping", "time": "24 Mar 05:00", "status": "ok", "durationMin": 0 },
+      { "name": "Daily Crypto Casino P&L Tweets", "time": "24 Mar 05:30", "status": "error", "note": "Message failed", "durationMin": 4 },
+      { "name": "Live odds update (morning)", "time": "24 Mar 06:00", "status": "ok", "durationMin": 0 },
+      { "name": "Daily GA report", "time": "24 Mar 06:00", "status": "ok", "durationMin": 1 },
+      { "name": "Daily Portfolio Tracker", "time": "24 Mar 06:00", "status": "ok", "durationMin": 0 },
+      { "name": "FitSorted PWA data refresh (morning)", "time": "24 Mar 06:35", "status": "ok", "durationMin": 0 },
+      { "name": "Polymarket + Kalshi refresh", "time": "24 Mar 06:03", "status": "ok", "durationMin": 0 },
+      { "name": "IndexNow ping", "time": "24 Mar 06:50", "status": "ok", "durationMin": 0 },
+      { "name": "Daily Morning Report", "time": "24 Mar 07:10", "status": "ok", "durationMin": 1 },
+      { "name": "Daily XTP Terminal Research", "time": "24 Mar 07:20", "status": "ok", "durationMin": 2 },
+      { "name": "FitSorted Support Email Check", "time": "24 Mar 08:00", "status": "ok", "durationMin": 1 },
+      { "name": "CryptoCasinoSorted News Update", "time": "24 Mar 08:00", "status": "ok", "durationMin": 0 },
+      { "name": "BetSorted Daily Tweet Drafts", "time": "24 Mar 08:01", "status": "ok", "durationMin": 2 },
+      { "name": "FitSorted Daily TikTok/IG Content", "time": "24 Mar 08:00", "status": "ok", "durationMin": 4 },
+      { "name": "Daily Crypto Casino Tweet Drafts", "time": "24 Mar 08:30", "status": "ok", "durationMin": 3 },
+      { "name": "Daily affiliate reminder", "time": "24 Mar 09:00", "status": "ok", "durationMin": 1 },
+      { "name": "Arkham deposit address reminder", "time": "24 Mar 09:00", "status": "ok", "durationMin": 0 },
+      { "name": "Ops board refresh", "time": "24 Mar 09:05", "status": "running" }
     ]
   },
   "personal": {
@@ -273,21 +257,15 @@
             "body": "All your tasks in one document",
             "meta": "Private Google Doc",
             "links": [
-              {
-                "label": "Open Google Doc",
-                "url": "https://docs.google.com/document/d/1aSAS5NSvQtVm4uTcGlsWwlKz2ZKVH3rPhvxbqDSvE4E/edit"
-              }
+              { "label": "Open Google Doc", "url": "https://docs.google.com/document/d/1aSAS5NSvQtVm4uTcGlsWwlKz2ZKVH3rPhvxbqDSvE4E/edit" }
             ]
           },
           {
             "title": "Content calendar (Tweets + Reddit)",
-            "body": "Paste‑ready content + weekly cadence",
+            "body": "Paste-ready content + weekly cadence",
             "meta": "Private Google Doc",
             "links": [
-              {
-                "label": "Open Google Doc",
-                "url": "https://docs.google.com/document/d/1UBh_QXiItRrnmjorz8CjjqZs5NjDp8g4IaPgT9ziIFg/edit"
-              }
+              { "label": "Open Google Doc", "url": "https://docs.google.com/document/d/1UBh_QXiItRrnmjorz8CjjqZs5NjDp8g4IaPgT9ziIFg/edit" }
             ]
           },
           {
@@ -295,25 +273,16 @@
             "body": "Real-time task tracking with assignee + status",
             "meta": "Auto-updates every 30s",
             "links": [
-              {
-                "label": "Open Task Board",
-                "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html"
-              }
+              { "label": "Open Task Board", "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/task-board.html" }
             ]
           },
           {
             "title": "Affiliate tracker",
-            "body": "Signed‑up affiliates + links",
+            "body": "Signed-up affiliates + links",
             "meta": "Private page",
             "links": [
-              {
-                "label": "Open tracker (web)",
-                "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
-              },
-              {
-                "label": "Open tracker (file)",
-                "url": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html"
-              }
+              { "label": "Open tracker (web)", "url": "http://localhost:8765/Documents/OpenClaw/BetSorted/affiliate-tracker.html" },
+              { "label": "Open tracker (file)", "url": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/affiliate-tracker.html" }
             ]
           },
           {
@@ -321,10 +290,7 @@
             "body": "Quick sanity check on layout + links",
             "meta": "5 mins",
             "links": [
-              {
-                "label": "Live Review Page",
-                "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-              }
+              { "label": "Live Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html" }
             ]
           },
           {
@@ -332,14 +298,8 @@
             "body": "7bit, Wild.io, CoinDepo, Jackbit",
             "meta": "Target 12/15 approvals",
             "links": [
-              {
-                "label": "Affiliate Notes",
-                "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"
-              },
-              {
-                "label": "AFFILIATE-APPLICATIONS.md",
-                "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"
-              }
+              { "label": "Affiliate Notes", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/" },
+              { "label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md" }
             ]
           },
           {
@@ -347,10 +307,7 @@
             "body": "Needed for Fixtures page build",
             "meta": "Confirm list",
             "links": [
-              {
-                "label": "Fixtures draft",
-                "url": "file:///Users/brandonkatz/Documents/BetSorted/content/"
-              }
+              { "label": "Fixtures draft", "url": "file:///Users/brandonkatz/Documents/BetSorted/content/" }
             ]
           }
         ]
@@ -360,14 +317,11 @@
         "title": "Doing",
         "items": [
           {
-            "title": "Affiliate outreach follow‑ups",
+            "title": "Affiliate outreach follow-ups",
             "body": "Confirm pending approvals",
             "meta": "In progress",
             "links": [
-              {
-                "label": "Strategy Folder",
-                "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"
-              }
+              { "label": "Strategy Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/" }
             ]
           }
         ]
@@ -381,10 +335,7 @@
             "body": "Waiting on approvals",
             "meta": "Pending",
             "links": [
-              {
-                "label": "AFFILIATE-APPLICATIONS.md",
-                "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"
-              }
+              { "label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md" }
             ]
           }
         ]
@@ -398,10 +349,7 @@
             "body": "Live page + tracking link",
             "meta": "Complete",
             "links": [
-              {
-                "label": "Live Review Page",
-                "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-              }
+              { "label": "Live Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html" }
             ]
           }
         ]
@@ -429,10 +377,7 @@
           "body": "Every day 06:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "GA Dashboard",
-              "url": "https://analytics.google.com/"
-            }
+            { "label": "GA Dashboard", "url": "https://analytics.google.com/" }
           ]
         },
         {
@@ -440,10 +385,7 @@
           "body": "Every day 06:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Tweets Folder",
-              "url": "file:///Users/brandonkatz/Documents/BetSorted/tweets/"
-            }
+            { "label": "Tweets Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/tweets/" }
           ]
         },
         {
@@ -451,18 +393,9 @@
           "body": "Every day 06:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Live Odds Page",
-              "url": "https://betsorted.co.za/odds-comparison.html"
-            },
-            {
-              "label": "Script",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/fetch-live-odds.js"
-            },
-            {
-              "label": "Data Folder",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/"
-            }
+            { "label": "Live Odds Page", "url": "https://betsorted.co.za/odds-comparison.html" },
+            { "label": "Script", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/fetch-live-odds.js" },
+            { "label": "Data Folder", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/" }
           ]
         },
         {
@@ -470,10 +403,7 @@
           "body": "Every day 07:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Analytics Folder",
-              "url": "file:///Users/brandonkatz/Documents/BetSorted/analytics/"
-            }
+            { "label": "Analytics Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/analytics/" }
           ]
         },
         {
@@ -481,14 +411,8 @@
           "body": "Every day 09:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Strategy Folder",
-              "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/"
-            },
-            {
-              "label": "AFFILIATE-APPLICATIONS.md",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md"
-            }
+            { "label": "Strategy Folder", "url": "file:///Users/brandonkatz/Documents/BetSorted/strategy/" },
+            { "label": "AFFILIATE-APPLICATIONS.md", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/AFFILIATE-APPLICATIONS.md" }
           ]
         },
         {
@@ -496,10 +420,7 @@
           "body": "Every day 18:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Live Odds Page",
-              "url": "https://betsorted.co.za/odds-comparison.html"
-            }
+            { "label": "Live Odds Page", "url": "https://betsorted.co.za/odds-comparison.html" }
           ]
         },
         {
@@ -507,14 +428,8 @@
           "body": "Every day 00:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Blog Index",
-              "url": "https://betsorted.co.za/blog/"
-            },
-            {
-              "label": "Site Root",
-              "url": "https://betsorted.co.za/"
-            }
+            { "label": "Blog Index", "url": "https://betsorted.co.za/blog/" },
+            { "label": "Site Root", "url": "https://betsorted.co.za/" }
           ]
         },
         {
@@ -522,10 +437,7 @@
           "body": "Mondays 02:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Blog",
-              "url": "https://betsorted.co.za/blog/"
-            }
+            { "label": "Blog", "url": "https://betsorted.co.za/blog/" }
           ]
         },
         {
@@ -533,10 +445,7 @@
           "body": "Wednesdays 03:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Blog",
-              "url": "https://betsorted.co.za/blog/"
-            }
+            { "label": "Blog", "url": "https://betsorted.co.za/blog/" }
           ]
         },
         {
@@ -544,10 +453,7 @@
           "body": "Fridays 02:00",
           "meta": "Cron",
           "links": [
-            {
-              "label": "Blog",
-              "url": "https://betsorted.co.za/blog/"
-            }
+            { "label": "Blog", "url": "https://betsorted.co.za/blog/" }
           ]
         },
         {
@@ -566,26 +472,11 @@
           "body": "Added affiliate link (btag=2673740), full review page, updated sites.json + bookmakers.csv + index",
           "meta": "Live 2026-02-19",
           "links": [
-            {
-              "label": "Review Page",
-              "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-            },
-            {
-              "label": "Affiliate Link",
-              "url": "https://affiliates.play.co.za/links/?btag=2673740"
-            },
-            {
-              "label": "sites.json",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/sites.json"
-            },
-            {
-              "label": "bookmakers.csv",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/bookmakers.csv"
-            },
-            {
-              "label": "Review HTML",
-              "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/bookmakers/play-co-za-review.html"
-            }
+            { "label": "Review Page", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html" },
+            { "label": "Affiliate Link", "url": "https://affiliates.play.co.za/links/?btag=2673740" },
+            { "label": "sites.json", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/sites.json" },
+            { "label": "bookmakers.csv", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/data/bookmakers.csv" },
+            { "label": "Review HTML", "url": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/bookmakers/play-co-za-review.html" }
           ]
         },
         {
@@ -593,14 +484,8 @@
           "body": "10 bookmaker reviews, 6 payment method guides, 6 PSL cornerstone pages, glossary",
           "meta": "Complete",
           "links": [
-            {
-              "label": "Blog Index",
-              "url": "https://betsorted.co.za/blog/"
-            },
-            {
-              "label": "Bookmakers Index",
-              "url": "https://betsorted.co.za/bookmakers/"
-            }
+            { "label": "Blog Index", "url": "https://betsorted.co.za/blog/" },
+            { "label": "Bookmakers Index", "url": "https://betsorted.co.za/bookmakers/" }
           ]
         },
         {
@@ -608,10 +493,7 @@
           "body": "New verifier page + nav link",
           "meta": "Live",
           "links": [
-            {
-              "label": "Verifier Page",
-              "url": "https://cryptocasinosorted.com/provably-fair-verifier.html"
-            }
+            { "label": "Verifier Page", "url": "https://cryptocasinosorted.com/provably-fair-verifier.html" }
           ]
         },
         {
@@ -619,14 +501,8 @@
           "body": "Keys deployed + sitemaps pinged",
           "meta": "Live",
           "links": [
-            {
-              "label": "BetSorted Sitemap",
-              "url": "https://betsorted.co.za/sitemap.xml"
-            },
-            {
-              "label": "CCS Sitemap",
-              "url": "https://cryptocasinosorted.com/sitemap.xml"
-            }
+            { "label": "BetSorted Sitemap", "url": "https://betsorted.co.za/sitemap.xml" },
+            { "label": "CCS Sitemap", "url": "https://cryptocasinosorted.com/sitemap.xml" }
           ]
         }
       ]
@@ -670,11 +546,11 @@
       },
       {
         "time": "14:00",
-        "text": "No‑KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com"
+        "text": "No-KYC is great until you need to cash out. We track which casinos pay fast and which suddenly ask for docs. cryptocasinosorted.com"
       },
       {
         "time": "20:00",
-        "text": "If a casino hides its provably‑fair process, that's a red flag. Compare transparent casinos here: cryptocasinosorted.com"
+        "text": "If a casino hides its provably-fair process, that's a red flag. Compare transparent casinos here: cryptocasinosorted.com"
       },
       {
         "time": "Reply",

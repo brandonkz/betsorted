@@ -1,6 +1,6 @@
 {
-  "updated": "2026-03-26T16:00:14.868Z",
-  "updatedDisplay": "Thu Mar 26, 6:00 PM",
+  "updated": "2026-03-28T04:00:45.101Z",
+  "updatedDisplay": "Sat Mar 28, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -13,31 +13,31 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 1.9,
-          "url": "#"
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 1.9,
-          "url": "#"
-        },
-        {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 1.9,
-          "url": "#"
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 1.87,
+          "odds": 1.89,
           "url": "#"
         },
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
-          "odds": 1.87,
+          "odds": 1.89,
+          "url": "#"
+        },
+        {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 1.89,
+          "url": "#"
+        },
+        {
+          "name": "Betsson",
+          "key": "betsson",
+          "odds": 1.88,
+          "url": "#"
+        },
+        {
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 1.88,
           "url": "#"
         }
       ]
@@ -53,30 +53,30 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 1.46,
-          "url": "#"
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 1.44,
+          "odds": 1.48,
           "url": "#"
         },
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 1.44,
+          "odds": 1.46,
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 1.44,
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 1.45,
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
+          "name": "Betsson",
+          "key": "betsson",
+          "odds": 1.45,
+          "url": "#"
+        },
+        {
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 1.44,
           "url": "#"
         }
@@ -91,14 +91,14 @@
       "datetime": "2026-04-11T15:00:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
+          "name": "LowVig.ag",
+          "key": "lowvig",
           "odds": 2.3,
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
           "odds": 2.3,
           "url": "#"
         },
@@ -109,15 +109,15 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.26,
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.28,
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.25,
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.28,
           "url": "#"
         }
       ]
@@ -143,12 +143,6 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 4.62,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_eu",
           "odds": 4.6,
@@ -158,6 +152,12 @@
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 4.6,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 4.57,
           "url": "#"
         }
       ]
@@ -177,18 +177,6 @@
           "url": "#"
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 1.6,
-          "url": "#"
-        },
-        {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
-          "odds": 1.6,
-          "url": "#"
-        },
-        {
           "name": "Nordic Bet",
           "key": "nordicbet",
           "odds": 1.58,
@@ -198,6 +186,18 @@
           "name": "Betsson",
           "key": "betsson",
           "odds": 1.58,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 1.57,
+          "url": "#"
+        },
+        {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 1.57,
           "url": "#"
         }
       ]
@@ -211,32 +211,32 @@
       "datetime": "2026-04-12T13:00:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.78,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.78,
-          "url": "#"
-        },
-        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.72,
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.7,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
           "odds": 2.7,
           "url": "#"
         },
         {
           "name": "LowVig.ag",
           "key": "lowvig",
+          "odds": 2.7,
+          "url": "#"
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
           "odds": 2.7,
           "url": "#"
         }
@@ -251,6 +251,18 @@
       "datetime": "2026-04-12T13:00:00Z",
       "bookmakers": [
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.92,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.92,
+          "url": "#"
+        },
+        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
           "odds": 2.9,
@@ -266,18 +278,6 @@
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.9,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.88,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.88,
           "url": "#"
         }
       ]
@@ -291,6 +291,12 @@
       "datetime": "2026-04-12T14:00:00Z",
       "bookmakers": [
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.77,
+          "url": "#"
+        },
+        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
           "odds": 2.75,
@@ -303,20 +309,14 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.73,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.72,
           "url": "#"
         },
         {
           "name": "LeoVegas (SE)",
           "key": "leovegas_se",
-          "odds": 2.7,
-          "url": "#"
-        },
-        {
-          "name": "BetRivers",
-          "key": "betrivers",
           "odds": 2.7,
           "url": "#"
         }
@@ -345,7 +345,7 @@
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 3.15,
+          "odds": 3.2,
           "url": "#"
         },
         {
@@ -463,21 +463,21 @@
           "url": "#"
         },
         {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 1.93,
+          "url": "#"
+        },
+        {
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
+          "odds": 1.93,
+          "url": "#"
+        },
+        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 1.92,
-          "url": "#"
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 1.91,
-          "url": "#"
-        },
-        {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 1.91,
           "url": "#"
         }
       ]
@@ -533,13 +533,13 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.58,
+          "odds": 2.6,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.58,
+          "odds": 2.6,
           "url": "#"
         },
         {
@@ -669,14 +669,14 @@
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
           "odds": 1.55,
           "url": "#"
         },
         {
-          "name": "Betsson",
-          "key": "betsson",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
           "odds": 1.55,
           "url": "#"
         }
@@ -697,15 +697,15 @@
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 3.6,
-          "url": "#"
-        },
-        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 3.54,
+          "url": "#"
+        },
+        {
+          "name": "Tipico",
+          "key": "tipico_de",
+          "odds": 3.5,
           "url": "#"
         },
         {
@@ -835,9 +835,9 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 4.65,
+          "name": "Matchbook",
+          "key": "matchbook",
+          "odds": 4.7,
           "url": "#"
         }
       ]
@@ -909,15 +909,15 @@
           "url": "#"
         },
         {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 1.56,
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 1.55,
           "url": "#"
         },
         {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 1.56,
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
+          "odds": 1.55,
           "url": "#"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-29",
+  "updated": "2026-03-31",
   "quickLinks": {
     "workspace": "file:///Users/brandonkatz/.openclaw/workspace/betsorted/",
     "documents": "file:///Users/brandonkatz/Documents/OpenClaw/BetSorted/",
@@ -14,14 +14,14 @@
     "mission_control": "http://localhost:8765/Documents/OpenClaw/BetSorted/mission-control.html"
   },
   "ops": {
-    "refreshed": "2026-03-29T09:05+02:00",
+    "refreshed": "2026-03-31T09:05+02:00",
     "recurring": [
       {
         "name": "Live odds update (morning)",
         "schedule": "Daily 06:00",
         "source": "Odds API",
         "cronId": "a33620e9",
-        "lastRun": "29 Mar 06:01",
+        "lastRun": "31 Mar 06:01",
         "lastStatus": "ok"
       },
       {
@@ -29,7 +29,7 @@
         "schedule": "Daily 18:00",
         "source": "Odds API",
         "cronId": "4cd89068",
-        "lastRun": "28 Mar 18:00",
+        "lastRun": "30 Mar 18:00",
         "lastStatus": "ok"
       },
       {
@@ -37,25 +37,26 @@
         "schedule": "Daily 06:00",
         "source": "Google Analytics",
         "cronId": "dbeb67fd",
-        "lastRun": "29 Mar 06:00",
-        "lastStatus": "error",
-        "consecutiveErrors": 5,
-        "note": "Message failed — 5 consecutive errors, needs investigation"
+        "lastRun": "31 Mar 06:00",
+        "lastStatus": "ok",
+        "consecutiveErrors": 0
       },
       {
-        "name": "BetSorted Daily Tweet Drafts",
+        "name": "CryptoCasinoSorted Daily Tweets",
         "schedule": "Daily 08:00",
-        "source": "Grok API + Postiz scheduler",
+        "source": "Postiz + on-chain data",
         "cronId": "ec3a981e",
-        "lastRun": "29 Mar 08:01",
-        "lastStatus": "ok"
+        "lastRun": "31 Mar 08:01",
+        "lastStatus": "ok",
+        "consecutiveErrors": 0,
+        "note": "Recovered from yesterday timeout"
       },
       {
         "name": "Daily Crypto Casino Tweet Drafts",
         "schedule": "Daily 08:30",
         "source": "Gemini image gen + deposit data",
         "cronId": "3e4a78dd",
-        "lastRun": "29 Mar 08:30",
+        "lastRun": "31 Mar 08:30",
         "lastStatus": "ok"
       },
       {
@@ -63,7 +64,7 @@
         "schedule": "Daily 02:00",
         "source": "Reddit opportunities",
         "cronId": "94d510ce",
-        "lastRun": "29 Mar 02:00",
+        "lastRun": "31 Mar 02:00",
         "lastStatus": "ok"
       },
       {
@@ -71,7 +72,7 @@
         "schedule": "Daily 07:20",
         "source": "Crypto industry intel",
         "cronId": "3f1b34a7",
-        "lastRun": "29 Mar 07:20",
+        "lastRun": "31 Mar 07:20",
         "lastStatus": "ok"
       },
       {
@@ -79,7 +80,7 @@
         "schedule": "Daily 07:10",
         "source": "All 5 sites summary",
         "cronId": "f743eccb",
-        "lastRun": "29 Mar 07:10",
+        "lastRun": "31 Mar 07:10",
         "lastStatus": "ok"
       },
       {
@@ -87,7 +88,7 @@
         "schedule": "Daily 09:00",
         "source": "Affiliate programs",
         "cronId": "d3f7bfd2",
-        "lastRun": "29 Mar 09:00",
+        "lastRun": "31 Mar 09:00",
         "lastStatus": "ok"
       },
       {
@@ -95,7 +96,7 @@
         "schedule": "Daily 09:00",
         "source": "System event reminder",
         "cronId": "35c4fdc4",
-        "lastRun": "29 Mar 09:00",
+        "lastRun": "31 Mar 09:00",
         "lastStatus": "ok"
       },
       {
@@ -103,42 +104,43 @@
         "schedule": "Daily 00:00",
         "source": "BetSorted + CryptoCasinoSorted",
         "cronId": "c3fcbb16",
-        "lastRun": "29 Mar 00:00",
+        "lastRun": "31 Mar 00:00",
         "lastStatus": "ok",
-        "durationMin": 9
+        "durationMin": 18
       },
       {
         "name": "Daily Portfolio Tracker",
         "schedule": "Daily 06:00",
         "source": "portfolio/tracker.js",
         "cronId": "a4dd5835",
-        "lastRun": "29 Mar 06:01",
+        "lastRun": "31 Mar 06:01",
         "lastStatus": "ok"
       },
       {
         "name": "Daily Crypto Casino P&L Tweets",
-        "schedule": "Daily 05:30",
+        "schedule": "Daily 06:10",
         "source": "scan-gambler-pnl.js + whale-watch.js",
         "cronId": "da16f4e8",
-        "lastRun": "29 Mar 05:30",
-        "lastStatus": "ok"
+        "lastRun": "31 Mar 06:10",
+        "lastStatus": "ok",
+        "consecutiveErrors": 0,
+        "note": "Clean 13min run"
       },
       {
         "name": "CryptoCasinoSorted Daily Intel",
         "schedule": "Daily 06:30",
         "source": "Market intel digest",
         "cronId": "70288945",
-        "lastRun": "29 Mar 06:30",
-        "lastStatus": "error",
-        "consecutiveErrors": 1,
-        "note": "Message failed — 1 error, monitor"
+        "lastRun": "31 Mar 06:30",
+        "lastStatus": "ok",
+        "consecutiveErrors": 0
       },
       {
         "name": "OpenClaw Nightly Backup",
         "schedule": "Daily 23:00",
         "source": "backup.sh",
         "cronId": "d1a43a59",
-        "lastRun": "28 Mar 23:00",
+        "lastRun": "30 Mar 23:00",
         "lastStatus": "ok"
       },
       {
@@ -146,7 +148,7 @@
         "schedule": "Daily 03:00",
         "source": "GitHub private repo sync",
         "cronId": "10919a62",
-        "lastRun": "29 Mar 03:00",
+        "lastRun": "31 Mar 03:00",
         "lastStatus": "ok"
       },
       {
@@ -154,7 +156,7 @@
         "schedule": "4x daily (02,08,14,20)",
         "source": "update-news-promos.py",
         "cronId": "71ad9d39",
-        "lastRun": "29 Mar 08:00",
+        "lastRun": "31 Mar 08:00",
         "lastStatus": "ok"
       },
       {
@@ -162,7 +164,7 @@
         "schedule": "Every 6h",
         "source": "Prediction market data",
         "cronId": "9423432d",
-        "lastRun": "29 Mar 06:03",
+        "lastRun": "31 Mar 06:03",
         "lastStatus": "ok"
       },
       {
@@ -170,7 +172,7 @@
         "schedule": "Every 6h",
         "source": "Bing IndexNow (all sites)",
         "cronId": "5473e772",
-        "lastRun": "29 Mar 06:50",
+        "lastRun": "31 Mar 06:50",
         "lastStatus": "ok"
       },
       {
@@ -178,8 +180,9 @@
         "schedule": "Mondays 02:00",
         "source": "BetSorted SEO blog",
         "cronId": "f74fa8de",
-        "lastRun": "24 Mar 02:02",
-        "lastStatus": "ok"
+        "lastRun": "31 Mar 02:02",
+        "lastStatus": "ok",
+        "durationMin": 8
       },
       {
         "name": "BetSorted blog (Wednesday)",
@@ -202,70 +205,96 @@
         "schedule": "Mondays 03:00",
         "source": "All sites blog generation",
         "cronId": "bef41fa7",
-        "lastRun": "24 Mar 03:00",
-        "lastStatus": "ok"
+        "lastRun": "31 Mar 03:00",
+        "lastStatus": "ok",
+        "durationMin": 12
+      },
+      {
+        "name": "CryptoCasinoSorted Weekly Blog",
+        "schedule": "Mondays 01:00",
+        "source": "CCS SEO blog",
+        "cronId": "2f339975",
+        "lastRun": "31 Mar 01:00",
+        "lastStatus": "ok",
+        "durationMin": 6
       },
       {
         "name": "FitSorted Daily Stories",
         "schedule": "Daily 08:00",
         "source": "Quiz + Bot Demo (Instagram)",
         "cronId": "eb64e060",
-        "lastRun": "29 Mar 08:00",
+        "lastRun": "31 Mar 08:00",
         "lastStatus": "error",
-        "consecutiveErrors": 1,
-        "note": "Timed out"
+        "consecutiveErrors": 3,
+        "note": "Timeout — 3 consecutive failures, needs attention"
+      },
+      {
+        "name": "FitSorted Health Check",
+        "schedule": "Every 2h",
+        "source": "FitSorted bot status",
+        "cronId": "3c372cca",
+        "lastRun": "31 Mar 08:07",
+        "lastStatus": "error",
+        "consecutiveErrors": 2,
+        "note": "Message failed — 2 consecutive errors"
       },
       {
         "name": "FitSorted Bad Entry Scanner",
         "schedule": "Daily 10:00, 14:00, 19:00",
         "source": "FitSorted calorie accuracy",
         "cronId": "0084a839",
-        "lastRun": "28 Mar 19:00",
-        "lastStatus": "ok",
-        "consecutiveErrors": 0
+        "lastRun": "30 Mar 19:00",
+        "lastStatus": "ok"
       },
       {
         "name": "Ops board refresh",
         "schedule": "Daily 09:05",
         "source": "This job",
         "cronId": "a5486b5d",
-        "lastRun": "29 Mar 09:05",
+        "lastRun": "31 Mar 09:05",
         "lastStatus": "running"
       }
     ],
     "lastNight": [
-      { "name": "Live odds update (evening)", "time": "28 Mar 18:00", "status": "ok", "durationMin": 0 },
-      { "name": "FitSorted Bad Entry Scanner", "time": "28 Mar 19:00", "status": "ok", "durationMin": 0 },
-      { "name": "FitSorted PWA data refresh (evening)", "time": "28 Mar 21:05", "status": "ok", "durationMin": 0 },
-      { "name": "FitSorted Dashboard Update (evening)", "time": "28 Mar 21:30", "status": "ok", "durationMin": 0 },
-      { "name": "OpenClaw Nightly Backup", "time": "28 Mar 23:00", "status": "ok", "durationMin": 1 },
-      { "name": "Nightly SEO build", "time": "29 Mar 00:00", "status": "ok", "durationMin": 9 },
-      { "name": "FitSorted Food DB expansion", "time": "29 Mar 01:00", "status": "ok", "durationMin": 1 },
-      { "name": "FitSorted Edge Case Testing", "time": "29 Mar 01:00", "status": "ok", "durationMin": 2 },
-      { "name": "ChurchesNearMe: Add 10 churches", "time": "29 Mar 01:30", "status": "ok", "durationMin": 3 },
-      { "name": "Daily Reddit scan", "time": "29 Mar 02:00", "status": "ok", "durationMin": 2 },
-      { "name": "Daily OpenClaw Backup", "time": "29 Mar 03:00", "status": "ok", "durationMin": 1 },
-      { "name": "ChurchesNearMe Daily Blog Post", "time": "29 Mar 04:00", "status": "ok", "durationMin": 3 },
-      { "name": "Supabase keep-alive ping", "time": "29 Mar 05:00", "status": "ok", "durationMin": 0 },
-      { "name": "Daily Crypto Casino P&L Tweets", "time": "29 Mar 05:30", "status": "ok", "durationMin": 4 },
-      { "name": "Live odds update (morning)", "time": "29 Mar 06:01", "status": "ok", "durationMin": 0 },
-      { "name": "Daily GA report", "time": "29 Mar 06:00", "status": "error", "note": "Message failed (5 consecutive)", "durationMin": 1 },
-      { "name": "Daily Portfolio Tracker", "time": "29 Mar 06:01", "status": "ok", "durationMin": 0 },
-      { "name": "CryptoCasinoSorted Daily Intel", "time": "29 Mar 06:30", "status": "error", "note": "Message failed (1st error)", "durationMin": 3 },
-      { "name": "FitSorted Dashboard Update (morning)", "time": "29 Mar 06:30", "status": "ok", "durationMin": 0 },
-      { "name": "FitSorted PWA data refresh (morning)", "time": "29 Mar 06:35", "status": "ok", "durationMin": 0 },
-      { "name": "Polymarket + Kalshi refresh", "time": "29 Mar 06:03", "status": "ok", "durationMin": 0 },
-      { "name": "IndexNow ping", "time": "29 Mar 06:50", "status": "ok", "durationMin": 0 },
-      { "name": "Daily Morning Report", "time": "29 Mar 07:10", "status": "ok", "durationMin": 1 },
-      { "name": "Daily XTP Terminal Research", "time": "29 Mar 07:20", "status": "ok", "durationMin": 2 },
-      { "name": "FitSorted Support Email Check", "time": "29 Mar 08:00", "status": "ok", "durationMin": 1 },
-      { "name": "CryptoCasinoSorted News Update", "time": "29 Mar 08:00", "status": "ok", "durationMin": 0 },
-      { "name": "FitSorted Daily Stories", "time": "29 Mar 08:00", "status": "error", "note": "Timed out", "durationMin": 2 },
-      { "name": "BetSorted Daily Tweet Drafts", "time": "29 Mar 08:01", "status": "ok", "durationMin": 2 },
-      { "name": "Daily Crypto Casino Tweet Drafts", "time": "29 Mar 08:30", "status": "ok", "durationMin": 3 },
-      { "name": "Daily affiliate reminder", "time": "29 Mar 09:00", "status": "ok", "durationMin": 0 },
-      { "name": "Arkham deposit address reminder", "time": "29 Mar 09:00", "status": "ok", "durationMin": 0 },
-      { "name": "Ops board refresh", "time": "29 Mar 09:05", "status": "running" }
+      { "name": "Live odds update (evening)", "time": "30 Mar 18:00", "status": "ok", "durationMin": 1 },
+      { "name": "FitSorted Bad Entry Scanner", "time": "30 Mar 19:00", "status": "ok", "durationMin": 0 },
+      { "name": "FitSorted PWA data refresh (evening)", "time": "30 Mar 21:05", "status": "ok", "durationMin": 0 },
+      { "name": "OpenClaw Nightly Backup", "time": "30 Mar 23:00", "status": "ok", "durationMin": 1 },
+      { "name": "Nightly SEO build", "time": "31 Mar 00:00", "status": "ok", "durationMin": 18 },
+      { "name": "CryptoCasinoSorted Weekly Blog", "time": "31 Mar 01:00", "status": "ok", "durationMin": 6 },
+      { "name": "BetSorted blog (Monday)", "time": "31 Mar 02:02", "status": "ok", "durationMin": 8 },
+      { "name": "Daily Reddit scan", "time": "31 Mar 02:00", "status": "ok", "durationMin": 3 },
+      { "name": "FitSorted Edge Case Testing", "time": "31 Mar 02:20", "status": "ok", "durationMin": 3 },
+      { "name": "FitSorted Food DB expansion", "time": "31 Mar 02:40", "status": "ok", "durationMin": 1 },
+      { "name": "Weekly SEO blog content", "time": "31 Mar 03:00", "status": "ok", "durationMin": 12 },
+      { "name": "Daily OpenClaw Backup", "time": "31 Mar 03:00", "status": "ok", "durationMin": 1 },
+      { "name": "Crypto Casino streamer DB update", "time": "31 Mar 03:00", "status": "ok", "durationMin": 2 },
+      { "name": "Crypto Casino discover streamers", "time": "31 Mar 03:00", "status": "ok", "durationMin": 1 },
+      { "name": "ChurchesNearMe: Add 10 churches", "time": "31 Mar 03:10", "status": "error", "note": "Message failed — 2 consecutive", "durationMin": 8 },
+      { "name": "ChurchesNearMe Daily Blog Post", "time": "31 Mar 04:30", "status": "ok", "durationMin": 3 },
+      { "name": "Supabase keep-alive ping", "time": "31 Mar 05:40", "status": "ok", "durationMin": 0 },
+      { "name": "Live odds update (morning)", "time": "31 Mar 06:01", "status": "ok", "durationMin": 0 },
+      { "name": "Daily GA report", "time": "31 Mar 06:00", "status": "ok", "durationMin": 2 },
+      { "name": "Daily Portfolio Tracker", "time": "31 Mar 06:01", "status": "ok", "durationMin": 1 },
+      { "name": "Daily Crypto Casino P&L Tweets", "time": "31 Mar 06:10", "status": "ok", "durationMin": 13 },
+      { "name": "CryptoCasinoSorted Daily Intel", "time": "31 Mar 06:30", "status": "ok", "durationMin": 1 },
+      { "name": "FitSorted Dashboard Update (morning)", "time": "31 Mar 06:30", "status": "ok", "durationMin": 0 },
+      { "name": "FitSorted PWA data refresh (morning)", "time": "31 Mar 06:35", "status": "ok", "durationMin": 0 },
+      { "name": "Polymarket + Kalshi refresh", "time": "31 Mar 06:03", "status": "ok", "durationMin": 0 },
+      { "name": "Crypto Casino Twitter Monitor", "time": "31 Mar 06:03", "status": "ok", "durationMin": 0 },
+      { "name": "IndexNow ping", "time": "31 Mar 06:50", "status": "ok", "durationMin": 0 },
+      { "name": "Daily Morning Report", "time": "31 Mar 07:10", "status": "ok", "durationMin": 3 },
+      { "name": "Daily XTP Terminal Research", "time": "31 Mar 07:20", "status": "ok", "durationMin": 2 },
+      { "name": "Crypto Casino Daily Email", "time": "31 Mar 08:00", "status": "ok", "durationMin": 1 },
+      { "name": "FitSorted Support Email Check", "time": "31 Mar 08:00", "status": "ok", "durationMin": 0 },
+      { "name": "CryptoCasinoSorted News Update", "time": "31 Mar 08:00", "status": "ok", "durationMin": 0 },
+      { "name": "FitSorted Daily Stories", "time": "31 Mar 08:00", "status": "error", "note": "Timeout — 3rd consecutive failure", "durationMin": 2 },
+      { "name": "FitSorted Health Check", "time": "31 Mar 08:07", "status": "error", "note": "Message failed — 2 consecutive", "durationMin": 2 },
+      { "name": "CryptoCasinoSorted Daily Tweets", "time": "31 Mar 08:01", "status": "ok", "durationMin": 3 },
+      { "name": "Daily Crypto Casino Tweet Drafts", "time": "31 Mar 08:30", "status": "ok", "durationMin": 4 },
+      { "name": "Daily affiliate reminder", "time": "31 Mar 09:00", "status": "ok", "durationMin": 0 },
+      { "name": "Arkham deposit address reminder", "time": "31 Mar 09:00", "status": "ok", "durationMin": 0 },
+      { "name": "Ops board refresh", "time": "31 Mar 09:05", "status": "running" }
     ]
   },
   "personal": {

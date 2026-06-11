@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-01T04:03:16.219Z",
+  "updatedAt": "2026-06-11T16:03:10.808Z",
   "events": [
     {
       "id": 33507,
@@ -13,18 +13,10 @@
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 0.515,
-          "pct": 51.5,
-          "fairDec": 1.94,
-          "vol": 10813526.051243788
-        },
-        {
-          "name": "Manchester City",
-          "flag": "",
-          "prob": 0.485,
-          "pct": 48.5,
-          "fairDec": 2.06,
-          "vol": 11678143.390150964
+          "prob": 1,
+          "pct": 100,
+          "fairDec": 1,
+          "vol": 12340533.59949487
         }
       ]
     },
@@ -38,36 +30,12 @@
       "desc": "Who lifts the UCL trophy in Munich?",
       "outcomes": [
         {
-          "name": "Bayern Munich",
-          "flag": "",
-          "prob": 0.315,
-          "pct": 31.5,
-          "fairDec": 3.17,
-          "vol": 5900133.953157912
-        },
-        {
           "name": "PSG",
           "flag": "",
-          "prob": 0.305,
-          "pct": 30.5,
-          "fairDec": 3.28,
-          "vol": 7632472.660349061
-        },
-        {
-          "name": "Arsenal",
-          "flag": "",
-          "prob": 0.295,
-          "pct": 29.5,
-          "fairDec": 3.39,
-          "vol": 6192077.444834209
-        },
-        {
-          "name": "Atletico Madrid",
-          "flag": "",
-          "prob": 0.0855,
-          "pct": 8.6,
-          "fairDec": 11.7,
-          "vol": 24192244.569714703
+          "prob": 1,
+          "pct": 100,
+          "fairDec": 1,
+          "vol": 19428880.867619038
         }
       ]
     },
@@ -81,52 +49,52 @@
       "desc": "Who wins the World Cup?",
       "outcomes": [
         {
-          "name": "France",
-          "flag": "🇫🇷",
-          "prob": 0.1635,
-          "pct": 16.4,
-          "fairDec": 6.12,
-          "vol": 22653575.202951554
-        },
-        {
           "name": "Spain",
           "flag": "🇪🇸",
-          "prob": 0.1525,
-          "pct": 15.3,
-          "fairDec": 6.56,
-          "vol": 17838245.494079355
+          "prob": 0.1695,
+          "pct": 17,
+          "fairDec": 5.9,
+          "vol": 38416795.44187045
         },
         {
-          "name": "England",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.1105,
-          "pct": 11.1,
-          "fairDec": 9.05,
-          "vol": 14627427.690721923
-        },
-        {
-          "name": "Argentina",
-          "flag": "🇦🇷",
-          "prob": 0.0865,
-          "pct": 8.6,
-          "fairDec": 11.56,
-          "vol": 15479974.880314149
-        },
-        {
-          "name": "Brazil",
-          "flag": "🇧🇷",
-          "prob": 0.0855,
-          "pct": 8.6,
-          "fairDec": 11.7,
-          "vol": 16173652.83955083
+          "name": "France",
+          "flag": "🇫🇷",
+          "prob": 0.1605,
+          "pct": 16.1,
+          "fairDec": 6.23,
+          "vol": 45209677.92553446
         },
         {
           "name": "Portugal",
           "flag": "🇵🇹",
-          "prob": 0.0735,
-          "pct": 7.3,
-          "fairDec": 13.61,
-          "vol": 16758667.895228632
+          "prob": 0.1175,
+          "pct": 11.8,
+          "fairDec": 8.51,
+          "vol": 40457350.33447638
+        },
+        {
+          "name": "England",
+          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "prob": 0.1085,
+          "pct": 10.8,
+          "fairDec": 9.22,
+          "vol": 33322388.77987232
+        },
+        {
+          "name": "Argentina",
+          "flag": "🇦🇷",
+          "prob": 0.0885,
+          "pct": 8.8,
+          "fairDec": 11.3,
+          "vol": 35965265.40147374
+        },
+        {
+          "name": "Brazil",
+          "flag": "🇧🇷",
+          "prob": 0.0865,
+          "pct": 8.6,
+          "fairDec": 11.56,
+          "vol": 35343096.2491528
         },
         {
           "name": "Germany",
@@ -134,15 +102,15 @@
           "prob": 0.0515,
           "pct": 5.1,
           "fairDec": 19.42,
-          "vol": 14279736.68238474
+          "vol": 37318385.00095048
         },
         {
           "name": "Netherlands",
           "flag": "🇳🇱",
-          "prob": 0.0335,
-          "pct": 3.4,
-          "fairDec": 29.85,
-          "vol": 16183375.874040904
+          "prob": 0.0435,
+          "pct": 4.3,
+          "fairDec": 22.99,
+          "vol": 39934592.68452291
         },
         {
           "name": "Norway",
@@ -150,31 +118,31 @@
           "prob": 0.0235,
           "pct": 2.4,
           "fairDec": 42.55,
-          "vol": 14492218.280467423
-        },
-        {
-          "name": "Japan",
-          "flag": "🇯🇵",
-          "prob": 0.0215,
-          "pct": 2.1,
-          "fairDec": 46.51,
-          "vol": 17982851.672583178
+          "vol": 39028963.20032064
         },
         {
           "name": "Belgium",
           "flag": "🇧🇪",
-          "prob": 0.0195,
-          "pct": 1.9,
-          "fairDec": 51.28,
-          "vol": 14781966.5978181
+          "prob": 0.0205,
+          "pct": 2.1,
+          "fairDec": 48.78,
+          "vol": 41497107.20410426
         },
         {
-          "name": "Morocco",
-          "flag": "🇲🇦",
+          "name": "Colombia",
+          "flag": "🇨🇴",
           "prob": 0.0175,
           "pct": 1.8,
           "fairDec": 57.14,
-          "vol": 17208297.281572815
+          "vol": 41980156.23083104
+        },
+        {
+          "name": "Japan",
+          "flag": "🇯🇵",
+          "prob": 0.0175,
+          "pct": 1.8,
+          "fairDec": 57.14,
+          "vol": 41729781.95948142
         }
       ]
     },
@@ -190,18 +158,10 @@
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 0.992,
-          "pct": 99.2,
-          "fairDec": 1.01,
-          "vol": 2570198.744956982
-        },
-        {
-          "name": "Real Madrid",
-          "flag": "",
-          "prob": 0.008,
-          "pct": 0.8,
-          "fairDec": 125,
-          "vol": 2445685.6324680084
+          "prob": 1,
+          "pct": 100,
+          "fairDec": 1,
+          "vol": 2889842.1004859824
         }
       ]
     }

@@ -1,123 +1,83 @@
 [
   {
-    "timestamp": "2026-05-16T09:35:44+02:00",
+    "timestamp": "2026-06-19T18:00:16+02:00",
     "matches": [
       {
         "sport": "soccer",
         "emoji": "⚽",
         "league": "Premier League",
-        "homeTeam": "Manchester United",
-        "awayTeam": "Nottingham Forest",
-        "datetime": "2026-05-17T11:30:00Z",
-        "bookmakers": [
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 1.69,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 1.69,
-            "url": "#"
-          },
-          {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 1.69,
-            "url": "#"
-          },
-          {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 1.68,
-            "url": "#"
-          },
-          {
-            "name": "BetOnline.ag",
-            "key": "betonlineag",
-            "odds": 1.68,
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "sport": "soccer",
-        "emoji": "⚽",
-        "league": "Premier League",
-        "homeTeam": "Brentford",
-        "awayTeam": "Crystal Palace",
-        "datetime": "2026-05-17T14:00:00Z",
-        "bookmakers": [
-          {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 1.71,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 1.71,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 1.71,
-            "url": "#"
-          },
-          {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 1.71,
-            "url": "#"
-          },
-          {
-            "name": "Coolbet",
-            "key": "coolbet",
-            "odds": 1.7,
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "sport": "soccer",
-        "emoji": "⚽",
-        "league": "Premier League",
-        "homeTeam": "Leeds United",
-        "awayTeam": "Brighton and Hove Albion",
-        "datetime": "2026-05-17T14:00:00Z",
+        "homeTeam": "Arsenal",
+        "awayTeam": "Coventry City",
+        "datetime": "2026-08-21T19:00:00Z",
         "bookmakers": [
           {
             "name": "1xBet",
             "key": "onexbet",
-            "odds": 3.5,
+            "odds": 1.18,
             "url": "#"
           },
           {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 3.5,
+            "name": "Coral",
+            "key": "coral",
+            "odds": 1.18,
             "url": "#"
           },
           {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 3.5,
+            "name": "Ladbrokes",
+            "key": "ladbrokes_uk",
+            "odds": 1.18,
             "url": "#"
           },
           {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 3.5,
+            "name": "Betfred (UK)",
+            "key": "betfred_uk",
+            "odds": 1.17,
             "url": "#"
           },
           {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 3.45,
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 1.17,
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Hull City",
+        "awayTeam": "Manchester United",
+        "datetime": "2026-08-22T11:30:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 7.6,
+            "url": "#"
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 7.5,
+            "url": "#"
+          },
+          {
+            "name": "Betfred (UK)",
+            "key": "betfred_uk",
+            "odds": 7,
+            "url": "#"
+          },
+          {
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 7,
+            "url": "#"
+          },
+          {
+            "name": "FanDuel",
+            "key": "fanduel",
+            "odds": 7,
             "url": "#"
           }
         ]
@@ -127,37 +87,37 @@
         "emoji": "⚽",
         "league": "Premier League",
         "homeTeam": "Everton",
-        "awayTeam": "Sunderland",
-        "datetime": "2026-05-17T14:00:00Z",
+        "awayTeam": "Crystal Palace",
+        "datetime": "2026-08-22T14:00:00Z",
         "bookmakers": [
-          {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 1.89,
-            "url": "#"
-          },
           {
             "name": "Betfair",
             "key": "betfair_ex_uk",
-            "odds": 1.88,
+            "odds": 2.1,
             "url": "#"
           },
           {
             "name": "Betfair",
             "key": "betfair_ex_eu",
-            "odds": 1.88,
-            "url": "#"
-          },
-          {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 1.88,
+            "odds": 2.1,
             "url": "#"
           },
           {
             "name": "1xBet",
             "key": "onexbet",
-            "odds": 1.87,
+            "odds": 2.08,
+            "url": "#"
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.05,
+            "url": "#"
+          },
+          {
+            "name": "Tipico",
+            "key": "tipico_de",
+            "odds": 2.05,
             "url": "#"
           }
         ]
@@ -166,38 +126,198 @@
         "sport": "soccer",
         "emoji": "⚽",
         "league": "Premier League",
-        "homeTeam": "Wolverhampton Wanderers",
-        "awayTeam": "Fulham",
-        "datetime": "2026-05-17T14:00:00Z",
+        "homeTeam": "Ipswich Town",
+        "awayTeam": "Sunderland",
+        "datetime": "2026-08-22T14:00:00Z",
         "bookmakers": [
           {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 4,
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.83,
+            "url": "#"
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.78,
+            "url": "#"
+          },
+          {
+            "name": "Betfred (UK)",
+            "key": "betfred_uk",
+            "odds": 2.75,
+            "url": "#"
+          },
+          {
+            "name": "Tipico",
+            "key": "tipico_de",
+            "odds": 2.75,
+            "url": "#"
+          },
+          {
+            "name": "Pinnacle",
+            "key": "pinnacle",
+            "odds": 2.71,
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Nottingham Forest",
+        "awayTeam": "Leeds United",
+        "datetime": "2026-08-22T14:00:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.29,
+            "url": "#"
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.25,
+            "url": "#"
+          },
+          {
+            "name": "Tipico",
+            "key": "tipico_de",
+            "odds": 2.25,
+            "url": "#"
+          },
+          {
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 2.23,
             "url": "#"
           },
           {
             "name": "Betfair",
             "key": "betfair_ex_uk",
-            "odds": 4,
+            "odds": 2.22,
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Brentford",
+        "awayTeam": "Tottenham Hotspur",
+        "datetime": "2026-08-22T16:30:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.68,
+            "url": "#"
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.64,
+            "url": "#"
+          },
+          {
+            "name": "Betfred (UK)",
+            "key": "betfred_uk",
+            "odds": 2.6,
+            "url": "#"
+          },
+          {
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 2.6,
+            "url": "#"
+          },
+          {
+            "name": "Coral",
+            "key": "coral",
+            "odds": 2.6,
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Brighton and Hove Albion",
+        "awayTeam": "Aston Villa",
+        "datetime": "2026-08-23T13:00:00Z",
+        "bookmakers": [
+          {
+            "name": "Coral",
+            "key": "coral",
+            "odds": 2.37,
+            "url": "#"
+          },
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.31,
+            "url": "#"
+          },
+          {
+            "name": "BetMGM",
+            "key": "betmgm",
+            "odds": 2.3,
+            "url": "#"
+          },
+          {
+            "name": "Ladbrokes",
+            "key": "ladbrokes_uk",
+            "odds": 2.3,
             "url": "#"
           },
           {
             "name": "Betfair",
             "key": "betfair_ex_eu",
-            "odds": 4,
+            "odds": 2.28,
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Manchester City",
+        "awayTeam": "Bournemouth",
+        "datetime": "2026-08-23T13:00:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 1.48,
             "url": "#"
           },
           {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 4,
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 1.46,
             "url": "#"
           },
           {
-            "name": "Coolbet",
-            "key": "coolbet",
-            "odds": 3.92,
+            "name": "Tipico",
+            "key": "tipico_de",
+            "odds": 1.45,
+            "url": "#"
+          },
+          {
+            "name": "Betfred (UK)",
+            "key": "betfred_uk",
+            "odds": 1.44,
+            "url": "#"
+          },
+          {
+            "name": "Pinnacle",
+            "key": "pinnacle",
+            "odds": 1.43,
             "url": "#"
           }
         ]
@@ -207,157 +327,37 @@
         "emoji": "⚽",
         "league": "Premier League",
         "homeTeam": "Newcastle United",
-        "awayTeam": "West Ham United",
-        "datetime": "2026-05-17T16:30:00Z",
+        "awayTeam": "Liverpool",
+        "datetime": "2026-08-23T15:30:00Z",
         "bookmakers": [
           {
             "name": "1xBet",
             "key": "onexbet",
-            "odds": 2.26,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 2.26,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 2.26,
-            "url": "#"
-          },
-          {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 2.26,
-            "url": "#"
-          },
-          {
-            "name": "Betway 🇿🇦",
-            "key": "betway",
-            "odds": 2.25,
-            "url": "https://betway.co.za"
-          }
-        ]
-      },
-      {
-        "sport": "soccer",
-        "emoji": "⚽",
-        "league": "Premier League",
-        "homeTeam": "Arsenal",
-        "awayTeam": "Burnley",
-        "datetime": "2026-05-18T19:00:00Z",
-        "bookmakers": [
-          {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 1.11,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 1.11,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 1.11,
-            "url": "#"
-          },
-          {
-            "name": "Coral",
-            "key": "coral",
-            "odds": 1.11,
-            "url": "#"
-          },
-          {
-            "name": "Ladbrokes",
-            "key": "ladbrokes_uk",
-            "odds": 1.11,
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "sport": "soccer",
-        "emoji": "⚽",
-        "league": "Premier League",
-        "homeTeam": "Bournemouth",
-        "awayTeam": "Manchester City",
-        "datetime": "2026-05-19T18:30:00Z",
-        "bookmakers": [
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 4.9,
-            "url": "#"
-          },
-          {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 4.9,
-            "url": "#"
-          },
-          {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 4.9,
-            "url": "#"
-          },
-          {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 4.7,
-            "url": "#"
-          },
-          {
-            "name": "Unibet (SE)",
-            "key": "unibet_se",
-            "odds": 4.7,
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "sport": "soccer",
-        "emoji": "⚽",
-        "league": "Premier League",
-        "homeTeam": "Chelsea",
-        "awayTeam": "Tottenham Hotspur",
-        "datetime": "2026-05-19T19:15:00Z",
-        "bookmakers": [
-          {
-            "name": "1xBet",
-            "key": "onexbet",
-            "odds": 2.21,
-            "url": "#"
-          },
-          {
-            "name": "Unibet (SE)",
-            "key": "unibet_se",
-            "odds": 2.18,
-            "url": "#"
-          },
-          {
-            "name": "Unibet (NL)",
-            "key": "unibet_nl",
-            "odds": 2.18,
+            "odds": 3.05,
             "url": "#"
           },
           {
             "name": "Marathon Bet",
             "key": "marathonbet",
-            "odds": 2.17,
+            "odds": 3,
             "url": "#"
           },
           {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 2.16,
+            "name": "Tipico",
+            "key": "tipico_de",
+            "odds": 3,
+            "url": "#"
+          },
+          {
+            "name": "Pinnacle",
+            "key": "pinnacle",
+            "odds": 2.94,
+            "url": "#"
+          },
+          {
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 2.9,
             "url": "#"
           }
         ]
@@ -365,39 +365,39 @@
       {
         "sport": "soccer",
         "emoji": "⚽",
-        "league": "Champions League",
-        "homeTeam": "Paris Saint Germain",
-        "awayTeam": "Arsenal",
-        "datetime": "2026-05-30T16:00:00Z",
+        "league": "Premier League",
+        "homeTeam": "Fulham",
+        "awayTeam": "Chelsea",
+        "datetime": "2026-08-24T19:00:00Z",
         "bookmakers": [
           {
-            "name": "Betfair",
-            "key": "betfair_ex_eu",
-            "odds": 2.38,
+            "name": "Coral",
+            "key": "coral",
+            "odds": 3.5,
             "url": "#"
           },
           {
-            "name": "Betfair",
-            "key": "betfair_ex_uk",
-            "odds": 2.38,
+            "name": "BetMGM",
+            "key": "betmgm",
+            "odds": 3.4,
             "url": "#"
           },
           {
-            "name": "Matchbook",
-            "key": "matchbook",
-            "odds": 2.38,
+            "name": "Ladbrokes",
+            "key": "ladbrokes_uk",
+            "odds": 3.4,
             "url": "#"
           },
           {
             "name": "1xBet",
             "key": "onexbet",
-            "odds": 2.36,
+            "odds": 3.33,
             "url": "#"
           },
           {
-            "name": "Smarkets",
-            "key": "smarkets",
-            "odds": 2.36,
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 3.3,
             "url": "#"
           }
         ]

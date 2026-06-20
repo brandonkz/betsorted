@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19T16:00:16.071Z",
-  "updatedDisplay": "Fri Jun 19, 6:00 PM",
+  "updated": "2026-06-20T04:00:15.419Z",
+  "updatedDisplay": "Sat Jun 20, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -13,7 +13,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 1.18,
+          "odds": 1.19,
           "url": "#"
         },
         {
@@ -35,8 +35,8 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
           "odds": 1.17,
           "url": "#"
         }
@@ -53,13 +53,19 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 7.6,
+          "odds": 7.42,
           "url": "#"
         },
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 7.5,
+          "odds": 7.3,
+          "url": "#"
+        },
+        {
+          "name": "Coolbet",
+          "key": "coolbet",
+          "odds": 7.2,
           "url": "#"
         },
         {
@@ -71,12 +77,6 @@
         {
           "name": "Codere (IT)",
           "key": "codere_it",
-          "odds": 7,
-          "url": "#"
-        },
-        {
-          "name": "FanDuel",
-          "key": "fanduel",
           "odds": 7,
           "url": "#"
         }
@@ -115,9 +115,9 @@
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 2.05,
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 2.04,
           "url": "#"
         }
       ]
@@ -133,7 +133,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.83,
+          "odds": 2.82,
           "url": "#"
         },
         {
@@ -143,15 +143,15 @@
           "url": "#"
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 2.75,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 2.75,
+          "name": "Coolbet",
+          "key": "coolbet",
+          "odds": 2.73,
           "url": "#"
         },
         {
@@ -177,14 +177,20 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 2.25,
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.26,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.26,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 2.25,
           "url": "#"
         },
@@ -192,12 +198,6 @@
           "name": "Codere (IT)",
           "key": "codere_it",
           "odds": 2.23,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.22,
           "url": "#"
         }
       ]
@@ -315,9 +315,9 @@
           "url": "#"
         },
         {
-          "name": "Pinnacle",
-          "key": "pinnacle",
-          "odds": 1.43,
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 1.44,
           "url": "#"
         }
       ]
@@ -355,9 +355,9 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 2.9,
+          "name": "Coolbet",
+          "key": "coolbet",
+          "odds": 2.92,
           "url": "#"
         }
       ]
@@ -395,8 +395,8 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 3.3,
           "url": "#"
         }

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-20T04:00:15.419Z",
-  "updatedDisplay": "Sat Jun 20, 6:00 AM",
+  "updated": "2026-06-20T16:00:21.354Z",
+  "updatedDisplay": "Sat Jun 20, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -17,6 +17,18 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 1.19,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 1.19,
+          "url": "#"
+        },
+        {
           "name": "Coral",
           "key": "coral",
           "odds": 1.18,
@@ -26,18 +38,6 @@
           "name": "Ladbrokes",
           "key": "ladbrokes_uk",
           "odds": 1.18,
-          "url": "#"
-        },
-        {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 1.17,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 1.17,
           "url": "#"
         }
       ]
@@ -57,27 +57,27 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 7.4,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 7.4,
+          "url": "#"
+        },
+        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 7.3,
           "url": "#"
         },
         {
-          "name": "Coolbet",
-          "key": "coolbet",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 7.2,
-          "url": "#"
-        },
-        {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 7,
-          "url": "#"
-        },
-        {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 7,
           "url": "#"
         }
       ]
@@ -115,8 +115,8 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
           "odds": 2.04,
           "url": "#"
         }
@@ -137,6 +137,18 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.78,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.78,
+          "url": "#"
+        },
+        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 2.78,
@@ -146,18 +158,6 @@
           "name": "Tipico",
           "key": "tipico_de",
           "odds": 2.75,
-          "url": "#"
-        },
-        {
-          "name": "Coolbet",
-          "key": "coolbet",
-          "odds": 2.73,
-          "url": "#"
-        },
-        {
-          "name": "Pinnacle",
-          "key": "pinnacle",
-          "odds": 2.71,
           "url": "#"
         }
       ]
@@ -179,13 +179,13 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.26,
+          "odds": 2.28,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.26,
+          "odds": 2.28,
           "url": "#"
         },
         {
@@ -195,9 +195,9 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 2.23,
+          "name": "Coolbet",
+          "key": "coolbet",
+          "odds": 2.21,
           "url": "#"
         }
       ]
@@ -229,14 +229,14 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "Coral",
+          "key": "coral",
           "odds": 2.6,
           "url": "#"
         },
         {
-          "name": "Coral",
-          "key": "coral",
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
           "odds": 2.6,
           "url": "#"
         }
@@ -257,6 +257,18 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.32,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.32,
+          "url": "#"
+        },
+        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.31,
@@ -266,18 +278,6 @@
           "name": "BetMGM",
           "key": "betmgm",
           "odds": 2.3,
-          "url": "#"
-        },
-        {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
-          "odds": 2.3,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.28,
           "url": "#"
         }
       ]
@@ -303,21 +303,21 @@
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "Unibet (UK)",
+          "key": "unibet_uk",
           "odds": 1.45,
           "url": "#"
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 1.44,
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 1.45,
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 1.44,
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 1.45,
           "url": "#"
         }
       ]

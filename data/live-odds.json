@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-20T16:00:21.354Z",
-  "updatedDisplay": "Sat Jun 20, 6:00 PM",
+  "updated": "2026-06-21T04:00:15.545Z",
+  "updatedDisplay": "Sun Jun 21, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -29,15 +29,15 @@
           "url": "#"
         },
         {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 1.18,
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
+          "odds": 1.17,
           "url": "#"
         },
         {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
-          "odds": 1.18,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 1.17,
           "url": "#"
         }
       ]
@@ -51,12 +51,6 @@
       "datetime": "2026-08-22T11:30:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 7.42,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 7.4,
@@ -69,15 +63,21 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 7.3,
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 7.21,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "Coolbet",
+          "key": "coolbet",
           "odds": 7.2,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 7.1,
           "url": "#"
         }
       ]
@@ -91,6 +91,12 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.11,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 2.1,
@@ -103,15 +109,9 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.08,
-          "url": "#"
-        },
-        {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.05,
+          "odds": 2.08,
           "url": "#"
         },
         {
@@ -133,7 +133,13 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.82,
+          "odds": 2.83,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.79,
           "url": "#"
         },
         {
@@ -145,12 +151,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.78,
-          "url": "#"
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
           "odds": 2.78,
           "url": "#"
         },
@@ -173,7 +173,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.29,
+          "odds": 2.32,
           "url": "#"
         },
         {
@@ -191,7 +191,7 @@
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.25,
+          "odds": 2.28,
           "url": "#"
         },
         {
@@ -213,13 +213,13 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.68,
+          "odds": 2.69,
           "url": "#"
         },
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.64,
+          "odds": 2.65,
           "url": "#"
         },
         {
@@ -257,6 +257,12 @@
           "url": "#"
         },
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.36,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_eu",
           "odds": 2.32,
@@ -269,15 +275,9 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.31,
-          "url": "#"
-        },
-        {
-          "name": "BetMGM",
-          "key": "betmgm",
-          "odds": 2.3,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.32,
           "url": "#"
         }
       ]
@@ -291,6 +291,18 @@
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 1.49,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 1.49,
+          "url": "#"
+        },
+        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 1.48,
@@ -303,20 +315,8 @@
           "url": "#"
         },
         {
-          "name": "Unibet (UK)",
-          "key": "unibet_uk",
-          "odds": 1.45,
-          "url": "#"
-        },
-        {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 1.45,
-          "url": "#"
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 1.45,
           "url": "#"
         }
@@ -331,27 +331,27 @@
       "datetime": "2026-08-23T15:30:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 3.05,
-          "url": "#"
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 3,
-          "url": "#"
-        },
-        {
           "name": "Tipico",
           "key": "tipico_de",
           "odds": 3,
           "url": "#"
         },
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.98,
+          "url": "#"
+        },
+        {
           "name": "Pinnacle",
           "key": "pinnacle",
           "odds": 2.94,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.93,
           "url": "#"
         },
         {
@@ -391,13 +391,13 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 3.33,
+          "odds": 3.29,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 3.3,
+          "name": "William Hill",
+          "key": "williamhill",
+          "odds": 3.25,
           "url": "#"
         }
       ]

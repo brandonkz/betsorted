@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-22T16:00:18.247Z",
-  "updatedDisplay": "Mon Jun 22, 6:00 PM",
+  "updated": "2026-06-23T04:00:21.429Z",
+  "updatedDisplay": "Tue Jun 23, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -171,21 +171,21 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.27,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.28,
+          "odds": 2.26,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.28,
-          "url": "#"
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.27,
+          "odds": 2.26,
           "url": "#"
         },
         {
@@ -297,27 +297,27 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 1.48,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 1.48,
+          "url": "#"
+        },
+        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 1.46,
           "url": "#"
         },
         {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 1.45,
-          "url": "#"
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 1.45,
-          "url": "#"
-        },
-        {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 1.44,
           "url": "#"
         }
       ]

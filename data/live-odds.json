@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-23T16:00:27.215Z",
-  "updatedDisplay": "Tue Jun 23, 6:00 PM",
+  "updated": "2026-06-24T04:00:16.672Z",
+  "updatedDisplay": "Wed Jun 24, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -53,13 +53,13 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 7.6,
+          "odds": 7.8,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 7.6,
+          "odds": 7.8,
           "url": "#"
         },
         {
@@ -257,18 +257,6 @@
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.32,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.32,
-          "url": "#"
-        },
-        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.31,
@@ -278,6 +266,18 @@
           "name": "BetMGM",
           "key": "betmgm",
           "odds": 2.3,
+          "url": "#"
+        },
+        {
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
+          "odds": 2.3,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.27,
           "url": "#"
         }
       ]
@@ -297,27 +297,27 @@
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 1.48,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 1.48,
-          "url": "#"
-        },
-        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 1.46,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
           "odds": 1.45,
+          "url": "#"
+        },
+        {
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 1.45,
+          "url": "#"
+        },
+        {
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
+          "odds": 1.44,
           "url": "#"
         }
       ]
@@ -343,21 +343,21 @@
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
           "odds": 3,
           "url": "#"
         },
         {
-          "name": "Pinnacle",
-          "key": "pinnacle",
-          "odds": 2.94,
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 3,
           "url": "#"
         },
         {
-          "name": "Coolbet",
-          "key": "coolbet",
-          "odds": 2.92,
+          "name": "Tipico",
+          "key": "tipico_de",
+          "odds": 3,
           "url": "#"
         }
       ]

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-24T16:00:15.432Z",
-  "updatedDisplay": "Wed Jun 24, 6:00 PM",
+  "updated": "2026-06-25T16:00:22.447Z",
+  "updatedDisplay": "Thu Jun 25, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -11,20 +11,20 @@
       "datetime": "2026-08-21T19:00:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 1.18,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 1.18,
+          "odds": 1.19,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
+          "odds": 1.19,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 1.18,
           "url": "#"
         },
@@ -137,21 +137,21 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
           "odds": 2.78,
           "url": "#"
         },
         {
           "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.76,
+          "key": "betfair_ex_uk",
+          "odds": 2.78,
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.76,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.78,
           "url": "#"
         },
         {
@@ -229,14 +229,14 @@
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
+          "name": "Coral",
+          "key": "coral",
           "odds": 2.6,
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
           "odds": 2.6,
           "url": "#"
         }

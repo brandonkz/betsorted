@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BetSorted World Cup Zone for South African bettors. Bafana Bafana guides, bookmaker picks, odds calculators, live betting angles and World Cup 2026 betting articles.">
+  <meta name="description" content="BetSorted World Cup Zone for South African bettors. Polymarket probabilities, bookmaker picks, odds calculators, live betting angles and World Cup 2026 betting articles.">
   <link rel="canonical" href="https://betsorted.co.za/world-cup-zone.html">
   <title>World Cup 2026 Betting Zone South Africa | BetSorted</title>
   <link rel="stylesheet" href="/style.css">
@@ -106,6 +106,53 @@
       font-size: 0.92rem;
     }
     .wc-stat strong { color: white; }
+    .wc-market-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+    .wc-market-table th {
+      color: #64748b;
+      background: #f8fafc;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wc-market-table td {
+      padding: 12px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      font-weight: 650;
+    }
+    .wc-market-table tr:last-child td { border-bottom: 0; }
+    .wc-market-table .right { text-align: right; }
+    .wc-market-team {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+      font-weight: 800;
+    }
+    .wc-prob {
+      color: #16a34a;
+      font-weight: 900;
+    }
+    .wc-source-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      color: #64748b;
+      font-size: 0.86rem;
+      flex-wrap: wrap;
+    }
     .wc-section {
       padding: 38px 0;
     }
@@ -212,7 +259,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "World Cup 2026 Betting Zone South Africa",
-    "description": "A BetSorted hub for South African World Cup 2026 betting guides, Bafana Bafana analysis, bookmaker comparisons and calculator tools.",
+    "description": "A BetSorted hub for South African World Cup 2026 betting guides, Polymarket probabilities, bookmaker comparisons and calculator tools.",
     "url": "https://betsorted.co.za/world-cup-zone.html",
     "publisher": {
       "@type": "Organization",
@@ -244,44 +291,98 @@
         <div>
           <span class="wc-kicker">World Cup 2026 hub</span>
           <h1>World Cup betting zone for South African punters</h1>
-          <p>Bafana angles, bookmaker picks, live-betting rules, odds calculators and the latest World Cup guides in one place. Built for SA bettors who want a clean path instead of digging through the blog.</p>
+          <p>Polymarket probabilities, bookmaker picks, live-betting rules, odds calculators and the latest World Cup guides in one place. Built for SA bettors who want market signal before they place slips.</p>
           <div class="wc-actions">
             <a class="wc-btn primary" href="https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893" rel="sponsored noopener" target="_blank">Bet World Cup with Hollywoodbets</a>
-            <a class="wc-btn secondary" href="/blog/fifa-world-cup-2026-betting-guide-south-africa.html">Read the main guide</a>
+            <a class="wc-btn secondary" href="/prediction-markets.html">Check smart money</a>
           </div>
         </div>
         <aside class="wc-panel" aria-label="World Cup quick status">
-          <div class="wc-panel-title">Quick paths</div>
-          <div class="wc-stat"><span>Bafana guide</span><strong>Start here</strong></div>
-          <div class="wc-stat"><span>Best bookmaker</span><strong>Compare first</strong></div>
-          <div class="wc-stat"><span>Accumulators</span><strong>Use calculator</strong></div>
-          <div class="wc-stat"><span>Live betting</span><strong>Wait for price</strong></div>
+          <div class="wc-panel-title">Market read</div>
+          <div class="wc-stat"><span>Polymarket leader</span><strong>France 18.9%</strong></div>
+          <div class="wc-stat"><span>Next tier</span><strong>Argentina / Spain</strong></div>
+          <div class="wc-stat"><span>Fair odds anchor</span><strong>Use probability</strong></div>
+          <div class="wc-stat"><span>Bookmaker bet</span><strong>Only if price is better</strong></div>
         </aside>
       </div>
     </section>
 
     <section class="wc-section alt">
       <div class="container">
-        <h2>Start with these World Cup guides</h2>
-        <p class="wc-lede">These are the highest-intent World Cup pages already on BetSorted, pulled into one proper zone.</p>
+        <h2>What Polymarket is saying</h2>
+        <p class="wc-lede">Use prediction-market probability as the starting point, then compare the live SA bookmaker price. If a bookmaker is paying above the fair decimal price, that is where the value conversation starts.</p>
+        <div class="wc-card">
+          <table class="wc-market-table">
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th class="right">Polymarket</th>
+                <th class="right">Fair decimal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="wc-market-team">France</span></td>
+                <td class="right wc-prob">18.9%</td>
+                <td class="right">5.31</td>
+              </tr>
+              <tr>
+                <td><span class="wc-market-team">Argentina</span></td>
+                <td class="right wc-prob">15.2%</td>
+                <td class="right">6.60</td>
+              </tr>
+              <tr>
+                <td><span class="wc-market-team">Spain</span></td>
+                <td class="right wc-prob">13.8%</td>
+                <td class="right">7.27</td>
+              </tr>
+              <tr>
+                <td><span class="wc-market-team">England</span></td>
+                <td class="right wc-prob">10.1%</td>
+                <td class="right">9.95</td>
+              </tr>
+              <tr>
+                <td><span class="wc-market-team">Portugal</span></td>
+                <td class="right wc-prob">8.3%</td>
+                <td class="right">12.12</td>
+              </tr>
+              <tr>
+                <td><span class="wc-market-team">Brazil</span></td>
+                <td class="right wc-prob">5.5%</td>
+                <td class="right">18.02</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="wc-source-row">
+            <span>Snapshot from BetSorted Polymarket data, updated 26 June 2026.</span>
+            <a href="/prediction-markets.html">Open full smart-money page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wc-section">
+      <div class="container">
+        <h2>Start with the market-led guides</h2>
+        <p class="wc-lede">These are the pages that work best with a probability-first World Cup approach: tournament format, bookmaker depth, knockout markets and price comparison.</p>
         <div class="wc-grid">
           <article class="wc-card">
             <span class="wc-tag">Main guide</span>
             <h3>FIFA World Cup 2026 betting guide</h3>
-            <p>The full tournament overview: format, outright markets, group strategy, Bafana context and bankroll rules.</p>
+            <p>The full tournament overview: format, outright markets, group strategy, price checks and bankroll rules.</p>
             <a href="/blog/fifa-world-cup-2026-betting-guide-south-africa.html">Open guide</a>
           </article>
           <article class="wc-card">
             <span class="wc-tag">Bookmakers</span>
             <h3>Best World Cup bookmakers in South Africa</h3>
-            <p>Compare SA betting sites for World Cup odds, live betting, mobile experience, payouts and Bafana markets.</p>
+            <p>Compare SA betting sites for World Cup odds, live betting, mobile experience, payouts and tournament markets.</p>
             <a href="/blog/best-bookmakers-world-cup-2026-south-africa.html">Compare bookmakers</a>
           </article>
           <article class="wc-card">
-            <span class="wc-tag">Bafana</span>
-            <h3>Bafana Bafana World Cup betting guide</h3>
-            <p>South Africa-specific angles for match result, double chance, totals, player markets and cautious accumulators.</p>
-            <a href="/blog/bafana-bafana-world-cup-2026-betting-guide-south-africa.html">Read Bafana guide</a>
+            <span class="wc-tag">Smart money</span>
+            <h3>Prediction markets vs SA bookmakers</h3>
+            <p>Compare Polymarket implied probability with bookmaker prices before deciding whether a World Cup bet has value.</p>
+            <a href="/prediction-markets.html">Check smart money</a>
           </article>
           <article class="wc-card">
             <span class="wc-tag">Knockouts</span>
@@ -296,13 +397,13 @@
     <section class="wc-section">
       <div class="container">
         <h2>Best bookmaker setup for World Cup betting</h2>
-        <p class="wc-lede">Use more than one account. World Cup pricing moves fast, and one bookmaker can be strong on Bafana while another has better international lines.</p>
+        <p class="wc-lede">Use more than one account. World Cup pricing moves fast, and one bookmaker can be strong on local promos while another has better outright or live lines.</p>
         <div class="wc-grid">
           <article class="wc-card wc-bookmaker">
             <div>
               <span class="wc-tag">Affiliate live</span>
               <h3>Hollywoodbets</h3>
-              <p>Best local-first option for South African bettors, Bafana markets, retail/cash familiarity and low minimum deposits.</p>
+              <p>Strong local-first option for South African bettors, retail/cash familiarity, tournament promos and low minimum deposits.</p>
               <a href="https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893" rel="sponsored noopener" target="_blank">Open Hollywoodbets</a>
             </div>
             <div class="wc-score">SA fit</div>
@@ -320,7 +421,7 @@
             <div>
               <span class="wc-tag">Head to head</span>
               <h3>Hollywoodbets vs SupaBets</h3>
-              <p>World Cup markets, app speed, live betting, payouts and Bafana-specific strengths compared directly.</p>
+              <p>World Cup markets, app speed, live betting, payouts and local tournament strengths compared directly.</p>
               <a href="/blog/hollywoodbets-vs-supabets-world-cup-2026.html">Read comparison</a>
             </div>
             <div class="wc-score">H2H</div>
@@ -331,32 +432,32 @@
 
     <section class="wc-section alt">
       <div class="container">
-        <h2>Bafana betting workflow</h2>
-        <p class="wc-lede">Keep the emotional bet separate from the value bet. South African World Cup traffic will be heavy on Bafana, so this zone should help users slow down before placing slips.</p>
+        <h2>World Cup betting workflow</h2>
+        <p class="wc-lede">Start with market probability, then check the live bookmaker price, then use a calculator before staking. National-team angles still matter, but they should not dominate the page.</p>
         <div class="wc-grid">
           <article class="wc-card">
-            <span class="wc-tag">Group A</span>
-            <h3>Bafana Group A guide</h3>
-            <p>Mexico, South Korea and Czechia angles with group-market strategy, odds examples and careful staking.</p>
-            <a href="/blog/bafana-group-a-world-cup-2026-betting-south-africa.html">Open Group A guide</a>
+            <span class="wc-tag">Probability</span>
+            <h3>Convert market odds first</h3>
+            <p>Use Polymarket probability and fair decimal odds as a baseline before trusting any bookmaker special.</p>
+            <a href="/prediction-markets.html">View probabilities</a>
           </article>
           <article class="wc-card">
             <span class="wc-tag">Calculator</span>
-            <h3>Bafana odds calculator guide</h3>
-            <p>Convert odds to probability, compare prices and stop weak accumulator legs before they hit the bet slip.</p>
-            <a href="/blog/bafana-world-cup-odds-calculator-guide-june-2026.html">Use the workflow</a>
+            <h3>Use the value calculator</h3>
+            <p>Enter your probability estimate and the bookmaker odds to check whether the price is actually worth taking.</p>
+            <a href="/value-bet-calculator.html">Open value calculator</a>
           </article>
           <article class="wc-card">
-            <span class="wc-tag">Rankings</span>
-            <h3>Best bookmakers for Bafana bets</h3>
-            <p>Bookmakers ranked specifically for Bafana World Cup betting, not just general sportsbook quality.</p>
-            <a href="/blog/best-bookmakers-bafana-bafana-world-cup-2026.html">See rankings</a>
+            <span class="wc-tag">Local angle</span>
+            <h3>Then check Bafana markets</h3>
+            <p>Keep the SA team content available, but treat it as one angle inside the broader tournament workflow.</p>
+            <a href="/blog/bafana-bafana-world-cup-2026-betting-guide-south-africa.html">Read SA angle</a>
           </article>
         </div>
         <div class="wc-checklist">
-          <div class="wc-check">1. Check the best price before backing Bafana.</div>
-          <div class="wc-check">2. Prefer double chance or draw no bet when the match state is tight.</div>
-          <div class="wc-check">3. Keep patriotic accumulator legs smaller than your normal singles.</div>
+          <div class="wc-check">1. Start with Polymarket probability, not vibes.</div>
+          <div class="wc-check">2. Compare the fair decimal price to the live bookmaker price.</div>
+          <div class="wc-check">3. Keep outright bets, live bets and accumulator legs separate.</div>
         </div>
       </div>
     </section>

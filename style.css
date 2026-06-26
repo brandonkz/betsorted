@@ -210,6 +210,35 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.world-cup-home-band {
+  background: #07111f;
+  color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  border: 1px solid rgba(22, 163, 74, 0.35);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+}
+
+.world-cup-home-band-link {
+  background: #16a34a;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.world-cup-home-band-link:hover {
+  text-decoration: none;
+  background: #15803d;
+}
+
 /* Filters Section */
 .filters-section {
   background: white;
@@ -665,6 +694,15 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .world-cup-home-band {
+    grid-template-columns: 1fr;
+  }
+
+  .world-cup-home-band-link {
+    width: 100%;
+    white-space: normal;
+  }
+
   .container {
     padding: 0 1rem;
   }

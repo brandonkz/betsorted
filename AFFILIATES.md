@@ -1,6 +1,6 @@
 # BetSorted Affiliate Programs
 
-Last updated: 2026-02-09
+Last updated: 2026-06-26
 
 ## Important Note: Apply BEFORE Launching
 
@@ -27,7 +27,7 @@ Most gambling affiliate programs require **existing traffic** before approval. S
 | Site | Status | Commission | Application Link | Notes |
 |------|--------|------------|------------------|-------|
 | **Betway** | ⬜ TODO | 30-40% revenue share OR CPA | https://partners.betway.com | Tier 1 priority, biggest brand |
-| **Hollywoodbets** | ⬜ TODO | 25-35% revenue share | Contact directly via site | SA-owned, strong brand loyalty |
+| **Hollywoodbets** | ✅ APPROVED | Starter commission structure | https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893 | Approved for betsorted; team lead Ruaan Kleynhans |
 | **Sportingbet** | ⬜ TODO | 30% revenue share | https://affiliates.sportingbet.co.za | Established program |
 | **10bet** | ⬜ TODO | Up to 40% revenue share | https://partners.10bet.com | SAFA partner, good commissions |
 | **World Sports Betting** | ⬜ TODO | CPA or revenue share | Contact via website | Local brand, retail presence |
@@ -133,7 +133,7 @@ These networks aggregate multiple betting brands:
 
 1. **Launch site** → Get initial traffic (share with friends, social media, basic SEO)
 2. **Wait 2-4 weeks** → Collect at least 500-1000 visits
-3. **Apply to programs** → Start with Betway, Hollywoodbets, Sportingbet
+3. **Apply to programs** → Start with Betway and Sportingbet; Hollywoodbets is approved
 4. **Update links** → Once approved, update `ref_url` in `data/sites.json`
 5. **Track performance** → Monitor which sites convert best
 6. **Optimize** → Focus on promoting sites with best conversion rates
@@ -145,7 +145,7 @@ These networks aggregate multiple betting brands:
 | Site | Contact Method |
 |------|----------------|
 | Betway | partners.betway.com (online form) |
-| Hollywoodbets | info@hollywoodbets.net (ask for affiliate team) |
+| Hollywoodbets | Approved; tracking link `https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893`; team lead Ruaan Kleynhans |
 | Sportingbet | affiliates.sportingbet.co.za |
 | 10bet | partners.10bet.com |
 | World Sports Betting | marketing@wsb.co.za (ask for affiliate program) |
@@ -159,8 +159,8 @@ These networks aggregate multiple betting brands:
 1. ✅ Site built and ready
 2. ⬜ Launch site (deploy to GitHub Pages or hosting)
 3. ⬜ Get initial traffic (share, basic SEO, social)
-4. ⬜ Apply to Betway, Hollywoodbets, Sportingbet (after 2-4 weeks)
-5. ⬜ Update affiliate links in sites.json
+4. ⬜ Apply to Betway and Sportingbet
+5. ✅ Update Hollywoodbets affiliate links in sites.json
 6. ⬜ Track and optimize
 
 ---

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-27T04:00:16.628Z",
-  "updatedDisplay": "Sat Jun 27, 6:00 AM",
+  "updated": "2026-06-27T16:00:17.953Z",
+  "updatedDisplay": "Sat Jun 27, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -97,15 +97,15 @@
           "url": "#"
         },
         {
-          "name": "DraftKings",
-          "key": "draftkings",
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 2.15,
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 2.14,
+          "name": "DraftKings",
+          "key": "draftkings",
+          "odds": 2.15,
           "url": "#"
         },
         {
@@ -291,20 +291,20 @@
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 1.48,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 1.48,
+          "odds": 1.49,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
+          "odds": 1.49,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 1.48,
           "url": "#"
         },
@@ -333,24 +333,12 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 3.07,
+          "odds": 3.05,
           "url": "#"
         },
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 3.02,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 3,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
           "odds": 3,
           "url": "#"
         },
@@ -358,6 +346,18 @@
           "name": "Tipico",
           "key": "tipico_de",
           "odds": 3,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.98,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.98,
           "url": "#"
         }
       ]

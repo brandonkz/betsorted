@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-27T16:00:17.953Z",
-  "updatedDisplay": "Sat Jun 27, 6:00 PM",
+  "updated": "2026-06-28T04:00:21.908Z",
+  "updatedDisplay": "Sun Jun 28, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -65,19 +65,19 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 7.32,
-          "url": "#"
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 7.2,
+          "odds": 7.21,
           "url": "#"
         },
         {
           "name": "Coolbet",
           "key": "coolbet",
           "odds": 7.2,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 7.1,
           "url": "#"
         }
       ]
@@ -133,7 +133,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.82,
+          "odds": 2.83,
           "url": "#"
         },
         {
@@ -157,7 +157,7 @@
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.78,
+          "odds": 2.79,
           "url": "#"
         }
       ]
@@ -257,6 +257,12 @@
           "url": "#"
         },
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.32,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_eu",
           "odds": 2.32,
@@ -266,12 +272,6 @@
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 2.32,
-          "url": "#"
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.31,
           "url": "#"
         },
         {

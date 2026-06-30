@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-29T16:00:18.893Z",
-  "updatedDisplay": "Mon Jun 29, 6:00 PM",
+  "updated": "2026-06-30T04:00:18.811Z",
+  "updatedDisplay": "Tue Jun 30, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -229,14 +229,14 @@
           "url": "#"
         },
         {
-          "name": "Coral",
-          "key": "coral",
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
           "odds": 2.6,
           "url": "#"
         },
         {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
           "odds": 2.6,
           "url": "#"
         }
@@ -257,20 +257,20 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.32,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.32,
+          "odds": 2.34,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
+          "odds": 2.34,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 2.32,
           "url": "#"
         },
@@ -309,15 +309,15 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 1.46,
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 1.45,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 1.46,
           "url": "#"
         }
       ]

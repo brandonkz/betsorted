@@ -250,9 +250,10 @@
 
   <script>
     const ESPN      = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
-    const AFF_BETWAY = 'https://sports.betway.co.za/en/sports/soccer/south-africa';
-    const AFF_PLAY   = 'https://affiliates.play.co.za/links/?btag=2673740';
-    const AFF_HWB    = 'https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893';
+    const AFF_BETWAY = '/go/betway.html';
+    const AFF_PLAY   = '/go/play-co-za.html';
+    const AFF_HWB    = '/go/hollywoodbets.html';
+    const AFF_SUPABETS = '/go/supabets.html';
     let matches = [], selectedId = null, refreshTimer = null;
 
     function mlToDecimal(ml) {
@@ -580,7 +581,7 @@
             <div><div class="b-name">Hollywoodbets</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
             <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${(parseFloat(indic.h)*0.97).toFixed(2)} / ${(parseFloat(indic.d)*0.97).toFixed(2)} / ${(parseFloat(indic.a)*0.97).toFixed(2)}</div></div>
           </a>
-          <a class="bookie-card" href="https://www.supabets.co.za/" target="_blank" rel="nofollow noopener">
+          <a class="bookie-card" href="${AFF_SUPABETS}" rel="nofollow noopener sponsored">
             <div><div class="b-name">Supabets</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
             <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${(parseFloat(indic.h)*1.02).toFixed(2)} / ${(parseFloat(indic.d)*1.02).toFixed(2)} / ${(parseFloat(indic.a)*1.02).toFixed(2)}</div></div>
           </a>

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T16:03:17.824Z",
+  "updatedAt": "2026-07-14T22:03:16.090Z",
   "events": [
     {
       "id": 33507,
@@ -49,36 +49,28 @@
       "desc": "Who wins the World Cup?",
       "outcomes": [
         {
-          "name": "France",
-          "flag": "🇫🇷",
-          "prob": 0.3895,
-          "pct": 39,
-          "fairDec": 2.57,
-          "vol": 117868410.94430265
-        },
-        {
           "name": "Spain",
           "flag": "🇪🇸",
-          "prob": 0.2235,
-          "pct": 22.4,
-          "fairDec": 4.47,
-          "vol": 110908478.09549694
+          "prob": 0.5815,
+          "pct": 58.1,
+          "fairDec": 1.72,
+          "vol": 115076558.38968913
         },
         {
           "name": "England",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "prob": 0.2145,
-          "pct": 21.4,
-          "fairDec": 4.66,
-          "vol": 100649665.25307532
+          "prob": 0.2245,
+          "pct": 22.4,
+          "fairDec": 4.45,
+          "vol": 102292548.00064391
         },
         {
           "name": "Argentina",
           "flag": "🇦🇷",
-          "prob": 0.1745,
-          "pct": 17.4,
-          "fairDec": 5.73,
-          "vol": 134607757.2510058
+          "prob": 0.1905,
+          "pct": 19.1,
+          "fairDec": 5.25,
+          "vol": 136592617.32742757
         }
       ]
     },

@@ -300,9 +300,6 @@ async function main() {
   console.log(`📊 Selected ${events.length} events for homepage`);
   console.log(`📊 Prepared ${finderMatches.length} matches for Best Odds Finder\n`);
   
-  // Generate HTML
-  const eventsHTML = generateEventHTML(events);
-  
   // Read index.html
   const indexPath = path.join(__dirname, 'index.html');
   let html = fs.readFileSync(indexPath, 'utf8');
@@ -318,30 +315,34 @@ async function main() {
   const startIndex = html.indexOf(startMarker);
   const endIndex = html.indexOf(endMarker, startIndex);
   
-  if (startIndex === -1 || endIndex === -1) {
-    console.error('✗ Could not find events section in index.html');
-    return;
+  let homepageUpdated = false;
+
+  if (startIndex !== -1 && endIndex !== -1) {
+    // Generate HTML
+    const eventsHTML = generateEventHTML(events);
+    const before = html.substring(0, startIndex + startMarker.length);
+    const after = html.substring(endIndex);
+
+    const newHTML = before + '\n' + eventsHTML + '\n      ' + after;
+
+    // Update timestamp and note
+    let updatedHTML = newHTML.replace(
+      /Updated .*? \•/,
+      `Updated ${timestamp} (live) •`
+    );
+
+    // Update note about bookmakers
+    updatedHTML = updatedHTML.replace(
+      /Odds indicative only/,
+      'Live odds prioritize Betway 🇿🇦 + international bookmakers'
+    );
+
+    // Write back
+    fs.writeFileSync(indexPath, updatedHTML);
+    homepageUpdated = true;
+  } else {
+    console.warn('⚠️  Legacy homepage events section not found; updating data feed only.');
   }
-  
-  const before = html.substring(0, startIndex + startMarker.length);
-  const after = html.substring(endIndex);
-  
-  const newHTML = before + '\n' + eventsHTML + '\n      ' + after;
-  
-  // Update timestamp and note
-  let updatedHTML = newHTML.replace(
-    /Updated .*? \•/,
-    `Updated ${timestamp} (live) •`
-  );
-  
-  // Update note about bookmakers
-  updatedHTML = updatedHTML.replace(
-    /Odds indicative only/,
-    'Live odds prioritize Betway 🇿🇦 + international bookmakers'
-  );
-  
-  // Write back
-  fs.writeFileSync(indexPath, updatedHTML);
   
   // Save odds data for best-odds-finder
   const dataDir = path.join(__dirname, 'data');
@@ -362,7 +363,9 @@ async function main() {
 
   updateOddsHistory(oddsData.matches);
   
-  console.log('✅ Homepage updated with live odds!');
+  if (homepageUpdated) {
+    console.log('✅ Homepage updated with live odds!');
+  }
   console.log('✅ Best Odds Finder data saved to data/live-odds.json');
   console.log(`\nHomepage Events:`);
   events.forEach(e => {

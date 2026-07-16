@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-16T04:02:47.943Z",
-  "updatedDisplay": "Thu Jul 16, 6:02 AM",
+  "updated": "2026-07-16T16:00:25.080Z",
+  "updatedDisplay": "Thu Jul 16, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -63,20 +63,20 @@
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 7.6,
-          "url": "#"
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 7.6,
-          "url": "#"
-        },
-        {
           "name": "Tipico",
           "key": "tipico_de",
+          "odds": 7.5,
+          "url": "#"
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 7.5,
+          "url": "#"
+        },
+        {
+          "name": "LowVig.ag",
+          "key": "lowvig",
           "odds": 7.5,
           "url": "#"
         }
@@ -103,21 +103,21 @@
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.18,
-          "url": "#"
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.18,
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.16,
           "url": "#"
         },
         {
           "name": "Betfair",
-          "key": "betfair_ex_uk",
+          "key": "betfair_ex_eu",
           "odds": 2.16,
+          "url": "#"
+        },
+        {
+          "name": "DraftKings",
+          "key": "draftkings",
+          "odds": 2.15,
           "url": "#"
         }
       ]
@@ -311,7 +311,7 @@
         {
           "name": "Codere (IT)",
           "key": "codere_it",
-          "odds": 1.46,
+          "odds": 1.47,
           "url": "#"
         },
         {

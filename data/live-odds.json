@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-19T04:00:25.883Z",
-  "updatedDisplay": "Sun Jul 19, 6:00 AM",
+  "updated": "2026-07-19T16:00:25.813Z",
+  "updatedDisplay": "Sun Jul 19, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -223,21 +223,21 @@
           "url": "#"
         },
         {
+          "name": "Coral",
+          "key": "coral",
+          "odds": 2.37,
+          "url": "#"
+        },
+        {
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
+          "odds": 2.37,
+          "url": "#"
+        },
+        {
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.35,
-          "url": "#"
-        },
-        {
-          "name": "Coolbet",
-          "key": "coolbet",
-          "odds": 2.33,
-          "url": "#"
-        },
-        {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 2.33,
           "url": "#"
         }
       ]

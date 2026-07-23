@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-23T04:00:43.674Z",
-  "updatedDisplay": "Thu Jul 23, 6:00 AM",
+  "updated": "2026-07-23T16:00:50.540Z",
+  "updatedDisplay": "Thu Jul 23, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -35,8 +35,8 @@
           "url": "#"
         },
         {
-          "name": "Coral",
-          "key": "coral",
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 1.18,
           "url": "#"
         }
@@ -63,6 +63,12 @@
           "url": "#"
         },
         {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 8,
+          "url": "#"
+        },
+        {
           "name": "BetOnline.ag",
           "key": "betonlineag",
           "odds": 7.55,
@@ -71,12 +77,6 @@
         {
           "name": "LowVig.ag",
           "key": "lowvig",
-          "odds": 7.55,
-          "url": "#"
-        },
-        {
-          "name": "BetUS",
-          "key": "betus",
           "odds": 7.55,
           "url": "#"
         }
@@ -99,13 +99,13 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.18,
+          "odds": 2.2,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.18,
+          "odds": 2.2,
           "url": "#"
         },
         {
@@ -115,9 +115,9 @@
           "url": "#"
         },
         {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 2.16,
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.18,
           "url": "#"
         }
       ]
@@ -139,13 +139,13 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.8,
+          "odds": 2.82,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.8,
+          "odds": 2.82,
           "url": "#"
         },
         {

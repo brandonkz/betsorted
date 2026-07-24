@@ -252,9 +252,9 @@
 
   <script>
     const ESPN      = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1';
-    const AFF_BETWAY = '/go/betway.html';
+    const AFF_PRIMARY = '/go/hollywoodbets.html';
     const AFF_PLAY   = '/go/play-co-za.html';
-    const AFF_HWB    = '/go/hollywoodbets.html';
+    const AFF_10BET = '/go/10bet.html';
     const AFF_SUPABETS = '/go/supabets.html';
     let matches = [], selectedId = null, refreshTimer = null;
 
@@ -320,7 +320,7 @@
       el.innerHTML = `<div class="tip-label">⚡ In-Play Suggestion</div>
         <div class="tip-text">⚡ ${tip.s} <span style="font-size:0.85rem;font-weight:600;color:#b45309;">≈ ${tip.odds}</span></div>
         <div style="font-size:0.82rem;color:#92400e;margin-top:4px;">${tip.ctx}</div>
-        <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:inline-block;margin-top:10px;background:#ea580c;color:white;padding:7px 16px;border-radius:8px;font-size:0.8rem;font-weight:700;text-decoration:none;">Bet In-Play at Betway →</a>`;
+        <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener" style="display:inline-block;margin-top:10px;background:#ea580c;color:white;padding:7px 16px;border-radius:8px;font-size:0.8rem;font-weight:700;text-decoration:none;">Bet In-Play at Hollywoodbets →</a>`;
       statsContent.insertBefore(el, statsContent.firstChild);
     }
 
@@ -399,7 +399,7 @@
         const statusText = m.isLive ? `<span class="live-dot"></span>${m.clockDisplay||'LIVE'}` : m.isFinished ? 'FT' : m.date.toLocaleTimeString('en-ZA',{hour:'2-digit',minute:'2-digit'});
         const scoreDisplay = (m.isLive||m.isFinished) ? `${m.homeScore||0} - ${m.awayScore||0}` : `vs`;
         const betCta = !m.isFinished
-          ? `<a class="bet-cta-strip${m.isLive?' live':''}" href="${AFF_BETWAY}" onclick="event.stopPropagation()" target="_blank" rel="nofollow noopener">${m.isLive ? '🔴 Bet In-Play Now' : '🏆 Get Odds & Bet'}</a>`
+          ? `<a class="bet-cta-strip${m.isLive?' live':''}" href="${AFF_PRIMARY}" onclick="event.stopPropagation()" target="_blank" rel="nofollow noopener">${m.isLive ? '🔴 Bet In-Play Now' : '🏆 Get Odds & Bet'}</a>`
           : '';
         return `${header}<div class="match-pill ${cls} ${active}" onclick="loadMatchDetail('${m.id}')">
           <div class="mp-team">${m.homeLogo?`<img src="${m.homeLogo}" alt="BetSorted interface image">`:''}${m.home}</div>
@@ -541,19 +541,19 @@
               <div class="o-label">${m.home.split(' ')[0]} Win</div>
               <div class="o-val">${hDec}${hVal > 5 ? `<span class="value-badge">+${hVal}% value</span>` : ''}</div>
               <div class="o-ml">${hML ? (hML>0?'+':'')+hML : ''} (US)</div>
-              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+              <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener">Bet at Hollywoodbets →</a>
             </div>
             <div class="odds-box">
               <div class="o-label">Draw</div>
               <div class="o-val">${dDec}</div>
               <div class="o-ml">${dML ? (dML>0?'+':'')+dML : ''} (US)</div>
-              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+              <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener">Bet at Hollywoodbets →</a>
             </div>
             <div class="odds-box">
               <div class="o-label">${m.away.split(' ')[0]} Win</div>
               <div class="o-val">${aDec}${aVal > 5 ? `<span class="value-badge">+${aVal}% value</span>` : ''}</div>
               <div class="o-ml">${aML ? (aML>0?'+':'')+aML : ''} (US)</div>
-              <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">Bet at Betway →</a>
+              <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener">Bet at Hollywoodbets →</a>
             </div>
           </div>`;
         const ou = o.total;
@@ -571,16 +571,16 @@
       // SA bookmakers section — indicative odds
       const saHtml = `<div class="section-label" style="margin-top:20px;">🇿🇦 SA Bookmakers — Indicative Odds</div>
         <div class="bookie-grid">
-          <a class="bookie-card" href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener">
-            <div><div class="b-name">Betway</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
+          <a class="bookie-card" href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">Hollywoodbets</div><div class="b-badge">Tracked BetSorted route</div></div>
             <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${indic.h} / ${indic.d} / ${indic.a}</div></div>
           </a>
           <a class="bookie-card" href="${AFF_PLAY}" target="_blank" rel="nofollow noopener">
             <div><div class="b-name">Play.co.za</div><div class="b-badge" style="background:#fef9c3;color:#854d0e;">300% Bonus</div></div>
             <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${indic.h} / ${indic.d} / ${indic.a}</div></div>
           </a>
-          <a class="bookie-card" href="${AFF_HWB}" target="_blank" rel="nofollow noopener">
-            <div><div class="b-name">Hollywoodbets</div><div class="b-badge">🇿🇦 Licensed SA</div></div>
+          <a class="bookie-card" href="${AFF_10BET}" target="_blank" rel="nofollow noopener">
+            <div><div class="b-name">10bet</div><div class="b-badge">Tracked alternative</div></div>
             <div style="text-align:right;"><div style="font-size:0.7rem;color:#6b7280;">1 / X / 2</div><div class="b-odds">${(parseFloat(indic.h)*0.97).toFixed(2)} / ${(parseFloat(indic.d)*0.97).toFixed(2)} / ${(parseFloat(indic.a)*0.97).toFixed(2)}</div></div>
           </a>
           <a class="bookie-card" href="${AFF_SUPABETS}" rel="nofollow noopener sponsored">
@@ -594,11 +594,11 @@
         <div class="btts-row">
           <div class="btts-card">
             <div class="bt-label">Yes — Both score</div><div class="bt-val">${btts.yes}</div>
-            <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
+            <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
           </div>
           <div class="btts-card">
             <div class="bt-label">No — Clean sheet</div><div class="bt-val">${btts.no}</div>
-            <a href="${AFF_BETWAY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
+            <a href="${AFF_PRIMARY}" target="_blank" rel="nofollow noopener" style="display:block;margin-top:8px;background:#2563eb;color:white;padding:5px;border-radius:6px;font-size:0.75rem;font-weight:700;text-decoration:none;text-align:center;">Bet →</a>
           </div>
         </div>`;
 

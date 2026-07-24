@@ -1,68 +1,12 @@
 [
   {
-    "id": 1,
-    "name": "Betway",
-    "slug": "betway",
-    "logo_bg": "#00A651",
-    "url": "https://betway.co.za",
-    "ref_url": "/go/betway.html",
-    "rating": 4.5,
-    "welcome_bonus": "Up to R1,000 Welcome Bonus",
-    "min_deposit": "R10",
-    "payment_methods": [
-      "EFT",
-      "Instant EFT",
-      "Ozow",
-      "Credit Card",
-      "Visa",
-      "Mastercard"
-    ],
-    "data_free_app": true,
-    "sports": [
-      "Soccer",
-      "Rugby",
-      "Cricket",
-      "Tennis",
-      "Horse Racing",
-      "Golf"
-    ],
-    "live_streaming": true,
-    "live_betting": true,
-    "established": "2006",
-    "license": "Western Cape Gambling & Racing Board",
-    "description": "One of SA's most trusted betting sites. Betway offers extensive sports coverage, competitive odds, and a slick mobile app. Known for fast payouts and excellent customer service.",
-    "pros": [
-      "Fast EFT withdrawals",
-      "Data-free app available",
-      "Extensive live betting options",
-      "Regular promotions",
-      "Trusted international brand"
-    ],
-    "cons": [
-      "Bonus wagering requirements can be high",
-      "Customer support busy during peak times"
-    ],
-    "best_for": [
-      "All-rounders",
-      "Live betting fans",
-      "Mobile users"
-    ],
-    "featured": true,
-    "rank": 1,
-    "reddit_quotes": [
-      "\"Betway SA is what I've used for a while. Never had withdrawal issues, which is the main thing for me.\"",
-      "\"Betway is the most popular...currently along with HWB\"",
-      "\"Feels modern and has decent promos for both local and international games\" — r/sportsbetting"
-    ]
-  },
-  {
     "id": 2,
     "name": "Hollywoodbets",
     "slug": "hollywoodbets",
     "logo_bg": "#FFD700",
     "url": "https://hollywoodbets.net",
     "ref_url": "/go/hollywoodbets.html",
-    "rating": 4.3,
+    "rating": 4.6,
     "welcome_bonus": "R25 Sign-Up Bonus",
     "min_deposit": "R5",
     "payment_methods": [
@@ -84,30 +28,135 @@
     "live_betting": true,
     "established": "2000",
     "license": "KwaZulu-Natal Gaming & Betting Board",
-    "description": "A true South African brand. Hollywoodbets is massive in horse racing and offers unique features like Lucky Numbers. Low minimum deposits make it accessible to everyone.",
+    "description": "A true South African brand and BetSorted's preferred default pick while we have a tracked partnership. Hollywoodbets is strong on horse racing, PSL coverage, low minimums, retail support, Lucky Numbers and beginner-friendly betting.",
     "pros": [
+      "Approved BetSorted tracking link",
       "R5 minimum deposit",
       "Strong horse racing coverage",
-      "Lucky Numbers (lotto-style betting)",
-      "Cash deposits at retail outlets",
+      "Lucky Numbers and retail cash support",
       "Data-free app"
     ],
     "cons": [
       "No live streaming",
       "Interface feels dated",
-      "Fewer international sports"
+      "Withdrawals can be slower than Betway"
     ],
     "best_for": [
+      "Beginner bettors",
       "Horse racing fans",
-      "Budget bettors",
-      "Lucky Numbers players"
+      "PSL and local-market players"
     ],
     "featured": true,
-    "rank": 2,
+    "rank": 1,
     "reddit_quotes": [
       "\"Hollywoodbets is the go-to for a lot of South Africans\"",
       "\"Everywhere I looked in Durban there were ads for them - massive in KZN\"",
       "\"Strong on horse racing and Lucky Numbers\" — Community favorite"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "10bet",
+    "slug": "10bet",
+    "logo_bg": "#1A1A1A",
+    "url": "https://10bet.co.za",
+    "ref_url": "/go/10bet.html",
+    "rating": 4.4,
+    "welcome_bonus": "100% Deposit Match up to R500",
+    "min_deposit": "R50",
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "Ozow",
+      "Credit Card"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Horse Racing"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "2003",
+    "license": "Mpumalanga Gaming Board",
+    "description": "International bookmaker with strong SA presence. 10bet offers competitive odds, regular promotions, and a clean interface. SAFA's official betting partner.",
+    "pros": [
+      "SAFA official partner",
+      "Competitive soccer odds",
+      "Regular promotions",
+      "Clean, modern interface"
+    ],
+    "cons": [
+      "No live streaming",
+      "Higher minimum deposit",
+      "No data-free option"
+    ],
+    "best_for": [
+      "Soccer fans",
+      "Bonus hunters",
+      "International sports"
+    ],
+    "featured": true,
+    "rank": 2,
+    "reddit_quotes": [
+      "Trusted by South African punters"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Play.co.za",
+    "slug": "play-co-za",
+    "logo_bg": "#6B46C1",
+    "url": "https://play.co.za",
+    "ref_url": "/go/play-co-za.html",
+    "rating": 4.3,
+    "welcome_bonus": "100% Match up to R3,000 (300% up to R9,000 across 3 deposits)",
+    "min_deposit": "R5",
+    "payment_methods": [
+      "EFT",
+      "1Voucher",
+      "OTT Voucher",
+      "Bank Transfer"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Basketball"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "2020",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "Modern betting platform with a sleek design and generous welcome bonuses. Play.co.za combines sports betting with live casino games, offering massive payout limits and fast withdrawals.",
+    "pros": [
+      "Generous multi-deposit welcome bonus",
+      "R5 minimum deposit",
+      "Fast withdrawals (12-24 hours)",
+      "Modern, user-friendly interface",
+      "Massive payout limits"
+    ],
+    "cons": [
+      "No live streaming",
+      "No cashout feature",
+      "Customer support response times vary"
+    ],
+    "best_for": [
+      "Bonus hunters",
+      "Casino + sports combo players",
+      "Budget bettors"
+    ],
+    "featured": true,
+    "rank": 3,
+    "reddit_quotes": [
+      "\"Modern design and huge payout limits\"",
+      "\"Play.co.za stands out with its generous bonuses\"",
+      "\"Fast loading and smooth experience\" — Rising star"
     ]
   },
   {
@@ -157,7 +206,7 @@
       "Experienced bettors"
     ],
     "featured": true,
-    "rank": 3,
+    "rank": 4,
     "reddit_quotes": [
       "\"You can check Betway, Sportingbet, Betolimp - most have politics, cinema awards bets\"",
       "\"Reliable for South African sports betting\"",
@@ -165,54 +214,59 @@
     ]
   },
   {
-    "id": 4,
-    "name": "10bet",
-    "slug": "10bet",
-    "logo_bg": "#1A1A1A",
-    "url": "https://10bet.co.za",
-    "ref_url": "/go/10bet.html",
+    "id": 1,
+    "name": "Betway",
+    "slug": "betway",
+    "logo_bg": "#00A651",
+    "url": "https://betway.co.za",
+    "ref_url": "/go/betway.html",
     "rating": 4.1,
-    "welcome_bonus": "100% Deposit Match up to R500",
-    "min_deposit": "R50",
+    "welcome_bonus": "Up to R1,000 Welcome Bonus",
+    "min_deposit": "R10",
     "payment_methods": [
       "EFT",
       "Instant EFT",
       "Ozow",
-      "Credit Card"
+      "Credit Card",
+      "Visa",
+      "Mastercard"
     ],
-    "data_free_app": false,
+    "data_free_app": true,
     "sports": [
       "Soccer",
       "Rugby",
       "Cricket",
       "Tennis",
-      "Horse Racing"
+      "Horse Racing",
+      "Golf"
     ],
-    "live_streaming": false,
+    "live_streaming": true,
     "live_betting": true,
-    "established": "2003",
-    "license": "Mpumalanga Gaming Board",
-    "description": "International bookmaker with strong SA presence. 10bet offers competitive odds, regular promotions, and a clean interface. SAFA's official betting partner.",
+    "established": "2006",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "A strong all-round betting product, but BetSorted does not currently have a tracked Betway partner URL. Keep Betway in product comparisons, but do not use it as the default commercial recommendation.",
     "pros": [
-      "SAFA official partner",
-      "Competitive soccer odds",
-      "Regular promotions",
-      "Clean, modern interface"
+      "Fast EFT withdrawals",
+      "Data-free app available",
+      "Extensive live betting options",
+      "Trusted international brand"
     ],
     "cons": [
-      "No live streaming",
-      "Higher minimum deposit",
-      "No data-free option"
+      "No tracked BetSorted affiliate link yet",
+      "Bonus wagering requirements can be high",
+      "Customer support busy during peak times"
     ],
     "best_for": [
-      "Soccer fans",
-      "Bonus hunters",
-      "International sports"
+      "Live betting fans",
+      "Fast withdrawal shoppers",
+      "Betway-specific comparisons"
     ],
-    "featured": true,
-    "rank": 4,
+    "featured": false,
+    "rank": 5,
     "reddit_quotes": [
-      "Trusted by South African punters"
+      "\"Betway SA is what I've used for a while. Never had withdrawal issues, which is the main thing for me.\"",
+      "\"Betway is the most popular...currently along with HWB\"",
+      "\"Feels modern and has decent promos for both local and international games\" — r/sportsbetting"
     ]
   },
   {
@@ -222,7 +276,7 @@
     "logo_bg": "#E31E24",
     "url": "https://worldsportsbetting.co.za",
     "ref_url": "/go/world-sports-betting.html",
-    "rating": 4.0,
+    "rating": 4,
     "welcome_bonus": "R50 Sign-Up Bonus",
     "min_deposit": "R10",
     "payment_methods": [
@@ -261,7 +315,7 @@
       "Budget bettors"
     ],
     "featured": true,
-    "rank": 5,
+    "rank": 6,
     "reddit_quotes": [
       "\"Trusted brand since 1998\"",
       "\"Strong rugby and cricket coverage\"",
@@ -314,7 +368,7 @@
       "Lucky Numbers fans"
     ],
     "featured": false,
-    "rank": 6,
+    "rank": 7,
     "reddit_quotes": [
       "Trusted by South African punters"
     ]
@@ -364,65 +418,11 @@
       "Traditional bettors"
     ],
     "featured": false,
-    "rank": 7,
+    "rank": 8,
     "reddit_quotes": [
       "\"Tab betting integrated\"",
       "\"Good for horse racing\"",
       "\"Trusted in SA since 2001\" — Established player"
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Play.co.za",
-    "slug": "play-co-za",
-    "logo_bg": "#6B46C1",
-    "url": "https://play.co.za",
-    "ref_url": "/go/play-co-za.html",
-    "rating": 4.2,
-    "welcome_bonus": "100% Match up to R3,000 (300% up to R9,000 across 3 deposits)",
-    "min_deposit": "R5",
-    "payment_methods": [
-      "EFT",
-      "1Voucher",
-      "OTT Voucher",
-      "Bank Transfer"
-    ],
-    "data_free_app": false,
-    "sports": [
-      "Soccer",
-      "Rugby",
-      "Cricket",
-      "Tennis",
-      "Basketball"
-    ],
-    "live_streaming": false,
-    "live_betting": true,
-    "established": "2020",
-    "license": "Western Cape Gambling & Racing Board",
-    "description": "Modern betting platform with a sleek design and generous welcome bonuses. Play.co.za combines sports betting with live casino games, offering massive payout limits and fast withdrawals.",
-    "pros": [
-      "Generous multi-deposit welcome bonus",
-      "R5 minimum deposit",
-      "Fast withdrawals (12-24 hours)",
-      "Modern, user-friendly interface",
-      "Massive payout limits"
-    ],
-    "cons": [
-      "No live streaming",
-      "No cashout feature",
-      "Customer support response times vary"
-    ],
-    "best_for": [
-      "Bonus hunters",
-      "Casino + sports combo players",
-      "Budget bettors"
-    ],
-    "featured": true,
-    "rank": 4,
-    "reddit_quotes": [
-      "\"Modern design and huge payout limits\"",
-      "\"Play.co.za stands out with its generous bonuses\"",
-      "\"Fast loading and smooth experience\" — Rising star"
     ]
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-25T04:00:51.693Z",
-  "updatedDisplay": "Sat Jul 25, 6:00 AM",
+  "updated": "2026-07-26T04:00:57.336Z",
+  "updatedDisplay": "Sun Jul 26, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -25,7 +25,7 @@
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 1.21,
+          "odds": 1.2,
           "url": "#"
         },
         {
@@ -35,9 +35,9 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 1.18,
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 1.19,
           "url": "#"
         }
       ]
@@ -65,7 +65,7 @@
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 8.4,
+          "odds": 8.2,
           "url": "#"
         },
         {
@@ -97,27 +97,27 @@
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 2.19,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.18,
+          "odds": 2.2,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.18,
+          "odds": 2.2,
           "url": "#"
         },
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 2.18,
+          "odds": 2.2,
+          "url": "#"
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.19,
           "url": "#"
         }
       ]
@@ -151,7 +151,7 @@
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 2.82,
+          "odds": 2.8,
           "url": "#"
         },
         {
@@ -173,19 +173,13 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.32,
+          "odds": 2.33,
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.3,
-          "url": "#"
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.3,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.29,
           "url": "#"
         },
         {
@@ -198,6 +192,12 @@
           "name": "LowVig.ag",
           "key": "lowvig",
           "odds": 2.29,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.26,
           "url": "#"
         }
       ]
@@ -223,21 +223,21 @@
           "url": "#"
         },
         {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 2.37,
-          "url": "#"
-        },
-        {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
-          "odds": 2.37,
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.42,
           "url": "#"
         },
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.35,
+          "odds": 2.39,
+          "url": "#"
+        },
+        {
+          "name": "Coral",
+          "key": "coral",
+          "odds": 2.37,
           "url": "#"
         }
       ]
@@ -269,14 +269,14 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 2.3,
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.32,
           "url": "#"
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 2.3,
           "url": "#"
         }
@@ -297,9 +297,15 @@
           "url": "#"
         },
         {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 1.48,
+          "url": "#"
+        },
+        {
           "name": "Codere (IT)",
           "key": "codere_it",
-          "odds": 1.48,
+          "odds": 1.47,
           "url": "#"
         },
         {
@@ -311,12 +317,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 1.46,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
           "odds": 1.46,
           "url": "#"
         }
@@ -377,6 +377,18 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 3.25,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 3.25,
+          "url": "#"
+        },
+        {
           "name": "888sport",
           "key": "sport888",
           "odds": 3.25,
@@ -385,18 +397,6 @@
         {
           "name": "Casumo",
           "key": "casumo",
-          "odds": 3.25,
-          "url": "#"
-        },
-        {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
-          "odds": 3.25,
-          "url": "#"
-        },
-        {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
           "odds": 3.25,
           "url": "#"
         }

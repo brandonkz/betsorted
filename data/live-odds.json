@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-26T04:00:57.336Z",
-  "updatedDisplay": "Sun Jul 26, 6:00 AM",
+  "updated": "2026-07-26T16:00:45.105Z",
+  "updatedDisplay": "Sun Jul 26, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -25,7 +25,7 @@
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 1.2,
+          "odds": 1.21,
           "url": "#"
         },
         {
@@ -51,6 +51,12 @@
       "datetime": "2026-08-22T11:30:00Z",
       "bookmakers": [
         {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 8.6,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 8.4,
@@ -63,21 +69,15 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 8.2,
-          "url": "#"
-        },
-        {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 7.5,
-          "url": "#"
-        },
-        {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 7.42,
+          "odds": 7.6,
+          "url": "#"
+        },
+        {
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 7.6,
           "url": "#"
         }
       ]
@@ -93,7 +93,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.23,
+          "odds": 2.21,
           "url": "#"
         },
         {
@@ -117,7 +117,7 @@
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.19,
+          "odds": 2.18,
           "url": "#"
         }
       ]
@@ -197,7 +197,7 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.26,
+          "odds": 2.28,
           "url": "#"
         }
       ]
@@ -211,21 +211,21 @@
       "datetime": "2026-08-22T16:30:00Z",
       "bookmakers": [
         {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.46,
+          "url": "#"
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.46,
+          "odds": 2.44,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.46,
-          "url": "#"
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.42,
+          "odds": 2.44,
           "url": "#"
         },
         {
@@ -253,7 +253,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.34,
+          "odds": 2.35,
           "url": "#"
         },
         {
@@ -275,9 +275,9 @@
           "url": "#"
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 2.3,
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 2.32,
           "url": "#"
         }
       ]
@@ -297,12 +297,6 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 1.48,
-          "url": "#"
-        },
-        {
           "name": "Codere (IT)",
           "key": "codere_it",
           "odds": 1.47,
@@ -317,6 +311,12 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
+          "odds": 1.46,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
           "odds": 1.46,
           "url": "#"
         }
@@ -371,20 +371,20 @@
       "datetime": "2026-08-24T19:00:00Z",
       "bookmakers": [
         {
-          "name": "William Hill",
-          "key": "williamhill",
-          "odds": 3.25,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 3.25,
+          "odds": 3.3,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
+          "odds": 3.3,
+          "url": "#"
+        },
+        {
+          "name": "William Hill",
+          "key": "williamhill",
           "odds": 3.25,
           "url": "#"
         },
@@ -395,8 +395,8 @@
           "url": "#"
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 3.25,
           "url": "#"
         }

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-29T16:00:59.979Z",
-  "updatedDisplay": "Wed Jul 29, 6:00 PM",
+  "updated": "2026-07-30T04:00:50.711Z",
+  "updatedDisplay": "Thu Jul 30, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -23,14 +23,14 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 1.2,
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 1.19,
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 1.19,
           "url": "#"
         },
@@ -137,6 +137,18 @@
           "url": "#"
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.86,
+          "url": "#"
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.86,
+          "url": "#"
+        },
+        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
           "odds": 2.85,
@@ -146,18 +158,6 @@
           "name": "Unibet (NL)",
           "key": "unibet_nl",
           "odds": 2.85,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.84,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.84,
           "url": "#"
         }
       ]
@@ -223,6 +223,12 @@
           "url": "#"
         },
         {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.48,
+          "url": "#"
+        },
+        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
           "odds": 2.45,
@@ -232,12 +238,6 @@
           "name": "Unibet (NL)",
           "key": "unibet_nl",
           "odds": 2.45,
-          "url": "#"
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.42,
           "url": "#"
         }
       ]
@@ -250,6 +250,12 @@
       "awayTeam": "Aston Villa",
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
+        {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.38,
+          "url": "#"
+        },
         {
           "name": "1xBet",
           "key": "onexbet",
@@ -271,12 +277,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.34,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
           "odds": 2.34,
           "url": "#"
         }
@@ -343,12 +343,6 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 3.1,
-          "url": "#"
-        },
-        {
           "name": "BetOnline.ag",
           "key": "betonlineag",
           "odds": 3.09,
@@ -358,6 +352,12 @@
           "name": "LowVig.ag",
           "key": "lowvig",
           "odds": 3.09,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 3.07,
           "url": "#"
         }
       ]
@@ -383,12 +383,6 @@
           "url": "#"
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 3.35,
-          "url": "#"
-        },
-        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
           "odds": 3.3,
@@ -398,6 +392,12 @@
           "name": "Unibet (NL)",
           "key": "unibet_nl",
           "odds": 3.3,
+          "url": "#"
+        },
+        {
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 3.25,
           "url": "#"
         }
       ]

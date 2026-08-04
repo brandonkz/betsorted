@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-03T04:00:50.858Z",
-  "updatedDisplay": "Mon Aug 3, 6:00 AM",
+  "updated": "2026-08-04T04:00:58.320Z",
+  "updatedDisplay": "Tue Aug 4, 6:00 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -29,15 +29,15 @@
           "url": "#"
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 1.19,
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 1.18,
           "url": "#"
         },
         {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
-          "odds": 1.19,
+          "name": "Coral",
+          "key": "coral",
+          "odds": 1.18,
           "url": "#"
         }
       ]
@@ -131,32 +131,32 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.88,
-          "url": "#"
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.88,
+          "odds": 2.84,
           "url": "#"
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.88,
+          "odds": 2.84,
+          "url": "#"
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.83,
           "url": "#"
         },
         {
           "name": "Marathon Bet",
           "key": "marathonbet",
-          "odds": 2.83,
+          "odds": 2.8,
           "url": "#"
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
           "odds": 2.8,
           "url": "#"
         }
@@ -177,27 +177,27 @@
           "url": "#"
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.32,
-          "url": "#"
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.32,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.28,
           "url": "#"
         },
         {
           "name": "Unibet (SE)",
           "key": "unibet_se",
-          "odds": 2.3,
+          "odds": 2.28,
           "url": "#"
         },
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
-          "odds": 2.3,
+          "odds": 2.28,
+          "url": "#"
+        },
+        {
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 2.28,
           "url": "#"
         }
       ]
@@ -231,7 +231,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 2.45,
+          "odds": 2.47,
           "url": "#"
         },
         {
@@ -263,21 +263,21 @@
           "url": "#"
         },
         {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 2.38,
+          "url": "#"
+        },
+        {
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
+          "odds": 2.38,
+          "url": "#"
+        },
+        {
           "name": "BetOnline.ag",
           "key": "betonlineag",
           "odds": 2.37,
-          "url": "#"
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 2.37,
-          "url": "#"
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.35,
           "url": "#"
         }
       ]
@@ -293,7 +293,7 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 1.49,
+          "odds": 1.5,
           "url": "#"
         },
         {
@@ -303,20 +303,20 @@
           "url": "#"
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 1.48,
-          "url": "#"
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 1.48,
           "url": "#"
         },
         {
           "name": "Coral",
           "key": "coral",
+          "odds": 1.48,
+          "url": "#"
+        },
+        {
+          "name": "Bovada",
+          "key": "bovada",
           "odds": 1.48,
           "url": "#"
         }
@@ -349,15 +349,15 @@
           "url": "#"
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 3.35,
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 3.44,
           "url": "#"
         },
         {
-          "name": "Betfair Sportsbook",
-          "key": "betfair_sb_uk",
-          "odds": 3.3,
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 3.44,
           "url": "#"
         }
       ]

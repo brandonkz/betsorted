@@ -43,6 +43,51 @@
   <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
      crossorigin="anonymous"></script>
+
+  <!-- Phase 1 additive schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "🔄 Odds Format Converter",
+          "item": "https://betsorted.co.za/odds-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "🔄 Odds Format Converter",
+      "url": "https://betsorted.co.za/odds-converter.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "description": "Free odds format converter for South African bettors. Convert decimal, fractional, American and implied probability instantly. Works with ZAR betting sites.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-header">

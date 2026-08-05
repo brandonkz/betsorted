@@ -19,6 +19,65 @@
   <link rel="icon" href="/assets/favicon.png">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
      crossorigin="anonymous"></script>
+
+  <!-- Phase 1 additive schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://betsorted.co.za/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bookmaker Reviews",
+          "item": "https://betsorted.co.za/blog/category-bookmaker-reviews.html"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "name": "Bookmaker Reviews",
+      "url": "https://betsorted.co.za/blog/category-bookmaker-reviews.html",
+      "reviewBody": "Bookmaker Reviews guides from BetSorted for South African bettors.",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization",
+        "name": "BetSorted"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Bookmaker",
+        "areaServed": "ZA"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-header">

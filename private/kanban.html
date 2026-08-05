@@ -24,6 +24,45 @@
     .empty{color:#6b7280;font-size:13px}
     a{color:#93c5fd}
   </style>
+
+  <!-- Phase 1 additive schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "private",
+          "item": "https://betsorted.co.za/private"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BetSorted Ops Board (Private)",
+          "item": "https://betsorted.co.za/private/kanban.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <h1>BetSorted Ops Board (Private)</h1>

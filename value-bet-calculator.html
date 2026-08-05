@@ -54,6 +54,51 @@
   <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
      crossorigin="anonymous"></script>
+
+  <!-- Phase 1 additive schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "💡 Value Bet Calculator",
+          "item": "https://betsorted.co.za/value-bet-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "💡 Value Bet Calculator",
+      "url": "https://betsorted.co.za/value-bet-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "description": "Value bet calculator for South Africa. Find out if the bookmaker odds offer positive expected value. Enter your estimated probability and the SA bookmaker odds.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-header">

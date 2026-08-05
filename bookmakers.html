@@ -7,7 +7,40 @@
   <meta http-equiv="refresh" content="0; url=/bookmakers/">
   <title>Bookmakers | BetSorted</title>
   <meta property="og:image" content="https://betsorted.co.za/assets/og-image.png">
-  <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png"></head>
+  <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
+  <!-- Phase 1 additive schema -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bookmakers",
+          "item": "https://betsorted.co.za/bookmakers.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
 <body>
   <h1>Bookmakers</h1>
   <p>Redirecting to <a href="/bookmakers/">Bookmakers</a>...</p>

@@ -21,8 +21,9 @@
 
 ### Priority 2: Hollywoodbets
 **Commission:** 25-35% revenue share
-**Apply:** Contact directly via website (no public affiliate portal)
-**Email:** info@hollywoodbets.net (ask for affiliate team)
+**Status:** Approved
+**Tracking link:** https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893
+**Route:** /go/hollywoodbets.html
 **Why:** SA-owned, strong brand loyalty, good conversions
 
 ### Priority 3: Sportingbet

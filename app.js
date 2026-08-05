@@ -98,7 +98,7 @@ function renderComparisonTable() {
       <tr>
         <td data-label="Bookmaker">
           <div class="bookmaker-cell">
-            <div class="bookmaker-logo" style="background: ${site.logo_bg};">
+            <div class="bookmaker-logo" aria-hidden="true" style="background: ${site.logo_bg};">
               ${site.name.charAt(0)}
             </div>
             <span class="bookmaker-name">${escapeHtml(site.name)}</span>
@@ -151,7 +151,7 @@ function renderReviews() {
       <article class="review-card">
         <div class="review-header">
           <div class="review-header-left">
-            <div class="review-logo" style="background: ${site.logo_bg};">
+            <div class="review-logo" aria-hidden="true" style="background: ${site.logo_bg};">
               ${site.name.charAt(0)}
             </div>
             <div class="review-title-group">

@@ -222,17 +222,17 @@
         💰 Updated 2x Daily (6 AM & 6 PM SAST)
       </div>
       <p style="margin: 0; opacity: 0.95;">
-        🇿🇦 SA bookmakers (clickable) + 📊 International market reference (for comparison). Green = best odds available.
+        Showing best available market odds first. SA bookmaker rows appear when the feed has them; otherwise use the prices as a benchmark before checking local books manually.
       </p>
     </div>
 
     <!-- Filters -->
     <div class="filters">
-      <button class="filter-btn active" onclick="filterSport('all')">All Sports</button>
-      <button class="filter-btn" onclick="filterSport('soccer')">⚽ Soccer</button>
-      <button class="filter-btn" onclick="filterSport('rugby')">🏉 Rugby</button>
-      <button class="filter-btn" onclick="filterSport('cricket')">🏏 Cricket</button>
-      <button class="filter-btn" onclick="filterValue('hot')">🔥 Hot Deals Only</button>
+      <button class="filter-btn active" onclick="filterSport('all', this)">All Sports</button>
+      <button class="filter-btn" onclick="filterSport('soccer', this)">⚽ Soccer</button>
+      <button class="filter-btn" onclick="filterSport('rugby', this)">🏉 Rugby</button>
+      <button class="filter-btn" onclick="filterSport('cricket', this)">🏏 Cricket</button>
+      <button class="filter-btn" onclick="filterValue('hot', this)">🔥 Hot Deals Only</button>
     </div>
 
     <div id="matches-container">
@@ -247,12 +247,12 @@
     <!-- Info Section -->
     <div class="info-section" style="margin-top: 3rem;">
       <h2>How Best Odds Finder Works</h2>
-      <p>We fetch odds from multiple bookmakers twice per day (6 AM & 6 PM) and show you the <strong>top 5 best odds</strong> for each match.</p>
+      <p>We fetch odds from multiple bookmakers twice per day (6 AM & 6 PM) and show you the <strong>top 5 best available odds</strong> for each match market.</p>
       
-      <h3>🇿🇦 SA Bookmakers vs 📊 Market Reference</h3>
-      <p><strong>SA Bookmakers (Green highlight):</strong> Licensed operators you can actually use in South Africa. Currently showing Betway 🇿🇦 (only SA bookmaker available in our odds API). Click "Bet Now" to place your bet.</p>
+      <h3>SA Bookmakers vs Market Reference</h3>
+      <p><strong>SA Bookmakers:</strong> Licensed operators you can actually use in South Africa appear as clickable rows when they are present in the odds feed.</p>
       
-      <p><strong>Market Reference (Grey):</strong> International bookmakers like Betfair, Matchbook, etc. These are <strong>not available in South Africa</strong>, but we show them so you can see what "good odds" look like globally. If SA odds are close to market reference = good value. If SA odds are much worse = poor value.</p>
+      <p><strong>Market Reference:</strong> International bookmakers like Betfair, Matchbook, and Smarkets are shown as a benchmark. These are not local recommendations, but they help you see whether a South African price is competitive.</p>
       
       <p style="background: rgba(245, 158, 11, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
         <strong>ℹ️ Manual Check Needed:</strong> Hollywoodbets, Sportingbet, Supabets don't have public APIs. We're working on adding them. For now, use this tool to see if odds are competitive, then check those bookmakers manually.
@@ -272,9 +272,9 @@
       <p>When one bookmaker's odds are 5%+ better than others, we flag it as a <span class="hot-badge">🔥 HOT DEAL</span>. These represent significant value opportunities.</p>
 
       <h3>How to Use This Tool</h3>
-      <p>1. <strong>Browse upcoming matches</strong> - All major SA sports covered</p>
-      <p>2. <strong>Check the green row</strong> - That's the best odds available</p>
-      <p>3. <strong>Click "Bet Now"</strong> - Opens bookmaker with best odds</p>
+      <p>1. <strong>Browse upcoming matches</strong> - All major SA sports covered when odds are available</p>
+      <p>2. <strong>Check the green row</strong> - That is the best price in the current feed</p>
+      <p>3. <strong>Compare locally</strong> - If no SA row appears, use the market price as your manual-check benchmark</p>
       <p>4. <strong>Track savings</strong> - Over time, this adds serious profit</p>
     </div>
 
@@ -343,9 +343,9 @@
       }
 
       container.innerHTML = matches.map(match => {
-        // Separate SA vs International bookmakers
-        const saBookmakers = match.bookmakers.filter(bm => bm.name.includes('🇿🇦'));
-        const intlBookmakers = match.bookmakers.filter(bm => !bm.name.includes('🇿🇦'));
+        // Separate SA vs international bookmakers without relying on display text.
+        const saBookmakers = match.bookmakers.filter(isSouthAfricanBookmaker);
+        const intlBookmakers = match.bookmakers.filter(bm => !isSouthAfricanBookmaker(bm));
         
         const allOdds = [...match.bookmakers];
         const bestOdds = allOdds[0]; // Already sorted best first
@@ -362,6 +362,7 @@
         const date = new Date(match.datetime);
         const dateStr = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
         const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+        const marketLabel = match.market || `${match.homeTeam} to win`;
 
         return `
           <div class="match-card ${isHotDeal ? 'hot-deal' : ''}" data-sport="${match.sport}">
@@ -374,6 +375,9 @@
                 ${isHotDeal ? '<span class="hot-badge">🔥 HOT DEAL</span>' : ''}
                 <span>${dateStr}, ${timeStr}</span>
               </div>
+            </div>
+            <div style="margin-bottom: 1rem; color: #4b5563; font-size: 0.9rem; font-weight: 600;">
+              Market shown: ${marketLabel}
             </div>
 
             ${saBookmakers.length > 0 ? `
@@ -394,7 +398,7 @@
                           <span class="odds-value">${bm.odds.toFixed(2)}</span>
                           ${isBest && valueDiff >= 3 ? `<span class="savings-badge" style="margin-left: 0.5rem;">Save R${savings}</span>` : ''}
                         </div>
-                        <a href="${bm.url}" class="bet-button" target="_blank" rel="noopener">Bet Now →</a>
+                        ${bm.url && bm.url !== '#' ? `<a href="${bm.url}" class="bet-button" target="_blank" rel="noopener">Bet Now →</a>` : '<span style="color: #6b7280; font-size: 0.8125rem;">Check manually</span>'}
                       </div>
                     `;
                   }).join('')}
@@ -405,16 +409,16 @@
             ${intlBookmakers.length > 0 ? `
               <div style="margin-top: ${saBookmakers.length > 0 ? '1rem' : '0'}; padding-top: ${saBookmakers.length > 0 ? '1rem' : '0'}; border-top: ${saBookmakers.length > 0 ? '1px solid #e5e7eb' : 'none'};">
                 <div style="font-weight: 600; color: #6b7280; font-size: 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                  📊 MARKET REFERENCE (Not available in SA)
+                  BEST AVAILABLE MARKET ODDS ${saBookmakers.length > 0 ? '(Reference)' : '(Use as manual-check benchmark)'}
                 </div>
                 <div class="odds-comparison">
-                  ${intlBookmakers.slice(0, 3).map((bm, index) => {
+                  ${intlBookmakers.slice(0, 5).map((bm, index) => {
                     const isBest = bm.odds === bestOdds.odds;
                     return `
-                      <div class="odds-row" style="opacity: 0.7;">
+                      <div class="odds-row ${isBest ? 'best' : ''}">
                         <div class="bookmaker-name" style="font-size: 0.875rem;">
                           ${bm.name}
-                          ${isBest ? '<span style="font-size: 0.75rem;">✓ BEST MARKET</span>' : ''}
+                          ${isBest ? '<span style="font-size: 0.75rem;">✓ BEST</span>' : ''}
                         </div>
                         <div>
                           <span class="odds-value" style="font-size: 1rem;">${bm.odds.toFixed(2)}</span>
@@ -429,10 +433,10 @@
             ${saBookmakers.length === 0 ? `
               <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
                 <div style="font-weight: 700; color: #92400e; font-size: 0.875rem; margin-bottom: 0.25rem;">
-                  ℹ️ No SA Bookmakers in API
+                  No SA bookmaker feed for this market
                 </div>
                 <div style="color: #92400e; font-size: 0.8125rem;">
-                  Check odds manually at Betway 🇿🇦, Hollywoodbets, or Sportingbet for this match.
+                  Use the market prices above as a benchmark, then check Betway, Hollywoodbets, Sportingbet or Supabets manually before betting.
                 </div>
               </div>
             ` : ''}
@@ -450,23 +454,30 @@
       }).join('');
     }
 
-    function filterSport(sport) {
+    function isSouthAfricanBookmaker(bookmaker) {
+      const key = (bookmaker.key || '').toLowerCase();
+      return Boolean(bookmaker.isSouthAfrica) || bookmaker.name.includes('🇿🇦') || key === 'betway';
+    }
+
+    function filterSport(sport, button) {
       currentFilter = sport;
-      updateFilters();
+      updateFilters(button);
       applyFilters();
     }
 
-    function filterValue(type) {
+    function filterValue(type, button) {
       currentValueFilter = type === 'hot' ? 'hot' : 'all';
-      updateFilters();
+      updateFilters(button);
       applyFilters();
     }
 
-    function updateFilters() {
+    function updateFilters(activeButton) {
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
       });
-      event.target.classList.add('active');
+      if (activeButton) {
+        activeButton.classList.add('active');
+      }
     }
 
     function applyFilters() {

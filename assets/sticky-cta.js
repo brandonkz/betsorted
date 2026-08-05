@@ -9,6 +9,10 @@
   }
 
   const path = window.location.pathname || '/';
+  if (path.includes('best-odds-finder')) {
+    return;
+  }
+
   const isHome = path === '/' || path === '/index.html';
   const isBlogPost = path.startsWith('/blog/') && path !== '/blog/index.html';
   const isBlogIndex = path === '/blog/index.html';

@@ -178,7 +178,8 @@ function formatMatchForFinder(game) {
           name: bookmaker.key.toLowerCase().includes('betway') ? `${bookmaker.title} 🇿🇦` : bookmaker.title,
           key: bookmaker.key,
           odds: homeOutcome.price,
-          url: bookmaker.key.toLowerCase().includes('betway') ? 'https://betway.co.za' : '#'
+          url: bookmaker.key.toLowerCase().includes('betway') ? 'https://betway.co.za' : '#',
+          isSouthAfrica: bookmaker.key.toLowerCase().includes('betway')
         });
       }
     }
@@ -211,6 +212,7 @@ function formatMatchForFinder(game) {
     league,
     homeTeam: game.home_team,
     awayTeam: game.away_team,
+    market: `${game.home_team} to win`,
     datetime: game.commence_time,
     bookmakers: bookmakers.sort((a, b) => b.odds - a.odds).slice(0, 5) // Top 5 bookmakers only
   };

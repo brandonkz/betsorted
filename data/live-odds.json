@@ -26,13 +26,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Codere (IT)",
           "key": "codere_it",
           "odds": 1.18,
@@ -79,13 +72,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Casumo",
           "key": "casumo",
           "odds": 8,
@@ -111,13 +97,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.24,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 2.22,
@@ -128,13 +107,6 @@
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.21,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -153,13 +125,6 @@
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.85,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.82,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -263,13 +228,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.56,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 2.52,
@@ -289,13 +247,6 @@
       "bookmakers": [
         {
           "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.42,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 2.42,
           "url": "#",
@@ -305,20 +256,6 @@
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 2.38,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 2.37,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 2.37,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -360,13 +297,6 @@
           "odds": 1.48,
           "url": "#",
           "isSouthAfrica": false
-        },
-        {
-          "name": "Bovada",
-          "key": "bovada",
-          "odds": 1.48,
-          "url": "#",
-          "isSouthAfrica": false
         }
       ]
     },
@@ -387,30 +317,9 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 3.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 3.44,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 3.44,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -428,13 +337,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 3.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
           "odds": 3.45,
           "url": "#",
           "isSouthAfrica": false

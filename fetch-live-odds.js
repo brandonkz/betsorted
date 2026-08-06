@@ -18,6 +18,7 @@ if (!API_KEY) {
 }
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
+const BLOCKED_REFERENCE_BOOKMAKERS = ['bovada', 'lowvig', 'betonlineag'];
 
 // SA-relevant sports (prioritized order)
 const SPORTS = [
@@ -69,6 +70,29 @@ function sortBookmakersByPriority(bookmakers) {
   });
 }
 
+function dedupeReferenceBookmakers(bookmakers) {
+  const byKey = new Map();
+  const output = [];
+
+  for (const bookmaker of bookmakers) {
+    if (bookmaker.key === 'betfair_ex_eu' && byKey.has('betfair_ex_uk')) {
+      continue;
+    }
+
+    if (bookmaker.key === 'betfair_ex_uk' && byKey.has('betfair_ex_eu')) {
+      const index = output.findIndex(item => item.key === 'betfair_ex_eu');
+      if (index !== -1) output.splice(index, 1);
+      byKey.delete('betfair_ex_eu');
+    }
+
+    if (byKey.has(bookmaker.key)) continue;
+    byKey.set(bookmaker.key, true);
+    output.push(bookmaker);
+  }
+
+  return output;
+}
+
 function formatEvent(game) {
   // Sort bookmakers to prioritize Betway
   const sortedBookmakers = sortBookmakersByPriority(game.bookmakers);
@@ -77,6 +101,7 @@ function formatEvent(game) {
   const homeOdds = [];
   
   for (const bookmaker of sortedBookmakers) {
+    if (BLOCKED_REFERENCE_BOOKMAKERS.includes(bookmaker.key)) continue;
     const market = bookmaker.markets.find(m => m.key === 'h2h');
     if (market) {
       const homeOutcome = market.outcomes.find(o => o.name === game.home_team);
@@ -92,7 +117,9 @@ function formatEvent(game) {
   }
   
   // Prioritize Betway, then sort by best odds
-  homeOdds.sort((a, b) => {
+  const uniqueHomeOdds = dedupeReferenceBookmakers(homeOdds);
+
+  uniqueHomeOdds.sort((a, b) => {
     // Betway always first if available
     if (a.isBetway && !b.isBetway) return -1;
     if (!a.isBetway && b.isBetway) return 1;
@@ -100,7 +127,7 @@ function formatEvent(game) {
     return b.odds - a.odds;
   });
   
-  if (homeOdds.length < 2) return null;
+  if (uniqueHomeOdds.length < 2) return null;
   
   // Get sport emoji and type
   let emoji = '⚽';
@@ -130,8 +157,8 @@ function formatEvent(game) {
     dayNum,
     time,
     venue: 'TBA', // API doesn't provide venue
-    bestOdds: homeOdds[0],
-    secondOdds: homeOdds[1]
+    bestOdds: uniqueHomeOdds[0],
+    secondOdds: uniqueHomeOdds[1]
   };
 }
 
@@ -174,6 +201,7 @@ function formatMatchForFinder(game) {
   const bookmakers = [];
   
   for (const bookmaker of game.bookmakers) {
+    if (BLOCKED_REFERENCE_BOOKMAKERS.includes(bookmaker.key)) continue;
     const market = bookmaker.markets.find(m => m.key === 'h2h');
     if (market) {
       const homeOutcome = market.outcomes.find(o => o.name === game.home_team);
@@ -189,7 +217,9 @@ function formatMatchForFinder(game) {
     }
   }
   
-  if (bookmakers.length < 2) return null;
+  const uniqueBookmakers = dedupeReferenceBookmakers(bookmakers);
+
+  if (uniqueBookmakers.length < 2) return null;
   
   // Get sport emoji and type
   let emoji = '⚽';
@@ -218,7 +248,7 @@ function formatMatchForFinder(game) {
     awayTeam: game.away_team,
     market: `${game.home_team} to win`,
     datetime: game.commence_time,
-    bookmakers: bookmakers.sort((a, b) => b.odds - a.odds).slice(0, 5) // Top 5 bookmakers only
+    bookmakers: uniqueBookmakers.sort((a, b) => b.odds - a.odds)
   };
 }
 

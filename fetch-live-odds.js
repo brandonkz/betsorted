@@ -18,8 +18,6 @@ if (!API_KEY) {
 }
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
-const BLOCKED_REFERENCE_BOOKMAKERS = ['bovada', 'lowvig', 'betonlineag'];
-
 // SA-relevant sports (prioritized order)
 const SPORTS = [
   'soccer_epl', // Premier League (most popular in SA)
@@ -101,7 +99,6 @@ function formatEvent(game) {
   const homeOdds = [];
   
   for (const bookmaker of sortedBookmakers) {
-    if (BLOCKED_REFERENCE_BOOKMAKERS.includes(bookmaker.key)) continue;
     const market = bookmaker.markets.find(m => m.key === 'h2h');
     if (market) {
       const homeOutcome = market.outcomes.find(o => o.name === game.home_team);
@@ -201,7 +198,6 @@ function formatMatchForFinder(game) {
   const bookmakers = [];
   
   for (const bookmaker of game.bookmakers) {
-    if (BLOCKED_REFERENCE_BOOKMAKERS.includes(bookmaker.key)) continue;
     const market = bookmaker.markets.find(m => m.key === 'h2h');
     if (market) {
       const homeOutcome = market.outcomes.find(o => o.name === game.home_team);

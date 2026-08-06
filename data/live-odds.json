@@ -109,6 +109,13 @@
           "odds": 2.21,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
         }
       ]
     },
@@ -258,6 +265,20 @@
           "odds": 2.38,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 2.37,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 2.37,
+          "url": "#",
+          "isSouthAfrica": false
         }
       ]
     },
@@ -297,6 +318,13 @@
           "odds": 1.48,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "Bovada",
+          "key": "bovada",
+          "odds": 1.48,
+          "url": "#",
+          "isSouthAfrica": false
         }
       ]
     },
@@ -320,6 +348,20 @@
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 3.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 3.44,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 3.44,
           "url": "#",
           "isSouthAfrica": false
         }

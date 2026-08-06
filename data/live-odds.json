@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-05T16:00:57.504Z",
-  "updatedDisplay": "Wed Aug 5, 6:00 PM",
+  "updated": "2026-08-06T16:00:46.046Z",
+  "updatedDisplay": "Thu Aug 6, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -12,8 +12,22 @@
       "datetime": "2026-08-21T19:00:00Z",
       "bookmakers": [
         {
+          "name": "Bovada",
+          "key": "bovada",
+          "odds": 1.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "1xBet",
           "key": "onexbet",
+          "odds": 1.19,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 1.19,
           "url": "#",
           "isSouthAfrica": false
@@ -26,15 +40,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Coral",
-          "key": "coral",
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
           "odds": 1.18,
           "url": "#",
           "isSouthAfrica": false
@@ -65,15 +72,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
+          "name": "Casumo",
+          "key": "casumo",
           "odds": 8,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
+          "odds": 8,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
           "odds": 8,
           "url": "#",
           "isSouthAfrica": false
@@ -90,23 +104,30 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.23,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.24,
+          "odds": 2.22,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.22,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 2.22,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.21,
+          "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -137,6 +158,13 @@
         },
         {
           "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.82,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 2.82,
           "url": "#",
@@ -150,8 +178,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 2.8,
           "url": "#",
           "isSouthAfrica": false
@@ -235,6 +263,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.56,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 2.52,
@@ -253,16 +288,23 @@
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.42,
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 2.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.38,
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 2.44,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.44,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -294,35 +336,35 @@
         {
           "name": "1xBet",
           "key": "onexbet",
-          "odds": 1.5,
+          "odds": 1.49,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "Nordic Bet",
+          "key": "nordicbet",
           "odds": 1.48,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Betsson",
+          "key": "betsson",
           "odds": 1.48,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 1.48,
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 1.47,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Bovada",
-          "key": "bovada",
-          "odds": 1.48,
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 1.47,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -338,30 +380,37 @@
       "datetime": "2026-08-23T15:30:00Z",
       "bookmakers": [
         {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 3.65,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
+          "odds": 3.65,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 3.5,
+          "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 3.45,
+          "name": "Betfair",
+          "key": "betfair_ex_eu",
+          "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetOnline.ag",
-          "key": "betonlineag",
-          "odds": 3.44,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LowVig.ag",
-          "key": "lowvig",
-          "odds": 3.44,
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -377,30 +426,37 @@
       "datetime": "2026-08-24T19:00:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 3.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 3.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
-          "odds": 3.3,
+          "odds": 3.35,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
-          "odds": 3.3,
+          "odds": 3.35,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetOnline.ag",
+          "key": "betonlineag",
+          "odds": 3.28,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LowVig.ag",
+          "key": "lowvig",
+          "odds": 3.28,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 3.25,
           "url": "#",
           "isSouthAfrica": false
         }

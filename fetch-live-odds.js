@@ -11,7 +11,11 @@ const path = require('path');
 
 // Load API key
 require('dotenv').config();
-const API_KEY = process.env.ODDS_API_KEY || 'bb71cc0232a79874fc3014da54a71104';
+const API_KEY = process.env.ODDS_API_KEY;
+
+if (!API_KEY) {
+  throw new Error('ODDS_API_KEY is required. Set it in the environment before running fetch-live-odds.js.');
+}
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
 

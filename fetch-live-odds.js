@@ -364,13 +364,13 @@ async function main() {
     // Update timestamp and note
     let updatedHTML = newHTML.replace(
       /Updated .*? \•/,
-      `Updated ${timestamp} (live) •`
+      `Updated ${timestamp} (twice-daily feed) •`
     );
 
     // Update note about bookmakers
     updatedHTML = updatedHTML.replace(
       /Odds indicative only/,
-      'Live odds prioritize Betway 🇿🇦 + international bookmakers'
+      'Odds feed prioritizes available SA prices and exchange reference data'
     );
 
     // Write back

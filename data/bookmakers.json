@@ -1,0 +1,1389 @@
+[
+  {
+    "slug": "10bet",
+    "name": "10Bet",
+    "review_url": "/blog/10bet-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/10bet-review-south-africa-2026.html",
+    "affiliate_url": "/go/10bet.html",
+    "licence": {
+      "board": "Mpumalanga Economic Regulator",
+      "number": "9-2-1-09661",
+      "entity": "10Bet",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "10Bet",
+          "type": "BOOKMAKER",
+          "number": "9-2-1-09661",
+          "province": "Mpumalanga",
+          "board": "Mpumalanga Economic Regulator"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4.1
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "100% Deposit Match up to R500"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 50
+      }
+    ]
+  },
+  {
+    "slug": "bet-co-za",
+    "name": "BET.co.za",
+    "review_url": "/blog/bet-co-za-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/bet-co-za-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10145732-017",
+      "entity": "Betcoza Online (Pty) Ltd t/a BET.co.za",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Betcoza Online (Pty) Ltd t/a BET.co.za",
+          "type": "BOOKMAKER",
+          "number": "10145732-017",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": []
+  },
+  {
+    "slug": "betfred",
+    "name": "Betfred",
+    "review_url": "/blog/betfred-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/betfred-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Gauteng Gambling Board",
+      "number": "VER-014",
+      "entity": "Betfred SA Gauteng (Pty) Ltd",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Betfred SA Gauteng (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "VER-014",
+          "province": "Gauteng",
+          "board": "Gauteng Gambling Board"
+        },
+        {
+          "entity": "Betfred SA Gauteng (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "JOH-117",
+          "province": "Gauteng",
+          "board": "Gauteng Gambling Board"
+        },
+        {
+          "entity": "Betfred SA Holdings (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "North-West",
+          "board": "North West Gambling Board"
+        },
+        {
+          "entity": "Betfred South Africa Trading North West (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "North-West",
+          "board": "North West Gambling Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "blog_review_page": 4
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "blog_review_page": "R21,000 welcome bonus"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "blog_review_page": 20
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "24–48 hours"
+      }
+    ]
+  },
+  {
+    "slug": "betmaster",
+    "name": "Betmaster",
+    "review_url": "/blog/betmaster-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/betmaster-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": null,
+      "number": null,
+      "entity": null,
+      "company_reg": null,
+      "status": "unverified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": []
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "welcome_bonus.headline",
+        "blog_review_page": "R3,000 welcome bonus"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "blog_review_page": 20
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "blog_review_page": "Isle of Man Gambling Supervision Commission"
+      }
+    ]
+  },
+  {
+    "slug": "betolimp",
+    "name": "BetOlimp",
+    "review_url": "/blog/betolimp-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/betolimp-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10138042-020",
+      "entity": "Olimp (Pty) Ltd t/a BetOlimp",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Olimp (Pty) Ltd t/a BetOlimp",
+          "type": "BOOKMAKER",
+          "number": "10138042-020",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": []
+  },
+  {
+    "slug": "betshezi",
+    "name": "Betshezi",
+    "review_url": "/blog/betshezi-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/betshezi-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10191121-004",
+      "entity": "SMP Gaming (Pty) Ltd t/a Betshezi",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "SMP Gaming (Pty) Ltd t/a Betshezi",
+          "type": "BOOKMAKER",
+          "number": "10191121-004",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "blog_review_page": 3.8
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "blog_review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "blog_review_page": "Western Cape Gambling"
+      }
+    ]
+  },
+  {
+    "slug": "betway",
+    "name": "Betway",
+    "review_url": "/bookmakers/betway-review.html",
+    "duplicate_blog_review_url": "/blog/betway-review-south-africa-2026.html",
+    "affiliate_url": "/go/betway.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10181496-012",
+      "entity": "Raging River Trading (Pty) Ltd t/a Betway (South Africa)",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Raging River Trading (Pty) Ltd t/a Betway (South Africa)",
+          "type": "BOOKMAKER",
+          "number": "10181496-012",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4.5,
+        "csv": 4.1,
+        "review_page": 4.6
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "Up to R1,000 Welcome Bonus",
+        "csv": "R1,000 matched deposit",
+        "review_page": "Up to R1,000 matched"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 10,
+        "csv": 5,
+        "review_page": 5
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "Instant to 24 hours",
+        "review_page": "Minutes–24h (Instant EFT)",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Western Cape Gambling & Racing Board",
+        "review_page": "Western Cape Gambling & Racing Board"
+      }
+    ]
+  },
+  {
+    "slug": "easybet",
+    "name": "Easybet",
+    "review_url": "/bookmakers/easybet-review.html",
+    "duplicate_blog_review_url": "/blog/easybet-review-south-africa-2026.html",
+    "affiliate_url": "/go/easybet.html",
+    "licence": {
+      "board": "Eastern Cape Gambling and Betting Board",
+      "number": "ECBM029",
+      "entity": "Easybet Group EC (Pty) Ltd",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Easybet Group EC (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "ECBM029",
+          "province": "Eastern Cape",
+          "board": "Eastern Cape Gambling and Betting Board"
+        },
+        {
+          "entity": "Easybet Group (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "10191733-004",
+          "province": "Western-Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "csv": 4,
+        "review_page": 4
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "csv": "100% match up to R1,000",
+        "review_page": "100% match up to R1,000"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "csv": 20,
+        "review_page": 20
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "24 to 72 hours",
+        "review_page": "24 to 72 hours",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Western Cape Gambling & Racing Board"
+      }
+    ]
+  },
+  {
+    "slug": "gbets",
+    "name": "Gbets",
+    "review_url": "/blog/gbets-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/gbets-review-south-africa-2026.html",
+    "affiliate_url": "/go/gbets.html",
+    "licence": {
+      "board": "Free State Gambling, Liquor and Tourism Authority",
+      "number": "FSGLA/BML/0029",
+      "entity": "Gbets: 2018528059 (Pty) Ltd",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Gbets: 2018528059 (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "FSGLA/BML/0029",
+          "province": "Free-State",
+          "board": "Free State Gambling, Liquor and Tourism Authority"
+        },
+        {
+          "entity": "Gbets: K201845647 (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": "FSGLA/BML/0011",
+          "province": "Free-State",
+          "board": "Free State Gambling, Liquor and Tourism Authority"
+        },
+        {
+          "entity": "Dymanex (Pty) Ltd t/a G-Bets",
+          "type": "BOOKMAKER",
+          "number": "10179096-014",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 3.9,
+        "blog_review_page": 4
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "R25 Free Bet on Registration"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 5,
+        "blog_review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "12–24 hours"
+      }
+    ]
+  },
+  {
+    "slug": "hollywoodbets",
+    "name": "Hollywoodbets",
+    "review_url": "/bookmakers/hollywoodbets-review.html",
+    "duplicate_blog_review_url": "/blog/hollywoodbets-review-south-africa-2026.html",
+    "affiliate_url": "/go/hollywoodbets.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10110547-021",
+      "entity": "Hollywood Sportsbook Western Cape (Pty) Ltd t/a Hollywoodbets",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Hollywood Sportsbook Eastern Cape (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Eastern Cape",
+          "board": "Eastern Cape Gambling and Betting Board"
+        },
+        {
+          "entity": "Hollywood Sportsbook Gauteng (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Gauteng",
+          "board": "Gauteng Gambling Board"
+        },
+        {
+          "entity": "Hollywood Sportsbook Western Cape (Pty) Ltd t/a Hollywoodbets",
+          "type": "BOOKMAKER",
+          "number": "10110547-021",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        },
+        {
+          "entity": "Hollywood Bets",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Free-State",
+          "board": "Free State Gambling, Liquor and Tourism Authority"
+        },
+        {
+          "entity": "Hollywood Bets Nelspruit",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Mpumalanga",
+          "board": "Mpumalanga Economic Regulator"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4.3,
+        "csv": 4.7,
+        "review_page": 4.5
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "R25 Sign-Up Bonus",
+        "csv": "R25 sign-up bonus + promos",
+        "review_page": "R25 sign-up bonus + promos"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 5,
+        "csv": 10,
+        "review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "24 to 72 hours",
+        "review_page": "24 to 72 hours"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Mpumalanga Gambling Board"
+      }
+    ]
+  },
+  {
+    "slug": "lottostar",
+    "name": "LottoStar",
+    "review_url": "/blog/lottostar-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/lottostar-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Mpumalanga Economic Regulator",
+      "number": "9-2-1-09467",
+      "entity": "Lottostar",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Lottostar",
+          "type": "BOOKMAKER",
+          "number": "9-2-1-09467",
+          "province": "Mpumalanga",
+          "board": "Mpumalanga Economic Regulator"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "blog_review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "Instant"
+      }
+    ]
+  },
+  {
+    "slug": "play-co-za",
+    "name": "Play.co.za",
+    "review_url": "/bookmakers/play-co-za-review.html",
+    "duplicate_blog_review_url": null,
+    "affiliate_url": "/go/play-co-za.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10172287-015",
+      "entity": "Betflash (Pty) Ltd t/a Play.co.za",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Betflash (Pty) Ltd t/a Play.co.za",
+          "type": "BOOKMAKER",
+          "number": "10172287-015",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4.2,
+        "csv": 4.2,
+        "review_page": 4.2
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "100% Match up to R3,000 (300% up to R9,000 across 3 deposits)",
+        "csv": "300% match up to R9,000 (across 3 deposits)"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 5,
+        "csv": 5,
+        "review_page": 5
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "12 to 24 hours",
+        "review_page": "12-24 hours, it's an accessible option for both casual and serious punters"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Western Cape Gambling & Racing Board"
+      }
+    ]
+  },
+  {
+    "slug": "playabets",
+    "name": "Playabets",
+    "review_url": "/blog/playabets-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/playabets-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10141335-018",
+      "entity": "Playabets WC (Pty) Ltd - Bookmaker",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Playabets WC (Pty) Ltd - Bookmaker",
+          "type": "BOOKMAKER",
+          "number": "10141335-018",
+          "province": "Western-Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "Instant"
+      }
+    ]
+  },
+  {
+    "slug": "sportingbet",
+    "name": "Sportingbet",
+    "review_url": "/bookmakers/sportingbet-review.html",
+    "duplicate_blog_review_url": "/blog/sportingbet-review-south-africa-2026.html",
+    "affiliate_url": "/go/sportingbet.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10125193-019",
+      "entity": "Greatodds (Pty) Ltd t/a Sportingbets SA",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Greatodds (Pty) Ltd t/a Sportingbets SA",
+          "type": "BOOKMAKER",
+          "number": "10125193-019",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4.2,
+        "csv": 4.7,
+        "review_page": 4.7
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "R50 Free Bet on Sign-Up",
+        "csv": "R50 free bet + 100% match up to R2,000",
+        "review_page": "R50 free bet + 100% match up to R2,000"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 20,
+        "csv": 10,
+        "review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "24 to 48 hours",
+        "review_page": "24 to 48 hours",
+        "blog_review_page": "instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Limpopo Gambling Board"
+      }
+    ]
+  },
+  {
+    "slug": "sunbet",
+    "name": "Sunbet",
+    "review_url": "/blog/sunbet-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/sunbet-review-south-africa-2026.html",
+    "affiliate_url": "/go/sunbet.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10138713-018",
+      "entity": "SunBet (Pty) Ltd - Bookmaker",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "Sunbet (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "North-West",
+          "board": "North West Gambling Board"
+        },
+        {
+          "entity": "SunBet (Pty) Ltd - Bookmaker",
+          "type": "BOOKMAKER",
+          "number": "10138713-018",
+          "province": "Western-Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 3.8
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "R50 Sign-Up Bonus"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 20
+      }
+    ]
+  },
+  {
+    "slug": "supabets",
+    "name": "Supabets",
+    "review_url": "/bookmakers/supabets-review.html",
+    "duplicate_blog_review_url": "/blog/supabets-review-south-africa-2026.html",
+    "affiliate_url": "/go/supabets.html",
+    "licence": {
+      "board": "Free State Gambling, Liquor and Tourism Authority",
+      "number": "FSGLA/BML/002",
+      "entity": "SupaBets",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "SupaBets",
+          "type": "BOOKMAKER",
+          "number": "FSGLA/BML/002",
+          "province": "Free-State",
+          "board": "Free State Gambling, Liquor and Tourism Authority"
+        },
+        {
+          "entity": "Supabets - Mpumalanga",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Mpumalanga",
+          "board": "Mpumalanga Economic Regulator"
+        },
+        {
+          "entity": "Portapa 2 t/a Supabets - Polokwane",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Limpopo",
+          "board": "Limpopo Gambling Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "csv": 4.3,
+        "review_page": 4.3
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "csv": "R20 sign-up bonus + rewards",
+        "review_page": "R20 sign-up bonus + rewards"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "csv": 10,
+        "review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "24 to 48 hours",
+        "review_page": "24 to 48 hours",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Northern Cape Gambling Board"
+      }
+    ]
+  },
+  {
+    "slug": "world-sports-betting",
+    "name": "World Sports Betting",
+    "review_url": "/bookmakers/world-sports-betting-review.html",
+    "duplicate_blog_review_url": "/blog/wsb-review-south-africa-2026.html",
+    "affiliate_url": "/go/world-sports-betting.html",
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10181495-013",
+      "entity": "SWB Solutions (Pty) Ltd t/a World Sports Betting Western Cape",
+      "company_reg": null,
+      "status": "disputed",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "World Sports Betting (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "Gauteng",
+          "board": "Gauteng Gambling Board"
+        },
+        {
+          "entity": "World Sports Betting KZN (Pty) Ltd",
+          "type": "BOOKMAKER",
+          "number": null,
+          "province": "KwaZulu-Natal",
+          "board": "KwaZulu-Natal"
+        },
+        {
+          "entity": "SWB Solutions (Pty) Ltd t/a World Sports Betting Western Cape",
+          "type": "BOOKMAKER",
+          "number": "10181495-013",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "rating",
+        "homepage": 4,
+        "csv": 4.1,
+        "review_page": 4.1
+      },
+      {
+        "field": "welcome_bonus.headline",
+        "homepage": "R50 Sign-Up Bonus",
+        "csv": "Up to R1,000 welcome bonus",
+        "review_page": "Up to R1,000 welcome bonus"
+      },
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "homepage": 10,
+        "csv": 20,
+        "review_page": 20
+      },
+      {
+        "field": "payout.typical_hours",
+        "csv": "24 to 72 hours",
+        "review_page": "24 to 72 hours",
+        "blog_review_page": "instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "csv": "Licensed by Mpumalanga Gambling Board"
+      }
+    ]
+  },
+  {
+    "slug": "yesplay",
+    "name": "YesPlay",
+    "review_url": "/blog/yesplay-review-south-africa-2026.html",
+    "duplicate_blog_review_url": "/blog/yesplay-review-south-africa-2026.html",
+    "affiliate_url": null,
+    "licence": {
+      "board": "Western Cape Gambling and Racing Board",
+      "number": "10180204-013",
+      "entity": "SA Sportsbook (Pty) Ltd t/a YesPlay",
+      "company_reg": null,
+      "status": "verified",
+      "source_url": "https://www.ngb.org.za/verified-operators/",
+      "checked": "2026-08-06",
+      "portal_matches": [
+        {
+          "entity": "SA Sportsbook (Pty) Ltd t/a YesPlay",
+          "type": "BOOKMAKER",
+          "number": "10180204-013",
+          "province": "Western Cape",
+          "board": "Western Cape Gambling and Racing Board"
+        }
+      ]
+    },
+    "rating": {
+      "value": null,
+      "status": "editorial_pending",
+      "set_by": null,
+      "checked": null
+    },
+    "welcome_bonus": {
+      "headline": null,
+      "min_deposit_zar": null,
+      "wagering": null,
+      "min_odds": null,
+      "promo_code": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payments": {
+      "deposit_methods": [],
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "payout": {
+      "typical_hours": null,
+      "status": "unverified",
+      "source_url": null,
+      "checked": null
+    },
+    "conflicts": [
+      {
+        "field": "welcome_bonus.min_deposit_zar",
+        "blog_review_page": 10
+      },
+      {
+        "field": "payout.typical_hours",
+        "blog_review_page": "Instant"
+      },
+      {
+        "field": "licence.board_or_entity",
+        "blog_review_page": "Mpumalanga Economic Regulator licence"
+      }
+    ]
+  }
+]

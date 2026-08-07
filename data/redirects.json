@@ -1,0 +1,612 @@
+{
+  "generated": "2026-08-06",
+  "hosting": "github-pages",
+  "note": "GitHub Pages does not provide server-side 301 redirects from this static repo; existing HTML stubs are preserved.",
+  "redirects": [
+    {
+      "source": "/best-betting-sites-south-africa.html",
+      "target": "/blog/best-betting-sites-beginners-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/betway-vs-hollywoodbets.html",
+      "target": "/blog/betway-vs-hollywoodbets.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-bafana-vs-panama-betting-preview-march-2026.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-bafana-world-cup-2026-betting-guide-south-africa.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-group-a-world-cup-2026-betting-south-africa.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-must-win-czechia-world-cup-2026-june-22.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-vs-czechia-world-cup-2026-betting-preview.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-world-cup-2026-betting-guide-south-africa.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bafana-world-cup-odds-calculator-guide-june-2026.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/best-bookmakers-bafana-bafana-world-cup-2026.html",
+      "target": "/blog/best-bookmakers-world-cup-2026-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/best-bookmakers-springboks-england-july-2026.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/betway-vs-10bet-world-cup-psl-june-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/betway-vs-hollywoodbets-withdrawals-south-africa-2026.html",
+      "target": "/blog/betway-vs-hollywoodbets.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/betway-vs-sportingbet-fast-withdrawals-south-africa-2026.html",
+      "target": "/blog/betway-vs-sportingbet-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/betway-vs-sportingbet.html",
+      "target": "/blog/betway-vs-sportingbet-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/bulls-vs-stormers-urc-betting-preview-march-14-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/champions-league-round-of-16-betting-guide-south-africa-2026.html",
+      "target": "/blog/category-betting-guides-strategy.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/currie-cup-toyota-challenge-weekend-preview-june-14-2026.html",
+      "target": "/blog/category-rugby.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/czechia-vs-south-africa-june-18-2026-betting-preview.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/fa-cup-fifth-round-weekend-accumulator-tips-march-2026.html",
+      "target": "/blog/category-betting-guides-strategy.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/fastest-paying-betting-sites-rugby-psl-june-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/gbets-vs-world-sports-betting-rugby-horse-racing-2026.html",
+      "target": "/blog/gbets-vs-wsb-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-betway-comparison-2026.html",
+      "target": "/blog/betway-vs-hollywoodbets.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-betway-south-africa.html",
+      "target": "/blog/betway-vs-hollywoodbets.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-playabets-psl-rugby-cricket-june-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-supabets-psl-payouts-may-2026.html",
+      "target": "/blog/hollywoodbets-vs-supabets-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-supabets-world-cup-2026.html",
+      "target": "/blog/hollywoodbets-vs-supabets-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-world-sports-betting-fast-payouts-2026.html",
+      "target": "/blog/wsb-vs-hollywoodbets-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/hollywoodbets-vs-world-sports-betting-rugby-cricket-2026.html",
+      "target": "/blog/wsb-vs-hollywoodbets-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/ipl-2026-cricket-betting-guide-south-africa.html",
+      "target": "/blog/ipl-betting-guide-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/ipl-2026-opening-weekend-betting-guide-south-africa.html",
+      "target": "/blog/ipl-betting-guide-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/ipl-2026-week-1-daily-betting-tips-south-africa.html",
+      "target": "/blog/ipl-betting-guide-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/ipl-2026-week-2-betting-predictions-south-africa.html",
+      "target": "/blog/ipl-betting-guide-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/ipl-2026-week-3-april-betting-guide-south-africa.html",
+      "target": "/blog/ipl-betting-guide-south-africa.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/june-2026-rugby-cricket-psl-acca-calculator-guide.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/lions-vs-sharks-urc-betting-guide-february-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/live-betting-strategy-springboks-england-june-2026.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/nedbank-cup-2026-betting-guide.html",
+      "target": "/blog/nedbank-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/nedbank-cup-2026-quarterfinals-betting-guide.html",
+      "target": "/blog/nedbank-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/nedbank-cup-2026-semi-finals-betting-guide.html",
+      "target": "/blog/nedbank-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/playabets-vs-supabets-psl-rugby-cricket-june-2026.html",
+      "target": "/blog/playabets-vs-supabets-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/proteas-vs-new-zealand-t20i-betting-guide-march-2026.html",
+      "target": "/blog/category-cricket.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-2025-26-title-race-who-wins-the-league-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-april-2026-title-race-betting-guide.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-easter-weekend-2026-betting-guide.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-day-betting-guide-may-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-round-live-betting-guide-may-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-stretch-title-race-betting-guide-april-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-weekend-odds-shopping-guide-may-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-weeks-april-2026-title-race.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-final-weeks-betting-guide-april-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-march-2026-betting-guide.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-march-2026-matchweek-betting-tips.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-mid-week-fixtures-march-10-14-betting-preview-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-midweek-april-15-19-2026-betting-guide.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-offseason-odds-shopping-june-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-rugby-cricket-accumulator-strategy-june-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-season-run-in-betting-guide-april-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-top-8-race-betting-guide-april-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-urc-weekend-betting-preview-may-23-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-weekend-accumulator-calculator-guide-may-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-weekend-accumulator-tips-february-28-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-weekend-betting-tips-april-11-13-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-weekend-fixtures-betting-tips-april-10-12-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/psl-weekend-march-14-15-betting-preview-2026.html",
+      "target": "/blog/psl-title-race-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/rugby-handicap-betting-guide-south-africa-2026.html",
+      "target": "/blog/rugby-handicap-calculator-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/rugby-score-prediction-betting-south-africa-2026.html",
+      "target": "/blog/rugby-handicap-calculator-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/soweto-derby-betting-preview-april-26-2026.html",
+      "target": "/blog/soweto-derby-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/soweto-derby-chiefs-vs-pirates-betting-preview-february-28-2026.html",
+      "target": "/blog/soweto-derby-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-barbarians-2026-betting-preview.html",
+      "target": "/blog/springboks-vs-barbarians-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-england-ellis-park-handicap-guide-2026.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-july-2026-betting-guide-south-africa.html",
+      "target": "/blog/category-rugby.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-nations-championship-2026-betting-preview.html",
+      "target": "/blog/category-rugby.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-nations-championship-july-2026-betting-preview.html",
+      "target": "/blog/category-rugby.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-vs-barbarians-gqeberha-betting-guide-2026.html",
+      "target": "/blog/springboks-vs-barbarians-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-vs-england-ellis-park-betting-guide-2026.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-vs-england-july-4-2026-betting-guide.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/springboks-vs-england-june-2026-betting-preview.html",
+      "target": "/blog/springboks-vs-england-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-playoff-race-sa-teams-betting-guide-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-psl-weekend-betting-tips-may-30-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-13-sa-derbies-betting-preview-march-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-14-sa-teams-home-betting-preview-march-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-14-weekend-betting-tips-sharks-bulls-march-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-15-sharks-bulls-betting-preview-march-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-16-sa-teams-home-betting-preview-march-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-17-sa-teams-april-2026-betting-preview.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-18-sa-teams-april-18-2026-betting-preview.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-round-19-sa-teams-april-25-2026-betting-preview.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-sa-derbies-betting-guide-february-28-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/urc-semi-final-weekend-betting-tips-south-africa-june-6-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/weekend-betting-tips-psl-urc-april-19-20-2026.html",
+      "target": "/blog/urc-playoffs-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/world-cup-2026-round-of-32-betting-guide-south-africa.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/world-cup-2026-week-2-betting-tips-south-africa-june-18-22.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/world-cup-2026-weekend-betting-preview-june-13-14.html",
+      "target": "/blog/bafana-world-cup-betting-guide.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/blog/world-sports-betting-vs-sportingbet-south-africa-2026.html",
+      "target": "/blog/sportingbet-vs-world-sports-betting-rugby-cricket-june-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers.html",
+      "target": "/bookmakers/",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/10bet.html",
+      "target": "/blog/10bet-review-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/betway.html",
+      "target": "/bookmakers/betway-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/easybet.html",
+      "target": "/bookmakers/easybet-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/hollywoodbets.html",
+      "target": "/bookmakers/hollywoodbets-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/playabets.html",
+      "target": "/blog/playabets-review-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/sportingbet.html",
+      "target": "/bookmakers/sportingbet-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/sunbet.html",
+      "target": "/blog/sunbet-review-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/supabets.html",
+      "target": "/bookmakers/supabets-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/world-sports-betting.html",
+      "target": "/bookmakers/world-sports-betting-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/bookmakers/wsb.html",
+      "target": "/bookmakers/world-sports-betting-review.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/calculators/accumulator.html",
+      "target": "/calculators.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/calculators/betting.html",
+      "target": "/calculators.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/calculators/each-way.html",
+      "target": "/calculators.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/calculators/odds-comparison.html",
+      "target": "/calculators.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/fast-withdrawal-betting-sites-south-africa.html",
+      "target": "/blog/fastest-paying-bookmakers-south-africa-2026.html",
+      "type": "internal_stub"
+    },
+    {
+      "source": "/go/10bet.html",
+      "target": "https://partners.10betaffiliates.co.za/visit/?bta=36707&brand=10betza",
+      "type": "external_affiliate_redirect"
+    },
+    {
+      "source": "/go/betway.html",
+      "target": "/bookmakers/betway-review.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/easybet.html",
+      "target": "/bookmakers/easybet-review.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/gbets.html",
+      "target": "/blog/gbets-review-south-africa-2026.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/hollywoodbets.html",
+      "target": "https://hollywoodbetsaffs.click/o/_ViNcD?site_id=100893",
+      "type": "external_affiliate_redirect"
+    },
+    {
+      "source": "/go/play-co-za.html",
+      "target": "https://affiliates.play.co.za/links/?btag=2673740",
+      "type": "external_affiliate_redirect"
+    },
+    {
+      "source": "/go/sportingbet.html",
+      "target": "/bookmakers/sportingbet-review.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/sunbet.html",
+      "target": "/blog/sunbet-review-south-africa-2026.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/supabets.html",
+      "target": "/bookmakers/supabets-review.html",
+      "type": "internal_go_placeholder"
+    },
+    {
+      "source": "/go/world-sports-betting.html",
+      "target": "/bookmakers/world-sports-betting-review.html",
+      "type": "internal_go_placeholder"
+    }
+  ]
+}

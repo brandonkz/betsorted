@@ -4,6 +4,8 @@ const fs = require('fs');
 const vm = require('vm');
 
 const html = fs.readFileSync('outright-value-tracker.html', 'utf8');
+const calculators = fs.readFileSync('calculators.html', 'utf8');
+const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
 const data = JSON.parse(fs.readFileSync('data/outrights.json', 'utf8'));
 
 function assert(condition, message) {
@@ -26,6 +28,12 @@ function walkReadings(markets) {
 
 assert(Array.isArray(data.markets), 'data/outrights.json must expose markets array');
 assert(Array.isArray(data.flagged_gaps), 'data/outrights.json must expose flagged_gaps array');
+
+const isPublished = data.markets.length > 0;
+const inToolsListing = calculators.includes('href="/outright-value-tracker.html"');
+const inSitemap = sitemap.includes('https://betsorted.co.za/outright-value-tracker.html');
+assert(inToolsListing === isPublished, 'tools listing must match markets>0 publication guard');
+assert(inSitemap === isPublished, 'sitemap entry must match markets>0 publication guard');
 
 for (const { reading, outcome, market } of walkReadings(data.markets)) {
   if (Number.isFinite(reading.odds)) {

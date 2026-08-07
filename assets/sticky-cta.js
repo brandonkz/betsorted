@@ -23,11 +23,11 @@
     if (isHome) {
       return {
         messages: [
-          "Compare odds across 5+ SA bookmakers → See Today's Best Odds",
-          "Shop the best SA prices in seconds → See Today's Best Odds"
+          "Compare licensed SA bookmakers → See Reviews",
+          "Check reviews, deposits and payouts → Compare Bookmakers"
         ],
-        buttonText: "See Today's Best Odds",
-        href: '/odds-comparison.html'
+        buttonText: 'Compare Bookmakers',
+        href: '/#comparison'
       };
     }
 

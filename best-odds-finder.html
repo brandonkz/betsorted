@@ -188,6 +188,133 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     }
+
+    .data-status {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      color: white;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .data-status.stale {
+      background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%);
+    }
+    .reference-panel {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+    .reference-metric {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 0.85rem;
+    }
+    .reference-label {
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .reference-value {
+      color: #0f172a;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+    .reference-note {
+      color: #475569;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      margin-top: 0.75rem;
+    }
+    .price-table {
+      margin-top: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(130px, 1fr) 90px 120px;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .price-row:last-child { border-bottom: none; }
+    .price-row.best-reference { background: #f0fdf4; }
+    .price-source {
+      color: #111827;
+      font-weight: 700;
+    }
+    .price-source small {
+      display: block;
+      color: #64748b;
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+    .gap-positive { color: #047857; font-weight: 800; }
+    .gap-negative { color: #b91c1c; font-weight: 800; }
+    .sa-compare-module {
+      margin-top: 1rem;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .sa-compare-module h3 {
+      color: #1e40af;
+      font-size: 1rem;
+      margin: 0 0 0.4rem;
+    }
+    .sa-compare-module p {
+      color: #1e3a8a;
+      font-size: 0.875rem;
+      line-height: 1.55;
+      margin: 0 0 0.75rem;
+    }
+    .sa-compare-link {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 0.65rem 0.9rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+    .empty-state, .warning-state {
+      text-align: center;
+      padding: 3rem;
+      color: #6b7280;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+    }
+    .warning-state {
+      color: #92400e;
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+    @media (max-width: 640px) {
+      .price-row {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+    }
   </style>
   <meta property="og:image" content="https://betsorted.co.za/assets/og-image.png">
   <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
@@ -248,67 +375,32 @@
 
   <section class="calculator-container">
     <h1 class="page-title">🎯 Best Odds Finder</h1>
-    <p class="page-subtitle">Find the best bookmaker odds instantly. Save money on every bet.</p>
+    <p class="page-subtitle">Compare exchange-derived fair odds with the best reference prices in the current feed.</p>
 
-    <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; color: white;">
-      <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
-        💰 Updated 2x Daily (6 AM & 6 PM SAST)
-      </div>
-      <p style="margin: 0; opacity: 0.95;">
-        Showing best available market odds first. SA bookmaker rows appear when the feed has them; otherwise use the prices as a benchmark before checking local books manually.
-      </p>
-    </div>
-
-    <!-- Filters -->
-    <div class="filters">
-      <button class="filter-btn active" onclick="filterSport('all', this)">All Sports</button>
-      <button class="filter-btn" onclick="filterSport('soccer', this)">⚽ Soccer</button>
-      <button class="filter-btn" onclick="filterSport('rugby', this)">🏉 Rugby</button>
-      <button class="filter-btn" onclick="filterSport('cricket', this)">🏏 Cricket</button>
-      <button class="filter-btn" onclick="filterValue('hot', this)">🔥 Hot Deals Only</button>
-    </div>
-
-    <div id="matches-container">
-      <!-- Matches will be loaded here -->
-      <div style="text-align: center; padding: 3rem; color: #6b7280;">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">⏳</div>
-        <p>Loading live odds data...</p>
-        <p style="font-size: 0.875rem; opacity: 0.8;">This page uses your existing twice-daily odds updates</p>
-      </div>
+    <div id="odds-status" class="data-status">
+      <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Odds feed timestamp loading</div>
+      <p style="margin: 0; opacity: 0.95;">This tool uses a twice-daily odds feed when the update job runs. It does not claim live pricing.</p>
     </div>
 
     <!-- Info Section -->
     <div class="info-section" style="margin-top: 3rem;">
       <h2>How Best Odds Finder Works</h2>
-      <p>We fetch odds from multiple bookmakers twice per day (6 AM & 6 PM) and show you the <strong>top 5 best available odds</strong> for each match market.</p>
-      
-      <h3>SA Bookmakers vs Market Reference</h3>
-      <p><strong>SA Bookmakers:</strong> Licensed operators you can actually use in South Africa appear as clickable rows when they are present in the odds feed.</p>
-      
-      <p><strong>Market Reference:</strong> International bookmakers like Betfair, Matchbook, and Smarkets are shown as a benchmark. These are not local recommendations, but they help you see whether a South African price is competitive.</p>
-      
+      <p>This page uses exchange back prices as a reference point for a market's implied probability, then compares that fair-value estimate with the best non-exchange price in the current feed.</p>
+
+      <h3>What the exchange reference means</h3>
+      <p>Exchange prices are the closest available proxy for true probability in this feed, but they are not exact fair value. Back prices exclude commission, usually 2 to 5 percent on winnings, and the true market value sits between the back and lay price.</p>
+
+      <h3>What the listed prices mean</h3>
+      <p>International and exchange prices on this page are reference data only. They are not South African bookmaker recommendations, carry no affiliate links, and should be used as a benchmark before checking licensed local bookmakers.</p>
+
+      <h3>How to use this tool</h3>
+      <p>1. Check the reference probability and fair odds for the market shown.</p>
+      <p>2. Compare the best listed reference price with the fair odds gap.</p>
+      <p>3. Use the South African bookmaker comparison module on each card to choose where to check the same market locally.</p>
+
       <p style="background: rgba(245, 158, 11, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
-        <strong>ℹ️ Manual Check Needed:</strong> Hollywoodbets, Sportingbet, Supabets don't have public APIs. We're working on adding them. For now, use this tool to see if odds are competitive, then check those bookmakers manually.
+        <strong>SA price availability:</strong> The current feed may not include South African bookmaker prices. When SA prices are unavailable, this page says so rather than inventing local odds.
       </p>
-      
-      <h3>Why This Matters</h3>
-      <p><strong>Example:</strong> R1,000 bet on Arsenal to win</p>
-      <p>• <strong>Betway:</strong> 1.80 odds = R1,800 return (R800 profit)</p>
-      <p>• <strong>Hollywoodbets:</strong> 1.90 odds = R1,900 return (R900 profit)</p>
-      <p>• <strong>You save:</strong> R100 by choosing the best odds</p>
-      
-      <p style="background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 1rem;">
-        <strong>💡 Pro Tip:</strong> Over 100 bets, saving 5-10% per bet adds up to thousands of Rands in extra profit.
-      </p>
-
-      <h3>What are "Hot Deals"?</h3>
-      <p>When one bookmaker's odds are 5%+ better than others, we flag it as a <span class="hot-badge">🔥 HOT DEAL</span>. These represent significant value opportunities.</p>
-
-      <h3>How to Use This Tool</h3>
-      <p>1. <strong>Browse upcoming matches</strong> - All major SA sports covered when odds are available</p>
-      <p>2. <strong>Check the green row</strong> - That is the best price in the current feed</p>
-      <p>3. <strong>Compare locally</strong> - If no SA row appears, use the market price as your manual-check benchmark</p>
-      <p>4. <strong>Track savings</strong> - Over time, this adds serious profit</p>
     </div>
 
     <div style="text-align: center; margin-top: 2rem;">
@@ -332,164 +424,120 @@
     let currentValueFilter = 'all';
     let allMatches = [];
 
-    // Load odds data from JSON file
+    const EXCHANGE_KEYS = ['betfair_ex_uk', 'betfair_ex_eu', 'smarkets'];
+    const BLOCKED_REFERENCE_KEYS = ['bovada', 'lowvig', 'betonlineag'];
+
     async function loadOddsData() {
       try {
         const response = await fetch('/data/live-odds.json');
-        if (!response.ok) {
-          throw new Error('Failed to load odds data');
-        }
+        if (!response.ok) throw new Error('Failed to load odds data');
         const data = await response.json();
-        
-        // Update timestamp banner
-        document.querySelector('.page-subtitle').textContent = 
-          `Find the best bookmaker odds instantly. Last updated: ${data.updatedDisplay}`;
-        
-        allMatches = data.matches || [];
+        updateStatus(data);
+        allMatches = Array.isArray(data.matches) ? data.matches : [];
         renderMatches(allMatches);
       } catch (error) {
         console.error('Error loading odds:', error);
-        // Show error message
-        document.getElementById('matches-container').innerHTML = `
-          <div style="text-align: center; padding: 3rem; color: #dc2626;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
-            <p><strong>Could not load odds data</strong></p>
-            <p style="font-size: 0.875rem; opacity: 0.8;">
-              Run <code>node fetch-live-odds.js</code> to fetch latest odds
-            </p>
-          </div>
-        `;
+        document.getElementById('odds-status').classList.add('stale');
+        document.getElementById('odds-status').innerHTML = '<div style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Odds reference data unavailable</div><p style="margin:0;opacity:0.95;">The current odds file could not be loaded. Check licensed South African bookmakers directly before betting.</p>';
+        document.getElementById('matches-container').innerHTML = '<div class="warning-state"><div style="font-size:3rem;margin-bottom:1rem;">!</div><p><strong>Could not load odds reference data</strong></p><p style="font-size:0.875rem;opacity:0.85;">Please check prices directly with licensed South African bookmakers.</p></div>';
       }
+    }
+
+    function updateStatus(data) {
+      const status = document.getElementById('odds-status');
+      const updated = data && data.updated ? new Date(data.updated) : null;
+      const isValidDate = updated && !Number.isNaN(updated.getTime());
+      const ageHours = isValidDate ? (Date.now() - updated.getTime()) / 36e5 : null;
+      const updatedText = isValidDate ? updated.toLocaleString('en-ZA', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Africa/Johannesburg' }) + ' SAST' : 'Unknown';
+      const stale = !isValidDate || ageHours > 48;
+      status.classList.toggle('stale', stale);
+      status.innerHTML = '<div style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Odds feed timestamp: ' + escapeHtml(updatedText) + '</div>' +
+        '<p style="margin:0;opacity:0.95;">' + (stale ? 'This odds file is older than 48 hours or has no usable timestamp. Treat every price below as stale reference data.' : 'This is a twice-daily reference feed when the update job runs. It is not live pricing.') + '</p>';
     }
 
     function renderMatches(matches) {
       const container = document.getElementById('matches-container');
-      
       if (!matches || matches.length === 0) {
-        container.innerHTML = `
-          <div style="text-align: center; padding: 3rem; color: #6b7280;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📭</div>
-            <p>No matches found with current filters</p>
-          </div>
-        `;
+        container.innerHTML = '<div class="empty-state"><div style="font-size:3rem;margin-bottom:1rem;">∅</div><p><strong>No matches in the current odds file</strong></p><p style="font-size:0.875rem;opacity:0.85;">Check back after the next feed update or compare licensed South African bookmakers manually.</p></div>';
         return;
       }
 
-      container.innerHTML = matches.map(match => {
-        // Separate SA vs international bookmakers without relying on display text.
-        const saBookmakers = match.bookmakers.filter(isSouthAfricanBookmaker);
-        const intlBookmakers = match.bookmakers.filter(bm => !isSouthAfricanBookmaker(bm));
-        
-        const allOdds = [...match.bookmakers];
-        const bestOdds = allOdds[0]; // Already sorted best first
-        const worstOdds = allOdds[allOdds.length - 1];
-        
-        // Calculate value difference
-        const valueDiff = ((bestOdds.odds - worstOdds.odds) / worstOdds.odds) * 100;
-        const isHotDeal = valueDiff >= 5;
-
-        // Calculate potential savings on R100 bet
-        const savings = ((bestOdds.odds - worstOdds.odds) * 100).toFixed(2);
-
-        // Format datetime
-        const date = new Date(match.datetime);
-        const dateStr = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-        const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-        const marketLabel = match.market || `${match.homeTeam} to win`;
-
-        return `
-          <div class="match-card ${isHotDeal ? 'hot-deal' : ''}" data-sport="${match.sport}">
-            <div class="match-header">
-              <div class="match-teams">
-                ${match.emoji} ${match.awayTeam} vs ${match.homeTeam}
-              </div>
-              <div class="match-meta">
-                <span class="sport-badge">${match.league}</span>
-                ${isHotDeal ? '<span class="hot-badge">🔥 HOT DEAL</span>' : ''}
-                <span>${dateStr}, ${timeStr}</span>
-              </div>
-            </div>
-            <div style="margin-bottom: 1rem; color: #4b5563; font-size: 0.9rem; font-weight: 600;">
-              Market shown: ${marketLabel}
-            </div>
-
-            ${saBookmakers.length > 0 ? `
-              <div style="margin-bottom: 0.75rem;">
-                <div style="font-weight: 700; color: #059669; font-size: 0.875rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                  🇿🇦 AVAILABLE IN SOUTH AFRICA
-                </div>
-                <div class="odds-comparison">
-                  ${saBookmakers.map((bm, index) => {
-                    const isBest = bm.odds === bestOdds.odds;
-                    return `
-                      <div class="odds-row ${isBest ? 'best' : ''}">
-                        <div class="bookmaker-name">
-                          ${bm.name}
-                          ${isBest ? '<span style="font-size: 0.75rem;">✓ BEST</span>' : ''}
-                        </div>
-                        <div>
-                          <span class="odds-value">${bm.odds.toFixed(2)}</span>
-                          ${isBest && valueDiff >= 3 ? `<span class="savings-badge" style="margin-left: 0.5rem;">Save R${savings}</span>` : ''}
-                        </div>
-                        ${bm.url && bm.url !== '#' ? `<a href="${bm.url}" class="bet-button" target="_blank" rel="noopener">Bet Now →</a>` : '<span style="color: #6b7280; font-size: 0.8125rem;">Check manually</span>'}
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
-              </div>
-            ` : ''}
-
-            ${intlBookmakers.length > 0 ? `
-              <div style="margin-top: ${saBookmakers.length > 0 ? '1rem' : '0'}; padding-top: ${saBookmakers.length > 0 ? '1rem' : '0'}; border-top: ${saBookmakers.length > 0 ? '1px solid #e5e7eb' : 'none'};">
-                <div style="font-weight: 600; color: #6b7280; font-size: 0.75rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                  BEST AVAILABLE MARKET ODDS ${saBookmakers.length > 0 ? '(Reference)' : '(Use as manual-check benchmark)'}
-                </div>
-                <div class="odds-comparison">
-                  ${intlBookmakers.slice(0, 5).map((bm, index) => {
-                    const isBest = bm.odds === bestOdds.odds;
-                    return `
-                      <div class="odds-row ${isBest ? 'best' : ''}">
-                        <div class="bookmaker-name" style="font-size: 0.875rem;">
-                          ${bm.name}
-                          ${isBest ? '<span style="font-size: 0.75rem;">✓ BEST</span>' : ''}
-                        </div>
-                        <div>
-                          <span class="odds-value" style="font-size: 1rem;">${bm.odds.toFixed(2)}</span>
-                        </div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
-              </div>
-            ` : ''}
-
-            ${saBookmakers.length === 0 ? `
-              <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
-                <div style="font-weight: 700; color: #92400e; font-size: 0.875rem; margin-bottom: 0.25rem;">
-                  No SA bookmaker feed for this market
-                </div>
-                <div style="color: #92400e; font-size: 0.8125rem;">
-                  Use the market prices above as a benchmark, then check Betway, Hollywoodbets, Sportingbet or Supabets manually before betting.
-                </div>
-              </div>
-            ` : ''}
-
-            ${isHotDeal && saBookmakers.some(bm => bm.odds === bestOdds.odds) ? `
-              <div class="value-summary">
-                <div class="value-summary-title">💰 Extra Value: ${valueDiff.toFixed(1)}%</div>
-                <div class="value-summary-text">
-                  Betting R1,000 here vs worst odds saves you R${(parseFloat(savings) * 10).toFixed(2)}
-                </div>
-              </div>
-            ` : ''}
-          </div>
-        `;
-      }).join('');
+      container.innerHTML = matches.map(renderMatchCard).join('');
     }
 
-    function isSouthAfricanBookmaker(bookmaker) {
-      const key = (bookmaker.key || '').toLowerCase();
-      return Boolean(bookmaker.isSouthAfrica) || bookmaker.name.includes('🇿🇦') || key === 'betway';
+    function renderMatchCard(match) {
+      const reference = getReferenceFairValue(match);
+      const nonExchangeBooks = getNonExchangeBooks(match);
+      const bestListed = nonExchangeBooks[0] || null;
+      const gapPercent = reference && bestListed ? ((bestListed.odds - reference.fairOdds) / reference.fairOdds) * 100 : null;
+      const date = new Date(match.datetime);
+      const dateStr = Number.isNaN(date.getTime()) ? 'Kickoff TBA' : date.toLocaleDateString('en-ZA', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'Africa/Johannesburg' });
+      const timeStr = Number.isNaN(date.getTime()) ? '' : date.toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Johannesburg' }) + ' SAST';
+      const marketLabel = match.market || (match.homeTeam ? match.homeTeam + ' to win' : 'Market price');
+      const compareLink = getComparisonLink(match);
+
+      return '<div class="match-card" data-sport="' + escapeHtml(match.sport || 'other') + '" data-has-fair="' + Boolean(reference) + '">' +
+        '<div class="match-header"><div class="match-teams">' + escapeHtml((match.emoji || '') + ' ' + match.awayTeam + ' vs ' + match.homeTeam) + '</div><div class="match-meta"><span class="sport-badge">' + escapeHtml(match.league || 'Sport') + '</span><span>' + escapeHtml([dateStr, timeStr].filter(Boolean).join(', ')) + '</span></div></div>' +
+        '<div style="margin-bottom:1rem;color:#4b5563;font-size:0.9rem;font-weight:600;">Market shown: ' + escapeHtml(marketLabel) + '</div>' +
+        renderReferencePanel(reference) +
+        renderBestListedPanel(bestListed, reference, gapPercent) +
+        renderReturnLine(reference, bestListed) +
+        renderSACompareModule(compareLink) +
+      '</div>';
+    }
+
+    function renderReferencePanel(reference) {
+      if (!reference) {
+        return '<div class="warning-state" style="text-align:left;"><strong>No exchange reference for this market.</strong><br><span style="font-size:0.875rem;">The match is shown because it exists in the feed, but no fair-value figure is calculated.</span></div>';
+      }
+      return '<div class="reference-panel"><div class="reference-label">Exchange-derived fair value</div><div class="reference-grid"><div class="reference-metric"><div class="reference-label">Reference probability</div><div class="reference-value">' + formatPercent(reference.probability) + '</div></div><div class="reference-metric"><div class="reference-label">Fair odds</div><div class="reference-value">' + formatOdds(reference.fairOdds) + '</div></div><div class="reference-metric"><div class="reference-label">Contributors</div><div class="reference-value" style="font-size:1rem;">' + escapeHtml(reference.sources.join(', ')) + '</div></div></div><div class="reference-note">Derived from exchange back prices. This excludes commission and does not include the lay side of the market, so it is a benchmark rather than exact fair value.</div></div>';
+    }
+
+    function renderBestListedPanel(bestListed, reference, gapPercent) {
+      if (!bestListed) {
+        return '<div class="warning-state" style="text-align:left;margin-top:1rem;"><strong>No non-exchange reference price in this feed.</strong></div>';
+      }
+      const gapClass = gapPercent >= 0 ? 'gap-positive' : 'gap-negative';
+      return '<div class="price-table"><div class="price-row best-reference"><div class="price-source">' + escapeHtml(bestListed.name) + '<small>Reference data only, not a recommendation</small></div><div><strong>' + formatOdds(bestListed.odds) + '</strong></div><div class="' + gapClass + '">' + (reference ? formatSignedPercent(gapPercent) : 'No fair odds') + '</div></div></div>';
+    }
+
+    function renderReturnLine(reference, bestListed) {
+      if (!reference || !bestListed) return '';
+      return '<div class="value-summary"><div class="value-summary-title">R100 return comparison</div><div class="value-summary-text">At fair odds, R100 returns R' + formatMoney(100 * reference.fairOdds) + '. At the best listed reference price, R100 returns R' + formatMoney(100 * bestListed.odds) + '.</div></div>';
+    }
+
+    function renderSACompareModule(link) {
+      return '<div class="sa-compare-module"><h3>Compare South African bookmakers for this market</h3><p>The reference prices above are not local recommendations. Use BetSorted to compare licensed South African bookmakers, then check the same market directly before staking.</p><a class="sa-compare-link" href="' + link.href + '">' + escapeHtml(link.label) + '</a></div>';
+    }
+
+    function getReferenceFairValue(match) {
+      const books = Array.isArray(match.bookmakers) ? match.bookmakers : [];
+      const betfairUk = books.find(book => book.key === 'betfair_ex_uk');
+      const betfairEu = books.find(book => book.key === 'betfair_ex_eu');
+      const smarkets = books.find(book => book.key === 'smarkets');
+      const entries = [betfairUk || betfairEu, smarkets].filter(book => book && Number(book.odds) > 1);
+      if (entries.length === 0) return null;
+      const probability = entries.reduce((sum, book) => sum + (1 / Number(book.odds)), 0) / entries.length;
+      return { probability, fairOdds: 1 / probability, sources: entries.map(book => book.name || book.key) };
+    }
+
+    function getNonExchangeBooks(match) {
+      const books = Array.isArray(match.bookmakers) ? match.bookmakers : [];
+      return books
+        .filter(book => !EXCHANGE_KEYS.includes(book.key))
+        .filter(book => !BLOCKED_REFERENCE_KEYS.includes(book.key))
+        .map(book => ({ name: book.name || book.key, key: book.key, odds: Number(book.odds) }))
+        .filter(book => book.odds > 1)
+        .sort((a, b) => b.odds - a.odds);
+    }
+
+    function getComparisonLink(match) {
+      const sport = (match.sport || '').toLowerCase();
+      const league = (match.league || '').toLowerCase();
+      if (sport === 'rugby') return { href: '/blog/best-rugby-betting-sites-south-africa-2026.html', label: 'Compare SA rugby bookmakers' };
+      if (sport === 'cricket') return { href: '/blog/best-cricket-betting-sites-south-africa-2026.html', label: 'Compare SA cricket bookmakers' };
+      if (league.includes('psl')) return { href: '/blog/best-psl-betting-site-2026.html', label: 'Compare SA PSL bookmakers' };
+      return { href: '/bookmakers/', label: 'Compare licensed SA bookmakers' };
     }
 
     function filterSport(sport, button) {
@@ -499,44 +547,33 @@
     }
 
     function filterValue(type, button) {
-      currentValueFilter = type === 'hot' ? 'hot' : 'all';
+      currentValueFilter = type === 'fair' ? 'fair' : 'all';
       updateFilters(button);
       applyFilters();
     }
 
     function updateFilters(activeButton) {
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      if (activeButton) {
-        activeButton.classList.add('active');
-      }
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      if (activeButton) activeButton.classList.add('active');
     }
 
     function applyFilters() {
-      const allCards = document.querySelectorAll('.match-card');
-      
-      allCards.forEach(card => {
+      document.querySelectorAll('.match-card').forEach(card => {
         const sport = card.dataset.sport;
-        const isHotDeal = card.classList.contains('hot-deal');
-        
+        const hasFair = card.dataset.hasFair === 'true';
         let showCard = true;
-        
-        // Sport filter
-        if (currentFilter !== 'all' && sport !== currentFilter) {
-          showCard = false;
-        }
-        
-        // Value filter
-        if (currentValueFilter === 'hot' && !isHotDeal) {
-          showCard = false;
-        }
-        
+        if (currentFilter !== 'all' && sport !== currentFilter) showCard = false;
+        if (currentValueFilter === 'fair' && !hasFair) showCard = false;
         card.style.display = showCard ? 'block' : 'none';
       });
     }
 
-    // Load odds data on page load
+    function formatOdds(value) { return Number(value).toFixed(2); }
+    function formatPercent(value) { return (Number(value) * 100).toFixed(1) + '%'; }
+    function formatSignedPercent(value) { return (value >= 0 ? '+' : '') + Number(value).toFixed(1) + '%'; }
+    function formatMoney(value) { return Number(value).toFixed(2); }
+    function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char])); }
+
     loadOddsData();
   </script>
   <script src="/assets/sticky-cta.js" defer></script>

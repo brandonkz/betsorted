@@ -11,10 +11,13 @@ const path = require('path');
 
 // Load API key
 require('dotenv').config();
-const API_KEY = process.env.ODDS_API_KEY || 'bb71cc0232a79874fc3014da54a71104';
+const API_KEY = process.env.ODDS_API_KEY;
+
+if (!API_KEY) {
+  throw new Error('ODDS_API_KEY is required. Set it in the environment before running fetch-live-odds.js.');
+}
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
-
 // SA-relevant sports (prioritized order)
 const SPORTS = [
   'soccer_epl', // Premier League (most popular in SA)
@@ -65,6 +68,29 @@ function sortBookmakersByPriority(bookmakers) {
   });
 }
 
+function dedupeReferenceBookmakers(bookmakers) {
+  const byKey = new Map();
+  const output = [];
+
+  for (const bookmaker of bookmakers) {
+    if (bookmaker.key === 'betfair_ex_eu' && byKey.has('betfair_ex_uk')) {
+      continue;
+    }
+
+    if (bookmaker.key === 'betfair_ex_uk' && byKey.has('betfair_ex_eu')) {
+      const index = output.findIndex(item => item.key === 'betfair_ex_eu');
+      if (index !== -1) output.splice(index, 1);
+      byKey.delete('betfair_ex_eu');
+    }
+
+    if (byKey.has(bookmaker.key)) continue;
+    byKey.set(bookmaker.key, true);
+    output.push(bookmaker);
+  }
+
+  return output;
+}
+
 function formatEvent(game) {
   // Sort bookmakers to prioritize Betway
   const sortedBookmakers = sortBookmakersByPriority(game.bookmakers);
@@ -88,7 +114,9 @@ function formatEvent(game) {
   }
   
   // Prioritize Betway, then sort by best odds
-  homeOdds.sort((a, b) => {
+  const uniqueHomeOdds = dedupeReferenceBookmakers(homeOdds);
+
+  uniqueHomeOdds.sort((a, b) => {
     // Betway always first if available
     if (a.isBetway && !b.isBetway) return -1;
     if (!a.isBetway && b.isBetway) return 1;
@@ -96,7 +124,7 @@ function formatEvent(game) {
     return b.odds - a.odds;
   });
   
-  if (homeOdds.length < 2) return null;
+  if (uniqueHomeOdds.length < 2) return null;
   
   // Get sport emoji and type
   let emoji = '⚽';
@@ -126,8 +154,8 @@ function formatEvent(game) {
     dayNum,
     time,
     venue: 'TBA', // API doesn't provide venue
-    bestOdds: homeOdds[0],
-    secondOdds: homeOdds[1]
+    bestOdds: uniqueHomeOdds[0],
+    secondOdds: uniqueHomeOdds[1]
   };
 }
 
@@ -185,7 +213,9 @@ function formatMatchForFinder(game) {
     }
   }
   
-  if (bookmakers.length < 2) return null;
+  const uniqueBookmakers = dedupeReferenceBookmakers(bookmakers);
+
+  if (uniqueBookmakers.length < 2) return null;
   
   // Get sport emoji and type
   let emoji = '⚽';
@@ -214,7 +244,7 @@ function formatMatchForFinder(game) {
     awayTeam: game.away_team,
     market: `${game.home_team} to win`,
     datetime: game.commence_time,
-    bookmakers: bookmakers.sort((a, b) => b.odds - a.odds).slice(0, 5) // Top 5 bookmakers only
+    bookmakers: uniqueBookmakers.sort((a, b) => b.odds - a.odds)
   };
 }
 
@@ -330,13 +360,13 @@ async function main() {
     // Update timestamp and note
     let updatedHTML = newHTML.replace(
       /Updated .*? \•/,
-      `Updated ${timestamp} (live) •`
+      `Updated ${timestamp} (twice-daily feed) •`
     );
 
     // Update note about bookmakers
     updatedHTML = updatedHTML.replace(
       /Odds indicative only/,
-      'Live odds prioritize Betway 🇿🇦 + international bookmakers'
+      'Odds feed prioritizes available SA prices and exchange reference data'
     );
 
     // Write back

@@ -26,13 +26,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Codere (IT)",
           "key": "codere_it",
           "odds": 1.18,
@@ -79,13 +72,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Casumo",
           "key": "casumo",
           "odds": 8,
@@ -106,13 +92,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.24,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
           "odds": 2.24,
           "url": "#",
           "isSouthAfrica": false
@@ -153,13 +132,6 @@
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.85,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.82,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -263,13 +235,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.56,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 2.52,
@@ -287,13 +252,6 @@
       "market": "Brighton and Hove Albion to win",
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 2.42,
-          "url": "#",
-          "isSouthAfrica": false
-        },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
@@ -387,13 +345,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 3.45,
@@ -428,13 +379,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 3.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_eu",
           "odds": 3.45,
           "url": "#",
           "isSouthAfrica": false

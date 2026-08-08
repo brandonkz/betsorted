@@ -3013,5 +3013,470 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-08T06:01:01+02:00",
+    "matches": [
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Arsenal",
+        "awayTeam": "Coventry City",
+        "market": "Arsenal to win",
+        "datetime": "2026-08-21T19:00:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 1.19,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 1.19,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 1.19,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 1.19,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Codere (IT)",
+            "key": "codere_it",
+            "odds": 1.18,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Hull City",
+        "awayTeam": "Manchester United",
+        "market": "Hull City to win",
+        "datetime": "2026-08-22T11:30:00Z",
+        "bookmakers": [
+          {
+            "name": "Unibet (SE)",
+            "key": "unibet_se",
+            "odds": 8.5,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Unibet (NL)",
+            "key": "unibet_nl",
+            "odds": 8.5,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 8.4,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 8.4,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 8.2,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Everton",
+        "awayTeam": "Crystal Palace",
+        "market": "Everton to win",
+        "datetime": "2026-08-22T14:00:00Z",
+        "bookmakers": [
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 2.22,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 2.22,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.21,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 2.2,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "BetOnline.ag",
+            "key": "betonlineag",
+            "odds": 2.2,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Ipswich Town",
+        "awayTeam": "Sunderland",
+        "market": "Ipswich Town to win",
+        "datetime": "2026-08-22T14:00:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.85,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 2.82,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 2.82,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.8,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Unibet (SE)",
+            "key": "unibet_se",
+            "odds": 2.8,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Nottingham Forest",
+        "awayTeam": "Leeds United",
+        "market": "Nottingham Forest to win",
+        "datetime": "2026-08-22T14:00:00Z",
+        "bookmakers": [
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 2.36,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 2.36,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 2.34,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 2.32,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Marathon Bet",
+            "key": "marathonbet",
+            "odds": 2.28,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Brentford",
+        "awayTeam": "Tottenham Hotspur",
+        "market": "Brentford to win",
+        "datetime": "2026-08-22T16:30:00Z",
+        "bookmakers": [
+          {
+            "name": "Unibet (SE)",
+            "key": "unibet_se",
+            "odds": 2.6,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Unibet (NL)",
+            "key": "unibet_nl",
+            "odds": 2.6,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 2.5,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 2.5,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Casumo",
+            "key": "casumo",
+            "odds": 2.5,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Brighton and Hove Albion",
+        "awayTeam": "Aston Villa",
+        "market": "Brighton and Hove Albion to win",
+        "datetime": "2026-08-23T13:00:00Z",
+        "bookmakers": [
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 2.5,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 2.42,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 2.42,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "BetOnline.ag",
+            "key": "betonlineag",
+            "odds": 2.37,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "LowVig.ag",
+            "key": "lowvig",
+            "odds": 2.37,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Manchester City",
+        "awayTeam": "Bournemouth",
+        "market": "Manchester City to win",
+        "datetime": "2026-08-23T13:00:00Z",
+        "bookmakers": [
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 1.49,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Nordic Bet",
+            "key": "nordicbet",
+            "odds": 1.48,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betsson",
+            "key": "betsson",
+            "odds": 1.48,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 1.47,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 1.47,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Newcastle United",
+        "awayTeam": "Liverpool",
+        "market": "Newcastle United to win",
+        "datetime": "2026-08-23T15:30:00Z",
+        "bookmakers": [
+          {
+            "name": "Unibet (SE)",
+            "key": "unibet_se",
+            "odds": 3.6,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Unibet (NL)",
+            "key": "unibet_nl",
+            "odds": 3.6,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_uk",
+            "odds": 3.55,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Betfair",
+            "key": "betfair_ex_eu",
+            "odds": 3.55,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Smarkets",
+            "key": "smarkets",
+            "odds": 3.5,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      },
+      {
+        "sport": "soccer",
+        "emoji": "⚽",
+        "league": "Premier League",
+        "homeTeam": "Fulham",
+        "awayTeam": "Chelsea",
+        "market": "Fulham to win",
+        "datetime": "2026-08-24T19:00:00Z",
+        "bookmakers": [
+          {
+            "name": "Unibet (SE)",
+            "key": "unibet_se",
+            "odds": 3.3,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "Unibet (NL)",
+            "key": "unibet_nl",
+            "odds": 3.3,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "BetOnline.ag",
+            "key": "betonlineag",
+            "odds": 3.28,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "LowVig.ag",
+            "key": "lowvig",
+            "odds": 3.28,
+            "url": "#",
+            "isSouthAfrica": false
+          },
+          {
+            "name": "1xBet",
+            "key": "onexbet",
+            "odds": 3.25,
+            "url": "#",
+            "isSouthAfrica": false
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-07T16:00:41.532Z",
-  "updatedDisplay": "Fri Aug 7, 6:00 PM",
+  "updated": "2026-08-08T04:01:01.345Z",
+  "updatedDisplay": "Sat Aug 8, 6:01 AM",
   "matches": [
     {
       "sport": "soccer",
@@ -74,21 +74,21 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 8,
+          "odds": 8.4,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 8,
+          "odds": 8.4,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
-          "odds": 8,
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 8.2,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -104,13 +104,6 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.23,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 2.22,
@@ -121,6 +114,13 @@
           "name": "Betfair",
           "key": "betfair_ex_eu",
           "odds": 2.22,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.21,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -258,21 +258,21 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.56,
+          "odds": 2.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.56,
+          "odds": 2.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.52,
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 2.5,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -297,14 +297,14 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 2.44,
+          "odds": 2.42,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.44,
+          "odds": 2.42,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -396,20 +396,20 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 3.5,
+          "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair",
           "key": "betfair_ex_eu",
-          "odds": 3.5,
+          "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
@@ -428,14 +428,14 @@
         {
           "name": "Unibet (SE)",
           "key": "unibet_se",
-          "odds": 3.35,
+          "odds": 3.3,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
-          "odds": 3.35,
+          "odds": 3.3,
           "url": "#",
           "isSouthAfrica": false
         },

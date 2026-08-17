@@ -4,14 +4,16 @@
   "description": "**Find the best sports betting site for South Africans**",
   "main": "app.js",
   "scripts": {
+    "sync:operators": "node scripts/sync-operator-data.mjs",
     "assert:latest-guides": "node tests/assert-latest-guides.mjs",
     "assert:go-links": "node tests/assert-go-links.mjs",
     "assert:odds-finder": "node tests/verify-odds-finder-render.js",
     "assert:bookmakers-hub": "node tests/assert-bookmakers-hub.mjs",
     "assert:blog-index": "node tests/assert-blog-index.mjs",
     "assert:canonical-reviews": "node tests/assert-canonical-reviews.mjs",
+    "assert:operator-data": "node tests/assert-operator-data.mjs",
     "assert:internal-links": "node tests/assert-internal-links.mjs",
-    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews && npm run assert:internal-links"
+    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews && npm run assert:operator-data && npm run assert:internal-links"
   },
   "repository": {
     "type": "git",

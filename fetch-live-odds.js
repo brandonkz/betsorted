@@ -297,6 +297,144 @@ function updateOddsHistory(matches) {
   return entry;
 }
 
+function updateBestOddsFinderPage(oddsData) {
+  const pagePath = path.join(__dirname, 'best-odds-finder.html');
+  if (!fs.existsSync(pagePath)) return;
+
+  let html = fs.readFileSync(pagePath, 'utf8');
+  const matches = Array.isArray(oddsData.matches) ? oddsData.matches : [];
+  const robots = matches.length ? '' : '<meta name="robots" content="noindex,follow">';
+  const updated = oddsData.updated ? new Date(oddsData.updated) : null;
+  const updatedText = updated && !Number.isNaN(updated.getTime())
+    ? updated.toLocaleString('en-ZA', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Africa/Johannesburg' }) + ' SAST'
+    : 'Unknown';
+
+  const statusHtml = `    <!-- SSR_ODDS_STATUS_START -->
+    <div id="odds-status" class="data-status">
+      <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Odds feed timestamp: ${escapeHtml(updatedText)}</div>
+      <p style="margin: 0; opacity: 0.95;">This is a reference feed from the last update job. It is not live pricing and does not compare multiple South African bookmakers.</p>
+    </div>
+    <!-- SSR_ODDS_STATUS_END -->`;
+
+  const matchesHtml = matches.length
+    ? `    <!-- SSR_ODDS_MATCHES_START -->
+    <div id="matches-container" style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+${matches.map(renderStaticFinderCard).join('\n')}
+    </div>
+    <!-- SSR_ODDS_MATCHES_END -->`
+    : `    <!-- SSR_ODDS_MATCHES_START -->
+    <div id="matches-container" style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+      <div class="empty-state"><div style="font-size:3rem;margin-bottom:1rem;">∅</div><p><strong>No matches in the current odds file</strong></p><p style="font-size:0.875rem;opacity:0.85;">Check back after the next feed update or compare licensed South African bookmakers manually.</p></div>
+    </div>
+    <!-- SSR_ODDS_MATCHES_END -->`;
+
+  html = replaceBetweenMarkers(html, 'SSR_ODDS_ROBOTS', robots);
+  html = replaceBetweenMarkers(html, 'SSR_ODDS_STATUS', `\n${statusHtml}\n`);
+  html = replaceBetweenMarkers(html, 'SSR_ODDS_MATCHES', `\n${matchesHtml}\n`);
+  fs.writeFileSync(pagePath, html);
+}
+
+function replaceBetweenMarkers(html, marker, replacement) {
+  const start = `<!-- ${marker}_START -->`;
+  const end = `<!-- ${marker}_END -->`;
+  const startIndex = html.indexOf(start);
+  const endIndex = html.indexOf(end, startIndex);
+  if (startIndex === -1 || endIndex === -1) return html;
+  return html.slice(0, startIndex) + replacement + html.slice(endIndex + end.length);
+}
+
+function renderStaticFinderCard(match) {
+  const reference = getStaticReference(match);
+  const bestListed = getStaticNonExchangeBooks(match)[0] || null;
+  const kickoff = match.datetime ? new Date(match.datetime) : null;
+  const kickoffText = kickoff && !Number.isNaN(kickoff.getTime())
+    ? kickoff.toLocaleString('en-ZA', { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Johannesburg' }) + ' SAST'
+    : 'Kickoff TBA';
+  const marketLabel = match.market || `${match.homeTeam || 'Selection'} to win`;
+  const compareLink = getStaticComparisonLink(match);
+  const teams = `${match.emoji || ''} ${match.awayTeam || ''} vs ${match.homeTeam || ''}`.trim();
+
+  return `      <div class="match-card" data-sport="${escapeHtml(match.sport || 'other')}" data-has-fair="${Boolean(reference)}">
+        <div class="match-header"><div class="match-teams">${escapeHtml(teams)}</div><div class="match-meta"><span class="sport-badge">${escapeHtml(match.league || 'Sport')}</span><span>${escapeHtml(kickoffText)}</span></div></div>
+        <div style="margin-bottom:1rem;color:#4b5563;font-size:0.9rem;font-weight:600;">Market shown: ${escapeHtml(marketLabel)}</div>
+        ${renderStaticReferencePanel(reference)}
+        ${renderStaticBestListedPanel(bestListed, reference)}
+        ${renderStaticReturnLine(reference, bestListed)}
+        <div class="sa-compare-module"><h3>Compare South African bookmakers for this market</h3><p>The reference prices above are not local recommendations. Use BetSorted to compare licensed South African bookmakers, then check the same market directly before staking.</p><a class="sa-compare-link" href="${compareLink.href}">${escapeHtml(compareLink.label)}</a></div>
+      </div>`;
+}
+
+function getStaticReference(match) {
+  const books = Array.isArray(match.bookmakers) ? match.bookmakers : [];
+  const betfairUk = books.find(book => book.key === 'betfair_ex_uk');
+  const betfairEu = books.find(book => book.key === 'betfair_ex_eu');
+  const smarkets = books.find(book => book.key === 'smarkets');
+  const entries = [betfairUk || betfairEu, smarkets].filter(book => book && Number(book.odds) > 1);
+  if (entries.length === 0) return null;
+  const probability = entries.reduce((sum, book) => sum + (1 / Number(book.odds)), 0) / entries.length;
+  return { probability, fairOdds: 1 / probability, sources: entries.map(book => book.name || book.key) };
+}
+
+function getStaticNonExchangeBooks(match) {
+  const books = Array.isArray(match.bookmakers) ? match.bookmakers : [];
+  const exchangeKeys = ['betfair_ex_uk', 'betfair_ex_eu', 'smarkets'];
+  const blockedKeys = ['bovada', 'lowvig', 'betonlineag'];
+  return books
+    .filter(book => !exchangeKeys.includes(book.key))
+    .filter(book => !blockedKeys.includes(book.key))
+    .map(book => ({ name: book.name || book.key, key: book.key, odds: Number(book.odds) }))
+    .filter(book => book.odds > 1)
+    .sort((a, b) => b.odds - a.odds);
+}
+
+function renderStaticReferencePanel(reference) {
+  if (!reference) {
+    return '<div class="warning-state" style="text-align:left;"><strong>No exchange reference for this market.</strong></div>';
+  }
+  return `<div class="reference-panel"><div class="reference-label">Exchange-derived fair value</div><div class="reference-grid"><div class="reference-metric"><div class="reference-label">Reference probability</div><div class="reference-value">${formatPercent(reference.probability)}</div></div><div class="reference-metric"><div class="reference-label">Fair odds</div><div class="reference-value">${formatDecimal(reference.fairOdds)}</div></div><div class="reference-metric"><div class="reference-label">Contributors</div><div class="reference-value" style="font-size:1rem;">${escapeHtml(reference.sources.join(', '))}</div></div></div><div class="reference-note">Derived from exchange back prices. This excludes commission and does not include the lay side of the market, so it is a benchmark rather than exact fair value.</div></div>`;
+}
+
+function renderStaticBestListedPanel(bestListed, reference) {
+  if (!bestListed) {
+    return '<div class="warning-state" style="text-align:left;margin-top:1rem;"><strong>No non-exchange reference price in this feed.</strong></div>';
+  }
+  const gapPercent = reference ? ((bestListed.odds - reference.fairOdds) / reference.fairOdds) * 100 : null;
+  const gapClass = gapPercent >= 0 ? 'gap-positive' : 'gap-negative';
+  const gapText = reference ? `${gapPercent >= 0 ? '+' : ''}${gapPercent.toFixed(1)}%` : 'No fair odds';
+  return `<div class="price-table"><div class="price-row best-reference"><div class="price-source">${escapeHtml(bestListed.name)}<small>Reference data only, not a recommendation</small></div><div><strong>${formatDecimal(bestListed.odds)}</strong></div><div class="${gapClass}">${gapText}</div></div></div>`;
+}
+
+function renderStaticReturnLine(reference, bestListed) {
+  if (!reference || !bestListed) return '';
+  return `<div class="value-summary"><div class="value-summary-title">R100 return comparison</div><div class="value-summary-text">At fair odds, R100 returns R${(100 * reference.fairOdds).toFixed(2)}. At the best listed reference price, R100 returns R${(100 * bestListed.odds).toFixed(2)}.</div></div>`;
+}
+
+function getStaticComparisonLink(match) {
+  const sport = (match.sport || '').toLowerCase();
+  const league = (match.league || '').toLowerCase();
+  if (sport === 'rugby') return { href: '/blog/best-rugby-betting-sites-south-africa-2026.html', label: 'Compare SA rugby bookmakers' };
+  if (sport === 'cricket') return { href: '/blog/best-cricket-betting-sites-south-africa-2026.html', label: 'Compare SA cricket bookmakers' };
+  if (league.includes('psl')) return { href: '/blog/best-psl-betting-site-2026.html', label: 'Compare SA PSL bookmakers' };
+  return { href: '/bookmakers/', label: 'Compare licensed SA bookmakers' };
+}
+
+function formatDecimal(value) {
+  return Number(value).toFixed(2);
+}
+
+function formatPercent(value) {
+  return `${(Number(value) * 100).toFixed(1)}%`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 async function main() {
   console.log('🎰 Fetching live odds from The Odds API...\n');
   
@@ -394,6 +532,7 @@ async function main() {
   );
 
   updateOddsHistory(oddsData.matches);
+  updateBestOddsFinderPage(oddsData);
   
   if (homepageUpdated) {
     console.log('✅ Homepage updated with live odds!');

@@ -8,7 +8,8 @@
     "assert:go-links": "node tests/assert-go-links.mjs",
     "assert:odds-finder": "node tests/verify-odds-finder-render.js",
     "assert:bookmakers-hub": "node tests/assert-bookmakers-hub.mjs",
-    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub"
+    "assert:blog-index": "node tests/assert-blog-index.mjs",
+    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index"
   },
   "repository": {
     "type": "git",

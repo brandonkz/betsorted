@@ -4,6 +4,13 @@ const fs = require('fs');
 const vm = require('vm');
 
 const BLOCKED_NAMES = /Bovada|LowVig|BetOnline/i;
+const UNSUPPORTED_HOMEPAGE_CLAIMS = [
+  'Compare odds from SA bookmakers',
+  '36+ Live Matches',
+  '2x Daily Updates',
+  'R1,000 bet with best odds',
+  'R100+ extra profit'
+];
 
 function getPageScript(html) {
   const start = html.indexOf('  <script>\n    let currentFilter');
@@ -73,8 +80,36 @@ function ensureUnfilteredBlockedRows(feed) {
 
 async function main() {
   const html = fs.readFileSync('best-odds-finder.html', 'utf8');
+  const homepage = fs.readFileSync('index.html', 'utf8');
   const script = getPageScript(html);
   const feed = JSON.parse(fs.readFileSync('data/live-odds.json', 'utf8'));
+
+  for (const claim of UNSUPPORTED_HOMEPAGE_CLAIMS) {
+    if (homepage.includes(claim) || html.includes(claim)) {
+      throw new Error(`Unsupported Best Odds Finder claim still present: ${claim}`);
+    }
+  }
+
+  if (!html.includes('id="matches-container"')) {
+    throw new Error('Best Odds Finder is missing the server-rendered matches container');
+  }
+
+  const hasFeedMatches = (feed.matches || []).length > 0;
+  const hasStaticCards = html.includes('class="match-card"');
+  const hasNoindex = html.includes('<meta name="robots" content="noindex,follow">');
+
+  if (hasFeedMatches && !hasStaticCards) {
+    throw new Error('Best Odds Finder has feed matches but no server-rendered match cards');
+  }
+
+  if (hasFeedMatches && hasNoindex) {
+    throw new Error('Best Odds Finder has feed matches but is marked noindex');
+  }
+
+  if (!hasFeedMatches && !hasNoindex) {
+    throw new Error('Best Odds Finder has an empty feed but is not marked noindex');
+  }
+
   const blockedFixtureRows = ensureUnfilteredBlockedRows(feed);
 
   const { context, nodes } = createContext(feed);
@@ -87,7 +122,7 @@ async function main() {
     throw new Error('Blocked offshore operator rendered in Best Odds Finder output');
   }
 
-  console.log(`PASS blocked operator render filter rows=${blockedFixtureRows}`);
+  console.log(`PASS odds finder render feed_matches=${(feed.matches || []).length} blocked_filter_rows=${blockedFixtureRows}`);
 }
 
 main().catch(error => {

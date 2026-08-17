@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "assert:latest-guides": "node tests/assert-latest-guides.mjs",
-    "test": "npm run assert:latest-guides"
+    "assert:go-links": "node tests/assert-go-links.mjs",
+    "test": "npm run assert:latest-guides && npm run assert:go-links"
   },
   "repository": {
     "type": "git",

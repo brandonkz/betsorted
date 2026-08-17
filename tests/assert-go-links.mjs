@@ -38,11 +38,11 @@ if (!tableMatch) {
     ['Betway', '/bookmakers/betway-review.html', '/go/betway.html'],
     ['Hollywoodbets', '/bookmakers/hollywoodbets-review.html', '/go/hollywoodbets.html'],
     ['Sportingbet', '/bookmakers/sportingbet-review.html', '/go/sportingbet.html'],
-    ['10bet', '/blog/10bet-review-south-africa-2026.html', '/go/10bet.html'],
+    ['10bet', '/bookmakers/10bet-review.html', '/go/10bet.html'],
     ['Play.co.za', '/bookmakers/play-co-za-review.html', '/go/play-co-za.html'],
     ['World Sports Betting', '/bookmakers/world-sports-betting-review.html', '/go/world-sports-betting.html'],
-    ['Gbets', '/blog/gbets-review-south-africa-2026.html', '/go/gbets.html'],
-    ['Sunbet', '/blog/sunbet-review-south-africa-2026.html', '/go/sunbet.html'],
+    ['Gbets', '/bookmakers/gbets-review.html', '/go/gbets.html'],
+    ['Sunbet', '/bookmakers/sunbet-review.html', '/go/sunbet.html'],
   ];
 
   for (const [brand, reviewHref, goHref] of expectedRows) {

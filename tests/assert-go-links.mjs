@@ -78,8 +78,11 @@ for (const [slug, brand] of Object.entries(todoBrands)) {
     continue;
   }
   const html = readFileSync(goFile, 'utf8');
-  if (!html.includes('TODO_AFFILIATE_URL')) {
-    failures.push(`Missing TODO_AFFILIATE_URL marker in go/${slug}.html`);
+  if (!html.includes(`We're setting up a tracked link for ${brand}.`)) {
+    failures.push(`Missing clean tracked-link setup copy in go/${slug}.html`);
+  }
+  if (html.includes('TODO_AFFILIATE_URL')) {
+    failures.push(`go/${slug}.html should not expose TODO_AFFILIATE_URL`);
   }
 }
 

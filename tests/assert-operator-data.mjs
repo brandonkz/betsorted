@@ -46,6 +46,10 @@ function assertIncludes(file, expected) {
   assert.ok(html.includes(expected), `${file} should include ${expected}`);
 }
 
+function pending(value) {
+  return value === "TODO_VERIFY" || value === "TODO_AFFILIATE_URL" || value === "Coming soon" || value === null;
+}
+
 for (const op of operators) {
   for (const field of ["slug", "name", "rating", "established", "welcome_bonus", "min_deposit_zar", "payout_speed", "payment_methods", "licence_authority", "licence_number", "affiliate_url", "bonus_verified_at", "review_url", "last_reviewed"]) {
     assert.ok(Object.hasOwn(op, field), `${op.slug} missing ${field}`);
@@ -58,8 +62,8 @@ for (const slug of homeSlugs) {
   assertIncludes("index.html", op.review_url);
   assertIncludes("index.html", `${op.go_url}?subid=home-table`);
   if (typeof op.rating === "number") assertIncludes("index.html", op.rating.toFixed(1).replace(/\.0$/, ""));
-  if (op.welcome_bonus !== "TODO_VERIFY") assertIncludes("index.html", op.welcome_bonus);
-  if (op.min_deposit_display !== "TODO_VERIFY") assertIncludes("index.html", op.min_deposit_display);
+  if (!pending(op.welcome_bonus)) assertIncludes("index.html", op.welcome_bonus);
+  if (!pending(op.min_deposit_display)) assertIncludes("index.html", op.min_deposit_display);
 }
 
 for (const slug of hubSlugs) {
@@ -67,8 +71,8 @@ for (const slug of hubSlugs) {
   assertIncludes("bookmakers/index.html", `data-operator="${op.slug}"`);
   assertIncludes("bookmakers/index.html", op.review_url);
   assertIncludes("bookmakers/index.html", `${op.go_url}?subid=post-bookmakers-hub`);
-  if (op.welcome_bonus !== "TODO_VERIFY") assertIncludes("bookmakers/index.html", op.welcome_bonus);
-  if (op.min_deposit_display !== "TODO_VERIFY") assertIncludes("bookmakers/index.html", op.min_deposit_display);
+  if (!pending(op.welcome_bonus)) assertIncludes("bookmakers/index.html", op.welcome_bonus);
+  if (!pending(op.min_deposit_display)) assertIncludes("bookmakers/index.html", op.min_deposit_display);
   assertIncludes("bookmakers/index.html", op.licence_authority.replace(/&/g, "&amp;"));
 }
 
@@ -81,8 +85,8 @@ for (const op of operators.filter((operator) => operator.review_url.startsWith("
 
 const report = fs.readFileSync("audit/operator-data-todos.md", "utf8");
 assertIncludes("audit/operator-data-todos.md", "operator,field,value");
-for (const op of operators.filter((operator) => operator.affiliate_url === "TODO_AFFILIATE_URL")) {
-  assert.ok(report.includes(`${op.slug},affiliate_url,TODO_AFFILIATE_URL`), `TODO report missing ${op.slug} affiliate_url`);
+for (const op of operators.filter((operator) => operator.affiliate_url === "Coming soon")) {
+  assert.ok(report.includes(`${op.slug},affiliate_url,Coming soon`), `TODO report missing ${op.slug} affiliate_url`);
 }
 
 console.log(`operator data assertion passed for ${operators.length} operators`);

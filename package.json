@@ -10,7 +10,8 @@
     "assert:bookmakers-hub": "node tests/assert-bookmakers-hub.mjs",
     "assert:blog-index": "node tests/assert-blog-index.mjs",
     "assert:canonical-reviews": "node tests/assert-canonical-reviews.mjs",
-    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews"
+    "assert:internal-links": "node tests/assert-internal-links.mjs",
+    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews && npm run assert:internal-links"
   },
   "repository": {
     "type": "git",

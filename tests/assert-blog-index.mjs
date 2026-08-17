@@ -35,7 +35,7 @@ for (const file of indexFiles) {
       failures.push(`${file} has blog card without href`);
       continue;
     }
-    const localTarget = href.startsWith('/blog/') ? href.slice(1) : href;
+    const localTarget = href.startsWith('/') ? href.slice(1) : href;
     if (!fs.existsSync(localTarget)) failures.push(`${file} links to missing article target: ${href}`);
   }
 

@@ -20,7 +20,12 @@ if (cards.length === 0) {
   throw new Error('Latest Betting Guides has no cards');
 }
 
+if (cards.length !== 9) {
+  throw new Error(`Latest Betting Guides should show 9 cards; found ${cards.length}`);
+}
+
 const seen = new Map();
+const latestCutoff = '2026-06-18';
 const failures = [];
 
 for (const card of cards) {
@@ -43,6 +48,13 @@ for (const card of cards) {
   const targetHtml = readFileSync(targetPath, 'utf8');
   if (/<meta\s+http-equiv=["']refresh["']/i.test(targetHtml)) {
     failures.push(`Latest-guide href points at a redirect stub: ${card.href}`);
+  }
+
+  const targetDate = latestDate(targetHtml);
+  if (!targetDate) {
+    failures.push(`Latest-guide target has no published/modified date: ${card.href}`);
+  } else if (targetDate < latestCutoff) {
+    failures.push(`Latest-guide target is outside the 60-day item-2 cutoff: ${card.href} (${targetDate})`);
   }
 
   const h1Match = targetHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
@@ -84,4 +96,12 @@ function clean(value) {
     .replace(/&quot;/g, '"')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function latestDate(html) {
+  const dates = [
+    ...html.matchAll(/(?:article:published_time|article:modified_time)["']\s+content=["']([0-9]{4}-[0-9]{2}-[0-9]{2})/gi),
+    ...html.matchAll(/"date(?:Published|Modified)"\s*:\s*"([0-9]{4}-[0-9]{2}-[0-9]{2})"/gi),
+  ].map((match) => match[1]);
+  return dates.sort().at(-1);
 }

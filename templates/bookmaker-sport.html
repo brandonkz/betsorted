@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{meta_description}}">
+  <link rel="canonical" href="{{canonical_url}}">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1VHD0P7M44');
+  </script>
+
+  <script type="application/ld+json">
+  {{faq_json}}
+  </script>
+
+  <style>
+    .sport-page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      color: #1e3a8a;
+    }
+
+    .sport-hero {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 32px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .sport-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #1e3a8a;
+    }
+
+    .sport-hero p {
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .badge {
+      background: #e0ecff;
+      color: #1e3a8a;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .sport-section {
+      margin-bottom: 32px;
+    }
+
+    .sport-section h2 {
+      font-size: 1.8rem;
+      color: #1e40af;
+      margin-bottom: 12px;
+    }
+
+    .sport-section p {
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .sport-section ul {
+      margin-left: 20px;
+      color: #374151;
+      line-height: 1.8;
+    }
+
+    .sport-section li {
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+      <nav class="header-nav">
+          <a href="/#comparison" class="nav-link">Compare</a>
+          <a href="/bookmakers/" class="nav-link">Bookmakers</a>
+          <a href="/glossary.html" class="nav-link">Glossary</a>
+          <a href="/calculators.html" class="nav-link">Calculators</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a>
+          <a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a>
+          <a href="https://cryptocasinosorted.com/?utm_source=betsorted&amp;utm_medium=nav&amp;utm_campaign=crypto_crosspromo_aug_2026&amp;utm_content=bookmaker_nav" class="nav-link" target="_blank" rel="noopener">Crypto Casinos 🎰</a>
+        </nav>
+    </div>
+  </header>
+
+  <main class="sport-page">
+    <section class="sport-hero">
+      <h1>{{bookmaker_name}} {{sport_name}} Betting Guide</h1>
+      <p>{{intro_paragraph}}</p>
+      <div class="badge-row">
+        <span class="badge">{{league}}</span>
+        <span class="badge">Season: {{season}}</span>
+        <span class="badge">ZAR payouts</span>
+      </div>
+      <div class="last-updated">Last Updated: {{last_updated}}</div>
+    </section>
+
+    <section class="sport-section">
+      <h2>Local Teams and Coverage</h2>
+      <p>{{local_teams_paragraph}}</p>
+      <ul>
+        {{local_teams_list}}
+      </ul>
+    </section>
+
+    <section class="sport-section">
+      <h2>Popular {{sport_name}} Markets</h2>
+      <ul>
+        {{markets_list}}
+      </ul>
+    </section>
+
+    <section class="sport-section">
+      <h2>Why Choose {{bookmaker_name}} for {{sport_name}}?</h2>
+      <p>{{value_paragraph}}</p>
+    </section>
+
+    <section class="sport-section">
+      <h2>Links for SA Bettors</h2>
+      <ul>
+        <li><a href="{{review_url}}">Read the {{bookmaker_name}} review</a></li>
+        <li><a href="/bookmakers/">Compare more bookmakers</a></li>
+        <li><a href="/glossary.html">Betting glossary for South Africa</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

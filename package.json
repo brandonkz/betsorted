@@ -7,7 +7,8 @@
     "assert:latest-guides": "node tests/assert-latest-guides.mjs",
     "assert:go-links": "node tests/assert-go-links.mjs",
     "assert:odds-finder": "node tests/verify-odds-finder-render.js",
-    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder"
+    "assert:bookmakers-hub": "node tests/assert-bookmakers-hub.mjs",
+    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub"
   },
   "repository": {
     "type": "git",

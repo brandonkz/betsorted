@@ -4,7 +4,8 @@
   "description": "**Find the best sports betting site for South Africans**",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "assert:latest-guides": "node tests/assert-latest-guides.mjs",
+    "test": "npm run assert:latest-guides"
   },
   "repository": {
     "type": "git",

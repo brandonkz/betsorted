@@ -3,77 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="South African bookmaker reviews and sport-specific betting guides. Compare bonuses, ZAR payouts, and local markets.">
+  <meta name="description" content="Compare the best bookmakers South Africa can use in 2026. Review ratings, bonuses, minimum deposits, licence authorities, review links and bookmaker CTAs.">
   <link rel="canonical" href="https://betsorted.co.za/bookmakers/">
-  <title>Bookmakers in South Africa | BetSorted Reviews</title>
+  <title>Best Bookmakers South Africa 2026 | BetSorted Reviews</title>
   <link rel="stylesheet" href="../style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232563eb' width='100' height='100' rx='20'/><circle cx='50' cy='50' r='35' fill='white'/><circle cx='50' cy='50' r='25' fill='%23dc2626'/><circle cx='50' cy='50' r='15' fill='white'/><circle cx='50' cy='50' r='8' fill='%232563eb'/><path d='M 45 30 L 50 50 L 55 30' fill='%23fbbf24' stroke='%23f59e0b' stroke-width='2'/></svg>">
+  <link rel="icon" href="/assets/favicon.png">
   <style>
     .bookmakers-page {
-      max-width: 980px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 40px 20px 80px;
-      color: #1e3a8a;
+      color: #0f172a;
     }
 
     .bookmakers-page h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 16px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      margin: 0 0 16px;
+      letter-spacing: 0;
+      color: #0f172a;
     }
 
     .bookmakers-page p {
       color: #374151;
-      line-height: 1.8;
-      margin-bottom: 16px;
+      line-height: 1.75;
     }
 
-    .bookmakers-page ul {
-      margin-left: 20px;
-      color: #374151;
-      line-height: 1.8;
+    .intro-copy {
+      max-width: 860px;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
     }
 
-    .last-updated {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-top: 12px;
+    .hub-note {
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 24px 0;
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+
+    .bookmaker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin: 28px 0 40px;
+    }
+
+    .bookmaker-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .bookmaker-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      color: #0f172a;
+    }
+
+    .rating-line {
+      font-weight: 900;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+
+    .bookmaker-details {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+
+    .bookmaker-details div {
+      display: grid;
+      gap: 3px;
+    }
+
+    .bookmaker-details dt {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      color: #64748b;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .bookmaker-details dd {
+      margin: 0;
+      color: #111827;
+      font-weight: 650;
+    }
+
+    .hub-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hub-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .review-link {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .go-link {
+      background: #16a34a;
+      color: #ffffff;
+      border: 1px solid #15803d;
+    }
+
+    .hub-table-wrap {
+      overflow-x: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .hub-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 860px;
+    }
+
+    .hub-table th,
+    .hub-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .hub-table th {
+      background: #f8fafc;
+      color: #334155;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .hub-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .todo-field {
+      color: #92400e;
+      font-weight: 800;
+    }
+
+    .rg-footer {
+      margin-top: 40px;
+      padding: 22px;
+      border-radius: 8px;
+      background: #111827;
+      color: #e5e7eb;
+    }
+
+    .rg-footer p {
+      color: #e5e7eb;
+      margin: 0 0 8px;
     }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
      crossorigin="anonymous"></script>
-
-  <!-- Phase 1 additive schema -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://betsorted.co.za/#organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za/",
-      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "bookmakers",
-          "item": "https://betsorted.co.za/bookmakers"
-        }
-      ]
-    }
-  ]
-}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za/",
+        "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://betsorted.co.za/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Bookmakers",
+            "item": "https://betsorted.co.za/bookmakers/"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Best bookmakers South Africa",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 17,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Betway", "url": "https://betsorted.co.za/bookmakers/betway-review.html"},
+          {"@type": "ListItem", "position": 2, "name": "Hollywoodbets", "url": "https://betsorted.co.za/bookmakers/hollywoodbets-review.html"},
+          {"@type": "ListItem", "position": 3, "name": "Sportingbet", "url": "https://betsorted.co.za/bookmakers/sportingbet-review.html"},
+          {"@type": "ListItem", "position": 4, "name": "Supabets", "url": "https://betsorted.co.za/bookmakers/supabets-review.html"},
+          {"@type": "ListItem", "position": 5, "name": "10bet", "url": "https://betsorted.co.za/blog/10bet-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 6, "name": "Play.co.za", "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"},
+          {"@type": "ListItem", "position": 7, "name": "World Sports Betting", "url": "https://betsorted.co.za/bookmakers/world-sports-betting-review.html"},
+          {"@type": "ListItem", "position": 8, "name": "Easybet", "url": "https://betsorted.co.za/bookmakers/easybet-review.html"},
+          {"@type": "ListItem", "position": 9, "name": "Gbets", "url": "https://betsorted.co.za/blog/gbets-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 10, "name": "Sunbet", "url": "https://betsorted.co.za/blog/sunbet-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 11, "name": "BET.co.za", "url": "https://betsorted.co.za/blog/bet-co-za-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 12, "name": "Betfred", "url": "https://betsorted.co.za/blog/betfred-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 13, "name": "BetOlimp", "url": "https://betsorted.co.za/blog/betolimp-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 14, "name": "Betshezi", "url": "https://betsorted.co.za/blog/betshezi-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 15, "name": "LottoStar", "url": "https://betsorted.co.za/blog/lottostar-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 16, "name": "Playabets", "url": "https://betsorted.co.za/blog/playabets-review-south-africa-2026.html"},
+          {"@type": "ListItem", "position": 17, "name": "YesPlay", "url": "https://betsorted.co.za/blog/yesplay-review-south-africa-2026.html"}
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>
@@ -84,56 +245,237 @@
         <span class="brand-name">BetSorted</span>
       </a>
       <nav class="header-nav">
-          <a href="/#comparison" class="nav-link">Compare</a>
-          <a href="/bookmakers/" class="nav-link">Bookmakers</a>
-          <a href="/glossary.html" class="nav-link">Glossary</a>
-          <a href="/calculators.html" class="nav-link">Calculators</a>
-          <a href="/blog/" class="nav-link">Blog</a>
-          <a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a>
-          <a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a>
-          <a href="https://cryptocasinosorted.com/?utm_source=betsorted&amp;utm_medium=nav&amp;utm_campaign=crypto_crosspromo_aug_2026&amp;utm_content=site_nav" class="nav-link" target="_blank">Crypto Casinos 🎰</a>
-        </nav>
+        <a href="/#comparison" class="nav-link">Compare</a>
+        <a href="/bookmakers/" class="nav-link">Bookmakers</a>
+        <a href="/glossary.html" class="nav-link">Glossary</a>
+        <a href="/calculators.html" class="nav-link">Calculators</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a>
+        <a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a>
+        <a href="https://cryptocasinosorted.com/?utm_source=betsorted&amp;utm_medium=nav&amp;utm_campaign=crypto_crosspromo_aug_2026&amp;utm_content=site_nav" class="nav-link" target="_blank">Crypto Casinos 🎰</a>
+      </nav>
     </div>
   </header>
 
   <main class="bookmakers-page">
-    <h1>South African Bookmaker Reviews</h1>
-    <p>Compare the top betting sites for ZAR deposits, Instant EFT payouts, and local sports coverage. All reviews are written for South African punters and reference FICA requirements and local payment methods. For the full ranked shortlist, see our <a href="/best-betting-sites-south-africa.html">all SA betting sites guide</a>.</p>
-    <ul>
-      <li><a href="/bookmakers/betway-review.html">Betway review</a> - Rating 4.6/5, bonus: R1,000 matched deposit</li>
-        <li><a href="/bookmakers/hollywoodbets-review.html">Hollywoodbets review</a> - Rating 4.5/5, bonus: R25 sign-up bonus + promos - <a href="/go/hollywoodbets.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open Hollywoodbets</a></li>
-        <li><a href="/bookmakers/supabets-review.html">Supabets review</a> - Rating 4.3/5, bonus: R20 sign-up bonus + rewards</li>
-        <li><a href="/bookmakers/sportingbet-review.html">Sportingbet review</a> - Rating 4.7/5, bonus: R50 free bet + 100% match up to R2,000</li>
-        <li><a href="/blog/10bet-review-south-africa-2026.html">10bet review</a> - Rating 4.1/5, bonus: 100% deposit match up to R500 - <a href="/go/10bet.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open 10bet</a></li>
-        <li><a href="/bookmakers/play-co-za-review.html">Play.co.za review</a> - Rating 4.2/5, bonus: 300% match up to R9,000 (across 3 deposits) - <a href="/go/play-co-za.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open Play.co.za</a></li>
-        <li><a href="/bookmakers/world-sports-betting-review.html">World Sports Betting review</a> - Rating 4.1/5, bonus: Up to R1,000 welcome bonus</li>
-        <li><a href="/bookmakers/easybet-review.html">Easybet review</a> - Rating 4.0/5, bonus: 100% match up to R1,000</li>
-    </ul>
+    <h1>Best Bookmakers South Africa</h1>
+    <p class="intro-copy">Use this hub to compare reviewed South African bookmakers by BetSorted rating, welcome bonus, minimum deposit, licence authority, review page, and conversion path. Each listed operator already has review coverage on BetSorted; deeper review consolidation and data normalisation are handled in later remediation items.</p>
 
-    <h2>Bookmaker x Sport Betting Guides</h2>
-    <p>Sport-specific pages highlight PSL, Rugby, and Cricket markets, plus the teams South Africans follow most.</p>
-    <ul>
-      <li><a href="/bookmakers/betway-psl-betting.html">Betway PSL betting</a></li>
-        <li><a href="/bookmakers/betway-rugby-betting.html">Betway Rugby betting</a></li>
-        <li><a href="/bookmakers/betway-cricket-betting.html">Betway Cricket betting</a></li>
-        <li><a href="/bookmakers/hollywoodbets-psl-betting.html">Hollywoodbets PSL betting</a></li>
-        <li><a href="/bookmakers/hollywoodbets-rugby-betting.html">Hollywoodbets Rugby betting</a></li>
-        <li><a href="/bookmakers/hollywoodbets-cricket-betting.html">Hollywoodbets Cricket betting</a></li>
-        <li><a href="/bookmakers/supabets-psl-betting.html">Supabets PSL betting</a></li>
-        <li><a href="/bookmakers/supabets-rugby-betting.html">Supabets Rugby betting</a></li>
-        <li><a href="/bookmakers/supabets-cricket-betting.html">Supabets Cricket betting</a></li>
-        <li><a href="/bookmakers/sportingbet-psl-betting.html">Sportingbet PSL betting</a></li>
-        <li><a href="/bookmakers/sportingbet-rugby-betting.html">Sportingbet Rugby betting</a></li>
-        <li><a href="/bookmakers/sportingbet-cricket-betting.html">Sportingbet Cricket betting</a></li>
-        <li><a href="/bookmakers/world-sports-betting-psl-betting.html">World Sports Betting PSL betting</a></li>
-        <li><a href="/bookmakers/world-sports-betting-rugby-betting.html">World Sports Betting Rugby betting</a></li>
-        <li><a href="/bookmakers/world-sports-betting-cricket-betting.html">World Sports Betting Cricket betting</a></li>
-        <li><a href="/bookmakers/easybet-psl-betting.html">Easybet PSL betting</a></li>
-        <li><a href="/bookmakers/easybet-rugby-betting.html">Easybet Rugby betting</a></li>
-        <li><a href="/bookmakers/easybet-cricket-betting.html">Easybet Cricket betting</a></li>
-    </ul>
+    <div class="hub-note">Always confirm the current bonus, market price, FICA requirements, and withdrawal rules on the bookmaker site before depositing. Fields marked <span class="todo-field">TODO_VERIFY</span> are known data gaps that should be resolved in the operator data pass.</div>
 
-    <div class="last-updated">Last Updated: 19 February 2026</div>
+    <section class="bookmaker-grid" aria-label="Reviewed bookmaker cards">
+      <article class="bookmaker-card" data-operator="betway">
+        <h2>Betway</h2>
+        <div class="rating-line">4.6 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>Up to R1,000 matched</dd></div>
+          <div><dt>Min Deposit</dt><dd>R5-R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling &amp; Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/betway-review.html">Read review</a><a class="go-link affiliate-link" href="/go/betway.html?subid=post-bookmakers-hub" data-bookmaker="betway" rel="sponsored noopener">Open Betway</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="hollywoodbets">
+        <h2>Hollywoodbets</h2>
+        <div class="rating-line">4.5 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R25 sign-up bonus + promos</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Mpumalanga Gambling Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/hollywoodbets-review.html">Read review</a><a class="go-link affiliate-link" href="/go/hollywoodbets.html?subid=post-bookmakers-hub" data-bookmaker="hollywoodbets" rel="sponsored noopener">Open Hollywoodbets</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="sportingbet">
+        <h2>Sportingbet</h2>
+        <div class="rating-line">4.7 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R50 free bet + 100% match up to R2,000</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Limpopo Gambling Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/sportingbet-review.html">Read review</a><a class="go-link affiliate-link" href="/go/sportingbet.html?subid=post-bookmakers-hub" data-bookmaker="sportingbet" rel="sponsored noopener">Open Sportingbet</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="supabets">
+        <h2>Supabets</h2>
+        <div class="rating-line">4.3 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R20 sign-up bonus + rewards</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Northern Cape Gambling Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/supabets-review.html">Read review</a><a class="go-link affiliate-link" href="/go/supabets.html?subid=post-bookmakers-hub" data-bookmaker="supabets" rel="sponsored noopener">Open Supabets</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="10bet">
+        <h2>10bet</h2>
+        <div class="rating-line">4.1 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>100% deposit match up to R500</dd></div>
+          <div><dt>Min Deposit</dt><dd>R50</dd></div>
+          <div><dt>Licence Authority</dt><dd>Mpumalanga Economic Regulator</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/10bet-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/10bet.html?subid=post-bookmakers-hub" data-bookmaker="10bet" rel="sponsored noopener">Open 10bet</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="play-co-za">
+        <h2>Play.co.za</h2>
+        <div class="rating-line">4.2 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>300% match up to R9,000 across 3 deposits</dd></div>
+          <div><dt>Min Deposit</dt><dd>R5</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling &amp; Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/play-co-za-review.html">Read review</a><a class="go-link affiliate-link" href="/go/play-co-za.html?subid=post-bookmakers-hub" data-bookmaker="play-co-za" rel="sponsored noopener">Open Play.co.za</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="world-sports-betting">
+        <h2>World Sports Betting</h2>
+        <div class="rating-line">4.1 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>Up to R1,000 welcome bonus</dd></div>
+          <div><dt>Min Deposit</dt><dd>R20</dd></div>
+          <div><dt>Licence Authority</dt><dd>Mpumalanga Gambling Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/world-sports-betting-review.html">Read review</a><a class="go-link affiliate-link" href="/go/world-sports-betting.html?subid=post-bookmakers-hub" data-bookmaker="world-sports-betting" rel="sponsored noopener">Open World Sports Betting</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="easybet">
+        <h2>Easybet</h2>
+        <div class="rating-line">4.0 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>100% match up to R1,000</dd></div>
+          <div><dt>Min Deposit</dt><dd>R20</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling &amp; Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/bookmakers/easybet-review.html">Read review</a><a class="go-link affiliate-link" href="/go/easybet.html?subid=post-bookmakers-hub" data-bookmaker="easybet" rel="sponsored noopener">Open Easybet</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="gbets">
+        <h2>Gbets</h2>
+        <div class="rating-line">4.0 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R50 sign-up free bet</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Mpumalanga Economic Regulator</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/gbets-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/gbets.html?subid=post-bookmakers-hub" data-bookmaker="gbets" rel="sponsored noopener">Open Gbets</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="sunbet">
+        <h2>Sunbet</h2>
+        <div class="rating-line">3.8 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R50 sign-up bonus</dd></div>
+          <div><dt>Min Deposit</dt><dd>R20</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling &amp; Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/sunbet-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/sunbet.html?subid=post-bookmakers-hub" data-bookmaker="sunbet" rel="sponsored noopener">Open Sunbet</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="bet-co-za">
+        <h2>BET.co.za</h2>
+        <div class="rating-line"><span class="todo-field">TODO_VERIFY</span></div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Min Deposit</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/bet-co-za-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/bet-co-za.html?subid=post-bookmakers-hub" data-bookmaker="bet-co-za" rel="sponsored noopener">Open BET.co.za</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="betfred">
+        <h2>Betfred</h2>
+        <div class="rating-line">4.0 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>Up to R21,000 + 750 free spins</dd></div>
+          <div><dt>Min Deposit</dt><dd>R20</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/betfred-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/betfred.html?subid=post-bookmakers-hub" data-bookmaker="betfred" rel="sponsored noopener">Open Betfred</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="betolimp">
+        <h2>BetOlimp</h2>
+        <div class="rating-line"><span class="todo-field">TODO_VERIFY</span></div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Min Deposit</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/betolimp-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/betolimp.html?subid=post-bookmakers-hub" data-bookmaker="betolimp" rel="sponsored noopener">Open BetOlimp</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="betshezi">
+        <h2>Betshezi</h2>
+        <div class="rating-line">3.8 / 5</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>R25 no-deposit free bet + 100% deposit match up to R2,000</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/betshezi-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/betshezi.html?subid=post-bookmakers-hub" data-bookmaker="betshezi" rel="sponsored noopener">Open Betshezi</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="lottostar">
+        <h2>LottoStar</h2>
+        <div class="rating-line">6.3 / 10</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/lottostar-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/lottostar.html?subid=post-bookmakers-hub" data-bookmaker="lottostar" rel="sponsored noopener">Open LottoStar</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="playabets">
+        <h2>Playabets</h2>
+        <div class="rating-line"><span class="todo-field">TODO_VERIFY</span></div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Min Deposit</dt><dd><span class="todo-field">TODO_VERIFY</span></dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/playabets-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/playabets.html?subid=post-bookmakers-hub" data-bookmaker="playabets" rel="sponsored noopener">Open Playabets</a></div>
+      </article>
+      <article class="bookmaker-card" data-operator="yesplay">
+        <h2>YesPlay</h2>
+        <div class="rating-line">6.8 / 10</div>
+        <dl class="bookmaker-details">
+          <div><dt>Welcome Bonus</dt><dd>Typically 100% match on first deposit up to R500</dd></div>
+          <div><dt>Min Deposit</dt><dd>R10</dd></div>
+          <div><dt>Licence Authority</dt><dd>Western Cape Gambling and Racing Board</dd></div>
+        </dl>
+        <div class="hub-actions"><a class="review-link" href="/blog/yesplay-review-south-africa-2026.html">Read review</a><a class="go-link affiliate-link" href="/go/yesplay.html?subid=post-bookmakers-hub" data-bookmaker="yesplay" rel="sponsored noopener">Open YesPlay</a></div>
+      </article>
+    </section>
+
+    <h2>All Reviewed Operators</h2>
+    <div class="hub-table-wrap">
+      <table class="hub-table">
+        <thead>
+          <tr>
+            <th>Bookmaker</th>
+            <th>Rating</th>
+            <th>Welcome Bonus</th>
+            <th>Min Deposit</th>
+            <th>Licence Authority</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Betway</td><td>4.6 / 5</td><td>Up to R1,000 matched</td><td>R5-R10</td><td>Western Cape Gambling &amp; Racing Board</td><td><a href="/bookmakers/betway-review.html">Review</a> · <a href="/go/betway.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Hollywoodbets</td><td>4.5 / 5</td><td>R25 sign-up bonus + promos</td><td>R10</td><td>Mpumalanga Gambling Board</td><td><a href="/bookmakers/hollywoodbets-review.html">Review</a> · <a href="/go/hollywoodbets.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Sportingbet</td><td>4.7 / 5</td><td>R50 free bet + 100% match up to R2,000</td><td>R10</td><td>Limpopo Gambling Board</td><td><a href="/bookmakers/sportingbet-review.html">Review</a> · <a href="/go/sportingbet.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Supabets</td><td>4.3 / 5</td><td>R20 sign-up bonus + rewards</td><td>R10</td><td>Northern Cape Gambling Board</td><td><a href="/bookmakers/supabets-review.html">Review</a> · <a href="/go/supabets.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>10bet</td><td>4.1 / 5</td><td>100% deposit match up to R500</td><td>R50</td><td>Mpumalanga Economic Regulator</td><td><a href="/blog/10bet-review-south-africa-2026.html">Review</a> · <a href="/go/10bet.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Play.co.za</td><td>4.2 / 5</td><td>300% match up to R9,000 across 3 deposits</td><td>R5</td><td>Western Cape Gambling &amp; Racing Board</td><td><a href="/bookmakers/play-co-za-review.html">Review</a> · <a href="/go/play-co-za.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>World Sports Betting</td><td>4.1 / 5</td><td>Up to R1,000 welcome bonus</td><td>R20</td><td>Mpumalanga Gambling Board</td><td><a href="/bookmakers/world-sports-betting-review.html">Review</a> · <a href="/go/world-sports-betting.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Easybet</td><td>4.0 / 5</td><td>100% match up to R1,000</td><td>R20</td><td>Western Cape Gambling &amp; Racing Board</td><td><a href="/bookmakers/easybet-review.html">Review</a> · <a href="/go/easybet.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Gbets</td><td>4.0 / 5</td><td>R50 sign-up free bet</td><td>R10</td><td>Mpumalanga Economic Regulator</td><td><a href="/blog/gbets-review-south-africa-2026.html">Review</a> · <a href="/go/gbets.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Sunbet</td><td>3.8 / 5</td><td>R50 sign-up bonus</td><td>R20</td><td>Western Cape Gambling &amp; Racing Board</td><td><a href="/blog/sunbet-review-south-africa-2026.html">Review</a> · <a href="/go/sunbet.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>BET.co.za</td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/bet-co-za-review-south-africa-2026.html">Review</a> · <a href="/go/bet-co-za.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Betfred</td><td>4.0 / 5</td><td>Up to R21,000 + 750 free spins</td><td>R20</td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/betfred-review-south-africa-2026.html">Review</a> · <a href="/go/betfred.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>BetOlimp</td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/betolimp-review-south-africa-2026.html">Review</a> · <a href="/go/betolimp.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Betshezi</td><td>3.8 / 5</td><td>R25 no-deposit free bet + 100% deposit match up to R2,000</td><td>R10</td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/betshezi-review-south-africa-2026.html">Review</a> · <a href="/go/betshezi.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>LottoStar</td><td>6.3 / 10</td><td><span class="todo-field">TODO_VERIFY</span></td><td>R10</td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/lottostar-review-south-africa-2026.html">Review</a> · <a href="/go/lottostar.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>Playabets</td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td><span class="todo-field">TODO_VERIFY</span></td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/playabets-review-south-africa-2026.html">Review</a> · <a href="/go/playabets.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+          <tr><td>YesPlay</td><td>6.8 / 10</td><td>Typically 100% match on first deposit up to R500</td><td>R10</td><td>Western Cape Gambling and Racing Board</td><td><a href="/blog/yesplay-review-south-africa-2026.html">Review</a> · <a href="/go/yesplay.html?subid=post-bookmakers-hub" rel="sponsored noopener">Open</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="rg-footer" aria-label="Responsible gambling notice">
+      <p><strong>18+ only.</strong> Betting should stay entertainment, not a way to make money.</p>
+      <p>All bookmakers listed here are licensed and regulated in South Africa. Please gamble responsibly and set limits before you play.</p>
+      <p>Need help? Contact the National Responsible Gambling Programme on <strong>0800 006 008</strong>.</p>
+    </section>
   </main>
 </body>
 </html>

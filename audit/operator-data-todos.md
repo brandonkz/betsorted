@@ -4,71 +4,65 @@ Generated from `data/operators.json`.
 
 ```csv
 operator,field,value
-betway,affiliate_url,TODO_AFFILIATE_URL
-betway,bonus_verified_at,TODO_VERIFY
-hollywoodbets,bonus_verified_at,TODO_VERIFY
-sportingbet,affiliate_url,TODO_AFFILIATE_URL
-sportingbet,bonus_verified_at,TODO_VERIFY
-supabets,established,TODO_VERIFY
-supabets,affiliate_url,TODO_AFFILIATE_URL
-supabets,bonus_verified_at,TODO_VERIFY
-10bet,payout_speed,TODO_VERIFY
-10bet,bonus_verified_at,TODO_VERIFY
-play-co-za,bonus_verified_at,TODO_VERIFY
-world-sports-betting,affiliate_url,TODO_AFFILIATE_URL
-world-sports-betting,bonus_verified_at,TODO_VERIFY
-easybet,established,TODO_VERIFY
-easybet,affiliate_url,TODO_AFFILIATE_URL
-easybet,bonus_verified_at,TODO_VERIFY
-gbets,affiliate_url,TODO_AFFILIATE_URL
-gbets,bonus_verified_at,TODO_VERIFY
-sunbet,payout_speed,TODO_VERIFY
-sunbet,affiliate_url,TODO_AFFILIATE_URL
-sunbet,bonus_verified_at,TODO_VERIFY
-bet-co-za,rating,TODO_VERIFY
-bet-co-za,established,TODO_VERIFY
-bet-co-za,welcome_bonus,TODO_VERIFY
-bet-co-za,min_deposit_zar,TODO_VERIFY
-bet-co-za,min_deposit_display,TODO_VERIFY
-bet-co-za,payout_speed,TODO_VERIFY
-bet-co-za,payment_methods,TODO_VERIFY
-bet-co-za,affiliate_url,TODO_AFFILIATE_URL
-bet-co-za,bonus_verified_at,TODO_VERIFY
-betfred,established,TODO_VERIFY
-betfred,payment_methods,TODO_VERIFY
-betfred,affiliate_url,TODO_AFFILIATE_URL
-betfred,bonus_verified_at,TODO_VERIFY
-betolimp,rating,TODO_VERIFY
-betolimp,established,TODO_VERIFY
-betolimp,welcome_bonus,TODO_VERIFY
-betolimp,min_deposit_zar,TODO_VERIFY
-betolimp,min_deposit_display,TODO_VERIFY
-betolimp,payout_speed,TODO_VERIFY
-betolimp,payment_methods,TODO_VERIFY
-betolimp,affiliate_url,TODO_AFFILIATE_URL
-betolimp,bonus_verified_at,TODO_VERIFY
-betshezi,established,TODO_VERIFY
-betshezi,payout_speed,TODO_VERIFY
-betshezi,payment_methods,TODO_VERIFY
-betshezi,affiliate_url,TODO_AFFILIATE_URL
-betshezi,bonus_verified_at,TODO_VERIFY
-lottostar,established,TODO_VERIFY
-lottostar,welcome_bonus,TODO_VERIFY
-lottostar,payout_speed,TODO_VERIFY
-lottostar,payment_methods,TODO_VERIFY
-lottostar,affiliate_url,TODO_AFFILIATE_URL
-lottostar,bonus_verified_at,TODO_VERIFY
-playabets,rating,TODO_VERIFY
-playabets,established,TODO_VERIFY
-playabets,welcome_bonus,TODO_VERIFY
-playabets,min_deposit_zar,TODO_VERIFY
-playabets,min_deposit_display,TODO_VERIFY
-playabets,payout_speed,TODO_VERIFY
-playabets,affiliate_url,TODO_AFFILIATE_URL
-playabets,bonus_verified_at,TODO_VERIFY
-yesplay,established,TODO_VERIFY
-yesplay,payout_speed,TODO_VERIFY
-yesplay,payment_methods,TODO_VERIFY
-yesplay,affiliate_url,TODO_AFFILIATE_URL
-yesplay,bonus_verified_at,TODO_VERIFY
+betway,affiliate_url,Coming soon
+betway,bonus_verified_at,Coming soon
+hollywoodbets,bonus_verified_at,Coming soon
+sportingbet,affiliate_url,Coming soon
+sportingbet,bonus_verified_at,Coming soon
+supabets,established,null
+supabets,affiliate_url,Coming soon
+supabets,bonus_verified_at,Coming soon
+10bet,payout_speed,Coming soon
+10bet,bonus_verified_at,Coming soon
+play-co-za,bonus_verified_at,Coming soon
+world-sports-betting,affiliate_url,Coming soon
+world-sports-betting,bonus_verified_at,Coming soon
+easybet,established,null
+easybet,affiliate_url,Coming soon
+easybet,bonus_verified_at,Coming soon
+gbets,affiliate_url,Coming soon
+gbets,bonus_verified_at,Coming soon
+sunbet,payout_speed,Coming soon
+sunbet,affiliate_url,Coming soon
+sunbet,bonus_verified_at,Coming soon
+bet-co-za,rating,null
+bet-co-za,established,null
+bet-co-za,welcome_bonus,Coming soon
+bet-co-za,min_deposit_zar,null
+bet-co-za,min_deposit_display,Coming soon
+bet-co-za,payout_speed,Coming soon
+bet-co-za,affiliate_url,Coming soon
+bet-co-za,bonus_verified_at,Coming soon
+betfred,established,null
+betfred,affiliate_url,Coming soon
+betfred,bonus_verified_at,Coming soon
+betolimp,rating,null
+betolimp,established,null
+betolimp,welcome_bonus,Coming soon
+betolimp,min_deposit_zar,null
+betolimp,min_deposit_display,Coming soon
+betolimp,payout_speed,Coming soon
+betolimp,affiliate_url,Coming soon
+betolimp,bonus_verified_at,Coming soon
+betshezi,established,null
+betshezi,payout_speed,Coming soon
+betshezi,affiliate_url,Coming soon
+betshezi,bonus_verified_at,Coming soon
+lottostar,established,null
+lottostar,welcome_bonus,Coming soon
+lottostar,payout_speed,Coming soon
+lottostar,affiliate_url,Coming soon
+lottostar,bonus_verified_at,Coming soon
+playabets,rating,null
+playabets,established,null
+playabets,welcome_bonus,Coming soon
+playabets,min_deposit_zar,null
+playabets,min_deposit_display,Coming soon
+playabets,payout_speed,Coming soon
+playabets,affiliate_url,Coming soon
+playabets,bonus_verified_at,Coming soon
+yesplay,established,null
+yesplay,payout_speed,Coming soon
+yesplay,affiliate_url,Coming soon
+yesplay,bonus_verified_at,Coming soon
 ```

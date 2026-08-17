@@ -54,21 +54,21 @@ function escapeHtml(value) {
 }
 
 function todo(value) {
-  return value === "TODO_VERIFY" || value === "TODO_AFFILIATE_URL" || value === null || value === undefined;
+  return value === "TODO_VERIFY" || value === "TODO_AFFILIATE_URL" || value === "Coming soon" || value === null || value === undefined;
 }
 
 function display(value) {
-  return todo(value) ? '<span class="todo-field">TODO_VERIFY</span>' : escapeHtml(value);
+  return todo(value) ? '<span class="todo-field">Coming soon</span>' : escapeHtml(value);
 }
 
 function ratingLabel(op) {
-  if (todo(op.rating)) return '<span class="todo-field">TODO_VERIFY</span>';
+  if (todo(op.rating)) return '<span class="todo-field">Coming soon</span>';
   if (typeof op.rating === "string") return escapeHtml(op.rating);
   return `${op.rating.toFixed(1)} / 5`;
 }
 
 function ratingNumber(op) {
-  return todo(op.rating) || typeof op.rating === "string" ? "TODO_VERIFY" : op.rating.toFixed(1);
+  return todo(op.rating) || typeof op.rating === "string" ? "Coming soon" : op.rating.toFixed(1);
 }
 
 function stars(op) {
@@ -77,7 +77,7 @@ function stars(op) {
 }
 
 function dateLabel(date) {
-  if (todo(date)) return "TODO_VERIFY";
+  if (todo(date)) return "Coming soon";
   const [year, month, day] = date.split("-");
   const names = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   return `${Number(day)} ${names[Number(month) - 1]} ${year}`;
@@ -105,8 +105,8 @@ function comparisonRow(slug) {
 
 function reviewCard(slug) {
   const op = operator(slug);
-  const payments = op.payment_methods.length ? op.payment_methods.join(", ") : "TODO_VERIFY";
-  const cta = op.affiliate_url === "TODO_AFFILIATE_URL"
+  const payments = op.payment_methods.length ? op.payment_methods.join(", ") : "Coming soon";
+  const cta = todo(op.affiliate_url)
     ? `<a href="${op.review_url}" class="btn btn-primary">Read ${escapeHtml(op.name)} review</a>`
     : `<a href="${goHref(op, "home-table")}" class="btn btn-primary affiliate-link" data-bookmaker="${op.slug}" rel="sponsored noopener">Join ${escapeHtml(op.name)}</a>`;
 
@@ -214,8 +214,7 @@ function reportTodos() {
   const rows = [];
   for (const op of operators) {
     for (const [key, value] of Object.entries(op)) {
-      if (value === "TODO_VERIFY" || value === "TODO_AFFILIATE_URL") rows.push(`${op.slug},${key},${value}`);
-      if (Array.isArray(value) && value.length === 0 && key === "payment_methods") rows.push(`${op.slug},${key},TODO_VERIFY`);
+      if (value === "Coming soon" || value === null) rows.push(`${op.slug},${key},${value === null ? "null" : value}`);
     }
   }
   const report = `# Operator Data TODO Report\n\nGenerated from \`data/operators.json\`.\n\n\`\`\`csv\noperator,field,value\n${rows.join("\n")}\n\`\`\`\n`;

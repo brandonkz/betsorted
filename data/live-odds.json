@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-19T04:00:20.745Z",
-  "updatedDisplay": "Wed Aug 19, 6:00 AM",
+  "updated": "2026-08-19T16:00:21.386Z",
+  "updatedDisplay": "Wed Aug 19, 6:00 PM",
   "matches": [
     {
       "sport": "soccer",
@@ -33,6 +33,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
+          "odds": 1.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Smarkets",
           "key": "smarkets",
           "odds": 1.2,
@@ -47,15 +54,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 1.19,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "BetMGM",
+          "key": "betmgm",
           "odds": 1.19,
           "url": "#",
           "isSouthAfrica": false
@@ -75,6 +82,20 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 1.19,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betsson",
+          "key": "betsson",
+          "odds": 1.19,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Pinnacle",
           "key": "pinnacle",
           "odds": 1.18,
@@ -82,8 +103,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 1.18,
           "url": "#",
           "isSouthAfrica": false
@@ -91,13 +112,6 @@
         {
           "name": "William Hill",
           "key": "williamhill",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetMGM",
-          "key": "betmgm",
           "odds": 1.18,
           "url": "#",
           "isSouthAfrica": false
@@ -112,13 +126,6 @@
         {
           "name": "DraftKings",
           "key": "draftkings",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
           "odds": 1.18,
           "url": "#",
           "isSouthAfrica": false
@@ -145,20 +152,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 1.18,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "BetUS",
           "key": "betus",
           "odds": 1.18,
@@ -180,6 +173,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
+          "odds": 1.17,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Sky Bet",
           "key": "skybet",
           "odds": 1.17,
@@ -196,6 +196,13 @@
         {
           "name": "Unibet (SE)",
           "key": "unibet_se",
+          "odds": 1.17,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
           "odds": 1.17,
           "url": "#",
           "isSouthAfrica": false
@@ -229,6 +236,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Unibet (FR)",
+          "key": "unibet_fr",
+          "odds": 1.16,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Betclic (FR)",
           "key": "betclic_fr",
           "odds": 1.16,
@@ -243,22 +257,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Winamax (FR)",
-          "key": "winamax_fr",
-          "odds": 1.16,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Casumo",
           "key": "casumo",
-          "odds": 1.16,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
           "odds": 1.16,
           "url": "#",
           "isSouthAfrica": false
@@ -271,20 +271,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (FR)",
-          "key": "unibet_fr",
-          "odds": 1.15,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Bet Victor",
-          "key": "betvictor",
-          "odds": 1.15,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Tipico",
           "key": "tipico_de",
           "odds": 1.15,
@@ -292,8 +278,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
+          "name": "Winamax (FR)",
+          "key": "winamax_fr",
+          "odds": 1.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
           "odds": 1.15,
           "url": "#",
           "isSouthAfrica": false
@@ -301,13 +294,6 @@
         {
           "name": "Everygame",
           "key": "everygame",
-          "odds": 1.15,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betano (UK)",
-          "key": "betano_uk",
           "odds": 1.15,
           "url": "#",
           "isSouthAfrica": false
@@ -334,6 +320,20 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Bet Victor",
+          "key": "betvictor",
+          "odds": 1.14,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betano (UK)",
+          "key": "betano_uk",
+          "odds": 1.14,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Virgin Bet",
           "key": "virginbet",
           "odds": 1.13,
@@ -343,7 +343,7 @@
         {
           "name": "LiveScore Bet",
           "key": "livescorebet",
-          "odds": 1.12,
+          "odds": 1.11,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -375,27 +375,20 @@
         {
           "name": "Matchbook",
           "key": "matchbook",
-          "odds": 9.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 9.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
-          "odds": 9.5,
+          "odds": 9.8,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair Sportsbook",
           "key": "betfair_sb_uk",
+          "odds": 9,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
           "odds": 9,
           "url": "#",
           "isSouthAfrica": false
@@ -408,22 +401,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 9,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
           "odds": 9,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
           "odds": 9,
           "url": "#",
           "isSouthAfrica": false
@@ -443,23 +436,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "1xBet",
-          "key": "onexbet",
+          "name": "Nordic Bet",
+          "key": "nordicbet",
           "odds": 8.8,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Pinnacle",
-          "key": "pinnacle",
-          "odds": 8.73,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 8.7,
+          "name": "Betsson",
+          "key": "betsson",
+          "odds": 8.8,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -471,22 +457,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 8.6,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 8.6,
+          "name": "BetUS",
+          "key": "betus",
+          "odds": 8.55,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 8.5,
           "url": "#",
           "isSouthAfrica": false
@@ -499,13 +485,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 8.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Sky Bet",
           "key": "skybet",
           "odds": 8.5,
@@ -513,8 +492,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BoyleSports",
-          "key": "boylesports",
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 8.5,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
           "odds": 8.5,
           "url": "#",
           "isSouthAfrica": false
@@ -527,8 +513,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BetUS",
-          "key": "betus",
+          "name": "BetRivers",
+          "key": "betrivers",
           "odds": 8.5,
           "url": "#",
           "isSouthAfrica": false
@@ -548,22 +534,22 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Pinnacle",
+          "key": "pinnacle",
+          "odds": 8.43,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Codere (IT)",
           "key": "codere_it",
-          "odds": 8.2,
+          "odds": 8,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "FanDuel",
           "key": "fanduel",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betclic (FR)",
-          "key": "betclic_fr",
           "odds": 8,
           "url": "#",
           "isSouthAfrica": false
@@ -583,44 +569,9 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
+          "name": "BoyleSports",
+          "key": "boylesports",
           "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Virgin Bet",
-          "key": "virginbet",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Everygame",
-          "key": "everygame",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LeoVegas",
-          "key": "leovegas",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Bovada",
-          "key": "bovada",
-          "odds": 8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (FR)",
-          "key": "unibet_fr",
-          "odds": 7.9,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -632,9 +583,30 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betclic (FR)",
+          "key": "betclic_fr",
+          "odds": 7.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Bovada",
+          "key": "bovada",
+          "odds": 7.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "MyBookie.ag",
           "key": "mybookieag",
-          "odds": 7.8,
+          "odds": 7.7,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (FR)",
+          "key": "unibet_fr",
+          "odds": 7.6,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -667,15 +639,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Winamax (DE)",
-          "key": "winamax_de",
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
           "odds": 7.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Winamax (FR)",
-          "key": "winamax_fr",
+          "name": "Virgin Bet",
+          "key": "virginbet",
+          "odds": 7.5,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Everygame",
+          "key": "everygame",
+          "odds": 7.5,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas",
+          "key": "leovegas",
           "odds": 7.5,
           "url": "#",
           "isSouthAfrica": false
@@ -693,6 +679,20 @@
           "odds": 7.25,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "Winamax (DE)",
+          "key": "winamax_de",
+          "odds": 7.25,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Winamax (FR)",
+          "key": "winamax_fr",
+          "odds": 7.25,
+          "url": "#",
+          "isSouthAfrica": false
         }
       ]
     },
@@ -705,13 +705,6 @@
       "market": "Everton to win",
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.26,
-          "url": "#",
-          "isSouthAfrica": false
-        },
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
@@ -727,36 +720,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 2.23,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
-          "odds": 2.23,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 2.22,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Matchbook",
           "key": "matchbook",
-          "odds": 2.22,
+          "odds": 2.26,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.25,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Pinnacle",
           "key": "pinnacle",
+          "odds": 2.21,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 2.21,
           "url": "#",
           "isSouthAfrica": false
@@ -769,8 +755,22 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betfair Sportsbook",
+          "key": "betfair_sb_uk",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Codere (IT)",
           "key": "codere_it",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "DraftKings",
+          "key": "draftkings",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
@@ -783,15 +783,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
@@ -811,16 +811,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BetUS",
-          "key": "betus",
+          "name": "Bovada",
+          "key": "bovada",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
-          "odds": 2.18,
+          "name": "BetUS",
+          "key": "betus",
+          "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -839,22 +839,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 2.17,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "PMU (FR)",
-          "key": "pmu_fr",
-          "odds": 2.16,
+          "name": "FanDuel",
+          "key": "fanduel",
+          "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Coral",
           "key": "coral",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Paddy Power",
+          "key": "paddypower",
           "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
@@ -881,13 +881,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "DraftKings",
-          "key": "draftkings",
-          "odds": 2.15,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Ladbrokes",
           "key": "ladbrokes_uk",
           "odds": 2.15,
@@ -897,6 +890,13 @@
         {
           "name": "Tipico",
           "key": "tipico_de",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Sky Bet",
+          "key": "skybet",
           "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
@@ -916,15 +916,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas",
-          "key": "leovegas",
+          "name": "Casumo",
+          "key": "casumo",
           "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Bovada",
-          "key": "bovada",
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetRivers",
+          "key": "betrivers",
           "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
@@ -935,6 +942,13 @@
           "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "Betway 🇿🇦",
+          "key": "betway",
+          "odds": 2.15,
+          "url": "https://betway.co.za",
+          "isSouthAfrica": true
         },
         {
           "name": "MyBookie.ag",
@@ -951,6 +965,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
+          "odds": 2.14,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Betclic (FR)",
           "key": "betclic_fr",
           "odds": 2.13,
@@ -958,36 +979,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Virgin Bet",
-          "key": "virginbet",
+          "name": "PMU (FR)",
+          "key": "pmu_fr",
           "odds": 2.12,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair Sportsbook",
-          "key": "betfair_sb_uk",
-          "odds": 2.1,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfred (UK)",
           "key": "betfred_uk",
-          "odds": 2.1,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "FanDuel",
-          "key": "fanduel",
-          "odds": 2.1,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Paddy Power",
-          "key": "paddypower",
           "odds": 2.1,
           "url": "#",
           "isSouthAfrica": false
@@ -1021,23 +1021,23 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betway 🇿🇦",
-          "key": "betway",
+          "name": "LeoVegas",
+          "key": "leovegas",
           "odds": 2.1,
-          "url": "https://betway.co.za",
-          "isSouthAfrica": true
+          "url": "#",
+          "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
+          "name": "Virgin Bet",
+          "key": "virginbet",
           "odds": 2.08,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Sky Bet",
-          "key": "skybet",
-          "odds": 2.05,
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
+          "odds": 2.04,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -1053,8 +1053,22 @@
       "datetime": "2026-08-22T14:00:00Z",
       "bookmakers": [
         {
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.84,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Smarkets",
           "key": "smarkets",
+          "odds": 2.84,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Matchbook",
+          "key": "matchbook",
           "odds": 2.84,
           "url": "#",
           "isSouthAfrica": false
@@ -1063,20 +1077,6 @@
           "name": "1xBet",
           "key": "onexbet",
           "odds": 2.83,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.82,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Matchbook",
-          "key": "matchbook",
-          "odds": 2.82,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1123,8 +1123,29 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Coral",
+          "key": "coral",
+          "odds": 2.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "DraftKings",
+          "key": "draftkings",
+          "odds": 2.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Tipico",
           "key": "tipico_de",
+          "odds": 2.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (UK)",
+          "key": "unibet_uk",
           "odds": 2.75,
           "url": "#",
           "isSouthAfrica": false
@@ -1139,6 +1160,13 @@
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
+          "odds": 2.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas",
+          "key": "leovegas",
           "odds": 2.75,
           "url": "#",
           "isSouthAfrica": false
@@ -1200,27 +1228,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "FanDuel",
-          "key": "fanduel",
-          "odds": 2.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 2.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Paddy Power",
-          "key": "paddypower",
-          "odds": 2.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Unibet (FR)",
           "key": "unibet_fr",
           "odds": 2.7,
@@ -1242,22 +1249,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "DraftKings",
-          "key": "draftkings",
-          "odds": 2.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Ladbrokes",
           "key": "ladbrokes_uk",
-          "odds": 2.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (UK)",
-          "key": "unibet_uk",
           "odds": 2.7,
           "url": "#",
           "isSouthAfrica": false
@@ -1273,6 +1266,13 @@
           "name": "MyBookie.ag",
           "key": "mybookieag",
           "odds": 2.66,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "FanDuel",
+          "key": "fanduel",
+          "odds": 2.65,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1312,6 +1312,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 2.65,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "BetRivers",
           "key": "betrivers",
           "odds": 2.65,
@@ -1333,16 +1340,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
+          "name": "PMU (FR)",
+          "key": "pmu_fr",
           "odds": 2.63,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "PMU (FR)",
-          "key": "pmu_fr",
-          "odds": 2.63,
+          "name": "Paddy Power",
+          "key": "paddypower",
+          "odds": 2.62,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1375,13 +1382,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas",
-          "key": "leovegas",
-          "odds": 2.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "LiveScore Bet",
           "key": "livescorebet",
           "odds": 2.55,
@@ -1402,21 +1402,14 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.4,
+          "odds": 2.38,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Smarkets",
           "key": "smarkets",
-          "odds": 2.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.39,
+          "odds": 2.38,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1428,15 +1421,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Pinnacle",
-          "key": "pinnacle",
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 2.35,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Unibet (UK)",
+          "key": "unibet_uk",
+          "odds": 2.35,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 2.35,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
           "odds": 2.35,
           "url": "#",
           "isSouthAfrica": false
@@ -1470,30 +1477,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 2.33,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.31,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
-          "odds": 2.33,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.32,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.32,
+          "name": "Betfair Sportsbook",
+          "key": "betfair_sb_uk",
+          "odds": 2.3,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1526,15 +1519,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (UK)",
-          "key": "unibet_uk",
+          "name": "Casumo",
+          "key": "casumo",
           "odds": 2.3,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BoyleSports",
-          "key": "boylesports",
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
+          "odds": 2.3,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
           "odds": 2.3,
           "url": "#",
           "isSouthAfrica": false
@@ -1547,6 +1547,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "BetRivers",
+          "key": "betrivers",
+          "odds": 2.3,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Bovada",
           "key": "bovada",
           "odds": 2.3,
@@ -1554,22 +1561,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "Pinnacle",
+          "key": "pinnacle",
           "odds": 2.28,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
+          "name": "Nordic Bet",
+          "key": "nordicbet",
           "odds": 2.28,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "Betsson",
+          "key": "betsson",
+          "odds": 2.28,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "PMU (FR)",
+          "key": "pmu_fr",
           "odds": 2.28,
           "url": "#",
           "isSouthAfrica": false
@@ -1585,13 +1599,6 @@
           "name": "GTbets",
           "key": "gtbets",
           "odds": 2.26,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfair Sportsbook",
-          "key": "betfair_sb_uk",
-          "odds": 2.25,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1680,20 +1687,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 2.25,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Everygame",
-          "key": "everygame",
-          "odds": 2.25,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "LeoVegas",
           "key": "leovegas",
           "odds": 2.25,
@@ -1708,20 +1701,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "PMU (FR)",
-          "key": "pmu_fr",
-          "odds": 2.25,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betway 🇿🇦",
-          "key": "betway",
-          "odds": 2.25,
-          "url": "https://betway.co.za",
-          "isSouthAfrica": true
-        },
-        {
           "name": "Virgin Bet",
           "key": "virginbet",
           "odds": 2.23,
@@ -1729,9 +1708,30 @@
           "isSouthAfrica": false
         },
         {
+          "name": "BoyleSports",
+          "key": "boylesports",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Everygame",
+          "key": "everygame",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betway 🇿🇦",
+          "key": "betway",
+          "odds": 2.2,
+          "url": "https://betway.co.za",
+          "isSouthAfrica": true
+        },
+        {
           "name": "LiveScore Bet",
           "key": "livescorebet",
-          "odds": 2.17,
+          "odds": 2.18,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -1747,30 +1747,23 @@
       "datetime": "2026-08-22T16:30:00Z",
       "bookmakers": [
         {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.54,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 2.52,
+          "odds": 2.54,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Matchbook",
           "key": "matchbook",
-          "odds": 2.52,
+          "odds": 2.54,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
-          "odds": 2.5,
+          "name": "1xBet",
+          "key": "onexbet",
+          "odds": 2.53,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -1782,36 +1775,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Pinnacle",
-          "key": "pinnacle",
-          "odds": 2.48,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Unibet (SE)",
           "key": "unibet_se",
-          "odds": 2.48,
+          "odds": 2.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Unibet (NL)",
           "key": "unibet_nl",
+          "odds": 2.5,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.49,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Pinnacle",
+          "key": "pinnacle",
           "odds": 2.48,
           "url": "#",
           "isSouthAfrica": false
@@ -1826,6 +1812,20 @@
         {
           "name": "LowVig.ag",
           "key": "lowvig",
+          "odds": 2.48,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Nordic Bet",
+          "key": "nordicbet",
+          "odds": 2.48,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betsson",
+          "key": "betsson",
           "odds": 2.48,
           "url": "#",
           "isSouthAfrica": false
@@ -1852,8 +1852,50 @@
           "isSouthAfrica": false
         },
         {
+          "name": "DraftKings",
+          "key": "draftkings",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Unibet (UK)",
           "key": "unibet_uk",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 2.45,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetRivers",
+          "key": "betrivers",
           "odds": 2.45,
           "url": "#",
           "isSouthAfrica": false
@@ -1873,22 +1915,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
-          "odds": 2.43,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
-          "odds": 2.43,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "PMU (FR)",
+          "key": "pmu_fr",
           "odds": 2.43,
           "url": "#",
           "isSouthAfrica": false
@@ -1896,6 +1924,13 @@
         {
           "name": "Betfair Sportsbook",
           "key": "betfair_sb_uk",
+          "odds": 2.4,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
           "odds": 2.4,
           "url": "#",
           "isSouthAfrica": false
@@ -1922,6 +1957,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "BetMGM",
+          "key": "betmgm",
+          "odds": 2.4,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Bet Victor",
           "key": "betvictor",
           "odds": 2.4,
@@ -1936,22 +1978,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "DraftKings",
-          "key": "draftkings",
-          "odds": 2.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
-          "odds": 2.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Tipico",
-          "key": "tipico_de",
+          "name": "BoyleSports",
+          "key": "boylesports",
           "odds": 2.4,
           "url": "#",
           "isSouthAfrica": false
@@ -1959,13 +1987,6 @@
         {
           "name": "Winamax (DE)",
           "key": "winamax_de",
-          "odds": 2.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Grosvenor",
-          "key": "grosvenor",
           "odds": 2.4,
           "url": "#",
           "isSouthAfrica": false
@@ -1992,13 +2013,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "PMU (FR)",
-          "key": "pmu_fr",
-          "odds": 2.4,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Betway 🇿🇦",
           "key": "betway",
           "odds": 2.4,
@@ -2020,20 +2034,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 2.38,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetMGM",
-          "key": "betmgm",
-          "odds": 2.38,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Sky Bet",
           "key": "skybet",
           "odds": 2.38,
@@ -2041,8 +2041,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BoyleSports",
-          "key": "boylesports",
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
+          "odds": 2.38,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Virgin Bet",
+          "key": "virginbet",
           "odds": 2.38,
           "url": "#",
           "isSouthAfrica": false
@@ -2062,23 +2069,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Winamax (FR)",
-          "key": "winamax_fr",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 2.35,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Virgin Bet",
-          "key": "virginbet",
-          "odds": 2.33,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
-          "odds": 2.3,
+          "name": "Winamax (FR)",
+          "key": "winamax_fr",
+          "odds": 2.35,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -2094,41 +2094,6 @@
       "datetime": "2026-08-23T13:00:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
-          "odds": 2.34,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 2.34,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 2.32,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 2.3,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Bovada",
-          "key": "bovada",
-          "odds": 2.3,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Matchbook",
           "key": "matchbook",
           "odds": 2.3,
@@ -2136,22 +2101,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 2.29,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Pinnacle",
-          "key": "pinnacle",
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 2.28,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 2.28,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 2.28,
           "url": "#",
           "isSouthAfrica": false
@@ -2171,20 +2136,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Nordic Bet",
-          "key": "nordicbet",
-          "odds": 2.28,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betsson",
-          "key": "betsson",
-          "odds": 2.28,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "GTbets",
           "key": "gtbets",
           "odds": 2.27,
@@ -2192,15 +2143,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 2.25,
+          "name": "Codere (IT)",
+          "key": "codere_it",
+          "odds": 2.26,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "DraftKings",
-          "key": "draftkings",
+          "name": "Coral",
+          "key": "coral",
           "odds": 2.25,
           "url": "#",
           "isSouthAfrica": false
@@ -2241,36 +2192,64 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas",
-          "key": "leovegas",
+          "name": "Bovada",
+          "key": "bovada",
           "odds": 2.25,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetUS",
-          "key": "betus",
-          "odds": 2.25,
+          "name": "Marathon Bet",
+          "key": "marathonbet",
+          "odds": 2.24,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 2.23,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 2.23,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetRivers",
+          "key": "betrivers",
+          "odds": 2.23,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Pinnacle",
+          "key": "pinnacle",
+          "odds": 2.22,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "MyBookie.ag",
           "key": "mybookieag",
-          "odds": 2.23,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betclic (FR)",
-          "key": "betclic_fr",
-          "odds": 2.22,
+          "odds": 2.21,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Betfair Sportsbook",
           "key": "betfair_sb_uk",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
@@ -2304,6 +2283,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betclic (FR)",
+          "key": "betclic_fr",
+          "odds": 2.2,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "BetMGM",
           "key": "betmgm",
           "odds": 2.2,
@@ -2311,15 +2297,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Bet Victor",
-          "key": "betvictor",
+          "name": "888sport",
+          "key": "sport888",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "888sport",
-          "key": "sport888",
+          "name": "DraftKings",
+          "key": "draftkings",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
@@ -2339,27 +2325,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BoyleSports",
-          "key": "boylesports",
-          "odds": 2.2,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Winamax (DE)",
-          "key": "winamax_de",
-          "odds": 2.2,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Casumo",
-          "key": "casumo",
-          "odds": 2.2,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "LeoVegas (SE)",
           "key": "leovegas_se",
           "odds": 2.2,
@@ -2367,44 +2332,58 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "LeoVegas",
+          "key": "leovegas",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Everygame",
-          "key": "everygame",
+          "name": "Nordic Bet",
+          "key": "nordicbet",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Betano (UK)",
-          "key": "betano_uk",
+          "name": "Betsson",
+          "key": "betsson",
           "odds": 2.2,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Betway 🇿🇦",
-          "key": "betway",
+          "name": "BetUS",
+          "key": "betus",
           "odds": 2.2,
-          "url": "https://betway.co.za",
-          "isSouthAfrica": true
-        },
-        {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 2.18,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "PMU (FR)",
           "key": "pmu_fr",
-          "odds": 2.17,
+          "odds": 2.18,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Bet Victor",
+          "key": "betvictor",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BoyleSports",
+          "key": "boylesports",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Winamax (DE)",
+          "key": "winamax_de",
+          "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -2416,18 +2395,39 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Virgin Bet",
-          "key": "virginbet",
-          "odds": 2.12,
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
+          "odds": 2.15,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
+          "name": "Virgin Bet",
+          "key": "virginbet",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betano (UK)",
+          "key": "betano_uk",
+          "odds": 2.15,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Everygame",
+          "key": "everygame",
           "odds": 2.1,
           "url": "#",
           "isSouthAfrica": false
+        },
+        {
+          "name": "Betway 🇿🇦",
+          "key": "betway",
+          "odds": 2.1,
+          "url": "https://betway.co.za",
+          "isSouthAfrica": true
         }
       ]
     },
@@ -2443,20 +2443,6 @@
         {
           "name": "Betfair",
           "key": "betfair_ex_uk",
-          "odds": 1.53,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "1xBet",
-          "key": "onexbet",
-          "odds": 1.52,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
           "odds": 1.52,
           "url": "#",
           "isSouthAfrica": false
@@ -2464,20 +2450,34 @@
         {
           "name": "Matchbook",
           "key": "matchbook",
+          "odds": 1.52,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "1xBet",
+          "key": "onexbet",
           "odds": 1.51,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Pinnacle",
-          "key": "pinnacle",
+          "name": "Smarkets",
+          "key": "smarkets",
+          "odds": 1.51,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Codere (IT)",
+          "key": "codere_it",
           "odds": 1.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Marathon Bet",
-          "key": "marathonbet",
+          "name": "Coral",
+          "key": "coral",
           "odds": 1.5,
           "url": "#",
           "isSouthAfrica": false
@@ -2490,15 +2490,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "BetUS",
-          "key": "betus",
+          "name": "Bovada",
+          "key": "bovada",
           "odds": 1.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Bovada",
-          "key": "bovada",
+          "name": "Pinnacle",
+          "key": "pinnacle",
+          "odds": 1.49,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Marathon Bet",
+          "key": "marathonbet",
           "odds": 1.49,
           "url": "#",
           "isSouthAfrica": false
@@ -2518,15 +2525,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Codere (IT)",
-          "key": "codere_it",
-          "odds": 1.48,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Coral",
-          "key": "coral",
+          "name": "BetMGM",
+          "key": "betmgm",
           "odds": 1.48,
           "url": "#",
           "isSouthAfrica": false
@@ -2546,6 +2546,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Winamax (DE)",
+          "key": "winamax_de",
+          "odds": 1.48,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "BetOnline.ag",
           "key": "betonlineag",
           "odds": 1.48,
@@ -2560,8 +2567,29 @@
           "isSouthAfrica": false
         },
         {
+          "name": "BetUS",
+          "key": "betus",
+          "odds": 1.48,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betclic (FR)",
+          "key": "betclic_fr",
+          "odds": 1.47,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "DraftKings",
           "key": "draftkings",
+          "odds": 1.47,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Winamax (FR)",
+          "key": "winamax_fr",
           "odds": 1.47,
           "url": "#",
           "isSouthAfrica": false
@@ -2588,8 +2616,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Winamax (DE)",
-          "key": "winamax_de",
+          "name": "MyBookie.ag",
+          "key": "mybookieag",
+          "odds": 1.47,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (FR)",
+          "key": "unibet_fr",
           "odds": 1.46,
           "url": "#",
           "isSouthAfrica": false
@@ -2602,29 +2637,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betclic (FR)",
-          "key": "betclic_fr",
-          "odds": 1.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetMGM",
-          "key": "betmgm",
-          "odds": 1.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Tipico",
           "key": "tipico_de",
-          "odds": 1.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Winamax (FR)",
-          "key": "winamax_fr",
           "odds": 1.45,
           "url": "#",
           "isSouthAfrica": false
@@ -2644,13 +2658,6 @@
           "isSouthAfrica": true
         },
         {
-          "name": "MyBookie.ag",
-          "key": "mybookieag",
-          "odds": 1.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Betfair Sportsbook",
           "key": "betfair_sb_uk",
           "odds": 1.44,
@@ -2667,13 +2674,6 @@
         {
           "name": "Paddy Power",
           "key": "paddypower",
-          "odds": 1.44,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (FR)",
-          "key": "unibet_fr",
           "odds": 1.44,
           "url": "#",
           "isSouthAfrica": false
@@ -2721,6 +2721,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 1.44,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "BetRivers",
           "key": "betrivers",
           "odds": 1.44,
@@ -2749,13 +2756,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 1.43,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "PMU (FR)",
           "key": "pmu_fr",
           "odds": 1.43,
@@ -2763,16 +2763,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Virgin Bet",
-          "key": "virginbet",
-          "odds": 1.41,
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
+          "odds": 1.42,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
-          "odds": 1.4,
+          "name": "Virgin Bet",
+          "key": "virginbet",
+          "odds": 1.42,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -2788,16 +2788,30 @@
       "datetime": "2026-08-23T15:30:00Z",
       "bookmakers": [
         {
-          "name": "Betfair",
-          "key": "betfair_ex_uk",
+          "name": "Smarkets",
+          "key": "smarkets",
           "odds": 4,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 4,
+          "name": "Betfair",
+          "key": "betfair_ex_uk",
+          "odds": 3.95,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (SE)",
+          "key": "unibet_se",
+          "odds": 3.95,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (NL)",
+          "key": "unibet_nl",
+          "odds": 3.95,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -2809,6 +2823,27 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Casumo",
+          "key": "casumo",
+          "odds": 3.85,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "key": "leovegas_se",
+          "odds": 3.85,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 3.85,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Coolbet",
           "key": "coolbet",
           "odds": 3.85,
@@ -2816,22 +2851,15 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Tipico",
-          "key": "tipico_de",
-          "odds": 3.8,
+          "name": "BetRivers",
+          "key": "betrivers",
+          "odds": 3.85,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Unibet (SE)",
-          "key": "unibet_se",
-          "odds": 3.8,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Unibet (NL)",
-          "key": "unibet_nl",
+          "name": "FanDuel",
+          "key": "fanduel",
           "odds": 3.8,
           "url": "#",
           "isSouthAfrica": false
@@ -2844,8 +2872,36 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Betfair Sportsbook",
+          "key": "betfair_sb_uk",
+          "odds": 3.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Paddy Power",
+          "key": "paddypower",
+          "odds": 3.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Sky Bet",
+          "key": "skybet",
+          "odds": 3.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "BetUS",
           "key": "betus",
+          "odds": 3.75,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "PMU (FR)",
+          "key": "pmu_fr",
           "odds": 3.75,
           "url": "#",
           "isSouthAfrica": false
@@ -2858,20 +2914,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betfair Sportsbook",
-          "key": "betfair_sb_uk",
-          "odds": 3.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "FanDuel",
-          "key": "fanduel",
-          "odds": 3.7,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Marathon Bet",
           "key": "marathonbet",
           "odds": 3.7,
@@ -2879,22 +2921,22 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Paddy Power",
-          "key": "paddypower",
+          "name": "Tipico",
+          "key": "tipico_de",
           "odds": 3.7,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Casumo",
-          "key": "casumo",
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
           "odds": 3.7,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetRivers",
-          "key": "betrivers",
+          "name": "Virgin Bet",
+          "key": "virginbet",
           "odds": 3.7,
           "url": "#",
           "isSouthAfrica": false
@@ -2914,13 +2956,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LeoVegas (SE)",
-          "key": "leovegas_se",
-          "odds": 3.65,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Nordic Bet",
           "key": "nordicbet",
           "odds": 3.65,
@@ -2935,36 +2970,15 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Coral",
+          "key": "coral",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Codere (IT)",
           "key": "codere_it",
-          "odds": 3.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Sky Bet",
-          "key": "skybet",
-          "odds": 3.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 3.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "PMU (FR)",
-          "key": "pmu_fr",
-          "odds": 3.6,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "DraftKings",
-          "key": "draftkings",
           "odds": 3.55,
           "url": "#",
           "isSouthAfrica": false
@@ -2991,8 +3005,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Coral",
-          "key": "coral",
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
           "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
@@ -3012,8 +3026,8 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Bet Victor",
-          "key": "betvictor",
+          "name": "BetMGM",
+          "key": "betmgm",
           "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
@@ -3075,13 +3089,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Betano (UK)",
-          "key": "betano_uk",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Betway 🇿🇦",
           "key": "betway",
           "odds": 3.5,
@@ -3096,30 +3103,23 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
+          "name": "DraftKings",
+          "key": "draftkings",
           "odds": 3.45,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Virgin Bet",
-          "key": "virginbet",
-          "odds": 3.45,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BetMGM",
-          "key": "betmgm",
+          "name": "Bet Victor",
+          "key": "betvictor",
           "odds": 3.4,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 3.3,
+          "name": "Betano (UK)",
+          "key": "betano_uk",
+          "odds": 3.4,
           "url": "#",
           "isSouthAfrica": false
         }
@@ -3135,23 +3135,16 @@
       "datetime": "2026-08-24T19:00:00Z",
       "bookmakers": [
         {
+          "name": "Matchbook",
+          "key": "matchbook",
+          "odds": 4,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Betfair",
           "key": "betfair_ex_uk",
           "odds": 3.95,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Smarkets",
-          "key": "smarkets",
-          "odds": 3.9,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Matchbook",
-          "key": "matchbook",
-          "odds": 3.9,
           "url": "#",
           "isSouthAfrica": false
         },
@@ -3219,20 +3212,6 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Paddy Power",
-          "key": "paddypower",
-          "odds": 3.75,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Sky Bet",
-          "key": "skybet",
-          "odds": 3.75,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
           "name": "Bovada",
           "key": "bovada",
           "odds": 3.75,
@@ -3247,8 +3226,29 @@
           "isSouthAfrica": false
         },
         {
+          "name": "GTbets",
+          "key": "gtbets",
+          "odds": 3.73,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "FanDuel",
           "key": "fanduel",
+          "odds": 3.7,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Coral",
+          "key": "coral",
+          "odds": 3.7,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Paddy Power",
+          "key": "paddypower",
           "odds": 3.7,
           "url": "#",
           "isSouthAfrica": false
@@ -3275,6 +3275,13 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Grosvenor",
+          "key": "grosvenor",
+          "odds": 3.7,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Coolbet",
           "key": "coolbet",
           "odds": 3.7,
@@ -3296,22 +3303,29 @@
           "isSouthAfrica": false
         },
         {
-          "name": "Grosvenor",
-          "key": "grosvenor",
-          "odds": 3.65,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betclic (FR)",
-          "key": "betclic_fr",
-          "odds": 3.63,
+          "name": "Betfred (UK)",
+          "key": "betfred_uk",
+          "odds": 3.6,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "William Hill",
           "key": "williamhill",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Betclic (FR)",
+          "key": "betclic_fr",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BetMGM",
+          "key": "betmgm",
           "odds": 3.6,
           "url": "#",
           "isSouthAfrica": false
@@ -3338,8 +3352,29 @@
           "isSouthAfrica": false
         },
         {
+          "name": "Ladbrokes",
+          "key": "ladbrokes_uk",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Sky Bet",
+          "key": "skybet",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
           "name": "Unibet (UK)",
           "key": "unibet_uk",
+          "odds": 3.6,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "BoyleSports",
+          "key": "boylesports",
           "odds": 3.6,
           "url": "#",
           "isSouthAfrica": false
@@ -3373,71 +3408,29 @@
           "isSouthAfrica": true
         },
         {
-          "name": "Unibet (FR)",
-          "key": "unibet_fr",
+          "name": "LiveScore Bet",
+          "key": "livescorebet",
           "odds": 3.55,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Winamax (DE)",
-          "key": "winamax_de",
-          "odds": 3.55,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "MyBookie.ag",
-          "key": "mybookieag",
-          "odds": 3.55,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "GTbets",
-          "key": "gtbets",
-          "odds": 3.54,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Betfred (UK)",
-          "key": "betfred_uk",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Coral",
-          "key": "coral",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Ladbrokes",
-          "key": "ladbrokes_uk",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "BoyleSports",
-          "key": "boylesports",
-          "odds": 3.5,
-          "url": "#",
-          "isSouthAfrica": false
-        },
-        {
-          "name": "Winamax (FR)",
-          "key": "winamax_fr",
-          "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
           "name": "Virgin Bet",
           "key": "virginbet",
+          "odds": 3.55,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Unibet (FR)",
+          "key": "unibet_fr",
+          "odds": 3.5,
+          "url": "#",
+          "isSouthAfrica": false
+        },
+        {
+          "name": "Winamax (DE)",
+          "key": "winamax_de",
           "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
@@ -3450,16 +3443,16 @@
           "isSouthAfrica": false
         },
         {
-          "name": "LiveScore Bet",
-          "key": "livescorebet",
-          "odds": 3.45,
+          "name": "MyBookie.ag",
+          "key": "mybookieag",
+          "odds": 3.5,
           "url": "#",
           "isSouthAfrica": false
         },
         {
-          "name": "BetMGM",
-          "key": "betmgm",
-          "odds": 3.4,
+          "name": "Winamax (FR)",
+          "key": "winamax_fr",
+          "odds": 3.45,
           "url": "#",
           "isSouthAfrica": false
         }

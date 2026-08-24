@@ -1,79 +1,276 @@
 {
-  "updatedAt": "2026-08-24T16:03:18.511Z",
+  "updatedAt": "2026-08-24T20:28:26.625Z",
   "events": [
     {
-      "id": 33507,
+      "id": 659518,
       "slug": "epl",
-      "title": "EPL Title Race 2025/26",
-      "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "volumeM": 241,
-      "ends": "May 2026",
-      "desc": "Which club wins the Premier League?",
+      "title": "EPL Title Race 2026/27",
+      "icon": "🏴",
+      "volumeM": 10.1,
+      "ends": "May 2027",
+      "desc": "Who wins the current Premier League title race? Market prices reflect live Polymarket consensus.",
       "outcomes": [
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 12340533.59949487
+          "prob": 0.515,
+          "pct": 51.5,
+          "fairDec": 1.94,
+          "vol": 658982.0423140001
+        },
+        {
+          "name": "Manchester City",
+          "flag": "",
+          "prob": 0.195,
+          "pct": 19.5,
+          "fairDec": 5.13,
+          "vol": 1820083.5537700006
+        },
+        {
+          "name": "Chelsea",
+          "flag": "",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 572311.7979950003
+        },
+        {
+          "name": "Liverpool",
+          "flag": "",
+          "prob": 0.105,
+          "pct": 10.5,
+          "fairDec": 9.52,
+          "vol": 515532.94318199984
+        },
+        {
+          "name": "Manchester United",
+          "flag": "",
+          "prob": 0.065,
+          "pct": 6.5,
+          "fairDec": 15.38,
+          "vol": 458713.5091439999
+        },
+        {
+          "name": "Tottenham",
+          "flag": "",
+          "prob": 0.0135,
+          "pct": 1.4,
+          "fairDec": 74.07,
+          "vol": 604004.8749279998
+        },
+        {
+          "name": "Aston Villa",
+          "flag": "",
+          "prob": 0.0065,
+          "pct": 0.7,
+          "fairDec": 153.85,
+          "vol": 424804.89199300006
+        },
+        {
+          "name": "Brighton",
+          "flag": "",
+          "prob": 0.006,
+          "pct": 0.6,
+          "fairDec": 166.67,
+          "vol": 576213.110709
+        },
+        {
+          "name": "Brentford",
+          "flag": "",
+          "prob": 0.0045,
+          "pct": 0.4,
+          "fairDec": 222.22,
+          "vol": 683508.4361729999
+        },
+        {
+          "name": "Newcastle United",
+          "flag": "",
+          "prob": 0.0035,
+          "pct": 0.4,
+          "fairDec": 285.71,
+          "vol": 549573.0508930001
         }
       ]
     },
     {
-      "id": 33506,
+      "id": 659671,
       "slug": "ucl",
       "title": "Champions League Winner",
       "icon": "⭐",
-      "volumeM": 231,
-      "ends": "May 2026",
-      "desc": "Who lifts the UCL trophy in Munich?",
-      "outcomes": [
-        {
-          "name": "PSG",
-          "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 19428880.867619038
-        }
-      ]
-    },
-    {
-      "id": 30615,
-      "slug": "worldcup",
-      "title": "2026 FIFA World Cup Winner",
-      "icon": "🌍",
-      "volumeM": 164,
-      "ends": "Jul 2026",
-      "desc": "Who wins the World Cup?",
-      "outcomes": [
-        {
-          "name": "Spain",
-          "flag": "🇪🇸",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 152168021.58979887
-        }
-      ]
-    },
-    {
-      "id": 33509,
-      "slug": "laliga",
-      "title": "La Liga Winner 2025/26",
-      "icon": "🇪🇸",
-      "volumeM": 91,
-      "ends": "May 2026",
-      "desc": "Real Madrid vs Barcelona — who wins La Liga?",
+      "volumeM": 14.3,
+      "ends": "May 2027",
+      "desc": "Which club lifts the Champions League trophy this season?",
       "outcomes": [
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 2889842.1004859824
+          "prob": 0.165,
+          "pct": 16.5,
+          "fairDec": 6.06,
+          "vol": 453777.1068769999
+        },
+        {
+          "name": "Arsenal",
+          "flag": "",
+          "prob": 0.155,
+          "pct": 15.5,
+          "fairDec": 6.45,
+          "vol": 356022.783125
+        },
+        {
+          "name": "Paris Saint-Germain",
+          "flag": "",
+          "prob": 0.145,
+          "pct": 14.5,
+          "fairDec": 6.9,
+          "vol": 156139.33901999996
+        },
+        {
+          "name": "Bayern Munich",
+          "flag": "",
+          "prob": 0.135,
+          "pct": 13.5,
+          "fairDec": 7.41,
+          "vol": 124057.167265
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 405604.4454080001
+        },
+        {
+          "name": "Manchester City",
+          "flag": "",
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 93457.115977
+        },
+        {
+          "name": "Liverpool",
+          "flag": "",
+          "prob": 0.065,
+          "pct": 6.5,
+          "fairDec": 15.38,
+          "vol": 60077.974843
+        },
+        {
+          "name": "Manchester United",
+          "flag": "",
+          "prob": 0.0295,
+          "pct": 2.9,
+          "fairDec": 33.9,
+          "vol": 246020.88986
+        },
+        {
+          "name": "Inter Milan",
+          "flag": "",
+          "prob": 0.0235,
+          "pct": 2.4,
+          "fairDec": 42.55,
+          "vol": 333299.1253139999
+        },
+        {
+          "name": "Atlético Madrid",
+          "flag": "",
+          "prob": 0.0235,
+          "pct": 2.4,
+          "fairDec": 42.55,
+          "vol": 314489.9650710001
+        }
+      ]
+    },
+    {
+      "id": 659548,
+      "slug": "laliga",
+      "title": "La Liga Winner",
+      "icon": "🇪🇸",
+      "volumeM": 3.2,
+      "ends": "May 2027",
+      "desc": "Barcelona, Real Madrid and the chasing pack in the live La Liga outright market.",
+      "outcomes": [
+        {
+          "name": "Barcelona",
+          "flag": "",
+          "prob": 0.585,
+          "pct": 58.5,
+          "fairDec": 1.71,
+          "vol": 306130.063702
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.37,
+          "pct": 37,
+          "fairDec": 2.7,
+          "vol": 390296.09988900006
+        },
+        {
+          "name": "Atlético Madrid",
+          "flag": "",
+          "prob": 0.0255,
+          "pct": 2.5,
+          "fairDec": 39.22,
+          "vol": 278228.20459299994
+        },
+        {
+          "name": "Betis",
+          "flag": "",
+          "prob": 0.0035,
+          "pct": 0.4,
+          "fairDec": 285.71,
+          "vol": 129543.532392
+        },
+        {
+          "name": "Villarreal",
+          "flag": "",
+          "prob": 0.003,
+          "pct": 0.3,
+          "fairDec": 333.33,
+          "vol": 241880.911145
+        },
+        {
+          "name": "Athletic Bilbao",
+          "flag": "",
+          "prob": 0.0015,
+          "pct": 0.1,
+          "fairDec": 666.67,
+          "vol": 210781.56649900004
+        },
+        {
+          "name": "Sevilla",
+          "flag": "",
+          "prob": 0.0015,
+          "pct": 0.1,
+          "fairDec": 666.67,
+          "vol": 269561.198333
+        },
+        {
+          "name": "Alavés",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 250068.22400000005
+        },
+        {
+          "name": "Celta Vigo",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 119493.130333
+        },
+        {
+          "name": "Espanyol",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 66592.027
         }
       ]
     }

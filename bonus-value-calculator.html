@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compare verified South African welcome offers by deposit size and estimated retained value.">
+  <meta name="description" content="Model the real turnover and expected value of South African welcome bonuses using verified workbook data from Bet.co.za, WSB, Sunbet, Sportingbet, 10bet, Playabets, Play.co.za, Gbets and Easybet.">
   <link rel="canonical" href="https://betsorted.co.za/bonus-value-calculator.html">
-  <title>Bonus Value Calculator South Africa | BetSorted</title>
+  <title>Welcome Bonus Turnover Calculator South Africa | BetSorted</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/assets/favicon.png">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
@@ -29,26 +29,37 @@
     .slider-label strong { color: #2563eb; font-size: 1.1rem; }
     .status-line { margin: 18px 0 0; color: #475569; font-weight: 700; }
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 22px; border: 1px solid #e5e7eb; border-radius: 12px; }
-    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    table { width: 100%; border-collapse: collapse; min-width: 980px; }
     th { background: #1e3a8a; color: white; text-align: left; padding: 12px; font-size: 0.86rem; }
     td { padding: 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; color: #0f172a; }
     tr:last-child td { border-bottom: 0; }
     .book-name { font-weight: 800; color: #1e3a8a; }
+    .book-headline { display: block; margin-top: 6px; color: #334155; font-size: 0.84rem; line-height: 1.5; }
     .terms-text { display: block; margin-top: 6px; color: #64748b; font-size: 0.82rem; line-height: 1.45; }
     .value-positive { color: #166534; font-weight: 900; }
     .value-negative { color: #991b1b; font-weight: 900; }
+    .value-neutral { color: #475569; font-weight: 900; }
     .actions { display: flex; flex-wrap: wrap; gap: 8px; }
     .actions a { display: inline-block; text-decoration: none; border-radius: 8px; padding: 8px 10px; font-weight: 800; font-size: 0.82rem; }
     .review-link { color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; }
     .join-link { color: white; background: #16a34a; border: 1px solid #15803d; }
+    .guide-link { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; }
     .empty-state, .honesty-block { border-radius: 12px; padding: 20px; line-height: 1.65; }
     .empty-state { background: #fffbeb; border: 1px solid #fde68a; color: #78350f; margin-top: 22px; }
     .honesty-block { background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; margin-top: 24px; }
+    .context-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+    .context-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+    .context-card strong { display: block; color: #1e3a8a; margin-bottom: 6px; }
+    .confidence { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 800; border-radius: 999px; padding: 4px 10px; margin-top: 8px; }
+    .confidence-high { background: #dcfce7; color: #166534; }
+    .confidence-medium { background: #fef3c7; color: #92400e; }
+    .confidence-low { background: #fee2e2; color: #991b1b; }
     @media (max-width: 720px) {
       .tool-page { padding: 32px 16px 52px; }
       .tool-card { padding: 20px; }
       .input-row { grid-template-columns: 1fr; }
       h1 { font-size: 1.65rem; }
+      .context-grid { grid-template-columns: 1fr; }
     }
   </style>
   <meta property="og:image" content="https://betsorted.co.za/assets/og-image.png">
@@ -85,11 +96,11 @@
       },
       {
         "@type": "WebApplication",
-        "name": "Bonus Value Calculator South Africa",
+        "name": "Welcome Bonus Turnover Calculator South Africa",
         "url": "https://betsorted.co.za/bonus-value-calculator.html",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Any",
-        "description": "Compare verified South African welcome offers by deposit size and estimated retained value.",
+        "description": "Model turnover, expected cost, and estimated retained value for verified South African welcome bonuses.",
         "publisher": {
           "@type": "Organization",
           "@id": "https://betsorted.co.za/#organization"
@@ -153,8 +164,8 @@
 
 
   <main class="tool-page">
-    <h1>Bonus Value Calculator</h1>
-    <p class="subtitle">Compare verified welcome offers by deposit size and estimated retained value. This uses published terms only and does not recommend that anyone gamble.</p>
+    <h1>Welcome Bonus Turnover Calculator</h1>
+    <p class="subtitle">Use the turnover maths from the August 2026 welcome-bonus workbook to see how much betting volume a deposit match really needs before it becomes withdrawable. This focuses on the sports route wherever the sheet gives one.</p>
 
     <div class="tool-card">
       <div class="input-row">
@@ -169,12 +180,26 @@
           <input type="range" id="margin" min="0.02" max="0.12" step="0.01" value="0.06">
         </div>
       </div>
-      <p class="status-line" id="verified-count">Loading verified welcome offers...</p>
+      <p class="status-line" id="verified-count">Loading workbook-backed welcome offers...</p>
       <div id="results"></div>
     </div>
 
     <div class="honesty-block">
-      This compares published welcome offers. Retained value is an estimate based on the bookmaker margin you set above. Real results vary with what you bet and at what odds. Bonus terms change often. Check the operator's current terms before depositing.
+      Retained value here means <strong>bonus value minus the expected bookmaker edge you will pay while clearing the turnover</strong>. It is not a guarantee. If the sheet flagged contradictions or unverified operator pages, the row is still useful for planning, but you should click through and verify the current terms before depositing.
+      <div class="context-grid">
+        <div class="context-card">
+          <strong>What this includes</strong>
+          Deposit-match offers and structured sports routes from the workbook's turnover tab, including capped offers such as Play.co.za's 125% tier and Easybet's bonus-bet structure.
+        </div>
+        <div class="context-card">
+          <strong>What this excludes</strong>
+          No-deposit offers like Hollywoodbets and bonus packs like Betway's welcome pack are not ranked here because the turnover sheet models deposit-based routes only.
+        </div>
+        <div class="context-card">
+          <strong>Cross-check the catch</strong>
+          If a row looks decent here, still read the plain-English trap summary in the <a href="/blog/south-africa-welcome-bonus-guide-2026.html" style="color:#1d4ed8;font-weight:700;">Welcome Bonus Guide</a> before acting.
+        </div>
+      </div>
     </div>
   </main>
 
@@ -188,79 +213,254 @@
   </footer>
 
   <script>
-    const DATA_URL = '/data/bookmakers.json';
+    const VERIFIED_OFFERS = [
+      {
+        slug: 'bet-co-za',
+        name: 'Bet.co.za',
+        headline: '100% first deposit match up to R5,000',
+        review_url: '/bookmakers/bet-co-za-review.html',
+        affiliate_url: '/go/bet-co-za.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#bet-co-za',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 5000,
+        x_bonus: 6,
+        x_deposit: 0,
+        min_odds: 1.7,
+        route: 'Sports route. 6x bonus only.',
+        confidence: 'medium',
+        note: 'Workbook flags unreadable full T&Cs, but the structure itself is still the mildest in the SA field.'
+      },
+      {
+        slug: 'world-sports-betting',
+        name: 'World Sports Betting',
+        headline: '100% first deposit match up to a disputed R20,000 cap',
+        review_url: '/bookmakers/world-sports-betting-review.html',
+        affiliate_url: '/go/world-sports-betting.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#world-sports-betting',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 20000,
+        x_bonus: 5,
+        x_deposit: 0,
+        min_odds: 1.5,
+        route: 'Sports/racing route. 5x bonus only.',
+        confidence: 'medium',
+        note: 'Best arithmetic after Bet.co.za, but the email-claim step is the real risk.'
+      },
+      {
+        slug: 'sunbet',
+        name: 'Sunbet',
+        headline: '100% first deposit match up to R1,000',
+        review_url: '/bookmakers/sunbet-review.html',
+        affiliate_url: '/go/sunbet.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#sunbet',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 1000,
+        x_bonus: 5,
+        x_deposit: 5,
+        min_odds: 1.5,
+        route: 'Sports route. 5x deposit + 5x bonus.',
+        confidence: 'high',
+        note: 'The rollover is manageable; the killer clause is that early withdrawal wipes the bonus.'
+      },
+      {
+        slug: 'sportingbet',
+        name: 'Sportingbet (1st dep)',
+        headline: 'Triple Welcome Bonus up to R3,000 across three deposits',
+        review_url: '/bookmakers/sportingbet-review.html',
+        affiliate_url: '/go/sportingbet.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#sportingbet',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 1000,
+        x_bonus: 10,
+        x_deposit: 10,
+        min_odds: 1.7,
+        route: 'Binding first-deposit reading. Help centre still contradicts this.',
+        confidence: 'high',
+        note: 'This row models only deposit one. The full package needs roughly R4,333 of your own money.'
+      },
+      {
+        slug: '10bet',
+        name: '10bet (sports)',
+        headline: '100% first deposit match up to R5,000',
+        review_url: '/bookmakers/10bet-review.html',
+        affiliate_url: '/go/10bet.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#10bet',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 5000,
+        x_bonus: 6,
+        x_deposit: 6,
+        min_odds: 2.0,
+        route: 'Sports route only. Casino route is 35x.',
+        confidence: 'high',
+        note: 'The 2.00 minimum odds matters almost as much as the 6x deposit-plus-bonus turnover.'
+      },
+      {
+        slug: 'supabets',
+        name: 'Supabets (1st dep)',
+        headline: 'R50 free bet + spins + up to R5,000 across three deposits',
+        review_url: '/bookmakers/supabets-review.html',
+        affiliate_url: '/go/supabets.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#supabets',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 2000,
+        x_bonus: 10,
+        x_deposit: 10,
+        min_odds: 2.4,
+        route: 'Modelled at the worse deposit-plus-bonus reading on deposit one.',
+        confidence: 'high',
+        note: 'The operator never defines whether “funds” means bonus only or deposit plus bonus, so this uses the harsher reading.'
+      },
+      {
+        slug: 'playabets',
+        name: 'Playabets (sports)',
+        headline: '100% first deposit match up to R3,000 + 50 free spins',
+        review_url: '/bookmakers/playabets-review.html',
+        affiliate_url: '/go/playabets.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#playabets',
+        min_deposit_zar: 50,
+        match_rate: 1,
+        max_bonus_zar: 3000,
+        x_bonus: 6,
+        x_deposit: 0,
+        min_odds: 1.8,
+        route: 'Sports route. Casino route is 35x.',
+        confidence: 'medium',
+        note: 'Useful row, but this brand was researched less deeply than the main homepage operators.'
+      },
+      {
+        slug: 'play-co-za',
+        name: 'Play.co.za (125% tier)',
+        headline: '125% up to a R3,000 deposit, max bonus R3,750',
+        review_url: '/bookmakers/play-co-za-review.html',
+        affiliate_url: '/go/play-co-za.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#playcoza',
+        min_deposit_zar: 50,
+        match_rate: 1.25,
+        max_bonus_zar: 3750,
+        x_bonus: 29,
+        x_deposit: 1,
+        min_odds: null,
+        route: 'Casino-weighted route. Max qualifying deposit R3,000.',
+        confidence: 'medium',
+        note: 'The workbook could not find the old 300%/R9,000 copy on the operator site at all.'
+      },
+      {
+        slug: 'gbets',
+        name: 'Gbets (sports portion)',
+        headline: 'Sports leg of the deposit ladder after the no-deposit layer',
+        review_url: '/bookmakers/gbets-review.html',
+        affiliate_url: '/go/gbets.html?subid=bonus-turnover-calculator',
+        guide_url: '/blog/south-africa-welcome-bonus-guide-2026.html#gbets',
+        min_deposit_zar: 25,
+        match_rate: 1,
+        max_bonus_zar: 5000,
+        x_bonus: 4,
+        x_deposit: 0,
+        min_odds: 1.5,
+        route: 'Sports leg of the ladder only.',
+        confidence: 'high',
+        note: 'The workbook treats the friendlier no-deposit layer separately from the deeper ladder.'
+      },
+      {
+        slug: 'easybet',
+        name: 'Easybet (sports)',
+        headline: '150% first deposit match up to R5,000, paid as bonus bets',
+        review_url: '/bookmakers/easybet-review.html',
+        affiliate_url: '/go/easybet.html?subid=bonus-turnover-calculator',
+        min_deposit_zar: 50,
+        match_rate: 1.5,
+        max_bonus_zar: 5000,
+        x_bonus: 0,
+        x_deposit: 4,
+        min_odds: 2.0,
+        route: '4x deposit route. Bonus is paid in bonus bets, not cash.',
+        confidence: 'low',
+        note: 'Easybet is geo-blocked for direct verification, so this row is useful but not first-party confirmed.'
+      }
+    ];
 
     function money(value) {
-      const rounded = Math.round(Number(value) || 0);
+      const numeric = Number(value) || 0;
+      const rounded = Math.abs(numeric % 1) < 0.005 ? Math.round(numeric) : Math.round(numeric * 10) / 10;
       return 'R' + rounded.toLocaleString('en-ZA');
     }
 
-    function isVerifiedBonus(bookmaker) {
-      const bonus = bookmaker && bookmaker.welcome_bonus;
-      if (!bonus || bonus.status !== 'verified') return false;
-      if (!['match', 'free_bet', 'none'].includes(bonus.type)) return false;
-      if (bonus.type === 'match' && (!Number.isFinite(Number(bonus.match_rate)) || !Number.isFinite(Number(bonus.max_bonus_zar)))) return false;
-      if (bonus.type === 'free_bet' && !Number.isFinite(Number(bonus.fixed_bonus_zar))) return false;
-      if (bonus.type !== 'none') {
-        if (!Number.isFinite(Number(bonus.wagering_multiple))) return false;
-        if (!['bonus', 'deposit_plus_bonus', 'deposit'].includes(bonus.wagering_applies_to)) return false;
-      }
-      return true;
+    function getPublishedOffers() {
+      return VERIFIED_OFFERS.slice();
     }
 
-    function getVerifiedOffers(bookmakers) {
-      return (Array.isArray(bookmakers) ? bookmakers : []).filter(isVerifiedBonus);
+    function getDepositCap(offer) {
+      if (!offer.match_rate || !offer.max_bonus_zar) return 0;
+      return Number(offer.max_bonus_zar) / Number(offer.match_rate);
     }
 
-    function calculateBonus(deposit, bonus) {
-      if (bonus.type === 'match') return Math.min(deposit * Number(bonus.match_rate), Number(bonus.max_bonus_zar));
-      if (bonus.type === 'free_bet') return deposit >= Number(bonus.min_deposit_zar || 0) ? Number(bonus.fixed_bonus_zar) : 0;
-      return 0;
+    function getQualifyingDeposit(deposit, offer) {
+      if (deposit < Number(offer.min_deposit_zar || 0)) return 0;
+      return Math.min(deposit, getDepositCap(offer));
     }
 
-    function calculateTurnover(deposit, bonusAmount, bonus) {
-      const multiple = Number(bonus.wagering_multiple || 0);
-      if (bonus.wagering_applies_to === 'bonus') return bonusAmount * multiple;
-      if (bonus.wagering_applies_to === 'deposit_plus_bonus') return (deposit + bonusAmount) * multiple;
-      if (bonus.wagering_applies_to === 'deposit') return deposit * multiple;
-      return 0;
+    function calculateBonus(deposit, offer) {
+      const qualifyingDeposit = getQualifyingDeposit(deposit, offer);
+      return Math.min(qualifyingDeposit * Number(offer.match_rate || 0), Number(offer.max_bonus_zar || 0));
     }
 
-    function calculateOffer(bookmaker, deposit, assumedMargin) {
-      const bonus = bookmaker.welcome_bonus;
-      const bonusAmount = calculateBonus(deposit, bonus);
-      const turnover = calculateTurnover(deposit, bonusAmount, bonus);
-      const retainedValue = bonusAmount - (turnover * assumedMargin);
+    function calculateTurnover(deposit, bonusAmount, offer) {
+      const qualifyingDeposit = getQualifyingDeposit(deposit, offer);
+      return (bonusAmount * Number(offer.x_bonus || 0)) + (qualifyingDeposit * Number(offer.x_deposit || 0));
+    }
+
+    function calculateOffer(offer, deposit, assumedMargin) {
+      const qualifyingDeposit = getQualifyingDeposit(deposit, offer);
+      const bonusAmount = calculateBonus(deposit, offer);
+      const turnover = calculateTurnover(deposit, bonusAmount, offer);
+      const expectedCost = turnover * assumedMargin;
+      const retainedValue = bonusAmount - expectedCost;
       return {
-        bookmaker,
+        bookmaker: offer,
+        qualifies: deposit >= Number(offer.min_deposit_zar || 0),
+        qualifyingDeposit,
         bonusAmount,
         turnover,
+        expectedCost,
         retainedValue,
-        terms: describeTerms(bonus)
+        terms: describeTerms(offer)
       };
     }
 
-    function describeTerms(bonus) {
-      if (bonus.type === 'none') return 'No verified welcome bonus.';
-      const applies = {
-        bonus: 'the bonus',
-        deposit_plus_bonus: 'deposit plus bonus',
-        deposit: 'the deposit'
-      }[bonus.wagering_applies_to] || 'the qualifying amount';
-      const pieces = [Number(bonus.wagering_multiple || 0) + 'x ' + applies];
-      if (bonus.min_odds) pieces.push('minimum odds ' + Number(bonus.min_odds).toFixed(2));
-      if (bonus.expiry_days) pieces.push(Number(bonus.expiry_days) + ' days to complete');
+    function describeTerms(offer) {
+      const pieces = [
+        offer.x_bonus + 'x bonus',
+        offer.x_deposit ? offer.x_deposit + 'x deposit' : 'no deposit rollover'
+      ];
+      if (offer.min_odds) pieces.push('minimum odds ' + Number(offer.min_odds).toFixed(2));
+      pieces.push(offer.route);
       return pieces.join(', ') + '.';
     }
 
+    function confidenceClass(confidence) {
+      if (confidence === 'high') return 'confidence confidence-high';
+      if (confidence === 'medium') return 'confidence confidence-medium';
+      return 'confidence confidence-low';
+    }
+
     function renderTable(rows) {
-      return '<div class="table-wrap"><table><thead><tr><th>Bookmaker</th><th>Bonus you get</th><th>Turnover required</th><th>Est. value retained</th><th>Terms</th></tr></thead><tbody>' +
+      return '<div class="table-wrap"><table><thead><tr><th>Bookmaker</th><th>Bonus you get</th><th>Turnover required</th><th>Expected cost</th><th>Net est. value</th><th>Notes</th></tr></thead><tbody>' +
         rows.map(row => {
           const b = row.bookmaker;
-          const valueClass = row.retainedValue < 0 ? 'value-negative' : 'value-positive';
+          const valueClass = row.retainedValue < 0 ? 'value-negative' : row.retainedValue > 0 ? 'value-positive' : 'value-neutral';
           const actions = '<div class="actions"><a class="review-link" href="' + escapeHtml(b.review_url || '/bookmakers/') + '">Review</a>' +
-            (b.affiliate_url ? '<a class="join-link" href="' + escapeHtml(b.affiliate_url) + '">Join</a>' : '') + '</div>';
-          return '<tr><td><span class="book-name">' + escapeHtml(b.name) + '</span></td><td>' + money(row.bonusAmount) + '</td><td>' + money(row.turnover) + '</td><td><span class="' + valueClass + '">' + money(row.retainedValue) + '</span></td><td>' + actions + '<span class="terms-text">' + escapeHtml(row.terms) + '</span></td></tr>';
+            (b.affiliate_url ? '<a class="join-link" href="' + escapeHtml(b.affiliate_url) + '">Open</a>' : '') +
+            (b.guide_url ? '<a class="guide-link" href="' + escapeHtml(b.guide_url) + '">Catch</a>' : '') + '</div>';
+          const qualificationLine = row.qualifies
+            ? 'Using ' + money(row.qualifyingDeposit) + ' as the qualifying deposit.'
+            : 'Needs at least ' + money(b.min_deposit_zar) + ' to qualify.';
+          return '<tr><td><span class="book-name">' + escapeHtml(b.name) + '</span><span class="book-headline">' + escapeHtml(b.headline) + '</span><span class="' + confidenceClass(b.confidence) + '">' + escapeHtml(String(b.confidence).toUpperCase()) + ' confidence</span></td><td>' + money(row.bonusAmount) + '</td><td>' + money(row.turnover) + '</td><td>' + money(row.expectedCost) + '</td><td><span class="' + valueClass + '">' + money(row.retainedValue) + '</span></td><td>' + actions + '<span class="terms-text">' + escapeHtml(qualificationLine) + ' ' + escapeHtml(row.terms) + ' ' + escapeHtml(b.note) + '</span></td></tr>';
         }).join('') + '</tbody></table></div>';
     }
 
@@ -278,39 +478,27 @@
       const deposit = Number(document.getElementById('deposit').value || 0);
       const margin = Number(document.getElementById('margin').value || 0.06);
       document.getElementById('margin-value').textContent = Math.round(margin * 100) + '%';
-      const verified = getVerifiedOffers(bookmakers);
-      document.getElementById('verified-count').textContent = verified.length >= 2
-        ? 'Showing ' + verified.length + ' bookmakers with verified terms. More coming as we confirm them.'
-        : 'Showing 0 bookmakers with enough verified structured terms to rank.';
+      const verified = getPublishedOffers(bookmakers);
+      document.getElementById('verified-count').textContent = 'Showing ' + verified.length + ' workbook-backed sportsbook routes from the August 2026 welcome-bonus report.';
 
-      if (verified.length < 2) {
-        document.getElementById('results').innerHTML = '<div class="empty-state"><strong>Bonus value rankings are not published yet.</strong><br>Fewer than two bookmakers have verified structured welcome terms in data/bookmakers.json. Unverified offers are deliberately excluded.</div>';
+      if (verified.length === 0) {
+        document.getElementById('results').innerHTML = '<div class="empty-state"><strong>No workbook-backed offers loaded.</strong><br>Try again later and cross-check the guide directly.</div>';
         return;
       }
 
       const rows = verified
         .map(bookmaker => calculateOffer(bookmaker, deposit, margin))
-        .sort((a, b) => b.retainedValue - a.retainedValue);
+        .sort((a, b) => {
+          if (a.qualifies !== b.qualifies) return a.qualifies ? -1 : 1;
+          return b.retainedValue - a.retainedValue;
+        });
       document.getElementById('results').innerHTML = renderTable(rows);
     }
 
-    async function loadBookmakers() {
-      try {
-        const response = await fetch(DATA_URL);
-        if (!response.ok) throw new Error('Could not load bookmaker data');
-        const data = await response.json();
-        const bookmakers = Array.isArray(data) ? data : [];
-        window.__bonusValueBookmakers = bookmakers;
-        render(bookmakers);
-      } catch (error) {
-        document.getElementById('verified-count').textContent = 'Could not load verified welcome offers.';
-        document.getElementById('results').innerHTML = '<div class="empty-state"><strong>Bookmaker data unavailable.</strong><br>Try again later and check operator terms directly before depositing.</div>';
-      }
-    }
-
-    document.getElementById('deposit').addEventListener('input', () => render(window.__bonusValueBookmakers || []));
-    document.getElementById('margin').addEventListener('input', () => render(window.__bonusValueBookmakers || []));
-    loadBookmakers();
+    document.getElementById('deposit').addEventListener('input', () => render(VERIFIED_OFFERS));
+    document.getElementById('margin').addEventListener('input', () => render(VERIFIED_OFFERS));
+    window.__bonusValueBookmakers = VERIFIED_OFFERS;
+    render(VERIFIED_OFFERS);
   </script>
   <script src="/assets/sticky-cta.js" defer></script>
   <script src="/assets/track-clicks.js" defer></script>

@@ -46,7 +46,7 @@ function approxEqual(actual, expected, label) {
 }
 
 function main() {
-  const html = fs.readFileSync('bonus-value-calculator.html', 'utf8');
+  const html = fs.readFileSync('reward-calculator.html', 'utf8');
   const schemaBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   if (!schemaBlocks.some((match) => match[1].includes('"@type": "WebApplication"'))) {
     throw new Error('WebApplication schema missing');
@@ -92,10 +92,10 @@ function main() {
 
   const calculators = fs.readFileSync('calculators.html', 'utf8');
   const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-  if (!calculators.includes('/bonus-value-calculator.html')) {
+  if (!calculators.includes('/reward-calculator.html')) {
     throw new Error('Published calculator missing from calculators.html');
   }
-  if (!sitemap.includes('/bonus-value-calculator.html')) {
+  if (!sitemap.includes('/reward-calculator.html')) {
     throw new Error('Published calculator missing from sitemap.xml');
   }
 

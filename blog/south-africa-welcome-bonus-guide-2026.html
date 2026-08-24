@@ -114,6 +114,9 @@
       margin-top: 26px;
       align-items: start;
     }
+    .guide-grid > * {
+      min-width: 0;
+    }
     .toc-card,
     .content-card {
       background: var(--guide-paper);
@@ -149,6 +152,7 @@
     }
     .content-card {
       padding: 28px;
+      min-width: 0;
     }
     .section-intro {
       color: var(--guide-muted);
@@ -208,6 +212,8 @@
     }
     .guide-table-wrap {
       overflow-x: auto;
+      max-width: 100%;
+      -webkit-overflow-scrolling: touch;
       margin: 22px 0 30px;
       border: 1px solid var(--guide-line);
       border-radius: 20px;
@@ -314,6 +320,17 @@
       border-color: #9fc3e9;
       background: #eef6ff;
     }
+    .guide-hero p,
+    .section-intro,
+    .operator-deck,
+    .summary-card span,
+    .mini-card span,
+    .guide-table th,
+    .guide-table td,
+    .toc-card a,
+    .related-links a {
+      overflow-wrap: anywhere;
+    }
     @media (max-width: 1080px) {
       .guide-grid {
         grid-template-columns: 1fr;
@@ -329,12 +346,53 @@
     }
     @media (max-width: 720px) {
       .guide-shell {
-        padding-left: 14px;
-        padding-right: 14px;
+        padding: 18px 12px 56px;
       }
       .guide-hero,
       .content-card {
-        padding: 22px 18px;
+        padding: 20px 16px;
+      }
+      .guide-hero {
+        border-radius: 20px;
+      }
+      .guide-hero h1 {
+        font-size: clamp(1.7rem, 9vw, 2.3rem);
+      }
+      .guide-hero p,
+      .section-intro,
+      .operator-deck {
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+      .hero-meta {
+        gap: 8px;
+      }
+      .hero-meta span {
+        width: 100%;
+      }
+      .toc-card,
+      .content-card,
+      .summary-card,
+      .mini-card,
+      .related-links a,
+      .note,
+      .warning,
+      .danger,
+      .guide-table-wrap {
+        border-radius: 18px;
+      }
+      .toc-card {
+        padding: 18px 16px;
+      }
+      .toc-card a {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .content-card {
+        overflow: hidden;
+      }
+      .guide-table {
+        min-width: 680px;
       }
       .summary-grid,
       .mini-grid,

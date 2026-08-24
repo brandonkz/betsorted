@@ -719,10 +719,16 @@ a:hover {
     font-size: 0.875rem;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   }
 
   .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.5rem 0.25rem;
+    text-align: center;
+    line-height: 1.25;
   }
 
   .btn,
@@ -832,6 +838,26 @@ a:hover {
   
   .container {
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    min-height: 42px;
+    padding: 0.6rem 0.5rem;
+    border-radius: 10px;
+    background: #f8fafc;
+  }
+
+  .brand {
+    font-size: 1.125rem;
+    text-align: center;
   }
 }
 

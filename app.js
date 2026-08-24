@@ -28,7 +28,9 @@ async function init() {
 // Data Loading
 async function loadSites() {
   try {
-    const response = await fetch('data/sites.json');
+    const response = await fetch('data/sites.json?v=20260824-catch-fix', {
+      cache: 'no-store'
+    });
     if (response.ok) {
       sites = await response.json();
       sites.sort((a, b) => a.rank - b.rank);
@@ -303,10 +305,6 @@ function getCatchEntries(site) {
     return [site.promo_catch.trim()];
   }
 
-  if (Array.isArray(site.reddit_quotes) && site.reddit_quotes.length > 0) {
-    return site.reddit_quotes;
-  }
-
   return [];
 }
 
@@ -321,7 +319,7 @@ function getCatchMarkup(site, limit = 2) {
   const entries = getCatchEntries(site);
 
   if (entries.length === 0) {
-    return '<em style="color: #999;">Trusted by SA punters</em>';
+    return '<em style="color: #999;">Check the full review for promo terms</em>';
   }
 
   return entries.slice(0, limit).map(quote => {

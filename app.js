@@ -28,7 +28,7 @@ async function init() {
 // Data Loading
 async function loadSites() {
   try {
-    const response = await fetch('data/sites.json?v=20260824-catch-fix', {
+    const response = await fetch('data/sites.json?v=20260824-catch-guide-links', {
       cache: 'no-store'
     });
     if (response.ok) {
@@ -317,17 +317,39 @@ function stripQuoteDecorators(text) {
 
 function getCatchMarkup(site, limit = 2) {
   const entries = getCatchEntries(site);
+  const guideUrl = getGuideCatchUrl(site);
 
   if (entries.length === 0) {
-    return '<em style="color: #999;">Check the full review for promo terms</em>';
+    return guideUrl
+      ? `<em style="color: #999;">Check the <a href="${guideUrl}" style="color: #b45309; font-style: normal; font-weight: 600;">full bonus guide</a> for promo terms</em>`
+      : '<em style="color: #999;">Check the full review for promo terms</em>';
   }
 
   return entries.slice(0, limit).map(quote => {
     const cleaned = stripQuoteDecorators(quote);
-    const truncated = cleaned.length > 70 ? cleaned.substring(0, 67) + '...' : cleaned;
+    const guideLink = guideUrl
+      ? ` <a href="${guideUrl}" style="color: #b45309; font-style: normal; font-weight: 600; text-decoration: underline;">See full catch</a>`
+      : '';
 
-    return `<div style="font-style: italic; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid #e67e22;">${escapeHtml(truncated)}</div>`;
+    return `<div style="font-style: italic; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid #e67e22;">${escapeHtml(cleaned)}${guideLink}</div>`;
   }).join('');
+}
+
+function getGuideCatchUrl(site) {
+  const anchorMap = {
+    '10bet': '10bet',
+    'bcgame': 'bcgame',
+    'betway': 'comparison-table',
+    'gbets': 'gbets',
+    'hollywoodbets': 'hollywoodbets',
+    'play-co-za': 'playcoza',
+    'sportingbet': 'sportingbet',
+    'sunbet': 'sunbet',
+    'world-sports-betting': 'world-sports-betting'
+  };
+
+  const anchor = anchorMap[site.slug];
+  return anchor ? `/blog/south-africa-welcome-bonus-guide-2026.html#${anchor}` : '';
 }
 
 function getMinDepositValue(minDeposit) {

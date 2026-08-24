@@ -23,8 +23,8 @@
     if (isHome) {
       return {
         messages: [
-          "Compare licensed SA bookmakers → See Reviews",
-          "Check reviews, deposits and payouts → Compare Bookmakers"
+          "Compare reviews, payout speed and bonus catches → See Bookmakers",
+          "We check shady reward clauses so you do not have to → Compare Bookmakers"
         ],
         buttonText: 'Compare Bookmakers',
         href: '/#comparison'

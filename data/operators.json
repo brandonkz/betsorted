@@ -24,7 +24,7 @@
     "last_reviewed": "2026-03-24",
     "logo_color": "#00A651",
     "summary": "One of SA's most trusted betting sites. Betway offers extensive sports coverage, competitive odds, and a slick mobile app. Known for fast payouts and excellent customer service.",
-    "community_quote": "The old R1,000 match is gone, and recent sources disagree on whether the new pack still needs a qualifying R50 bet or deposit."
+    "community_quote": "The old R1,000 match is gone, and the new pack may still need a qualifying R50 bet or deposit before you get it."
   },
   {
     "slug": "hollywoodbets",
@@ -51,7 +51,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#FFD700",
     "summary": "A true South African brand. Hollywoodbets is massive in horse racing and offers unique features like Lucky Numbers. Low minimum deposits make it accessible to everyone.",
-    "community_quote": "The no-deposit angle is real, but the stake is not returned and the bonus expires just 24 hours after signup."
+    "community_quote": "It expires in 24 hours, and your free-bet stake is not returned."
   },
   {
     "slug": "sportingbet",
@@ -77,7 +77,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#00529F",
     "summary": "One of the oldest and most established betting brands in SA. Sportingbet offers solid odds, a wide range of markets, and live streaming for major events.",
-    "community_quote": "The full headline needs three deposits, and Sportingbet contradicts itself on whether rollover is on the bonus only or deposit plus bonus."
+    "community_quote": "You need three deposits to get the full R3,000, and the rollover wording is inconsistent across Sportingbet pages."
   },
   {
     "slug": "supabets",
@@ -101,7 +101,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#ED1C24",
     "summary": "Deep local market coverage and regular promotions make Supabets a useful comparison book for PSL and rugby weekends.",
-    "community_quote": "The R999 sign-up cap and deposit bonus wagering are much harsher than most comparison sites admit."
+    "community_quote": "The R999 sign-up cap and the bonus wagering are much harsher than most comparison sites admit."
   },
   {
     "slug": "10bet",
@@ -128,7 +128,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#1A1A1A",
     "summary": "International bookmaker with strong SA presence. 10bet offers competitive odds, regular promotions, and a clean interface. SAFA's official betting partner.",
-    "community_quote": "The real sting is 6x wagering on deposit plus bonus at 2.00+ odds, not the headline amount itself."
+    "community_quote": "The 6x rollover is on deposit plus bonus at 2.00+ odds, so the real turnover is much higher than the headline suggests."
   },
   {
     "slug": "play-co-za",
@@ -154,7 +154,7 @@
     "last_reviewed": "2026-02-19",
     "logo_color": "#6B46C1",
     "summary": "Modern betting platform with a sleek design and generous welcome bonuses. Play.co.za combines sports betting with live casino games, offering massive payout limits and fast withdrawals.",
-    "community_quote": "Big headline, but the casino bonus carries 29x bonus plus 1x deposit wagering in a 15-day window."
+    "community_quote": "The casino bonus carries 29x bonus plus 1x deposit wagering, and you only get 15 days to clear it."
   },
   {
     "slug": "world-sports-betting",
@@ -181,7 +181,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#E31E24",
     "summary": "Well-established SA operator with retail presence nationwide. Known for solid horse racing coverage and accessible mobile platform.",
-    "community_quote": "The rollover is mild, but several sources say you must email promotions@wsb.co.za before depositing to claim it."
+    "community_quote": "You may need to email promotions@wsb.co.za before depositing, or the promo might not be applied at all."
   },
   {
     "slug": "easybet",
@@ -237,7 +237,7 @@
     "last_reviewed": "2026-03-25",
     "logo_color": "#FF6B00",
     "summary": "Gbets focuses on accessible deposits, no-deposit signup value, and mainstream SA sports coverage for casual and regular punters.",
-    "community_quote": "You need a R25 deposit before you can withdraw winnings, and any active bonus can block withdrawals."
+    "community_quote": "You need a R25 deposit before you can withdraw winnings, and an active bonus can freeze withdrawals."
   },
   {
     "slug": "sunbet",
@@ -263,7 +263,7 @@
     "last_reviewed": "2026-02-18",
     "logo_color": "#FDB913",
     "summary": "Part of the Sun International group. Sunbet is strong in horse racing and offers live streaming for racing events.",
-    "community_quote": "The 5x rollover is mild, but trying to withdraw before clearing it wipes the whole bonus balance."
+    "community_quote": "If you try to withdraw before clearing the rollover, the whole bonus balance is wiped."
   },
   {
     "slug": "bet-co-za",

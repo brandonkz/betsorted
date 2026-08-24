@@ -39,6 +39,9 @@
       --guide-danger-soft: #fdecef;
       --guide-navy: #173b63;
     }
+    html {
+      scroll-padding-top: 84px;
+    }
     body {
       background:
         radial-gradient(circle at top right, rgba(15, 118, 110, 0.08), transparent 28%),
@@ -247,6 +250,13 @@
     .guide-table tr:nth-child(even) td {
       background: #fffdf9;
     }
+    .table-kicker {
+      display: none;
+      margin: -4px 0 14px;
+      color: var(--guide-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
     .operator-block {
       padding: 24px 0 26px;
       border-top: 1px solid #ece4d8;
@@ -383,16 +393,102 @@
       }
       .toc-card {
         padding: 18px 16px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .toc-card h2 {
+        margin-bottom: 12px;
       }
       .toc-card a {
-        padding-left: 0;
-        padding-right: 0;
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        padding: 10px 12px;
+        white-space: nowrap;
+        background: #f4f7f8;
+        border: 1px solid #d8e2e4;
+      }
+      .toc-links {
+        display: flex;
+        gap: 8px;
+        flex-wrap: nowrap;
+        width: max-content;
       }
       .content-card {
         overflow: hidden;
       }
+      .table-kicker {
+        display: block;
+      }
+      .guide-table-wrap {
+        border: none;
+        background: transparent;
+        overflow: visible;
+        margin-top: 18px;
+      }
       .guide-table {
-        min-width: 680px;
+        min-width: 0;
+        display: block;
+        background: transparent;
+      }
+      .guide-table thead {
+        display: none;
+      }
+      .guide-table tbody {
+        display: grid;
+        gap: 14px;
+      }
+      .guide-table tr {
+        display: block;
+        border: 1px solid #e6dccd;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 10px 22px rgba(18, 33, 47, 0.06);
+        overflow: hidden;
+      }
+      .guide-table td {
+        display: block;
+        padding: 12px 16px;
+        border-top: 1px solid #eee4d8;
+        background: transparent !important;
+      }
+      .guide-table td:first-child {
+        border-top: none;
+        padding-top: 16px;
+      }
+      .guide-table td::before {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--guide-muted);
+      }
+      .guide-table td:nth-child(1)::before {
+        content: "Bookmaker";
+      }
+      .guide-table td:nth-child(2)::before {
+        content: "Headline Offer";
+      }
+      .guide-table td:nth-child(3)::before {
+        content: "Min Deposit";
+      }
+      .guide-table td:nth-child(4)::before {
+        content: "Rollover";
+      }
+      .guide-table td:nth-child(5)::before {
+        content: "Main Catch";
+      }
+      .operator-block {
+        padding: 22px 0 24px;
+      }
+      .operator-block h2 {
+        font-size: 1.35rem;
+      }
+      .operator-block ul {
+        padding-left: 18px;
+        line-height: 1.68;
       }
       .summary-grid,
       .mini-grid,
@@ -500,20 +596,22 @@
     <div class="guide-grid">
       <aside class="toc-card">
         <h2>On This Page</h2>
-        <a href="#quick-verdicts">Quick Verdicts</a>
-        <a href="#comparison-table">Fast Comparison</a>
-        <a href="#bet-co-za">Bet.co.za</a>
-        <a href="#world-sports-betting">World Sports Betting</a>
-        <a href="#hollywoodbets">Hollywoodbets</a>
-        <a href="#sunbet">Sunbet</a>
-        <a href="#sportingbet">Sportingbet</a>
-        <a href="#playabets">Playabets</a>
-        <a href="#playcoza">Play.co.za</a>
-        <a href="#gbets">Gbets</a>
-        <a href="#10bet">10bet</a>
-        <a href="#supabets">Supabets</a>
-        <a href="#bcgame">BC.Game</a>
-        <a href="#how-to-use">How To Use This</a>
+        <div class="toc-links">
+          <a href="#quick-verdicts">Quick Verdicts</a>
+          <a href="#comparison-table">Fast Comparison</a>
+          <a href="#bet-co-za">Bet.co.za</a>
+          <a href="#world-sports-betting">World Sports Betting</a>
+          <a href="#hollywoodbets">Hollywoodbets</a>
+          <a href="#sunbet">Sunbet</a>
+          <a href="#sportingbet">Sportingbet</a>
+          <a href="#playabets">Playabets</a>
+          <a href="#playcoza">Play.co.za</a>
+          <a href="#gbets">Gbets</a>
+          <a href="#10bet">10bet</a>
+          <a href="#supabets">Supabets</a>
+          <a href="#bcgame">BC.Game</a>
+          <a href="#how-to-use">How To Use This</a>
+        </div>
       </aside>
 
       <article class="content-card">
@@ -551,6 +649,7 @@
         <section id="comparison-table">
           <h2>Fast Comparison</h2>
           <p class="section-intro">This table compresses the workbook into the bits that matter fastest: the headline, the minimum buy-in, the rollover base, and the one catch most likely to ruin the promo for a normal reader.</p>
+          <p class="table-kicker">On phones, each bookmaker becomes its own card so you can scan the catch without side-scrolling.</p>
           <div class="guide-table-wrap">
             <table class="guide-table">
               <thead>

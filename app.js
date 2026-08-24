@@ -119,7 +119,7 @@ function renderComparisonTable() {
         <td data-label="Min Deposit">
           <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
         </td>
-        <td data-label="What South Africans Say">
+        <td data-label="The Catch">
           <div style="font-size: 0.85rem; line-height: 1.5; color: #555;">
             ${communityQuotes}
           </div>

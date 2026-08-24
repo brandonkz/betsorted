@@ -7,8 +7,8 @@
     "url": "https://hollywoodbets.net",
     "ref_url": "/go/hollywoodbets.html",
     "rating": 4.6,
-    "welcome_bonus": "R25 Sign-Up Bonus",
-    "min_deposit": "R5",
+    "welcome_bonus": "R25 free bet + 50 free spins",
+    "min_deposit": "R10",
     "payment_methods": [
       "EFT",
       "Instant EFT",
@@ -48,11 +48,7 @@
     ],
     "featured": true,
     "rank": 1,
-    "reddit_quotes": [
-      "\"Hollywoodbets is the go-to for a lot of South Africans\"",
-      "\"Everywhere I looked in Durban there were ads for them - massive in KZN\"",
-      "\"Strong on horse racing and Lucky Numbers\" — Community favorite"
-    ]
+    "promo_catch": "It expires in 24 hours, and your free-bet stake is not returned."
   },
   {
     "id": 4,
@@ -62,7 +58,7 @@
     "url": "https://10bet.co.za",
     "ref_url": "/go/10bet.html",
     "rating": 4.4,
-    "welcome_bonus": "100% Deposit Match up to R500",
+    "welcome_bonus": "100% first deposit match up to R5,000",
     "min_deposit": "R50",
     "payment_methods": [
       "EFT",
@@ -101,9 +97,7 @@
     ],
     "featured": true,
     "rank": 2,
-    "reddit_quotes": [
-      "Trusted by South African punters"
-    ]
+    "promo_catch": "The 6x rollover is on deposit plus bonus at 2.00+ odds, so the real turnover is much higher than the headline suggests."
   },
   {
     "id": 8,
@@ -153,11 +147,7 @@
     ],
     "featured": true,
     "rank": 3,
-    "reddit_quotes": [
-      "\"Modern design and huge payout limits\"",
-      "\"Play.co.za stands out with its generous bonuses\"",
-      "\"Fast loading and smooth experience\" — Rising star"
-    ]
+    "promo_catch": "The casino bonus carries 29x bonus plus 1x deposit wagering, and you only get 15 days to clear it."
   },
   {
     "id": 3,
@@ -167,8 +157,8 @@
     "url": "https://sportingbet.co.za",
     "ref_url": "/go/sportingbet.html",
     "rating": 4.2,
-    "welcome_bonus": "R50 Free Bet on Sign-Up",
-    "min_deposit": "R20",
+    "welcome_bonus": "Triple Welcome Bonus up to R3,000",
+    "min_deposit": "R10",
     "payment_methods": [
       "EFT",
       "Instant EFT",
@@ -207,11 +197,7 @@
     ],
     "featured": true,
     "rank": 4,
-    "reddit_quotes": [
-      "\"You can check Betway, Sportingbet, Betolimp - most have politics, cinema awards bets\"",
-      "\"Reliable for South African sports betting\"",
-      "\"Good for international markets\" — r/southafrica"
-    ]
+    "promo_catch": "You need three deposits to get the full R3,000, and the rollover wording is inconsistent across Sportingbet pages."
   },
   {
     "id": 1,
@@ -221,7 +207,7 @@
     "url": "https://betway.co.za",
     "ref_url": "/go/betway.html",
     "rating": 4.1,
-    "welcome_bonus": "Up to R1,000 Welcome Bonus",
+    "welcome_bonus": "10 free spins + 10 free flights + R10 free bet",
     "min_deposit": "R10",
     "payment_methods": [
       "EFT",
@@ -262,11 +248,7 @@
     ],
     "featured": false,
     "rank": 5,
-    "reddit_quotes": [
-      "\"Betway SA is what I've used for a while. Never had withdrawal issues, which is the main thing for me.\"",
-      "\"Betway is the most popular...currently along with HWB\"",
-      "\"Feels modern and has decent promos for both local and international games\" — r/sportsbetting"
-    ]
+    "promo_catch": "The old R1,000 match is gone, and the new pack may still need a qualifying R50 bet or deposit before you get it."
   },
   {
     "id": 5,
@@ -276,8 +258,8 @@
     "url": "https://worldsportsbetting.co.za",
     "ref_url": "/go/world-sports-betting.html",
     "rating": 4,
-    "welcome_bonus": "R50 Sign-Up Bonus",
-    "min_deposit": "R10",
+    "welcome_bonus": "100% deposit match + free bet + 100 free spins",
+    "min_deposit": "R20",
     "payment_methods": [
       "EFT",
       "Instant EFT",
@@ -315,11 +297,7 @@
     ],
     "featured": true,
     "rank": 6,
-    "reddit_quotes": [
-      "\"Trusted brand since 1998\"",
-      "\"Strong rugby and cricket coverage\"",
-      "\"Retail outlets make deposits easy\" — Long-standing reputation"
-    ]
+    "promo_catch": "You may need to email promotions@wsb.co.za before depositing, or the promo might not be applied at all."
   },
   {
     "id": 6,
@@ -329,8 +307,8 @@
     "url": "https://gbets.co.za",
     "ref_url": "/go/gbets.html",
     "rating": 3.9,
-    "welcome_bonus": "R25 Free Bet on Registration",
-    "min_deposit": "R5",
+    "welcome_bonus": "R50 free bet + 50 free spins",
+    "min_deposit": "R10",
     "payment_methods": [
       "EFT",
       "Instant EFT",
@@ -368,9 +346,7 @@
     ],
     "featured": false,
     "rank": 7,
-    "reddit_quotes": [
-      "Trusted by South African punters"
-    ]
+    "promo_catch": "You need a R25 deposit before you can withdraw winnings, and an active bonus can freeze withdrawals."
   },
   {
     "id": 7,
@@ -380,7 +356,7 @@
     "url": "https://sunbet.co.za",
     "ref_url": "/go/sunbet.html",
     "rating": 3.8,
-    "welcome_bonus": "R50 Sign-Up Bonus",
+    "welcome_bonus": "100% first deposit match up to R1,000",
     "min_deposit": "R20",
     "payment_methods": [
       "EFT",
@@ -418,10 +394,6 @@
     ],
     "featured": false,
     "rank": 8,
-    "reddit_quotes": [
-      "\"Tab betting integrated\"",
-      "\"Good for horse racing\"",
-      "\"Trusted in SA since 2001\" — Established player"
-    ]
+    "promo_catch": "If you try to withdraw before clearing the rollover, the whole bonus balance is wiped."
   }
 ]

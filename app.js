@@ -61,7 +61,7 @@ function applyFilter(filter) {
     if (filter === 'all') return true;
     if (filter === 'data-free') return site.data_free_app === true;
     if (filter === 'low-deposit') {
-      const deposit = parseInt(site.min_deposit.replace(/\D/g, ''));
+      const deposit = getMinDepositValue(site.min_deposit);
       return deposit <= 10;
     }
     if (filter === 'live-streaming') return site.live_streaming === true;
@@ -92,7 +92,7 @@ function renderComparisonTable() {
   
   comparisonTbody.innerHTML = filteredSites.map(site => {
     const stars = renderStars(site.rating);
-    const communityQuotes = getCommunityQuotes(site);
+    const catchMarkup = getCatchMarkup(site, 2);
     
     return `
       <tr>
@@ -121,7 +121,7 @@ function renderComparisonTable() {
         </td>
         <td data-label="The Catch">
           <div style="font-size: 0.85rem; line-height: 1.5; color: #555;">
-            ${communityQuotes}
+            ${catchMarkup}
           </div>
         </td>
         <td>
@@ -194,12 +194,12 @@ function renderReviews() {
             </div>
           </div>
           
-          ${site.reddit_quotes && site.reddit_quotes.length > 0 ? `
+          ${getCatchEntries(site).length > 0 ? `
           <div class="community-quote" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 3px solid #e67e22; padding: 14px 18px; margin: 20px 0; border-radius: 8px; font-size: 0.9rem;">
-            <div style="font-weight: 600; color: #e67e22; margin-bottom: 10px;">💬 What South Africans Are Saying:</div>
-            ${site.reddit_quotes.map(quote => 
+            <div style="font-weight: 600; color: #e67e22; margin-bottom: 10px;">The Catch:</div>
+            ${getCatchEntries(site).map(quote => 
               `<div style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 8px; padding-left: 10px; border-left: 2px solid #d8d8d8;">
-                ${quote}
+                ${escapeHtml(stripQuoteDecorators(quote))}
               </div>`
             ).join('')}
           </div>
@@ -294,24 +294,47 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-function getCommunityQuotes(site) {
-  if (!site.reddit_quotes || site.reddit_quotes.length === 0) {
+function getCatchEntries(site) {
+  if (Array.isArray(site.promo_catch) && site.promo_catch.length > 0) {
+    return site.promo_catch;
+  }
+
+  if (typeof site.promo_catch === 'string' && site.promo_catch.trim()) {
+    return [site.promo_catch.trim()];
+  }
+
+  if (Array.isArray(site.reddit_quotes) && site.reddit_quotes.length > 0) {
+    return site.reddit_quotes;
+  }
+
+  return [];
+}
+
+function stripQuoteDecorators(text) {
+  return text
+    .replace(/^[""]/, '')
+    .replace(/[""]$/, '')
+    .replace(/[""] — .*$/, '');
+}
+
+function getCatchMarkup(site, limit = 2) {
+  const entries = getCatchEntries(site);
+
+  if (entries.length === 0) {
     return '<em style="color: #999;">Trusted by SA punters</em>';
   }
-  
-  // Show 2-3 quotes in compact format
-  return site.reddit_quotes.slice(0, 2).map(quote => {
-    // Clean up quotes
-    const cleaned = quote
-      .replace(/^[""]/, '')
-      .replace(/[""]$/, '')
-      .replace(/[""] — .*$/, ''); // Remove source attribution for table
-    
-    // Truncate if needed
+
+  return entries.slice(0, limit).map(quote => {
+    const cleaned = stripQuoteDecorators(quote);
     const truncated = cleaned.length > 70 ? cleaned.substring(0, 67) + '...' : cleaned;
-    
-    return `<div style="font-style: italic; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid #e67e22;">${truncated}</div>`;
+
+    return `<div style="font-style: italic; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid #e67e22;">${escapeHtml(truncated)}</div>`;
   }).join('');
+}
+
+function getMinDepositValue(minDeposit) {
+  const match = minDeposit && minDeposit.match(/R\s*([\d,]+)/i);
+  return match ? parseInt(match[1].replace(/,/g, ''), 10) : Number.POSITIVE_INFINITY;
 }
 
 function getBonusExplanation(bonus) {

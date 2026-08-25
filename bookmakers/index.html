@@ -53,6 +53,64 @@
       font-weight: 600;
     }
 
+    .loyalty-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 24px 0 28px;
+      padding: 22px 24px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff 48%, #fff7ed 100%);
+      border: 1px solid #bfdbfe;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.10);
+    }
+
+    .loyalty-banner-copy {
+      flex: 1 1 420px;
+    }
+
+    .loyalty-banner-copy strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1e3a8a;
+      font-size: 1.05rem;
+    }
+
+    .loyalty-banner-copy p {
+      margin: 0;
+      color: #334155;
+    }
+
+    .loyalty-banner-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .loyalty-banner-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .loyalty-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .loyalty-secondary {
+      background: #ffffff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
     .bookmaker-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -415,7 +473,16 @@
     <p class="intro-copy">Use this hub to compare reviewed South African bookmakers by BetSorted rating, welcome bonus, minimum deposit, licence authority, review page, and conversion path. Each listed operator already has review coverage on BetSorted; deeper review consolidation and data normalisation are handled in later remediation items.</p>
 
     <div class="hub-note">Always confirm the current bonus, market price, FICA requirements, and withdrawal rules on the bookmaker site before depositing. Fields marked <em>Coming soon</em> are being updated &mdash; check back shortly.</div>
-    <div class="hub-note">New: ongoing promos matter more than sign-up copy once the first deposit is gone. Read the <a href="/ongoing-betting-rewards-south-africa.html" style="color:#1d4ed8;font-weight:800;">BetSorted ongoing rewards guide</a> for loyalty-programme verdicts, recurring cashback notes, and the trap clauses that keep showing up across SA bookmakers.</div>
+    <section class="loyalty-banner" aria-label="Compare loyalty programs">
+      <div class="loyalty-banner-copy">
+        <strong>Compare loyalty programs, cashback, and ongoing promos</strong>
+        <p>The sign-up bonus is only the start. Use the operator table to compare recurring value, spot the promos that only sound good, and see the main catch before you bet.</p>
+      </div>
+      <div class="loyalty-banner-actions">
+        <a class="loyalty-primary" href="/ongoing-betting-rewards-south-africa.html">Compare loyalty programs</a>
+        <a class="loyalty-secondary" href="/blog/best-cashback-loyalty-programs-sa-bookmakers-2026.html">Read the blog version</a>
+      </div>
+    </section>
 
     <section class="bookmaker-grid" aria-label="Reviewed bookmaker cards">
       <article class="bookmaker-card" data-operator="betway">

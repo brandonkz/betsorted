@@ -34,6 +34,8 @@
     td { padding: 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; color: #0f172a; }
     tr:last-child td { border-bottom: 0; }
     .book-name { font-weight: 800; color: #1e3a8a; }
+    .book-link { display: inline-block; color: #1d4ed8; font-weight: 800; text-decoration: none; }
+    .book-link:hover, .book-link:focus-visible { text-decoration: underline; }
     .book-headline { display: block; margin-top: 6px; color: #334155; font-size: 0.84rem; line-height: 1.5; }
     .terms-text { display: block; margin-top: 6px; color: #64748b; font-size: 0.82rem; line-height: 1.45; }
     .value-positive { color: #166534; font-weight: 900; }
@@ -60,6 +62,23 @@
       .input-row { grid-template-columns: 1fr; }
       h1 { font-size: 1.65rem; }
       .context-grid { grid-template-columns: 1fr; }
+      .table-wrap { margin-inline: -4px; }
+      table { min-width: 860px; }
+      th:first-child,
+      td:first-child {
+        position: sticky;
+        left: 0;
+        background: inherit;
+      }
+      th:first-child {
+        z-index: 3;
+      }
+      td:first-child {
+        min-width: 230px;
+        background: #fff;
+        z-index: 2;
+        box-shadow: 12px 0 18px -18px rgba(15, 23, 42, 0.45);
+      }
     }
   </style>
   <meta property="og:image" content="https://betsorted.co.za/assets/og-image.png">
@@ -448,6 +467,33 @@
       return 'confidence confidence-low';
     }
 
+    function getPrimaryLink(offer) {
+      if (offer.affiliate_url) {
+        return {
+          url: offer.affiliate_url,
+          className: 'book-link affiliate-link',
+          attrs: ' rel="sponsored noopener" data-bookmaker="' + escapeHtml(offer.slug) + '"'
+        };
+      }
+      if (offer.review_url) {
+        return {
+          url: offer.review_url,
+          className: 'book-link',
+          attrs: ''
+        };
+      }
+      return null;
+    }
+
+    function renderBookmakerName(offer) {
+      const primaryLink = getPrimaryLink(offer);
+      const name = escapeHtml(offer.name);
+      if (!primaryLink) {
+        return '<span class="book-name">' + name + '</span>';
+      }
+      return '<a class="' + primaryLink.className + '" href="' + escapeHtml(primaryLink.url) + '"' + primaryLink.attrs + '><span class="book-name">' + name + '</span></a>';
+    }
+
     function renderTable(rows) {
       return '<div class="table-wrap"><table><thead><tr><th>Bookmaker</th><th>Bonus you get</th><th>Turnover required</th><th>Expected cost</th><th>Net est. value</th><th>Notes</th></tr></thead><tbody>' +
         rows.map(row => {
@@ -459,7 +505,7 @@
           const qualificationLine = row.qualifies
             ? 'Using ' + money(row.qualifyingDeposit) + ' as the qualifying deposit.'
             : 'Needs at least ' + money(b.min_deposit_zar) + ' to qualify.';
-          return '<tr><td><span class="book-name">' + escapeHtml(b.name) + '</span><span class="book-headline">' + escapeHtml(b.headline) + '</span><span class="' + confidenceClass(b.confidence) + '">' + escapeHtml(String(b.confidence).toUpperCase()) + ' confidence</span></td><td>' + money(row.bonusAmount) + '</td><td>' + money(row.turnover) + '</td><td>' + money(row.expectedCost) + '</td><td><span class="' + valueClass + '">' + money(row.retainedValue) + '</span></td><td>' + actions + '<span class="terms-text">' + escapeHtml(qualificationLine) + ' ' + escapeHtml(row.terms) + ' ' + escapeHtml(b.note) + '</span></td></tr>';
+          return '<tr><td>' + renderBookmakerName(b) + '<span class="book-headline">' + escapeHtml(b.headline) + '</span><span class="' + confidenceClass(b.confidence) + '">' + escapeHtml(String(b.confidence).toUpperCase()) + ' confidence</span></td><td>' + money(row.bonusAmount) + '</td><td>' + money(row.turnover) + '</td><td>' + money(row.expectedCost) + '</td><td><span class="' + valueClass + '">' + money(row.retainedValue) + '</span></td><td>' + actions + '<span class="terms-text">' + escapeHtml(qualificationLine) + ' ' + escapeHtml(row.terms) + ' ' + escapeHtml(b.note) + '</span></td></tr>';
         }).join('') + '</tbody></table></div>';
     }
 

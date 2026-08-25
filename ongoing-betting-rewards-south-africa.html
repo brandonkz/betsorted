@@ -41,12 +41,12 @@
     }
     body { background: linear-gradient(180deg, #eff4ff 0%, var(--bg) 220px); }
     .rewards-page { max-width: 1380px; margin: 0 auto; padding: 32px 20px 84px; color: var(--ink); }
-    .hero { display: grid; gap: 22px; margin-bottom: 26px; }
+    .rewards-hero { display: grid; gap: 22px; margin-bottom: 26px; padding: 10px 0 2px; }
     .eyebrow { display: inline-flex; width: fit-content; padding: 8px 12px; border-radius: 999px; background: var(--soft); color: var(--blue); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; }
-    .hero h1 { margin: 0; font-size: clamp(2.3rem, 5vw, 4.4rem); line-height: 0.98; color: var(--navy); }
-    .hero-copy { max-width: 980px; font-size: 1.1rem; line-height: 1.8; color: var(--muted); }
-    .source-note { background: linear-gradient(135deg, #0b1f44, #173a7a); color: #e8eefc; border-radius: 22px; padding: 20px 22px; box-shadow: var(--shadow); line-height: 1.7; }
-    .source-note strong { color: #fff; }
+    .rewards-hero h1 { margin: 0; font-size: clamp(2.3rem, 5vw, 4.4rem); line-height: 0.98; color: var(--navy); }
+    .hero-copy { max-width: 860px; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
+    .source-note { background: linear-gradient(135deg, #0b1f44, #173a7a); color: #e8eefc; border-radius: 22px; padding: 22px 24px; box-shadow: var(--shadow); line-height: 1.7; }
+    .source-note strong { display: block; margin-bottom: 8px; color: #fff; font-size: 1rem; }
     .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 8px 0 20px; }
     .fact-card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
     .fact-label { display:block; margin-bottom:10px; color: var(--blue); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -60,14 +60,28 @@
     .section-head p { margin: 0; color: var(--muted); line-height: 1.75; }
     .table-shell { position: relative; overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
     .table-shell::after { content: "Scroll for full comparison"; position: sticky; right: 12px; bottom: 10px; float: right; width: max-content; margin: 0 0 10px auto; padding: 6px 10px; border-radius: 999px; background: rgba(11,31,68,0.9); color: #fff; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.03em; }
-    table { width: 100%; min-width: 980px; border-collapse: collapse; table-layout: fixed; }
+    table { width: 100%; min-width: 1080px; border-collapse: collapse; table-layout: auto; }
     thead th { position: sticky; top: 0; z-index: 2; background: #eef4ff; color: var(--navy); font-size: 0.79rem; text-transform: uppercase; letter-spacing: 0.04em; }
-    th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.6; overflow-wrap: anywhere; word-break: break-word; hyphens: auto; }
-    tbody td { color: var(--muted); font-size: 0.94rem; }
-    tbody th.row-head { position: sticky; left: 0; z-index: 1; width: 180px; min-width: 180px; color: var(--ink); font-weight: 800; background: #fbfdff; }
+    th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.6; overflow-wrap: anywhere; word-break: normal; hyphens: auto; }
+    tbody td { color: var(--muted); font-size: 0.94rem; min-width: 160px; }
+    tbody th.row-head { position: sticky; left: 0; z-index: 1; width: 200px; min-width: 200px; color: var(--ink); font-weight: 800; background: #fbfdff; }
     tbody tr:nth-child(even) td, tbody tr:nth-child(even) th.row-head { background: #fcfdff; }
     tbody tr:hover td, tbody tr:hover th.row-head { background: #f4f8ff; }
     .table-shell[data-cards-ready="true"]::after { display: none; }
+    .table-shell.table-cards { overflow: visible; background: transparent; border: 0; box-shadow: none; }
+    .table-shell.table-cards::after { display: none; }
+    .table-shell.table-cards table { min-width: 0; display: block; }
+    .table-shell.table-cards thead { display: none; }
+    .table-shell.table-cards tbody { display: grid; gap: 18px; }
+    .table-shell.table-cards tbody tr { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+    .table-shell.table-cards tbody tr:nth-child(even) td,
+    .table-shell.table-cards tbody tr:nth-child(even) th.row-head,
+    .table-shell.table-cards tbody tr:hover td,
+    .table-shell.table-cards tbody tr:hover th.row-head { background: transparent; }
+    .table-shell.table-cards tbody th.row-head { position: static; display: flex; align-items: center; width: auto; min-width: 0; padding: 18px 18px 12px; background: linear-gradient(135deg, #eef4ff, #f8fbff); border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .table-shell.table-cards tbody td { display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 14px; min-width: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
+    .table-shell.table-cards tbody td::before { content: attr(data-label); color: var(--navy); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
+    .table-shell.table-cards tbody tr td:last-child { border-bottom: 0; padding-bottom: 18px; }
     .closing { margin-top: 38px; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: var(--shadow); }
     .closing p { margin: 0 0 12px; color: var(--muted); line-height: 1.75; }
     .cta-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
@@ -80,8 +94,24 @@
       .rewards-page { padding-inline: 14px; }
       .quick-nav { overflow-x: auto; flex-wrap: nowrap; scrollbar-width: thin; }
       .quick-nav a { white-space: nowrap; }
-      table { min-width: 860px; }
-      tbody th.row-head { width: 150px; min-width: 150px; }
+      table { min-width: 920px; }
+      tbody th.row-head { width: 170px; min-width: 170px; }
+    }
+    @media (max-width: 1460px) {
+      .table-shell[data-heavy-table="true"] { overflow: visible; background: transparent; border: 0; box-shadow: none; }
+      .table-shell[data-heavy-table="true"]::after { display: none; }
+      .table-shell[data-heavy-table="true"] table { min-width: 0; display: block; }
+      .table-shell[data-heavy-table="true"] thead { display: none; }
+      .table-shell[data-heavy-table="true"] tbody { display: grid; gap: 18px; }
+      .table-shell[data-heavy-table="true"] tbody tr { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+      .table-shell[data-heavy-table="true"] tbody tr:nth-child(even) td,
+      .table-shell[data-heavy-table="true"] tbody tr:nth-child(even) th.row-head,
+      .table-shell[data-heavy-table="true"] tbody tr:hover td,
+      .table-shell[data-heavy-table="true"] tbody tr:hover th.row-head { background: transparent; }
+      .table-shell[data-heavy-table="true"] tbody th.row-head { position: static; display: flex; align-items: center; width: auto; min-width: 0; padding: 18px 18px 12px; background: linear-gradient(135deg, #eef4ff, #f8fbff); border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+      .table-shell[data-heavy-table="true"] tbody td { display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 14px; min-width: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
+      .table-shell[data-heavy-table="true"] tbody td::before { content: attr(data-label); color: var(--navy); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
+      .table-shell[data-heavy-table="true"] tbody tr td:last-child { border-bottom: 0; padding-bottom: 18px; }
     }
     @media (max-width: 860px) {
       .table-shell { overflow: visible; background: transparent; border: 0; box-shadow: none; }
@@ -102,7 +132,7 @@
     }
     @media (max-width: 720px) {
       .quick-nav { position: static; }
-      .hero h1 { line-height: 1.02; }
+      .rewards-hero h1 { line-height: 1.02; }
       .hero-copy,
       .source-note { font-size: 0.98rem; }
       .fact-grid { grid-template-columns: 1fr; }
@@ -160,14 +190,14 @@
   </nav>
 
   <main class="rewards-page">
-    <section class="hero">
+    <section class="rewards-hero">
       <span class="eyebrow">Ongoing Rewards Audit</span>
-      <h1>Ongoing Rewards: What Sa Bookmakers Actually Give You</h1>
-      <p class="hero-copy">19 operators, every recurring promotion read against its own terms, and every scheme priced in rands. Verified 24 August 2026. BetSorted now mirrors the useful parts of that research directly on-site instead of hiding the good bits behind a spreadsheet.</p>
-      <div class="source-note"><strong>The One Finding That Matters</strong><br>Twelve of these nineteen operators run a loyalty programme. NOT ONE publishes a usable point-to-rand rate.<br>That is not an oversight repeated twelve times. 10bet&#x27;s terms state coins &#x27;have no monetary value&#x27;. Goldrush&#x27;s state &#x27;points hold no direct monetary value&#x27;. LottoStar&#x27;s reserve the calculation to its &#x27;sole discretion&#x27;. Sportingbet&#x27;s price list sits behind a 401 login and the T&amp;C link its own General Terms bind you to is a dead 404. Sun International&#x27;s FAQ literally poses the question &#x27;What is the rand value of Casino and Leisure Points?&#x27; and the answer sits in an accordion that never renders. Betway publishes its tier table as an IMAGE, so the multiplier cannot be read or quoted.<br>Every one of them will tell you precisely what each tier COSTS. None will tell you what a point BUYS. A programme confident in its value publishes its exchange rate.</div>
+      <h1>Best Ongoing Betting Rewards In South Africa</h1>
+      <p class="hero-copy">We checked 19 operators, priced the recurring offers that actually matter, and pulled the useful parts of the research onto the page in a format you can scan without fighting a spreadsheet.</p>
+      <div class="source-note"><strong>The Main Takeaway</strong>Twelve of these 19 operators run a loyalty scheme, but none publishes a clean, usable point-to-rand value. The strongest recurring value is usually not the loyalty club at all. It is the cash-style insurance, cashback, or early-payout mechanic that pays when a near miss would normally wipe you out.</div>
     </section>
 
-    <section class="fact-grid"><article class="fact-card"><span class="fact-label">The One Finding That Matters</span><p>Twelve of these nineteen operators run a loyalty programme. NOT ONE publishes a usable point-to-rand rate.</p></article><article class="fact-card"><span class="fact-label">The One Finding That Matters</span><p>That is not an oversight repeated twelve times. 10bet&#x27;s terms state coins &#x27;have no monetary value&#x27;. Goldrush&#x27;s state &#x27;points hold no direct monetary value&#x27;. LottoStar&#x27;s reserve the calculation to its &#x27;sole discretion&#x27;. Sportingbet&#x27;s price list sits behind a 401 login and the T&amp;C link its own General Terms bind you to is a dead 404. Sun International&#x27;s FAQ literally poses the question &#x27;What is the rand value of Casino and Leisure Points?&#x27; and the answer sits in an accordion that never renders. Betway publishes its tier table as an IMAGE, so the multiplier cannot be read or quoted.</p></article><article class="fact-card"><span class="fact-label"></span><p>The real money is not in loyalty schemes at all. It is in ACCA INSURANCE. Sportingbet&#x27;s tennis multi cashback is worth about R29 per R100 staked; Goldrush&#x27;s Stake Back Treble about R21 in cash; 10bet&#x27;s Multi Bet Insurance about R18. These pay on the near-miss that otherwise destroys accumulator punters, and the best of them pay cash with no rollover.</p></article></section>
+    <section class="fact-grid"><article class="fact-card"><span class="fact-label">Biggest Pattern</span><p>12 of 19 operators have a loyalty scheme. None publishes a straightforward point-to-rand value.</p></article><article class="fact-card"><span class="fact-label">Best Real Value</span><p>The best recurring deals tend to be insurance-style promos and cashback, not points clubs dressed up as VIP programmes.</p></article><article class="fact-card"><span class="fact-label">How To Use This Page</span><p>Start with the value sections if you want the shortlist. Drop into the operator and trap sections when you want the fine print.</p></article></section>
 
     <nav class="quick-nav" aria-label="Section navigation">
       <a href="#loyalty-schemes">Loyalty Table</a>
@@ -206,6 +236,9 @@
     document.querySelectorAll('.table-shell table').forEach((table) => {
       const shell = table.closest('.table-shell');
       const headers = Array.from(table.querySelectorAll('thead th')).map((cell) => cell.textContent.trim());
+      if (headers.length >= 4) {
+        shell.dataset.heavyTable = 'true';
+      }
       table.querySelectorAll('tbody tr').forEach((row) => {
         Array.from(row.children).forEach((cell, index) => {
           if (index === 0) return;

@@ -21,7 +21,11 @@ const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
 // SA-relevant sports (prioritized order)
 const SPORTS = [
   'soccer_epl', // Premier League (most popular in SA)
-  'soccer_uefa_champs_league', // Champions League (popular in SA)
+  'soccer_uefa_champs_league_qualification', // Current European tournament action
+  'soccer_spain_la_liga',
+  'soccer_italy_serie_a',
+  'soccer_germany_bundesliga',
+  'soccer_france_ligue_one',
   'cricket_t20_world_cup', // T20 World Cup (when Proteas play)
 ];
 
@@ -224,6 +228,16 @@ function formatMatchForFinder(game) {
   
   if (game.sport_key.includes('soccer_epl')) {
     league = 'Premier League';
+  } else if (game.sport_key.includes('uefa_champs_league_qualification')) {
+    league = 'Champions League Qualifiers';
+  } else if (game.sport_key.includes('spain_la_liga')) {
+    league = 'La Liga';
+  } else if (game.sport_key.includes('italy_serie_a')) {
+    league = 'Serie A';
+  } else if (game.sport_key.includes('germany_bundesliga')) {
+    league = 'Bundesliga';
+  } else if (game.sport_key.includes('france_ligue_one')) {
+    league = 'Ligue 1';
   } else if (game.sport_key.includes('champs_league')) {
     league = 'Champions League';
   } else if (game.sport_key.includes('rugby')) {

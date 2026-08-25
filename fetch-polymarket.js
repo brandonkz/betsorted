@@ -11,7 +11,7 @@ const MARKET_CONFIGS = [
       return `EPL: ${year} Champion`;
     },
     slug: 'epl',
-    title: 'EPL Title Race 2026/27',
+    title: 'Premier League Winner',
     icon: '🏴',
     endsFor(year) {
       return `May ${year}`;
@@ -32,6 +32,18 @@ const MARKET_CONFIGS = [
   },
   {
     titleFor(year) {
+      return `UEFA Europa League: ${year} Champion`;
+    },
+    slug: 'uel',
+    title: 'Europa League Winner',
+    icon: '🏆',
+    endsFor(year) {
+      return `May ${year}`;
+    },
+    desc: 'Which club looks strongest in the Europa League market right now?',
+  },
+  {
+    titleFor(year) {
       return `LALIGA: ${year} Champion`;
     },
     slug: 'laliga',
@@ -41,6 +53,42 @@ const MARKET_CONFIGS = [
       return `May ${year}`;
     },
     desc: 'Barcelona, Real Madrid and the chasing pack in the live La Liga outright market.',
+  },
+  {
+    titleFor(year) {
+      return `Serie A: ${year} Champion`;
+    },
+    slug: 'serie-a',
+    title: 'Serie A Winner',
+    icon: '🇮🇹',
+    endsFor(year) {
+      return `May ${year}`;
+    },
+    desc: 'The current Serie A title picture based on live prediction market pricing.',
+  },
+  {
+    titleFor(year) {
+      return `Bundesliga: ${year} Champion`;
+    },
+    slug: 'bundesliga',
+    title: 'Bundesliga Winner',
+    icon: '🇩🇪',
+    endsFor(year) {
+      return `May ${year}`;
+    },
+    desc: 'Bundesliga outright prices from the live market.',
+  },
+  {
+    titleFor(year) {
+      return `Ligue 1: ${year} Champion`;
+    },
+    slug: 'ligue-1',
+    title: 'Ligue 1 Winner',
+    icon: '🇫🇷',
+    endsFor(year) {
+      return `May ${year}`;
+    },
+    desc: 'Ligue 1 title probabilities from the live prediction market.',
   },
 ];
 

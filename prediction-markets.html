@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compare Polymarket prediction market probabilities with SA bookmaker odds. Find where smart money disagrees with Betway and Hollywoodbets — EPL, Champions League, World Cup.">
+  <meta name="description" content="See current Premier League and European football fixtures, then compare live prediction market probabilities with bookmaker prices. EPL, Champions League, Europa League, La Liga and more.">
   <link rel="canonical" href="https://betsorted.co.za/prediction-markets.html">
   <title>Prediction Markets vs SA Bookmakers | Smart Money Guide | BetSorted</title>
   <link rel="stylesheet" href="/style.css">
@@ -98,6 +98,30 @@
     .v-badge.low { background: #f3f4f6; color: #9ca3af; }
 
     /* How to use callout */
+    .section-kicker { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; color: #1d4ed8; border-radius: 999px; padding: 6px 12px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .section-head { margin-bottom: 18px; }
+    .section-head h2 { font-size: 1.45rem; font-weight: 900; color: #0f172a; margin: 0 0 8px; }
+    .section-head p { margin: 0; color: #64748b; line-height: 1.6; }
+
+    .fixture-board { margin-bottom: 36px; }
+    .fixture-groups { display: grid; gap: 18px; }
+    .fixture-group { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05); }
+    .fixture-group-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; flex-wrap: wrap; }
+    .fixture-group-head h3 { margin: 0; font-size: 1rem; font-weight: 800; }
+    .fixture-count { background: rgba(255,255,255,0.14); padding: 5px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+    .fixture-list { display: grid; gap: 0; }
+    .fixture-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(110px, 0.7fr) minmax(0, 1fr) auto; gap: 14px; padding: 16px 18px; border-top: 1px solid #f1f5f9; align-items: center; }
+    .fixture-row:first-child { border-top: none; }
+    .fixture-match { display: grid; gap: 4px; }
+    .fixture-teams { font-weight: 800; color: #0f172a; }
+    .fixture-meta { font-size: 0.8rem; color: #64748b; }
+    .fixture-kickoff { font-size: 0.84rem; font-weight: 700; color: #1d4ed8; }
+    .fixture-price { display: grid; gap: 2px; text-align: left; }
+    .fixture-price strong { font-size: 1rem; color: #059669; }
+    .fixture-price span { font-size: 0.76rem; color: #64748b; }
+    .fixture-action { display: inline-flex; align-items: center; justify-content: center; background: #2563eb; color: #fff; padding: 9px 14px; border-radius: 10px; font-size: 0.78rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .fixture-action:hover { background: #1d4ed8; }
+
     .howto { background: #fafafa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; }
     .howto h3 { font-size: 0.95rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; }
     .howto ol { margin: 0; padding-left: 20px; }
@@ -118,7 +142,15 @@
 
     .bw-inline { display: none; }
 
+    @media (max-width: 820px) {
+      .fixture-row { grid-template-columns: 1fr; gap: 10px; }
+      .fixture-action { width: 100%; }
+    }
+
     @media (max-width: 640px) {
+      .pm-page { padding-top: 28px; }
+      .explainer { grid-template-columns: 1fr; padding: 18px; }
+      .section-head h2 { font-size: 1.2rem; }
       .market-table th.hide-mob, .market-table td.hide-mob { display: none; }
       .market-table th.hide-mob-col, .market-table td.hide-mob-col { display: none; }
       .market-table th.bw-col, .market-table td.bw-col { display: none; }
@@ -222,29 +254,46 @@
 
   <main class="pm-page">
     <h1>⚖️ Smart Money vs SA Bookmakers</h1>
-    <p class="subtitle">Polymarket pools millions in real money from traders worldwide to generate crowd-sourced win probabilities. Compare their implied odds with what SA bookmakers are offering — and spot where the value is.</p>
+    <p class="subtitle">Start with the live European football card, then use prediction-market prices as a second opinion on the biggest season markets. This page is built for punters following the Premier League and major UEFA nights.</p>
 
     <div class="explainer">
       <div class="explainer-icon">💡</div>
       <div>
-        <h2>What is Polymarket?</h2>
-        <p>Polymarket is a US-based prediction market where traders bet real money on outcomes. With $600M+ wagered across sports markets, their probabilities reflect sophisticated, consensus views — often more accurate than tipsters or analysts. When a SA bookmaker offers better odds than Polymarket implies, that's a potential value bet.</p>
+        <h2>What is Smart Money?</h2>
+        <p>Think of this page as a fast football watchlist. The top section shows current Premier League and European fixtures worth checking right now. The season-market section below uses Polymarket prices to show what the crowd thinks the fair outright price should be before you compare it with a bookmaker.</p>
         <div class="stats">
-          <div class="stat"><div class="sv">$241M</div><div class="sl">EPL market</div></div>
-          <div class="stat"><div class="sv">$231M</div><div class="sl">UCL market</div></div>
-          <div class="stat"><div class="sv">$164M</div><div class="sl">World Cup</div></div>
-          <div class="stat"><div class="sv">$91M</div><div class="sl">La Liga</div></div>
+          <div class="stat"><div class="sv">EPL</div><div class="sl">Current fixtures</div></div>
+          <div class="stat"><div class="sv">UEFA</div><div class="sl">European nights</div></div>
+          <div class="stat"><div class="sv">6+</div><div class="sl">Leagues tracked</div></div>
+          <div class="stat"><div class="sv">2x</div><div class="sl">Daily refresh</div></div>
         </div>
       </div>
     </div>
 
+    <section class="fixture-board">
+      <div class="section-head">
+        <div class="section-kicker">Live Fixture Board</div>
+        <h2>Current Premier League and Europe games</h2>
+        <p>Use this as your first scan before a betting session. We surface the next batch of major European matches so the page feels alive, not stuck in last season.</p>
+      </div>
+      <div id="fixtures-container">
+        <div class="loading-card"><div class="spinner"></div><p>Loading current European fixtures...</p></div>
+      </div>
+    </section>
+
     <div class="howto">
       <h3>📖 How to use this</h3>
       <ol>
-        <li><strong>Find the "Fair Odds"</strong> — this is the decimal equivalent of Polymarket's probability (e.g. 20% = 5.00 fair odds)</li>
-        <li><strong>Check at a SA bookmaker</strong> — if Betway or Hollywoodbets are offering odds <em>higher</em> than the fair price, that's a value bet</li>
-        <li><strong>Use our <a href="/value-bet-calculator.html">Value Bet Calculator</a></strong> — enter your probability estimate and the bookmaker's odds to get an exact EV %</li>
+        <li><strong>Start with the fixture board</strong> to see the next EPL and European matches on the card.</li>
+        <li><strong>Use the season-market tables below</strong> to get a fair outright price from the prediction market.</li>
+        <li><strong>Check your bookmaker price</strong> and run it through our <a href="/value-bet-calculator.html">Value Bet Calculator</a> before staking.</li>
       </ol>
+    </div>
+
+    <div class="section-head">
+      <div class="section-kicker">Season Markets</div>
+      <h2>Prediction market outrights</h2>
+      <p>These are the long-term football markets where crowd pricing is most useful: title races and major UEFA trophies.</p>
     </div>
 
     <div id="markets-container">
@@ -285,6 +334,105 @@
   <script>
     const AFF_BETWAY = 'https://sports.betway.co.za/';
     const AFF_PLAY   = 'https://affiliates.play.co.za/links/?btag=2673740';
+    const FEATURED_LEAGUES = [
+      'Premier League',
+      'Champions League Qualifiers',
+      'La Liga',
+      'Serie A',
+      'Bundesliga',
+      'Ligue 1'
+    ];
+
+    function formatKickoff(datetime) {
+      const date = new Date(datetime);
+      return date.toLocaleString('en-ZA', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: 'Africa/Johannesburg'
+      }) + ' SAST';
+    }
+
+    function fixturePrice(match) {
+      if (!Array.isArray(match.bookmakers) || !match.bookmakers.length) return null;
+      const betway = match.bookmakers.find((book) => book.isSouthAfrica);
+      return betway || match.bookmakers[0];
+    }
+
+    function renderFixtureGroup(league, matches) {
+      const rows = matches.map((match) => {
+        const price = fixturePrice(match);
+        const label = price ? (price.isSouthAfrica ? 'Betway reference' : `${price.name} reference`) : 'Price check';
+        return `<div class="fixture-row">
+          <div class="fixture-match">
+            <div class="fixture-teams">${match.homeTeam} vs ${match.awayTeam}</div>
+            <div class="fixture-meta">${match.market || 'Match result reference'}</div>
+          </div>
+          <div class="fixture-kickoff">${formatKickoff(match.datetime)}</div>
+          <div class="fixture-price">
+            <strong>${price ? price.odds.toFixed(2) : '—'}</strong>
+            <span>${label}</span>
+          </div>
+          <a class="fixture-action" href="/best-odds-finder.html">Compare odds</a>
+        </div>`;
+      }).join('');
+
+      return `<div class="fixture-group">
+        <div class="fixture-group-head">
+          <h3>${league}</h3>
+          <span class="fixture-count">${matches.length} matches</span>
+        </div>
+        <div class="fixture-list">${rows}</div>
+      </div>`;
+    }
+
+    async function loadFixtures() {
+      try {
+        const res = await fetch('/data/live-odds.json');
+        if (!res.ok) throw new Error('Not found');
+        const data = await res.json();
+        const grouped = new Map();
+
+        for (const league of FEATURED_LEAGUES) {
+          grouped.set(league, []);
+        }
+
+        for (const match of data.matches || []) {
+          if (!FEATURED_LEAGUES.includes(match.league)) continue;
+          if (grouped.get(match.league).length >= 4) continue;
+          grouped.get(match.league).push(match);
+        }
+
+        const groups = [...grouped.entries()].filter(([, matches]) => matches.length);
+        if (!groups.length) throw new Error('No fixtures');
+
+        const updatedAt = new Date(data.updated).toLocaleString('en-ZA', {
+          day: 'numeric',
+          month: 'short',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZone: 'Africa/Johannesburg'
+        });
+
+        const html = `<div class="updated-bar">
+          <span>⏱ Fixture feed updated: ${updatedAt} SAST</span>
+          <span>Source: <a href="/best-odds-finder.html">Best Odds Finder feed</a></span>
+        </div>
+        <div class="fixture-groups">
+          ${groups.map(([league, matches]) => renderFixtureGroup(league, matches)).join('')}
+        </div>`;
+
+        document.getElementById('fixtures-container').innerHTML = html;
+      } catch (e) {
+        document.getElementById('fixtures-container').innerHTML = `
+          <div class="loading-card">
+            <p style="color:#374151;font-weight:600;">Could not load current football fixtures.</p>
+            <p style="font-size:0.875rem;">Use the <a href="/best-odds-finder.html" style="color:#2563eb;">Best Odds Finder</a> while we refresh the feed.</p>
+          </div>`;
+      }
+    }
 
     function valueBadge(prob) {
       if (prob >= 0.20) return '<span class="v-badge top">🔥 Major market</span>';
@@ -465,6 +613,7 @@
       }
     }
 
+    loadFixtures();
     loadMarkets();
     loadKalshi();
   </script>

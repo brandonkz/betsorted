@@ -1,79 +1,640 @@
 {
-  "updatedAt": "2026-08-25T10:03:21.697Z",
+  "updatedAt": "2026-08-25T10:24:06.736Z",
   "events": [
     {
-      "id": 33507,
+      "id": 659518,
       "slug": "epl",
-      "title": "EPL Title Race 2025/26",
-      "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "volumeM": 241,
-      "ends": "May 2026",
-      "desc": "Which club wins the Premier League?",
+      "title": "Premier League Winner",
+      "icon": "🏴",
+      "volumeM": 10.2,
+      "ends": "May 2027",
+      "desc": "Who wins the current Premier League title race? Market prices reflect live Polymarket consensus.",
       "outcomes": [
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 12340533.59949487
+          "prob": 0.515,
+          "pct": 51.5,
+          "fairDec": 1.94,
+          "vol": 663980.527727
+        },
+        {
+          "name": "Manchester City",
+          "flag": "",
+          "prob": 0.195,
+          "pct": 19.5,
+          "fairDec": 5.13,
+          "vol": 1836024.86635
+        },
+        {
+          "name": "Chelsea",
+          "flag": "",
+          "prob": 0.125,
+          "pct": 12.5,
+          "fairDec": 8,
+          "vol": 584602.4261190002
+        },
+        {
+          "name": "Liverpool",
+          "flag": "",
+          "prob": 0.105,
+          "pct": 10.5,
+          "fairDec": 9.52,
+          "vol": 522514.15144399996
+        },
+        {
+          "name": "Manchester United",
+          "flag": "",
+          "prob": 0.055,
+          "pct": 5.5,
+          "fairDec": 18.18,
+          "vol": 476730.457506
+        },
+        {
+          "name": "Tottenham",
+          "flag": "",
+          "prob": 0.0125,
+          "pct": 1.3,
+          "fairDec": 80,
+          "vol": 606803.5763630001
+        },
+        {
+          "name": "Brighton",
+          "flag": "",
+          "prob": 0.0075,
+          "pct": 0.8,
+          "fairDec": 133.33,
+          "vol": 587523.173276
+        },
+        {
+          "name": "Aston Villa",
+          "flag": "",
+          "prob": 0.0065,
+          "pct": 0.7,
+          "fairDec": 153.85,
+          "vol": 431881.43632399995
+        },
+        {
+          "name": "Brentford",
+          "flag": "",
+          "prob": 0.0055,
+          "pct": 0.5,
+          "fairDec": 181.82,
+          "vol": 704270.6576719999
+        },
+        {
+          "name": "Newcastle United",
+          "flag": "",
+          "prob": 0.0035,
+          "pct": 0.4,
+          "fairDec": 285.71,
+          "vol": 553429.9285579999
         }
       ]
     },
     {
-      "id": 33506,
+      "id": 659671,
       "slug": "ucl",
       "title": "Champions League Winner",
       "icon": "⭐",
-      "volumeM": 231,
-      "ends": "May 2026",
-      "desc": "Who lifts the UCL trophy in Munich?",
-      "outcomes": [
-        {
-          "name": "PSG",
-          "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 19428880.867619038
-        }
-      ]
-    },
-    {
-      "id": 30615,
-      "slug": "worldcup",
-      "title": "2026 FIFA World Cup Winner",
-      "icon": "🌍",
-      "volumeM": 164,
-      "ends": "Jul 2026",
-      "desc": "Who wins the World Cup?",
-      "outcomes": [
-        {
-          "name": "Spain",
-          "flag": "🇪🇸",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 152168021.58979887
-        }
-      ]
-    },
-    {
-      "id": 33509,
-      "slug": "laliga",
-      "title": "La Liga Winner 2025/26",
-      "icon": "🇪🇸",
-      "volumeM": 91,
-      "ends": "May 2026",
-      "desc": "Real Madrid vs Barcelona — who wins La Liga?",
+      "volumeM": 14.5,
+      "ends": "May 2027",
+      "desc": "Which club lifts the Champions League trophy this season?",
       "outcomes": [
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 1,
-          "pct": 100,
-          "fairDec": 1,
-          "vol": 2889842.1004859824
+          "prob": 0.165,
+          "pct": 16.5,
+          "fairDec": 6.06,
+          "vol": 455432.24017099984
+        },
+        {
+          "name": "Arsenal",
+          "flag": "",
+          "prob": 0.155,
+          "pct": 15.5,
+          "fairDec": 6.45,
+          "vol": 356432.933125
+        },
+        {
+          "name": "Paris Saint-Germain",
+          "flag": "",
+          "prob": 0.145,
+          "pct": 14.5,
+          "fairDec": 6.9,
+          "vol": 156403.75048699998
+        },
+        {
+          "name": "Bayern Munich",
+          "flag": "",
+          "prob": 0.135,
+          "pct": 13.5,
+          "fairDec": 7.41,
+          "vol": 124128.587265
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 408643.08976299997
+        },
+        {
+          "name": "Manchester City",
+          "flag": "",
+          "prob": 0.085,
+          "pct": 8.5,
+          "fairDec": 11.76,
+          "vol": 93479.33708699999
+        },
+        {
+          "name": "Liverpool",
+          "flag": "",
+          "prob": 0.065,
+          "pct": 6.5,
+          "fairDec": 15.38,
+          "vol": 60202.974843
+        },
+        {
+          "name": "Manchester United",
+          "flag": "",
+          "prob": 0.0295,
+          "pct": 2.9,
+          "fairDec": 33.9,
+          "vol": 246140.53110099997
+        },
+        {
+          "name": "Inter Milan",
+          "flag": "",
+          "prob": 0.0235,
+          "pct": 2.4,
+          "fairDec": 42.55,
+          "vol": 334495.14538500004
+        },
+        {
+          "name": "Atlético Madrid",
+          "flag": "",
+          "prob": 0.0235,
+          "pct": 2.4,
+          "fairDec": 42.55,
+          "vol": 315531.631736
+        }
+      ]
+    },
+    {
+      "id": 659672,
+      "slug": "uel",
+      "title": "Europa League Winner",
+      "icon": "🏆",
+      "volumeM": 0.1,
+      "ends": "May 2027",
+      "desc": "Which club looks strongest in the Europa League market right now?",
+      "outcomes": [
+        {
+          "name": "Milan",
+          "flag": "",
+          "prob": 0.215,
+          "pct": 21.5,
+          "fairDec": 4.65,
+          "vol": 11973.828804
+        },
+        {
+          "name": "Juventus",
+          "flag": "",
+          "prob": 0.175,
+          "pct": 17.5,
+          "fairDec": 5.71,
+          "vol": 1600.8099730000001
+        },
+        {
+          "name": "Bayer Leverkusen",
+          "flag": "",
+          "prob": 0.165,
+          "pct": 16.5,
+          "fairDec": 6.06,
+          "vol": 4509.706929
+        },
+        {
+          "name": "Bournemouth",
+          "flag": "",
+          "prob": 0.1575,
+          "pct": 15.8,
+          "fairDec": 6.35,
+          "vol": 5457.278936
+        },
+        {
+          "name": "Crystal Palace",
+          "flag": "",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 13243.660471
+        },
+        {
+          "name": "Real Sociedad",
+          "flag": "",
+          "prob": 0.062,
+          "pct": 6.2,
+          "fairDec": 16.13,
+          "vol": 1618.774031
+        },
+        {
+          "name": "Marseille",
+          "flag": "",
+          "prob": 0.04,
+          "pct": 4,
+          "fairDec": 25,
+          "vol": 2360.73302
+        },
+        {
+          "name": "Sunderland",
+          "flag": "",
+          "prob": 0.035,
+          "pct": 3.5,
+          "fairDec": 28.57,
+          "vol": 2337.964577
+        },
+        {
+          "name": "Celta Vigo",
+          "flag": "",
+          "prob": 0.021,
+          "pct": 2.1,
+          "fairDec": 47.62,
+          "vol": 1659.5977
+        },
+        {
+          "name": "Rennes",
+          "flag": "",
+          "prob": 0.021,
+          "pct": 2.1,
+          "fairDec": 47.62,
+          "vol": 2168.5319329999998
+        }
+      ]
+    },
+    {
+      "id": 659548,
+      "slug": "laliga",
+      "title": "La Liga Winner",
+      "icon": "🇪🇸",
+      "volumeM": 3.2,
+      "ends": "May 2027",
+      "desc": "Barcelona, Real Madrid and the chasing pack in the live La Liga outright market.",
+      "outcomes": [
+        {
+          "name": "Barcelona",
+          "flag": "",
+          "prob": 0.585,
+          "pct": 58.5,
+          "fairDec": 1.71,
+          "vol": 306639.91322000005
+        },
+        {
+          "name": "Real Madrid",
+          "flag": "",
+          "prob": 0.375,
+          "pct": 37.5,
+          "fairDec": 2.67,
+          "vol": 390328.96988900006
+        },
+        {
+          "name": "Atlético Madrid",
+          "flag": "",
+          "prob": 0.0295,
+          "pct": 2.9,
+          "fairDec": 33.9,
+          "vol": 280595.516255
+        },
+        {
+          "name": "Betis",
+          "flag": "",
+          "prob": 0.0035,
+          "pct": 0.4,
+          "fairDec": 285.71,
+          "vol": 129543.53239199998
+        },
+        {
+          "name": "Villarreal",
+          "flag": "",
+          "prob": 0.003,
+          "pct": 0.3,
+          "fairDec": 333.33,
+          "vol": 241880.911145
+        },
+        {
+          "name": "Athletic Bilbao",
+          "flag": "",
+          "prob": 0.0015,
+          "pct": 0.1,
+          "fairDec": 666.67,
+          "vol": 210781.56649900007
+        },
+        {
+          "name": "Sevilla",
+          "flag": "",
+          "prob": 0.0015,
+          "pct": 0.1,
+          "fairDec": 666.67,
+          "vol": 270181.19833299995
+        },
+        {
+          "name": "Alavés",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 250068.22400000002
+        },
+        {
+          "name": "Celta Vigo",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 119493.13033300001
+        },
+        {
+          "name": "Espanyol",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 66592.027
+        }
+      ]
+    },
+    {
+      "id": 659488,
+      "slug": "serie-a",
+      "title": "Serie A Winner",
+      "icon": "🇮🇹",
+      "volumeM": 0.2,
+      "ends": "May 2027",
+      "desc": "The current Serie A title picture based on live prediction market pricing.",
+      "outcomes": [
+        {
+          "name": "Inter Milan",
+          "flag": "",
+          "prob": 0.485,
+          "pct": 48.5,
+          "fairDec": 2.06,
+          "vol": 41872.358955
+        },
+        {
+          "name": "Juventus",
+          "flag": "",
+          "prob": 0.14,
+          "pct": 14,
+          "fairDec": 7.14,
+          "vol": 6092.685941000001
+        },
+        {
+          "name": "Napoli",
+          "flag": "",
+          "prob": 0.135,
+          "pct": 13.5,
+          "fairDec": 7.41,
+          "vol": 6094.480551000001
+        },
+        {
+          "name": "AC Milan",
+          "flag": "",
+          "prob": 0.115,
+          "pct": 11.5,
+          "fairDec": 8.7,
+          "vol": 8917.020224
+        },
+        {
+          "name": "Roma",
+          "flag": "",
+          "prob": 0.107,
+          "pct": 10.7,
+          "fairDec": 9.35,
+          "vol": 47918.22919200001
+        },
+        {
+          "name": "Como",
+          "flag": "",
+          "prob": 0.046,
+          "pct": 4.6,
+          "fairDec": 21.74,
+          "vol": 16481.796264999997
+        },
+        {
+          "name": "Atalanta",
+          "flag": "",
+          "prob": 0.009,
+          "pct": 0.9,
+          "fairDec": 111.11,
+          "vol": 5020.908181999999
+        },
+        {
+          "name": "Fiorentina",
+          "flag": "",
+          "prob": 0.0035,
+          "pct": 0.4,
+          "fairDec": 285.71,
+          "vol": 3918.4258320000004
+        },
+        {
+          "name": "Lazio",
+          "flag": "",
+          "prob": 0.003,
+          "pct": 0.3,
+          "fairDec": 333.33,
+          "vol": 3794.5933330000003
+        },
+        {
+          "name": "Bologna",
+          "flag": "",
+          "prob": 0.0015,
+          "pct": 0.1,
+          "fairDec": 666.67,
+          "vol": 3160.6130000000007
+        }
+      ]
+    },
+    {
+      "id": 681261,
+      "slug": "bundesliga",
+      "title": "Bundesliga Winner",
+      "icon": "🇩🇪",
+      "volumeM": 0.1,
+      "ends": "May 2027",
+      "desc": "Bundesliga outright prices from the live market.",
+      "outcomes": [
+        {
+          "name": "Bayern Munich",
+          "flag": "",
+          "prob": 0.865,
+          "pct": 86.5,
+          "fairDec": 1.16,
+          "vol": 28388.967345
+        },
+        {
+          "name": "Borussia Dortmund",
+          "flag": "",
+          "prob": 0.065,
+          "pct": 6.5,
+          "fairDec": 15.38,
+          "vol": 8982.570518999997
+        },
+        {
+          "name": "RB Leipzig",
+          "flag": "",
+          "prob": 0.035,
+          "pct": 3.5,
+          "fairDec": 28.57,
+          "vol": 5040.102837
+        },
+        {
+          "name": "Bayer Leverkusen",
+          "flag": "",
+          "prob": 0.0325,
+          "pct": 3.3,
+          "fairDec": 30.77,
+          "vol": 7021.219889999999
+        },
+        {
+          "name": "VfB Stuttgart",
+          "flag": "",
+          "prob": 0.008,
+          "pct": 0.8,
+          "fairDec": 125,
+          "vol": 8582.258211999999
+        },
+        {
+          "name": "SC Freiburg",
+          "flag": "",
+          "prob": 0.002,
+          "pct": 0.2,
+          "fairDec": 500,
+          "vol": 6633.202
+        },
+        {
+          "name": "Eintracht Frankfurt",
+          "flag": "",
+          "prob": 0.001,
+          "pct": 0.1,
+          "fairDec": 1000,
+          "vol": 8293.281865999998
+        },
+        {
+          "name": "TSG Hoffenheim",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 5445.889999999999
+        },
+        {
+          "name": "Mainz 05",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 2754.752
+        },
+        {
+          "name": "Borussia Mönchengladbach",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 2749.9575
+        }
+      ]
+    },
+    {
+      "id": 659573,
+      "slug": "ligue-1",
+      "title": "Ligue 1 Winner",
+      "icon": "🇫🇷",
+      "volumeM": 0.2,
+      "ends": "May 2027",
+      "desc": "Ligue 1 title probabilities from the live prediction market.",
+      "outcomes": [
+        {
+          "name": "Paris Saint-Germain",
+          "flag": "",
+          "prob": 0.865,
+          "pct": 86.5,
+          "fairDec": 1.16,
+          "vol": 43070.51279600001
+        },
+        {
+          "name": "Marseille",
+          "flag": "",
+          "prob": 0.0405,
+          "pct": 4,
+          "fairDec": 24.69,
+          "vol": 29650.442421999993
+        },
+        {
+          "name": "Lens",
+          "flag": "",
+          "prob": 0.0315,
+          "pct": 3.1,
+          "fairDec": 31.75,
+          "vol": 19260.912925
+        },
+        {
+          "name": "Lille",
+          "flag": "",
+          "prob": 0.024,
+          "pct": 2.4,
+          "fairDec": 41.67,
+          "vol": 19532.540865999996
+        },
+        {
+          "name": "Lyon",
+          "flag": "",
+          "prob": 0.0235,
+          "pct": 2.4,
+          "fairDec": 42.55,
+          "vol": 16839.258428
+        },
+        {
+          "name": "Monaco",
+          "flag": "",
+          "prob": 0.0185,
+          "pct": 1.8,
+          "fairDec": 54.05,
+          "vol": 16156.239068000003
+        },
+        {
+          "name": "Rennes",
+          "flag": "",
+          "prob": 0.0095,
+          "pct": 0.9,
+          "fairDec": 105.26,
+          "vol": 13959.149158999999
+        },
+        {
+          "name": "Strasbourg",
+          "flag": "",
+          "prob": 0.0025,
+          "pct": 0.3,
+          "fairDec": 400,
+          "vol": 11725.805666
+        },
+        {
+          "name": "Angers",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 3940.5054999999998
+        },
+        {
+          "name": "Auxerre",
+          "flag": "",
+          "prob": 0.0005,
+          "pct": 0.1,
+          "fairDec": 2000,
+          "vol": 3264.65
         }
       ]
     }

@@ -183,7 +183,13 @@ async function main() {
   console.log(`Saved ${feedEntries.length} active Polymarket events to ${outputPath}`);
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+module.exports = {
+  main,
+};
+
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}

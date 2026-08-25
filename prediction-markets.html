@@ -334,6 +334,7 @@
   <script>
     const AFF_BETWAY = 'https://sports.betway.co.za/';
     const AFF_PLAY   = 'https://affiliates.play.co.za/links/?btag=2673740';
+    const FEED_VERSION = '2026-08-25-smart-money-fix';
     const FEATURED_LEAGUES = [
       'Premier League',
       'Champions League Qualifiers',
@@ -390,7 +391,7 @@
 
     async function loadFixtures() {
       try {
-        const res = await fetch('/data/live-odds.json');
+        const res = await fetch(`/data/live-odds.json?v=${FEED_VERSION}`);
         if (!res.ok) throw new Error('Not found');
         const data = await res.json();
         const grouped = new Map();
@@ -503,7 +504,7 @@
 
     async function loadMarkets() {
       try {
-        const res = await fetch('/data/polymarket.json');
+        const res = await fetch(`/data/polymarket.json?v=${FEED_VERSION}`);
         if (!res.ok) throw new Error('Not found');
         const data = await res.json();
 
@@ -596,7 +597,7 @@
 
     async function loadKalshi() {
       try {
-        const res = await fetch('/data/kalshi.json');
+        const res = await fetch(`/data/kalshi.json?v=${FEED_VERSION}`);
         if (!res.ok) throw new Error('Not found');
         const data = await res.json();
         let html = '';

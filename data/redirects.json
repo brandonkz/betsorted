@@ -649,6 +649,11 @@
       "type": "external_affiliate_redirect"
     },
     {
+      "source": "/go/playabets.html",
+      "target": "https://trk.playbet.net/o/u_K-Lb",
+      "type": "external_affiliate_redirect"
+    },
+    {
       "source": "/go/sportingbet.html",
       "target": "/bookmakers/sportingbet-review.html",
       "type": "internal_go_placeholder"

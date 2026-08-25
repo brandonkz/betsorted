@@ -254,20 +254,39 @@
 
   <main class="pm-page">
     <h1>⚖️ Smart Money vs SA Bookmakers</h1>
-    <p class="subtitle">Start with the live European football card, then use prediction-market prices as a second opinion on the biggest season markets. This page is built for punters following the Premier League and major UEFA nights.</p>
+    <p class="subtitle">See live Polymarket outright prices first, then compare them with bookmaker odds before you bet. You can still scan the current European football card lower down the page.</p>
+
+    <div class="section-head">
+      <div class="section-kicker">Season Markets</div>
+      <h2>Prediction market outrights</h2>
+      <p>These are the live Polymarket smart-odds tables for the biggest football title races and UEFA trophies.</p>
+    </div>
+
+    <div id="markets-container">
+      <div class="loading-card"><div class="spinner"></div><p>Loading Polymarket data...</p></div>
+    </div>
 
     <div class="explainer">
       <div class="explainer-icon">💡</div>
       <div>
         <h2>What is Smart Money?</h2>
-        <p>Think of this page as a fast football watchlist. The top section shows current Premier League and European fixtures worth checking right now. The season-market section below uses Polymarket prices to show what the crowd thinks the fair outright price should be before you compare it with a bookmaker.</p>
+        <p>The smart-money signal here is the Polymarket price. It shows what a live market thinks the fair outright number should be before you compare it with a sportsbook. The fixture board below helps you keep track of the current European card.</p>
         <div class="stats">
+          <div class="stat"><div class="sv">PM</div><div class="sl">Live smart odds</div></div>
           <div class="stat"><div class="sv">EPL</div><div class="sl">Current fixtures</div></div>
           <div class="stat"><div class="sv">UEFA</div><div class="sl">European nights</div></div>
           <div class="stat"><div class="sv">6+</div><div class="sl">Leagues tracked</div></div>
-          <div class="stat"><div class="sv">2x</div><div class="sl">Daily refresh</div></div>
         </div>
       </div>
+    </div>
+
+    <div class="howto">
+      <h3>📖 How to use this</h3>
+      <ol>
+        <li><strong>Check the Polymarket table first</strong> to see the market-implied price.</li>
+        <li><strong>Compare it with your bookmaker price</strong> to see whether the sportsbook is longer or shorter.</li>
+        <li><strong>Use the fixture board below</strong> when you want the current Premier League and European match card.</li>
+      </ol>
     </div>
 
     <section class="fixture-board">
@@ -280,25 +299,6 @@
         <div class="loading-card"><div class="spinner"></div><p>Loading current European fixtures...</p></div>
       </div>
     </section>
-
-    <div class="howto">
-      <h3>📖 How to use this</h3>
-      <ol>
-        <li><strong>Start with the fixture board</strong> to see the next EPL and European matches on the card.</li>
-        <li><strong>Use the season-market tables below</strong> to get a fair outright price from the prediction market.</li>
-        <li><strong>Check your bookmaker price</strong> and run it through our <a href="/value-bet-calculator.html">Value Bet Calculator</a> before staking.</li>
-      </ol>
-    </div>
-
-    <div class="section-head">
-      <div class="section-kicker">Season Markets</div>
-      <h2>Prediction market outrights</h2>
-      <p>These are the long-term football markets where crowd pricing is most useful: title races and major UEFA trophies.</p>
-    </div>
-
-    <div id="markets-container">
-      <div class="loading-card"><div class="spinner"></div><p>Loading Polymarket data...</p></div>
-    </div>
 
     <!-- Kalshi Section -->
     <div style="margin-top: 48px; margin-bottom: 24px;">

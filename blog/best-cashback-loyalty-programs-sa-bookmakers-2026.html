@@ -84,6 +84,10 @@
     .table-shell.table-cards tbody tr:hover td,
     .table-shell.table-cards tbody tr:hover th.row-head { background: transparent; }
     .table-shell.table-cards tbody th.row-head { position: static; display: flex; align-items: center; width: auto; min-width: 0; padding: 18px 18px 12px; background: linear-gradient(135deg, #eef4ff, #f8fbff); border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .table-shell.table-cards tbody th.row-head[data-brand] > .row-head-link,
+    .table-shell.table-cards tbody th.row-head[data-brand] > .row-head-text { display: none; }
+    .table-shell.table-cards tbody th.row-head[data-brand]::before { content: attr(data-brand); display: block; color: var(--ink); font-size: 1.05rem; font-weight: 800; line-height: 1.25; }
+    .table-shell.table-cards tbody th.row-head[data-link-label]::after { content: attr(data-link-label); display: block; margin-top: 6px; color: var(--blue); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
     .table-shell.table-cards tbody td { display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 14px; min-width: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
     .table-shell.table-cards tbody td::before { content: attr(data-label); color: var(--navy); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
     .table-shell.table-cards tbody tr td:last-child { border-bottom: 0; padding-bottom: 18px; }
@@ -114,6 +118,10 @@
       .table-shell[data-heavy-table="true"] tbody tr:hover td,
       .table-shell[data-heavy-table="true"] tbody tr:hover th.row-head { background: transparent; }
       .table-shell[data-heavy-table="true"] tbody th.row-head { position: static; display: flex; align-items: center; width: auto; min-width: 0; padding: 18px 18px 12px; background: linear-gradient(135deg, #eef4ff, #f8fbff); border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+      .table-shell[data-heavy-table="true"] tbody th.row-head[data-brand] > .row-head-link,
+      .table-shell[data-heavy-table="true"] tbody th.row-head[data-brand] > .row-head-text { display: none; }
+      .table-shell[data-heavy-table="true"] tbody th.row-head[data-brand]::before { content: attr(data-brand); display: block; color: var(--ink); font-size: 1.05rem; font-weight: 800; line-height: 1.25; }
+      .table-shell[data-heavy-table="true"] tbody th.row-head[data-link-label]::after { content: attr(data-link-label); display: block; margin-top: 6px; color: var(--blue); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
       .table-shell[data-heavy-table="true"] tbody td { display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 14px; min-width: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
       .table-shell[data-heavy-table="true"] tbody td::before { content: attr(data-label); color: var(--navy); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
       .table-shell[data-heavy-table="true"] tbody tr td:last-child { border-bottom: 0; padding-bottom: 18px; }
@@ -130,6 +138,10 @@
       tbody tr:hover td,
       tbody tr:hover th.row-head { background: transparent; }
       tbody th.row-head { position: static; display: block; width: auto; min-width: 0; padding: 16px 16px 10px; background: linear-gradient(135deg, #eef4ff, #f8fbff); border-bottom: 1px solid var(--line); }
+      tbody th.row-head[data-brand] > .row-head-link,
+      tbody th.row-head[data-brand] > .row-head-text { display: none; }
+      tbody th.row-head[data-brand]::before { content: attr(data-brand); display: block; color: var(--ink); font-size: 1rem; font-weight: 800; line-height: 1.25; }
+      tbody th.row-head[data-link-label]::after { content: attr(data-link-label); display: block; margin-top: 6px; color: var(--blue); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
       tbody td { display: grid; grid-template-columns: minmax(108px, 38%) 1fr; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 0.96rem; }
       tbody td::before { content: attr(data-label); color: var(--navy); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; }
       tbody tr td:last-child { border-bottom: 0; padding-bottom: 16px; }
@@ -268,6 +280,9 @@
       table.querySelectorAll('tbody tr').forEach((row) => {
         const rowHead = row.querySelector('th.row-head');
         const brand = rowHead ? rowHead.textContent.trim() : '';
+        if (rowHead && brand) {
+          rowHead.dataset.brand = brand;
+        }
         if (rowHead && !rowHead.id) {
           rowHead.id = 'operator-' + slugifyBrand(brand);
         }
@@ -289,6 +304,14 @@
           rowHead.appendChild(link);
         }
         const rowLink = rowHead ? rowHead.querySelector('a') : null;
+        if (rowHead) {
+          const linkLabel = rowLink ? rowLink.getAttribute('data-link-label') : '';
+          if (linkLabel) {
+            rowHead.dataset.linkLabel = linkLabel;
+          } else {
+            delete rowHead.dataset.linkLabel;
+          }
+        }
         if (rowLink) {
           const href = rowLink.getAttribute('href');
           row.classList.add('clickable-row');

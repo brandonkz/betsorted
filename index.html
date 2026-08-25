@@ -15,25 +15,65 @@
   <meta name="keywords" content="best bookmakers south africa, hollywoodbets vs betway, sports betting odds comparison sa, south africa betting sites, betway, hollywoodbets">
   <meta name="theme-color" content="#2563eb">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="dns-prefetch" href="//www.googletagmanager.com">
-  
   <!-- Organization Schema -->
 
   <!-- LocalBusiness Schema -->
 
   <!-- FAQ Schema for AI Search -->
   
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1VHD0P7M44');
+
+    function loadThirdPartyScript(src, attributes) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      Object.entries(attributes || {}).forEach(([key, value]) => {
+        if (value === true) {
+          script.setAttribute(key, '');
+          return;
+        }
+        script.setAttribute(key, value);
+      });
+      document.head.appendChild(script);
+      return script;
+    }
+
+    function onIdle(callback, timeout) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(callback, { timeout: timeout || 3000 });
+        return;
+      }
+      setTimeout(callback, timeout || 3000);
+    }
+
+    let analyticsLoaded = false;
+    function loadAnalytics() {
+      if (analyticsLoaded) return;
+      analyticsLoaded = true;
+      loadThirdPartyScript('https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44');
+      gtag('config', 'G-1VHD0P7M44');
+    }
+
+    let adsLoaded = false;
+    function loadAds() {
+      if (adsLoaded) return;
+      adsLoaded = true;
+      loadThirdPartyScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001', {
+        crossorigin: 'anonymous'
+      });
+    }
+
+    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach((eventName) => {
+      window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+    });
+
+    window.addEventListener('load', function () {
+      onIdle(loadAnalytics, 2500);
+      onIdle(loadAds, 5000);
+    }, { once: true });
   </script>
   
   <!-- Open Graph / Facebook -->
@@ -52,7 +92,6 @@
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <meta property="og:image" content="https://betsorted.co.za/assets/og-image.png">
   <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
 <script type="application/ld+json">
@@ -72,9 +111,6 @@
   "mainEntity": []
 }
 </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
-     crossorigin="anonymous"></script>
-
   <!-- Phase 1 additive schema -->
   <script type="application/ld+json">
   {
@@ -235,7 +271,7 @@
   <!-- Header -->
     <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
+    <a href="/" class="brand"><img src="/assets/logo-header.png" alt="BetSorted" width="48" height="32" decoding="async" style="height:32px;width:48px;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a>
     <nav class="header-nav">
       <a href="/#comparison" class="nav-link">Compare</a>
       <a href="/bookmakers/" class="nav-link">Bookmakers</a>
@@ -680,7 +716,12 @@
   <script>
   (function() {
     const ESPN_PSL = 'https://site.api.espn.com/apis/site/v2/sports/soccer/rsa.1/scoreboard';
+    const pslSection = document.getElementById('psl-upcoming-section');
+    let hasLoadedPSL = false;
     function fmt(d) { return d.toISOString().slice(0,10).replace(/-/g,''); }
+    function optimizeLogo(url) {
+      return url ? url.replace('/500/', '/50/') : '';
+    }
     function teamStrength(name) {
       const top = {'Mamelodi Sundowns':5,'Kaizer Chiefs':4,'Orlando Pirates':4,'Cape Town City':3,'Stellenbosch':3,'SuperSport United':3,'TS Galaxy':2,'AmaZulu':2,'Sekhukhune United':2,'Chippa United':2,'Golden Arrows':2,'Polokwane City':2,'Richards Bay':1,'Moroka Swallows':1,'Magesi':1,'Baroka':1};
       for (const k in top) if (name && name.toLowerCase().includes(k.toLowerCase().split(' ')[0].toLowerCase())) return top[k];
@@ -699,6 +740,8 @@
       return { h: h.toFixed(2), d: d.toFixed(2), a: a.toFixed(2) };
     }
     async function loadPSL() {
+      if (hasLoadedPSL) return;
+      hasLoadedPSL = true;
       try {
         const today = new Date();
         const end = new Date(today.getTime() + 10*24*60*60*1000);
@@ -724,8 +767,8 @@
             + ' · ' + kickoff.toLocaleTimeString('en-ZA', {hour:'2-digit', minute:'2-digit'});
           const homeName = home.team?.displayName || '?';
           const awayName = away.team?.displayName || '?';
-          const homeLogo = home.team?.logo || '';
-          const awayLogo = away.team?.logo || '';
+          const homeLogo = optimizeLogo(home.team?.logo || '');
+          const awayLogo = optimizeLogo(away.team?.logo || '');
           let mid = '';
           if (isLive) {
             mid = `<div class="psl-score">${home.score||0} - ${away.score||0}</div><div class="psl-time live">🔴 ${comp.status?.displayClock||'LIVE'}</div>`;
@@ -736,9 +779,9 @@
             mid = `<div class="psl-time">${kStr}</div><div class="psl-odds"><span class="psl-odd">1 ${odds.h}</span><span class="psl-odd">X ${odds.d}</span><span class="psl-odd">2 ${odds.a}</span></div>`;
           }
           return `<a href="/psl-match-centre.html" class="psl-row">
-            <div class="psl-team">${homeLogo?`<img src="${homeLogo}" alt="${homeName}" onerror="this.style.display='none'">`:''}${homeName}</div>
+            <div class="psl-team">${homeLogo?`<img src="${homeLogo}" alt="${homeName}" loading="lazy" decoding="async" onerror="this.style.display='none'">`:''}${homeName}</div>
             <div class="psl-mid">${mid}</div>
-            <div class="psl-team away">${awayName}${awayLogo?`<img src="${awayLogo}" alt="${awayName}" onerror="this.style.display='none'">`:''}</div>
+            <div class="psl-team away">${awayName}${awayLogo?`<img src="${awayLogo}" alt="${awayName}" loading="lazy" decoding="async" onerror="this.style.display='none'">`:''}</div>
           </a>`;
         }).join('');
         document.getElementById('psl-fixtures-list').innerHTML = rows;
@@ -747,7 +790,16 @@
         document.getElementById('psl-upcoming-section').style.display = 'none';
       }
     }
-    loadPSL();
+    if ('IntersectionObserver' in window && pslSection) {
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        loadPSL();
+      }, { rootMargin: '300px 0px' });
+      observer.observe(pslSection);
+    } else {
+      window.addEventListener('load', loadPSL, { once: true });
+    }
   })();
   </script>
 

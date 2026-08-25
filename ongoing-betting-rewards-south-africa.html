@@ -71,7 +71,7 @@
     tbody tr.clickable-row:focus-visible { outline: 3px solid #93c5fd; outline-offset: -3px; }
     .row-head-link { color: inherit; text-decoration: none; }
     .row-head-link:hover { color: var(--blue); }
-    .row-head-link::after { content: "Read more"; display: block; margin-top: 6px; color: var(--blue); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
+    .row-head-link::after { content: attr(data-link-label); display: block; margin-top: 6px; color: var(--blue); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; }
     .table-shell[data-cards-ready="true"]::after { display: none; }
     .table-shell.table-cards { overflow: visible; background: transparent; border: 0; box-shadow: none; }
     .table-shell.table-cards::after { display: none; }
@@ -231,27 +231,22 @@
     </div>
   </footer>
   <script>
-    const guideBlogUrl = '/blog/best-cashback-loyalty-programs-sa-bookmakers-2026.html';
-    const rewardLinks = {
-      'Betway': '/bookmakers/betway-review.html',
-      'Hollywoodbets': '/bookmakers/hollywoodbets-review.html',
-      'Supabets': '/bookmakers/supabets-review.html',
-      'Easybet': '/bookmakers/easybet-review.html',
-      'YesPlay': '/blog/yesplay-review-south-africa-2026.html',
-      'LottoStar': '/blog/lottostar-review-south-africa-2026.html',
-      'Sportingbet': '/bookmakers/sportingbet-review.html',
-      '10bet': '/bookmakers/10bet-review.html',
-      'World Sports Betting': '/bookmakers/world-sports-betting-review.html',
-      'Gbets': '/bookmakers/gbets-review.html',
-      'SunBet': '/bookmakers/sunbet-review.html',
-      'Bet.co.za': '/bookmakers/bet-co-za-review.html',
-      'Play.co.za': '/bookmakers/play-co-za-review.html',
-      'Playabets': '/bookmakers/playabets-review.html',
-      'SuperSportBet': guideBlogUrl + '#operator-supersportbet',
-      'Goldrush': guideBlogUrl + '#operator-goldrush',
-      'Virgin Bet SA': guideBlogUrl + '#operator-virgin-bet-sa',
-      'playTsogo': guideBlogUrl + '#operator-playtsogo',
-      'BC.Game  [OFFSHORE - NOT SA LICENSED]': guideBlogUrl + '#operator-bc-game'
+    const rewardDestinations = {
+      'Betway': { href: '/bookmakers/betway-review.html', label: 'Read review' },
+      'Hollywoodbets': { href: '/go/hollywoodbets.html?subid=post-ongoing-rewards-operator-table', label: 'Visit site', affiliate: true, bookmaker: 'hollywoodbets' },
+      'Supabets': { href: '/bookmakers/supabets-review.html', label: 'Read review' },
+      'Easybet': { href: '/bookmakers/easybet-review.html', label: 'Read review' },
+      'YesPlay': { href: '/blog/yesplay-review-south-africa-2026.html', label: 'Read review' },
+      'LottoStar': { href: '/blog/lottostar-review-south-africa-2026.html', label: 'Read review' },
+      'Sportingbet': { href: '/bookmakers/sportingbet-review.html', label: 'Read review' },
+      '10bet': { href: '/go/10bet.html?subid=post-ongoing-rewards-operator-table', label: 'Visit site', affiliate: true, bookmaker: '10bet' },
+      'World Sports Betting': { href: '/bookmakers/world-sports-betting-review.html', label: 'Read review' },
+      'Gbets': { href: '/bookmakers/gbets-review.html', label: 'Read review' },
+      'SunBet': { href: '/bookmakers/sunbet-review.html', label: 'Read review' },
+      'Bet.co.za': { href: '/bookmakers/bet-co-za-review.html', label: 'Read review' },
+      'Play.co.za': { href: '/go/play-co-za.html?subid=post-ongoing-rewards-operator-table', label: 'Visit site', affiliate: true, bookmaker: 'play-co-za' },
+      'Playabets': { href: '/bookmakers/playabets-review.html', label: 'Read review' },
+      'BC.Game  [OFFSHORE - NOT SA LICENSED]': { href: '/go/bcgame.html?subid=post-ongoing-rewards-operator-table', label: 'Visit site', affiliate: true, bookmaker: 'bcgame' }
     };
 
     function slugifyBrand(label) {
@@ -274,12 +269,25 @@
         if (rowHead && !rowHead.id) {
           rowHead.id = 'operator-' + slugifyBrand(brand);
         }
-        const href = rewardLinks[brand];
-        if (href && rowHead && !rowHead.querySelector('a')) {
+        const destination = rewardDestinations[brand];
+        if (destination && rowHead && !rowHead.querySelector('a')) {
+          const href = destination.href;
           row.classList.add('clickable-row');
           row.tabIndex = 0;
           row.setAttribute('role', 'link');
-          rowHead.innerHTML = '<a class="row-head-link" href="' + href + '">' + rowHead.textContent + '</a>';
+          const link = document.createElement('a');
+          link.className = destination.affiliate ? 'row-head-link affiliate-link' : 'row-head-link';
+          link.href = href;
+          link.textContent = rowHead.textContent;
+          link.setAttribute('data-link-label', destination.label);
+          if (destination.affiliate) {
+            link.setAttribute('rel', 'sponsored noopener');
+            if (destination.bookmaker) {
+              link.setAttribute('data-bookmaker', destination.bookmaker);
+            }
+          }
+          rowHead.textContent = '';
+          rowHead.appendChild(link);
           row.addEventListener('click', (event) => {
             if (event.target.closest('a, button, input, textarea, select')) return;
             window.location.href = href;

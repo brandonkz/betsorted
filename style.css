@@ -785,17 +785,18 @@ a:hover {
   }
   
   .comparison-table tr {
-    display: block;
+    display: grid;
     background: white;
     border-radius: var(--radius-md);
     margin-bottom: 1rem;
-    padding: 1.5rem;
+    padding: 1.1rem 1rem;
     box-shadow: var(--shadow-md);
+    gap: 0.75rem;
   }
   
   .comparison-table td {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0;
     border: none;
     text-align: left !important;
   }
@@ -815,9 +816,80 @@ a:hover {
   }
   
   .comparison-table td:last-child {
-    margin-top: 1rem;
-    padding-top: 1rem;
+    margin-top: 0.25rem;
+    padding-top: 0.9rem;
     border-top: 1px solid var(--color-border);
+  }
+
+  .comparison-table td[data-label="Bookmaker"]::before,
+  .comparison-table td[data-label="Rating"]::before,
+  .comparison-table td[data-label="Min Deposit"]::before {
+    display: none;
+  }
+
+  .comparison-table td[data-label="Rating"],
+  .comparison-table td[data-label="Min Deposit"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: #f8fafc;
+    border: 1px solid var(--color-border);
+  }
+
+  .comparison-table td[data-label="Welcome Bonus"] {
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(37, 99, 235, 0.04));
+    border: 1px solid rgba(16, 185, 129, 0.16);
+  }
+
+  .comparison-table td[data-label="The Catch"] {
+    padding-left: 0.9rem;
+    border-left: 3px solid #f59e0b;
+  }
+
+  .comparison-table td[data-label="The Catch"] > div {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .bookmaker-cell {
+    gap: 0.8rem;
+  }
+
+  .bookmaker-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .bookmaker-name {
+    font-size: 1.1rem;
+  }
+
+  .rating-stars {
+    gap: 0.15rem;
+    font-size: 0.9rem;
+  }
+
+  .rating-number,
+  .deposit-amount {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .bonus-text strong {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .comparison-table td:last-child > div {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem !important;
   }
 
   .pros-cons-grid {
@@ -843,21 +915,108 @@ a:hover {
 
 @media (max-width: 560px) {
   .header-nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-link {
-    min-height: 42px;
-    padding: 0.6rem 0.5rem;
-    border-radius: 10px;
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
     background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    white-space: nowrap;
+    scroll-snap-align: start;
   }
 
   .brand {
     font-size: 1.125rem;
     text-align: center;
+  }
+
+  .comparison-section,
+  .reviews-section,
+  .guide-section {
+    padding: 2.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .comparison-table tr {
+    gap: 0.65rem;
+  }
+
+  .comparison-table td[data-label="Rating"],
+  .comparison-table td[data-label="Min Deposit"] {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.82rem;
+  }
+
+  .comparison-table td[data-label="Welcome Bonus"] {
+    padding: 0.8rem 0.85rem;
+  }
+
+  .comparison-table td[data-label="The Catch"] > div {
+    font-size: 0.92rem !important;
+  }
+
+  .comparison-table td:last-child > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  .review-card {
+    border-radius: 14px;
+  }
+
+  .review-header,
+  .review-body,
+  .review-footer {
+    padding: 1.15rem;
+  }
+
+  .review-header-left {
+    gap: 0.9rem;
+  }
+
+  .review-logo {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .review-title-group h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .review-meta {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .review-description {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .review-body p:not(.review-description) {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.92rem;
+    line-height: 1.55;
   }
 }
 

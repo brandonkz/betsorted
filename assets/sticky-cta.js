@@ -140,18 +140,45 @@
       color: #ffffff;
     }
     @media (max-width: 720px) {
+      .sticky-cta-bar {
+        left: 12px;
+        right: 12px;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+        border-radius: 18px;
+      }
       .sticky-cta-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        padding: 10px 12px;
+        gap: 10px;
+      }
+      .sticky-cta-actions {
+        gap: 8px;
+      }
+      .sticky-cta-button {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+      }
+      .sticky-cta-message {
+        font-size: 0.86rem;
+        line-height: 1.35;
+      }
+    }
+    @media (max-width: 540px) {
+      .sticky-cta-inner {
+        align-items: center;
+      }
+      .sticky-cta-message {
+        display: none;
       }
       .sticky-cta-actions {
         width: 100%;
-        justify-content: space-between;
+        justify-content: stretch;
       }
       .sticky-cta-button {
-        width: 100%;
+        flex: 1;
         text-align: center;
+      }
+      .sticky-cta-close {
+        flex-shrink: 0;
       }
     }
   `;

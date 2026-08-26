@@ -81,6 +81,28 @@
     return document.body && document.body.getAttribute('data-site-matcher-page') || 'general';
   }
 
+  function getTeaserConfig() {
+    if (getPageVariant() === 'homepage') {
+      return {
+        eyebrow: 'BETSORTED CASINO FINDER',
+        title: 'Find the right casino in four questions',
+        description: 'Tell us how you play and what matters to you. We compare South African casinos by deposit size, rewards, loyalty benefits, game selection and data-free access. Then we recommend your best match.',
+        bullets: ['Low deposits', 'Best rewards', 'Strong loyalty', 'Data-free play', 'Sports + casino'],
+        primaryCta: 'Try the casino finder',
+        secondaryCta: 'Open the AI'
+      };
+    }
+
+    return {
+      eyebrow: '',
+      title: 'Use BetSorted AI to narrow the field',
+      description: 'Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. It now scores against the wider BetSorted operator dataset, not just a tiny handpicked list.',
+      bullets: [],
+      primaryCta: 'Try the AI shortlist',
+      secondaryCta: 'Open the AI'
+    };
+  }
+
   function ensureAnalytics(eventName, payload) {
     if (typeof window.gtag === 'function') {
       window.gtag('event', eventName, payload);
@@ -347,16 +369,27 @@
       step: 0,
       answers: {}
     };
+    var teaserConfig = getTeaserConfig();
 
     var teaserTargets = document.querySelectorAll('[data-site-matcher-teaser]');
     teaserTargets.forEach(function (target) {
+      var eyebrowHtml = teaserConfig.eyebrow
+        ? '<div class="site-matcher-teaser-eyebrow">' + teaserConfig.eyebrow + '</div>'
+        : '';
+      var bulletHtml = teaserConfig.bullets.length
+        ? '<div class="site-matcher-teaser-bullets">' + teaserConfig.bullets.map(function (bullet) {
+            return '<span>' + bullet + '</span>';
+          }).join('') + '</div>'
+        : '';
       target.innerHTML = '' +
         '<div class="site-matcher-teaser">' +
-          '<h2>Use BetSorted AI to narrow the field</h2>' +
-          '<p>Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. It now scores against the wider BetSorted operator dataset, not just a tiny handpicked list.</p>' +
+          eyebrowHtml +
+          '<h2>' + teaserConfig.title + '</h2>' +
+          '<p>' + teaserConfig.description + '</p>' +
+          bulletHtml +
           '<div class="site-matcher-teaser-actions">' +
-            '<button class="site-matcher-open" type="button" data-site-matcher-trigger="teaser">Try the AI shortlist</button>' +
-            '<button class="site-matcher-secondary" type="button" data-site-matcher-trigger="teaser-secondary">Open the AI</button>' +
+            '<button class="site-matcher-open" type="button" data-site-matcher-trigger="teaser">' + teaserConfig.primaryCta + '</button>' +
+            '<button class="site-matcher-secondary" type="button" data-site-matcher-trigger="teaser-secondary">' + teaserConfig.secondaryCta + '</button>' +
           '</div>' +
         '</div>';
     });
@@ -374,7 +407,7 @@
         '<div class="site-matcher-shell">' +
           '<section class="site-matcher-panel site-matcher-panel--flow">' +
             '<button class="site-matcher-close" type="button" aria-label="Close matcher">×</button>' +
-            '<h2 id="site-matcher-title" class="site-matcher-title">Find your best-fit betting site</h2>' +
+            '<h2 id="site-matcher-title" class="site-matcher-title">' + (getPageVariant() === 'homepage' ? 'Find your best-fit casino or betting site' : 'Find your best-fit betting site') + '</h2>' +
             '<div class="site-matcher-progress">' +
               '<strong>Step <span data-progress-step>1</span> of ' + QUESTIONS.length + '</strong>' +
               '<div class="site-matcher-progress-bar"><span data-progress-bar style="width:20%"></span></div>' +

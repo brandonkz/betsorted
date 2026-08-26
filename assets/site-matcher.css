@@ -23,6 +23,15 @@
   box-shadow: 0 14px 34px rgba(37, 99, 235, 0.10);
 }
 
+.site-matcher-teaser-eyebrow {
+  margin-bottom: 8px;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .site-matcher-teaser h2,
 .site-matcher-teaser h3 {
   margin: 0 0 8px;
@@ -32,6 +41,19 @@
 .site-matcher-teaser p {
   margin: 0;
   color: #334155;
+}
+
+.site-matcher-teaser-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-top: 16px;
+}
+
+.site-matcher-teaser-bullets span {
+  color: #0f172a;
+  font-size: 0.94rem;
+  font-weight: 700;
 }
 
 .site-matcher-teaser-actions {

@@ -1,285 +1,5 @@
 (function () {
-  var OPERATORS = [
-    {
-      id: 'hollywoodbets',
-      name: 'Hollywoodbets',
-      primaryUrl: '/go/hollywoodbets.html?subid=matcher-top-pick',
-      reviewUrl: '/bookmakers/hollywoodbets-review.html',
-      ctaLabel: 'Visit site',
-      reviewLabel: 'Read review',
-      welcomeBonus: 'R25 free bet + 50 free spins',
-      loyaltyNote: 'No loyalty programme found. Best recurring angle is Soccer Money Back and other rotating local promos.',
-      fit: {
-        beginner: 5,
-        easy: 5,
-        bankrollLow: 5,
-        withdrawals: 4,
-        psl: 5,
-        rugby: 3,
-        cricket: 3,
-        rewards: 3,
-        casinoMix: 3,
-        established: 5,
-        local: 5,
-        odds: 3
-      },
-      reasons: [
-        'Easy first account with low minimums.',
-        'Strong fit for PSL, Lucky Numbers, and local betting habits.',
-        'Useful if you want one simple account instead of a full comparison setup.'
-      ],
-      watchout: 'The interface can feel older than some rivals, and it is not always the sharpest odds option.',
-      tags: ['Beginner-friendly', 'PSL', 'Low minimums', 'Local support']
-    },
-    {
-      id: 'sportingbet',
-      name: 'Sportingbet',
-      primaryUrl: null,
-      reviewUrl: '/bookmakers/sportingbet-review.html',
-      ctaLabel: 'Read review',
-      reviewLabel: 'Read review',
-      welcomeBonus: 'Triple Welcome Bonus up to R3,000',
-      loyaltyNote: 'SB Rewards exists, but the clearer value sits in the football and tennis multi cashback offers.',
-      fit: {
-        beginner: 2,
-        easy: 2,
-        bankrollLow: 2,
-        withdrawals: 3,
-        psl: 4,
-        rugby: 5,
-        cricket: 4,
-        rewards: 3,
-        casinoMix: 2,
-        established: 4,
-        local: 3,
-        odds: 5
-      },
-      reasons: [
-        'One of the stronger picks if you compare odds and want deeper sports coverage.',
-        'Good match for rugby and experienced bettors who already know what they want.',
-        'Useful as a second account when price matters more than simplicity.'
-      ],
-      watchout: 'Not the easiest first account if you want the quickest, least fiddly path from signup to first bet.',
-      tags: ['Rugby', 'Odds depth', 'Live betting', 'Serious second account']
-    },
-    {
-      id: 'betway',
-      name: 'Betway',
-      primaryUrl: null,
-      reviewUrl: '/bookmakers/betway-review.html',
-      ctaLabel: 'Read review',
-      reviewLabel: 'Read review',
-      welcomeBonus: '10 free spins + 10 free flights + R10 free bet',
-      loyaltyNote: 'Rewards plus Bet Saver and Free Bet Club. Bet Saver is the cleanest recurring value.',
-      fit: {
-        beginner: 2,
-        easy: 2,
-        bankrollLow: 3,
-        withdrawals: 3,
-        psl: 4,
-        rugby: 4,
-        cricket: 5,
-        rewards: 2,
-        casinoMix: 2,
-        established: 5,
-        local: 3,
-        odds: 5
-      },
-      reasons: [
-        'Still a strong benchmark for broad sports coverage and deep markets.',
-        'Best fit when cricket, live betting, and odds comparison matter most.',
-        'Worth keeping in your comparison set even if you do not use it as your main account.'
-      ],
-      watchout: 'Read current promotion terms carefully before choosing it mainly for a sign-up offer.',
-      tags: ['Cricket', 'Deep markets', 'Benchmark pricing', 'Live betting']
-    },
-    {
-      id: '10bet',
-      name: '10bet',
-      primaryUrl: '/go/10bet.html?subid=matcher-top-pick',
-      reviewUrl: '/bookmakers/10bet-review.html',
-      ctaLabel: 'Visit site',
-      reviewLabel: 'Read review',
-      welcomeBonus: '100% first deposit match up to R5,000',
-      loyaltyNote: 'Has a 50-level loyalty club, but Multi Bet Insurance is easier to understand than the loyalty points.',
-      fit: {
-        beginner: 3,
-        easy: 4,
-        bankrollLow: 1,
-        withdrawals: 4,
-        psl: 3,
-        rugby: 3,
-        cricket: 4,
-        rewards: 2,
-        casinoMix: 2,
-        established: 4,
-        local: 2,
-        odds: 4
-      },
-      reasons: [
-        'Good fit if you want a cleaner mobile experience and broader international sport.',
-        'Stronger than many local-first sites for soccer, tennis, and general sportsbook depth.',
-        'Useful when you want a more polished app feel without losing serious betting coverage.'
-      ],
-      watchout: 'The minimum deposit is usually higher than the cheapest local options, so it is less friendly for tiny starting bankrolls.',
-      tags: ['Mobile feel', 'Soccer', 'International sport', 'Cleaner UI']
-    },
-    {
-      id: 'easybet',
-      name: 'Easybet',
-      primaryUrl: null,
-      reviewUrl: '/bookmakers/easybet-review.html',
-      ctaLabel: 'Read review',
-      reviewLabel: 'Read review',
-      welcomeBonus: '150% first deposit up to R5,000 + R50 sign-up bonus',
-      loyaltyNote: 'No published loyalty programme. The weekly cashback is the main ongoing reward worth checking.',
-      fit: {
-        beginner: 4,
-        easy: 5,
-        bankrollLow: 4,
-        withdrawals: 4,
-        psl: 3,
-        rugby: 2,
-        cricket: 2,
-        rewards: 2,
-        casinoMix: 1,
-        established: 2,
-        local: 3,
-        odds: 2
-      },
-      reasons: [
-        'Strong match if you want the least clutter and the fastest path to a simple bet.',
-        'Works well for smaller weekend slips and casual mobile use.',
-        'Good fallback when you care more about ease than deep market coverage.'
-      ],
-      watchout: 'You may outgrow it if you start comparing lots of sports, props, or live-betting angles.',
-      tags: ['Simple', 'Low hassle', 'Casual slips', 'Mobile-first']
-    },
-    {
-      id: 'wsb',
-      name: 'World Sports Betting',
-      primaryUrl: null,
-      reviewUrl: '/bookmakers/world-sports-betting-review.html',
-      ctaLabel: 'Read review',
-      reviewLabel: 'Read review',
-      welcomeBonus: '100% deposit match + free bet + 100 free spins',
-      loyaltyNote: 'Club Prive exists, but the stronger value is usually in the birthday bonus and sport-specific insurance promos.',
-      fit: {
-        beginner: 2,
-        easy: 2,
-        bankrollLow: 3,
-        withdrawals: 3,
-        psl: 4,
-        rugby: 3,
-        cricket: 2,
-        rewards: 3,
-        casinoMix: 2,
-        established: 4,
-        local: 5,
-        odds: 3
-      },
-      reasons: [
-        'Best fit if South African sport, horse racing, and local familiarity matter more than modern design.',
-        'Useful for PSL and Lucky Numbers-adjacent betting habits.',
-        'A practical comparison account for local-market punters.'
-      ],
-      watchout: 'The app and site can feel dated, so it makes more sense as a functional second account than a slick first one.',
-      tags: ['Local sport', 'PSL', 'Horse racing', 'Established local brand']
-    },
-    {
-      id: 'supabets',
-      name: 'Supabets',
-      primaryUrl: null,
-      reviewUrl: '/bookmakers/supabets-review.html',
-      ctaLabel: 'Read review',
-      reviewLabel: 'Read review',
-      welcomeBonus: 'R50 free bet + 100 free spins + up to R5,000',
-      loyaltyNote: 'No loyalty programme. Losing Leg Cashback is the main recurring offer worth caring about.',
-      fit: {
-        beginner: 3,
-        easy: 3,
-        bankrollLow: 4,
-        withdrawals: 2,
-        psl: 3,
-        rugby: 2,
-        cricket: 2,
-        rewards: 2,
-        casinoMix: 2,
-        established: 3,
-        local: 4,
-        odds: 2
-      },
-      reasons: [
-        'Better fit for low-stake bettors who use vouchers or want a budget-friendly local option.',
-        'Makes sense when you care more about easy entry than premium polish.',
-        'Useful as a secondary local account rather than a one-site-for-everything pick.'
-      ],
-      watchout: 'It is less polished than the bigger brands, so compare before making it your main account.',
-      tags: ['Low stakes', 'Vouchers', 'Local option', 'Budget-friendly']
-    },
-    {
-      id: 'playcoza',
-      name: 'Play.co.za',
-      primaryUrl: '/go/play-co-za.html?subid=matcher-top-pick',
-      reviewUrl: '/bookmakers/play-co-za-review.html',
-      ctaLabel: 'Visit site',
-      reviewLabel: 'Read review',
-      welcomeBonus: 'Up to R30,000 across 3 deposits',
-      loyaltyNote: 'Has a loyalty wheel and layered promos, but Sport Predictor is the clearest ongoing value.',
-      fit: {
-        beginner: 3,
-        easy: 4,
-        bankrollLow: 5,
-        withdrawals: 3,
-        psl: 2,
-        rugby: 1,
-        cricket: 1,
-        rewards: 2,
-        casinoMix: 5,
-        established: 3,
-        local: 3,
-        odds: 1
-      },
-      reasons: [
-        'Best fit if you want a lighter, entertainment-style account with sport plus casino mix.',
-        'Low entry point makes it easier to test with a small bankroll.',
-        'A sensible choice when sportsbook depth matters less than convenience and variety.'
-      ],
-      watchout: 'Sports-first bettors will usually want deeper markets somewhere else as well.',
-      tags: ['Casino mix', 'Low entry', 'Casual use', 'Modern feel']
-    },
-    {
-      id: 'playabets',
-      name: 'Playabets',
-      primaryUrl: '/go/playabets.html?subid=matcher-top-pick',
-      reviewUrl: '/bookmakers/playabets-review.html',
-      ctaLabel: 'Visit site',
-      reviewLabel: 'Read review',
-      welcomeBonus: '100% first deposit match up to R3,000 + 50 free spins',
-      loyaltyNote: 'Daily Rakeback is the cleanest loyalty-style benefit, with a bigger loyalty club behind it.',
-      fit: {
-        beginner: 3,
-        easy: 4,
-        bankrollLow: 3,
-        withdrawals: 3,
-        psl: 3,
-        rugby: 2,
-        cricket: 2,
-        rewards: 3,
-        casinoMix: 3,
-        established: 2,
-        local: 3,
-        odds: 2
-      },
-      reasons: [
-        'Good middle-ground pick if you want a straightforward local account without too much friction.',
-        'Useful for simple football slips and a less overwhelming experience.',
-        'Worth checking if you want a direct-site option but do not need the deepest sportsbook.'
-      ],
-      watchout: 'It is more of a practical casual option than a best-in-class odds shopping account.',
-      tags: ['Straightforward', 'Local account', 'Simple slips', 'Casual']
-    }
-  ];
+  var DATA_URL = '/data/operators.json';
 
   var QUESTIONS = [
     {
@@ -337,6 +57,26 @@
     }
   ];
 
+  var SPORT_HINTS = {
+    betway: { cricket: 5, rugby: 4, psl: 4, odds: 5, easy: 4 },
+    hollywoodbets: { psl: 5, local: 5, bankrollLow: 5, beginner: 5, easy: 5, rewards: 3 },
+    sportingbet: { odds: 5, rugby: 5, cricket: 4, psl: 4, established: 5 },
+    supabets: { psl: 4, local: 4, bankrollLow: 5, rewards: 3 },
+    '10bet': { odds: 4, cricket: 4, easy: 4, established: 4 },
+    'play-co-za': { casinoMix: 5, bankrollLow: 5, easy: 4 },
+    'world-sports-betting': { local: 5, psl: 4, rugby: 3, rewards: 3, established: 4 },
+    easybet: { beginner: 4, easy: 5, bankrollLow: 4 },
+    gbets: { beginner: 4, bankrollLow: 5, rewards: 3, local: 4 },
+    sunbet: { rewards: 3, established: 4, local: 3 },
+    'bet-co-za': { local: 4, rewards: 3 },
+    betfred: { odds: 3, established: 3 },
+    betolimp: { odds: 3 },
+    betshezi: { beginner: 4, bankrollLow: 5, local: 4 },
+    lottostar: { casinoMix: 4, bankrollLow: 4, rewards: 3, local: 4 },
+    playabets: { rewards: 4, bankrollLow: 3, easy: 4, local: 4, casinoMix: 3 },
+    yesplay: { casinoMix: 4, bankrollLow: 4, rewards: 3, easy: 4 }
+  };
+
   function getPageVariant() {
     return document.body && document.body.getAttribute('data-site-matcher-page') || 'general';
   }
@@ -348,7 +88,168 @@
   }
 
   function unique(arr) {
-    return Array.from(new Set(arr));
+    return Array.from(new Set(arr.filter(Boolean)));
+  }
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function textIncludes(text, needles) {
+    return needles.some(function (needle) {
+      return text.indexOf(needle) !== -1;
+    });
+  }
+
+  function parseRating(value) {
+    if (typeof value === 'number') return value;
+    if (typeof value === 'string') {
+      var match = value.match(/(\d+(\.\d+)?)/);
+      return match ? Number(match[1]) : null;
+    }
+    return null;
+  }
+
+  function parseMinDeposit(value) {
+    if (typeof value === 'number') return value;
+    return null;
+  }
+
+  function payoutScore(speed) {
+    var text = String(speed || '').toLowerCase();
+    if (!text || text === 'coming soon') return 2;
+    if (textIncludes(text, ['instant', 'minutes'])) return 5;
+    if (textIncludes(text, ['12-24', '12 to 24'])) return 4;
+    if (textIncludes(text, ['24-48', '24 to 48'])) return 3;
+    if (textIncludes(text, ['24-72', '24 to 72'])) return 2;
+    return 2;
+  }
+
+  function isAffiliateReady(operator) {
+    return operator.go_url && operator.affiliate_url && operator.affiliate_url !== 'Coming soon';
+  }
+
+  function tagFromPayments(payments) {
+    if (payments.indexOf('1voucher') !== -1 || payments.indexOf('kazang') !== -1 || payments.indexOf('ott voucher') !== -1) {
+      return 'Voucher support';
+    }
+    if (payments.indexOf('instant eft') !== -1) {
+      return 'Instant EFT';
+    }
+    return '';
+  }
+
+  function buildTags(operator, fit) {
+    var tags = [];
+    if (fit.psl >= 4) tags.push('PSL');
+    if (fit.rugby >= 4) tags.push('Rugby');
+    if (fit.cricket >= 4) tags.push('Cricket');
+    if (fit.casinoMix >= 4) tags.push('Sport + casino');
+    if (fit.bankrollLow >= 4) tags.push('Low minimums');
+    if (fit.odds >= 4) tags.push('Odds depth');
+    if (fit.local >= 4) tags.push('Local brand');
+    if (fit.rewards >= 4) tags.push('Rewards');
+    var paymentTag = tagFromPayments(operator._paymentsLower || []);
+    if (paymentTag) tags.push(paymentTag);
+    return unique(tags).slice(0, 4);
+  }
+
+  function buildReasons(operator, fit) {
+    var reasons = [];
+    if (fit.beginner >= 4) reasons.push('Easy to start with if you want less friction on your first account.');
+    if (fit.bankrollLow >= 4) reasons.push('Works better than most if you want to start with a smaller bankroll.');
+    if (fit.odds >= 4) reasons.push('Stronger comparison option if prices and market depth matter to you.');
+    if (fit.psl >= 4) reasons.push('Makes more sense if PSL and local soccer are the main use case.');
+    if (fit.rugby >= 4) reasons.push('Worth keeping in the mix if rugby matters more than generic sportsbook breadth.');
+    if (fit.cricket >= 4) reasons.push('More relevant than average if cricket is one of your core sports.');
+    if (fit.casinoMix >= 4) reasons.push('Better fit if you want sport and casino-style products in one account.');
+    if (fit.local >= 4) reasons.push('Feels closer to local South African betting habits than some international-style books.');
+    if (operator.summary) reasons.push(operator.summary);
+    return unique(reasons).slice(0, 3);
+  }
+
+  function buildRewardNote(operator, fit) {
+    if (fit.rewards >= 4 && operator.community_quote) {
+      return operator.community_quote;
+    }
+    if (operator.summary) {
+      return operator.summary;
+    }
+    return 'Review the operator page before depositing so you can verify the current recurring value and promo terms.';
+  }
+
+  function buildWatchout(operator) {
+    return operator.community_quote || 'Check the latest review and current terms before choosing it mainly for a promotion.';
+  }
+
+  function normalizeOperator(raw) {
+    var summary = String(raw.summary || '');
+    var quote = String(raw.community_quote || '');
+    var text = (raw.name + ' ' + summary + ' ' + quote).toLowerCase();
+    var rating = parseRating(raw.rating);
+    var minDeposit = parseMinDeposit(raw.min_deposit_zar);
+    var paymentsLower = (raw.payment_methods || []).map(function (item) {
+      return String(item).toLowerCase();
+    });
+    var currentYear = new Date().getFullYear();
+    var ageScore = raw.established ? clamp(Math.round((currentYear - raw.established) / 6), 1, 5) : 2;
+    var minDepositScore = minDeposit === null ? 2 : minDeposit <= 10 ? 5 : minDeposit <= 20 ? 4 : minDeposit <= 50 ? 2 : 1;
+    var easyScore = 2
+      + (textIncludes(text, ['clean', 'slick', 'modern', 'smooth', 'accessible', 'easy', 'simple']) ? 1 : 0)
+      + (textIncludes(text, ['casual', 'low minimum', 'low minimums', 'accessible']) ? 1 : 0);
+    var localScore = 1
+      + (textIncludes(text, ['south african', 'sa operator', 'local', 'psl', 'horse racing']) ? 1 : 0)
+      + (paymentsLower.indexOf('cash') !== -1 ? 1 : 0)
+      + (paymentsLower.indexOf('1voucher') !== -1 ? 1 : 0)
+      + (paymentsLower.indexOf('kazang') !== -1 ? 1 : 0);
+    var rewardsScore = 1
+      + (textIncludes(text, ['rewards', 'cashback', 'rakeback', 'loyalty', 'promotions', 'bonus']) ? 1 : 0)
+      + (textIncludes(text, ['free bet', 'insurance']) ? 1 : 0);
+    var oddsScore = 1
+      + (rating !== null && rating >= 4.5 ? 1 : 0)
+      + (textIncludes(text, ['competitive odds', 'solid odds', 'odds', 'markets', 'live streaming', 'coverage']) ? 1 : 0);
+    var fit = {
+      beginner: clamp((minDepositScore + easyScore) / 2, 1, 5),
+      easy: clamp(easyScore, 1, 5),
+      bankrollLow: clamp(minDepositScore, 1, 5),
+      withdrawals: payoutScore(raw.payout_speed),
+      psl: textIncludes(text, ['psl', 'local soccer']) ? 4 : 2,
+      rugby: textIncludes(text, ['rugby', 'springbok', 'urc']) ? 4 : 2,
+      cricket: textIncludes(text, ['cricket', 'sa20', 'proteas']) ? 4 : 2,
+      rewards: clamp(rewardsScore, 1, 5),
+      casinoMix: textIncludes(text, ['casino', 'live casino', 'slots']) ? 4 : 1,
+      established: clamp(ageScore, 1, 5),
+      local: clamp(localScore, 1, 5),
+      odds: clamp(oddsScore, 1, 5)
+    };
+
+    var override = SPORT_HINTS[raw.slug] || {};
+    Object.keys(override).forEach(function (key) {
+      fit[key] = override[key];
+    });
+
+    var actionHref = isAffiliateReady(raw) ? raw.go_url : (raw.review_url || raw.go_url || '');
+    var actionLabel = isAffiliateReady(raw) ? 'Visit site' : 'Read review';
+    var tags = buildTags({ _paymentsLower: paymentsLower }, fit);
+    var reasons = buildReasons(raw, fit);
+    var watchout = buildWatchout(raw);
+    var rewardNote = buildRewardNote(raw, fit);
+
+    return {
+      id: raw.slug,
+      name: raw.name,
+      primaryUrl: actionHref,
+      reviewUrl: raw.review_url || '',
+      ctaLabel: actionLabel,
+      reviewLabel: 'Read review',
+      welcomeBonus: raw.welcome_bonus || 'Coming soon',
+      loyaltyNote: rewardNote,
+      watchout: watchout,
+      reasons: reasons,
+      tags: tags,
+      fit: fit,
+      raw: raw
+    };
   }
 
   function getScore(operator, answers) {
@@ -393,8 +294,8 @@
     return score;
   }
 
-  function rankOperators(answers) {
-    return OPERATORS
+  function rankOperators(operators, answers) {
+    return operators
       .map(function (operator) {
         return {
           operator: operator,
@@ -406,29 +307,31 @@
       });
   }
 
-  function getPrimaryLink(operator) {
-    if (operator.primaryUrl) {
-      return { href: operator.primaryUrl, label: operator.ctaLabel || 'Visit site' };
+  function buildSummary(answers) {
+    if (answers.experience === 'first' && answers.priority === 'easy') {
+      return 'You wanted the easiest sensible place to start, so the ranking leans toward simple onboarding, lower-friction deposits, and practical local fit.';
     }
-    if (operator.reviewUrl) {
-      return { href: operator.reviewUrl, label: operator.reviewLabel || 'Read review' };
+    if (answers.priority === 'odds') {
+      return 'You cared most about deeper markets and sharper comparison value, so the ranking leans toward sportsbook strength over pure simplicity.';
     }
-    return null;
+    if (answers.sport === 'casino_mix') {
+      return 'You asked for sport plus casino-style products, so the ranking gives extra weight to entertainment mix and low-friction entry.';
+    }
+    return 'These picks balance your sport, bankroll, and friction tolerance using the wider BetSorted operator dataset rather than a tiny hand-picked shortlist.';
   }
 
   function buildActionLinks(operator) {
-    var primary = getPrimaryLink(operator);
     var links = [];
 
-    if (primary) {
+    if (operator.primaryUrl) {
       links.push(
-        '<a class="site-matcher-primary-link" href="' + primary.href + '" data-matcher-operator="' + operator.id + '">' +
-          primary.label +
+        '<a class="site-matcher-primary-link" href="' + operator.primaryUrl + '" data-matcher-operator="' + operator.id + '">' +
+          operator.ctaLabel +
         '</a>'
       );
     }
 
-    if (operator.reviewUrl && (!primary || primary.href !== operator.reviewUrl)) {
+    if (operator.reviewUrl && operator.reviewUrl !== operator.primaryUrl) {
       links.push(
         '<a class="site-matcher-secondary-link" href="' + operator.reviewUrl + '" data-matcher-operator="' + operator.id + '" data-matcher-link-type="review">' +
           'Read review' +
@@ -439,38 +342,7 @@
     return links.join('');
   }
 
-  function buildReasonList(operator, answers) {
-    var reasons = operator.reasons.slice(0, 2);
-
-    if (answers.priority === 'rewards' && operator.fit.rewards >= 3) {
-      reasons.unshift('This one stays in the mix because recurring rewards matter more to you than headline bonus noise.');
-    }
-
-    if (answers.priority === 'odds' && operator.fit.odds >= 4) {
-      reasons.unshift('This one scores well because you said depth and pricing matter more than pure ease.');
-    }
-
-    if (answers.bankroll === 'tiny' && operator.fit.bankrollLow >= 4) {
-      reasons.unshift('You wanted a smaller starting bankroll, so low-entry friction matters here.');
-    }
-
-    return unique(reasons).slice(0, 3);
-  }
-
-  function buildSummary(answers) {
-    if (answers.experience === 'first' && answers.priority === 'easy') {
-      return 'You wanted the easiest sensible place to start, so the ranking leans toward simple onboarding and lower-friction first deposits.';
-    }
-    if (answers.priority === 'odds') {
-      return 'You cared most about deeper markets and sharper comparison value, so the ranking leans toward sportsbook strength over pure simplicity.';
-    }
-    if (answers.sport === 'casino_mix') {
-      return 'You asked for sport plus casino-style products, so the ranking gives extra weight to entertainment mix and low-friction entry.';
-    }
-    return 'These picks balance your sport, bankroll, and friction tolerance instead of pretending one site is best for everyone.';
-  }
-
-  function createMatcher() {
+  function createMatcher(operators) {
     var state = {
       step: 0,
       answers: {}
@@ -481,7 +353,7 @@
       target.innerHTML = '' +
         '<div class="site-matcher-teaser">' +
           '<h2>Use BetSorted AI to narrow the field</h2>' +
-          '<p>Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. It helps you choose a site, not pick a bet.</p>' +
+          '<p>Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. It now scores against the wider BetSorted operator dataset, not just a tiny handpicked list.</p>' +
           '<div class="site-matcher-teaser-actions">' +
             '<button class="site-matcher-open" type="button" data-site-matcher-trigger="teaser">Try the AI shortlist</button>' +
             '<button class="site-matcher-secondary" type="button" data-site-matcher-trigger="teaser-secondary">Open the AI</button>' +
@@ -526,7 +398,8 @@
       ensureAnalytics('matcher_open', {
         matcher_source: source || 'launcher',
         matcher_page: getPageVariant(),
-        page_location: window.location.pathname
+        page_location: window.location.pathname,
+        matcher_dataset_size: operators.length
       });
       render();
     }
@@ -582,19 +455,18 @@
     }
 
     function renderResults() {
-      var ranked = rankOperators(state.answers);
-      var top = ranked.slice(0, 3);
+      var ranked = rankOperators(operators, state.answers);
+      var top = ranked.slice(0, 5);
       progressStep.textContent = String(QUESTIONS.length);
       progressBar.style.width = '100%';
 
       var cardsHtml = top.map(function (entry, index) {
         var operator = entry.operator;
-        var reasons = buildReasonList(operator, state.answers);
-        var reasonChips = operator.tags.slice(0, 4).map(function (tag) {
-          return '<span class="site-matcher-chip">' + tag + '</span>';
-        }).join('');
-        var reasonText = reasons.map(function (line) {
+        var reasonText = operator.reasons.map(function (line) {
           return '<p>' + line + '</p>';
+        }).join('');
+        var reasonChips = operator.tags.map(function (tag) {
+          return '<span class="site-matcher-chip">' + tag + '</span>';
         }).join('');
         var actionLinks = buildActionLinks(operator);
         var valueBlocks = '' +
@@ -604,7 +476,7 @@
               '<strong>' + operator.welcomeBonus + '</strong>' +
             '</div>' +
             '<div class="site-matcher-value-card">' +
-              '<span class="site-matcher-value-label">Loyalty and rewards</span>' +
+              '<span class="site-matcher-value-label">What BetSorted data says</span>' +
               '<strong>' + operator.loyaltyNote + '</strong>' +
             '</div>' +
           '</div>';
@@ -617,9 +489,7 @@
             valueBlocks +
             reasonText +
             '<div class="site-matcher-watchout"><strong>Watch out:</strong> ' + operator.watchout + '</div>' +
-            '<div class="site-matcher-card-actions">' +
-              actionLinks +
-            '</div>' +
+            '<div class="site-matcher-card-actions">' + actionLinks + '</div>' +
           '</article>';
       }).join('');
 
@@ -642,7 +512,8 @@
         answer_bankroll: state.answers.bankroll,
         answer_priority: state.answers.priority,
         answer_style: state.answers.style,
-        top_pick: top[0] ? top[0].operator.id : ''
+        top_pick: top[0] ? top[0].operator.id : '',
+        matcher_dataset_size: operators.length
       });
 
       stage.querySelector('.site-matcher-back').addEventListener('click', function () {
@@ -710,10 +581,35 @@
     }, 3500);
   }
 
+  function loadOperators() {
+    return fetch(DATA_URL, { credentials: 'same-origin' })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Failed to load matcher data: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(function (items) {
+        return items
+          .filter(function (item) {
+            return item && item.slug && item.name && (item.review_url || item.go_url);
+          })
+          .map(normalizeOperator);
+      });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     if (!document.querySelector('[data-site-matcher-teaser]')) {
       return;
     }
-    createMatcher();
+
+    loadOperators().then(function (operators) {
+      createMatcher(operators);
+    }).catch(function () {
+      var targets = document.querySelectorAll('[data-site-matcher-teaser]');
+      targets.forEach(function (target) {
+        target.innerHTML = '<div class="site-matcher-teaser"><h2>BetSorted AI is loading</h2><p>The site shortlist is temporarily unavailable. Open the bookmaker hub or refresh in a moment.</p></div>';
+      });
+    });
   });
 })();

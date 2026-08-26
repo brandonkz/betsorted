@@ -81,6 +81,10 @@
     return document.body && document.body.getAttribute('data-site-matcher-page') || 'general';
   }
 
+  function shouldShowFloatingLauncher() {
+    return getPageVariant() !== 'homepage';
+  }
+
   function getTeaserConfig() {
     if (getPageVariant() === 'homepage') {
       return {
@@ -455,11 +459,14 @@
         '</div>';
     });
 
-    var launcher = document.createElement('button');
-    launcher.type = 'button';
-    launcher.className = 'site-matcher-launcher';
-    launcher.setAttribute('aria-haspopup', 'dialog');
-    launcher.innerHTML = '<span>AI</span><strong>Find my best-fit site</strong>';
+    var launcher = null;
+    if (shouldShowFloatingLauncher()) {
+      launcher = document.createElement('button');
+      launcher.type = 'button';
+      launcher.className = 'site-matcher-launcher';
+      launcher.setAttribute('aria-haspopup', 'dialog');
+      launcher.innerHTML = '<span>AI</span><strong>Find my best-fit site</strong>';
+    }
 
     var overlay = document.createElement('div');
     overlay.className = 'site-matcher-overlay';
@@ -478,7 +485,9 @@
         '</div>' +
       '</div>';
 
-    document.body.appendChild(launcher);
+    if (launcher) {
+      document.body.appendChild(launcher);
+    }
     document.body.appendChild(overlay);
 
     var stage = overlay.querySelector('[data-site-matcher-stage]');
@@ -650,9 +659,11 @@
       renderQuestion();
     }
 
-    launcher.addEventListener('click', function () {
-      openMatcher('launcher');
-    });
+    if (launcher) {
+      launcher.addEventListener('click', function () {
+        openMatcher('launcher');
+      });
+    }
 
     document.querySelectorAll('[data-site-matcher-trigger]').forEach(function (button) {
       button.addEventListener('click', function () {

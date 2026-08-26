@@ -23,11 +23,11 @@
     if (isHome) {
       return {
         messages: [
-          "Compare reviews, payout speed and bonus catches → See Bookmakers",
-          "We check shady reward clauses so you do not have to → Compare Bookmakers"
+          "Find your best-fit casino or betting site in four questions → Try the AI Finder",
+          "Tell us whether you want rewards, loyalty or low deposits → Open the AI"
         ],
-        buttonText: 'Compare Bookmakers',
-        href: '/#comparison'
+        buttonText: 'Try the AI Finder',
+        action: 'matcher'
       };
     }
 
@@ -38,6 +38,7 @@
           "Plan your stake with free SA betting calculators → Try the Calculators"
         ],
         buttonText: 'Try the Calculators',
+        action: 'link',
         href: '/calculators.html'
       };
     }
@@ -49,6 +50,7 @@
           "Level up your bets with our betting guides → View Guides"
         ],
         buttonText: 'View Guides',
+        action: 'link',
         href: '/blog/index.html'
       };
     }
@@ -60,6 +62,7 @@
           "Estimate payouts fast before you place a bet → Betting Calculator"
         ],
         buttonText: 'Betting Calculator',
+        action: 'link',
         href: '/betting-calculator.html'
       };
     }
@@ -70,6 +73,7 @@
         "Estimate payouts fast before you place a bet → Betting Calculator"
       ],
       buttonText: 'Betting Calculator',
+      action: 'link',
       href: '/betting-calculator.html'
     };
   })();
@@ -191,7 +195,9 @@
     <div class="sticky-cta-inner">
       <div class="sticky-cta-message" aria-live="polite"></div>
       <div class="sticky-cta-actions">
-        <a class="sticky-cta-button" href="${ctaConfig.href}">${ctaConfig.buttonText}</a>
+        ${ctaConfig.action === 'matcher'
+          ? `<button class="sticky-cta-button" type="button">${ctaConfig.buttonText}</button>`
+          : `<a class="sticky-cta-button" href="${ctaConfig.href}">${ctaConfig.buttonText}</a>`}
         <button class="sticky-cta-close" type="button" aria-label="Dismiss call to action">×</button>
       </div>
     </div>
@@ -215,6 +221,21 @@
 
   const barHeight = bar.offsetHeight || 72;
   document.body.style.paddingBottom = `${bodyPaddingBottom + barHeight + 16}px`;
+
+  const primaryButton = bar.querySelector('.sticky-cta-button');
+  if (ctaConfig.action === 'matcher' && primaryButton) {
+    primaryButton.addEventListener('click', () => {
+      const teaserTrigger = document.querySelector('[data-site-matcher-trigger="teaser"]');
+      const floatingLauncher = document.querySelector('.site-matcher-launcher');
+      if (teaserTrigger instanceof HTMLElement) {
+        teaserTrigger.click();
+        return;
+      }
+      if (floatingLauncher instanceof HTMLElement) {
+        floatingLauncher.click();
+      }
+    });
+  }
 
   const closeBtn = bar.querySelector('.sticky-cta-close');
   closeBtn.addEventListener('click', () => {

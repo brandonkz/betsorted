@@ -1,0 +1,124 @@
+:root {
+  color-scheme: light;
+  --redirect-bg: radial-gradient(circle at top, #1d4ed8 0%, #0f172a 52%, #020617 100%);
+  --redirect-card: rgba(255, 255, 255, 0.94);
+  --redirect-ink: #0f172a;
+  --redirect-muted: #475569;
+  --redirect-link: #1d4ed8;
+  --redirect-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
+  --redirect-border: rgba(148, 163, 184, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  background: var(--redirect-bg);
+  color: var(--redirect-ink);
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body::before {
+  content: "BetSorted";
+  position: fixed;
+  top: 18px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body::after {
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(255, 255, 255, 0.92);
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  animation: redirect-spin 0.8s linear infinite;
+}
+
+h1,
+p {
+  width: min(100%, 520px);
+  margin: 0;
+  padding-inline: 0;
+}
+
+h1 {
+  padding: 28px 32px 10px;
+  background: var(--redirect-card);
+  border: 1px solid var(--redirect-border);
+  border-bottom: none;
+  border-radius: 28px 28px 0 0;
+  box-shadow: var(--redirect-shadow);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+p {
+  padding: 0 32px 28px;
+  background: var(--redirect-card);
+  border: 1px solid var(--redirect-border);
+  border-top: none;
+  border-radius: 0 0 28px 28px;
+  box-shadow: var(--redirect-shadow);
+  color: var(--redirect-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--redirect-link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes redirect-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 18px;
+  }
+
+  h1 {
+    padding: 24px 22px 8px;
+    border-radius: 22px 22px 0 0;
+  }
+
+  p {
+    padding: 0 22px 22px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  body::after {
+    width: 36px;
+    height: 36px;
+    bottom: 18px;
+    right: 18px;
+  }
+}

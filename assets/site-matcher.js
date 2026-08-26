@@ -272,8 +272,8 @@
       fit[key] = override[key];
     });
 
-    var actionHref = isAffiliateReady(raw) ? raw.go_url : (raw.review_url || raw.go_url || '');
-    var actionLabel = isAffiliateReady(raw) ? ('Visit ' + raw.name) : 'Read review';
+    var actionHref = raw.go_url || raw.review_url || '';
+    var actionLabel = raw.go_url ? ('Visit ' + raw.name) : 'Read review';
     var tags = buildTags({ _paymentsLower: paymentsLower }, fit);
     var reasons = buildReasons(raw, fit);
     var watchout = buildWatchout(raw);
@@ -395,7 +395,11 @@
         resolved.searchParams.set('subid', 'ai-finder-' + matcherPage);
       }
 
-      return resolved.pathname + resolved.search + resolved.hash;
+      if (resolved.origin === window.location.origin) {
+        return resolved.pathname + resolved.search + resolved.hash;
+      }
+
+      return resolved.toString();
     } catch (err) {
       return url;
     }
@@ -403,10 +407,7 @@
 
   function buildActionLinks(operator) {
     var links = [];
-    var rawPrimaryUrl = operator.id === 'playabets' && operator.raw && operator.raw.affiliate_url && operator.raw.affiliate_url !== 'Coming soon'
-      ? operator.raw.affiliate_url
-      : operator.primaryUrl;
-    var trackedPrimaryUrl = appendMatcherTracking(rawPrimaryUrl, operator, 'visit');
+    var trackedPrimaryUrl = appendMatcherTracking(operator.primaryUrl, operator, 'visit');
     var trackedReviewUrl = appendMatcherTracking(operator.reviewUrl, operator, 'review');
     var hasDistinctReview = operator.reviewUrl && operator.reviewUrl !== operator.primaryUrl;
 

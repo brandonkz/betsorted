@@ -28,7 +28,7 @@ async function init() {
 // Data Loading
 async function loadSites() {
   try {
-    const response = await fetch('data/sites.json?v=20260824-catch-guide-links', {
+    const response = await fetch('data/sites.json?v=20260826-homepage-sites', {
       cache: 'no-store'
     });
     if (response.ok) {

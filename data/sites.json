@@ -395,5 +395,429 @@
     "featured": false,
     "rank": 8,
     "promo_catch": "If you try to withdraw before clearing the rollover, the whole bonus balance is wiped."
+  },
+  {
+    "id": 9,
+    "name": "Playbet",
+    "slug": "playabets",
+    "logo_bg": "#0F766E",
+    "url": "https://playbet.net",
+    "ref_url": "https://trk.playbet.net/o/u_K-Lb?subid=home-table&utm_source=betsorted&utm_medium=homepage_table&utm_campaign=playbet_homepage&utm_content=open_playbet",
+    "rating": 3.9,
+    "welcome_bonus": "Coming soon",
+    "min_deposit": "Coming soon",
+    "payment_methods": [
+      "Instant EFT",
+      "Bank Transfer",
+      "Visa",
+      "Mastercard"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Horse Racing",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "Promo-friendly bookmaker for everyday SA punters who want a fast betslip, simple banking, and a clean local-feeling interface.",
+    "pros": [
+      "Direct Playbet affiliate route",
+      "Simple banking options",
+      "Sports + casino mix",
+      "Clean local-feeling interface"
+    ],
+    "cons": [
+      "Bonus details still need verification",
+      "No confirmed live streaming",
+      "Casino offers can carry heavier wagering"
+    ],
+    "best_for": [
+      "Promo shoppers",
+      "Sports + casino users",
+      "Secondary-book comparison"
+    ],
+    "featured": false,
+    "rank": 9,
+    "promo_catch": "Playbet is separate from Play.co.za, and some casino routes jump to 35x wagering."
+  },
+  {
+    "id": 10,
+    "name": "YesPlay",
+    "slug": "yesplay",
+    "logo_bg": "#7C3AED",
+    "url": "https://yesplay.bet",
+    "ref_url": "/go/yesplay.html",
+    "rating": 3.4,
+    "welcome_bonus": "Typically 100% first deposit match up to R500",
+    "min_deposit": "R10",
+    "payment_methods": [
+      "Instant EFT",
+      "Capitec Pay",
+      "Vouchers",
+      "Visa",
+      "Mastercard"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Lucky Numbers",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "A competent all-rounder for punters who want sports betting, Lucky Numbers, and casino games in one account without overcomplicating things.",
+    "pros": [
+      "Sports + casino + Lucky Numbers",
+      "Low entry deposit",
+      "Familiar local payment mix",
+      "Straightforward onboarding"
+    ],
+    "cons": [
+      "No data-free mode",
+      "No confirmed live streaming",
+      "Withdrawal timing can stretch to business days"
+    ],
+    "best_for": [
+      "All-round casual users",
+      "Lucky Numbers fans",
+      "Sports + casino crossover"
+    ],
+    "featured": false,
+    "rank": 10,
+    "promo_catch": "Withdrawals usually land in 1 to 3 business days and there is no data-free mode."
+  },
+  {
+    "id": 11,
+    "name": "LottoStar",
+    "slug": "lottostar",
+    "logo_bg": "#1D4ED8",
+    "url": "https://www.lottostar.co.za",
+    "ref_url": "/go/lottostar.html",
+    "rating": 3.2,
+    "welcome_bonus": "Coming soon",
+    "min_deposit": "R10",
+    "payment_methods": [
+      "Instant EFT",
+      "Vouchers",
+      "Card payments",
+      "Capitec Pay"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Lucky Numbers",
+      "Virtuals",
+      "Casino",
+      "Soccer",
+      "Rugby"
+    ],
+    "live_streaming": false,
+    "live_betting": false,
+    "established": "Coming soon",
+    "license": "Mpumalanga Economic Regulator",
+    "description": "Better suited to Lucky Numbers, virtual games, and casual low-stake play than to deep football or rugby betting.",
+    "pros": [
+      "Strong Lucky Numbers fit",
+      "Low-stake casual appeal",
+      "Familiar local payments",
+      "Simple product focus"
+    ],
+    "cons": [
+      "Thin sportsbook coverage",
+      "No confirmed live betting depth",
+      "Bonus details still need verification"
+    ],
+    "best_for": [
+      "Lucky Numbers players",
+      "Casual low-stake users",
+      "Virtual game fans"
+    ],
+    "featured": false,
+    "rank": 11,
+    "promo_catch": "Sports coverage is much thinner than a full sportsbook."
+  },
+  {
+    "id": 12,
+    "name": "Supabets",
+    "slug": "supabets",
+    "logo_bg": "#ED1C24",
+    "url": "https://www.supabets.co.za",
+    "ref_url": "/go/supabets.html",
+    "rating": 4.3,
+    "welcome_bonus": "R50 free bet + 100 free spins + up to R5,000",
+    "min_deposit": "R10",
+    "payment_methods": [
+      "EFT",
+      "Instant EFT"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Horse Racing",
+      "Lucky Numbers"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Free State Gambling, Liquor and Tourism Authority",
+    "description": "A useful comparison book for punters who care about local PSL coverage, rugby weekends, and recurring promotions more than polished design.",
+    "pros": [
+      "Strong local market depth",
+      "Recurring promos",
+      "Good PSL relevance",
+      "Simple deposit floor"
+    ],
+    "cons": [
+      "Harsh bonus wagering",
+      "No confirmed live streaming",
+      "Interface is not especially polished"
+    ],
+    "best_for": [
+      "PSL punters",
+      "Local-market shoppers",
+      "Promo chasers"
+    ],
+    "featured": false,
+    "rank": 12,
+    "promo_catch": "The R999 sign-up cap and wagering are much harsher than the headline suggests."
+  },
+  {
+    "id": 13,
+    "name": "Easybet",
+    "slug": "easybet",
+    "logo_bg": "#00AEEF",
+    "url": "https://easybet.co.za",
+    "ref_url": "/go/easybet.html",
+    "rating": 4,
+    "welcome_bonus": "150% first deposit up to R5,000 + R50 sign-up bonus",
+    "min_deposit": "R20",
+    "payment_methods": [
+      "EFT",
+      "Instant EFT",
+      "1Voucher",
+      "Cash"
+    ],
+    "data_free_app": true,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Horse Racing",
+      "Virtuals"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Eastern Cape Gambling and Betting Board",
+    "description": "Easybet leans into accessibility with low-friction deposits, a light mobile feel, and data-aware appeal for more casual punters.",
+    "pros": [
+      "Lightweight mobile feel",
+      "Voucher and cash support",
+      "Data-aware appeal",
+      "Accessible for casual users"
+    ],
+    "cons": [
+      "Live streaming not confirmed",
+      "Withdrawal cap still needs tighter verification",
+      "Market depth is lighter than top books"
+    ],
+    "best_for": [
+      "Casual bettors",
+      "Budget-conscious users",
+      "Low-friction signups"
+    ],
+    "featured": false,
+    "rank": 13,
+    "promo_catch": "The match pays in bonus bets and the withdrawal cap still needs tighter verification."
+  },
+  {
+    "id": 14,
+    "name": "BET.co.za",
+    "slug": "bet-co-za",
+    "logo_bg": "#0EA5E9",
+    "url": "https://www.bet.co.za",
+    "ref_url": "/go/bet-co-za.html",
+    "rating": 3.5,
+    "welcome_bonus": "100% first deposit match up to R5,000",
+    "min_deposit": "Coming soon",
+    "payment_methods": [
+      "Coming soon"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Horse Racing",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "BET.co.za is worth keeping in the shortlist for readers who care more about cleaner bonus structure than loud promo marketing.",
+    "pros": [
+      "Cleaner bonus structure",
+      "Has canonical BetSorted review",
+      "Broad mainstream market coverage"
+    ],
+    "cons": [
+      "Commercial fields still need verification",
+      "Min deposit still unconfirmed",
+      "No confirmed live streaming"
+    ],
+    "best_for": [
+      "Bonus-structure shoppers",
+      "Mainstream sportsbook users",
+      "Comparison completeness"
+    ],
+    "featured": false,
+    "rank": 14,
+    "promo_catch": "The live bonus terms are still harder to inspect than they should be."
+  },
+  {
+    "id": 15,
+    "name": "Betfred",
+    "slug": "betfred",
+    "logo_bg": "#004990",
+    "url": "https://betfred.co.za",
+    "ref_url": "/go/betfred.html",
+    "rating": 4,
+    "welcome_bonus": "Up to R21,000 + 750 free spins",
+    "min_deposit": "R20",
+    "payment_methods": [
+      "Coming soon"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Horse Racing",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Gauteng Gambling Board",
+    "description": "Betfred deserves visibility for casino-heavy readers because the offer is large and the brand is established, even if some local-field verification is still thin.",
+    "pros": [
+      "Big headline offer",
+      "Established international brand",
+      "Casino-heavy appeal"
+    ],
+    "cons": [
+      "Several local fields still pending verification",
+      "No confirmed live streaming",
+      "Payments detail still thin"
+    ],
+    "best_for": [
+      "Casino-first users",
+      "Big-offer shoppers",
+      "Brand-led comparison"
+    ],
+    "featured": false,
+    "rank": 15,
+    "promo_catch": "Treat the headline cautiously until the local commercial fields are tighter."
+  },
+  {
+    "id": 16,
+    "name": "BetOlimp",
+    "slug": "betolimp",
+    "logo_bg": "#17324D",
+    "url": "https://betolimp.co.za",
+    "ref_url": "/go/betolimp.html",
+    "rating": 3.5,
+    "welcome_bonus": "100% first deposit match up to R3,000 + 50 free spins",
+    "min_deposit": "Coming soon",
+    "payment_methods": [
+      "Coming soon"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Tennis",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "BetOlimp should be visible for completeness in the comparison set, especially for readers checking beyond the usual SA defaults.",
+    "pros": [
+      "Useful extra comparison brand",
+      "Sports + casino mix",
+      "Has a dedicated BetSorted review"
+    ],
+    "cons": [
+      "Several commercial fields still need verification",
+      "Min deposit still unconfirmed",
+      "No confirmed live streaming"
+    ],
+    "best_for": [
+      "Longlist comparison",
+      "Alternative-brand shoppers",
+      "Sports + casino crossover"
+    ],
+    "featured": false,
+    "rank": 16,
+    "promo_catch": "Several commercial fields still need manual verification."
+  },
+  {
+    "id": 17,
+    "name": "Betshezi",
+    "slug": "betshezi",
+    "logo_bg": "#E11D48",
+    "url": "https://betshezi.co.za",
+    "ref_url": "/go/betshezi.html",
+    "rating": 3.8,
+    "welcome_bonus": "R25 no-deposit free bet + 100% deposit match up to R2,000",
+    "min_deposit": "R10",
+    "payment_methods": [
+      "Coming soon"
+    ],
+    "data_free_app": false,
+    "sports": [
+      "Soccer",
+      "Rugby",
+      "Cricket",
+      "Lucky Numbers",
+      "Casino"
+    ],
+    "live_streaming": false,
+    "live_betting": true,
+    "established": "Coming soon",
+    "license": "Western Cape Gambling & Racing Board",
+    "description": "Betshezi is worth surfacing for casual punters because the no-deposit hook lowers the barrier to trying a second account.",
+    "pros": [
+      "No-deposit angle",
+      "Low entry barrier",
+      "Good fit for casual punters"
+    ],
+    "cons": [
+      "Affiliate fields still thin",
+      "Payments detail still incomplete",
+      "No confirmed live streaming"
+    ],
+    "best_for": [
+      "Casual punters",
+      "No-deposit bonus shoppers",
+      "Secondary account users"
+    ],
+    "featured": false,
+    "rank": 17,
+    "promo_catch": "Affiliate and verification fields are still not fully filled out."
   }
 ]

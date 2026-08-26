@@ -143,6 +143,12 @@
       border-color: #f8fafc;
       color: #ffffff;
     }
+    body.site-matcher-open .sticky-cta-bar {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
     @media (max-width: 720px) {
       .sticky-cta-bar {
         left: 12px;

@@ -117,6 +117,24 @@
     return Math.max(min, Math.min(max, value));
   }
 
+  function getBrandMark(name) {
+    var cleaned = String(name || '')
+      .replace(/\.co\.za/gi, '')
+      .replace(/[^a-z0-9]+/gi, ' ')
+      .trim();
+    if (!cleaned) return 'BET';
+
+    var words = cleaned.split(/\s+/).filter(Boolean);
+    if (words.length > 1) {
+      return words.slice(0, 3).map(function (word) {
+        return word.charAt(0).toUpperCase();
+      }).join('');
+    }
+
+    var compact = words[0].toUpperCase();
+    return compact.length <= 4 ? compact : compact.slice(0, 3);
+  }
+
   function textIncludes(text, needles) {
     return needles.some(function (needle) {
       return text.indexOf(needle) !== -1;
@@ -251,7 +269,7 @@
     });
 
     var actionHref = isAffiliateReady(raw) ? raw.go_url : (raw.review_url || raw.go_url || '');
-    var actionLabel = isAffiliateReady(raw) ? 'Visit site' : 'Read review';
+    var actionLabel = isAffiliateReady(raw) ? ('Visit ' + raw.name) : 'Read review';
     var tags = buildTags({ _paymentsLower: paymentsLower }, fit);
     var reasons = buildReasons(raw, fit);
     var watchout = buildWatchout(raw);
@@ -270,6 +288,9 @@
       reasons: reasons,
       tags: tags,
       fit: fit,
+      brandMark: getBrandMark(raw.name),
+      logoColor: raw.logo_color || '#1d4ed8',
+      logoImage: raw.logo_image || raw.logo_url || '',
       raw: raw
     };
   }
@@ -380,6 +401,7 @@
     var links = [];
     var trackedPrimaryUrl = appendMatcherTracking(operator.primaryUrl, operator, 'visit');
     var trackedReviewUrl = appendMatcherTracking(operator.reviewUrl, operator, 'review');
+    var hasDistinctReview = operator.reviewUrl && operator.reviewUrl !== operator.primaryUrl;
 
     if (trackedPrimaryUrl) {
       links.push(
@@ -389,7 +411,7 @@
       );
     }
 
-    if (trackedReviewUrl && trackedReviewUrl !== trackedPrimaryUrl) {
+    if (trackedReviewUrl && hasDistinctReview) {
       links.push(
         '<a class="site-matcher-secondary-link" href="' + trackedReviewUrl + '" data-matcher-operator="' + operator.id + '" data-matcher-link-type="review">' +
           'Read review' +
@@ -459,11 +481,13 @@
     var stage = overlay.querySelector('[data-site-matcher-stage]');
     var progressStep = overlay.querySelector('[data-progress-step]');
     var progressBar = overlay.querySelector('[data-progress-bar]');
+    var progress = overlay.querySelector('.site-matcher-progress');
 
     function openMatcher(source) {
       overlay.classList.add('is-open');
       document.body.classList.add('site-matcher-open');
       document.body.style.overflow = 'hidden';
+      overlay.querySelector('.site-matcher-modal').scrollTop = 0;
       ensureAnalytics('matcher_open', {
         matcher_source: source || 'launcher',
         matcher_page: getPageVariant(),
@@ -481,6 +505,7 @@
 
     function renderQuestion() {
       var question = QUESTIONS[state.step];
+      progress.classList.remove('is-hidden');
       progressStep.textContent = String(state.step + 1);
       progressBar.style.width = (((state.step + 1) / QUESTIONS.length) * 100) + '%';
 
@@ -525,40 +550,45 @@
 
     function renderResults() {
       var ranked = rankOperators(operators, state.answers);
-      var top = ranked.slice(0, 5);
-      progressStep.textContent = String(QUESTIONS.length);
-      progressBar.style.width = '100%';
+      var top = ranked.slice(0, 3);
+      progress.classList.add('is-hidden');
 
       var cardsHtml = top.map(function (entry, index) {
         var operator = entry.operator;
-        var reasonText = operator.reasons.map(function (line) {
-          return '<p>' + line + '</p>';
-        }).join('');
+        var reasonText = operator.reasons[0] || operator.loyaltyNote;
         var reasonChips = operator.tags.map(function (tag) {
           return '<span class="site-matcher-chip">' + tag + '</span>';
         }).join('');
         var actionLinks = buildActionLinks(operator);
-        var valueBlocks = '' +
-          '<div class="site-matcher-value-grid">' +
-            '<div class="site-matcher-value-card">' +
-              '<span class="site-matcher-value-label">Welcome bonus</span>' +
-              '<strong>' + operator.welcomeBonus + '</strong>' +
-            '</div>' +
-            '<div class="site-matcher-value-card">' +
-              '<span class="site-matcher-value-label">What BetSorted data says</span>' +
-              '<strong>' + operator.loyaltyNote + '</strong>' +
-            '</div>' +
-          '</div>';
+        var logoMarkup = operator.logoImage
+          ? '<img class="site-matcher-brand-logo-image" src="' + operator.logoImage + '" alt="' + operator.name + ' logo" loading="lazy">'
+          : '<span class="site-matcher-brand-logo-fallback">' + operator.brandMark + '</span>';
 
         return '' +
           '<article class="site-matcher-card' + (index === 0 ? ' site-matcher-card--best' : '') + '">' +
-            '<span class="site-matcher-badge">' + (index === 0 ? 'Best match' : index === 1 ? 'Runner-up' : 'Worth comparing') + '</span>' +
-            '<h4>' + operator.name + '</h4>' +
-            '<div class="site-matcher-chip-row">' + reasonChips + '</div>' +
-            valueBlocks +
-            reasonText +
-            '<div class="site-matcher-watchout"><strong>Watch out:</strong> ' + operator.watchout + '</div>' +
+            '<div class="site-matcher-card-head">' +
+              '<span class="site-matcher-badge">#' + (index + 1) + '</span>' +
+              '<div class="site-matcher-brand-block">' +
+                '<div class="site-matcher-brand-logo" style="--brand-accent:' + operator.logoColor + ';">' +
+                  logoMarkup +
+                '</div>' +
+                '<div class="site-matcher-brand-copy">' +
+                  '<h4>' + operator.name + '</h4>' +
+                  '<span class="site-matcher-card-kicker">Welcome offer</span>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="site-matcher-value-card site-matcher-value-card--hero">' +
+              '<span class="site-matcher-value-label">Welcome bonus</span>' +
+              '<strong>' + operator.welcomeBonus + '</strong>' +
+            '</div>' +
             '<div class="site-matcher-card-actions">' + actionLinks + '</div>' +
+            '<div class="site-matcher-chip-row">' + reasonChips + '</div>' +
+            '<div class="site-matcher-card-copy">' +
+              '<span class="site-matcher-value-label">Why it fits</span>' +
+              '<p>' + reasonText + '</p>' +
+            '</div>' +
+            '<div class="site-matcher-watchout"><strong>Watch out:</strong> ' + operator.watchout + '</div>' +
           '</article>';
       }).join('');
 
@@ -567,6 +597,7 @@
           '<h3>Your shortlist</h3>' +
           '<p>' + buildSummary(state.answers) + '</p>' +
           '<div class="site-matcher-result-list">' + cardsHtml + '</div>' +
+          '<div class="site-matcher-footer">18+ only. Gamble responsibly. <a href="/responsible-gambling.html">Responsible gambling</a> · NRGP 0800 006 008</div>' +
           '<div class="site-matcher-actions">' +
             '<button class="site-matcher-back" type="button">Back</button>' +
             '<button class="site-matcher-reset" type="button">Start again</button>' +

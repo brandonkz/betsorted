@@ -342,20 +342,56 @@
     return 'These picks balance your sport, bankroll, and friction tolerance using the wider BetSorted operator dataset rather than a tiny hand-picked shortlist.';
   }
 
+  function appendMatcherTracking(url, operator, linkType) {
+    if (!url) return '';
+
+    try {
+      var resolved = new URL(url, window.location.origin);
+      var matcherPage = getPageVariant();
+      var content = matcherPage + '_' + linkType;
+
+      if (!resolved.searchParams.has('utm_source')) {
+        resolved.searchParams.set('utm_source', 'betsorted');
+      }
+      if (!resolved.searchParams.has('utm_medium')) {
+        resolved.searchParams.set('utm_medium', 'ai_finder');
+      }
+      if (!resolved.searchParams.has('utm_campaign')) {
+        resolved.searchParams.set('utm_campaign', 'ai_finder_' + matcherPage);
+      }
+      if (!resolved.searchParams.has('utm_content')) {
+        resolved.searchParams.set('utm_content', content);
+      }
+      if (!resolved.searchParams.has('utm_term')) {
+        resolved.searchParams.set('utm_term', operator.id);
+      }
+
+      if (linkType === 'visit' && resolved.origin === window.location.origin && resolved.pathname.indexOf('/go/') === 0 && !resolved.searchParams.has('subid')) {
+        resolved.searchParams.set('subid', 'ai-finder-' + matcherPage);
+      }
+
+      return resolved.pathname + resolved.search + resolved.hash;
+    } catch (err) {
+      return url;
+    }
+  }
+
   function buildActionLinks(operator) {
     var links = [];
+    var trackedPrimaryUrl = appendMatcherTracking(operator.primaryUrl, operator, 'visit');
+    var trackedReviewUrl = appendMatcherTracking(operator.reviewUrl, operator, 'review');
 
-    if (operator.primaryUrl) {
+    if (trackedPrimaryUrl) {
       links.push(
-        '<a class="site-matcher-primary-link" href="' + operator.primaryUrl + '" data-matcher-operator="' + operator.id + '">' +
+        '<a class="site-matcher-primary-link" href="' + trackedPrimaryUrl + '" data-matcher-operator="' + operator.id + '" data-matcher-link-type="visit">' +
           operator.ctaLabel +
         '</a>'
       );
     }
 
-    if (operator.reviewUrl && operator.reviewUrl !== operator.primaryUrl) {
+    if (trackedReviewUrl && trackedReviewUrl !== trackedPrimaryUrl) {
       links.push(
-        '<a class="site-matcher-secondary-link" href="' + operator.reviewUrl + '" data-matcher-operator="' + operator.id + '" data-matcher-link-type="review">' +
+        '<a class="site-matcher-secondary-link" href="' + trackedReviewUrl + '" data-matcher-operator="' + operator.id + '" data-matcher-link-type="review">' +
           'Read review' +
         '</a>'
       );

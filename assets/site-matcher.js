@@ -399,7 +399,10 @@
 
   function buildActionLinks(operator) {
     var links = [];
-    var trackedPrimaryUrl = appendMatcherTracking(operator.primaryUrl, operator, 'visit');
+    var rawPrimaryUrl = operator.id === 'playabets' && operator.raw && operator.raw.affiliate_url && operator.raw.affiliate_url !== 'Coming soon'
+      ? operator.raw.affiliate_url
+      : operator.primaryUrl;
+    var trackedPrimaryUrl = appendMatcherTracking(rawPrimaryUrl, operator, 'visit');
     var trackedReviewUrl = appendMatcherTracking(operator.reviewUrl, operator, 'review');
     var hasDistinctReview = operator.reviewUrl && operator.reviewUrl !== operator.primaryUrl;
 

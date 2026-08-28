@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="trustpilot-one-time-domain-verification-id" content="a4fc1836-31de-4a85-acbf-8eca95e95857"/>
-  <script>
-    // Force non-www redirect
-    if (window.location.hostname.startsWith('www.')) {
-      window.location.replace(window.location.href.replace('www.', ''));
-    }
-  </script>
   <meta name="description" content="Compare the best betting sites in South Africa for 2026. Honest reviews from SA punters — Betway, Hollywoodbets, Sportingbet, Supabets and more. ZAR deposits, instant EFT, licensed bookmakers only.">
   <link rel="canonical" href="https://betsorted.co.za/">
   <meta name="keywords" content="best bookmakers south africa, hollywoodbets vs betway, sports betting odds comparison sa, south africa betting sites, betway, hollywoodbets">
@@ -38,6 +32,14 @@
         script.setAttribute(key, value);
       });
       document.head.appendChild(script);
+      return script;
+    }
+
+    function loadLocalScript(src) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      (document.body || document.head).appendChild(script);
       return script;
     }
 
@@ -73,6 +75,23 @@
     window.addEventListener('load', function () {
       onIdle(loadAnalytics, 2500);
       onIdle(loadAds, 5000);
+    }, { once: true });
+
+    let enhancementScriptsLoaded = false;
+    function loadEnhancementScripts() {
+      if (enhancementScriptsLoaded) return;
+      enhancementScriptsLoaded = true;
+      loadLocalScript('/assets/site-matcher.js?v=20260826k');
+      loadLocalScript('/assets/track-clicks.js');
+      loadLocalScript('/assets/sticky-cta.js?v=20260826f');
+    }
+
+    ['pointerdown', 'touchstart', 'keydown'].forEach((eventName) => {
+      window.addEventListener(eventName, loadEnhancementScripts, { once: true, passive: true });
+    });
+
+    window.addEventListener('load', function () {
+      onIdle(loadEnhancementScripts, 3500);
     }, { once: true });
   </script>
   
@@ -1079,8 +1098,5 @@
   </footer>
 
   <script src="app.js?v=20260826-homepage-sites" defer></script>
-  <script src="/assets/site-matcher.js?v=20260826k" defer></script>
-  <script src="/assets/track-clicks.js" defer></script>
-  <script src="/assets/sticky-cta.js?v=20260826f" defer></script>
 </body>
 </html>

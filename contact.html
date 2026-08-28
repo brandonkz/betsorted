@@ -17,8 +17,33 @@
   <meta name="twitter:image" content="https://betsorted.co.za/assets/og-image.png">
   <link rel="stylesheet" href="/style.css?v=20260313">
   <link rel="icon" href="/assets/favicon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001"
-     crossorigin="anonymous"></script>
+  <script>
+    function loadAdsense() {
+      if (window.__betsortedAdsenseLoaded) return;
+      window.__betsortedAdsenseLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1100439985778001';
+      script.crossOrigin = 'anonymous';
+      document.head.appendChild(script);
+    }
+
+    function onIdle(callback, timeout) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(callback, { timeout: timeout || 3000 });
+        return;
+      }
+      setTimeout(callback, timeout || 3000);
+    }
+
+    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach((eventName) => {
+      window.addEventListener(eventName, loadAdsense, { once: true, passive: true });
+    });
+
+    window.addEventListener('load', function () {
+      onIdle(loadAdsense, 6000);
+    }, { once: true });
+  </script>
 
   <!-- Phase 1 additive schema -->
   <script type="application/ld+json">

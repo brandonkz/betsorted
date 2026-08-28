@@ -9,16 +9,44 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/assets/site-matcher.css?v=20260826k">
   <link rel="icon" href="/assets/favicon.png">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1VHD0P7M44');
+    function loadAnalytics() {
+      if (window.__betsortedRewardsAnalyticsLoaded) return;
+      window.__betsortedRewardsAnalyticsLoaded = true;
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44';
+      script.async = true;
+      document.head.appendChild(script);
+      gtag('config', 'G-1VHD0P7M44');
+    }
+
+    function onIdle(callback, timeout) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(callback, { timeout: timeout || 3000 });
+        return;
+      }
+      setTimeout(callback, timeout || 3000);
+    }
+
+    function loadLocalScript(src) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      (document.body || document.head).appendChild(script);
+      return script;
+    }
+
+    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach((eventName) => {
+      window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+    });
+
+    window.addEventListener('load', function () {
+      onIdle(loadAnalytics, 2500);
+    }, { once: true });
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://betsorted.co.za/ongoing-betting-rewards-south-africa.html">
   <meta property="og:title" content="Ongoing Betting Rewards South Africa 2026: What Pays | BetSorted">
@@ -271,83 +299,100 @@
         .replace(/^-+|-+$/g, '');
     }
 
-    document.querySelectorAll('.table-shell table').forEach((table) => {
-      const shell = table.closest('.table-shell');
-      const headers = Array.from(table.querySelectorAll('thead th')).map((cell) => cell.textContent.trim());
-      if (headers.length >= 4) {
-        shell.dataset.heavyTable = 'true';
-      }
-      table.querySelectorAll('tbody tr').forEach((row) => {
-        const rowHead = row.querySelector('th.row-head');
-        const brand = rowHead ? rowHead.textContent.trim() : '';
-        if (rowHead && brand) {
-          rowHead.dataset.brand = brand;
+    function enhanceRewardsTables() {
+      document.querySelectorAll('.table-shell table').forEach((table) => {
+        const shell = table.closest('.table-shell');
+        const headers = Array.from(table.querySelectorAll('thead th')).map((cell) => cell.textContent.trim());
+        if (headers.length >= 4) {
+          shell.dataset.heavyTable = 'true';
         }
-        if (rowHead && !rowHead.id) {
-          rowHead.id = 'operator-' + slugifyBrand(brand);
-        }
-        const existingLink = rowHead ? rowHead.querySelector('a') : null;
-        const destination = rewardDestinations[brand];
-        if (destination && rowHead && !existingLink) {
-          const link = document.createElement('a');
-          link.className = destination.affiliate ? 'row-head-link affiliate-link' : 'row-head-link';
-          link.href = destination.href;
-          link.textContent = rowHead.textContent;
-          link.setAttribute('data-link-label', destination.label);
-          if (destination.affiliate) {
-            link.setAttribute('rel', 'sponsored noopener');
-            if (destination.bookmaker) {
-              link.setAttribute('data-bookmaker', destination.bookmaker);
+        table.querySelectorAll('tbody tr').forEach((row) => {
+          const rowHead = row.querySelector('th.row-head');
+          const brand = rowHead ? rowHead.textContent.trim() : '';
+          if (rowHead && brand) {
+            rowHead.dataset.brand = brand;
+          }
+          if (rowHead && !rowHead.id) {
+            rowHead.id = 'operator-' + slugifyBrand(brand);
+          }
+          const existingLink = rowHead ? rowHead.querySelector('a') : null;
+          const destination = rewardDestinations[brand];
+          if (destination && rowHead && !existingLink) {
+            const link = document.createElement('a');
+            link.className = destination.affiliate ? 'row-head-link affiliate-link' : 'row-head-link';
+            link.href = destination.href;
+            link.textContent = rowHead.textContent;
+            link.setAttribute('data-link-label', destination.label);
+            if (destination.affiliate) {
+              link.setAttribute('rel', 'sponsored noopener');
+              if (destination.bookmaker) {
+                link.setAttribute('data-bookmaker', destination.bookmaker);
+              }
+            }
+            rowHead.textContent = '';
+            rowHead.appendChild(link);
+          }
+          const rowLink = rowHead ? rowHead.querySelector('a') : null;
+          if (rowHead) {
+            const linkLabel = rowLink ? rowLink.getAttribute('data-link-label') : '';
+            if (linkLabel) {
+              rowHead.dataset.linkLabel = linkLabel;
+            } else {
+              delete rowHead.dataset.linkLabel;
             }
           }
-          rowHead.textContent = '';
-          rowHead.appendChild(link);
-        }
-        const rowLink = rowHead ? rowHead.querySelector('a') : null;
-        if (rowHead) {
-          const linkLabel = rowLink ? rowLink.getAttribute('data-link-label') : '';
-          if (linkLabel) {
-            rowHead.dataset.linkLabel = linkLabel;
-          } else {
-            delete rowHead.dataset.linkLabel;
-          }
-        }
-        if (rowLink) {
-          const href = rowLink.getAttribute('href');
-          row.classList.add('clickable-row');
-          row.tabIndex = 0;
-          row.setAttribute('role', 'link');
-          row.addEventListener('click', (event) => {
-            if (event.target.closest('a, button, input, textarea, select')) return;
-            window.location.href = href;
-          });
-          row.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-              event.preventDefault();
+          if (rowLink) {
+            const href = rowLink.getAttribute('href');
+            row.classList.add('clickable-row');
+            row.tabIndex = 0;
+            row.setAttribute('role', 'link');
+            row.addEventListener('click', (event) => {
+              if (event.target.closest('a, button, input, textarea, select')) return;
               window.location.href = href;
-            }
+            });
+            row.addEventListener('keydown', (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                window.location.href = href;
+              }
+            });
+          }
+          Array.from(row.children).forEach((cell, index) => {
+            if (index === 0) return;
+            cell.setAttribute('data-label', headers[index] || '');
           });
-        }
-        Array.from(row.children).forEach((cell, index) => {
-          if (index === 0) return;
-          cell.setAttribute('data-label', headers[index] || '');
         });
+        const rows = table.querySelectorAll('tbody tr').length;
+        const pill = document.createElement('div');
+        pill.className = 'table-card-count';
+        pill.textContent = rows + ' rows';
+        shell.parentNode.insertBefore(pill, shell);
+        shell.dataset.cardsReady = 'true';
       });
-      const rows = table.querySelectorAll('tbody tr').length;
-      const pill = document.createElement('div');
-      pill.className = 'table-card-count';
-      pill.textContent = rows + ' rows';
-      shell.parentNode.insertBefore(pill, shell);
-      shell.dataset.cardsReady = 'true';
-    });
-    if (window.location.hash) {
-      const target = document.getElementById(window.location.hash.slice(1));
-      if (target) {
-        target.scrollIntoView();
+      if (window.location.hash) {
+        const target = document.getElementById(window.location.hash.slice(1));
+        if (target) {
+          target.scrollIntoView();
+        }
       }
     }
+
+    let enhancementScriptsLoaded = false;
+    function loadEnhancementScripts() {
+      if (enhancementScriptsLoaded) return;
+      enhancementScriptsLoaded = true;
+      loadLocalScript('/assets/site-matcher.js?v=20260826k');
+      loadLocalScript('/assets/track-clicks.js');
+    }
+
+    window.addEventListener('load', function () {
+      onIdle(enhanceRewardsTables, 1200);
+      onIdle(loadEnhancementScripts, 3200);
+    }, { once: true });
+
+    ['pointerdown', 'touchstart', 'keydown'].forEach((eventName) => {
+      window.addEventListener(eventName, loadEnhancementScripts, { once: true, passive: true });
+    });
   </script>
-  <script src="/assets/site-matcher.js?v=20260826k" defer></script>
-  <script src="/assets/track-clicks.js" defer></script>
 </body>
 </html>

@@ -222,8 +222,57 @@
     return 'Review the operator page before depositing so you can verify the current recurring value and promo terms.';
   }
 
+  function isCautionaryText(text) {
+    var normalized = String(text || '').toLowerCase().trim();
+    if (!normalized) return false;
+
+    if (textIncludes(normalized, [
+      'trusted by south african punters',
+      'popular with south african punters',
+      'well-liked by south african punters'
+    ])) {
+      return false;
+    }
+
+    return textIncludes(normalized, [
+      'watch',
+      'expires',
+      'rollover',
+      'wager',
+      'wagering',
+      'withdraw',
+      'withdrawal',
+      'qualifying',
+      'terms',
+      'cap',
+      'charge',
+      'manual',
+      'email',
+      'freeze',
+      'restricted',
+      'restriction',
+      'not returned',
+      'bonus',
+      'promo',
+      'verify',
+      'unclear',
+      'hard to inspect',
+      'need to inspect',
+      'inconsistent'
+    ]);
+  }
+
   function buildWatchout(operator) {
-    return operator.community_quote || 'Check the latest review and current terms before choosing it mainly for a promotion.';
+    if (isCautionaryText(operator.community_quote)) {
+      return operator.community_quote;
+    }
+    if (!operator.bonus_verified_at || String(operator.bonus_verified_at).toLowerCase() === 'coming soon') {
+      return "Catch coming soon. We're still checking the bonus terms on this one.";
+    }
+    if (!operator.payout_speed || String(operator.payout_speed).toLowerCase() === 'coming soon') {
+      return "Catch coming soon. We're still checking the payout details on this one.";
+    }
+    return 'Check the latest review and current terms before choosing it mainly for a promotion.';
   }
 
   function normalizeOperator(raw) {

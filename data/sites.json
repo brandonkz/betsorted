@@ -762,7 +762,7 @@
       "Has a dedicated BetSorted review"
     ],
     "cons": [
-      "Several commercial fields still need verification",
+      "Bonus terms and payout details still need a closer check",
       "Min deposit still unconfirmed",
       "No confirmed live streaming"
     ],
@@ -773,7 +773,7 @@
     ],
     "featured": false,
     "rank": 16,
-    "promo_catch": "Several commercial fields still need manual verification."
+    "promo_catch": "Bonus terms and payout details are still being checked."
   },
   {
     "id": 17,
@@ -818,6 +818,6 @@
     ],
     "featured": false,
     "rank": 17,
-    "promo_catch": "Affiliate and verification fields are still not fully filled out."
+    "promo_catch": "Payment methods and payout details are still being checked."
   }
 ]

@@ -18,23 +18,52 @@
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About BetSorted",
-    "url": "https://betsorted.co.za/about.html",
-    "description": "BetSorted is South Africa's independent betting site comparison guide. We help SA punters compare licensed bookmakers on odds, bonuses, payout speed, and local payment methods.",
-    "publisher": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
       "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
       "name": "BetSorted",
-      "url": "https://betsorted.co.za",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://betsorted.co.za/assets/logo.png"
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://betsorted.co.za/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About BetSorted",
+          "item": "https://betsorted.co.za/about.html"
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "name": "About BetSorted",
+      "url": "https://betsorted.co.za/about.html",
+      "description": "BetSorted is South Africa's independent betting site comparison guide. We help SA punters compare licensed bookmakers on odds, bonuses, payout speed, and local payment methods.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BetSorted",
+        "url": "https://betsorted.co.za",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://betsorted.co.za/assets/logo.png"
+        }
       }
     }
-  }
-  </script>
+  ]
+}
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,63 +207,7 @@
      crossorigin="anonymous"></script>
 
   <!-- Phase 1 additive schema -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://betsorted.co.za/#organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za/",
-      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About BetSorted",
-          "item": "https://betsorted.co.za/about.html"
-        }
-      ]
-    }
-  ]
-}
-  </script>
 <!-- Item 10 structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://betsorted.co.za/about.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About BetSorted",
-          "item": "https://betsorted.co.za/about.html"
-        }
-      ]
-    }
-  ]
-}
-</script>
 <!-- /Item 10 structured data -->
 </head>
 <body>

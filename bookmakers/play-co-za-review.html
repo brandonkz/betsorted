@@ -18,75 +18,99 @@
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "Play.co.za review",
-    "datePublished": "2026-02-19",
-    "dateModified": "2026-08-24",
-    "reviewBody": "Play.co.za stands out for a large three-stage welcome package and modern interface, with a 4.2/5 rating from BetSorted and reliable payouts for SA customers.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://betsorted.co.za/bookmakers/play-co-za-review.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bookmakers",
+          "item": "https://betsorted.co.za/bookmakers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BetSorted",
+          "item": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "@id": "https://betsorted.co.za/bookmakers/play-co-za-review.html#review",
+      "name": "Play.co.za Review South Africa",
+      "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Play.co.za",
+        "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
+      },
+      "reviewRating": {
+        "@type": "Rating",
         "ratingValue": "4.2",
         "bestRating": "5",
         "worstRating": "1"
       },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.2",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Organization",
-      "name": "Play.co.za",
-      "areaServed": "ZA",
-      "url": "https://play.co.za"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "BetSorted"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Play.co.za legal in South Africa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Play.co.za operates under Licensed by Western Cape Gambling & Racing Board, making it legal for South African sports betting."
-      }
+      "author": {
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "publisher": {
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "dateModified": "2026-02-19",
+      "datePublished": "2026-02-19",
+      "reviewBody": "Play.co.za stands out for a large three-stage welcome package and modern interface, with a 4.2/5 rating from BetSorted and reliable payouts for SA customers."
     },
     {
-      "@type": "Question",
-      "name": "How fast are Play.co.za withdrawals in ZAR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "12 to 24 hours once your FICA documents are approved. Bank transfers are the primary withdrawal method."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Play.co.za support local payment methods?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EFT, 1Voucher, OTT Voucher, Bank Transfer. Withdrawals go back to the same verified method."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Play.co.za legal in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Play.co.za operates under Licensed by Western Cape Gambling & Racing Board, making it legal for South African sports betting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast are Play.co.za withdrawals in ZAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12 to 24 hours once your FICA documents are approved. Bank transfers are the primary withdrawal method."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Play.co.za support local payment methods?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EFT, 1Voucher, OTT Voucher, Bank Transfer. Withdrawals go back to the same verified method."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
+</script>
+
 
   <style>
     .review-page {
@@ -284,105 +308,7 @@
      crossorigin="anonymous"></script>
 
   <!-- Phase 1 additive schema -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://betsorted.co.za/#organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za/",
-      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "bookmakers",
-          "item": "https://betsorted.co.za/bookmakers"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "🎯 BetSorted",
-          "item": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-        }
-      ]
-    }
-  ]
-}
-  </script>
 <!-- Item 10 structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://betsorted.co.za/bookmakers/play-co-za-review.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Bookmakers",
-          "item": "https://betsorted.co.za/bookmakers/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "🎯 BetSorted",
-          "item": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-        }
-      ]
-    },
-    {
-      "@type": "Review",
-      "@id": "https://betsorted.co.za/bookmakers/play-co-za-review.html#review",
-      "name": "Play.co.za Review South Africa",
-      "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html",
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Play.co.za",
-        "url": "https://betsorted.co.za/bookmakers/play-co-za-review.html"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.2",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.2",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@id": "https://betsorted.co.za/#organization"
-      },
-      "publisher": {
-        "@id": "https://betsorted.co.za/#organization"
-      },
-      "dateModified": "2026-02-19"
-    }
-  ]
-}
-</script>
 <!-- /Item 10 structured data -->
 </head>
 <body>
@@ -415,7 +341,7 @@
     <a href="../" class="back-link">← Back to All Bookmakers</a>
 
     <div class="review-hero">
-      <h2>Play.co.za Review</h2>
+      <h1>Play.co.za Review South Africa 2026</h1>
       <div class="stars">★★★★☆ 4.2/5</div>
       <p>Modern betting platform with a sleek design and a large three-stage welcome package. Play.co.za combines sports betting with live casino games, offering fast withdrawals and a clear casino-bonus structure for players who actually read the terms.</p>
 

@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /go/
+Disallow: /social-templates/
+Disallow: /private/
 
 Sitemap: https://betsorted.co.za/sitemap.xml

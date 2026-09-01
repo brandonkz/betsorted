@@ -1,0 +1,69 @@
+# BetSorted
+
+> Independent South African sports betting comparison site. We review licensed
+> SA bookmakers, compare odds and welcome bonuses, and publish free betting
+> calculators. All operators listed hold a South African provincial licence.
+> Content is written for South African punters and prices are in ZAR.
+
+Editorial note: BetSorted earns affiliate commission on some outbound operator
+links. Rankings are based on published terms, payout speed, market depth and
+FICA requirements, not commission rates. See /editorial-policy.html.
+
+## Start here
+
+- [Best betting sites in South Africa](https://betsorted.co.za/best-betting-sites-south-africa.html): Every licensed SA bookmaker ranked on deposits, withdrawals, FICA and sports coverage.
+- [Best betting apps](https://betsorted.co.za/best-betting-apps.html): SA betting apps tested and ranked, including data-free options.
+- [Bookmaker reviews](https://betsorted.co.za/bookmakers/): Full reviews of each licensed South African bookmaker.
+- [Betting bonuses](https://betsorted.co.za/betting-bonuses-south-africa.html): Welcome offers and free bets with the wagering terms spelled out.
+- [Odds comparison](https://betsorted.co.za/odds-comparison.html): Side-by-side odds across SA bookmakers.
+
+## Bookmaker reviews
+
+- [Betway review](https://betsorted.co.za/bookmakers/betway-review.html)
+- [Hollywoodbets review](https://betsorted.co.za/bookmakers/hollywoodbets-review.html)
+- [Sportingbet review](https://betsorted.co.za/bookmakers/sportingbet-review.html)
+- [Supabets review](https://betsorted.co.za/bookmakers/supabets-review.html)
+- [World Sports Betting review](https://betsorted.co.za/bookmakers/world-sports-betting-review.html)
+- [Easybet review](https://betsorted.co.za/bookmakers/easybet-review.html)
+- [Gbets review](https://betsorted.co.za/bookmakers/gbets-review.html)
+- [Playabets review](https://betsorted.co.za/bookmakers/playabets-review.html)
+- [Sunbet review](https://betsorted.co.za/bookmakers/sunbet-review.html)
+- [10bet review](https://betsorted.co.za/bookmakers/10bet-review.html)
+- [Bet.co.za review](https://betsorted.co.za/bookmakers/bet-co-za-review.html)
+- [Play.co.za review](https://betsorted.co.za/bookmakers/play-co-za-review.html)
+
+## Free calculators
+
+- [Betting calculator](https://betsorted.co.za/betting-calculator.html): Odds conversion and returns.
+- [Accumulator calculator](https://betsorted.co.za/accumulator-calculator.html): Combined odds on multi-leg tickets.
+- [Value bet calculator](https://betsorted.co.za/value-bet-calculator.html): Expected value on a price.
+- [Arbitrage calculator](https://betsorted.co.za/arbitrage-calculator.html): Stake split across outcomes.
+- [Kelly criterion calculator](https://betsorted.co.za/kelly-criterion-calculator.html): Stake sizing.
+- [Each way calculator](https://betsorted.co.za/each-way-calculator.html): Horse racing each-way returns.
+- [Free bet calculator](https://betsorted.co.za/free-bet-calculator.html): True value of a free bet.
+- [System bet calculator](https://betsorted.co.za/system-bet-calculator.html): Trixie, Yankee, Lucky 15 and similar.
+- [Bonus value calculator](https://betsorted.co.za/bonus-value-calculator.html): What a welcome bonus is actually worth after wagering.
+- [All calculators](https://betsorted.co.za/calculators.html)
+
+## South Africa guides
+
+- [How to bet in South Africa](https://betsorted.co.za/how-to-bet-south-africa.html)
+- [PSL betting guide](https://betsorted.co.za/psl-betting-guide.html)
+- [PSL match centre](https://betsorted.co.za/psl-match-centre.html): Live PSL fixtures and odds.
+- [EPL odds in South Africa](https://betsorted.co.za/epl-odds-south-africa.html)
+- [Withdrawal speed comparison](https://betsorted.co.za/withdrawal-speed-comparison.html): How fast each SA bookmaker actually pays.
+- [Betting glossary](https://betsorted.co.za/glossary.html)
+- [Blog](https://betsorted.co.za/blog/): Comparisons, strategy and market guides.
+
+## About
+
+- [About BetSorted](https://betsorted.co.za/about.html)
+- [Editorial policy](https://betsorted.co.za/editorial-policy.html): How we rank operators and handle affiliate links.
+- [Responsible gambling](https://betsorted.co.za/responsible-gambling.html): SA support lines and self-exclusion. 18+ only.
+- [Contact](https://betsorted.co.za/contact.html)
+
+## Optional
+
+- [Prediction markets](https://betsorted.co.za/prediction-markets.html)
+- [Terms](https://betsorted.co.za/terms.html)
+- [Privacy](https://betsorted.co.za/privacy.html)

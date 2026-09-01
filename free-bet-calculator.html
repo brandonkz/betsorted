@@ -58,7 +58,7 @@
 
   <!-- Phase 1 additive schema -->
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -66,45 +66,8 @@
       "@id": "https://betsorted.co.za/#organization",
       "name": "BetSorted",
       "url": "https://betsorted.co.za/",
-      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
+      "logo": "https://betsorted.co.za/assets/logo.png"
     },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "🎁 Free Bet & Bonus Calculator",
-          "item": "https://betsorted.co.za/free-bet-calculator.html"
-        }
-      ]
-    },
-    {
-      "@type": "WebApplication",
-      "name": "🎁 Free Bet & Bonus Calculator",
-      "url": "https://betsorted.co.za/free-bet-calculator.html",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Any",
-      "description": "Free bet value calculator for South Africa. Find the real cash value of any bookmaker bonus after wagering requirements. Compare SA welcome offers instantly.",
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://betsorted.co.za/#organization"
-      }
-    }
-  ]
-}
-  </script>
-<!-- Item 10 structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
       "@type": "BreadcrumbList",
       "@id": "https://betsorted.co.za/free-bet-calculator.html#breadcrumb",
@@ -118,14 +81,32 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "🎁 Free Bet & Bonus Calculator",
+          "name": "Free Bet & Bonus Calculator",
           "item": "https://betsorted.co.za/free-bet-calculator.html"
         }
       ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Free Bet & Bonus Calculator",
+      "url": "https://betsorted.co.za/free-bet-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "description": "Free bet value calculator for South Africa. Find the real cash value of any bookmaker bonus after wagering requirements. Compare SA welcome offers instantly.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ZAR"
+      }
     }
   ]
 }
 </script>
+<!-- Item 10 structured data -->
 <!-- /Item 10 structured data -->
 </head>
 <body>

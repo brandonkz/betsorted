@@ -18,91 +18,132 @@
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "name": "Betway review",
-    "datePublished": "2026-02-18",
-    "dateModified": "2026-03-24",
-    "reviewBody": "Betway is a licensed South African bookmaker with strong live betting, fast ZAR withdrawals, and a dependable app experience. It ranks highly for payout speed and market depth, with solid value for EPL/PSL bettors.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://betsorted.co.za/#organization",
+      "name": "BetSorted",
+      "url": "https://betsorted.co.za/",
+      "logo": "https://betsorted.co.za/assets/logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://betsorted.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bookmakers",
+          "item": "https://betsorted.co.za/bookmakers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Betway South Africa Review (2026)",
+          "item": "https://betsorted.co.za/bookmakers/betway-review.html"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#review",
+      "name": "Betway Review South Africa",
+      "url": "https://betsorted.co.za/bookmakers/betway-review.html",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Betway",
+        "url": "https://betsorted.co.za/bookmakers/betway-review.html"
+      },
+      "reviewRating": {
+        "@type": "Rating",
         "ratingValue": "4.6",
         "bestRating": "5",
         "worstRating": "1"
       },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.6",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "itemReviewed": {
-      "@type": "Organization",
-      "name": "Betway",
-      "areaServed": "ZA",
-      "url": "https://www.betway.co.za"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "BetSorted"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Betway legal in South Africa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Betway operates under the Western Cape Gambling & Racing Board, making it a legal bookmaker for South African sports betting."
-      }
+      "author": {
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "publisher": {
+        "@id": "https://betsorted.co.za/#organization"
+      },
+      "dateModified": "2026-03-24",
+      "datePublished": "2026-02-18",
+      "reviewBody": "Betway is a licensed South African bookmaker with strong live betting, fast ZAR withdrawals, and a dependable app experience. It ranks highly for payout speed and market depth, with solid value for EPL/PSL bettors."
     },
     {
-      "@type": "Question",
-      "name": "How fast are Betway withdrawals in ZAR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most verified accounts get Instant EFT withdrawals within minutes to 24 hours. Standard EFT can take 1–3 business days."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the minimum deposit at Betway?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Betway’s minimum deposit is typically around R5–R10 depending on the payment method. Instant EFT and cards are the most common options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What documents do I need for Betway FICA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You’ll need a SA ID or passport plus proof of address (bank statement or utility bill). Once approved, withdrawals are faster."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the Betway app good for live betting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The app loads quickly, has strong in‑play markets for PSL/EPL, and supports cashout with minimal lag during live events."
-      }
+      "@type": "FAQPage",
+      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Betway legal in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Betway operates under the Western Cape Gambling & Racing Board, making it a legal bookmaker for South African sports betting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Betway app good for live betting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The app loads quickly, has strong in‑play markets for PSL/EPL, and supports cashout with minimal lag during live events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Betway legal for South African bettors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Betway operates under South African gambling regulations, which means it must follow FICA rules and pay out in ZAR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Betway offer fast withdrawals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Withdrawals are generally processed after FICA verification and can range from same-day to a few business days depending on the payment method and your bank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best payment method for Betway in SA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instant EFT and regular EFT are the most popular because they are paid in ZAR and supported by local banks like FNB, Standard Bank, Absa, and Nedbank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Betway just for PSL betting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Betway covers all PSL fixtures with core markets, and the odds are competitive enough for a PSL-only strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I keep multiple bookmaker accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most serious punters use two or three accounts to shop for price. Betway can be one of them if you value live betting and fast in-play markets."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
+</script>
+
 
   <style>
     .review-page {
@@ -210,151 +251,7 @@
      crossorigin="anonymous"></script>
 
   <!-- Phase 1 additive schema -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://betsorted.co.za/#organization",
-      "name": "BetSorted",
-      "url": "https://betsorted.co.za/",
-      "logo": "https://betsorted.co.za/assets/betsorted-logo.png"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "bookmakers",
-          "item": "https://betsorted.co.za/bookmakers"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Betway South Africa",
-          "item": "https://betsorted.co.za/bookmakers/betway-review.html"
-        }
-      ]
-    }
-  ]
-}
-  </script>
 <!-- Item 10 structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://betsorted.co.za/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Bookmakers",
-          "item": "https://betsorted.co.za/bookmakers/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Betway South Africa Review (2026)",
-          "item": "https://betsorted.co.za/bookmakers/betway-review.html"
-        }
-      ]
-    },
-    {
-      "@type": "Review",
-      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#review",
-      "name": "Betway Review South Africa",
-      "url": "https://betsorted.co.za/bookmakers/betway-review.html",
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Betway",
-        "url": "https://betsorted.co.za/bookmakers/betway-review.html"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.6",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@id": "https://betsorted.co.za/#organization"
-      },
-      "publisher": {
-        "@id": "https://betsorted.co.za/#organization"
-      },
-      "dateModified": "2026-03-24"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://betsorted.co.za/bookmakers/betway-review.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Betway legal for South African bettors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Betway operates under South African gambling regulations, which means it must follow FICA rules and pay out in ZAR."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Betway offer fast withdrawals?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Withdrawals are generally processed after FICA verification and can range from same-day to a few business days depending on the payment method and your bank."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best payment method for Betway in SA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Instant EFT and regular EFT are the most popular because they are paid in ZAR and supported by local banks like FNB, Standard Bank, Absa, and Nedbank."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use Betway just for PSL betting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Betway covers all PSL fixtures with core markets, and the odds are competitive enough for a PSL-only strategy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I keep multiple bookmaker accounts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most serious punters use two or three accounts to shop for price. Betway can be one of them if you value live betting and fast in-play markets."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 <!-- /Item 10 structured data -->
 </head>
 <body>

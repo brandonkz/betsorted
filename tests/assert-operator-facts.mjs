@@ -51,11 +51,12 @@ async function sourceResolves(source) {
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15000);
+  const headers = { "User-Agent": "Mozilla/5.0 (compatible; BetSortedSourceCheck/1.0)" };
   const promise = (async () => {
     try {
-      let response = await fetch(source, { method: "HEAD", redirect: "follow", signal: controller.signal });
+      let response = await fetch(source, { method: "HEAD", redirect: "follow", signal: controller.signal, headers });
       if (response.status === 405 || response.status === 403) {
-        response = await fetch(source, { method: "GET", redirect: "follow", signal: controller.signal });
+        response = await fetch(source, { method: "GET", redirect: "follow", signal: controller.signal, headers });
       }
       return response.status >= 200 && response.status < 400;
     } catch {

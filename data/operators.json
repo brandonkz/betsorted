@@ -97,6 +97,11 @@
         "value": "Western Cape Gambling and Racing Board, licence 10125193-019",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "login_url": {
+        "value": "https://www.sportingbet.co.za/en/sports",
+        "source": "https://www.sportingbet.co.za/en/sports",
+        "checked": "2026-09-02"
       }
     }
   },
@@ -195,6 +200,11 @@
         "value": "Western Cape Gambling and Racing Board, licence 10172287-015",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "login_url": {
+        "value": "https://www.play.co.za/login",
+        "source": "https://www.play.co.za/login",
+        "checked": "2026-09-02"
       }
     }
   },
@@ -228,6 +238,11 @@
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10181495-013",
         "source": "https://www.ngb.org.za/verified-operators/",
+        "checked": "2026-09-02"
+      },
+      "login_url": {
+        "value": "https://www.worldsportsbetting.co.za/login",
+        "source": "https://www.worldsportsbetting.co.za/login",
         "checked": "2026-09-02"
       }
     }

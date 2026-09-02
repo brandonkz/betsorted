@@ -762,7 +762,7 @@
       });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function initSiteMatcher() {
     if (!document.querySelector('[data-site-matcher-teaser]')) {
       return;
     }
@@ -775,5 +775,11 @@
         target.innerHTML = '<div class="site-matcher-teaser"><h2>BetSorted AI is loading</h2><p>The site shortlist is temporarily unavailable. Open the bookmaker hub or refresh in a moment.</p></div>';
       });
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSiteMatcher);
+  } else {
+    initSiteMatcher();
+  }
 })();

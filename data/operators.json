@@ -625,9 +625,34 @@
     "community_quote": "Readable Betfred pages conflicted between R21,000 and R5,000 welcome headlines, so verify the live account offer before relying on either.",
     "facts": {
       "licence": {
-        "value": "Mpumalanga Economic Regulator; no readable licence number found",
-        "source": "https://loyalty.betfred.co.za/",
-        "checked": "2026-09-03"
+        "value": "The NGB register lists multiple live Betfred and Betting World bookmaker entries, including Betfred - Emalahleni under Mpumalanga licence 9-2-1-00039. Betfred's own readable public pages still name the Mpumalanga Economic Regulator without publishing one clear website licence number.",
+        "source": "https://www.ngb.org.za/verified-operators/",
+        "checked": "2026-09-04"
+      },
+      "login_url": {
+        "value": "https://betfred.co.za/sign-in",
+        "source": "https://betfred.co.za/assets/routeMap-4ngphfiu.js",
+        "checked": "2026-09-04"
+      },
+      "registration_url": {
+        "value": "https://betfred.co.za/page/join-now",
+        "source": "https://betfred.co.za/config.json",
+        "checked": "2026-09-04"
+      },
+      "password_recovery_url": {
+        "value": "https://betfred.co.za/recover-account",
+        "source": "https://betfred.co.za/assets/routeMap-4ngphfiu.js",
+        "checked": "2026-09-04"
+      },
+      "app_url": {
+        "value": "https://betfred.co.za/app",
+        "source": "https://betfred.co.za/assets/routeMap-4ngphfiu.js",
+        "checked": "2026-09-04"
+      },
+      "datafree_url": {
+        "value": "https://betfred.co.za/page/welcome-df",
+        "source": "https://betfred.co.za/config.json",
+        "checked": "2026-09-04"
       }
     }
   },

@@ -520,7 +520,16 @@
     "min_deposit_zar": 50,
     "min_deposit_display": "R50",
     "payout_speed": "Coming soon",
-    "payment_methods": [],
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "OTT",
+      "Ozow",
+      "SID",
+      "Bank Transfer",
+      "Cashier",
+      "1ForYou"
+    ],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10138042-020",
     "affiliate_url": "Coming soon",
@@ -546,6 +555,41 @@
         "value": "R50",
         "source": "https://betolimp.co.za/promo/welcome-bonus/",
         "checked": "2026-09-03"
+      },
+      "login_url": {
+        "value": "https://betolimp.co.za/en",
+        "source": "https://betolimp.co.za/en",
+        "checked": "2026-09-04"
+      },
+      "registration_fields": {
+        "value": "BetOlimp's public registration form currently asks for username, password, email, date of birth, country, city, ID, passport or asylum details, a document upload, address, and phone number.",
+        "source": "https://betolimp.co.za/en/user/registration/",
+        "checked": "2026-09-04"
+      },
+      "payment_methods": {
+        "value": "BetOlimp's public pages currently show Visa, Mastercard, OTT, Ozow, SID, bank transfer, cashier and 1ForYou, while the welcome-bonus terms say first-deposit bonus eligibility currently applies to SID, credit or debit card, and 1Voucher deposits.",
+        "source": "https://betolimp.co.za/promotions",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_bonus_restriction": {
+        "value": "BetOlimp says customers with a pending withdrawal cannot claim the first deposit bonus or any other deposit bonus offer.",
+        "source": "https://betolimp.co.za/promo/welcome-bonus/",
+        "checked": "2026-09-04"
+      },
+      "app_url": {
+        "value": "https://betolimp.co.za/en/apps/android",
+        "source": "https://betolimp.co.za/en/apps/android",
+        "checked": "2026-09-04"
+      },
+      "app_download_url": {
+        "value": "https://betolimp.co.za/apps/android/download/",
+        "source": "https://betolimp.co.za/apps/android/download/",
+        "checked": "2026-09-04"
+      },
+      "app_download_details": {
+        "value": "BetOlimp's direct Android download currently serves a file named betolimp_1.0.3.apk from the operator domain.",
+        "source": "https://betolimp.co.za/apps/android/download/",
+        "checked": "2026-09-04"
       }
     }
   },

@@ -118,6 +118,16 @@
         "source": "https://www.sportingbet.co.za/en/sports",
         "checked": "2026-09-02"
       },
+      "mobile_help": {
+        "value": "Sportingbet publishes a dedicated Mobile Sports Betting help section covering FAQ, Cash Out, sport filters, betslip management, bet finder, settlement, and mobile bet placement.",
+        "source": "https://help.sportingbet.co.za/en/sports-help/mobile-sports-betting",
+        "checked": "2026-09-04"
+      },
+      "app_download_gap": {
+        "value": "BetSorted did not verify a public native Android or iPhone app download link on readable Sportingbet-owned pages this run; the operator's strongest public mobile surface was the main site plus the Mobile Sports Betting help section.",
+        "source": "https://help.sportingbet.co.za/en/sports-help/mobile-sports-betting",
+        "checked": "2026-09-04"
+      },
       "registration_help": {
         "value": "Registration guidance is published in Sportingbet Help under General Information > Registration.",
         "source": "https://help.sportingbet.co.za/en/general-information/registration",

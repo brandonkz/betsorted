@@ -337,8 +337,23 @@
       },
       "login_url": {
         "value": "https://www.worldsportsbetting.co.za/login",
-        "source": "https://www.worldsportsbetting.co.za/",
-        "checked": "2026-09-02"
+        "source": "https://www.worldsportsbetting.co.za/login",
+        "checked": "2026-09-04"
+      },
+      "terms_url": {
+        "value": "https://www.worldsportsbetting.co.za/terms",
+        "source": "https://www.worldsportsbetting.co.za/terms",
+        "checked": "2026-09-04"
+      },
+      "responsible_gambling_url": {
+        "value": "https://www.worldsportsbetting.co.za/?my-account=responsible",
+        "source": "https://www.worldsportsbetting.co.za/?my-account=responsible",
+        "checked": "2026-09-04"
+      },
+      "public_surface_gap": {
+        "value": "World Sports Betting's public sitemap exposed a live login route, terms route, and responsible gambling route on this run, but did not expose a public standalone app-download or registration URL that BetSorted could verify.",
+        "source": "https://www.worldsportsbetting.co.za/sitemap.xml",
+        "checked": "2026-09-04"
       }
     }
   },

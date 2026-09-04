@@ -281,6 +281,16 @@
         "source": "https://www.play.co.za/login",
         "checked": "2026-09-02"
       },
+      "mobile_site_url": {
+        "value": "https://sportsbook.play.co.za/",
+        "source": "https://sportsbook.play.co.za/",
+        "checked": "2026-09-04"
+      },
+      "app_download_gap": {
+        "value": "Play.co.za's live sportsbook config currently sets mobileAppInstall to 0 and leaves both androidStoreUrl and iosStoreUrl blank, so BetSorted did not verify a public native app download link on this run.",
+        "source": "https://sportsbook.play.co.za/",
+        "checked": "2026-09-04"
+      },
       "registration_fields": {
         "value": "Play.co.za registration currently asks for name, gender, email, mobile number, username, personal ID or passport details, birth date, address, bank details, income source, occupation, salary level, and security-question setup.",
         "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/v3RegFields.json?v=1788512448",
@@ -334,6 +344,11 @@
         "value": "Regulator not published on any readable WSB page",
         "source": "https://worldsportsbetting.co.za/",
         "checked": "2026-09-03"
+      },
+      "mobile_site_url": {
+        "value": "https://www.worldsportsbetting.co.za/",
+        "source": "https://www.worldsportsbetting.co.za/",
+        "checked": "2026-09-04"
       },
       "login_url": {
         "value": "https://www.worldsportsbetting.co.za/login",

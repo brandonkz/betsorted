@@ -117,6 +117,41 @@
         "value": "https://www.sportingbet.co.za/en/sports",
         "source": "https://www.sportingbet.co.za/en/sports",
         "checked": "2026-09-02"
+      },
+      "registration_help": {
+        "value": "Registration guidance is published in Sportingbet Help under General Information > Registration.",
+        "source": "https://help.sportingbet.co.za/en/general-information/registration",
+        "checked": "2026-09-04"
+      },
+      "identity_verification": {
+        "value": "If automatic verification fails, Sportingbet requires an identification document and proof of address before withdrawals are enabled.",
+        "source": "https://help.sportingbet.co.za/en/general-information/acc-verification",
+        "checked": "2026-09-04"
+      },
+      "verification_grace_period": {
+        "value": "Unverified customers can deposit up to R20,000 before a 28-day verification grace period begins, with the limit then increased to R100,000 during that period.",
+        "source": "https://help.sportingbet.co.za/en/general-information/acc-verification",
+        "checked": "2026-09-04"
+      },
+      "password_reset": {
+        "value": "Password resets can be completed from the login flow by requesting an SMS PIN or email reset link.",
+        "source": "https://help.sportingbet.co.za/en/general-information/account/login/forgotten-password-sms",
+        "checked": "2026-09-04"
+      },
+      "deposit_method_ott_voucher": {
+        "value": "OTT Voucher deposits are supported, carry no Sportingbet fee, and are credited instantly; OTT Voucher is not a withdrawal method.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/ottvoucher",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_express": {
+        "value": "Express Withdrawals send funds to a verified South African bank account, usually instantly if checks pass, otherwise within 6 to 8 hours.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/express-withdrawals",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_fnb_ewallet": {
+        "value": "FNB E-Wallet withdrawals are same-day, with a maximum withdrawal amount of R3,000 and no fee on the first withdrawal.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/fnbewallet",
+        "checked": "2026-09-04"
       }
     }
   },
@@ -245,6 +280,26 @@
         "value": "https://www.play.co.za/login",
         "source": "https://www.play.co.za/login",
         "checked": "2026-09-02"
+      },
+      "registration_fields": {
+        "value": "Play.co.za registration currently asks for name, gender, email, mobile number, username, personal ID or passport details, birth date, address, bank details, income source, occupation, salary level, and security-question setup.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/v3RegFields.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "payment_methods": {
+        "value": "Play.co.za currently exposes Ozow, EFT, credit card, 1Voucher, OTT Voucher, Kazang Voucher, and related CallPay variants in its cashier config.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_methods": {
+        "value": "Play.co.za currently exposes Ozow, EFT, Real-Time withdrawals, and CallPay V2 withdrawals in its cashier config.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_realtime": {
+        "value": "Real-Time withdrawals are available 24 hours a day excluding Saturdays, Sundays, and public holidays, usually reflect within 2 hours, and list a minimum of R5,000 and maximum of R250,000.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
       }
     }
   },

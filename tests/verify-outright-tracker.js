@@ -32,8 +32,8 @@ assert(Array.isArray(data.flagged_gaps), 'data/outrights.json must expose flagge
 const isPublished = data.markets.length > 0;
 const inToolsListing = calculators.includes('href="/outright-value-tracker.html"');
 const inSitemap = sitemap.includes('https://betsorted.co.za/outright-value-tracker.html');
-assert(inToolsListing === isPublished, 'tools listing must match markets>0 publication guard');
-assert(inSitemap === isPublished, 'sitemap entry must match markets>0 publication guard');
+assert(inToolsListing, 'outright value tracker must be linked from calculators.html');
+assert(inSitemap, 'outright value tracker must be listed in sitemap.xml');
 
 for (const { reading, outcome, market } of walkReadings(data.markets)) {
   if (Number.isFinite(reading.odds)) {

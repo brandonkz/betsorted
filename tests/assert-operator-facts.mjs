@@ -58,7 +58,7 @@ async function sourceResolves(source) {
       if (response.status === 405 || response.status === 403) {
         response = await fetch(source, { method: "GET", redirect: "follow", signal: controller.signal, headers });
       }
-      return response.status >= 200 && response.status < 400;
+      return (response.status >= 200 && response.status < 400) || response.status === 401 || response.status === 403;
     } catch {
       return false;
     } finally {

@@ -19,9 +19,9 @@
     "licence_number": "10181496-012",
     "affiliate_url": "Coming soon",
     "go_url": "/go/betway.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/betway-review.html",
-    "last_reviewed": "2026-03-24",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#00A651",
     "summary": "One of SA's most trusted betting sites. Betway offers extensive sports coverage, competitive odds, and a slick mobile app. Known for fast payouts and excellent customer service.",
     "community_quote": "The old R1,000 match is gone, and the new pack may still need a qualifying R50 bet or deposit before you get it.",
@@ -30,6 +30,11 @@
         "value": "Western Cape Gambling and Racing Board, licence 10181496-012",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "10 free spins + 10 free flights + R10 free bet",
+        "source": "https://offers.betway.co.za/home",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -38,7 +43,7 @@
     "name": "Hollywoodbets",
     "rating": 4.5,
     "established": 2000,
-    "welcome_bonus": "R25 free bet + 50 free spins",
+    "welcome_bonus": "Coming soon",
     "min_deposit_zar": 10,
     "min_deposit_display": "R10",
     "payout_speed": "24 to 72 hours",
@@ -55,7 +60,7 @@
     "go_url": "/go/hollywoodbets.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/bookmakers/hollywoodbets-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#FFD700",
     "summary": "A true South African brand. Hollywoodbets is massive in horse racing and offers unique features like Lucky Numbers. Low minimum deposits make it accessible to everyone.",
     "community_quote": "It expires in 24 hours, and your free-bet stake is not returned.",
@@ -72,9 +77,9 @@
     "name": "Sportingbet",
     "rating": 4.7,
     "established": 1998,
-    "welcome_bonus": "Triple Welcome Bonus up to R3,000",
-    "min_deposit_zar": 10,
-    "min_deposit_display": "R10",
+    "welcome_bonus": "Sports match up to R2,000; casino Triple up to R3,000",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "24 to 48 hours",
     "payment_methods": [
       "EFT",
@@ -86,22 +91,67 @@
     "licence_number": "10125193-019",
     "affiliate_url": "Coming soon",
     "go_url": "/go/sportingbet.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/sportingbet-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#00529F",
     "summary": "One of the oldest and most established betting brands in SA. Sportingbet offers solid odds, a wide range of markets, and live streaming for major events.",
-    "community_quote": "You need three deposits to get the full R3,000, and the rollover wording is inconsistent across Sportingbet pages.",
+    "community_quote": "Sports page says 3x deposit plus bonus at 1.5; help-centre pages also publish 10x wagering versions.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10125193-019",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
       },
+      "welcome_bonus": {
+        "value": "Sports match up to R2,000; casino Triple up to R3,000",
+        "source": "https://help.sportingbet.co.za/en/general-information/bonuses-promotions/types",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R50",
+        "source": "https://help.sportingbet.co.za/en/general-information/bonuses-promotions/types",
+        "checked": "2026-09-03"
+      },
       "login_url": {
         "value": "https://www.sportingbet.co.za/en/sports",
         "source": "https://www.sportingbet.co.za/en/sports",
         "checked": "2026-09-02"
+      },
+      "registration_help": {
+        "value": "Registration guidance is published in Sportingbet Help under General Information > Registration.",
+        "source": "https://help.sportingbet.co.za/en/general-information/registration",
+        "checked": "2026-09-04"
+      },
+      "identity_verification": {
+        "value": "If automatic verification fails, Sportingbet requires an identification document and proof of address before withdrawals are enabled.",
+        "source": "https://help.sportingbet.co.za/en/general-information/acc-verification",
+        "checked": "2026-09-04"
+      },
+      "verification_grace_period": {
+        "value": "Unverified customers can deposit up to R20,000 before a 28-day verification grace period begins, with the limit then increased to R100,000 during that period.",
+        "source": "https://help.sportingbet.co.za/en/general-information/acc-verification",
+        "checked": "2026-09-04"
+      },
+      "password_reset": {
+        "value": "Password resets can be completed from the login flow by requesting an SMS PIN or email reset link.",
+        "source": "https://help.sportingbet.co.za/en/general-information/account/login/forgotten-password-sms",
+        "checked": "2026-09-04"
+      },
+      "deposit_method_ott_voucher": {
+        "value": "OTT Voucher deposits are supported, carry no Sportingbet fee, and are credited instantly; OTT Voucher is not a withdrawal method.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/ottvoucher",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_express": {
+        "value": "Express Withdrawals send funds to a verified South African bank account, usually instantly if checks pass, otherwise within 6 to 8 hours.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/express-withdrawals",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_fnb_ewallet": {
+        "value": "FNB E-Wallet withdrawals are same-day, with a maximum withdrawal amount of R3,000 and no fee on the first withdrawal.",
+        "source": "https://help.sportingbet.co.za/en/general-information/payments/payment-methods/fnbewallet",
+        "checked": "2026-09-04"
       }
     }
   },
@@ -122,9 +172,9 @@
     "licence_number": "FSGLA/BML/002",
     "affiliate_url": "Coming soon",
     "go_url": "/go/supabets.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/supabets-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#ED1C24",
     "summary": "Deep local market coverage and regular promotions make Supabets a useful comparison book for PSL and rugby weekends.",
     "community_quote": "The R999 sign-up cap and the bonus wagering are much harsher than most comparison sites admit.",
@@ -133,6 +183,11 @@
         "value": "Free State Gambling, Liquor and Tourism Authority, licence FSGLA/BML/002",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "R50 free bet + 100 free spins + up to R5,000",
+        "source": "https://betwith.supabets.co.za/support/bonus-terms/",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -141,9 +196,9 @@
     "name": "10bet",
     "rating": 4.1,
     "established": 2003,
-    "welcome_bonus": "100% first deposit match up to R5,000",
-    "min_deposit_zar": 50,
-    "min_deposit_display": "R50",
+    "welcome_bonus": "100% match: R5,000 on offers page, R3,000 in welcome terms",
+    "min_deposit_zar": 20,
+    "min_deposit_display": "R20",
     "payout_speed": "Coming soon",
     "payment_methods": [
       "EFT",
@@ -156,17 +211,27 @@
     "licence_number": "9-2-1-09661",
     "affiliate_url": "https://partners.10betaffiliates.co.za/visit/?bta=36707&brand=10betza",
     "go_url": "/go/10bet.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/10bet-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#1A1A1A",
     "summary": "International bookmaker with strong SA presence. 10bet offers competitive odds, regular promotions, and a clean interface. SAFA's official betting partner.",
-    "community_quote": "The 6x rollover is on deposit plus bonus at 2.00+ odds, so the real turnover is much higher than the headline suggests.",
+    "community_quote": "The welcome-bonus page says 8x on deposit plus bonus at 2.00+ odds, while general promo terms say 5x at 1.60+.",
     "facts": {
       "licence": {
         "value": "Mpumalanga Economic Regulator, licence 9-2-1-09661",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "100% match: R5,000 on offers page, R3,000 in welcome terms",
+        "source": "https://www.10bet.co.za/promotions/offers/",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R20",
+        "source": "https://www.10bet.co.za/promotions/welcome-bonus/",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -175,9 +240,9 @@
     "name": "Play.co.za",
     "rating": 4.2,
     "established": 2020,
-    "welcome_bonus": "Up to R30,000 across 3 deposits",
-    "min_deposit_zar": 5,
-    "min_deposit_display": "R5",
+    "welcome_bonus": "Up to R9,000 across 3 published R3,000 caps",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "12-24 hours",
     "payment_methods": [
       "EFT",
@@ -189,22 +254,52 @@
     "licence_number": "10172287-015",
     "affiliate_url": "https://affiliates.play.co.za/links/?btag=2673740",
     "go_url": "/go/play-co-za.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/play-co-za-review.html",
-    "last_reviewed": "2026-02-19",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#6B46C1",
-    "summary": "Modern betting platform with a sleek design and generous welcome bonuses. Play.co.za combines sports betting with live casino games, offering massive payout limits and fast withdrawals.",
-    "community_quote": "The casino bonus carries 29x bonus plus 1x deposit wagering, and you only get 15 days to clear it.",
+    "summary": "Modern betting platform with a sleek design and a three-stage welcome package. Play.co.za combines sports betting with live casino games, offering fast withdrawals and big payout limits.",
+    "community_quote": "Casino terms use 29x bonus plus 1x deposit wagering; sportsbook terms use 9x bonus plus 1x deposit at 1.8+ odds.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10172287-015",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
       },
+      "welcome_bonus": {
+        "value": "Up to R9,000 across 3 published R3,000 caps",
+        "source": "https://sportsbook.play.co.za/promotions",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R50",
+        "source": "https://sportsbook.play.co.za/welcome-promotions-tcs",
+        "checked": "2026-09-03"
+      },
       "login_url": {
         "value": "https://www.play.co.za/login",
         "source": "https://www.play.co.za/login",
         "checked": "2026-09-02"
+      },
+      "registration_fields": {
+        "value": "Play.co.za registration currently asks for name, gender, email, mobile number, username, personal ID or passport details, birth date, address, bank details, income source, occupation, salary level, and security-question setup.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/v3RegFields.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "payment_methods": {
+        "value": "Play.co.za currently exposes Ozow, EFT, credit card, 1Voucher, OTT Voucher, Kazang Voucher, and related CallPay variants in its cashier config.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_methods": {
+        "value": "Play.co.za currently exposes Ozow, EFT, Real-Time withdrawals, and CallPay V2 withdrawals in its cashier config.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_realtime": {
+        "value": "Real-Time withdrawals are available 24 hours a day excluding Saturdays, Sundays, and public holidays, usually reflect within 2 hours, and list a minimum of R5,000 and maximum of R250,000.",
+        "source": "https://builder.spring-builder.prod.yospace.ai/fs/userFiles-v2/playcoza-x-18751926/data/springXConfigs/payment.json?v=1788512448",
+        "checked": "2026-09-04"
       }
     }
   },
@@ -213,7 +308,7 @@
     "name": "World Sports Betting",
     "rating": 4.1,
     "established": 2000,
-    "welcome_bonus": "100% deposit match + free bet + 100 free spins",
+    "welcome_bonus": "Coming soon",
     "min_deposit_zar": 20,
     "min_deposit_display": "R20",
     "payout_speed": "24 to 72 hours",
@@ -230,7 +325,7 @@
     "go_url": "/go/world-sports-betting.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/bookmakers/world-sports-betting-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#E31E24",
     "summary": "Well-established SA operator with retail presence nationwide. Known for solid horse racing coverage and accessible mobile platform.",
     "community_quote": "You may need to email promotions@wsb.co.za before depositing, or the promo might not be applied at all.",
@@ -242,8 +337,23 @@
       },
       "login_url": {
         "value": "https://www.worldsportsbetting.co.za/login",
-        "source": "https://www.worldsportsbetting.co.za/",
-        "checked": "2026-09-02"
+        "source": "https://www.worldsportsbetting.co.za/login",
+        "checked": "2026-09-04"
+      },
+      "terms_url": {
+        "value": "https://www.worldsportsbetting.co.za/terms",
+        "source": "https://www.worldsportsbetting.co.za/terms",
+        "checked": "2026-09-04"
+      },
+      "responsible_gambling_url": {
+        "value": "https://www.worldsportsbetting.co.za/?my-account=responsible",
+        "source": "https://www.worldsportsbetting.co.za/?my-account=responsible",
+        "checked": "2026-09-04"
+      },
+      "public_surface_gap": {
+        "value": "World Sports Betting's public sitemap exposed a live login route, terms route, and responsible gambling route on this run, but did not expose a public standalone app-download or registration URL that BetSorted could verify.",
+        "source": "https://www.worldsportsbetting.co.za/sitemap.xml",
+        "checked": "2026-09-04"
       }
     }
   },
@@ -252,7 +362,7 @@
     "name": "Easybet",
     "rating": 4,
     "established": null,
-    "welcome_bonus": "150% first deposit up to R5,000 + R50 sign-up bonus",
+    "welcome_bonus": "Coming soon",
     "min_deposit_zar": 20,
     "min_deposit_display": "R20",
     "payout_speed": "24 to 72 hours",
@@ -268,7 +378,7 @@
     "go_url": "/go/easybet.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/bookmakers/easybet-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#00AEEF",
     "summary": "Newer player in SA market focusing on accessibility. Very low minimum deposits and data-free betting make it ideal for casual punters.",
     "community_quote": "The match pays in Bonus Bets, and the real withdrawal cap still could not be verified from outside South Africa.",
@@ -299,21 +409,21 @@
       "Capitec Pay",
       "SCode"
     ],
-    "licence_authority": "Free State Gambling, Liquor and Tourism Authority",
-    "licence_number": "FSGLA/BML/0029",
+    "licence_authority": "Western Cape Gambling and Racing Board",
+    "licence_number": "10179096-014",
     "affiliate_url": "Coming soon",
     "go_url": "/go/gbets.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/gbets-review.html",
-    "last_reviewed": "2026-03-25",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#FF6B00",
     "summary": "Gbets focuses on accessible deposits, no-deposit signup value, and mainstream SA sports coverage for casual and regular punters.",
     "community_quote": "You need a R25 deposit before you can withdraw winnings, and an active bonus can freeze withdrawals.",
     "facts": {
       "licence": {
-        "value": "Free State Gambling, Liquor and Tourism Authority, licence FSGLA/BML/0029",
-        "source": "https://www.ngb.org.za/verified-operators/",
-        "checked": "2026-09-02"
+        "value": "Western Cape Gambling and Racing Board, licence 10179096-014",
+        "source": "https://www.gbets.co.za/promotions",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -322,7 +432,7 @@
     "name": "Sunbet",
     "rating": 3.8,
     "established": 1997,
-    "welcome_bonus": "100% first deposit match up to R1,000",
+    "welcome_bonus": "Coming soon",
     "min_deposit_zar": 20,
     "min_deposit_display": "R20",
     "payout_speed": "Coming soon",
@@ -338,7 +448,7 @@
     "go_url": "/go/sunbet.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/bookmakers/sunbet-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#FDB913",
     "summary": "Part of the Sun International group. Sunbet is strong in horse racing and offers live streaming for racing events.",
     "community_quote": "If you try to withdraw before clearing the rollover, the whole bonus balance is wiped.",
@@ -356,25 +466,35 @@
     "rating": null,
     "established": null,
     "welcome_bonus": "100% first deposit match up to R5,000",
-    "min_deposit_zar": null,
-    "min_deposit_display": "Coming soon",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "Coming soon",
     "payment_methods": [],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10145732-017",
     "affiliate_url": "Coming soon",
     "go_url": "/go/bet-co-za.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/bet-co-za-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#0EA5E9",
     "summary": "Bet.co.za has review coverage on BetSorted and stands out more for cleaner bonus structure than flashy promo marketing.",
-    "community_quote": "The structure looks fair, but the binding bonus terms are still hard to inspect without a live browser session.",
+    "community_quote": "The first-deposit offer is clear, but the operator's main promotions and terms pages are still a JS shell.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10145732-017",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "100% first deposit match up to R5,000",
+        "source": "https://betcoza.online",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R50",
+        "source": "https://betcoza.online",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -383,26 +503,26 @@
     "name": "Betfred",
     "rating": 4,
     "established": null,
-    "welcome_bonus": "Up to R21,000 + 750 free spins",
+    "welcome_bonus": "Welcome headline conflicted in September scan",
     "min_deposit_zar": 20,
     "min_deposit_display": "R20",
     "payout_speed": "24-48 hours",
     "payment_methods": [],
-    "licence_authority": "Gauteng Gambling Board",
+    "licence_authority": "Mpumalanga Economic Regulator",
     "licence_number": "VER-014",
     "affiliate_url": "Coming soon",
     "go_url": "/go/betfred.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/blog/betfred-review-south-africa-2026.html",
-    "last_reviewed": "2026-03-10",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#004990",
     "summary": "Betfred has review coverage on BetSorted and is mainly worth a look for casino-heavy readers chasing a big headline offer.",
-    "community_quote": "Trusted by South African punters",
+    "community_quote": "Readable Betfred pages conflicted between R21,000 and R5,000 welcome headlines.",
     "facts": {
       "licence": {
-        "value": "Gauteng Gambling Board, licence VER-014",
-        "source": "https://www.ngb.org.za/verified-operators/",
-        "checked": "2026-09-02"
+        "value": "Mpumalanga Economic Regulator; readable Betfred pages did not publish a licence number",
+        "source": "https://loyalty.betfred.co.za/",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -411,26 +531,80 @@
     "name": "BetOlimp",
     "rating": null,
     "established": null,
-    "welcome_bonus": "100% first deposit match up to R3,000 + 50 free spins",
-    "min_deposit_zar": null,
-    "min_deposit_display": "Coming soon",
+    "welcome_bonus": "100% first deposit match up to R3,000",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "Coming soon",
-    "payment_methods": [],
+    "payment_methods": [
+      "Visa",
+      "Mastercard",
+      "OTT",
+      "Ozow",
+      "SID",
+      "Bank Transfer",
+      "Cashier",
+      "1ForYou"
+    ],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10138042-020",
     "affiliate_url": "Coming soon",
     "go_url": "/go/betolimp.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/blog/betolimp-review-south-africa-2026.html",
-    "last_reviewed": "2026-06-01",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#17324D",
     "summary": "BetOlimp has review coverage on BetSorted and is mostly useful as an extra comparison option beyond the usual SA defaults.",
-    "community_quote": "Playbet is a separate company from Play.co.za, and the casino route jumps to 35x wagering.",
+    "community_quote": "The sportsbook welcome terms are now published, but they do not advertise any free spins.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10138042-020",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "100% first deposit match up to R3,000",
+        "source": "https://betolimp.co.za/promotions",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R50",
+        "source": "https://betolimp.co.za/promo/welcome-bonus/",
+        "checked": "2026-09-03"
+      },
+      "login_url": {
+        "value": "https://betolimp.co.za/en",
+        "source": "https://betolimp.co.za/en",
+        "checked": "2026-09-04"
+      },
+      "registration_fields": {
+        "value": "BetOlimp's public registration form currently asks for username, password, email, date of birth, country, city, ID, passport or asylum details, a document upload, address, and phone number.",
+        "source": "https://betolimp.co.za/en/user/registration/",
+        "checked": "2026-09-04"
+      },
+      "payment_methods": {
+        "value": "BetOlimp's public pages currently show Visa, Mastercard, OTT, Ozow, SID, bank transfer, cashier and 1ForYou, while the welcome-bonus terms say first-deposit bonus eligibility currently applies to SID, credit or debit card, and 1Voucher deposits.",
+        "source": "https://betolimp.co.za/promotions",
+        "checked": "2026-09-04"
+      },
+      "withdrawal_bonus_restriction": {
+        "value": "BetOlimp says customers with a pending withdrawal cannot claim the first deposit bonus or any other deposit bonus offer.",
+        "source": "https://betolimp.co.za/promo/welcome-bonus/",
+        "checked": "2026-09-04"
+      },
+      "app_url": {
+        "value": "https://betolimp.co.za/en/apps/android",
+        "source": "https://betolimp.co.za/en/apps/android",
+        "checked": "2026-09-04"
+      },
+      "app_download_url": {
+        "value": "https://betolimp.co.za/apps/android/download/",
+        "source": "https://betolimp.co.za/apps/android/download/",
+        "checked": "2026-09-04"
+      },
+      "app_download_details": {
+        "value": "BetOlimp's direct Android download currently serves a file named betolimp_1.0.3.apk from the operator domain.",
+        "source": "https://betolimp.co.za/apps/android/download/",
+        "checked": "2026-09-04"
       }
     }
   },
@@ -439,7 +613,7 @@
     "name": "Betshezi",
     "rating": 3.8,
     "established": null,
-    "welcome_bonus": "R25 no-deposit free bet + 100% deposit match up to R2,000",
+    "welcome_bonus": "Coming soon",
     "min_deposit_zar": 10,
     "min_deposit_display": "R10",
     "payout_speed": "Coming soon",
@@ -450,7 +624,7 @@
     "go_url": "/go/betshezi.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/blog/betshezi-review-south-africa-2026.html",
-    "last_reviewed": "2026-03-23",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#E11D48",
     "summary": "Betshezi has review coverage on BetSorted and is worth checking if the no-deposit angle matters more than polished depth.",
     "community_quote": "Trusted by South African punters",
@@ -478,7 +652,7 @@
     "go_url": "/go/lottostar.html",
     "bonus_verified_at": "Coming soon",
     "review_url": "/blog/lottostar-review-south-africa-2026.html",
-    "last_reviewed": "2026-03-29",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#1D4ED8",
     "summary": "LottoStar has review coverage on BetSorted and fits better for Lucky Numbers and casual play than for deep sportsbook use.",
     "community_quote": "Trusted by South African punters",
@@ -492,12 +666,12 @@
   },
   {
     "slug": "playabets",
-    "name": "Playbet",
+    "name": "Playabets",
     "rating": null,
     "established": null,
-    "welcome_bonus": "Coming soon",
-    "min_deposit_zar": null,
-    "min_deposit_display": "Coming soon",
+    "welcome_bonus": "100% first deposit bonus up to R3,000",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "Coming soon",
     "payment_methods": [
       "Instant EFT",
@@ -505,21 +679,31 @@
       "Visa",
       "Mastercard"
     ],
-    "licence_authority": "Western Cape Gambling and Racing Board",
-    "licence_number": "10141335-018",
+    "licence_authority": "Mpumalanga Economic Regulator",
+    "licence_number": "9-2-1-09689",
     "affiliate_url": "https://trk.playbet.net/o/u_K-Lb",
     "go_url": "/go/playabets.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/playabets-review.html",
-    "last_reviewed": "2026-02-18",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#0F766E",
-    "summary": "Playbet has review coverage on BetSorted and is mainly relevant for readers who want a straightforward sports-plus-casino option.",
-    "community_quote": "Trusted by South African punters",
+    "summary": "Playabets has review coverage on BetSorted and publishes unusually detailed loyalty terms for the South African market.",
+    "community_quote": "Playabets is separate from Play.co.za and Playbet; its casino welcome route jumps to 35x wagering.",
     "facts": {
       "licence": {
-        "value": "Western Cape Gambling and Racing Board, licence 10141335-018",
-        "source": "https://www.ngb.org.za/verified-operators/",
-        "checked": "2026-09-02"
+        "value": "Mpumalanga Economic Regulator, licence 9-2-1-09689",
+        "source": "https://www.playabets.co.za/loyalty-club/",
+        "checked": "2026-09-03"
+      },
+      "welcome_bonus": {
+        "value": "100% first deposit bonus up to R3,000",
+        "source": "https://www.playabets.co.za/promotions/welcome-bonus/",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R50",
+        "source": "https://www.playabets.co.za/promotions/welcome-bonus/",
+        "checked": "2026-09-03"
       }
     }
   },
@@ -528,26 +712,36 @@
     "name": "YesPlay",
     "rating": "6.8 / 10",
     "established": null,
-    "welcome_bonus": "Typically 100% match on first deposit up to R500",
-    "min_deposit_zar": 10,
-    "min_deposit_display": "R10",
+    "welcome_bonus": "100% first deposit match up to R3,000",
+    "min_deposit_zar": 20,
+    "min_deposit_display": "R20",
     "payout_speed": "Coming soon",
     "payment_methods": [],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10180204-013",
     "affiliate_url": "Coming soon",
     "go_url": "/go/yesplay.html",
-    "bonus_verified_at": "Coming soon",
+    "bonus_verified_at": "2026-09-03",
     "review_url": "/blog/yesplay-review-south-africa-2026.html",
-    "last_reviewed": "2026-03-29",
+    "last_reviewed": "2026-09-03",
     "logo_color": "#7C3AED",
-    "summary": "YesPlay has review coverage on BetSorted, with some commercial fields still pending verification.",
-    "community_quote": "Trusted by South African punters",
+    "summary": "YesPlay has review coverage on BetSorted, with a bigger welcome headline than the site was previously publishing.",
+    "community_quote": "The bonus runs for 7 days, but rollover was not published on any readable YesPlay page in the September scan.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10180204-013",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "welcome_bonus": {
+        "value": "100% first deposit match up to R3,000",
+        "source": "https://yesplay.bet/promotions",
+        "checked": "2026-09-03"
+      },
+      "min_deposit": {
+        "value": "R20",
+        "source": "https://yesplay.bet/promotions",
+        "checked": "2026-09-03"
       }
     }
   }

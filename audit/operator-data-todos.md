@@ -28,6 +28,7 @@ bet-co-za,established,null
 bet-co-za,payout_speed,Coming soon
 bet-co-za,affiliate_url,Coming soon
 betfred,established,null
+betfred,licence_number,null
 betfred,affiliate_url,Coming soon
 betolimp,rating,null
 betolimp,established,null

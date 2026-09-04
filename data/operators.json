@@ -35,6 +35,26 @@
         "value": "10 free spins + 10 free flights + R10 free bet",
         "source": "https://offers.betway.co.za/home",
         "checked": "2026-09-03"
+      },
+      "login_url": {
+        "value": "Betway's offers page sets the South Africa sign-in route to https://www.betway.co.za/sport/?login=1",
+        "source": "https://offers.betway.co.za/home",
+        "checked": "2026-09-04"
+      },
+      "app_download": {
+        "value": "Betway's offers page wires both Android and iPhone app buttons to the appdownload.betwayafrica.com bridge; the Android build uses package com.betwayafrica.za and the iPhone button adds App Store ID 1274057509 with bundle com.betway.sa.",
+        "source": "https://offers.betway.co.za/home",
+        "checked": "2026-09-04"
+      },
+      "app_apk": {
+        "value": "Betway's operator CDN app index redirects to the Android APK BetwayZA-5.1.5.apk.",
+        "source": "https://cdn.betwayafrica.com/app/za/index.html",
+        "checked": "2026-09-04"
+      },
+      "datafree_site": {
+        "value": "Betway publishes a live datafree/mobile site at betway.betwayzero.co.za.",
+        "source": "https://betway.betwayzero.co.za/",
+        "checked": "2026-09-04"
       }
     }
   },

@@ -319,8 +319,8 @@
       "Visa",
       "Mastercard"
     ],
-    "licence_authority": "Western Cape Gambling and Racing Board",
-    "licence_number": "10181495-013",
+    "licence_authority": "Not published on any readable WSB page",
+    "licence_number": "Not published",
     "affiliate_url": "Coming soon",
     "go_url": "/go/world-sports-betting.html",
     "bonus_verified_at": "Coming soon",
@@ -331,9 +331,9 @@
     "community_quote": "You may need to email promotions@wsb.co.za before depositing, or the promo might not be applied at all.",
     "facts": {
       "licence": {
-        "value": "Western Cape Gambling and Racing Board, licence 10181495-013",
-        "source": "https://www.ngb.org.za/verified-operators/",
-        "checked": "2026-09-02"
+        "value": "Regulator not published on any readable WSB page",
+        "source": "https://worldsportsbetting.co.za/",
+        "checked": "2026-09-03"
       },
       "login_url": {
         "value": "https://www.worldsportsbetting.co.za/login",
@@ -509,18 +509,18 @@
     "payout_speed": "24-48 hours",
     "payment_methods": [],
     "licence_authority": "Mpumalanga Economic Regulator",
-    "licence_number": "VER-014",
+    "licence_number": null,
     "affiliate_url": "Coming soon",
     "go_url": "/go/betfred.html",
     "bonus_verified_at": "2026-09-03",
     "review_url": "/blog/betfred-review-south-africa-2026.html",
     "last_reviewed": "2026-09-03",
     "logo_color": "#004990",
-    "summary": "Betfred has review coverage on BetSorted and is mainly worth a look for casino-heavy readers chasing a big headline offer.",
-    "community_quote": "Readable Betfred pages conflicted between R21,000 and R5,000 welcome headlines.",
+    "summary": "Betfred has review coverage on BetSorted and is mainly worth a look for readers checking a familiar brand with active SA infrastructure.",
+    "community_quote": "Readable Betfred pages conflicted between R21,000 and R5,000 welcome headlines, so verify the live account offer before relying on either.",
     "facts": {
       "licence": {
-        "value": "Mpumalanga Economic Regulator; readable Betfred pages did not publish a licence number",
+        "value": "Mpumalanga Economic Regulator; no readable licence number found",
         "source": "https://loyalty.betfred.co.za/",
         "checked": "2026-09-03"
       }
@@ -687,7 +687,7 @@
     "review_url": "/bookmakers/playabets-review.html",
     "last_reviewed": "2026-09-03",
     "logo_color": "#0F766E",
-    "summary": "Playabets has review coverage on BetSorted and publishes unusually detailed loyalty terms for the South African market.",
+    "summary": "Playabets has review coverage on BetSorted and publishes unusually detailed rewards terms, including rakeback and a six-tier loyalty club.",
     "community_quote": "Playabets is separate from Play.co.za and Playbet; its casino welcome route jumps to 35x wagering.",
     "facts": {
       "licence": {
@@ -725,7 +725,7 @@
     "review_url": "/blog/yesplay-review-south-africa-2026.html",
     "last_reviewed": "2026-09-03",
     "logo_color": "#7C3AED",
-    "summary": "YesPlay has review coverage on BetSorted, with a bigger welcome headline than the site was previously publishing.",
+    "summary": "YesPlay has review coverage on BetSorted, with a published R3,000 welcome-bonus cap and unreadable rollover detail in the September scan.",
     "community_quote": "The bonus runs for 7 days, but rollover was not published on any readable YesPlay page in the September scan.",
     "facts": {
       "licence": {

@@ -522,8 +522,8 @@
       },
       "app_ios": {
         "value": "Gbets publishes an iPhone App Store route for Gbets Sports Betting with App Store ID 1612069593.",
-        "source": "https://apps.apple.com/za/app/gbets-sports-betting/id1612069593",
-        "checked": "2026-09-04"
+        "source": "https://www.gbets.co.za",
+        "checked": "2026-09-05"
       },
       "app_huawei": {
         "value": "Gbets publishes a Huawei AppGallery handoff that currently resolves to app C108007409.",

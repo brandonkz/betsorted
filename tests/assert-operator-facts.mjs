@@ -46,7 +46,15 @@ function validDate(value) {
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
 }
 
+// App stores block automated HEAD/GET; skip them in CI — they are verified manually.
+const CI_SKIP_HOSTS = ['apps.apple.com', 'play.google.com'];
+
 async function sourceResolves(source) {
+  try {
+    const { hostname } = new URL(source);
+    if (CI_SKIP_HOSTS.includes(hostname)) return true;
+  } catch { /* fall through */ }
+
   if (sourceCache.has(source)) return sourceCache.get(source);
 
   const controller = new AbortController();

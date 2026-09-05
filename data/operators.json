@@ -573,7 +573,7 @@
     "welcome_bonus": "100% first deposit match up to R5,000",
     "min_deposit_zar": 50,
     "min_deposit_display": "R50",
-    "payout_speed": "Coming soon",
+    "payout_speed": "Up to 24 hours (Mon-Sat)",
     "payment_methods": [],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10145732-017",
@@ -581,10 +581,10 @@
     "go_url": "/go/bet-co-za.html",
     "bonus_verified_at": "2026-09-03",
     "review_url": "/bookmakers/bet-co-za-review.html",
-    "last_reviewed": "2026-09-03",
+    "last_reviewed": "2026-09-05",
     "logo_color": "#0EA5E9",
     "summary": "Bet.co.za has review coverage on BetSorted and stands out more for cleaner bonus structure than flashy promo marketing.",
-    "community_quote": "The first-deposit offer is clear, but the operator's main promotions and terms pages are still a JS shell.",
+    "community_quote": "The public BET.co.za help surface is better than it first looks, but guest pages still do not publish a complete payment-method list.",
     "facts": {
       "licence": {
         "value": "Western Cape Gambling and Racing Board, licence 10145732-017",
@@ -600,6 +600,66 @@
         "value": "R50",
         "source": "https://betcoza.online",
         "checked": "2026-09-03"
+      },
+      "login_url": {
+        "value": "https://bet.co.za/login",
+        "source": "https://bet.co.za/pageInfo/login/en_US_desktop",
+        "checked": "2026-09-05"
+      },
+      "registration_url": {
+        "value": "https://bet.co.za/register",
+        "source": "https://bet.co.za/pageInfo/register/en_US_desktop",
+        "checked": "2026-09-05"
+      },
+      "password_recovery_url": {
+        "value": "https://bet.co.za/forgot-password",
+        "source": "https://bet.co.za/pageInfo/forgot-password/en_US_desktop",
+        "checked": "2026-09-05"
+      },
+      "verification_url": {
+        "value": "https://bet.co.za/verify",
+        "source": "https://bet.co.za/pageInfo/verify/en_US_desktop",
+        "checked": "2026-09-05"
+      },
+      "verification_help": {
+        "value": "Identity verification uses a phone camera flow for your face and ID documents, with fallback to support email or live chat if needed.",
+        "source": "https://bet.co.za/webContent/en_US_IDENTT_VERIFICATION_CONTENT",
+        "checked": "2026-09-05"
+      },
+      "fica_requirements": {
+        "value": "FICA documents are required on the first withdrawal regardless of amount, and for aggregate deposits reaching R5,000 and above.",
+        "source": "https://bet.co.za/webContent/en_US_TERMS_AND_CONDITIONS",
+        "checked": "2026-09-05"
+      },
+      "contact_url": {
+        "value": "https://bet.co.za/contact-us",
+        "source": "https://bet.co.za/pageInfo/contact-us/en_US_desktop",
+        "checked": "2026-09-05"
+      },
+      "support_email": {
+        "value": "support@bet.co.za",
+        "source": "https://bet.co.za/webContent/en_US_CONTACT-US",
+        "checked": "2026-09-05"
+      },
+      "fica_email": {
+        "value": "fica@bet.co.za",
+        "source": "https://bet.co.za/webContent/en_US_CONTACT-US",
+        "checked": "2026-09-05"
+      },
+      "deposit_speed": {
+        "value": "Deposits are instant.",
+        "source": "https://bet.co.za/webContent/en_US_FAQ",
+        "checked": "2026-09-05"
+      },
+      "withdrawal_timing": {
+        "value": "Withdrawals need a 24-hour waiting period Monday to Saturday, excluding Sundays, once reviewed by risk and fraud.",
+        "source": "https://bet.co.za/webContent/en_US_FAQ",
+        "checked": "2026-09-05"
+      },
+      "responsible_gambling_url": {
+        "value": "https://bet.co.za/responsible-gambling",
+        "source": "https://bet.co.za/pageInfo/responsible-gambling/en_US_desktop",
+        "checked": "2026-09-05"
       }
     }
   },

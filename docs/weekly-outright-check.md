@@ -66,7 +66,7 @@ Each market should follow this shape:
           "read_at": "2026-08-07T10:14:00Z",
           "source_url": "https://www.betway.co.za/...",
           "screenshot": "audit/odds-evidence/2026-08-07/betway-epl-arsenal.png",
-          "review_url": "/bookmakers/betway-review.html",
+          "review_url": "/blog/betway-review-south-africa-2026.html",
           "affiliate_url": "/go/betway.html"
         }
       ]

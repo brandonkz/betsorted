@@ -4,11 +4,6 @@
   "note": "GitHub Pages does not provide server-side 301 redirects from this static repo; existing HTML stubs are preserved.",
   "redirects": [
     {
-      "source": "/best-betting-sites-south-africa.html",
-      "target": "/blog/best-betting-sites-beginners-south-africa-2026.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/blog/best-betting-app-south-africa-2026.html",
       "target": "/best-betting-apps.html",
       "type": "internal_stub"
@@ -21,11 +16,6 @@
     {
       "source": "/betway-vs-hollywoodbets.html",
       "target": "/blog/betway-vs-hollywoodbets.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/10bet-review-south-africa-2026.html",
-      "target": "/bookmakers/10bet-review.html",
       "type": "internal_stub"
     },
     {
@@ -74,16 +64,6 @@
       "type": "internal_stub"
     },
     {
-      "source": "/blog/bet-co-za-review-south-africa-2026.html",
-      "target": "/bookmakers/bet-co-za-review.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/betway-review-south-africa-2026.html",
-      "target": "/bookmakers/betway-review.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/blog/betway-vs-10bet-world-cup-psl-june-2026.html",
       "target": "/blog/psl-title-race-betting-guide.html",
       "type": "internal_stub"
@@ -124,11 +104,6 @@
       "type": "internal_stub"
     },
     {
-      "source": "/blog/easybet-review-south-africa-2026.html",
-      "target": "/bookmakers/easybet-review.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/blog/fa-cup-fifth-round-weekend-accumulator-tips-march-2026.html",
       "target": "/blog/category-betting-guides-strategy.html",
       "type": "internal_stub"
@@ -139,18 +114,8 @@
       "type": "internal_stub"
     },
     {
-      "source": "/blog/gbets-review-south-africa-2026.html",
-      "target": "/bookmakers/gbets-review.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/blog/gbets-vs-world-sports-betting-rugby-horse-racing-2026.html",
       "target": "/blog/gbets-vs-wsb-south-africa-2026.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/hollywoodbets-review-south-africa-2026.html",
-      "target": "/bookmakers/hollywoodbets-review.html",
       "type": "internal_stub"
     },
     {
@@ -241,11 +206,6 @@
     {
       "source": "/blog/nedbank-cup-2026-semi-finals-betting-guide.html",
       "target": "/blog/nedbank-cup-betting-guide.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/playabets-review-south-africa-2026.html",
-      "target": "/bookmakers/playabets-review.html",
       "type": "internal_stub"
     },
     {
@@ -394,11 +354,6 @@
       "type": "internal_stub"
     },
     {
-      "source": "/blog/sportingbet-review-south-africa-2026.html",
-      "target": "/bookmakers/sportingbet-review.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/blog/springboks-barbarians-2026-betting-preview.html",
       "target": "/blog/springboks-vs-barbarians-betting-guide.html",
       "type": "internal_stub"
@@ -441,16 +396,6 @@
     {
       "source": "/blog/springboks-vs-england-june-2026-betting-preview.html",
       "target": "/blog/springboks-vs-england-betting-guide.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/sunbet-review-south-africa-2026.html",
-      "target": "/bookmakers/sunbet-review.html",
-      "type": "internal_stub"
-    },
-    {
-      "source": "/blog/supabets-review-south-africa-2026.html",
-      "target": "/bookmakers/supabets-review.html",
       "type": "internal_stub"
     },
     {
@@ -539,68 +484,63 @@
       "type": "internal_stub"
     },
     {
-      "source": "/blog/wsb-review-south-africa-2026.html",
-      "target": "/bookmakers/world-sports-betting-review.html",
-      "type": "internal_stub"
-    },
-    {
       "source": "/bookmakers.html",
       "target": "/bookmakers/",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/10bet.html",
-      "target": "/bookmakers/10bet-review.html",
+      "target": "/blog/10bet-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/betway.html",
-      "target": "/bookmakers/betway-review.html",
+      "target": "/blog/betway-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/easybet.html",
-      "target": "/bookmakers/easybet-review.html",
+      "target": "/blog/easybet-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/gbets.html",
-      "target": "/bookmakers/gbets-review.html",
+      "target": "/blog/gbets-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/hollywoodbets.html",
-      "target": "/bookmakers/hollywoodbets-review.html",
+      "target": "/blog/hollywoodbets-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/playabets.html",
-      "target": "/bookmakers/playabets-review.html",
+      "target": "/blog/playabets-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/sportingbet.html",
-      "target": "/bookmakers/sportingbet-review.html",
+      "target": "/blog/sportingbet-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/sunbet.html",
-      "target": "/bookmakers/sunbet-review.html",
+      "target": "/blog/sunbet-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/supabets.html",
-      "target": "/bookmakers/supabets-review.html",
+      "target": "/blog/supabets-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/world-sports-betting.html",
-      "target": "/bookmakers/world-sports-betting-review.html",
+      "target": "/blog/wsb-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
       "source": "/bookmakers/wsb.html",
-      "target": "/bookmakers/world-sports-betting-review.html",
+      "target": "/blog/wsb-review-south-africa-2026.html",
       "type": "internal_stub"
     },
     {
@@ -635,18 +575,18 @@
     },
     {
       "source": "/go/betway.html",
-      "target": "/bookmakers/betway-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.betway.co.za",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/easybet.html",
-      "target": "/bookmakers/easybet-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.easybet.co.za/",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/gbets.html",
-      "target": "/bookmakers/gbets-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.gbets.co.za/",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/hollywoodbets.html",
@@ -665,23 +605,23 @@
     },
     {
       "source": "/go/sportingbet.html",
-      "target": "/bookmakers/sportingbet-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.sportingbet.co.za",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/sunbet.html",
-      "target": "/bookmakers/sunbet-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.sunbet.co.za/",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/supabets.html",
-      "target": "/bookmakers/supabets-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.supabets.co.za",
+      "type": "external_affiliate_redirect"
     },
     {
       "source": "/go/world-sports-betting.html",
-      "target": "/bookmakers/world-sports-betting-review.html",
-      "type": "internal_go_placeholder"
+      "target": "https://www.wsb.co.za",
+      "type": "external_affiliate_redirect"
     }
   ]
 }

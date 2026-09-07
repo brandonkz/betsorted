@@ -4,8 +4,11 @@ node_modules/
 Documents
 .DS_Store
 scripts/
+!scripts/
+!scripts/fetch-ngb-register.mjs
 templates/
 data/sports.csv
+data/ngb-register.json
 tweets/
 AFFILIATE-APPLICATIONS.md
 WEEKLY-TWEETS.md

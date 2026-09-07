@@ -4,6 +4,7 @@
   "description": "**Find the best sports betting site for South Africans**",
   "main": "app.js",
   "scripts": {
+    "fetch:ngb-register": "node scripts/fetch-ngb-register.mjs",
     "sync:operators": "node scripts/sync-operator-data.mjs",
     "sync:header": "node scripts/sync-header.mjs",
     "sync:structured-data": "node scripts/sync-structured-data.mjs",
@@ -15,6 +16,7 @@
     "assert:blog-index": "node tests/assert-blog-index.mjs",
     "assert:canonical-reviews": "node tests/assert-canonical-reviews.mjs",
     "assert:operator-data": "node tests/assert-operator-data.mjs",
+    "assert:operator-licences": "node tests/assert-operator-licences.mjs",
     "assert:polymarket-feed": "node tests/assert-polymarket-feed.mjs",
     "assert:stale-odds-audit": "node tests/assert-stale-odds-audit.mjs",
     "assert:structured-data": "node tests/assert-structured-data.mjs",

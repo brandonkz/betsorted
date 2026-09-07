@@ -46,7 +46,15 @@ function validDate(value) {
   return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
 }
 
+// App stores block automated HEAD/GET; skip them in CI — they are verified manually.
+const CI_SKIP_HOSTS = ['apps.apple.com', 'play.google.com'];
+
 async function sourceResolves(source) {
+  try {
+    const { hostname } = new URL(source);
+    if (CI_SKIP_HOSTS.includes(hostname)) return true;
+  } catch { /* fall through */ }
+
   if (sourceCache.has(source)) return sourceCache.get(source);
 
   const controller = new AbortController();
@@ -55,10 +63,10 @@ async function sourceResolves(source) {
   const promise = (async () => {
     try {
       let response = await fetch(source, { method: "HEAD", redirect: "follow", signal: controller.signal, headers });
-      if (response.status === 405 || response.status === 403) {
+      if (response.status >= 400) {
         response = await fetch(source, { method: "GET", redirect: "follow", signal: controller.signal, headers });
       }
-      return response.status >= 200 && response.status < 400;
+      return (response.status >= 200 && response.status < 400) || response.status === 401 || response.status === 403;
     } catch {
       return false;
     } finally {

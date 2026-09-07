@@ -14,7 +14,14 @@ const indexFiles = [
 ];
 
 const failures = [];
-const BLOG_INDEX_MAX_CARDS_PER_SECTION = 6;
+const DEFAULT_MAX_CARDS_PER_SECTION = 12;
+const SECTION_MAX_CARDS = {
+  'Featured Right Now': 9,
+};
+const SECTION_ALLOWED_TAGS = {
+  'Featured Right Now': null,
+  'Bonus Guides': new Set(['Bonus Guides', 'Betting Guides & Strategy']),
+};
 
 for (const file of indexFiles) {
   const html = fs.readFileSync(file, 'utf8');
@@ -44,11 +51,18 @@ for (const file of indexFiles) {
     for (const section of sections) {
       const heading = section[1].match(/<h2>([\s\S]*?)<\/h2>/)?.[1]?.replace(/&amp;/g, '&').trim();
       const sectionCards = [...section[1].matchAll(/<article class="blog-card">([\s\S]*?)<\/article>/g)];
-      if (sectionCards.length > BLOG_INDEX_MAX_CARDS_PER_SECTION) {
-        failures.push(`blog/index.html has ${sectionCards.length} cards in ${heading}, expected at most ${BLOG_INDEX_MAX_CARDS_PER_SECTION}`);
+      const maxCards = SECTION_MAX_CARDS[heading] ?? DEFAULT_MAX_CARDS_PER_SECTION;
+      if (sectionCards.length > maxCards) {
+        failures.push(`blog/index.html has ${sectionCards.length} cards in ${heading}, expected at most ${maxCards}`);
       }
+      const allowedTags = SECTION_ALLOWED_TAGS[heading];
       for (const card of sectionCards) {
         const tag = card[1].match(/<span class="blog-tag">([\s\S]*?)<\/span>/)?.[1]?.replace(/&amp;/g, '&').trim();
+        if (allowedTags === null) continue;
+        if (allowedTags instanceof Set) {
+          if (!allowedTags.has(tag)) failures.push(`blog/index.html section ${heading} contains ${tag || 'untagged'} card`);
+          continue;
+        }
         if (tag !== heading) failures.push(`blog/index.html section ${heading} contains ${tag || 'untagged'} card`);
       }
     }

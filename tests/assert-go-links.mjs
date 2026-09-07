@@ -35,14 +35,14 @@ if (!tableMatch) {
   failures.push('Could not find homepage comparison table body');
 } else {
   const expectedRows = [
-    ['Betway', '/bookmakers/betway-review.html', '/go/betway.html'],
-    ['Hollywoodbets', '/bookmakers/hollywoodbets-review.html', '/go/hollywoodbets.html'],
-    ['Sportingbet', '/bookmakers/sportingbet-review.html', '/go/sportingbet.html'],
-    ['10bet', '/bookmakers/10bet-review.html', '/go/10bet.html'],
+    ['Betway', '/blog/betway-review-south-africa-2026.html', '/go/betway.html'],
+    ['Hollywoodbets', '/blog/hollywoodbets-review-south-africa-2026.html', '/go/hollywoodbets.html'],
+    ['Sportingbet', '/blog/sportingbet-review-south-africa-2026.html', '/go/sportingbet.html'],
+    ['10bet', '/blog/10bet-review-south-africa-2026.html', '/go/10bet.html'],
     ['Play.co.za', '/bookmakers/play-co-za-review.html', '/go/play-co-za.html'],
-    ['World Sports Betting', '/bookmakers/world-sports-betting-review.html', '/go/world-sports-betting.html'],
-    ['Gbets', '/bookmakers/gbets-review.html', '/go/gbets.html'],
-    ['Sunbet', '/bookmakers/sunbet-review.html', '/go/sunbet.html'],
+    ['World Sports Betting', '/blog/wsb-review-south-africa-2026.html', '/go/world-sports-betting.html'],
+    ['Gbets', '/blog/gbets-review-south-africa-2026.html', '/go/gbets.html'],
+    ['Sunbet', '/blog/sunbet-review-south-africa-2026.html', '/go/sunbet.html'],
   ];
 
   for (const [brand, reviewHref, goHref] of expectedRows) {
@@ -78,8 +78,10 @@ for (const [slug, brand] of Object.entries(todoBrands)) {
     continue;
   }
   const html = readFileSync(goFile, 'utf8');
-  if (!html.includes(`We're setting up a tracked link for ${brand}.`)) {
-    failures.push(`Missing clean tracked-link setup copy in go/${slug}.html`);
+  const hasPlaceholderCopy = html.includes(`We're setting up a tracked link for ${brand}.`);
+  const hasExternalRedirect = /<meta http-equiv="refresh" content="0; url=https?:\/\//.test(html);
+  if (!hasPlaceholderCopy && !hasExternalRedirect) {
+    failures.push(`go/${slug}.html should be either a placeholder or an external tracked redirect`);
   }
   if (html.includes('TODO_AFFILIATE_URL')) {
     failures.push(`go/${slug}.html should not expose TODO_AFFILIATE_URL`);

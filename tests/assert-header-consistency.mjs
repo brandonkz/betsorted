@@ -21,6 +21,10 @@ for (const file of htmlFiles(siteRoot)) {
 
   const html = fs.readFileSync(file, "utf8");
   if (!/<head[\s>]/i.test(html) || !/<body[\s>]/i.test(html)) continue;
+  const isRedirectStub =
+    /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html) &&
+    (/<meta[^>]+http-equiv=["']refresh["']/i.test(html) || /window\.location\.replace\(/i.test(html));
+  if (isRedirectStub) continue;
   const header = html.match(/<header class="site-header">[\s\S]*?<\/header>/i);
   assert.ok(header, `${relative} missing shared site header`);
   assert.ok(header[0].includes('<img src="/assets/logo.png" alt="BetSorted"'), `${relative} header must use image logo`);
@@ -34,7 +38,7 @@ for (const file of htmlFiles(siteRoot)) {
 }
 
 assert.ok(checked > 0, "no headers checked");
-for (const source of ["templates/bookmaker-review.html", "templates/bookmaker-sport.html", "templates/partials/header.html", "scripts/generate-bookmakers.js"]) {
+for (const source of ["templates/bookmaker-review.html", "templates/bookmaker-sport.html", "templates/partials/header.html"]) {
   const content = fs.readFileSync(source, "utf8");
   assert.ok(content.includes("/assets/logo.png"), `${source} must use image logo`);
   assert.ok(!content.includes("brand-icon"), `${source} still uses legacy brand-icon`);

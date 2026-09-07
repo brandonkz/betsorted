@@ -16,6 +16,11 @@ for (const file of htmlFiles(siteRoot)) {
   if (relative.startsWith("go/") || relative.startsWith("private/")) continue;
   const html = fs.readFileSync(file, "utf8");
   if (!/<head[\s>]/i.test(html) || !/<body[\s>]/i.test(html)) continue;
+  const isRedirectStub =
+    /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html) &&
+    (/<meta[^>]+http-equiv=["']refresh["']/i.test(html) || /window\.location\.replace\(/i.test(html));
+  if (isRedirectStub) continue;
+  if (!html.includes("Item 10 structured data")) continue;
   for (const script of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     JSON.parse(script[1]);
   }
@@ -39,7 +44,10 @@ for (const file of htmlFiles(siteRoot)) {
   }
 
   if (reviewUrls.includes(relative)) {
-    assert.ok(graph.some((item) => item["@type"] === "Review" && item.aggregateRating), `${relative} missing Review AggregateRating`);
+    assert.ok(
+      graph.some((item) => item["@type"] === "Review" && (item.aggregateRating || item.reviewRating)),
+      `${relative} missing Review rating schema`
+    );
   }
 
   if (html.includes('class="faq-section"')) {

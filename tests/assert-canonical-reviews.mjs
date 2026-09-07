@@ -15,28 +15,23 @@ const reviewPairs = [
   ['Sunbet', '/bookmakers/sunbet-review.html', '/blog/sunbet-review-south-africa-2026.html'],
   ['Playabets', '/bookmakers/playabets-review.html', '/blog/playabets-review-south-africa-2026.html'],
   ['Easybet', '/bookmakers/easybet-review.html', '/blog/easybet-review-south-africa-2026.html'],
-  ['Bet.co.za', '/bookmakers/bet-co-za-review.html', '/blog/bet-co-za-review-south-africa-2026.html'],
+  ['BET.co.za', '/bookmakers/bet-co-za-review.html', '/blog/bet-co-za-review-south-africa-2026.html'],
   ['10bet', '/bookmakers/10bet-review.html', '/blog/10bet-review-south-africa-2026.html'],
   ['Gbets', '/bookmakers/gbets-review.html', '/blog/gbets-review-south-africa-2026.html'],
 ];
 
 const aliasRedirects = new Map([
-  ['/bookmakers/10bet.html', '/bookmakers/10bet-review.html'],
-  ['/bookmakers/betway.html', '/bookmakers/betway-review.html'],
-  ['/bookmakers/easybet.html', '/bookmakers/easybet-review.html'],
-  ['/bookmakers/gbets.html', '/bookmakers/gbets-review.html'],
-  ['/bookmakers/hollywoodbets.html', '/bookmakers/hollywoodbets-review.html'],
-  ['/bookmakers/playabets.html', '/bookmakers/playabets-review.html'],
-  ['/bookmakers/sportingbet.html', '/bookmakers/sportingbet-review.html'],
-  ['/bookmakers/sunbet.html', '/bookmakers/sunbet-review.html'],
-  ['/bookmakers/supabets.html', '/bookmakers/supabets-review.html'],
-  ['/bookmakers/world-sports-betting.html', '/bookmakers/world-sports-betting-review.html'],
-  ['/bookmakers/wsb.html', '/bookmakers/world-sports-betting-review.html'],
-]);
-
-const redirectSources = new Map([
-  ...reviewPairs.map(([, canonical, old]) => [old, canonical]),
-  ...aliasRedirects,
+  ['/bookmakers/10bet.html', '/blog/10bet-review-south-africa-2026.html'],
+  ['/bookmakers/betway.html', '/blog/betway-review-south-africa-2026.html'],
+  ['/bookmakers/easybet.html', '/blog/easybet-review-south-africa-2026.html'],
+  ['/bookmakers/gbets.html', '/blog/gbets-review-south-africa-2026.html'],
+  ['/bookmakers/hollywoodbets.html', '/blog/hollywoodbets-review-south-africa-2026.html'],
+  ['/bookmakers/playabets.html', '/blog/playabets-review-south-africa-2026.html'],
+  ['/bookmakers/sportingbet.html', '/blog/sportingbet-review-south-africa-2026.html'],
+  ['/bookmakers/sunbet.html', '/blog/sunbet-review-south-africa-2026.html'],
+  ['/bookmakers/supabets.html', '/blog/supabets-review-south-africa-2026.html'],
+  ['/bookmakers/world-sports-betting.html', '/blog/wsb-review-south-africa-2026.html'],
+  ['/bookmakers/wsb.html', '/blog/wsb-review-south-africa-2026.html'],
 ]);
 
 const failures = [];
@@ -49,32 +44,41 @@ function readUrl(url) {
   return fs.readFileSync(localPath(url), 'utf8');
 }
 
-for (const [brand, canonical, old] of reviewPairs) {
-  if (!fs.existsSync(localPath(canonical))) failures.push(`${brand} canonical missing: ${canonical}`);
-  if (!fs.existsSync(localPath(old))) failures.push(`${brand} redirect source missing: ${old}`);
+for (const [brand, retired, survivor] of reviewPairs) {
+  if (!fs.existsSync(localPath(retired))) failures.push(`${brand} retired page missing: ${retired}`);
+  if (!fs.existsSync(localPath(survivor))) failures.push(`${brand} survivor missing: ${survivor}`);
 
-  const canonicalHtml = fs.existsSync(localPath(canonical)) ? readUrl(canonical) : '';
-  if (!canonicalHtml.includes(`rel="canonical" href="${SITE}${canonical}"`)) {
-    failures.push(`${brand} canonical page does not self-canonicalize to ${canonical}`);
+  const survivorHtml = fs.existsSync(localPath(survivor)) ? readUrl(survivor) : '';
+  if (!survivorHtml.includes(`rel="canonical" href="${SITE}${survivor}"`)) {
+    failures.push(`${brand} survivor does not self-canonicalize to ${survivor}`);
   }
-  if (canonicalHtml.includes('noindex')) failures.push(`${brand} canonical page is noindex`);
+  if (survivorHtml.includes('noindex')) failures.push(`${brand} survivor is noindex`);
 
-  const oldHtml = fs.existsSync(localPath(old)) ? readUrl(old) : '';
-  if (!oldHtml.includes('noindex,follow')) failures.push(`${brand} old blog review is not noindex redirect`);
-  if (!oldHtml.includes(`url=${canonical}`)) failures.push(`${brand} old blog review does not refresh to ${canonical}`);
-  if (!oldHtml.includes(`rel="canonical" href="${SITE}${canonical}"`)) {
-    failures.push(`${brand} old blog review does not canonicalize to ${canonical}`);
+  const retiredHtml = fs.existsSync(localPath(retired)) ? readUrl(retired) : '';
+  if (!retiredHtml.includes('noindex, follow')) failures.push(`${brand} retired page is not noindex redirect`);
+  if (!retiredHtml.includes(`url=https://betsorted.co.za${survivor}`)) {
+    failures.push(`${brand} retired page does not refresh to ${survivor}`);
+  }
+  if (!retiredHtml.includes(`rel="canonical" href="${SITE}${survivor}"`)) {
+    failures.push(`${brand} retired page does not canonicalize to ${survivor}`);
   }
 }
 
 for (const [source, target] of aliasRedirects) {
   if (!fs.existsSync(localPath(source))) failures.push(`alias redirect source missing: ${source}`);
   const html = fs.existsSync(localPath(source)) ? readUrl(source) : '';
-  if (!html.includes('noindex,follow')) failures.push(`${source} is not noindex redirect`);
-  if (!html.includes(`url=${target}`)) failures.push(`${source} does not refresh to ${target}`);
+  if (!html.includes('noindex, follow')) failures.push(`${source} is not noindex redirect`);
+  if (!html.includes(`url=https://betsorted.co.za${target}`)) {
+    failures.push(`${source} does not refresh to ${target}`);
+  }
+  if (!html.includes(`rel="canonical" href="${SITE}${target}"`)) {
+    failures.push(`${source} does not canonicalize to ${target}`);
+  }
 }
 
+const retiredReviewUrls = new Set(reviewPairs.map(([, retired]) => retired));
 const textExtensions = new Set(['.html', '.json', '.xml', '.md', '.csv', '.js', '.mjs', '.txt']);
+
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name === '.git' || entry.name === 'node_modules') continue;
@@ -84,19 +88,21 @@ function walk(dir) {
       continue;
     }
     if (!textExtensions.has(path.extname(entry.name))) continue;
-    const rel = path.relative(ROOT, full);
+
+    const rel = path.relative(ROOT, full).replaceAll(path.sep, '/');
     if (rel === 'data/redirects.json' || rel === 'tests/assert-canonical-reviews.mjs' || rel.startsWith('audit/')) continue;
+
     const route = `/${rel}`;
-    const html = fs.readFileSync(full, 'utf8');
-    for (const [source] of redirectSources) {
-      if (route === source.replace(/^\//, '')) continue;
-      if (rel === source.replace(/^\//, '')) continue;
-      if (html.includes(source) || html.includes(`${SITE}${source}`)) {
-        failures.push(`${rel} links to redirected review URL ${source}`);
+    const text = fs.readFileSync(full, 'utf8');
+    for (const retired of retiredReviewUrls) {
+      if (route === retired) continue;
+      if (text.includes(retired) || text.includes(`${SITE}${retired}`)) {
+        failures.push(`${rel} still references retired review URL ${retired}`);
       }
     }
   }
 }
+
 walk(ROOT);
 
 if (failures.length > 0) {

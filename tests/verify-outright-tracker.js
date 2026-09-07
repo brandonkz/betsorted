@@ -106,7 +106,7 @@ context.renderTracker({
         read_at: '2026-08-07T10:10:00Z',
         source_url: 'https://example.com',
         screenshot: 'audit/odds-evidence/example.png',
-        review_url: '/bookmakers/betway-review.html',
+        review_url: '/blog/betway-review-south-africa-2026.html',
         affiliate_url: '/go/betway.html'
       }]
     }]

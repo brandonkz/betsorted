@@ -20,15 +20,15 @@ Implemented Phase 3 redirect/stub work only. Skipped bookmakers hub and homepage
 
 - /bookmakers.html -> /bookmakers/
 - /bookmakers/10bet.html -> /blog/10bet-review-south-africa-2026.html
-- /bookmakers/betway.html -> /bookmakers/betway-review.html
-- /bookmakers/easybet.html -> /bookmakers/easybet-review.html
-- /bookmakers/hollywoodbets.html -> /bookmakers/hollywoodbets-review.html
+- /bookmakers/betway.html -> /blog/betway-review-south-africa-2026.html
+- /bookmakers/easybet.html -> /blog/easybet-review-south-africa-2026.html
+- /bookmakers/hollywoodbets.html -> /blog/hollywoodbets-review-south-africa-2026.html
 - /bookmakers/playabets.html -> /blog/playabets-review-south-africa-2026.html
-- /bookmakers/sportingbet.html -> /bookmakers/sportingbet-review.html
+- /bookmakers/sportingbet.html -> /blog/sportingbet-review-south-africa-2026.html
 - /bookmakers/sunbet.html -> /blog/sunbet-review-south-africa-2026.html
-- /bookmakers/supabets.html -> /bookmakers/supabets-review.html
-- /bookmakers/world-sports-betting.html -> /bookmakers/world-sports-betting-review.html
-- /bookmakers/wsb.html -> /bookmakers/world-sports-betting-review.html
+- /bookmakers/supabets.html -> /blog/supabets-review-south-africa-2026.html
+- /bookmakers/world-sports-betting.html -> /blog/wsb-review-south-africa-2026.html
+- /bookmakers/wsb.html -> /blog/wsb-review-south-africa-2026.html
 
 ## Deferred Due To File-Count Guardrail
 

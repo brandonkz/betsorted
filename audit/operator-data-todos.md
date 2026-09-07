@@ -50,4 +50,10 @@ playabets,payout_speed,Coming soon
 yesplay,established,null
 yesplay,payout_speed,Coming soon
 yesplay,affiliate_url,Coming soon
+betxchange,established,null
+betxchange,welcome_bonus,Coming soon
+betxchange,payout_speed,Coming soon
+betxchange,licence_number,null
+betxchange,affiliate_url,Coming soon
+betxchange,bonus_verified_at,null
 ```

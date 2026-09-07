@@ -934,5 +934,79 @@
         "checked": "2026-09-03"
       }
     }
+  },
+  {
+    "slug": "betxchange",
+    "name": "betXchange",
+    "rating": 3.8,
+    "established": null,
+    "welcome_bonus": "Coming soon",
+    "min_deposit_zar": 10,
+    "min_deposit_display": "R10",
+    "payout_speed": "Coming soon",
+    "payment_methods": [
+      "Ozow",
+      "1Voucher",
+      "Shoprite",
+      "EFT",
+      "OTT"
+    ],
+    "licence_authority": "Western Cape Gambling Board",
+    "licence_number": null,
+    "affiliate_url": "Coming soon",
+    "go_url": "/go/betxchange.html",
+    "bonus_verified_at": null,
+    "review_url": "/bookmakers/betxchange-review.html",
+    "last_reviewed": "2026-09-07",
+    "logo_color": "#1e3a8a",
+    "summary": "betXchange is a South African-licensed bookmaker offering sports betting, Aviator, casino, Lotto, and horse racing. R10 minimum deposit via Ozow, 1Voucher, Shoprite, and EFT; FICA required at withdrawal only.",
+    "community_quote": "Coming soon",
+    "facts": {
+      "licence": {
+        "value": "Licensed by the Western Cape Gambling Board; operating entity: Betxchange Western Cape (Pty) Ltd. WCGB licence number not confirmed in public register at time of review.",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "login_url": {
+        "value": "betXchange sign-in route: https://betxchange.com/sign-in",
+        "source": "https://betxchange.com/sign-in",
+        "checked": "2026-09-07"
+      },
+      "register_url": {
+        "value": "betXchange registration route: https://betxchange.com/register",
+        "source": "https://betxchange.com/register",
+        "checked": "2026-09-07"
+      },
+      "fica_timing": {
+        "value": "Identity verification (FICA) required at withdrawal only, not at deposit. API config: idVerification.deposit=false, idVerification.withdrawal=true.",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "self_exclusion": {
+        "value": "Self-exclusion is not available on the betXchange platform (API: responsibleGambling.disableUserExclusion=true). Players seeking self-exclusion should contact customercare@betxchange.co.za or call SARGF on 0800 006 008.",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "min_deposit": {
+        "value": "R10 minimum deposit (API: depositLimit.min=10).",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "min_withdrawal": {
+        "value": "R100 minimum withdrawal (API: withdrawalLimit.min=100).",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "payment_deposits": {
+        "value": "Deposit methods: Ozow, 1Voucher, Shoprite (easyload/kazang/bluvoucher), EFT (walletdoc/peach/dpo/stratech).",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      },
+      "payment_withdrawals": {
+        "value": "Withdrawal methods: Ozow, Shoprite cash, EFT (manual), OTT.",
+        "source": "https://betxchange.com",
+        "checked": "2026-09-07"
+      }
+    }
   }
 ]

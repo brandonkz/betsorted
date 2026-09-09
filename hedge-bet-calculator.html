@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hedge bet calculator South Africa. Work out the hedge stake, locked return and profit difference when covering the other side of a bet.">
+  <link rel="canonical" href="https://betsorted.co.za/hedge-bet-calculator.html">
+  <title>Hedge Bet Calculator South Africa | Lock In Betting Profit</title>
+  <link rel="stylesheet" href="style.css?v=20260313">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <style>
+    .tool-page { max-width: 920px; margin: 0 auto; padding: 40px 20px 80px; color: #0f172a; }
+    .tool-page h1 { color: #1e3a8a; font-size: clamp(2rem,5vw,3rem); margin-bottom: 12px; }
+    .tool-page h2 { color: #1e40af; margin-top: 38px; }
+    .tool-page p, .tool-page li { color: #374151; line-height: 1.75; }
+    .calculator-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px; box-shadow: 0 8px 24px rgba(15,23,42,0.08); margin: 24px 0; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 14px; }
+    label { display: block; font-weight: 800; color: #1e3a8a; margin-bottom: 6px; }
+    input { width: 100%; min-height: 42px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 8px 10px; }
+    button { background: #2563eb; color: #fff; border: 0; border-radius: 10px; padding: 12px 16px; font-weight: 800; cursor: pointer; margin-top: 18px; }
+    .result { background: #eff6ff; border-left: 5px solid #2563eb; border-radius: 10px; padding: 18px; margin-top: 18px; color: #0f172a; }
+    .warning { background: #fff7ed; border-left: 5px solid #f97316; border-radius: 10px; padding: 16px; margin: 22px 0; }
+  </style>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://betsorted.co.za/#organization","name":"BetSorted","url":"https://betsorted.co.za/","logo":"https://betsorted.co.za/assets/logo.png"},{"@type":"WebApplication","name":"Hedge Bet Calculator South Africa","url":"https://betsorted.co.za/hedge-bet-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"Calculate hedge stakes and locked returns for South African betting slips.","offers":{"@type":"Offer","price":"0","priceCurrency":"ZAR"},"publisher":{"@id":"https://betsorted.co.za/#organization"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is hedging a bet?","acceptedAnswer":{"@type":"Answer","text":"Hedging means placing a second bet on another outcome to reduce risk or lock in a more balanced return before the event finishes."}},{"@type":"Question","name":"How do I calculate a hedge stake?","acceptedAnswer":{"@type":"Answer","text":"Multiply your original stake by the original odds, then divide by the hedge odds. This gives the hedge stake that balances the gross return across both outcomes."}},{"@type":"Question","name":"Should I always hedge a winning bet?","acceptedAnswer":{"@type":"Answer","text":"No. Hedging reduces variance but usually gives up some upside. Use it when protecting bankroll matters more than chasing the full payout."}}]}]}
+  </script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a href="/" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a><nav class="header-nav"><a href="/#comparison" class="nav-link">Compare</a><a href="/bookmakers/" class="nav-link">Bookmakers</a><a href="/glossary.html" class="nav-link">Glossary</a><a href="/calculators.html" class="nav-link">Calculators</a><a href="/blog/" class="nav-link">Blog</a><a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a><a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a><a href="https://cryptocasinosorted.com/?utm_source=betsorted&amp;utm_medium=nav&amp;utm_campaign=crypto_crosspromo_aug_2026&amp;utm_content=tool_nav" class="nav-link" target="_blank" rel="noopener">Crypto Casinos 🎰</a></nav></div></header>
+  <main class="tool-page">
+    <h1>Hedge Bet Calculator South Africa</h1>
+    <p>Use this hedge bet calculator to work out how much to stake on the opposite side of a bet. It is built for SA punters using decimal odds and rand stakes.</p>
+    <div class="calculator-card">
+      <div class="form-grid">
+        <div><label for="original-stake">Original stake (R)</label><input id="original-stake" type="number" value="100" min="0" step="0.01"></div>
+        <div><label for="original-odds">Original odds</label><input id="original-odds" type="number" value="3.50" min="1.01" step="0.01"></div>
+        <div><label for="hedge-odds">Hedge odds</label><input id="hedge-odds" type="number" value="1.80" min="1.01" step="0.01"></div>
+      </div>
+      <button type="button" onclick="calculateHedge()">Calculate hedge</button>
+      <div id="result" class="result" style="display:none;"></div>
+    </div>
+    <div class="warning"><strong>Bankroll note:</strong> a hedge can protect a profit, but it can also turn a great bet into an average one. Use it when reducing risk matters more than the maximum payout.</div>
+    <h2>How the hedge formula works</h2>
+    <p>The balanced hedge stake is: original stake times original odds divided by hedge odds. That gives you roughly the same gross return whichever side wins. Profit still depends on the combined amount you staked across both bets.</p>
+    <h2>When South African bettors use hedging</h2>
+    <ul>
+      <li>Covering the final leg of a big accumulator before kick-off.</li>
+      <li>Reducing risk after early legs have already won.</li>
+      <li>Locking in some value when live odds move heavily in your favour.</li>
+      <li>Protecting a bankroll before a volatile derby, cup final or rugby handicap.</li>
+    </ul>
+    <p>For multi-leg slips, compare this with the <a href="/accumulator-calculator.html">accumulator calculator</a> and <a href="/lucky-15-calculator.html">Lucky 15 calculator</a>.</p>
+  </main>
+  <script>
+    function calculateHedge() {
+      const originalStake = Number(document.getElementById('original-stake').value || 0);
+      const originalOdds = Number(document.getElementById('original-odds').value || 0);
+      const hedgeOdds = Number(document.getElementById('hedge-odds').value || 0);
+      const originalReturn = originalStake * originalOdds;
+      const hedgeStake = hedgeOdds > 1 ? originalReturn / hedgeOdds : 0;
+      const totalStaked = originalStake + hedgeStake;
+      const profitIfOriginalWins = originalReturn - totalStaked;
+      const profitIfHedgeWins = (hedgeStake * hedgeOdds) - totalStaked;
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').innerHTML = '<strong>Suggested hedge stake:</strong> R' + hedgeStake.toFixed(2) + '<br><strong>Total staked:</strong> R' + totalStaked.toFixed(2) + '<br><strong>Profit if original wins:</strong> R' + profitIfOriginalWins.toFixed(2) + '<br><strong>Profit if hedge wins:</strong> R' + profitIfHedgeWins.toFixed(2);
+    }
+  </script>
+  <script src="/assets/track-clicks.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucky 15 calculator South Africa. Calculate Lucky 15, Lucky 31 and Lucky 63 total stake, winning combinations, returns and profit in rand.">
+  <link rel="canonical" href="https://betsorted.co.za/lucky-15-calculator.html">
+  <title>Lucky 15 Calculator South Africa | Lucky 31 and Lucky 63</title>
+  <link rel="stylesheet" href="style.css?v=20260313">
+  <link rel="icon" href="/assets/favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VHD0P7M44"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1VHD0P7M44');</script>
+  <style>
+    .tool-page { max-width: 920px; margin: 0 auto; padding: 40px 20px 80px; color: #0f172a; }
+    .tool-page h1 { color: #1e3a8a; font-size: clamp(2rem,5vw,3rem); margin-bottom: 12px; }
+    .tool-page h2 { color: #1e40af; margin-top: 38px; }
+    .tool-page p, .tool-page li { color: #374151; line-height: 1.75; }
+    .calculator-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px; box-shadow: 0 8px 24px rgba(15,23,42,0.08); margin: 24px 0; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 14px; }
+    label { display: block; font-weight: 800; color: #1e3a8a; margin-bottom: 6px; }
+    input, select { width: 100%; min-height: 42px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 8px 10px; }
+    .selection-row { display: grid; grid-template-columns: 1fr 90px; gap: 10px; align-items: end; margin-top: 12px; }
+    button { background: #2563eb; color: #fff; border: 0; border-radius: 10px; padding: 12px 16px; font-weight: 800; cursor: pointer; margin-top: 18px; }
+    .result { background: #eff6ff; border-left: 5px solid #2563eb; border-radius: 10px; padding: 18px; margin-top: 18px; color: #0f172a; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+    .comparison-table th { background: #1e3a8a; color: #fff; text-align: left; padding: 12px; }
+    .comparison-table td { border-bottom: 1px solid #e5e7eb; padding: 12px; color: #374151; }
+  </style>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://betsorted.co.za/#organization","name":"BetSorted","url":"https://betsorted.co.za/","logo":"https://betsorted.co.za/assets/logo.png"},{"@type":"WebApplication","name":"Lucky 15 Calculator South Africa","url":"https://betsorted.co.za/lucky-15-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"Calculate Lucky 15, Lucky 31 and Lucky 63 returns in rand.","offers":{"@type":"Offer","price":"0","priceCurrency":"ZAR"},"publisher":{"@id":"https://betsorted.co.za/#organization"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many bets are in a Lucky 15?","acceptedAnswer":{"@type":"Answer","text":"A Lucky 15 has 15 bets across four selections: four singles, six doubles, four trebles and one four-fold accumulator."}},{"@type":"Question","name":"How many bets are in a Lucky 31?","acceptedAnswer":{"@type":"Answer","text":"A Lucky 31 has 31 bets across five selections: singles, doubles, trebles, four-folds and one five-fold accumulator."}},{"@type":"Question","name":"How many bets are in a Lucky 63?","acceptedAnswer":{"@type":"Answer","text":"A Lucky 63 has 63 bets across six selections and includes every combination from singles through to the six-fold accumulator."}}]}]}
+  </script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a href="/" class="brand"><img src="/assets/logo.png" alt="BetSorted" style="height:32px;width:auto;" /><span class="brand-name" style="margin-left:8px;">BetSorted</span></a><nav class="header-nav"><a href="/#comparison" class="nav-link">Compare</a><a href="/bookmakers/" class="nav-link">Bookmakers</a><a href="/glossary.html" class="nav-link">Glossary</a><a href="/calculators.html" class="nav-link">Calculators</a><a href="/blog/" class="nav-link">Blog</a><a href="/psl-match-centre.html" class="nav-link" style="color:#f97316;font-weight:700;">⚽ PSL Live</a><a href="/prediction-markets.html" class="nav-link" style="color:#8b5cf6;font-weight:700;">💰 Smart Money</a><a href="https://cryptocasinosorted.com/?utm_source=betsorted&amp;utm_medium=nav&amp;utm_campaign=crypto_crosspromo_aug_2026&amp;utm_content=tool_nav" class="nav-link" target="_blank" rel="noopener">Crypto Casinos 🎰</a></nav></div></header>
+  <main class="tool-page">
+    <h1>Lucky 15 Calculator South Africa</h1>
+    <p>Use this free Lucky 15 calculator to estimate total stake, winning combinations, returns and profit in rand. It also covers Lucky 31 and Lucky 63 slips for SA punters who want more coverage than a normal accumulator.</p>
+    <div class="calculator-card">
+      <div class="form-grid">
+        <div><label for="bet-type">Bet type</label><select id="bet-type" onchange="renderRows()"><option value="4">Lucky 15</option><option value="5">Lucky 31</option><option value="6">Lucky 63</option></select></div>
+        <div><label for="unit-stake">Unit stake (R)</label><input id="unit-stake" type="number" value="10" min="0" step="0.01"></div>
+      </div>
+      <div id="rows"></div>
+      <button type="button" onclick="calculateLucky()">Calculate returns</button>
+      <div id="result" class="result" style="display:none;"></div>
+    </div>
+    <h2>Lucky 15, Lucky 31 and Lucky 63 stakes</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Bet</th><th>Selections</th><th>Total bets</th><th>R10 unit stake cost</th></tr></thead>
+      <tbody><tr><td>Lucky 15</td><td>4</td><td>15</td><td>R150</td></tr><tr><td>Lucky 31</td><td>5</td><td>31</td><td>R310</td></tr><tr><td>Lucky 63</td><td>6</td><td>63</td><td>R630</td></tr></tbody>
+    </table>
+    <p>A Lucky bet costs more than a normal acca because it includes singles, doubles, trebles and bigger accumulators. The upside is that one losing leg does not automatically kill the whole slip.</p>
+    <h2>When to use it</h2>
+    <p>Lucky 15s make most sense when you like four selections but do not fully trust all four to win. For bigger cards, Lucky 31 and Lucky 63 can protect you from one or two bad legs, but the total stake rises quickly. Compare the result with the <a href="/accumulator-calculator.html">accumulator calculator</a> before placing the bet.</p>
+  </main>
+  <script>
+    function combinations(items, size) {
+      if (size === 0) return [[]];
+      if (items.length < size) return [];
+      const [first, ...rest] = items;
+      return combinations(rest, size - 1).map(combo => [first, ...combo]).concat(combinations(rest, size));
+    }
+    function renderRows() {
+      const count = Number(document.getElementById('bet-type').value);
+      const rows = document.getElementById('rows');
+      rows.innerHTML = '';
+      for (let i = 1; i <= count; i += 1) {
+        rows.insertAdjacentHTML('beforeend', '<div class="selection-row"><div><label>Selection ' + i + ' odds</label><input class="odds" type="number" min="1.01" step="0.01" value="2.00"></div><div><label>Won?</label><input class="won" type="checkbox" checked></div></div>');
+      }
+    }
+    function calculateLucky() {
+      const unit = Number(document.getElementById('unit-stake').value || 0);
+      const selections = [...document.querySelectorAll('.odds')].map((input, index) => ({ odds: Number(input.value || 0), won: document.querySelectorAll('.won')[index].checked }));
+      let totalBets = 0;
+      let returns = 0;
+      for (let size = 1; size <= selections.length; size += 1) {
+        combinations(selections, size).forEach(combo => {
+          totalBets += 1;
+          if (combo.every(selection => selection.won)) returns += unit * combo.reduce((total, selection) => total * selection.odds, 1);
+        });
+      }
+      const stake = unit * totalBets;
+      const profit = returns - stake;
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').innerHTML = '<strong>Total stake:</strong> R' + stake.toFixed(2) + '<br><strong>Potential return:</strong> R' + returns.toFixed(2) + '<br><strong>Profit/Loss:</strong> R' + profit.toFixed(2) + '<br><strong>Total bets:</strong> ' + totalBets;
+    }
+    renderRows();
+  </script>
+  <script src="/assets/track-clicks.js" defer></script>
+</body>
+</html>

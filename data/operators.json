@@ -795,6 +795,16 @@
         "value": "BetOlimp's direct Android download currently serves a file named betolimp_1.0.3.apk from the operator domain.",
         "source": "https://betolimp.co.za/apps/android/download/",
         "checked": "2026-09-04"
+      },
+      "app_ios": {
+        "value": "not stated from readable public text during this check",
+        "source": "https://betolimp.co.za/en/apps/ios",
+        "checked": "2026-09-17"
+      },
+      "withdrawal_timing": {
+        "value": "not stated from readable public text during this check",
+        "source": "https://betolimp.co.za/en",
+        "checked": "2026-09-17"
       }
     }
   },
@@ -823,6 +833,46 @@
         "value": "Western Cape Gambling and Racing Board, licence 10191121-004",
         "source": "https://www.ngb.org.za/verified-operators/",
         "checked": "2026-09-02"
+      },
+      "login_url": {
+        "value": "https://www.betshezi.co.za/login",
+        "source": "https://www.betshezi.co.za/login",
+        "checked": "2026-09-17"
+      },
+      "register_url": {
+        "value": "https://www.betshezi.co.za/register",
+        "source": "https://www.betshezi.co.za/register",
+        "checked": "2026-09-17"
+      },
+      "app_android": {
+        "value": "not stated; mobile-app route and PWA manifest verified, but no public Google Play or APK route from readable public pages",
+        "source": "https://www.betshezi.co.za/mobile-app",
+        "checked": "2026-09-17"
+      },
+      "app_ios": {
+        "value": "not stated; no public iOS App Store route verified from readable public pages",
+        "source": "https://www.betshezi.co.za/mobile-app",
+        "checked": "2026-09-17"
+      },
+      "welcome_bonus": {
+        "value": "not stated in readable public text",
+        "source": "https://www.betshezi.co.za/promotions",
+        "checked": "2026-09-17"
+      },
+      "min_deposit": {
+        "value": "not stated in readable public text",
+        "source": "https://www.betshezi.co.za/",
+        "checked": "2026-09-17"
+      },
+      "withdrawal_timing": {
+        "value": "not stated in readable public text",
+        "source": "https://www.betshezi.co.za/",
+        "checked": "2026-09-17"
+      },
+      "fica_requirements": {
+        "value": "not stated in readable public text",
+        "source": "https://www.betshezi.co.za/",
+        "checked": "2026-09-17"
       }
     }
   },

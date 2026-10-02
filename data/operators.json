@@ -574,6 +574,7 @@
     "min_deposit_zar": 50,
     "min_deposit_display": "R50",
     "payout_speed": "Up to 24 hours (Mon-Sat)",
+    "payout_speed": "Up to 24 hours (Mon-Sat)",
     "payment_methods": [],
     "licence_authority": "Western Cape Gambling and Racing Board",
     "licence_number": "10145732-017",
@@ -724,6 +725,8 @@
     "welcome_bonus": "100% first deposit match up to R3,000",
     "min_deposit_zar": 50,
     "min_deposit_display": "R50",
+    "min_deposit_zar": 50,
+    "min_deposit_display": "R50",
     "payout_speed": "Coming soon",
     "payment_methods": [
       "Visa",
@@ -744,6 +747,7 @@
     "last_reviewed": "2026-09-03",
     "logo_color": "#17324D",
     "summary": "BetOlimp has review coverage on BetSorted and is mostly useful as an extra comparison option beyond the usual SA defaults.",
+    "community_quote": "The sportsbook welcome terms are now published, but they do not advertise any free spins.",
     "community_quote": "The sportsbook welcome terms are now published, but they do not advertise any free spins.",
     "facts": {
       "licence": {

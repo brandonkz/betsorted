@@ -4,6 +4,23 @@
  * Include on every page: <script src="/assets/track-clicks.js" defer></script>
  */
 (function () {
+  function slug(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  function inferBookmaker(link, url, isInternalGo) {
+    var attr = link.getAttribute('data-bookmaker') || link.dataset.bookmaker || '';
+    if (attr) return { name: attr.trim(), slug: slug(attr) };
+    if (isInternalGo) {
+      var match = url.pathname.match(/\/go\/([^/.?#]+)/);
+      if (match) return { name: match[1], slug: slug(match[1]) };
+    }
+    return { name: '', slug: '' };
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.querySelectorAll('a[href]');
     links.forEach(function (link) {
@@ -22,6 +39,7 @@
 
         link.addEventListener('click', function (e) {
           var subid = url.searchParams.get('subid') || '';
+          var bookmaker = inferBookmaker(this, url, isInternalGo);
 
           if (typeof gtag !== 'undefined') {
             gtag('event', 'affiliate_click', {
@@ -29,6 +47,8 @@
               link_text: this.textContent.trim().substring(0, 50),
               link_domain: isInternalGo ? currentHostname : hostname,
               link_type: isInternalGo ? 'internal_go' : 'external_affiliate',
+              bookmaker_name: bookmaker.name,
+              bookmaker_slug: bookmaker.slug,
               subid: subid,
               page_location: window.location.pathname,
               page_title: document.title

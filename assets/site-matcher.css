@@ -135,7 +135,7 @@
 .site-matcher-overlay {
   position: fixed;
   inset: 0;
-  z-index: 80;
+  z-index: 10000;
   display: none;
   padding: 20px;
   background: rgba(15, 23, 42, 0.58);
@@ -765,4 +765,15 @@ body.site-matcher-open .site-matcher-launcher {
   .site-matcher-option {
     padding: 18px 16px;
   }
+}
+
+/* Keep the full-screen finder above the sticky navigation on mobile. */
+body.site-matcher-open .site-header,
+body.site-matcher-open .sticky-header,
+body.site-matcher-open .mobile-nav {
+  pointer-events: none;
+}
+@media (max-width: 720px) {
+  .site-matcher-overlay { z-index: 10000; }
+  .site-matcher-modal { position: relative; isolation: isolate; }
 }

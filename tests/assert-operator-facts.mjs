@@ -103,8 +103,13 @@ for (const slug of referencedSlugs) {
   }
 }
 
-for (const source of new Set(collectFacts({ facts: Object.fromEntries(operators.map((operator) => [operator.slug, operator.facts])) }).map(([, fact]) => fact.source).filter(Boolean))) {
-  if (!(await sourceResolves(source))) failures.push(`source does not resolve: ${source}`);
+// Structural source metadata and freshness remain mandatory for deployment.
+// Network availability is audited separately so a third-party outage does not
+// block unrelated site fixes.
+if (process.env.OPERATOR_FACTS_OFFLINE !== "1") {
+  for (const source of new Set(collectFacts({ facts: Object.fromEntries(operators.map((operator) => [operator.slug, operator.facts])) }).map(([, fact]) => fact.source).filter(Boolean))) {
+    if (!(await sourceResolves(source))) failures.push(`source does not resolve: ${source}`);
+  }
 }
 
 if (failures.length) {

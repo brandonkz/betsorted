@@ -335,7 +335,7 @@
       reviewUrl: raw.review_url || '',
       ctaLabel: actionLabel,
       reviewLabel: 'Read review',
-      welcomeBonus: raw.welcome_bonus || 'Coming soon',
+      welcomeBonus: !raw.welcome_bonus || /Coming soon|TODO_/i.test(raw.welcome_bonus) ? 'Offer not confirmed; check current terms' : raw.welcome_bonus,
       loyaltyNote: rewardNote,
       watchout: watchout,
       reasons: reasons,

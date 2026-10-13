@@ -29,8 +29,10 @@ jobs:
           node-version: 22
       - name: Run site checks
         run: npm test
-      - name: Verify operator fact sources
+      - name: Verify operator fact metadata
         run: node tests/assert-operator-facts.mjs
+        env:
+          OPERATOR_FACTS_OFFLINE: "1"
       - name: Build public website
         run: npm run build
       - name: Configure Pages
@@ -42,3 +44,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  source-audit:
+    name: Audit external source availability
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check source URLs and metadata
+        run: node tests/assert-operator-facts.mjs

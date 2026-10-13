@@ -88,22 +88,22 @@
   function getTeaserConfig() {
     if (getPageVariant() === 'homepage') {
       return {
-        eyebrow: 'BETSORTED CASINO FINDER',
-        title: 'Find the right casino in four questions',
-        description: 'Tell us how you play and what matters to you. We compare South African casinos by deposit size, rewards, loyalty benefits, game selection and data-free access. Then we recommend your best match.',
+        eyebrow: 'BETSORTED BOOKMAKER FINDER',
+        title: 'Find the right betting site in five questions',
+        description: 'Answer five questions about your preferred sports, starting budget and features. Get an explained shortlist of South African bookmakers.',
         bullets: ['Low deposits', 'Best rewards', 'Strong loyalty', 'Data-free play', 'Sports + casino'],
-        primaryCta: 'Try the casino finder',
-        secondaryCta: 'Open the AI'
+        primaryCta: 'Find my match',
+        secondaryCta: 'Open the finder'
       };
     }
 
     return {
       eyebrow: '',
-      title: 'Use BetSorted AI to narrow the field',
-      description: 'Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. It now scores against the wider BetSorted operator dataset, not just a tiny handpicked list.',
+      title: 'Find a betting site that fits your needs',
+      description: 'Answer five quick questions and get a shortlist based on bankroll, sport, rewards, and hassle level. Recommendations use published operator information and your answers.',
       bullets: [],
-      primaryCta: 'Try the AI shortlist',
-      secondaryCta: 'Open the AI'
+      primaryCta: 'Find my match',
+      secondaryCta: 'Open the finder'
     };
   }
 

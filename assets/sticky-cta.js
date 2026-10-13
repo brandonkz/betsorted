@@ -23,10 +23,10 @@
     if (isHome) {
       return {
         messages: [
-          "Find your best-fit casino or betting site in four questions → Try the AI Finder",
-          "Tell us whether you want rewards, loyalty or low deposits → Open the AI"
+          "Find your best-fit casino or betting site in five questions → Find my match",
+          "Tell us whether you want rewards, loyalty or low deposits → Open the finder"
         ],
-        buttonText: 'Try the AI Finder',
+        buttonText: 'Find my match',
         action: 'matcher'
       };
     }

@@ -63,7 +63,7 @@ assert.ok(faqPages > 0, "no FAQ pages checked");
 console.log(`structured data assertion passed for ${checkedPages} pages and ${faqPages} FAQ pages`);
 
 function htmlFiles(root) {
-  const ignored = new Set([".git", "node_modules", "templates"]);
+  const ignored = new Set([".git", "node_modules", "templates", "dist"]);
   const results = [];
   const stack = [root];
   while (stack.length) {

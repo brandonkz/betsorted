@@ -22,7 +22,9 @@
     "assert:structured-data": "node tests/assert-structured-data.mjs",
     "assert:header-consistency": "node tests/assert-header-consistency.mjs",
     "assert:internal-links": "node tests/assert-internal-links.mjs",
-    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews && npm run assert:operator-data && npm run assert:polymarket-feed && npm run assert:stale-odds-audit && npm run assert:structured-data && npm run assert:header-consistency && npm run assert:internal-links"
+    "test": "npm run assert:latest-guides && npm run assert:go-links && npm run assert:odds-finder && npm run assert:bookmakers-hub && npm run assert:blog-index && npm run assert:canonical-reviews && npm run assert:operator-data && npm run assert:polymarket-feed && npm run assert:stale-odds-audit && npm run assert:structured-data && npm run assert:header-consistency && npm run assert:internal-links && npm run assert:conversion",
+    "build": "node scripts/build-public-site.mjs",
+    "assert:conversion": "node tests/assert-conversion.mjs"
   },
   "repository": {
     "type": "git",

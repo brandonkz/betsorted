@@ -222,6 +222,36 @@ function reportTodos() {
   if (!fs.existsSync(file) || fs.readFileSync(file, "utf8") !== report) fs.writeFileSync(file, report);
 }
 
+function syncHomepageData() {
+  const file = 'data/sites.json';
+  const sites = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const ordered = [...sites].sort((a, b) => {
+    const ar = operator(a.slug).rating;
+    const br = operator(b.slug).rating;
+    return (typeof br === 'number' ? br : typeof br === 'string' ? parseFloat(br) / 2 : 0)
+      - (typeof ar === 'number' ? ar : typeof ar === 'string' ? parseFloat(ar) / 2 : 0);
+  });
+  ordered.forEach((site, index) => {
+    const op = operator(site.slug);
+    site.rank = index + 1;
+    site.rating = typeof op.rating === 'number' ? op.rating : typeof op.rating === 'string' ? parseFloat(op.rating) / 2 : null;
+    site.description = op.summary;
+    site.welcome_bonus = op.welcome_bonus;
+    site.min_deposit = op.min_deposit_display;
+    site.established = op.established;
+    site.payment_methods = op.payment_methods;
+    site.license = op.licence_authority;
+    site.review_url = op.review_url;
+    site.ref_url = op.go_url;
+    site.bonus_verified_at = op.bonus_verified_at;
+    site.last_reviewed = op.last_reviewed;
+    site.pros = site.pros.filter(pro => !/tracking link|affiliate route|canonical|dedicated BetSorted review|R\d+ minimum deposit/i.test(pro));
+    site.cons = site.cons.filter(con => !/affiliate fields|commercial fields/i.test(con));
+    site.best_for = site.best_for.filter(tag => !/completeness|longlist|secondary account/i.test(tag));
+  });
+  writeIfChanged(file, JSON.stringify(ordered, null, 2) + '\n');
+}
+syncHomepageData();
 syncHomepage();
 syncHub();
 for (const slug of operators.map((op) => op.slug)) syncStandardReview(slug);

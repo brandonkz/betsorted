@@ -61,7 +61,7 @@ function shouldSkip(relative) {
 }
 
 function htmlFiles(root) {
-  const ignored = new Set([".git", "node_modules", "templates"]);
+  const ignored = new Set([".git", "node_modules", "templates", "dist"]);
   const results = [];
   const stack = [root];
   while (stack.length) {

@@ -27,7 +27,8 @@
           "Tell us whether you want rewards, loyalty or low deposits → Open the finder"
         ],
         buttonText: 'Find my match',
-        action: 'matcher'
+        action: 'link',
+        href: '/finder.html'
       };
     }
 

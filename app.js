@@ -22,13 +22,15 @@ async function init() {
     applyFilter('all');
   } catch (error) {
     console.error('Failed to initialize:', error);
+    const status = document.getElementById('comparison-status');
+    if (status) status.textContent = 'Live filtering is unavailable. The comparison below is still available.';
   }
 }
 
 // Data Loading
 async function loadSites() {
   try {
-    const response = await fetch('data/sites.json?v=20260826-homepage-sites', {
+    const response = await fetch('/data/sites.json', {
       cache: 'no-store'
     });
     if (response.ok) {
@@ -39,7 +41,7 @@ async function loadSites() {
     }
   } catch (e) {
     console.error('Could not load sites:', e);
-    sites = [];
+    throw e;
   }
 }
 
@@ -48,8 +50,9 @@ function setupEventListeners() {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       applyFilter(filter);
     });
   });
@@ -72,6 +75,8 @@ function applyFilter(filter) {
   });
   
   render();
+  const status = document.getElementById('comparison-status');
+  if (status) status.textContent = `${filteredSites.length} bookmakers shown`;
 }
 
 // Rendering
@@ -93,7 +98,7 @@ function renderComparisonTable() {
   }
   
   comparisonTbody.innerHTML = filteredSites.map(site => {
-    const stars = renderStars(site.rating);
+    const stars = ratingMarkup(site);
     const catchMarkup = getCatchMarkup(site, 2);
     
     return `
@@ -109,17 +114,16 @@ function renderComparisonTable() {
         <td data-label="Rating">
           <div class="rating-stars">
             ${stars}
-            <span class="rating-number">${site.rating}</span>
           </div>
         </td>
         <td data-label="Welcome Bonus">
           <div class="bonus-text">
-            <strong>${escapeHtml(site.welcome_bonus)}</strong>
-            <small class="bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
+            <strong>${displayField(site.welcome_bonus)}</strong>
+            <small class="bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small><small class="verification-note">${verificationNote(site)}</small>
           </div>
         </td>
         <td data-label="Min Deposit">
-          <span class="deposit-amount">${escapeHtml(site.min_deposit)}</span>
+          <span class="deposit-amount">${displayField(site.min_deposit)}</span>
         </td>
         <td data-label="The Catch">
           <div style="font-size: 0.85rem; line-height: 1.5; color: #555;">
@@ -127,8 +131,9 @@ function renderComparisonTable() {
           </div>
         </td>
         <td>
-          <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width: 100%;">
-            Claim ${getSimplifiedBonus(site.welcome_bonus)} →
+          <a href="${escapeHtml(site.review_url)}" class="review-link">Read review</a>
+          <a href="${escapeHtml(site.ref_url)}?subid=home-table" target="_blank" rel="sponsored nofollow noopener" data-bookmaker="${escapeHtml(site.slug)}" data-placement="comparison" class="btn btn-primary btn-sm" style="width: 100%;">
+            Visit ${escapeHtml(site.name)} →
           </a>
         </td>
       </tr>
@@ -137,140 +142,30 @@ function renderComparisonTable() {
 }
 
 function renderReviews() {
-  if (filteredSites.length === 0) {
-    reviewsGrid.innerHTML = `
-      <p style="text-align: center; padding: 3rem; font-size: 1.125rem; color: var(--color-text-light);">
-        No sites match your filters.
-      </p>
-    `;
-    return;
-  }
-  
-  reviewsGrid.innerHTML = filteredSites.map(site => {
-    const stars = renderStars(site.rating);
-    
-    return `
-      <article class="review-card">
-        <div class="review-header">
-          <div class="review-header-left">
-            <div class="review-logo" aria-hidden="true" style="background: ${site.logo_bg};">
-              ${site.name.charAt(0)}
-            </div>
-            <div class="review-title-group">
-              <h3>${escapeHtml(site.name)}</h3>
-              <div class="review-meta">
-                <div class="rating-stars">
-                  ${stars}
-                  <span class="rating-number">${site.rating}/5</span>
-                </div>
-                <span>•</span>
-                <span>Est. ${site.established}</span>
-              </div>
-            </div>
-          </div>
-          ${site.featured ? '<span class="badge-yes">⭐ Featured</span>' : ''}
-        </div>
-        
-        <div class="review-body">
-          <p class="review-description">${escapeHtml(site.description)}</p>
-          
-          <div class="review-highlights">
-            <div class="highlight-item">
-              <span class="highlight-label">Welcome Bonus</span>
-              <div class="highlight-value-wrapper">
-                <span class="highlight-value">${escapeHtml(site.welcome_bonus)}</span>
-                <small class="highlight-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
-              </div>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-label">Min Deposit</span>
-              <span class="highlight-value">${escapeHtml(site.min_deposit)}</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-label">Data-Free App</span>
-              <span class="highlight-value">${site.data_free_app ? '✓ Available' : '✗ Not Available'}</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-label">Live Streaming</span>
-              <span class="highlight-value">${site.live_streaming ? '✓ Available' : '✗ Not Available'}</span>
-            </div>
-          </div>
-          
-          ${getCatchEntries(site).length > 0 ? `
-          <div class="community-quote" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 3px solid #e67e22; padding: 14px 18px; margin: 20px 0; border-radius: 8px; font-size: 0.9rem;">
-            <div style="font-weight: 600; color: #e67e22; margin-bottom: 10px;">The Catch:</div>
-            ${getCatchEntries(site).map(quote => 
-              `<div style="font-style: italic; color: #333; line-height: 1.6; margin-bottom: 8px; padding-left: 10px; border-left: 2px solid #d8d8d8;">
-                ${escapeHtml(stripQuoteDecorators(quote))}
-              </div>`
-            ).join('')}
-          </div>
-          ` : ''}
-          
-          <div class="pros-cons-grid">
-            <div class="pros-cons-section">
-              <h4 style="color: var(--color-success);">✓ Pros</h4>
-              <ul class="pros-list">
-                ${site.pros.map(pro => `<li>${escapeHtml(pro)}</li>`).join('')}
-              </ul>
-            </div>
-            <div class="pros-cons-section">
-              <h4 style="color: var(--color-danger);">✗ Cons</h4>
-              <ul class="cons-list">
-                ${site.cons.map(con => `<li>${escapeHtml(con)}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-          
-          <div>
-            <h4 style="margin-bottom: 1rem;">Best For:</h4>
-            <div class="best-for-tags">
-              ${site.best_for.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
-            </div>
-          </div>
-          
-          <div style="background: var(--color-background); padding: 1rem; border-radius: var(--radius-md); margin-top: 1.5rem;">
-            <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
-              <strong>Payment Methods:</strong>
-            </p>
-            <p style="font-size: 0.95rem; color: var(--color-text);">
-              ${site.payment_methods.join(', ')}
-            </p>
-          </div>
-          
-          <div style="background: var(--color-background); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
-            <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
-              <strong>Sports Coverage:</strong>
-            </p>
-            <p style="font-size: 0.95rem; color: var(--color-text);">
-              ${site.sports.join(', ')}
-            </p>
-          </div>
-          
-          <div style="margin-top: 1rem; padding: 1rem; background: #fef3c7; border-radius: var(--radius-md); border-left: 4px solid #f59e0b;">
-            <p style="font-size: 0.85rem; color: #92400e;">
-              <strong>License:</strong> ${escapeHtml(site.license)}
-            </p>
-          </div>
-        </div>
-        
-        <div class="review-footer">
-          <div class="footer-bonus">
-            <span class="footer-bonus-label">Welcome Offer:</span>
-            <div>
-              <span class="footer-bonus-value">${escapeHtml(site.welcome_bonus)}</span>
-              <small class="footer-bonus-explainer">${getBonusExplanation(site.welcome_bonus)}</small>
-            </div>
-          </div>
-          <a href="${site.ref_url}" target="_blank" rel="noopener" class="btn btn-primary">
-            Claim ${getSimplifiedBonus(site.welcome_bonus)} →
-          </a>
-        </div>
-      </article>
-    `;
-  }).join('');
+  reviewsGrid.innerHTML = filteredSites.map(site => `
+    <article class="review-card" data-operator="${escapeHtml(site.slug)}">
+      <div class="review-body">
+        <h3>${escapeHtml(site.name)}</h3>
+        <p>${escapeHtml(site.description)}</p>
+        <p><strong>Minimum deposit:</strong> ${displayField(site.min_deposit)}</p>
+        <p><strong>Offer:</strong> ${displayField(site.welcome_bonus)}</p>
+        <p class="verification-note">${verificationNote(site)}</p>
+        <p><strong>The catch:</strong> ${getCatchMarkup(site, 1)}</p>
+      </div>
+      <div class="review-footer"><a href="${escapeHtml(site.review_url)}" class="btn btn-primary">Read ${escapeHtml(site.name)} review</a></div>
+    </article>`).join('') || '<p>No sites match your filters. Try another option.</p>';
 }
-
+function displayField(value) {
+  return !value || /Coming soon|TODO_/i.test(String(value)) ? 'Not confirmed' : escapeHtml(value);
+}
+function verificationNote(site) {
+  const date = site.bonus_verified_at;
+  if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return 'Offer details not yet verified. Check the operator’s current terms.';
+  return `Offer last checked ${escapeHtml(date)}. Terms can change; confirm before depositing.`;
+}
+function ratingMarkup(site) {
+  return typeof site.rating === 'number' ? `${renderStars(site.rating)} <span class="rating-number">${site.rating.toFixed(1)}/5</span>` : '<span>Not rated</span>';
+}
 // Utilities
 function renderStars(rating) {
   const fullStars = Math.floor(rating);
@@ -291,9 +186,7 @@ function renderStars(rating) {
 }
 
 function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+  return String(text ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 }
 
 function getCatchEntries(site) {
@@ -358,18 +251,9 @@ function getMinDepositValue(minDeposit) {
 }
 
 function getBonusExplanation(bonus) {
-  // Add helpful explanations for different bonus types
-  if (bonus.includes('%')) {
-    // Match bonus (e.g., "200% up to R5,000")
-    return 'Deposit match - they add this % to your deposit';
-  } else if (bonus.toLowerCase().includes('sign-up') || bonus.toLowerCase().includes('free')) {
-    // Free bonus (e.g., "R25 Sign-Up Bonus")
-    return 'Free money on sign-up, no deposit needed';
-  } else if (bonus.toLowerCase().includes('up to')) {
-    // Generic up to bonus
-    return 'Bonus on first deposit';
-  }
-  return 'Welcome offer for new users';
+  if (!bonus || /Coming soon|TODO_/i.test(bonus)) return 'No verified offer listed';
+  if (bonus.includes('%')) return 'Deposit match; wagering and eligibility conditions apply';
+  return 'Check eligibility, expiry and withdrawal conditions';
 }
 
 function getSimplifiedBonus(bonus) {

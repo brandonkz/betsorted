@@ -38,6 +38,40 @@ const PRIORITY_BOOKMAKERS = ['betway']; // Show Betway first when available
 
 let fetchFailures = 0;
 
+// Hard credit guard: never let the free Starter plan (500/month) run out.
+// Each paid request costs markets(1) x regions(1) = 1 credit.
+const MIN_CREDITS_LEFT = Number.parseInt(process.env.MIN_CREDITS_LEFT || '20', 10);
+const CREDITS_PER_REQUEST = 1;
+let creditsRemaining = null;
+
+function readCredits(response) {
+  const remaining = Number.parseFloat(response.headers.get('x-requests-remaining'));
+  const used = response.headers.get('x-requests-used');
+  if (Number.isFinite(remaining)) creditsRemaining = remaining;
+  return { remaining, used };
+}
+
+// Free call (0 credits): /v4/sports returns the quota headers.
+async function checkCreditsFree() {
+  const response = await fetch(`${BASE_URL}/?apiKey=${API_KEY}`);
+  if (!response.ok) {
+    const body = (await response.text()).slice(0, 300);
+    const err = new Error(`HTTP ${response.status} on free /sports credit check: ${body}`);
+    err.fatal = true;
+    throw err;
+  }
+  const { remaining, used } = readCredits(response);
+  console.log(`💳 Credit check (free): ${used} used, ${remaining} remaining (min ${MIN_CREDITS_LEFT})`);
+  if (!Number.isFinite(remaining)) {
+    throw new Error('x-requests-remaining header missing from /sports response; refusing paid calls');
+  }
+  return remaining;
+}
+
+function wouldBreachGuard() {
+  return creditsRemaining !== null && creditsRemaining - CREDITS_PER_REQUEST < MIN_CREDITS_LEFT;
+}
+
 async function fetchOdds(sport) {
   const url = `${BASE_URL}/${sport}/odds/?apiKey=${API_KEY}&regions=${REGIONS}&markets=h2h&oddsFormat=decimal`;
   
@@ -57,8 +91,7 @@ async function fetchOdds(sport) {
     const data = await response.json();
     
     // Check remaining credits
-    const remaining = response.headers.get('x-requests-remaining');
-    const used = response.headers.get('x-requests-used');
+    const { remaining, used } = readCredits(response);
     console.log(`  ✓ Credits: ${used} used, ${remaining} remaining`);
     
     return data;
@@ -466,8 +499,18 @@ async function main() {
   
   const allGames = [];
   
+  const startRemaining = await checkCreditsFree();
+  if (startRemaining < MIN_CREDITS_LEFT || startRemaining < SPORTS.length * CREDITS_PER_REQUEST + MIN_CREDITS_LEFT) {
+    console.log(`🛑 Credit guard: ${startRemaining} credits left, need ${SPORTS.length * CREDITS_PER_REQUEST} for this run plus ${MIN_CREDITS_LEFT} reserve. No paid calls made; data files unchanged.`);
+    return;
+  }
+
   // Fetch all sports
   for (const sport of SPORTS) {
+    if (wouldBreachGuard()) {
+      console.log(`🛑 Credit guard: ${creditsRemaining} credits left (min ${MIN_CREDITS_LEFT}). Stopping before ${sport}; skipping all writes so data stays consistent.`);
+      return;
+    }
     const games = await fetchOdds(sport);
     allGames.push(...games);
   }

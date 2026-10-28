@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Load API key
-require('dotenv').config();
+try { require('dotenv').config(); } catch { /* dotenv optional in CI */ }
 const API_KEY = process.env.ODDS_API_KEY;
 
 if (!API_KEY) {
@@ -32,6 +32,8 @@ const SPORTS = [
 // Betway is the only SA bookmaker available in the API
 const PRIORITY_BOOKMAKERS = ['betway']; // Show Betway first when available
 
+let fetchFailures = 0;
+
 async function fetchOdds(sport) {
   const url = `${BASE_URL}/${sport}/odds/?apiKey=${API_KEY}&regions=uk,eu,us&markets=h2h&oddsFormat=decimal`;
   
@@ -41,7 +43,11 @@ async function fetchOdds(sport) {
     const response = await fetch(url);
     
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      const body = (await response.text()).slice(0, 300);
+      const err = new Error(`HTTP ${response.status} for ${sport}: ${body}`);
+      // 401 = bad key / quota exhausted (OUT_OF_USAGE_CREDITS), 429 = rate limited: fatal
+      err.fatal = response.status === 401 || response.status === 429 || /quota|usage|credits/i.test(body);
+      throw err;
     }
     
     const data = await response.json();
@@ -54,6 +60,8 @@ async function fetchOdds(sport) {
     return data;
   } catch (error) {
     console.error(`  ✗ Error fetching ${sport}:`, error.message);
+    if (error.fatal) throw error;
+    fetchFailures += 1;
     return [];
   }
 }
@@ -460,6 +468,9 @@ async function main() {
     allGames.push(...games);
   }
   
+  if (fetchFailures === SPORTS.length) {
+    throw new Error('All Odds API requests failed');
+  }
   console.log(`\n✓ Found ${allGames.length} total games\n`);
   
   // Filter out matches that have already started
@@ -558,4 +569,7 @@ async function main() {
   });
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(`❌ ${error.message}`);
+  process.exit(1);
+});

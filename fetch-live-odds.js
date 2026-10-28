@@ -19,15 +19,19 @@ if (!API_KEY) {
 
 const BASE_URL = 'https://api.the-odds-api.com/v4/sports';
 // SA-relevant sports (prioritized order)
+// Credit budget (Starter plan, 500/month): cost = markets(1) x regions(1) per sport request
+// 6 sports x 2 runs/day x ~30.5 days = ~366 credits/month (sports with no events cost 0).
+// Out-of-season keys removed; check free /v4/sports before adding more.
 const SPORTS = [
   'soccer_epl', // Premier League (most popular in SA)
-  'soccer_uefa_champs_league_qualification', // Current European tournament action
+  'soccer_uefa_champs_league',
   'soccer_spain_la_liga',
   'soccer_italy_serie_a',
   'soccer_germany_bundesliga',
   'soccer_france_ligue_one',
-  'cricket_t20_world_cup', // T20 World Cup (when Proteas play)
 ];
+// 'uk' region includes Betway (prioritised on the site); 'eu' does not.
+const REGIONS = 'uk';
 
 // Betway is the only SA bookmaker available in the API
 const PRIORITY_BOOKMAKERS = ['betway']; // Show Betway first when available
@@ -35,7 +39,7 @@ const PRIORITY_BOOKMAKERS = ['betway']; // Show Betway first when available
 let fetchFailures = 0;
 
 async function fetchOdds(sport) {
-  const url = `${BASE_URL}/${sport}/odds/?apiKey=${API_KEY}&regions=uk,eu,us&markets=h2h&oddsFormat=decimal`;
+  const url = `${BASE_URL}/${sport}/odds/?apiKey=${API_KEY}&regions=${REGIONS}&markets=h2h&oddsFormat=decimal`;
   
   console.log(`Fetching ${sport}...`);
   

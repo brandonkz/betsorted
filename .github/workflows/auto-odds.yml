@@ -3,6 +3,10 @@ name: Auto-update odds & prediction markets
 # Replaces the Mac mini cron (update-odds.sh + fetch-polymarket.js), retired 7 Sep 2026.
 on:
   schedule:
+    # Odds API credits = markets x regions per sport request. We use h2h (1) x uk (1)
+    # x 6 sports (EPL, UCL, La Liga, Serie A, Bundesliga, Ligue 1) = 6 credits/run.
+    # 2 runs/day x ~30.5 days = ~366 credits/month (< 400 target, Starter plan = 500).
+    # Manual dispatches with odds cost another 6 each. Polymarket/Kalshi are free.
     - cron: "0 4,16 * * *"    # live odds: 06:00 + 18:00 SAST
     - cron: "5 */6 * * *"     # Polymarket + Kalshi: every 6h (00:05, 06:05, 12:05, 18:05 UTC)
   workflow_dispatch:

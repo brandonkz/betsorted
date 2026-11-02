@@ -174,7 +174,7 @@ function syncHub() {
 function syncReviewJsonLd(op, html) {
   if (!todo(op.rating) && typeof op.rating === "number") {
     html = html.replace(/"ratingValue":\s*"[^"]+"/g, `"ratingValue": "${op.rating.toFixed(1)}"`);
-    if (html.includes('"@type": "Review"') && !html.includes('"aggregateRating"')) {
+    if (html.includes('"@type": "Review"') && !html.includes('"aggregateRating"') && !html.includes('"reviewRating"')) {
       html = html.replace(
         /("reviewBody":\s*"[^"]+",)/,
         `$1\n      "aggregateRating": {\n        "@type": "AggregateRating",\n        "ratingValue": "${op.rating.toFixed(1)}",\n        "bestRating": "5",\n        "worstRating": "1"\n      },`,

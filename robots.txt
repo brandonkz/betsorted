@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /go/
 Disallow: /social-templates/
 Disallow: /templates/
 Disallow: /private/

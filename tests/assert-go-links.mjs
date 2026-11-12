@@ -4,8 +4,17 @@ import path from 'node:path';
 const siteRoot = process.cwd();
 const robotsTxt = readFileSync(path.join(siteRoot, 'robots.txt'), 'utf8');
 
-if (!/^Disallow:\s*\/go\/\s*$/im.test(robotsTxt)) {
-  throw new Error('robots.txt must disallow /go/');
+// Since 5 Nov 2026 /go/ is crawlable (robots.txt no longer disallows it) so that
+// Google can see each redirect page's noindex and drop it from the index.
+// Either keep /go/ disallowed, or every /go/ page must carry a noindex robots meta.
+const goDisallowed = /^Disallow:\s*\/go\/\s*$/im.test(robotsTxt);
+if (!goDisallowed) {
+  const goDir = path.join(siteRoot, 'go');
+  const goPages = existsSync(goDir) ? readdirSync(goDir).filter(name => name.endsWith('.html')) : [];
+  const indexable = goPages.filter(name => !/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(readFileSync(path.join(goDir, name), 'utf8')));
+  if (indexable.length) {
+    throw new Error(`robots.txt allows /go/ but these /go/ pages lack noindex: ${indexable.join(', ')}`);
+  }
 }
 
 const htmlFiles = allHtmlFiles(siteRoot);

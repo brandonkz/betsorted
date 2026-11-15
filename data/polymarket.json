@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T06:10:25.890Z",
+  "updatedAt": "2026-11-15T18:45:05.589Z",
   "events": [
     {
       "id": 659518,
@@ -13,10 +13,10 @@
         {
           "name": "Arsenal",
           "flag": "",
-          "prob": 0.755,
-          "pct": 75.5,
-          "fairDec": 1.32,
-          "vol": 1374412.0206600004
+          "prob": 0.765,
+          "pct": 76.5,
+          "fairDec": 1.31,
+          "vol": 1386759.7464100004
         },
         {
           "name": "Brighton",
@@ -24,7 +24,7 @@
           "prob": 0.0665,
           "pct": 6.7,
           "fairDec": 15.04,
-          "vol": 1298187.5537579996
+          "vol": 1299562.3478789998
         },
         {
           "name": "Manchester City",
@@ -32,15 +32,15 @@
           "prob": 0.065,
           "pct": 6.5,
           "fairDec": 15.38,
-          "vol": 3560204.0363209993
+          "vol": 3560287.376320999
         },
         {
           "name": "Liverpool",
           "flag": "",
-          "prob": 0.0555,
+          "prob": 0.055,
           "pct": 5.5,
-          "fairDec": 18.02,
-          "vol": 1304946.4589600002
+          "fairDec": 18.18,
+          "vol": 1305187.056418
         },
         {
           "name": "Chelsea",
@@ -48,7 +48,7 @@
           "prob": 0.0145,
           "pct": 1.5,
           "fairDec": 68.97,
-          "vol": 1295435.2042740004
+          "vol": 1295753.1942740001
         },
         {
           "name": "Manchester United",
@@ -56,7 +56,7 @@
           "prob": 0.0065,
           "pct": 0.7,
           "fairDec": 153.85,
-          "vol": 1454736.6984660001
+          "vol": 1454962.8184660003
         },
         {
           "name": "Tottenham",
@@ -64,15 +64,15 @@
           "prob": 0.0045,
           "pct": 0.4,
           "fairDec": 222.22,
-          "vol": 1577893.2621769998
+          "vol": 1578059.9288439997
         },
         {
           "name": "Aston Villa",
           "flag": "",
-          "prob": 0.0035,
-          "pct": 0.4,
-          "fairDec": 285.71,
-          "vol": 1085319.6961639998
+          "prob": 0.003,
+          "pct": 0.3,
+          "fairDec": 333.33,
+          "vol": 1092937.49233
         },
         {
           "name": "Bournemouth",
@@ -80,7 +80,7 @@
           "prob": 0.0015,
           "pct": 0.1,
           "fairDec": 666.67,
-          "vol": 1821834.9423330002
+          "vol": 1824360.9583329998
         },
         {
           "name": "Brentford",
@@ -88,7 +88,7 @@
           "prob": 0.0015,
           "pct": 0.1,
           "fairDec": 666.67,
-          "vol": 1755192.3129500006
+          "vol": 1755259.06395
         }
       ]
     },
@@ -97,17 +97,17 @@
       "slug": "ucl",
       "title": "Champions League Winner",
       "icon": "⭐",
-      "volumeM": 74.8,
+      "volumeM": 75.1,
       "ends": "May 2027",
       "desc": "Which club lifts the Champions League trophy this season?",
       "outcomes": [
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 0.235,
-          "pct": 23.5,
-          "fairDec": 4.26,
-          "vol": 1978587.3716800006
+          "prob": 0.225,
+          "pct": 22.5,
+          "fairDec": 4.44,
+          "vol": 1979398.9971770002
         },
         {
           "name": "Paris Saint-Germain",
@@ -115,7 +115,7 @@
           "prob": 0.185,
           "pct": 18.5,
           "fairDec": 5.41,
-          "vol": 1939204.126181
+          "vol": 1941432.558288
         },
         {
           "name": "Arsenal",
@@ -123,7 +123,7 @@
           "prob": 0.135,
           "pct": 13.5,
           "fairDec": 7.41,
-          "vol": 942856.7447929999
+          "vol": 943071.0305080002
         },
         {
           "name": "Real Madrid",
@@ -131,7 +131,7 @@
           "prob": 0.135,
           "pct": 13.5,
           "fairDec": 7.41,
-          "vol": 1346974.550113
+          "vol": 1347281.980114
         },
         {
           "name": "Bayern Munich",
@@ -139,7 +139,7 @@
           "prob": 0.125,
           "pct": 12.5,
           "fairDec": 8,
-          "vol": 735995.5900440001
+          "vol": 736016.0500440003
         },
         {
           "name": "Manchester City",
@@ -147,23 +147,23 @@
           "prob": 0.055,
           "pct": 5.5,
           "fairDec": 18.18,
-          "vol": 1037320.2929000001
+          "vol": 1037332.7729000001
         },
         {
           "name": "Liverpool",
           "flag": "",
-          "prob": 0.0365,
-          "pct": 3.6,
-          "fairDec": 27.4,
-          "vol": 681975.85592
+          "prob": 0.032,
+          "pct": 3.2,
+          "fairDec": 31.25,
+          "vol": 747624.8259200001
         },
         {
           "name": "Atlético Madrid",
           "flag": "",
-          "prob": 0.0235,
-          "pct": 2.4,
-          "fairDec": 42.55,
-          "vol": 1024784.3793260003
+          "prob": 0.0205,
+          "pct": 2.1,
+          "fairDec": 48.78,
+          "vol": 1024806.6193260002
         },
         {
           "name": "Inter Milan",
@@ -171,7 +171,7 @@
           "prob": 0.0165,
           "pct": 1.7,
           "fairDec": 60.61,
-          "vol": 1094453.653685
+          "vol": 1096806.594862
         },
         {
           "name": "Como",
@@ -179,7 +179,7 @@
           "prob": 0.0155,
           "pct": 1.6,
           "fairDec": 64.52,
-          "vol": 878033.0418009997
+          "vol": 881158.0418009998
         }
       ]
     },
@@ -203,10 +203,10 @@
         {
           "name": "Bournemouth",
           "flag": "",
-          "prob": 0.1525,
-          "pct": 15.3,
-          "fairDec": 6.56,
-          "vol": 22950.819037
+          "prob": 0.152,
+          "pct": 15.2,
+          "fairDec": 6.58,
+          "vol": 22950.819037000005
         },
         {
           "name": "Juventus",
@@ -225,14 +225,6 @@
           "vol": 17021.709543
         },
         {
-          "name": "Milan",
-          "flag": "",
-          "prob": 0.065,
-          "pct": 6.5,
-          "fairDec": 15.38,
-          "vol": 39985.848222
-        },
-        {
           "name": "Union Saint-Gilloise",
           "flag": "",
           "prob": 0.0555,
@@ -249,6 +241,14 @@
           "vol": 22678.986827
         },
         {
+          "name": "Milan",
+          "flag": "",
+          "prob": 0.055,
+          "pct": 5.5,
+          "fairDec": 18.18,
+          "vol": 39985.848222
+        },
+        {
           "name": "Besiktas",
           "flag": "",
           "prob": 0.0515,
@@ -259,9 +259,9 @@
         {
           "name": "Sunderland",
           "flag": "",
-          "prob": 0.0485,
-          "pct": 4.9,
-          "fairDec": 20.62,
+          "prob": 0.048,
+          "pct": 4.8,
+          "fairDec": 20.83,
           "vol": 9339.600057000001
         },
         {
@@ -286,10 +286,10 @@
         {
           "name": "Barcelona",
           "flag": "",
-          "prob": 0.705,
-          "pct": 70.5,
-          "fairDec": 1.42,
-          "vol": 779423.0379060002
+          "prob": 0.695,
+          "pct": 69.5,
+          "fairDec": 1.44,
+          "vol": 779893.037906
         },
         {
           "name": "Real Madrid",
@@ -297,14 +297,14 @@
           "prob": 0.265,
           "pct": 26.5,
           "fairDec": 3.77,
-          "vol": 824699.67237
+          "vol": 824706.857556
         },
         {
           "name": "Atlético Madrid",
           "flag": "",
-          "prob": 0.0135,
+          "prob": 0.014,
           "pct": 1.4,
-          "fairDec": 74.07,
+          "fairDec": 71.43,
           "vol": 694922.866445
         },
         {
@@ -313,7 +313,7 @@
           "prob": 0.0025,
           "pct": 0.3,
           "fairDec": 400,
-          "vol": 576554.0417030001
+          "vol": 576600.0112030001
         },
         {
           "name": "Alavés",
@@ -321,7 +321,7 @@
           "prob": 0.0015,
           "pct": 0.1,
           "fairDec": 666.67,
-          "vol": 643271.985
+          "vol": 643311.485
         },
         {
           "name": "Villarreal",
@@ -329,7 +329,7 @@
           "prob": 0.0015,
           "pct": 0.1,
           "fairDec": 666.67,
-          "vol": 1550185.8283119998
+          "vol": 1550217.9473119997
         },
         {
           "name": "Athletic Bilbao",
@@ -380,23 +380,23 @@
           "prob": 0.615,
           "pct": 61.5,
           "fairDec": 1.63,
-          "vol": 128059.01359300001
+          "vol": 128100.033593
         },
         {
           "name": "Roma",
           "flag": "",
-          "prob": 0.1655,
-          "pct": 16.6,
-          "fairDec": 6.04,
-          "vol": 99757.35286300001
+          "prob": 0.165,
+          "pct": 16.5,
+          "fairDec": 6.06,
+          "vol": 99857.342863
         },
         {
           "name": "Como",
           "flag": "",
-          "prob": 0.068,
-          "pct": 6.8,
-          "fairDec": 14.71,
-          "vol": 74947.10129899999
+          "prob": 0.069,
+          "pct": 6.9,
+          "fairDec": 14.49,
+          "vol": 74950.09129900002
         },
         {
           "name": "Lazio",
@@ -412,7 +412,7 @@
           "prob": 0.051,
           "pct": 5.1,
           "fairDec": 19.61,
-          "vol": 58728.747295999994
+          "vol": 58728.747296
         },
         {
           "name": "Juventus",
@@ -471,7 +471,7 @@
           "prob": 0.875,
           "pct": 87.5,
           "fairDec": 1.14,
-          "vol": 106907.985356
+          "vol": 106907.98535599999
         },
         {
           "name": "Borussia Dortmund",
@@ -479,7 +479,7 @@
           "prob": 0.065,
           "pct": 6.5,
           "fairDec": 15.38,
-          "vol": 67417.38412
+          "vol": 67533.66688599999
         },
         {
           "name": "Bayer Leverkusen",
@@ -508,17 +508,17 @@
         {
           "name": "Werder Bremen",
           "flag": "",
-          "prob": 0.0075,
-          "pct": 0.8,
-          "fairDec": 133.33,
+          "prob": 0.007,
+          "pct": 0.7,
+          "fairDec": 142.86,
           "vol": 115769.285933
         },
         {
           "name": "FC Augsburg",
           "flag": "",
-          "prob": 0.0065,
-          "pct": 0.7,
-          "fairDec": 153.85,
+          "prob": 0.006,
+          "pct": 0.6,
+          "fairDec": 166.67,
           "vol": 96720.644116
         },
         {
@@ -562,7 +562,7 @@
           "prob": 0.905,
           "pct": 90.5,
           "fairDec": 1.1,
-          "vol": 190515.01944200002
+          "vol": 190574.61944200002
         },
         {
           "name": "Marseille",
@@ -578,7 +578,7 @@
           "prob": 0.018,
           "pct": 1.8,
           "fairDec": 55.56,
-          "vol": 49077.60931
+          "vol": 49077.60930999999
         },
         {
           "name": "Monaco",
@@ -599,9 +599,9 @@
         {
           "name": "Paris FC",
           "flag": "",
-          "prob": 0.009,
+          "prob": 0.0085,
           "pct": 0.9,
-          "fairDec": 111.11,
+          "fairDec": 117.65,
           "vol": 61865.46395300001
         },
         {
@@ -615,9 +615,9 @@
         {
           "name": "Lens",
           "flag": "",
-          "prob": 0.006,
-          "pct": 0.6,
-          "fairDec": 166.67,
+          "prob": 0.0055,
+          "pct": 0.5,
+          "fairDec": 181.82,
           "vol": 92416.008382
         },
         {
